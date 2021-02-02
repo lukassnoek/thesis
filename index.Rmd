@@ -1,72 +1,88 @@
 ---
 ### Title page
-title: "My Awesome Thesis" # The main title of your thesis (not including possible subtitles)
-subtitle: |
-  | This subtitle is sooooo long 
-  | I'm 'a break it up 
-# (can also be  omitted if you don't have a subtitle)
-author: "Phil Henry Doctor" # Your full name (including middle names if applicable)
-date: "maandag 21 oktober 2019" # Your defense date in Dutch: "[weekday] [day in numerics] [name of month] [year]"
-aula: true # set to true if your defense is in the Aula; set to false/omit if it is in the Agnietenkapel
-time: "14.00" # time of your defense (a 24h time, e.g. "14.00")
-birthplace: "Parijs" # your place of birth, in Dutch
-country_of_birth: "Frankrijk" # if your birthplace is not in the Netherlands, fill in the country as well (in Dutch). Omit otherwise!
+title: "Learning from the brain" # The main title of your thesis (not including possible subtitles)
+subtitle: | 
+  | Best practices for the use of neuroimaging data
+  | in psychology research
 
+# (can also be  omitted if you don't have a subtitle)
+author: "Lukas Snoek" # Your full name (including middle names if applicable)
+date: "maandag 21 oktober 2021" # Your defense date in Dutch: "[weekday] [day in numerics] [name of month] [year]"
+aula: false # set to true if your defense is in the Aula; set to false/omit if it is in the Agnietenkapel
+time: "14.00" # time of your defense (a 24h time, e.g. "14.00")
+birthplace: "Hoevelaken" # your place of birth, in Dutch
+country_of_birth: "Nederland" # if your birthplace is not in the Netherlands, fill in the country as well (in Dutch). Omit otherwise!
 
 ### Colophon 
 # Can be skipped entirely, but if you define FUNDER, this will read: 
 # "The investigations in this thesis were supported by [a] GRANT [from] FUNDER"
-grant: "Starting grant (111-2-3)" # optional, otherwise this bit is omitted
-funder: "the Non-existent Organization for Space Exploration (NOSE)"
+#grant: "Starting grant (111-2-3)" # optional, otherwise this bit is omitted
+#funder: "the Non-existent Organization for Space Exploration (NOSE)"
 
 # This paragraph begins with "This thesis was typeset using (R) Markdown, \LaTeX\ and the \verb+bookdown+ R-package"
 # and is optionally followed by:
 ISBN: "xxx-xx-xxxx-xxx-x" # optional, otherwise this bit is omitted
 printing: "Acme Press, Inc." # optional, otherwise this bit is omitted
-cover: "Designed by Phil Henry Doctor" # optional, otherwise this bit is omitted
+#cover: "Designed by Phil Henry Doctor" # optional, otherwise this bit is omitted
 
 # Can be skipped entirely, but if you define THESIS_URL, this will read: 
 # "An online version of this thesis is available at THESIS_URL [,licensed under a LICENSE.]
-thesis_url: "https://lcreteig.github.io/amsterdown"
-license: "to-be-determined license" # optional, otherwise this bit is omitted
-
+thesis_url: "https://lukas-snoek.com/thesis"
+license: "CC BY" # optional, otherwise this bit is omitted
 
 ### Committee
 # Fill in each of your "promotores" below, corresponding to the form you submitted to the graduate school.
 # Copy-paste the 4 subfields (starting with " - title:") if you have more than two, or delete one entry if you have only one promotor.
 promotores: 
 # for example:
-- title: prof. dr. # either "prof.dr" for full professors, or "dr." for others
-  initials: T.
-  surname: Zonnebloem
+- title: dr. # either "prof.dr" for full professors, or "dr." for others
+  initials: H.S.
+  surname: Scholte
   affiliation: Universiteit van Amsterdam
-- title: prof. dr.
-  initials: H.
-  surname: Jones
-  affiliation: University of Indiana
-one_promotor: false # set to true if you have only 1 promotor. Then the heading will be "Promotor" (singular), instead of "Promotores".
+#- title: prof. dr.
+#  initials: H.
+#  surname: Jones
+#  affiliation: University of Indiana
+one_promotor: true # set to true if you have only 1 promotor. Then the heading will be "Promotor" (singular), instead of "Promotores".
 # Fill in each of your "copromotores" below, corresponding to the form you submitted to the graduate school.
 # If you don't have a copromotor, simply delete the fields ("copromotores" and its 4 subfields)
 copromotores:
 - title: dr. 
-  initials: W.
-  surname: Ho
-  affiliation: University of Gallifrey 
+  initials: S.
+  surname: Oosterwijk
+  affiliation: Universiteit van Amsterdam 
 one_copromotor: true # if true the heading will be "Copromotor" (singular), instead of "Copromotores" (assuming there is a copromotor)
 # Fill in each of your committee members below, corresponding to the form you submitted to the graduate school.
 # Copy-paste the 4 subfields (starting with " - title:") as many times as you have committee members.
 members:
 # for example: 
 - title: prof. dr.
-  initials: H.J.
-  surname: Farnsworth
-  affiliation: Mars University
+  initials: R.E.
+  surname: Jack
+  affiliation: University of Glasgow
 - title: prof. dr.
-  initials: J.I.Q.N.
-  surname: Frink
-  affiliation: University of Springfield
+  initials: R.W.
+  surname: Goebel
+  affiliation: Maastricht University
+- title: prof. dr.
+  initials: B.U.
+  surname: Forstmann
+  affiliation: Universiteit van Amsterdam
+- title: prof. dr.
+  initials: A.H.
+  surname: Fischer
+  affiliation: Universiteit van Amsterdam
+- title: prof. dr.
+  initials: D.
+  surname: Borsboom
+  affiliation: Universiteit van Amsterdam
+- title: prof. dr.
+  initials: A.G.
+  surname: Sanfey
+  affiliation: Radboud University
+
 # Finally, the (Dutch) name of your faculty, e.g. "Faculteit der Maatschappij- en Gedragswetenschappen"
-faculty: 
+faculty: Faculteit der Maatschappij- en Gedragswetenschappen
 
 ### Book settings
 documentclass: book # default LaTeX book class
@@ -76,7 +92,7 @@ book_size: false # "true" if you want to render a pdf for printing as a book; "f
 # geometry: "left=2.5cm, right=2.5cm, top=2.5cm, bottom=2.5cm" # use this if you want to change the margins
             # 2.5cm equal margins are often recommended by printers (so when book_size: true)
 fontsize: 12pt # 12pt is recommened when book_size is false; 10 or 11pt is recommended when book_size is true
-lang: en # default language for the thesis. Change to en-GB or en-US if you want a specific flavor of English (or to nl for Dutch)
+lang: en-US # default language for the thesis. Change to en-GB or en-US if you want a specific flavor of English (or to nl for Dutch)
 site: bookdown::bookdown_site # to get a "Build" button in RStudio to render the book
 output:
   # settings for html output
@@ -94,7 +110,7 @@ output:
     template: template.tex
     keep_tex: yes
     #pandoc_args: [ "--csl", "apa.csl" ] # download the citation style of your choice from https://www.zotero.org/styles, then fill in here
-indent: true # indent new paragraphs, instead of leaving whitespace
+indent: false # indent new paragraphs, instead of leaving whitespace
 links-as-notes: true # in the pdf, print hyperlink URLS as footnotes (as they can't be clicked on)
 bibliography: thesis.bib # bib-file containing bibliographic information on all works you want to cite
 citation_package: none # to use .csl-files to apply same citation style to html and pdf. You can also use a LaTeX package, e.g. biblatex. This provides much more customizability, but it is not as easy to apply a particular style, and it will only work in pdf output.

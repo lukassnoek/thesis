@@ -1,28 +1,28 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.9.23)  23 SEP 2020 15:22
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2021.2.2)  2 FEB 2021 18:20
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
 **thesis.tex
 (./thesis.tex
-LaTeX2e <2020-02-02> patch level 5
-L3 programming layer <2020-09-06> (/Users/lukas/Library/TinyTeX/texmf-dist/tex/
-latex/base/book.cls
-Document Class: book 2019/12/20 v1.4l Standard LaTeX document class
+LaTeX2e <2020-10-01> patch level 4
+L3 programming layer <2021-01-09> xparse <2020-03-03> (/Users/lukas/Library/Tin
+yTeX/texmf-dist/tex/latex/base/book.cls
+Document Class: book 2020/04/10 v1.4m Standard LaTeX document class
 (/Users/lukas/Library/TinyTeX/texmf-dist/tex/latex/base/bk12.clo
-File: bk12.clo 2019/12/20 v1.4l Standard LaTeX file (size option)
+File: bk12.clo 2020/04/10 v1.4m Standard LaTeX file (size option)
 )
-\c@part=\count168
-\c@chapter=\count169
-\c@section=\count170
-\c@subsection=\count171
-\c@subsubsection=\count172
-\c@paragraph=\count173
-\c@subparagraph=\count174
-\c@figure=\count175
-\c@table=\count176
+\c@part=\count177
+\c@chapter=\count178
+\c@section=\count179
+\c@subsection=\count180
+\c@subsubsection=\count181
+\c@paragraph=\count182
+\c@subparagraph=\count183
+\c@figure=\count184
+\c@table=\count185
 \abovecaptionskip=\skip47
 \belowcaptionskip=\skip48
-\bibindent=\dimen134
+\bibindent=\dimen138
 ) (/Users/lukas/Library/TinyTeX/texmf-dist/tex/latex/lm/lmodern.sty
 Package: lmodern 2009/10/30 v1.6 Latin Modern Fonts
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
@@ -68,7 +68,7 @@ LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
 )) (/Users/lukas/Library/TinyTeX/texmf-dist/tex/latex/amsmath/amsmath.sty
-Package: amsmath 2020/01/20 v2.17e AMS math features
+Package: amsmath 2020/09/23 v2.17i AMS math features
 \@mathmargin=\skip49
 For additional information on amsmath, use the `?' option.
 (/Users/lukas/Library/TinyTeX/texmf-dist/tex/latex/amsmath/amstext.sty
@@ -76,50 +76,50 @@ Package: amstext 2000/06/29 v2.01 AMS text
 (/Users/lukas/Library/TinyTeX/texmf-dist/tex/latex/amsmath/amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0 generic functions
 \@emptytoks=\toks16
-\ex@=\dimen135
+\ex@=\dimen139
 )) (/Users/lukas/Library/TinyTeX/texmf-dist/tex/latex/amsmath/amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
-\pmbraise@=\dimen136
+\pmbraise@=\dimen140
 ) (/Users/lukas/Library/TinyTeX/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 2016/03/08 v2.02 operator names
 )
-\inf@bad=\count177
-LaTeX Info: Redefining \frac on input line 227.
-\uproot@=\count178
-\leftroot@=\count179
-LaTeX Info: Redefining \overline on input line 389.
-\classnum@=\count180
-\DOTSCASE@=\count181
-LaTeX Info: Redefining \ldots on input line 486.
-LaTeX Info: Redefining \dots on input line 489.
-LaTeX Info: Redefining \cdots on input line 610.
-\Mathstrutbox@=\box45
-\strutbox@=\box46
-\big@size=\dimen137
-LaTeX Font Info:    Redeclaring font encoding OML on input line 733.
-LaTeX Font Info:    Redeclaring font encoding OMS on input line 734.
-\macc@depth=\count182
-\c@MaxMatrixCols=\count183
+\inf@bad=\count186
+LaTeX Info: Redefining \frac on input line 234.
+\uproot@=\count187
+\leftroot@=\count188
+LaTeX Info: Redefining \overline on input line 399.
+\classnum@=\count189
+\DOTSCASE@=\count190
+LaTeX Info: Redefining \ldots on input line 496.
+LaTeX Info: Redefining \dots on input line 499.
+LaTeX Info: Redefining \cdots on input line 620.
+\Mathstrutbox@=\box47
+\strutbox@=\box48
+\big@size=\dimen141
+LaTeX Font Info:    Redeclaring font encoding OML on input line 743.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 744.
+\macc@depth=\count191
+\c@MaxMatrixCols=\count192
 \dotsspace@=\muskip16
-\c@parentequation=\count184
-\dspbrk@lvl=\count185
+\c@parentequation=\count193
+\dspbrk@lvl=\count194
 \tag@help=\toks17
-\row@=\count186
-\column@=\count187
-\maxfields@=\count188
+\row@=\count195
+\column@=\count196
+\maxfields@=\count197
 \andhelp@=\toks18
-\eqnshift@=\dimen138
-\alignsep@=\dimen139
-\tagshift@=\dimen140
-\tagwidth@=\dimen141
-\totwidth@=\dimen142
-\lineht@=\dimen143
+\eqnshift@=\dimen142
+\alignsep@=\dimen143
+\tagshift@=\dimen144
+\tagwidth@=\dimen145
+\totwidth@=\dimen146
+\lineht@=\dimen147
 \@envbody=\toks19
 \multlinegap=\skip50
 \multlinetaggap=\skip51
 \mathdisplay@stack=\toks20
-LaTeX Info: Redefining \[ on input line 2859.
-LaTeX Info: Redefining \] on input line 2860.
+LaTeX Info: Redefining \[ on input line 2923.
+LaTeX Info: Redefining \] on input line 2924.
 ) (/Users/lukas/Library/TinyTeX/texmf-dist/tex/generic/iftex/ifxetex.sty
 Package: ifxetex 2019/10/25 v0.7 ifxetex legacy package. Use iftex instead.
 (/Users/lukas/Library/TinyTeX/texmf-dist/tex/generic/iftex/iftex.sty
@@ -136,19 +136,19 @@ Package fixltx2e Warning: fixltx2e is not required with releases after 2015
 
 Already applied: [0000/00/00] Old fixltx2e package on input line 53.
 ) (/Users/lukas/Library/TinyTeX/texmf-dist/tex/latex/base/fontenc.sty
-Package: fontenc 2020/02/11 v2.0o Standard LaTeX package
+Package: fontenc 2020/08/10 v2.0s Standard LaTeX package
 LaTeX Font Info:    Trying to load font information for T1+lmr on input line 11
 2.
 (/Users/lukas/Library/TinyTeX/texmf-dist/tex/latex/lm/t1lmr.fd
 File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )) (/Users/lukas/Library/TinyTeX/texmf-dist/tex/latex/base/inputenc.sty
-Package: inputenc 2018/08/11 v1.3c Input encoding file
+Package: inputenc 2020/08/01 v1.3d Input encoding file
 \inpenc@prehook=\toks21
 \inpenc@posthook=\toks22
 ) (/Users/lukas/Library/TinyTeX/texmf-dist/tex/latex/hyperref/hyperref.sty
 Package: hyperref 2020-05-15 v7.00e Hypertext links for LaTeX
 (/Users/lukas/Library/TinyTeX/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
-Package: ltxcmds 2019/12/15 v1.24 LaTeX kernel commands for general use (HO)
+Package: ltxcmds 2020-05-10 v1.25 LaTeX kernel commands for general use (HO)
 ) (/Users/lukas/Library/TinyTeX/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.st
 y
 Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO
@@ -178,11 +178,11 @@ Package: letltxmacro 2019/12/03 v1.6 Let assignment for LaTeX macros (HO)
 ) (/Users/lukas/Library/TinyTeX/texmf-dist/tex/latex/auxhook/auxhook.sty
 Package: auxhook 2019-12-17 v1.6 Hooks for auxiliary files (HO)
 ) (/Users/lukas/Library/TinyTeX/texmf-dist/tex/latex/kvoptions/kvoptions.sty
-Package: kvoptions 2019/11/29 v3.13 Key value format for package options (HO)
+Package: kvoptions 2020-10-07 v3.14 Key value format for package options (HO)
 )
-\@linkdim=\dimen144
-\Hy@linkcounter=\count189
-\Hy@pagecounter=\count190
+\@linkdim=\dimen148
+\Hy@linkcounter=\count198
+\Hy@pagecounter=\count199
 (/Users/lukas/Library/TinyTeX/texmf-dist/tex/latex/hyperref/pd1enc.def
 File: pd1enc.def 2020-05-15 v7.00e Hyperref: PDFDocEncoding definition (HO)
 Now handling font encoding PD1 ...
@@ -192,7 +192,7 @@ Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
 ) (/Users/lukas/Library/TinyTeX/texmf-dist/tex/generic/etexcmds/etexcmds.sty
 Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
 )
-\Hy@SavedSpaceFactor=\count191
+\Hy@SavedSpaceFactor=\count266
 Package hyperref Info: Hyper figures OFF on input line 4464.
 Package hyperref Info: Link nesting OFF on input line 4469.
 Package hyperref Info: Hyper index ON on input line 4472.
@@ -200,22 +200,22 @@ Package hyperref Info: Plain pages OFF on input line 4479.
 Package hyperref Info: Backreferencing OFF on input line 4484.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4717.
-\c@Hy@tempcnt=\count192
+\c@Hy@tempcnt=\count267
 (/Users/lukas/Library/TinyTeX/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip17
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
 LaTeX Info: Redefining \url on input line 5076.
-\XeTeXLinkMargin=\dimen145
+\XeTeXLinkMargin=\dimen149
 (/Users/lukas/Library/TinyTeX/texmf-dist/tex/generic/bitset/bitset.sty
 Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
 (/Users/lukas/Library/TinyTeX/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty
 Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
 )
 ))
-\Fld@menulength=\count193
-\Field@Width=\dimen146
-\Fld@charsize=\dimen147
+\Fld@menulength=\count268
+\Field@Width=\dimen150
+\Fld@charsize=\dimen151
 Package hyperref Info: Hyper figures OFF on input line 6347.
 Package hyperref Info: Link nesting OFF on input line 6352.
 Package hyperref Info: Hyper index ON on input line 6355.
@@ -225,22 +225,25 @@ Package hyperref Info: Link coloring with OCG OFF on input line 6372.
 Package hyperref Info: PDF/A mode OFF on input line 6377.
 LaTeX Info: Redefining \ref on input line 6417.
 LaTeX Info: Redefining \pageref on input line 6421.
-(/Users/lukas/Library/TinyTeX/texmf-dist/tex/generic/atbegshi/atbegshi.sty
-Package: atbegshi 2019/12/05 v1.19 At begin shipout hook (HO)
+(/Users/lukas/Library/TinyTeX/texmf-dist/tex/latex/base/atbegshi-ltx.sty
+Package: atbegshi-ltx 2020/08/17 v1.0a Emulation of the original atbegshi packa
+ge
+with kernel methods
 )
-\Hy@abspage=\count194
-\c@Item=\count195
-\c@Hfootnote=\count196
+\Hy@abspage=\count269
+\c@Item=\count270
+\c@Hfootnote=\count271
 )
 Package hyperref Info: Driver (autodetected): hpdftex.
 (/Users/lukas/Library/TinyTeX/texmf-dist/tex/latex/hyperref/hpdftex.def
 File: hpdftex.def 2020-05-15 v7.00e Hyperref driver for pdfTeX
-(/Users/lukas/Library/TinyTeX/texmf-dist/tex/latex/atveryend/atveryend.sty
-Package: atveryend 2019-12-11 v1.11 Hooks at the very end of document (HO)
-Package atveryend Info: \enddocument detected (standard20110627).
+(/Users/lukas/Library/TinyTeX/texmf-dist/tex/latex/base/atveryend-ltx.sty
+Package: atveryend-ltx 2020/08/19 v1.0a Emulation of the original atvery packag
+e
+with kernel methods
 )
-\Fld@listcount=\count197
-\c@bookmark@seq@number=\count198
+\Fld@listcount=\count272
+\c@bookmark@seq@number=\count273
 
 (/Users/lukas/Library/TinyTeX/texmf-dist/tex/latex/rerunfilecheck/rerunfilechec
 k.sty
@@ -263,20 +266,22 @@ Now handling font encoding PU ...
 )
 Package hyperref Info: Option `breaklinks' set `true' on input line 39.
 (/Users/lukas/Library/TinyTeX/texmf-dist/tex/generic/babel/babel.sty
-Package: babel 2020/09/01 3.48 The Babel package
+Package: babel 2021/01/26 3.53 The Babel package
 (/Users/lukas/Library/TinyTeX/texmf-dist/tex/generic/babel/babel.def
-File: babel.def 2020/09/01 3.48 Babel common definitions
-\babel@savecnt=\count199
-\U@D=\dimen148
+File: babel.def 2021/01/26 3.53 Babel common definitions
+\babel@savecnt=\count274
+\U@D=\dimen152
 \l@babelnohyphens=\language4
 (/Users/lukas/Library/TinyTeX/texmf-dist/tex/generic/babel/txtbabel.def)
 \bbl@readstream=\read2
 )
-\bbl@dirlevel=\count266
+\bbl@dirlevel=\count275
 (/Users/lukas/Library/TinyTeX/texmf-dist/tex/generic/babel-dutch/dutch.ldf
-Language: dutch 2005/03/30 v3.8i Dutch support from the babel system
-) (/Users/lukas/Library/TinyTeX/texmf-dist/tex/generic/babel-english/english.ld
-f
+Language: dutch 2020/10/29 v3.8j Dutch support from the babel system
+)
+(/Users/lukas/Library/TinyTeX/texmf-dist/tex/generic/babel-english/american.ldf
+Language: american 2017/06/06 v3.3r English support from the babel system
+(/Users/lukas/Library/TinyTeX/texmf-dist/tex/generic/babel-english/english.ldf
 Language: english 2017/06/06 v3.3r English support from the babel system
 Package babel Info: \l@british = using hyphenrules for english
 (babel)             (\language0) on input line 82.
@@ -288,49 +293,51 @@ Package babel Info: \l@australian = using hyphenrules for english
 (babel)             (\language0) on input line 105.
 Package babel Info: \l@newzealand = using hyphenrules for english
 (babel)             (\language0) on input line 108.
-) (/Users/lukas/Library/TinyTeX/texmf-dist/tex/generic/babel-english/english.ld
-f
+))
+(/Users/lukas/Library/TinyTeX/texmf-dist/tex/generic/babel-english/american.ldf
+Language: american 2017/06/06 v3.3r English support from the babel system
+(/Users/lukas/Library/TinyTeX/texmf-dist/tex/generic/babel-english/english.ldf
 Language: english 2017/06/06 v3.3r English support from the babel system
-)) (/Users/lukas/Library/TinyTeX/texmf-dist/tex/latex/tools/longtable.sty
+))) (/Users/lukas/Library/TinyTeX/texmf-dist/tex/latex/tools/longtable.sty
 Package: longtable 2020/01/07 v4.13 Multi-page Table package (DPC)
 \LTleft=\skip53
 \LTright=\skip54
 \LTpre=\skip55
 \LTpost=\skip56
-\LTchunksize=\count267
-\LTcapwidth=\dimen149
-\LT@head=\box47
-\LT@firsthead=\box48
-\LT@foot=\box49
-\LT@lastfoot=\box50
-\LT@cols=\count268
-\LT@rows=\count269
-\c@LT@tables=\count270
-\c@LT@chunks=\count271
+\LTchunksize=\count276
+\LTcapwidth=\dimen153
+\LT@head=\box49
+\LT@firsthead=\box50
+\LT@foot=\box51
+\LT@lastfoot=\box52
+\LT@cols=\count277
+\LT@rows=\count278
+\c@LT@tables=\count279
+\c@LT@chunks=\count280
 \LT@p@ftn=\toks24
 ) (/Users/lukas/Library/TinyTeX/texmf-dist/tex/latex/booktabs/booktabs.sty
 Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
-\heavyrulewidth=\dimen150
-\lightrulewidth=\dimen151
-\cmidrulewidth=\dimen152
-\belowrulesep=\dimen153
-\belowbottomsep=\dimen154
-\aboverulesep=\dimen155
-\abovetopsep=\dimen156
-\cmidrulesep=\dimen157
-\cmidrulekern=\dimen158
-\defaultaddspace=\dimen159
-\@cmidla=\count272
-\@cmidlb=\count273
-\@aboverulesep=\dimen160
-\@belowrulesep=\dimen161
-\@thisruleclass=\count274
-\@lastruleclass=\count275
-\@thisrulewidth=\dimen162
+\heavyrulewidth=\dimen154
+\lightrulewidth=\dimen155
+\cmidrulewidth=\dimen156
+\belowrulesep=\dimen157
+\belowbottomsep=\dimen158
+\aboverulesep=\dimen159
+\abovetopsep=\dimen160
+\cmidrulesep=\dimen161
+\cmidrulekern=\dimen162
+\defaultaddspace=\dimen163
+\@cmidla=\count281
+\@cmidlb=\count282
+\@aboverulesep=\dimen164
+\@belowrulesep=\dimen165
+\@thisruleclass=\count283
+\@lastruleclass=\count284
+\@thisrulewidth=\dimen166
 ) (/Users/lukas/Library/TinyTeX/texmf-dist/tex/latex/graphics/graphicx.sty
-Package: graphicx 2019/11/30 v1.2a Enhanced LaTeX Graphics (DPC,SPQR)
+Package: graphicx 2020/09/09 v1.2b Enhanced LaTeX Graphics (DPC,SPQR)
 (/Users/lukas/Library/TinyTeX/texmf-dist/tex/latex/graphics/graphics.sty
-Package: graphics 2019/11/30 v1.4a Standard LaTeX Graphics (DPC,SPQR)
+Package: graphics 2020/08/30 v1.4c Standard LaTeX Graphics (DPC,SPQR)
 (/Users/lukas/Library/TinyTeX/texmf-dist/tex/latex/graphics/trig.sty
 Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
 ) (/Users/lukas/Library/TinyTeX/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
@@ -338,10 +345,10 @@ File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
 Package graphics Info: Driver file: pdftex.def on input line 105.
 (/Users/lukas/Library/TinyTeX/texmf-dist/tex/latex/graphics-def/pdftex.def
-File: pdftex.def 2020/08/26 v1.2 Graphics/color driver for pdftex
+File: pdftex.def 2020/10/05 v1.2a Graphics/color driver for pdftex
 ))
-\Gin@req@height=\dimen163
-\Gin@req@width=\dimen164
+\Gin@req@height=\dimen167
+\Gin@req@width=\dimen168
 ) (/Users/lukas/Library/TinyTeX/texmf-dist/tex/latex/grffile/grffile.sty
 Package: grffile 2019/11/11 v2.1 Extended file name support for graphics (legac
 y)
@@ -359,47 +366,94 @@ Package: amsthm 2020/05/29 v2.20.6
 \thm@headsep=\skip59
 \dth@everypar=\toks30
 )
-\c@theorem=\count276
-\c@lemma=\count277
-\c@corollary=\count278
-\c@proposition=\count279
-\c@conjecture=\count280
-\c@definition=\count281
-\c@example=\count282
-\c@exercise=\count283
+\c@theorem=\count285
+\c@lemma=\count286
+\c@corollary=\count287
+\c@proposition=\count288
+\c@conjecture=\count289
+\c@definition=\count290
+\c@example=\count291
+\c@exercise=\count292
 
 (/Users/lukas/Library/TinyTeX/texmf-dist/tex/latex/l3backend/l3backend-pdftex.d
 ef
-File: l3backend-pdftex.def 2020-09-11 L3 backend support: PDF output (pdfTeX)
-\l__kernel_color_stack_int=\count284
-\l__pdf_internal_box=\box51
+File: l3backend-pdftex.def 2020-01-29 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count293
+\l__pdf_internal_box=\box53
 ) (./thesis.aux
 
 LaTeX Warning: Label `introduction' multiply defined.
 
+
+LaTeX Warning: Label `intro3' multiply defined.
+
+
+LaTeX Warning: Label `methods3' multiply defined.
+
+
+LaTeX Warning: Label `results3' multiply defined.
+
+
+LaTeX Warning: Label `discussion3' multiply defined.
+
+
+LaTeX Warning: Label `intro3' multiply defined.
+
+
+LaTeX Warning: Label `methods3' multiply defined.
+
+
+LaTeX Warning: Label `results3' multiply defined.
+
+
+LaTeX Warning: Label `discussion3' multiply defined.
+
+
+LaTeX Warning: Label `intro3' multiply defined.
+
+
+LaTeX Warning: Label `methods3' multiply defined.
+
+
+LaTeX Warning: Label `results3' multiply defined.
+
+
+LaTeX Warning: Label `discussion3' multiply defined.
+
+
+LaTeX Warning: Label `intro3' multiply defined.
+
+
+LaTeX Warning: Label `methods3' multiply defined.
+
+
+LaTeX Warning: Label `results3' multiply defined.
+
+
+LaTeX Warning: Label `discussion3' multiply defined.
+
 )
 \openout1 = `thesis.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 101.
-LaTeX Font Info:    ... okay on input line 101.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 101.
-LaTeX Font Info:    ... okay on input line 101.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 101.
-LaTeX Font Info:    ... okay on input line 101.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 101.
-LaTeX Font Info:    ... okay on input line 101.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 101.
-LaTeX Font Info:    ... okay on input line 101.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 101.
-LaTeX Font Info:    ... okay on input line 101.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 101.
-LaTeX Font Info:    ... okay on input line 101.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 101.
-LaTeX Font Info:    ... okay on input line 101.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 101.
-LaTeX Font Info:    ... okay on input line 101.
-\AtBeginShipoutBox=\box52
-Package hyperref Info: Link coloring OFF on input line 101.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 107.
+LaTeX Font Info:    ... okay on input line 107.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 107.
+LaTeX Font Info:    ... okay on input line 107.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 107.
+LaTeX Font Info:    ... okay on input line 107.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 107.
+LaTeX Font Info:    ... okay on input line 107.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 107.
+LaTeX Font Info:    ... okay on input line 107.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 107.
+LaTeX Font Info:    ... okay on input line 107.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 107.
+LaTeX Font Info:    ... okay on input line 107.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 107.
+LaTeX Font Info:    ... okay on input line 107.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 107.
+LaTeX Font Info:    ... okay on input line 107.
+Package hyperref Info: Link coloring OFF on input line 107.
 (/Users/lukas/Library/TinyTeX/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2019/09/16 v2.46 Cross-referencing by name of section
 (/Users/lukas/Library/TinyTeX/texmf-dist/tex/latex/refcount/refcount.sty
@@ -409,11 +463,11 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 ing.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count285
+\c@section@level=\count294
 )
-LaTeX Info: Redefining \ref on input line 101.
-LaTeX Info: Redefining \pageref on input line 101.
-LaTeX Info: Redefining \nameref on input line 101.
+LaTeX Info: Redefining \ref on input line 107.
+LaTeX Info: Redefining \pageref on input line 107.
+LaTeX Info: Redefining \nameref on input line 107.
 (./thesis.out) (./thesis.out)
 \@outlinefile=\write3
 \openout3 = `thesis.out'.
@@ -433,55 +487,49 @@ e
 
 {/Users/lukas/Library/TinyTeX/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
 LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 1
-24.
+28.
 (/Users/lukas/Library/TinyTeX/texmf-dist/tex/latex/lm/ot1lmr.fd
 File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OML+lmm on input line 1
-24.
+28.
 (/Users/lukas/Library/TinyTeX/texmf-dist/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 
-124.
+128.
 (/Users/lukas/Library/TinyTeX/texmf-dist/tex/latex/lm/omslmsy.fd
 File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 
-124.
+128.
 (/Users/lukas/Library/TinyTeX/texmf-dist/tex/latex/lm/omxlmex.fd
 File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10.95> on input line 124.
+(Font)              <10.95> on input line 128.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 124.
+(Font)              <8> on input line 128.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 124.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 124
+(Font)              <6> on input line 128.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 128
 .
 (/Users/lukas/Library/TinyTeX/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 124
+LaTeX Font Info:    Trying to load font information for U+msb on input line 128
 .
 (/Users/lukas/Library/TinyTeX/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 1
-24.
+28.
 (/Users/lukas/Library/TinyTeX/texmf-dist/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
-)
-Underfull \hbox (badness 2005) in paragraph at lines 127--129
-[]\T1/lmr/m/n/10.95 An on-line ver-sion of this the-sis is avail-able at []$htt
-ps : / / lcreteig . github . io /
- []
-
-[2
+) [2
 
 ]
-Overfull \hbox (5.41669pt too wide) in paragraph at lines 146--146
+Overfull \hbox (5.41669pt too wide) in paragraph at lines 150--150
  [][] 
  []
 
@@ -489,147 +537,325 @@ Overfull \hbox (5.41669pt too wide) in paragraph at lines 146--146
 
 ]
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 162.
+(Font)              <12> on input line 166.
 
-Underfull \hbox (badness 10000) in paragraph at lines 160--176
+Underfull \hbox (badness 10000) in paragraph at lines 164--183
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 160--176
+Underfull \hbox (badness 10000) in paragraph at lines 164--183
 
  []
 
 [4
 
-] (./thesis.toc)
+] (./thesis.toc [5
+
+] [6])
 \tf@toc=\write4
 \openout4 = `thesis.toc'.
 
-[5
-
-]
+[7]
 Chapter 1.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 190.
+(Font)              <10> on input line 197.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 190.
+(Font)              <7> on input line 197.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 190.
+(Font)              <5> on input line 197.
 [1
 
 
-] [2] [3] [4]
+]
 Chapter 2.
-[5
+[2
 
 ]pdfTeX warning (ext4): destination with the same identifier (name{introduction
 }) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.287 \section{Introduction}\label{introduction}}
-                                                  [6pdfTeX warning (ext4): dest
+l.225 \section{Introduction}\label{introduction}}
+                                                  [3pdfTeX warning (ext4): dest
 ination with the same identifier (name{definition.2.2}) has been already used, 
 duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.312 \end{equation}
-                    ]
-<thesis_files/figure-latex/mathplot-1.pdf, id=233, 469.755pt x 325.215pt>
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  
+l.247 
+      ]
+<thesis_files/figure-latex/mathplot-1.pdf, id=307, 469.755pt x 325.215pt>
 File: thesis_files/figure-latex/mathplot-1.pdf Graphic file (type pdf)
 <use thesis_files/figure-latex/mathplot-1.pdf>
 Package pdftex.def Info: thesis_files/figure-latex/mathplot-1.pdf  used on inpu
-t line 326.
+t line 264.
 (pdftex.def)             Requested size: 389.9969pt x 269.99785pt.
-[7 <./thesis_files/figure-latex/mathplot-1.pdf>] [8]
+[4 <./thesis_files/figure-latex/mathplot-1.pdf>] [5]
 Chapter 3.
-[9
-
-] [10]
-Chapter 4.
-[11
+[6
 
 ]
-Appendix A.
-<figures/uvalogo_regular_p_en.pdf, id=289, 526.00114pt x 57.04813pt>
+Overfull \hbox (217.70781pt too wide) has occurred while \output is active
+\T1/lmr/m/sl/12 CHAPTER 3.  HOW TO CONTROL FOR CONFOUNDS IN DECODING ANALYSES O
+F NEUROIMAGING DATA \T1/lmr/m/n/12 7
+ []
+
+[7]
+Chapter 4.
+[8
+
+]pdfTeX warning (ext4): destination with the same identifier (name{intro3}) has
+ been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.330 \section{Introduction}\label{intro3}}
+                                           pdfTeX warning (ext4): destination w
+ith the same identifier (name{methods3}) has been already used, duplicate ignor
+ed
+<to be read again> 
+                   \relax 
+l.335 \section{Methods}\label{methods3}}
+                                        pdfTeX warning (ext4): destination with
+ the same identifier (name{results3}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.340 \section{Results}\label{results3}}
+                                        pdfTeX warning (ext4): destination with
+ the same identifier (name{discussion3}) has been already used, duplicate ignor
+ed
+<to be read again> 
+                   \relax 
+l.345 \section{Discussion}\label{discussion3}}
+                                              
+Overfull \hbox (433.29408pt too wide) has occurred while \output is active
+\T1/lmr/m/sl/12 CHAPTER 4.  THE AMSTERDAM OPEN MRI COLLECTION, A SET OF MULTIMO
+DAL MRI DATASETS FOR INDIVIDUAL DIFFERENCE ANALYSES \T1/lmr/m/n/12 9
+ []
+
+[9]
+Chapter 5.
+[10
+
+]pdfTeX warning (ext4): destination with the same identifier (name{intro3}) has
+ been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.366 \section{Introduction}\label{intro3}}
+                                           pdfTeX warning (ext4): destination w
+ith the same identifier (name{methods3}) has been already used, duplicate ignor
+ed
+<to be read again> 
+                   \relax 
+l.371 \section{Methods}\label{methods3}}
+                                        pdfTeX warning (ext4): destination with
+ the same identifier (name{results3}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.376 \section{Results}\label{results3}}
+                                        pdfTeX warning (ext4): destination with
+ the same identifier (name{discussion3}) has been already used, duplicate ignor
+ed
+<to be read again> 
+                   \relax 
+l.381 \section{Discussion}\label{discussion3}}
+                                              
+Overfull \hbox (152.43549pt too wide) has occurred while \output is active
+\T1/lmr/m/sl/12 CHAPTER 5.  CHOOSING TO VIEW MORBID INFORMATION INVOLVES REWARD
+ CIRCUITRY \T1/lmr/m/n/12 11
+ []
+
+[11]
+Chapter 6.
+[12
+
+]pdfTeX warning (ext4): destination with the same identifier (name{intro3}) has
+ been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.402 \section{Introduction}\label{intro3}}
+                                           pdfTeX warning (ext4): destination w
+ith the same identifier (name{methods3}) has been already used, duplicate ignor
+ed
+<to be read again> 
+                   \relax 
+l.407 \section{Methods}\label{methods3}}
+                                        pdfTeX warning (ext4): destination with
+ the same identifier (name{results3}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.412 \section{Results}\label{results3}}
+                                        pdfTeX warning (ext4): destination with
+ the same identifier (name{discussion3}) has been already used, duplicate ignor
+ed
+<to be read again> 
+                   \relax 
+l.417 \section{Discussion}\label{discussion3}}
+                                              
+Overfull \hbox (463.7969pt too wide) has occurred while \output is active
+\T1/lmr/m/sl/12 CHAPTER 6.  USING PREDICTIVE MODELING TO QUANTIFY THE IMPORTANC
+E AND LIMITATIONS OF ACTION UNITS IN EMOTION PERCEPTION \T1/lmr/m/n/12 13
+ []
+
+[13]
+Chapter 7.
+[14
+
+]pdfTeX warning (ext4): destination with the same identifier (name{intro3}) has
+ been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.438 \section{Introduction}\label{intro3}}
+                                           pdfTeX warning (ext4): destination w
+ith the same identifier (name{methods3}) has been already used, duplicate ignor
+ed
+<to be read again> 
+                   \relax 
+l.443 \section{Methods}\label{methods3}}
+                                        pdfTeX warning (ext4): destination with
+ the same identifier (name{results3}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.448 \section{Results}\label{results3}}
+                                        pdfTeX warning (ext4): destination with
+ the same identifier (name{discussion3}) has been already used, duplicate ignor
+ed
+<to be read again> 
+                   \relax 
+l.453 \section{Discussion}\label{discussion3}}
+                                              
+Overfull \hbox (116.87904pt too wide) has occurred while \output is active
+\T1/lmr/m/sl/12 CHAPTER 7.  COMPARING MODELS OF DYNAMIC FACIAL EXPRESSION PERCE
+PTION \T1/lmr/m/n/12 15
+ []
+
+[15] [16
+
+]
+
+LaTeX Warning: Reference `tDCS-att-review' on page 17 undefined on input line 4
+77.
+
+LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 4
+85.
+(/Users/lukas/Library/TinyTeX/texmf-dist/tex/latex/lm/ts1lmr.fd
+File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+
+LaTeX Warning: Reference `sacc-tDCS' on page 17 undefined on input line 499.
+
+[17
+
+]
+
+LaTeX Warning: Reference `AB-tDCS-EEG' on page 18 undefined on input line 522.
+
+
+LaTeX Warning: Reference `AB-tDCS-sEBR' on page 18 undefined on input line 526.
+
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 544--545
+
+ []
+
+
+LaTeX Warning: Reference `MFBrain' on page 18 undefined on input line 547.
+
+[18] [19]
+Chapter 8.
+[20
+
+]
+Underfull \hbox (badness 1005) in paragraph at lines 581--582
+\T1/lmr/m/n/10.95 sweep of cor-ti-cal in-for-ma-tion pro-cess-ing. \T1/lmr/m/it
+/10.95 Cere-bral Cor-tex, 29 \T1/lmr/m/n/10.95 2261--2278.
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 581--582
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 583--584
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 585--586
+
+ []
+
+[21
+
+] [22
+
+
+] [23
+
+] [24
+
+]
+<figures/uvalogo_regular_p_en.pdf, id=465, 526.00114pt x 57.04813pt>
 File: figures/uvalogo_regular_p_en.pdf Graphic file (type pdf)
 <use figures/uvalogo_regular_p_en.pdf>
-Package pdftex.def Info: figures/uvalogo_regular_p_en.pdf  used on input line 3
-89.
+Package pdftex.def Info: figures/uvalogo_regular_p_en.pdf  used on input line 6
+76.
 (pdftex.def)             Requested size: 390.0213pt x 42.30025pt.
 
-Overfull \hbox (17.64612pt too wide) in paragraph at lines 389--390
+Overfull \hbox (17.64604pt too wide) in paragraph at lines 676--677
 [][] 
  []
 
-[12
+[25
 
- <./figures/uvalogo_regular_p_en.pdf>]
-Appendix B.
-[13
+ <./figures/uvalogo_regular_p_en.pdf>] [26
 
-] [14] [15
+] [27] (./thesis.aux)
 
+LaTeX Warning: There were undefined references.
 
-] [16] [17
-
-] [18
-
-]
-LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 5
-79.
-(/Users/lukas/Library/TinyTeX/texmf-dist/tex/latex/lm/ts1lmr.fd
-File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
-) [19
-
-]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 590.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 590.
-(./thesis.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 590.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 590.
-Package rerunfilecheck Info: File `thesis.out' has not changed.
-(rerunfilecheck)             Checksum: D61610954BD2A76383D722FC99376214;3102.
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 590.
+Package rerunfilecheck Info: File `thesis.out' has not changed.
+(rerunfilecheck)             Checksum: D8575E14946F5F76E1A2881B4239736E;7206.
  ) 
 Here is how much of TeX's memory you used:
- 10777 strings out of 482769
- 154582 string characters out of 5953978
- 410129 words of memory out of 5000000
- 25838 multiletter control sequences out of 15000+600000
- 618149 words of font info for 87 fonts, out of 8000000 for 9000
+ 10877 strings out of 481235
+ 157564 string characters out of 5915132
+ 455561 words of memory out of 5000000
+ 27440 multiletter control sequences out of 15000+600000
+ 490741 words of font info for 86 fonts, out of 8000000 for 9000
  54 hyphenation exceptions out of 8191
- 43i,11n,37p,642b,366s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 71i,11n,74p,842b,484s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/Users/lukas/Library/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc}{/User
 s/lukas/Library/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/Users/lukas/L
 ibrary/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/Users/lukas/Librar
 y/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc}{/Users/lukas/Library/Tin
 yTeX/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/Users/lukas/Library/TinyTeX/texm
 f-dist/fonts/enc/dvips/lm/lm-mathsy.enc}</Users/lukas/Library/TinyTeX/texmf-dis
-t/fonts/type1/public/lm/lmbx12.pfb></Users/lukas/Library/TinyTeX/texmf-dist/fon
-ts/type1/public/lm/lmcsc10.pfb></Users/lukas/Library/TinyTeX/texmf-dist/fonts/t
-ype1/public/lm/lmex10.pfb></Users/lukas/Library/TinyTeX/texmf-dist/fonts/type1/
-public/lm/lmmi12.pfb></Users/lukas/Library/TinyTeX/texmf-dist/fonts/type1/publi
-c/lm/lmmi8.pfb></Users/lukas/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/l
-mr10.pfb></Users/lukas/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr12.p
-fb></Users/lukas/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr17.pfb></U
-sers/lukas/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr7.pfb></Users/lu
-kas/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr8.pfb></Users/lukas/Lib
-rary/TinyTeX/texmf-dist/fonts/type1/public/lm/lmri12.pfb></Users/lukas/Library/
-TinyTeX/texmf-dist/fonts/type1/public/lm/lmro12.pfb></Users/lukas/Library/TinyT
-eX/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></Users/lukas/Library/TinyTeX/te
-xmf-dist/fonts/type1/public/lm/lmsy8.pfb></Users/lukas/Library/TinyTeX/texmf-di
-st/fonts/type1/public/lm/lmtt10.pfb></Users/lukas/Library/TinyTeX/texmf-dist/fo
-nts/type1/public/lm/lmtt12.pfb></Users/lukas/Library/TinyTeX/texmf-dist/fonts/t
-ype1/public/lm/lmtti10.pfb>
-Output written on thesis.pdf (24 pages, 363862 bytes).
+t/fonts/type1/public/lm/lmbx10.pfb></Users/lukas/Library/TinyTeX/texmf-dist/fon
+ts/type1/public/lm/lmbx12.pfb></Users/lukas/Library/TinyTeX/texmf-dist/fonts/ty
+pe1/public/lm/lmcsc10.pfb></Users/lukas/Library/TinyTeX/texmf-dist/fonts/type1/
+public/lm/lmex10.pfb></Users/lukas/Library/TinyTeX/texmf-dist/fonts/type1/publi
+c/lm/lmmi12.pfb></Users/lukas/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/
+lmmi8.pfb></Users/lukas/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr10.
+pfb></Users/lukas/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr12.pfb></
+Users/lukas/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr17.pfb></Users/
+lukas/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr7.pfb></Users/lukas/L
+ibrary/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr8.pfb></Users/lukas/Library/
+TinyTeX/texmf-dist/fonts/type1/public/lm/lmri10.pfb></Users/lukas/Library/TinyT
+eX/texmf-dist/fonts/type1/public/lm/lmri12.pfb></Users/lukas/Library/TinyTeX/te
+xmf-dist/fonts/type1/public/lm/lmro12.pfb></Users/lukas/Library/TinyTeX/texmf-d
+ist/fonts/type1/public/lm/lmsy10.pfb></Users/lukas/Library/TinyTeX/texmf-dist/f
+onts/type1/public/lm/lmsy8.pfb></Users/lukas/Library/TinyTeX/texmf-dist/fonts/t
+ype1/public/lm/lmtt10.pfb></Users/lukas/Library/TinyTeX/texmf-dist/fonts/type1/
+public/lm/lmtt12.pfb></Users/lukas/Library/TinyTeX/texmf-dist/fonts/type1/publi
+c/lm/lmtti10.pfb>
+Output written on thesis.pdf (34 pages, 419731 bytes).
 PDF statistics:
- 439 PDF objects out of 1000 (max. 8388607)
- 386 compressed objects within 4 object streams
- 107 named destinations out of 1000 (max. 500000)
- 171 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 591 PDF objects out of 1000 (max. 8388607)
+ 524 compressed objects within 6 object streams
+ 126 named destinations out of 1000 (max. 500000)
+ 331 words of extra memory for PDF output out of 10000 (max. 10000000)
 
