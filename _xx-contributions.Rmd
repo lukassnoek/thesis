@@ -1,0 +1,4 @@
+# Contributions to the chapters {-}
+\chaptermark{Contributions to chapters}
+\setlength{\parindent}{0pt}
+\small

@@ -1,0 +1,163 @@
+\usepackage{caption}
+\usepackage[pass]{geometry} % load the package, but none of the default settings
+\usepackage{pdflscape} % landscape pages and rotation
+\usepackage{bookmark} % section links in pdf
+\usepackage{enumitem} % formatting lists
+\usepackage[dvipsnames]{xcolor} % prevent error in pdfpages
+\usepackage{pdfpages} % for adding the book cover
+
+\let\oldhref\href % save command before redefininig, so we can turn it off again
+\renewcommand{\href}[2]{#2\footnote{\url{#1}}} % same as "link-as-notes: true"
+
+\newcommand{\blandscape}{\begin{landscape}}
+\newcommand{\elandscape}{\end{landscape}}
+\AtBeginDocument{\let\maketitle\relax} % don't make automatic title page as first page
+
+\newcommand{\CoverName}{cover} % to set page numbers of cover pages to "cover"
+
+% change toc depth (to remove subsections in Dutch Summary from toc)
+\newcommand{\changelocaltocdepth}[1]{%
+  \addtocontents{toc}{\protect\setcounter{tocdepth}{#1}}%
+  \setcounter{tocdepth}{#1}%
+}
+
+% From https://tex.stackexchange.com/questions/32547/how-to-measure-the-width-of-a-longtable-dynamically-and-use-this-width-in-footer
+% papaja requires the \getlongtablewidth command when using the longtable=TRUE option with apa_table
+\makeatletter
+\newcommand\LastLTentrywidth{1em}
+\newlength\longtablewidth
+\setlength{\longtablewidth}{1in}
+\newcommand{\getlongtablewidth}{\begingroup \ifcsname LT@\roman{LT@tables}\endcsname \global\longtablewidth=0pt \renewcommand{\LT@entry}[2]{\global\advance\longtablewidth by ##2\relax\gdef\LastLTentrywidth{##2}}\@nameuse{LT@\roman{LT@tables}} \fi \endgroup}
+\makeatother
+
+%% Typefaces
+\usepackage{fontspec}
+\setmainfont{Minion Pro}
+\setsansfont[Ligatures=TeX]{Helvetica}
+\setmathsfont(Digits,Greek,Latin)[Numbers={Proportional}]{Minion Pro}
+\setmathrm{Minion Pro}
+
+%% Page layout
+
+% The length of the lowercase alphabet in 11 pt Minion Pro is 127.80293pt (116.7151 pt for 10pt).
+% According to equation 2.1 of the memoir manual, the optimal width of the typeblock (66 characters) would then be 294.38358306 pt, or 103.9 mm
+% According to table 2.2 of the memoir manual, the typeblock should be between 22 pica's (= 93.13 mm), which would be 59 characters wide, or 26 pica's a little bit more than 22 pica's (= 110.1 mm), which would be 70 characters wide. 
+
+\setstocksize{240mm}{170mm} % adjusted B5, with no bleed on each side for now
+\settrimmedsize{240mm}{170mm}{*} % adjusted B5 (standard thesis size)
+\setpageml{\paperheight}{\paperwidth}{*} % center the adjusted B5 page to the middle left (so the right, bottom and top will be trimmed)
+\settypeblocksize{*}{105mm}{1.618} % typeblock of 105 mm wide (little wider than optimal, to save paper). The golden ratio is a good rule to set the height, which amounts to about 105*1.618 = 170. The actual height of the text block will differ slightly, because it has to fit an integer number of lines.
+\setlrmargins{*}{40mm}{*} % leaves 170-105 = 65 mm for margins. Set the foredge margin so its relation to the spine margin is about the golden ratio as well (65/1.618 is 40.2). A foreedge of twice the spine is also common, but I think this makes the foreedge a bit too big. The spine is then 65-40 = 25 mm.
+\setulmargins{25mm}{*}{*} % the top margin is often 1/9 of the page height, or 1/9 * 240 mm = 27 mm. Often the top margin is also the same as the spine. Both of these rules almost converge here. 
+% This automatically determines the bottom margin at 240 - 25 - 170 = 45. This is bigger than the top margin, which is good, as this is where you hold the book (often the bottom margin is even twice as big as the top).
+%\setheadfoot{\onelineskip}{2\onelineskip} % defaults from memoir manual
+%\setheaderspaces{*}{2\onelineskip}{*} % defaults from memoir manual
+\setmarginnotes{5mm}{15mm}{\onelineskip} % too narrow (15mm, with 5 mm separation from text) for actual margin notes; but some chapter / pagestyles (e.g. companion) run off the page if this is not set.
+\settypeoutlayoutunit{mm} % use mm for printing to the log
+\checkandfixthelayout
+
+%% Page and chapter styles
+\chapterstyle{companion}
+
+\def\defstyle{Ruled} % pagestyle set here will be used on all pages with regular text
+\makeevenhead{Ruled}{\leftmark}{}{} % get rid of small caps in verso headers
+
+% distinguish lower-level headings
+\setsubsubsecheadstyle{\normalsize\bfseries\itshape} % bold italic
+\setparaheadstyle{\normalsize\itshape} % just italic
+
+%% Spacing
+\midsloppy % middle ground between overfull lines ("fussy"), or lots of variation in interword spaces ("sloppy")
+
+% try to avoid widows (last line of paragraph at the top of otherwise empty page)
+\setlength{\topskip}{1.6\topskip}
+\checkandfixthelayout
+\sloppybottom
+
+\renewcommand{\arraystretch}{1.5} % increase vertical spacing in tables
+
+% when figures/tables are wider than text block, center them with respect to text block
+\setfloatadjustment{figure}{\centerfloat}
+\setfloatadjustment{table}{\centerfloat}
+
+%\setlength{\cftpartnumwidth}{2.5em} % more space for part numbering in ToC
+%\setlength\cftchapternumwidth{2.5em} % also adjust others to match
+%\setlength\cftsectionindent{2.5em} % also adjust others to match
+
+%% Abstracts
+\abstractrunin % set "ABSTRACT" title in-line
+\renewcommand{\abstractnamefont}{\normalfont\normalsize\scshape\bfseries} % set "ABSTRACT" in bold small scaps
+\renewcommand{\abstracttextfont}{\normalfont\normalsize} % normalsize for text
+\setlength{\absleftindent}{0pt} % don't increase left margin for abstracts
+\setlength{\absrightindent}{0pt} % don't increase right margin for abstracts
+\abslabeldelim{\quad} % some space after "ABSTRACT"
+% see front_matter.tex for two more commands
+
+%% Part titles 
+%format similarly to companion chapter style
+\renewcommand{\partnamefont}{\normalfont\huge\scshape}
+\renewcommand{\partnumfont}{\normalfont\HUGE}
+
+%\setlength\beforechapskip{-\baselineskip} % this would remove any space above the chapter titles
+
+%% Captions
+% Memoir:
+%\captionnamefont{\small\sffamily}
+%\captiontitlefont{\small\sffamily}
+%\hangcaption
+% caption package:
+\captionsetup{labelfont={rm,sc},textfont={small,sf},labelsep=space} % small sans for table captions, with small caps for label
+
+%% Bibliography
+\renewcommand*{\bibfont}{\footnotesize}
+
+% Hyperlink entire author-year citation; not just year
+%https://tex.stackexchange.com/questions/15951/hyperlink-name-with-biblatex-authoryear-biblatex-1-4b
+\DeclareFieldFormat{citehyperref}{%
+  \DeclareFieldAlias{bibhyperref}{noformat}% Avoid nested links
+  \bibhyperref{#1}}
+\DeclareFieldFormat{textcitehyperref}{%
+  \DeclareFieldAlias{bibhyperref}{noformat}% Avoid nested links
+  \bibhyperref{%
+    #1%
+    \ifbool{cbx:parens}
+      {\bibcloseparen\global\boolfalse{cbx:parens}}
+      {}}}
+\savebibmacro{cite}
+\savebibmacro{textcite}
+\renewbibmacro*{cite}{%
+  \printtext[citehyperref]{%
+    \restorebibmacro{cite}%
+    \usebibmacro{cite}}}
+\renewbibmacro*{textcite}{%
+  \ifboolexpr{
+    ( not test {\iffieldundef{prenote}} and
+      test {\ifnumequal{\value{citecount}}{1}} )
+    or
+    ( not test {\iffieldundef{postnote}} and
+      test {\ifnumequal{\value{citecount}}{\value{citetotal}}} )
+  }
+    {\DeclareFieldAlias{textcitehyperref}{noformat}}
+    {}%
+  \printtext[textcitehyperref]{%
+    \restorebibmacro{textcite}%
+    \usebibmacro{textcite}}}
+
+% Handle prefixes in surnames (e.g. "van", "de") correctly
+%https://tex.stackexchange.com/questions/440133/prefixes-in-author-names-in-references-and-bibliography
+\DeclareSortingNamekeyTemplate{
+  \keypart{
+    \namepart{family}
+  }
+  \keypart{
+    \namepart{prefix}
+  }
+  \keypart{
+    \namepart{given}
+  }
+  \keypart{
+    \namepart{suffix}
+  }
+}
+
+\renewbibmacro{begentry}{\midsentence}

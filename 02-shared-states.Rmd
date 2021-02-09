@@ -1,82 +1,23 @@
 # Shared states: using MVPA to test neural overlap between self-focused emotion imagery and other-focused emotion understanding
-<!-- Write a shorter-title in \chaptermark if necessary. This will be used for the page header-->
-\chaptermark{A long title}
+\chaptermark{Shared states}
 
-__Abstract__
-
-\noindent 
-This chapter presents some important new work. Earlier papers did not consider this, or only in the Euclidian case. Here we argue that it is essential to look at it from a different angle. Our results have important implications for society. And also, aliens.
+\vspace*{\fill}
 
 ---
 
-\vspace*{\fill}
+\small
 \noindent
-_If your chapter has been published as a paper, and/or was a collaboration with co-authors, you could add the citation here. This particular text was adapted from one created with a [random mathematics paper generator](http://thatsmathematics.com/mathgen/), and from the [`bookdown` book](https://bookdown.org/yihui/bookdown/markdown-extensions-by-bookdown.html)._
+_This chapter has been published as_: Oosterwijk, S.\*, Snoek, L.\*, Rotteveel, M., Barrett, L. F., & Scholte, H. S. (2017). Shared states: using MVPA to test neural overlap between self-focused emotion imagery and other-focused emotion understanding. *Social cognitive and affective neuroscience, 12*(7), 1025-1035.
+
+\* Shared first authorship
 \newpage
+\normalsize
 
-## Introduction
+__Abstract__
 
-It was Germain who first asked whether graphs can be classified. It was Grassmann who first asked whether random variables can be constructed. Recently, there has been much interest in the classification of universally intrinsic monodromies. A useful survey of the subject can be found in @cite:14. Therefore the goal of the present article is to extend co-Liouville, independent, Minkowski vectors.
+The present study tested whether the neural patterns that support imagining "performing an action", "feeling a bodily sensation" or "being in a situation" are directly involved in understanding *other people’s* actions, bodily sensations and situations. Subjects imagined the content of short sentences describing emotional actions, interoceptive sensations and situations (self-focused task), and processed scenes and focused on *how* the target person was expressing an emotion, *what* this person was feeling, and *why* this person was feeling an emotion (other-focused task). Using a linear support vector machine classifier on brain-wide multi-voxel patterns, we accurately decoded each individual class in the self-focused task. When generalizing the classifier from the self-focused task to the other-focused task, we also accurately decoded whether subjects focused on the emotional actions, interoceptive sensations and situations of *others*. These results show that the neural patterns that underlie self-imagined experience are involved in understanding the experience of other people. This supports the theoretical assumption that the basic components of emotion experience and understanding share resources in the brain.
 
-We wish to extend the results of @cite:14 to completely injective, measurable subrings. In @cite:3, the main result was the derivation of almost everywhere convex planes. So here, naturality is obviously a concern. Thus the work in @cite:22 did not consider the real case. In this context, the results of @cite:9  are highly relevant. Recently, there has been much interest in the computation of pseudo-freely left-integral, complex paths.
+## Introduction {#Sharedstates-introduction}
+To navigate the social world successfully it is crucial to understand other people. But how do people generate meaningful representations of other people’s actions, sensations, thoughts and emotions? The dominant view assumes that representations of other people’s experiences are supported by the same neural systems as those that are involved in generating experience in the self [e.g., @gallese2004unifying; see for an overview @singer2012past]. We tested this principle of self-other neural overlap directly, using multi-voxel pattern analysis (MVPA), across three different aspects of experience that are central to emotions: actions, sensations from the body and situational knowledge.
 
-A central problem in linear set theory is the classification of embedded, quasi-Levi-Civita, independent systems. Our description of numbers was a milestone in commutative combinatorics. It is essential to consider that it may be right-Chebyshev. Recently, there has been much interest in the computation of combinatorially meager homomorphisms. In future work, we plan to address questions of uniqueness as well as convexity. A central problem in probabilistic topology is the derivation of functions. In this context, the results of @cite:22 are highly relevant. 
-
-In future work, we plan to address questions of locality as well as uniqueness. It is not yet known whether the Riemann hypothesis holds, although the issue of positivity has been addressed [@cite:10; @cite:2; @cite:29].
-
-## Results
-
-```{definition, label="foo"}
-Let $| Z' | \ne \sqrt{2}$. An intrinsic hull is an **arrow** if it is geometric, Riemannian and pairwise standard.
-```
-
-Let $J$ be a super-contravariant, invariant, hyper-Fibonacci system. It is easy to see that $-\Psi =-1^{-1}$. Next, if $i$ is not equal to $\tilde{\nu}$ then $1^{7} > c \left( e \times \pi, \dots, H \right)$. Thus if $\bar{z}$ is multiplicative and super-$n$-dimensional then there exists an embedded and linear morphism. Note that there exists a Poisson and Fermat Liouville monoid. Next, $\omega$ is admissible, nonnegative definite, non-canonical and Torricelli.
-
-\begin{equation}
-\frac{d}{dx}\left( \int_{a}^{x} f(u)\,du\right)=f(x) (\#eq:example)
-\end{equation}
-
-From Definition \@ref(def:foo) and Equation \@ref(eq:example), it follows that
-
-\begin{align} 
-g(X_{n}) &= g(\theta)+g'({\tilde{\theta}})(X_{n}-\theta) \notag \\
-\sqrt{n}[g(X_{n})-g(\theta)] &= g'\left({\tilde{\theta}}\right)
-  \sqrt{n}[X_{n}-\theta ] (\#eq:align)
-\end{align} 
-
-Trivially, its graphical form must be as in Figure \@ref(fig:mathplot)[^figref].
-
-```{r, mathplot, fig.cap='(ref:caption-mathplot)', echo = FALSE}
-par(cex.main = 1.5, mar = c(5, 6, 4, 5) + 0.1, mgp = c(3.5, 1, 0), cex.lab = 1.5, 
-    font.lab = 2, cex.axis = 1.3, bty = "n", las = 1)
-
-yhigh <- 3
-xi <- c(1, 0.5, 0.1)
-plot(function(x) dbeta(x, xi[1], 1), 0, 1, ylim = c(0, yhigh), xlim = c(0, 1), 
-    lwd = 2, lty = 1, xlab = " ", ylab = " ")
-mtext("artifice", 1, line = 2.5, cex = 1.5, font = 2)
-mtext("scope", 2, line = 3, cex = 1.5, font = 2, las = 0)
-
-par(new = TRUE)
-plot(function(x) dbeta(x, xi[2], 1), 0, 1, ylim = c(0, yhigh), xlim = c(0, 1), 
-    lwd = 2, lty = 2, xlab = " ", ylab = " ")
-
-par(new = TRUE)
-plot(function(x) dbeta(x, xi[3], 1), 0, 1, ylim = c(0, yhigh), xlim = c(0, 1), 
-    lwd = 2, lty = 3, xlab = " ", ylab = " ")
-
-cexsize <- 1.5
-text(0.5, 1.15, expression(xi == 1), cex = cexsize, pos = 4)
-text(0.1, 1.6, expression(xi == 0.5), cex = cexsize, pos = 4)
-text(0, 0.2, expression(xi == 0.1), cex = cexsize, pos = 4)
-```
-
-(ref:caption-mathplot) __Our conjecture in its graphical form__ Of course, classification of closed, Liouville monodromies is omitted for purposes of clarity.
-
-Note that if Siegel's condition is satisfied then $f = e$. Hence $G > | P' |$. The remaining details are left as an exercise to the reader.
-
-[^figref]: Adapted from http://shinyapps.org/apps/RGraphCompendium/index.php
-
-## Conclusion
-
-Is it possible to construct almost surely contra-covariant arrows? In this setting, the ability to derive quasiuniversally left-Jacobi fields is essential [@cite:18; @cite:31; @cite:17]. Moreover, the main result was the classification of anti-differentiable, quasi-positive, regular homomorphisms. Therefore this reduces the results of @cite:30 to an easy exercise. This could shed important light on a conjecture of Euclid.
+In recent years, evidence has accumulated that suggests a similarity between the neural patterns representing the self and others. For example, a great variety of studies have shown that observing actions and sensations in other people engages similar neural circuits as acting and feeling in the self [see for an overview @bastiaansen2009evidence]. Moreover, an extensive research program on pain has demonstrated an overlap between the experience of physical pain and the observation of pain in other people, utilizing both neuroimaging techniques [e.g., @lamm2011meta] and analgesic interventions [e.g., @rutgen2015placebo; @mischkowski2016painkiller]. This process of "vicarious experience" or "simulation" is viewed as an important component of empathy [@carr2003neural; @decety2011dissecting; @keysers2014dissociating]. In addition, it is argued that mentalizing (e.g. understanding the mental states of other people) involves the same brain networks as those involved in self-generated thoughts [@uddin2007self; @waytz2011two]. Specifying this idea further, a constructionist view on emotion proposes that both emotion experience and interpersonal emotion understanding are produced by the same large-scale distributed brain networks that support the processing of sensorimotor, interoceptive and situationally relevant information [@barrett2013large; @oosterwijk2014embodiment]. An implication of these views is that the representation of self- and other-focused emotional actions, interoceptive sensations and situations overlap in the brain.

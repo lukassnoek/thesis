@@ -11,7 +11,7 @@ date: "maandag 21 oktober 2021" # Your defense date in Dutch: "[weekday] [day in
 aula: false # set to true if your defense is in the Aula; set to false/omit if it is in the Agnietenkapel
 time: "14.00" # time of your defense (a 24h time, e.g. "14.00")
 birthplace: "Hoevelaken" # your place of birth, in Dutch
-country_of_birth: "Nederland" # if your birthplace is not in the Netherlands, fill in the country as well (in Dutch). Omit otherwise!
+#country_of_birth: "" # if your birthplace is not in the Netherlands, fill in the country as well (in Dutch). Omit otherwise!
 
 ### Colophon 
 # Can be skipped entirely, but if you define FUNDER, this will read: 
@@ -97,26 +97,38 @@ site: bookdown::bookdown_site # to get a "Build" button in RStudio to render the
 output:
   # settings for html output
   bookdown::gitbook:
+    css: css/style.css
+    pandoc_args: [ "--csl", "apa.csl" ]
+    sharing:
+      facebook: no
+      github: yes
+      twitter: yes
+      all: ['facebook', 'twitter', 'linkedin']
+
     config:
       toc: 
         #this text will print on top ("before") or at the bottom ("after") of the table of contents
         before: | 
-          <li><a href="./">UvA PhD thesis template</a></li>
+          <li><a href="./">PhD thesis of Lukas Snoek</a></li>
         after: |
           <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
-#   pandoc_args: [ "--csl", "apa.csl" ] # download the citation style of your choice from https://www.zotero.org/styles, then fill in here
-  # settings for pdf output
+  
   bookdown::pdf_book: 
     template: template.tex
     keep_tex: yes
-    #pandoc_args: [ "--csl", "apa.csl" ] # download the citation style of your choice from https://www.zotero.org/styles, then fill in here
+    pandoc_args: [ "--csl", "apa.csl" ]
+    #latex_engine: xelatex
+    #includes:
+      #in_header: tex/preamble.tex
+      #before_body: tex/front_matter.tex
+
 indent: false # indent new paragraphs, instead of leaving whitespace
 links-as-notes: true # in the pdf, print hyperlink URLS as footnotes (as they can't be clicked on)
 bibliography: thesis.bib # bib-file containing bibliographic information on all works you want to cite
 citation_package: none # to use .csl-files to apply same citation style to html and pdf. You can also use a LaTeX package, e.g. biblatex. This provides much more customizability, but it is not as easy to apply a particular style, and it will only work in pdf output.
+biblio-style: "apa"
 link-citations: true # make clickable hyperlinks from in-text citations to bibliography at the end
 ---
 
 ```{r, include = FALSE, child = if (knitr::is_html_output()) '_00-preface.Rmd'}
-# see the 00-preface.Rmd file, which will only show in the html version
 ```
