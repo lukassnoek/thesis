@@ -3,9 +3,9 @@
 %
 % New additions to the template are marked with "LCR"
 
-%\documentclass[12pt,american,]{book} %LCR
+%\documentclass[12pt,american,]{memoir} %LCR
  % if not, force the oneside and a4paper options, which seem to be the only reasonable defaults
-\documentclass[12pt,american,a4paper,oneside,]{book} %LCR
+\documentclass[12pt,american,a4paper,oneside,]{memoir} %LCR
 
 \usepackage{lmodern}
 \usepackage{amssymb,amsmath}
@@ -44,6 +44,9 @@
   \usepackage{polyglossia}
   \setmainlanguage[variant=american]{english}
 \fi
+\usepackage[style=apa]{biblatex}
+
+\addbibresource{thesis.bib}
 \usepackage{longtable,booktabs}
 % Make links footnotes instead of hotlinks:
 \renewcommand{\href}[2]{#2\footnote{\url{#1}}}
@@ -75,6 +78,169 @@
 % https://github.com/jgm/pandoc/issues/5801
 \renewcommand{\linethickness}{0.05em}
 
+\usepackage{caption}
+\usepackage[pass]{geometry} % load the package, but none of the default settings
+\usepackage{pdflscape} % landscape pages and rotation
+\usepackage{bookmark} % section links in pdf
+\usepackage{enumitem} % formatting lists
+\usepackage[dvipsnames]{xcolor} % prevent error in pdfpages
+\usepackage{pdfpages} % for adding the book cover
+
+\let\oldhref\href % save command before redefininig, so we can turn it off again
+\renewcommand{\href}[2]{#2\footnote{\url{#1}}} % same as "link-as-notes: true"
+
+\newcommand{\blandscape}{\begin{landscape}}
+\newcommand{\elandscape}{\end{landscape}}
+\AtBeginDocument{\let\maketitle\relax} % don't make automatic title page as first page
+
+\newcommand{\CoverName}{cover} % to set page numbers of cover pages to "cover"
+
+% change toc depth (to remove subsections in Dutch Summary from toc)
+\newcommand{\changelocaltocdepth}[1]{%
+  \addtocontents{toc}{\protect\setcounter{tocdepth}{#1}}%
+  \setcounter{tocdepth}{#1}%
+}
+
+% From https://tex.stackexchange.com/questions/32547/how-to-measure-the-width-of-a-longtable-dynamically-and-use-this-width-in-footer
+% papaja requires the \getlongtablewidth command when using the longtable=TRUE option with apa_table
+\makeatletter
+\newcommand\LastLTentrywidth{1em}
+\newlength\longtablewidth
+\setlength{\longtablewidth}{1in}
+\newcommand{\getlongtablewidth}{\begingroup \ifcsname LT@\roman{LT@tables}\endcsname \global\longtablewidth=0pt \renewcommand{\LT@entry}[2]{\global\advance\longtablewidth by ##2\relax\gdef\LastLTentrywidth{##2}}\@nameuse{LT@\roman{LT@tables}} \fi \endgroup}
+\makeatother
+
+%% Typefaces
+\usepackage{fontspec}
+\setmainfont{Minion Pro}
+\setsansfont[Ligatures=TeX]{Helvetica}
+\setmathsfont(Digits,Greek,Latin)[Numbers={Proportional}]{Minion Pro}
+\setmathrm{Minion Pro}
+
+%% Page layout
+
+% The length of the lowercase alphabet in 11 pt Minion Pro is 127.80293pt (116.7151 pt for 10pt).
+% According to equation 2.1 of the memoir manual, the optimal width of the typeblock (66 characters) would then be 294.38358306 pt, or 103.9 mm
+% According to table 2.2 of the memoir manual, the typeblock should be between 22 pica's (= 93.13 mm), which would be 59 characters wide, or 26 pica's a little bit more than 22 pica's (= 110.1 mm), which would be 70 characters wide. 
+
+\setstocksize{240mm}{170mm} % adjusted B5, with no bleed on each side for now
+\settrimmedsize{240mm}{170mm}{*} % adjusted B5 (standard thesis size)
+\setpageml{\paperheight}{\paperwidth}{*} % center the adjusted B5 page to the middle left (so the right, bottom and top will be trimmed)
+\settypeblocksize{*}{105mm}{1.618} % typeblock of 105 mm wide (little wider than optimal, to save paper). The golden ratio is a good rule to set the height, which amounts to about 105*1.618 = 170. The actual height of the text block will differ slightly, because it has to fit an integer number of lines.
+\setlrmargins{*}{40mm}{*} % leaves 170-105 = 65 mm for margins. Set the foredge margin so its relation to the spine margin is about the golden ratio as well (65/1.618 is 40.2). A foreedge of twice the spine is also common, but I think this makes the foreedge a bit too big. The spine is then 65-40 = 25 mm.
+\setulmargins{25mm}{*}{*} % the top margin is often 1/9 of the page height, or 1/9 * 240 mm = 27 mm. Often the top margin is also the same as the spine. Both of these rules almost converge here. 
+% This automatically determines the bottom margin at 240 - 25 - 170 = 45. This is bigger than the top margin, which is good, as this is where you hold the book (often the bottom margin is even twice as big as the top).
+%\setheadfoot{\onelineskip}{2\onelineskip} % defaults from memoir manual
+%\setheaderspaces{*}{2\onelineskip}{*} % defaults from memoir manual
+\setmarginnotes{5mm}{15mm}{\onelineskip} % too narrow (15mm, with 5 mm separation from text) for actual margin notes; but some chapter / pagestyles (e.g. companion) run off the page if this is not set.
+\settypeoutlayoutunit{mm} % use mm for printing to the log
+\checkandfixthelayout
+
+%% Page and chapter styles
+\chapterstyle{companion}
+
+\def\defstyle{Ruled} % pagestyle set here will be used on all pages with regular text
+\makeevenhead{Ruled}{\leftmark}{}{} % get rid of small caps in verso headers
+
+% distinguish lower-level headings
+\setsubsubsecheadstyle{\normalsize\bfseries\itshape} % bold italic
+\setparaheadstyle{\normalsize\itshape} % just italic
+
+%% Spacing
+\midsloppy % middle ground between overfull lines ("fussy"), or lots of variation in interword spaces ("sloppy")
+
+% try to avoid widows (last line of paragraph at the top of otherwise empty page)
+\setlength{\topskip}{1.6\topskip}
+\checkandfixthelayout
+\sloppybottom
+
+\renewcommand{\arraystretch}{1.5} % increase vertical spacing in tables
+
+% when figures/tables are wider than text block, center them with respect to text block
+\setfloatadjustment{figure}{\centerfloat}
+\setfloatadjustment{table}{\centerfloat}
+
+%\setlength{\cftpartnumwidth}{2.5em} % more space for part numbering in ToC
+%\setlength\cftchapternumwidth{2.5em} % also adjust others to match
+%\setlength\cftsectionindent{2.5em} % also adjust others to match
+
+%% Abstracts
+\abstractrunin % set "ABSTRACT" title in-line
+\renewcommand{\abstractnamefont}{\normalfont\normalsize\scshape\bfseries} % set "ABSTRACT" in bold small scaps
+\renewcommand{\abstracttextfont}{\normalfont\normalsize} % normalsize for text
+\setlength{\absleftindent}{0pt} % don't increase left margin for abstracts
+\setlength{\absrightindent}{0pt} % don't increase right margin for abstracts
+\abslabeldelim{\quad} % some space after "ABSTRACT"
+% see front_matter.tex for two more commands
+
+%% Part titles 
+%format similarly to companion chapter style
+\renewcommand{\partnamefont}{\normalfont\huge\scshape}
+\renewcommand{\partnumfont}{\normalfont\HUGE}
+
+%\setlength\beforechapskip{-\baselineskip} % this would remove any space above the chapter titles
+
+%% Captions
+% Memoir:
+%\captionnamefont{\small\sffamily}
+%\captiontitlefont{\small\sffamily}
+%\hangcaption
+% caption package:
+\captionsetup{labelfont={rm,sc},textfont={small,sf},labelsep=space} % small sans for table captions, with small caps for label
+
+%% Bibliography
+\renewcommand*{\bibfont}{\footnotesize}
+
+% Hyperlink entire author-year citation; not just year
+%https://tex.stackexchange.com/questions/15951/hyperlink-name-with-biblatex-authoryear-biblatex-1-4b
+\DeclareFieldFormat{citehyperref}{%
+  \DeclareFieldAlias{bibhyperref}{noformat}% Avoid nested links
+  \bibhyperref{#1}}
+\DeclareFieldFormat{textcitehyperref}{%
+  \DeclareFieldAlias{bibhyperref}{noformat}% Avoid nested links
+  \bibhyperref{%
+    #1%
+    \ifbool{cbx:parens}
+      {\bibcloseparen\global\boolfalse{cbx:parens}}
+      {}}}
+\savebibmacro{cite}
+\savebibmacro{textcite}
+\renewbibmacro*{cite}{%
+  \printtext[citehyperref]{%
+    \restorebibmacro{cite}%
+    \usebibmacro{cite}}}
+\renewbibmacro*{textcite}{%
+  \ifboolexpr{
+    ( not test {\iffieldundef{prenote}} and
+      test {\ifnumequal{\value{citecount}}{1}} )
+    or
+    ( not test {\iffieldundef{postnote}} and
+      test {\ifnumequal{\value{citecount}}{\value{citetotal}}} )
+  }
+    {\DeclareFieldAlias{textcitehyperref}{noformat}}
+    {}%
+  \printtext[textcitehyperref]{%
+    \restorebibmacro{textcite}%
+    \usebibmacro{textcite}}}
+
+% Handle prefixes in surnames (e.g. "van", "de") correctly
+%https://tex.stackexchange.com/questions/440133/prefixes-in-author-names-in-references-and-bibliography
+\DeclareSortingNamekeyTemplate{
+  \keypart{
+    \namepart{family}
+  }
+  \keypart{
+    \namepart{prefix}
+  }
+  \keypart{
+    \namepart{given}
+  }
+  \keypart{
+    \namepart{suffix}
+  }
+}
+
+\renewbibmacro{begentry}{\midsentence}
 
 %%%%%%%%%%%%% BEGIN DOCUMENT %%%%%%%%%%%%%
 \begin{document}
@@ -159,6 +325,24 @@ Overige leden:
 %%%%%%%%%%%%%%%%%%
 
 
+%Based on template from the "IILC Dissertation Style"
+% https://www.illc.uva.nl/PhDProgramme/current-candidates/other/illcdiss.html#latex
+
+% for some reason this cannot be in the preamble
+\setlength{\abstitleskip}{-\absparindent}
+
+% Include the cover page
+\pagestyle{empty}
+\renewcommand{\thepage}{\CoverName} % make sure this page is "numbered" with a name, not as page 1 or I
+\includepdf{./cover/thesis_cover.pdf}
+
+% \newlength{\mylen}                % a length
+% \newcommand{\alphabet}{abcdefghijklmnopqrstuvwxyz} % the lowercase alphabet
+% \begingroup                       % keep font change local% font specification e.g., \Large\sffamily
+% \settowidth{\mylen}{\alphabet}
+% The length of this alphabet is \the\mylen. % print in document\typeout{The length of the Large sans alphabetis \the\mylen}                    % put in log file
+% \endgroup                         % end the grouping
+
 {
 \setcounter{tocdepth}{1}
 \tableofcontents
@@ -201,9 +385,9 @@ The present study tested whether the neural patterns that support imagining ``pe
 \hypertarget{Sharedstates-introduction}{%
 \section{Introduction}\label{Sharedstates-introduction}}
 
-To navigate the social world successfully it is crucial to understand other people. But how do people generate meaningful representations of other people's actions, sensations, thoughts and emotions? The dominant view assumes that representations of other people's experiences are supported by the same neural systems as those that are involved in generating experience in the self (e.g., Gallese et al., \protect\hyperlink{ref-gallese2004unifying}{2004}; see for an overview Singer, \protect\hyperlink{ref-singer2012past}{2012}). We tested this principle of self-other neural overlap directly, using multi-voxel pattern analysis (MVPA), across three different aspects of experience that are central to emotions: actions, sensations from the body and situational knowledge.
+To navigate the social world successfully it is crucial to understand other people. But how do people generate meaningful representations of other people's actions, sensations, thoughts and emotions? The dominant view assumes that representations of other people's experiences are supported by the same neural systems as those that are involved in generating experience in the self \autocites[e.g.,][]{gallese2004unifying}[see for an overview][]{singer2012past}. We tested this principle of self-other neural overlap directly, using multi-voxel pattern analysis (MVPA), across three different aspects of experience that are central to emotions: actions, sensations from the body and situational knowledge.
 
-In recent years, evidence has accumulated that suggests a similarity between the neural patterns representing the self and others. For example, a great variety of studies have shown that observing actions and sensations in other people engages similar neural circuits as acting and feeling in the self (see for an overview Bastiaansen et al., \protect\hyperlink{ref-bastiaansen2009evidence}{2009}). Moreover, an extensive research program on pain has demonstrated an overlap between the experience of physical pain and the observation of pain in other people, utilizing both neuroimaging techniques (e.g., Lamm et al., \protect\hyperlink{ref-lamm2011meta}{2011}) and analgesic interventions (e.g., Rütgen et al., \protect\hyperlink{ref-rutgen2015placebo}{2015}; Mischkowski et al., \protect\hyperlink{ref-mischkowski2016painkiller}{2016}). This process of ``vicarious experience'' or ``simulation'' is viewed as an important component of empathy (Carr et al., \protect\hyperlink{ref-carr2003neural}{2003}; Decety, \protect\hyperlink{ref-decety2011dissecting}{2011}; Keysers \& Gazzola, \protect\hyperlink{ref-keysers2014dissociating}{2014}). In addition, it is argued that mentalizing (e.g.~understanding the mental states of other people) involves the same brain networks as those involved in self-generated thoughts (Uddin et al., \protect\hyperlink{ref-uddin2007self}{2007}; Waytz \& Mitchell, \protect\hyperlink{ref-waytz2011two}{2011}). Specifying this idea further, a constructionist view on emotion proposes that both emotion experience and interpersonal emotion understanding are produced by the same large-scale distributed brain networks that support the processing of sensorimotor, interoceptive and situationally relevant information (Barrett \& Satpute, \protect\hyperlink{ref-barrett2013large}{2013}; Oosterwijk \& Barrett, \protect\hyperlink{ref-oosterwijk2014embodiment}{2014}). An implication of these views is that the representation of self- and other-focused emotional actions, interoceptive sensations and situations overlap in the brain.
+In recent years, evidence has accumulated that suggests a similarity between the neural patterns representing the self and others. For example, a great variety of studies have shown that observing actions and sensations in other people engages similar neural circuits as acting and feeling in the self \autocite[see for an overview][]{bastiaansen2009evidence}. Moreover, an extensive research program on pain has demonstrated an overlap between the experience of physical pain and the observation of pain in other people, utilizing both neuroimaging techniques \autocite[e.g.,][]{lamm2011meta} and analgesic interventions \autocites[e.g.,][]{rutgen2015placebo}{mischkowski2016painkiller}. This process of ``vicarious experience'' or ``simulation'' is viewed as an important component of empathy \autocite{carr2003neural,decety2011dissecting,keysers2014dissociating}. In addition, it is argued that mentalizing (e.g.~understanding the mental states of other people) involves the same brain networks as those involved in self-generated thoughts \autocite{uddin2007self,waytz2011two}. Specifying this idea further, a constructionist view on emotion proposes that both emotion experience and interpersonal emotion understanding are produced by the same large-scale distributed brain networks that support the processing of sensorimotor, interoceptive and situationally relevant information \autocite{barrett2013large,oosterwijk2014embodiment}. An implication of these views is that the representation of self- and other-focused emotional actions, interoceptive sensations and situations overlap in the brain.
 
 \hypertarget{how-to-control-for-confounds-in-decoding-analyses-of-neuroimaging-data}{%
 \chapter{How to control for confounds in decoding analyses of neuroimaging data}\label{how-to-control-for-confounds-in-decoding-analyses-of-neuroimaging-data}}
@@ -235,47 +419,11 @@ In recent years, evidence has accumulated that suggests a similarity between the
 \setlength{\parskip}{0pt}
 
 \hypertarget{refs}{}
-\leavevmode\hypertarget{ref-barrett2013large}{}%
-Barrett, L. F., \& Satpute, A. B. (2013). Large-scale brain networks in affective and social neuroscience: Towards an integrative functional architecture of the brain. \emph{Current Opinion in Neurobiology}, \emph{23}(3), 361--372.
-
-\leavevmode\hypertarget{ref-bastiaansen2009evidence}{}%
-Bastiaansen, J. A., Thioux, M., \& Keysers, C. (2009). Evidence for mirror systems in emotions. \emph{Philosophical Transactions of the Royal Society B: Biological Sciences}, \emph{364}(1528), 2391--2404.
-
-\leavevmode\hypertarget{ref-carr2003neural}{}%
-Carr, L., Iacoboni, M., Dubeau, M.-C., Mazziotta, J. C., \& Lenzi, G. L. (2003). Neural mechanisms of empathy in humans: A relay from neural systems for imitation to limbic areas. \emph{Proceedings of the National Academy of Sciences}, \emph{100}(9), 5497--5502.
-
-\leavevmode\hypertarget{ref-decety2011dissecting}{}%
-Decety, J. (2011). Dissecting the neural mechanisms mediating empathy. \emph{Emotion Review}, \emph{3}(1), 92--108.
-
-\leavevmode\hypertarget{ref-gallese2004unifying}{}%
-Gallese, V., Keysers, C., \& Rizzolatti, G. (2004). A unifying view of the basis of social cognition. \emph{Trends in Cognitive Sciences}, \emph{8}(9), 396--403.
-
-\leavevmode\hypertarget{ref-keysers2014dissociating}{}%
-Keysers, C., \& Gazzola, V. (2014). Dissociating the ability and propensity for empathy. \emph{Trends in Cognitive Sciences}, \emph{18}(4), 163--166.
-
-\leavevmode\hypertarget{ref-lamm2011meta}{}%
-Lamm, C., Decety, J., \& Singer, T. (2011). Meta-analytic evidence for common and distinct neural networks associated with directly experienced pain and empathy for pain. \emph{Neuroimage}, \emph{54}(3), 2492--2502.
-
-\leavevmode\hypertarget{ref-mischkowski2016painkiller}{}%
-Mischkowski, D., Crocker, J., \& Way, B. M. (2016). From painkiller to empathy killer: Acetaminophen (paracetamol) reduces empathy for pain. \emph{Social Cognitive and Affective Neuroscience}, \emph{11}(9), 1345--1353.
-
-\leavevmode\hypertarget{ref-oosterwijk2014embodiment}{}%
-Oosterwijk, S., \& Barrett, L. F. (2014). Embodiment in the construction of emotion experience and emotion understanding. \emph{Routledge Handbook of Embodied Cognition. New York: Routledge}, 250--260.
-
-\leavevmode\hypertarget{ref-rutgen2015placebo}{}%
-Rütgen, M., Seidel, E.-M., Silani, G., Riečansky, I., Hummer, A., Windischberger, C., Petrovic, P., \& Lamm, C. (2015). Placebo analgesia and its opioidergic regulation suggest that empathy for pain is grounded in self pain. \emph{Proceedings of the National Academy of Sciences}, \emph{112}(41), E5638--E5646.
-
-\leavevmode\hypertarget{ref-singer2012past}{}%
-Singer, T. (2012). The past, present and future of social neuroscience: A european perspective. \emph{Neuroimage}, \emph{61}(2), 437--449.
-
-\leavevmode\hypertarget{ref-uddin2007self}{}%
-Uddin, L. Q., Iacoboni, M., Lange, C., \& Keenan, J. P. (2007). The self and social cognition: The role of cortical midline structures and mirror neurons. \emph{Trends in Cognitive Sciences}, \emph{11}(4), 153--157.
-
-\leavevmode\hypertarget{ref-waytz2011two}{}%
-Waytz, A., \& Mitchell, J. P. (2011). Two mechanisms for simulating other minds: Dissociations between mirroring and self-projection. \emph{Current Directions in Psychological Science}, \emph{20}(3), 197--200.
 
 \endgroup
 
 \backmatter
+\printbibliography
+
 
 \end{document}

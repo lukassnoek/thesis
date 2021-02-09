@@ -11,7 +11,6 @@ date: "maandag 21 oktober 2021" # Your defense date in Dutch: "[weekday] [day in
 aula: false # set to true if your defense is in the Aula; set to false/omit if it is in the Agnietenkapel
 time: "14.00" # time of your defense (a 24h time, e.g. "14.00")
 birthplace: "Hoevelaken" # your place of birth, in Dutch
-#country_of_birth: "" # if your birthplace is not in the Netherlands, fill in the country as well (in Dutch). Omit otherwise!
 
 ### Colophon 
 # Can be skipped entirely, but if you define FUNDER, this will read: 
@@ -85,7 +84,7 @@ members:
 faculty: Faculteit der Maatschappij- en Gedragswetenschappen
 
 ### Book settings
-documentclass: book # default LaTeX book class
+documentclass: memoir # default LaTeX book class
 book_size: false # "true" if you want to render a pdf for printing as a book; "false" if you want to print loose pages
            # if book_size is set to false, forces A4 paper size, and the "oneside" classoption
            # if book_size is set to true, forces standard "thesis B5 size" (170mm wide by 240mm high), and the "twoside" classoption
@@ -117,10 +116,11 @@ output:
     template: template.tex
     keep_tex: yes
     pandoc_args: [ "--csl", "apa.csl" ]
-    #latex_engine: xelatex
-    #includes:
-      #in_header: tex/preamble.tex
-      #before_body: tex/front_matter.tex
+    latex_engine: xelatex
+    citation_package: biblatex
+    includes:
+      in_header: tex/preamble.tex
+      before_body: tex/front_matter.tex
 
 indent: false # indent new paragraphs, instead of leaving whitespace
 links-as-notes: true # in the pdf, print hyperlink URLS as footnotes (as they can't be clicked on)
@@ -128,6 +128,7 @@ bibliography: thesis.bib # bib-file containing bibliographic information on all 
 citation_package: none # to use .csl-files to apply same citation style to html and pdf. You can also use a LaTeX package, e.g. biblatex. This provides much more customizability, but it is not as easy to apply a particular style, and it will only work in pdf output.
 biblio-style: "apa"
 link-citations: true # make clickable hyperlinks from in-text citations to bibliography at the end
+
 ---
 
 ```{r, include = FALSE, child = if (knitr::is_html_output()) '_00-preface.Rmd'}
