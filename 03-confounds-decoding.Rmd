@@ -1,2 +1,2 @@
-# How to control for confounds in decoding analyses of neuroimaging data
+# How to control for confounds in decoding analyses of neuroimaging data {#confounds-decoding}
 

@@ -1,0 +1,5 @@
+`r if (knitr::is_html_output()) '
+# Supplement to Chapter 4 {#confounds-decoding-supplement}
+' else '
+# Supplement to Chapter \\@ref(confounds-decoding) {#confounds-decoding-supplement}
+'`

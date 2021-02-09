@@ -1,0 +1,5 @@
+`r if (knitr::is_html_output()) '
+# Supplement to Chapter 5 {#morbid-curiosity-supplement}
+' else '
+# Supplement to Chapter \\@ref(morbid-curiosity) {#morbid-curiosity-supplement}
+'`

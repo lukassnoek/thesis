@@ -1,1 +1,1 @@
-# The Amsterdam Open MRI Collection, a set of multimodal MRI datasets for individual difference analyses
+# The Amsterdam Open MRI Collection, a set of multimodal MRI datasets for individual difference analyses {#AOMIC}

@@ -1,0 +1,5 @@
+`r if (knitr::is_html_output()) '
+# Supplement to Chapter 6 {#facial-expression-models-supplement}
+' else '
+# Supplement to Chapter \\@ref(facial-expression-models) {#facial-expression-models-supplement}
+'`
