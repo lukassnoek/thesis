@@ -40,3 +40,4 @@ vignettes/*.pdf
 
 # Custom
 .DS_Store
+_book/libs
