@@ -1,1 +1,11 @@
 # Summary and general discussion
+My view on going forward.
+
+## Explore!
+Theories are like toothbrushes, no one likes to use someone else's.
+
+## Think *big*
+Big, complex datasets to train big, complex models.
+
+## Rethink psychology education
+Embrace and teach interdisciplinary.

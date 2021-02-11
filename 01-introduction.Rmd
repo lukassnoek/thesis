@@ -4,5 +4,22 @@ _The first chapter of the thesis, which introduces your PhD project. The filler-
 
 ---
 
-## Learning from the brain
-When reading this thesis' title, some might think that it contains a typo. Scientists want to learn _about_ the brain, right? Not _from_ the brain. Well, yes, neuroscientists do. But I am a psychologist at heart, interested in human behavior, cognition, and above all, emotion. I'm interested in the mind, not the brain. I don't care about axons, neurotransmitters, and the basal ganglia. Sure, I do believe, like any proper scientist, that everything we feel, perceive, and do is instantiated in the brain, but I do not necessarily think that _just_ studying the brain in isolation is going to teach us anything useful about the human psyche. Mind you, in this PhD you'll find several studies that analyze _brain_ data, but realize that my ultimate goal has always been to understand the mind. 
+Something about the coming about of this thesis. More of a "lessons learned" rather than a coherent research topic.
+
+## The brain is not a dictionary
+Something about looking at populations of neurons/voxels/areas rather than simple one-to-one relationships. Shared states.
+
+## The brain (probably) does not care about your hypothesis
+Facial expression models.
+
+## Interpretability and prediction are a trade-off (for now)
+A plea for prediction but a cautionary tale for interpreting predictive models (confounds)
+
+## Exploration should be embraced more
+Something about the "context of discovery" (cf. TCM), preregistration, and confirmation vs. exploration (Morbid curiosity.)
+
+## Proper generalization is hard
+Within and between subject variance is not noise, but unexplained variance (AU limitations).
+
+## Psychology is complex, so it needs complex models
+Which need to be fit on complex, large datasets. (AOMIC)
