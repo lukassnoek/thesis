@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020) (preloaded format=xelatex 2021.2.8)  10 FEB 2021 09:40
+This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020) (preloaded format=xelatex 2021.2.8)  15 FEB 2021 10:04
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -502,7 +502,7 @@ File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
 \c@eu@i=\count329
 \c@mkern=\count330
 ) (/Users/lukas/Library/TinyTeX/texmf-dist/tex/latex/hyperref/hyperref.sty
-Package: hyperref 2021-02-07 v7.00h Hypertext links for LaTeX
+Package: hyperref 2021-02-10 v7.00j Hypertext links for LaTeX
 (/Users/lukas/Library/TinyTeX/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
 Package: ltxcmds 2020-05-10 v1.25 LaTeX kernel commands for general use (HO)
 ) (/Users/lukas/Library/TinyTeX/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.st
@@ -537,11 +537,11 @@ Package: kvoptions 2020-10-07 v3.14 Key value format for package options (HO)
 \Hy@linkcounter=\count331
 \Hy@pagecounter=\count332
 (/Users/lukas/Library/TinyTeX/texmf-dist/tex/latex/hyperref/pd1enc.def
-File: pd1enc.def 2021-02-07 v7.00h Hyperref: PDFDocEncoding definition (HO)
+File: pd1enc.def 2021-02-10 v7.00j Hyperref: PDFDocEncoding definition (HO)
 )
 (/Users/lukas/Library/TinyTeX/texmf-dist/tex/latex/hyperref/hyperref-langpatche
 s.def
-File: hyperref-langpatches.def 2021-02-07 v7.00h Hyperref: patches for babel la
+File: hyperref-langpatches.def 2021-02-10 v7.00j Hyperref: patches for babel la
 nguages
 ) (/Users/lukas/Library/TinyTeX/texmf-dist/tex/generic/intcalc/intcalc.sty
 Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
@@ -550,21 +550,21 @@ Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
 )
 \Hy@SavedSpaceFactor=\count333
 (/Users/lukas/Library/TinyTeX/texmf-dist/tex/latex/hyperref/puenc.def
-File: puenc.def 2021-02-07 v7.00h Hyperref: PDF Unicode definition (HO)
+File: puenc.def 2021-02-10 v7.00j Hyperref: PDF Unicode definition (HO)
 )
-Package hyperref Info: Hyper figures OFF on input line 4178.
-Package hyperref Info: Link nesting OFF on input line 4183.
-Package hyperref Info: Hyper index ON on input line 4186.
-Package hyperref Info: Plain pages OFF on input line 4193.
-Package hyperref Info: Backreferencing OFF on input line 4198.
+Package hyperref Info: Hyper figures OFF on input line 4192.
+Package hyperref Info: Link nesting OFF on input line 4197.
+Package hyperref Info: Hyper index ON on input line 4200.
+Package hyperref Info: Plain pages OFF on input line 4207.
+Package hyperref Info: Backreferencing OFF on input line 4212.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
-Package hyperref Info: Bookmarks ON on input line 4431.
+Package hyperref Info: Bookmarks ON on input line 4445.
 \c@Hy@tempcnt=\count334
 (/Users/lukas/Library/TinyTeX/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip17
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
-LaTeX Info: Redefining \url on input line 4790.
+LaTeX Info: Redefining \url on input line 4804.
 \XeTeXLinkMargin=\dimen196
 (/Users/lukas/Library/TinyTeX/texmf-dist/tex/generic/bitset/bitset.sty
 Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
@@ -575,15 +575,15 @@ Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
 \Fld@menulength=\count335
 \Field@Width=\dimen197
 \Fld@charsize=\dimen198
-Package hyperref Info: Hyper figures OFF on input line 6061.
-Package hyperref Info: Link nesting OFF on input line 6066.
-Package hyperref Info: Hyper index ON on input line 6069.
-Package hyperref Info: backreferencing OFF on input line 6076.
-Package hyperref Info: Link coloring OFF on input line 6081.
-Package hyperref Info: Link coloring with OCG OFF on input line 6086.
-Package hyperref Info: PDF/A mode OFF on input line 6091.
-LaTeX Info: Redefining \ref on input line 6131.
-LaTeX Info: Redefining \pageref on input line 6135.
+Package hyperref Info: Hyper figures OFF on input line 6075.
+Package hyperref Info: Link nesting OFF on input line 6080.
+Package hyperref Info: Hyper index ON on input line 6083.
+Package hyperref Info: backreferencing OFF on input line 6090.
+Package hyperref Info: Link coloring OFF on input line 6095.
+Package hyperref Info: Link coloring with OCG OFF on input line 6100.
+Package hyperref Info: PDF/A mode OFF on input line 6105.
+LaTeX Info: Redefining \ref on input line 6145.
+LaTeX Info: Redefining \pageref on input line 6149.
 (/Users/lukas/Library/TinyTeX/texmf-dist/tex/latex/base/atbegshi-ltx.sty
 Package: atbegshi-ltx 2020/08/17 v1.0a Emulation of the original atbegshi packa
 ge
@@ -600,7 +600,7 @@ ass
 )
 Package hyperref Info: Driver (autodetected): hxetex.
 (/Users/lukas/Library/TinyTeX/texmf-dist/tex/latex/hyperref/hxetex.def
-File: hxetex.def 2021-02-07 v7.00h Hyperref driver for XeTeX
+File: hxetex.def 2021-02-10 v7.00j Hyperref driver for XeTeX
 (/Users/lukas/Library/TinyTeX/texmf-dist/tex/generic/stringenc/stringenc.sty
 Package: stringenc 2019/11/29 v1.12 Convert strings between diff. encodings (HO
 )
@@ -1428,14 +1428,14 @@ LaTeX Info: Redefining \sffamily on input line 25.
 LaTeX Info: Redefining \ttfamily on input line 25.
 Package polyglossia Info: Option: English, variant=american.
 Package polyglossia Info: Option: English, variant=american.
-LaTeX Info: Redefining \rmfamily on input line 190.
-LaTeX Info: Redefining \sffamily on input line 190.
-LaTeX Info: Redefining \ttfamily on input line 190.
+LaTeX Info: Redefining \rmfamily on input line 240.
+LaTeX Info: Redefining \sffamily on input line 240.
+LaTeX Info: Redefining \ttfamily on input line 240.
 Package polyglossia Info: Option: English, variant=american.
 Package polyglossia Info: Option: English, variant=american.
-LaTeX Info: Redefining \rmfamily on input line 198.
-LaTeX Info: Redefining \sffamily on input line 198.
-LaTeX Info: Redefining \ttfamily on input line 198.
+LaTeX Info: Redefining \rmfamily on input line 248.
+LaTeX Info: Redefining \sffamily on input line 248.
+LaTeX Info: Redefining \ttfamily on input line 248.
 Package polyglossia Info: Option: English, variant=american.
 Package polyglossia Info: Option: English, variant=american.
 )
@@ -1727,47 +1727,48 @@ Overfull \hbox (8.18298pt too wide) detected at line 5
  []
 
 [6]
+LaTeX Font Info:    Font shape `TU/MinionPro(0)/m/it' will be
+(Font)              scaled to size 11.8081pt on input line 47.
 LaTeX Font Info:    Font shape `TU/MinionPro(0)/b/n' will be
-(Font)              scaled to size 14.16971pt on input line 35.
+(Font)              scaled to size 14.16971pt on input line 51.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <14.4> on input line 35.
+(Font)              <14.4> on input line 51.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 35.
+(Font)              <10> on input line 51.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 35.
+(Font)              <7> on input line 51.
 LaTeX Font Info:    Font shape `TU/MinionPro(1)/m/n' will be
-(Font)              scaled to size 14.16971pt on input line 35.
+(Font)              scaled to size 14.16971pt on input line 51.
 LaTeX Font Info:    Font shape `TU/MinionPro(1)/m/n' will be
-(Font)              scaled to size 9.84009pt on input line 35.
+(Font)              scaled to size 9.84009pt on input line 51.
 LaTeX Font Info:    Font shape `TU/MinionPro(1)/m/n' will be
-(Font)              scaled to size 6.88806pt on input line 35.
+(Font)              scaled to size 6.88806pt on input line 51.
 LaTeX Font Info:    Font shape `TU/MinionPro(1)/m/it' will be
-(Font)              scaled to size 14.16971pt on input line 35.
+(Font)              scaled to size 14.16971pt on input line 51.
 LaTeX Font Info:    Font shape `TU/MinionPro(1)/m/it' will be
-(Font)              scaled to size 9.84009pt on input line 35.
+(Font)              scaled to size 9.84009pt on input line 51.
 LaTeX Font Info:    Font shape `TU/MinionPro(1)/m/it' will be
-(Font)              scaled to size 6.88806pt on input line 35.
+(Font)              scaled to size 6.88806pt on input line 51.
 LaTeX Font Info:    Font shape `TU/MinionPro(0)/m/n' will be
-(Font)              scaled to size 9.84009pt on input line 35.
+(Font)              scaled to size 9.84009pt on input line 51.
 LaTeX Font Info:    Font shape `TU/MinionPro(0)/m/n' will be
-(Font)              scaled to size 6.88806pt on input line 35.
-LaTeX Info: Redefining \rmfamily on input line 65.
-LaTeX Info: Redefining \sffamily on input line 65.
-LaTeX Info: Redefining \ttfamily on input line 65.
+(Font)              scaled to size 6.88806pt on input line 51.
+[7]
+LaTeX Info: Redefining \rmfamily on input line 99.
+LaTeX Info: Redefining \sffamily on input line 99.
+LaTeX Info: Redefining \ttfamily on input line 99.
 Package polyglossia Info: Option: English, variant=american.
 Package polyglossia Info: Option: English, variant=american.
-LaTeX Info: Redefining \rmfamily on input line 69.
-LaTeX Info: Redefining \sffamily on input line 69.
-LaTeX Info: Redefining \ttfamily on input line 69.
+LaTeX Info: Redefining \rmfamily on input line 103.
+LaTeX Info: Redefining \sffamily on input line 103.
+LaTeX Info: Redefining \ttfamily on input line 103.
 Package polyglossia Info: Option: English, variant=american.
 Package polyglossia Info: Option: English, variant=american.
-) [7]
+) [8]
 LaTeX Font Info:    Font shape `TU/MinionPro(0)/m/n' will be
 (Font)              scaled to size 20.40834pt on input line 364.
 LaTeX Font Info:    Font shape `TU/MinionPro(0)/m/sc' will be
 (Font)              scaled to size 20.40834pt on input line 364.
-LaTeX Font Info:    Font shape `TU/MinionPro(0)/m/it' will be
-(Font)              scaled to size 11.8081pt on input line 366.
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <5> on input line 366.
 LaTeX Font Info:    Font shape `TU/MinionPro(1)/m/n' will be
@@ -1777,21 +1778,19 @@ LaTeX Font Info:    Font shape `TU/MinionPro(1)/m/it' will be
 LaTeX Font Info:    Font shape `TU/MinionPro(0)/m/n' will be
 (Font)              scaled to size 4.92004pt on input line 366.
 LaTeX Font Info:    Font shape `TU/MinionPro(0)/b/n' will be
-(Font)              scaled to size 17.00366pt on input line 371.
+(Font)              scaled to size 17.00366pt on input line 373.
 [1
 
 
-]
+] [2]
 LaTeX Font Info:    Font shape `TU/MinionPro(0)/m/it' will be
-(Font)              scaled to size 10.77489pt on input line 387.
-[2
+(Font)              scaled to size 10.77489pt on input line 414.
+[3
 
-] [3] [4] [5] [6]
+] [4] [5] [6] [7]
 LaTeX Font Info:    Font shape `TU/MinionPro(0)/b/it' will be
-(Font)              scaled to size 11.8081pt on input line 428.
-[7] [8] [9
-
-] [10
+(Font)              scaled to size 11.8081pt on input line 455.
+[8] [9] [10
 
 ] [11
 
@@ -1801,99 +1800,137 @@ LaTeX Font Info:    Font shape `TU/MinionPro(0)/b/it' will be
 
 ] [14
 
-] [15
+]
+LaTeX Font Info:    Font shape `TU/MinionPro(0)/b/it' will be
+(Font)              scaled to size 17.00366pt on input line 485.
+[15
+
+] [16
 
 
 ]
 LaTeX Font Info:    Font shape `TU/MinionPro(0)/m/sc' will be
-(Font)              scaled to size 11.8081pt on input line 467.
+(Font)              scaled to size 11.8081pt on input line 512.
 LaTeX Font Info:    Font shape `TU/Helvetica(0)/m/n' will be
-(Font)              scaled to size 9.05844pt on input line 467.
+(Font)              scaled to size 9.05844pt on input line 512.
+[17
 
-Overfull \hbox (4567.3986pt too wide) in alignment at lines 466--492
- [] [] [] 
- []
+] [18] [19] [20]
+File: _bookdown_files/shared-states-files/figures/figure_S1.pdf Graphic file (t
+ype pdf)
+<use _bookdown_files/shared-states-files/figures/figure_S1.pdf>
+[21]
+File: _bookdown_files/shared-states-files/figures/figure_S2.pdf Graphic file (t
+ype pdf)
+<use _bookdown_files/shared-states-files/figures/figure_S2.pdf>
+LaTeX Font Info:    Font shape `TU/Helvetica(0)/b/n' will be
+(Font)              scaled to size 8.90054pt on input line 661.
 
+LaTeX Warning: Float too large for page by 23.37389pt on input line 662.
 
-Overfull \hbox (4567.3986pt too wide) in alignment at lines 492--516
- [] [] [] 
- []
+[22
 
-[16
+] [23]
+File: _bookdown_files/shared-states-files/figures/figure_S3.pdf Graphic file (t
+ype pdf)
+<use _bookdown_files/shared-states-files/figures/figure_S3.pdf>
+LaTeX Font Info:    Font shape `TU/Helvetica(0)/m/it' will be
+(Font)              scaled to size 9.05844pt on input line 694.
+File: _bookdown_files/shared-states-files/figures/figure_S4.pdf Graphic file (t
+ype pdf)
+<use _bookdown_files/shared-states-files/figures/figure_S4.pdf>
+[24
 
 ]
-Overfull \hbox (4567.3986pt too wide) in alignment at lines 516--540
- [] [] [] 
+File: _bookdown_files/shared-states-files/figures/figure_S5.pdf Graphic file (t
+ype pdf)
+<use _bookdown_files/shared-states-files/figures/figure_S5.pdf>
+
+LaTeX Warning: Float too large for page by 104.62233pt on input line 723.
+
+[25] [26] [27]
+File: _bookdown_files/shared-states-files/figures/figure_S6.pdf Graphic file (t
+ype pdf)
+<use _bookdown_files/shared-states-files/figures/figure_S6.pdf>
+[28] [29]
+File: _bookdown_files/shared-states-files/figures/figure_S7.pdf Graphic file (t
+ype pdf)
+<use _bookdown_files/shared-states-files/figures/figure_S7.pdf>
+[30]
+File: _bookdown_files/shared-states-files/figures/figure_S8.pdf Graphic file (t
+ype pdf)
+<use _bookdown_files/shared-states-files/figures/figure_S8.pdf>
+
+LaTeX Warning: Float too large for page by 136.71317pt on input line 765.
+
+[31] [32] [33]
+Underfull \hbox (badness 5316) in paragraph at lines 858--859
+\TU/MinionPro(0)/m/n/12 orderly, we chose not to include the actual tables with
+
  []
 
-[17]
-Overfull \hbox (4567.3986pt too wide) in alignment at lines 540--544
- [] [] [] 
- []
+File: _bookdown_files/shared-states-files/figures/github.pdf Graphic file (type
+ pdf)
+<use _bookdown_files/shared-states-files/figures/github.pdf>
+[34] [35
 
-[18] [19] [20] [21]
-File: _bookdown_files/shared-states-files/figures/figure_S1_succ.pdf Graphic fi
-le (type pdf)
-<use _bookdown_files/shared-states-files/figures/figure_S1_succ.pdf>
-[22] [23
+] [36
 
-] [24
+] [37
 
-] [25
+] [38
 
-] [26
+] [39
 
-] [27
-
-] [28
+] [40
 
 
-] [29
+] [41
 
 ]
 LaTeX Font Info:    Font shape `TU/MinionPro(0)/b/n' will be
-(Font)              scaled to size 10.77489pt on input line 649.
+(Font)              scaled to size 10.77489pt on input line 909.
 
-Underfull \hbox (badness 10000) in paragraph at lines 649--650
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 651--652
+Underfull \hbox (badness 10000) in paragraph at lines 909--910
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 653--654
+Underfull \hbox (badness 10000) in paragraph at lines 911--912
 
  []
 
-[30
+
+Underfull \hbox (badness 10000) in paragraph at lines 913--914
+
+ []
+
+[42
 
 ]
-LaTeX Info: Redefining \rmfamily on input line 667.
-LaTeX Info: Redefining \sffamily on input line 667.
-LaTeX Info: Redefining \ttfamily on input line 667.
+LaTeX Info: Redefining \rmfamily on input line 927.
+LaTeX Info: Redefining \sffamily on input line 927.
+LaTeX Info: Redefining \ttfamily on input line 927.
 Package polyglossia Info: Option: English, variant=american.
-LaTeX Info: Redefining \rmfamily on input line 674.
-LaTeX Info: Redefining \sffamily on input line 674.
-LaTeX Info: Redefining \ttfamily on input line 674.
+LaTeX Info: Redefining \rmfamily on input line 934.
+LaTeX Info: Redefining \sffamily on input line 934.
+LaTeX Info: Redefining \ttfamily on input line 934.
 Package polyglossia Info: Option: English, variant=american.
-[31
+[43
 
 ]
-LaTeX Info: Redefining \rmfamily on input line 682.
-LaTeX Info: Redefining \sffamily on input line 682.
-LaTeX Info: Redefining \ttfamily on input line 682.
-[32
+LaTeX Info: Redefining \rmfamily on input line 942.
+LaTeX Info: Redefining \sffamily on input line 942.
+LaTeX Info: Redefining \ttfamily on input line 942.
+[44
 
 ]
 LaTeX Font Info:    Font shape `TU/MinionPro(0)/m/it' will be
-(Font)              scaled to size 9.84009pt on input line 685.
-[33
+(Font)              scaled to size 9.84009pt on input line 945.
+[45
 
 
-] [34]
+] [46]
 The property list \polyglossia@langsetup contains the pairs (without outer
 braces):
 >  {latex/script}  =>  {latin}
@@ -1944,7 +1981,7 @@ braces):
 >  {dutch/babelname}  =>  {dutch}
 >  {dutch/localnumeral}  =>  {polyglossia@C@localnumeral}
 >  {dutch/Localnumeral}  =>  {polyglossia@C@localnumeral}.
-[35]
+[47]
 \tf@toc=\write5
 \openout5 = `thesis.toc'.
 
@@ -1956,14 +1993,14 @@ LaTeX Info: Redefining \sffamily on input line 25.
 LaTeX Info: Redefining \ttfamily on input line 25.
 Package polyglossia Info: Option: English, variant=american.
 Package polyglossia Info: Option: English, variant=american.
-LaTeX Info: Redefining \rmfamily on input line 221.
-LaTeX Info: Redefining \sffamily on input line 221.
-LaTeX Info: Redefining \ttfamily on input line 221.
+LaTeX Info: Redefining \rmfamily on input line 271.
+LaTeX Info: Redefining \sffamily on input line 271.
+LaTeX Info: Redefining \ttfamily on input line 271.
 Package polyglossia Info: Option: English, variant=american.
 Package polyglossia Info: Option: English, variant=american.
-LaTeX Info: Redefining \rmfamily on input line 229.
-LaTeX Info: Redefining \sffamily on input line 229.
-LaTeX Info: Redefining \ttfamily on input line 229.
+LaTeX Info: Redefining \rmfamily on input line 279.
+LaTeX Info: Redefining \sffamily on input line 279.
+LaTeX Info: Redefining \ttfamily on input line 279.
 Package polyglossia Info: Option: English, variant=american.
 Package polyglossia Info: Option: English, variant=american.
 )
@@ -1979,12 +2016,12 @@ Package logreq Info: Writing requests to 'thesis.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 28212 strings out of 479210
- 537410 string characters out of 5873875
- 1459972 words of memory out of 5000000
- 47337 multiletter control sequences out of 15000+600000
- 436647 words of font info for 136 fonts, out of 8000000 for 9000
+ 28291 strings out of 479210
+ 540957 string characters out of 5873875
+ 1496445 words of memory out of 5000000
+ 47405 multiletter control sequences out of 15000+600000
+ 436671 words of font info for 139 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 95i,17n,126p,1812b,6173s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 95i,17n,126p,3689b,6171s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on thesis.pdf (42 pages).
+Output written on thesis.pdf (55 pages).
