@@ -212,4 +212,3 @@ In order to keep the Supplementary materials concise and orderly, we chose not t
 ```{r fig-shared-states-github-download, results='show'}
 knitr::include_graphics("_bookdown_files/shared-states-files/figures/github.png", auto_pdf = TRUE)
 ```
-

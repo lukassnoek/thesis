@@ -97,7 +97,7 @@ output:
   # settings for html output
   bookdown::gitbook:
     css: css/style.css
-    pandoc_args: [ "--csl", "apa.csl" ]
+    pandoc_args: [ "--csl", "bib/apa.csl" ]
     sharing:
       facebook: no
       github: yes
@@ -115,7 +115,7 @@ output:
   bookdown::pdf_book: 
     template: template.tex
     keep_tex: yes
-    pandoc_args: [ "--csl", "apa.csl" ]
+    pandoc_args: [ "--csl", "bib/apa.csl" ]
     latex_engine: xelatex
     citation_package: biblatex
     includes:
@@ -124,7 +124,8 @@ output:
 
 indent: false # indent new paragraphs, instead of leaving whitespace
 links-as-notes: true # in the pdf, print hyperlink URLS as footnotes (as they can't be clicked on)
-bibliography: thesis.bib # bib-file containing bibliographic information on all works you want to cite
+bibliography: 
+  - bib/shared-states.bib
 citation_package: none # to use .csl-files to apply same citation style to html and pdf. You can also use a LaTeX package, e.g. biblatex. This provides much more customizability, but it is not as easy to apply a particular style, and it will only work in pdf output.
 biblio-style: "apa"
 link-citations: true # make clickable hyperlinks from in-text citations to bibliography at the end
