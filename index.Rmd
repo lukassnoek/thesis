@@ -1,60 +1,41 @@
 ---
 ### Title page
-title: "Learning from the brain" # The main title of your thesis (not including possible subtitles)
+title: "Learning from the brain"
 subtitle: | 
   | Best practices for the use of neuroimaging data
   | in psychology research
 
-# (can also be  omitted if you don't have a subtitle)
-author: "Lukas Snoek" # Your full name (including middle names if applicable)
-date: "maandag 21 oktober 2021" # Your defense date in Dutch: "[weekday] [day in numerics] [name of month] [year]"
-aula: false # set to true if your defense is in the Aula; set to false/omit if it is in the Agnietenkapel
-time: "14.00" # time of your defense (a 24h time, e.g. "14.00")
-birthplace: "Hoevelaken" # your place of birth, in Dutch
+author: "Lukas Snoek"
+date: "maandag 21 oktober 2021"
+aula: false 
+time: "14.00"
+birthplace: "Hoevelaken"
 
 ### Colophon 
-# Can be skipped entirely, but if you define FUNDER, this will read: 
-# "The investigations in this thesis were supported by [a] GRANT [from] FUNDER"
-#grant: "Starting grant (111-2-3)" # optional, otherwise this bit is omitted
-#funder: "the Non-existent Organization for Space Exploration (NOSE)"
-
 # This paragraph begins with "This thesis was typeset using (R) Markdown, \LaTeX\ and the \verb+bookdown+ R-package"
 # and is optionally followed by:
-ISBN: "xxx-xx-xxxx-xxx-x" # optional, otherwise this bit is omitted
-printing: "Acme Press, Inc." # optional, otherwise this bit is omitted
+ISBN: "xxx-xx-xxxx-xxx-x"
+printing: "Acme Press, Inc."
 #cover: "Designed by Phil Henry Doctor" # optional, otherwise this bit is omitted
-
-# Can be skipped entirely, but if you define THESIS_URL, this will read: 
-# "An online version of this thesis is available at THESIS_URL [,licensed under a LICENSE.]
 thesis_url: "https://lukas-snoek.com/thesis"
 license: "CC BY" # optional, otherwise this bit is omitted
 
 ### Committee
-# Fill in each of your "promotores" below, corresponding to the form you submitted to the graduate school.
-# Copy-paste the 4 subfields (starting with " - title:") if you have more than two, or delete one entry if you have only one promotor.
 promotores: 
-# for example:
-- title: dr. # either "prof.dr" for full professors, or "dr." for others
+- title: dr.
   initials: H.S.
   surname: Scholte
   affiliation: Universiteit van Amsterdam
-#- title: prof. dr.
-#  initials: H.
-#  surname: Jones
-#  affiliation: University of Indiana
-one_promotor: true # set to true if you have only 1 promotor. Then the heading will be "Promotor" (singular), instead of "Promotores".
-# Fill in each of your "copromotores" below, corresponding to the form you submitted to the graduate school.
-# If you don't have a copromotor, simply delete the fields ("copromotores" and its 4 subfields)
+one_promotor: true
+
 copromotores:
 - title: dr. 
   initials: S.
   surname: Oosterwijk
   affiliation: Universiteit van Amsterdam 
-one_copromotor: true # if true the heading will be "Copromotor" (singular), instead of "Copromotores" (assuming there is a copromotor)
-# Fill in each of your committee members below, corresponding to the form you submitted to the graduate school.
-# Copy-paste the 4 subfields (starting with " - title:") as many times as you have committee members.
+one_copromotor: true
+
 members:
-# for example: 
 - title: prof. dr.
   initials: R.E.
   surname: Jack
@@ -80,11 +61,10 @@ members:
   surname: Sanfey
   affiliation: Radboud University
 
-# Finally, the (Dutch) name of your faculty, e.g. "Faculteit der Maatschappij- en Gedragswetenschappen"
 faculty: Faculteit der Maatschappij- en Gedragswetenschappen
 
 ### Book settings
-documentclass: memoir # default LaTeX book class
+documentclass: memoir
 book_size: false # "true" if you want to render a pdf for printing as a book; "false" if you want to print loose pages
            # if book_size is set to false, forces A4 paper size, and the "oneside" classoption
            # if book_size is set to true, forces standard "thesis B5 size" (170mm wide by 240mm high), and the "twoside" classoption
@@ -94,7 +74,7 @@ fontsize: 12pt # 12pt is recommened when book_size is false; 10 or 11pt is recom
 lang: en-US # default language for the thesis. Change to en-GB or en-US if you want a specific flavor of English (or to nl for Dutch)
 site: bookdown::bookdown_site # to get a "Build" button in RStudio to render the book
 output:
-  # settings for html output
+  # HTML
   bookdown::gitbook:
     css: css/style.css
     pandoc_args: [ "--csl", "bib/apa.csl" ]
@@ -111,7 +91,8 @@ output:
           <li><a href="./">PhD thesis of Lukas Snoek</a></li>
         after: |
           <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
-  
+          
+  # PDF through Latex
   bookdown::pdf_book: 
     template: template.tex
     keep_tex: yes
@@ -126,10 +107,9 @@ indent: false # indent new paragraphs, instead of leaving whitespace
 links-as-notes: true # in the pdf, print hyperlink URLS as footnotes (as they can't be clicked on)
 bibliography: 
   - bib/shared-states.bib
-citation_package: none # to use .csl-files to apply same citation style to html and pdf. You can also use a LaTeX package, e.g. biblatex. This provides much more customizability, but it is not as easy to apply a particular style, and it will only work in pdf output.
+citation_package: none
 biblio-style: "apa"
 link-citations: true # make clickable hyperlinks from in-text citations to bibliography at the end
-
 ---
 
 ```{r, include = FALSE, child = if (knitr::is_html_output()) '_00-preface.Rmd'}

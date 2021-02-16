@@ -6,6 +6,23 @@
 \usepackage[dvipsnames]{xcolor} % prevent error in pdfpages
 \usepackage{pdfpages} % for adding the book cover
 
+% LS: add stuff for kableExtra
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{wrapfig}
+\usepackage{float}
+\usepackage{colortbl}
+\usepackage{pdflscape}
+\usepackage{tabu}
+\usepackage{threeparttable}
+\usepackage{threeparttablex}
+\usepackage[normalem]{ulem}
+\usepackage{makecell}
+\usepackage{xcolor}
+
+
 \let\oldhref\href % save command before redefininig, so we can turn it off again
 \renewcommand{\href}[2]{#2\footnote{\url{#1}}} % same as "link-as-notes: true"
 

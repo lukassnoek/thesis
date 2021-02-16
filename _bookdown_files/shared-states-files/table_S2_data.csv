@@ -1,0 +1,6 @@
+﻿Parameter,Options,Final choice
+Smoothing kernel ,"0 mm, 2 mm, 5 mm, 10 mm",5 mm
+Feature selection threshold,"1.5, 1.75, 2, 2.25, 2.5, 2.75, 3",2.3
+Number of test-trials,"1, 2, 3, 4, 5",4
+Low-pass filter,2 seconds vs. none,None
+ICA denoising,ICA vs. no ICA,No ICA
