@@ -1,0 +1,35 @@
+
+\newpage
+\pagestyle{empty}
+
+## Individual subject scores
+
+```{r tab-shared-states-S3, results='asis'}
+data = read_excel('_bookdown_files/shared-states-files/table_S3_data.xlsx')
+options(knitr.kable.NA = '')
+knitr::kable(data, booktabs = TRUE, longtable = FALSE, format=format,
+             caption = 'Mean general classification scores (i.e., mean precision scores across action, interoception and situation) per subject for the self- and cross-analysis on the validation-set only.') %>%
+    kable_styling(latex_options = "scale_down") %>%
+    footnote(footnote_as_chunk = T, title_format = "italic", general = 'Supplementary Table 3 suggests individual variability in the extent to which neural resources are shared between self- and other-focused processes. In the SF-task all subjects demonstrated a mean classification score well above .33 (i.e., score associated with chance). When generalizing the SF-classifier to the OF-task, however, the classification scores appear to be bimodally distributed (see Supplementary Figure 5C). As can be seen in Table 3, some subjects demonstrated a relatively high mean classification score (i.e., > .45), whereas other subjects demonstrated a classification score at chance level or lower. Note that there is no significant difference between the OF classification scores for subjects who participated in the experiment for the first or second time (“Session” column in table; *t*(18) = 1.73, p = 0.10), nor for subjects who were or were not part of the optimization-set (“Part of optimization-set?” column in table; *t*(18) = -.95, p = 0.35), suggesting that inclusion in the optimization-set or session ordering is not a confound in the analyses. Regarding individual variability in self-other neural overlap, it is important to note that in the field of embodied cognition, there is increasing attention for the idea that simulation is both individually and contextually dynamic (Oosterwijk & Barrett, 2014; Winkielman, Niedenthal, Wielgosz & Kavanagh, 2015; see also Barrett, 2009). To better distinguish between meaningful individual variation and variation due to other factors (e.g., random noise), future research should test a priori formulated hypotheses about how and when individual variation is expected to occur. ')
+```
+
+\newpage
+\pagestyle{empty}
+
+## Brain region importance
+
+```{r tab-shared-states-S4, results='asis'}
+data = read_excel('_bookdown_files/shared-states-files/table_S4_data.xlsx')
+options(knitr.kable.NA = '')
+knitr::kable(data, booktabs = TRUE, longtable = FALSE, format=format,
+             caption = 'Most important voxels in terms of their average weight across iterations and subjects.') %>%
+    kable_styling(latex_options = "scale_down") %>%
+    footnote(footnote_as_chunk = T, title_format = "italic", general = 'Brain regions were extracted from the Harvard-Oxford (bilateral) Cortical atlas. A minimum threshold for the probabilistic masks of 20 was chosen to minimize overlap between adjacent masks while maximizing coverage of the entire brain. The column *k* represents the absolute number of above-threshold voxels in the masks. The columns *Max*, *Mean*, and *Std* represent the maximum, mean, and standard deviation from the *t*-values included in the masks. Note that the *t*-values, corresponding to the mean weight across subjects normalized by the standard error of the weights across subjects (after correcting for a positive bias when taking the absolute of the weights), were thresholded at a minimum of 1.75, referring to a *p*-value of 0.05 of a one-sided *t*-test against zero with 19 degrees of freedom (i.e. *n* – 1). Note that this *t*-value map was not corrected for multiple comparisons, and is intended to visualize which regions in the brain were generally involved in our sample of subjects. The *X*, *Y*, and *Z* columns represent the MNI152 (2mm) coordinates of the peak (i.e. max) *t*-value for each listed brain region.')
+```
+
+## General note about tables with voxel-coordinates
+In order to keep the Supplementary materials concise and orderly, we chose not to include the actual tables with the peak coordinates of all significant clusters of the univariate analyses of the self- and other-task data (as these would amount to 25 pages). These tables, however, can be downloaded (as simple tab-separated-value files) from the study’s [Github respository](https://github.com/lukassnoek/SharedStates). The voxel tables are listed under: `SharedStates/RESULTS/Voxel_tables/*.tsv` (see green box in image below), and can be downloaded by cloning the remote Github repository locally or downloading the ZIP-file from the website (see red box in image below).
+
+```{r fig-shared-states-github-download, results='show'}
+knitr::include_graphics("_bookdown_files/shared-states-files/figures/github.png", auto_pdf = TRUE)
+```

@@ -1,19 +1,19 @@
-This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020) (preloaded format=xelatex 2021.2.8)  16 FEB 2021 10:58
+This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020) (preloaded format=xelatex 2021.2.19)  19 FEB 2021 15:51
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
 **thesis.tex
 (./thesis.tex
 LaTeX2e <2020-10-01> patch level 4
-L3 programming layer <2021-02-06> (/Users/lukas/Library/TinyTeX/texmf-dist/tex/
+L3 programming layer <2021-02-18> (/Users/lukas/Library/TinyTeX/texmf-dist/tex/
 latex/memoir/memoir.cls
 Document Class: memoir 2020/10/04 v3.7n configurable book, report, article docu
 ment class
 \onelineskip=\skip47
 \lxvchars=\skip48
 \xlvchars=\skip49
-\@memcnta=\count173
-\c@@memmarkcntra=\count174
+\@memcnta=\count175
+\c@@memmarkcntra=\count176
 (/Users/lukas/Library/TinyTeX/texmf-dist/tex/generic/iftex/iftex.sty
 Package: iftex 2020/03/06 v1.0d TeX engine tests
 )
@@ -34,20 +34,20 @@ File: mem12.clo 2010/10/19 v0.4b memoir class 12pt size option
 \mem@maxheadheight=\skip61
 \mem@maxfootheight=\skip62
 \headwidth=\skip63
-\c@storedpagenumber=\count175
+\c@storedpagenumber=\count177
 \memPD=\dimen138
 \m@mabparskip=\skip64
 \thanksmarkwidth=\skip65
 \thanksmarksep=\skip66
 \droptitle=\skip67
-\c@book=\count176
-\c@part=\count177
-\c@chapter=\count178
-\c@section=\count179
-\c@subsection=\count180
-\c@subsubsection=\count181
-\c@paragraph=\count182
-\c@subparagraph=\count183
+\c@book=\count178
+\c@part=\count179
+\c@chapter=\count180
+\c@section=\count181
+\c@subsection=\count182
+\c@subsubsection=\count183
+\c@paragraph=\count184
+\c@subparagraph=\count185
 \beforechapskip=\skip68
 \midchapskip=\skip69
 \afterchapskip=\skip70
@@ -69,8 +69,8 @@ File: mem12.clo 2010/10/19 v0.4b memoir class 12pt size option
 \beforesubparaskip=\skip86
 \aftersubparaskip=\skip87
 \pfbreakskip=\skip88
-\c@@ppsavesec=\count184
-\c@@ppsaveapp=\count185
+\c@@ppsavesec=\count186
+\c@@ppsaveapp=\count187
 \ragrparindent=\dimen139
 \everylistparindent=\dimen140
 \parsepi=\skip89
@@ -92,10 +92,10 @@ File: mem12.clo 2010/10/19 v0.4b memoir class 12pt size option
 \absrightindent=\skip103
 \absparindent=\skip104
 \absparsep=\skip105
-\c@vslineno=\count186
-\c@poemline=\count187
-\c@modulo@vs=\count188
-\c@memfvsline=\count189
+\c@vslineno=\count188
+\c@poemline=\count189
+\c@modulo@vs=\count190
+\c@memfvsline=\count191
 \vleftskip=\skip106
 \vrightskip=\skip107
 \stanzaskip=\skip108
@@ -103,11 +103,11 @@ File: mem12.clo 2010/10/19 v0.4b memoir class 12pt size option
 \vgap=\skip110
 \vindent=\skip111
 \vleftmargin=\dimen142
-\c@verse=\count190
-\c@chrsinstr=\count191
+\c@verse=\count192
+\c@chrsinstr=\count193
 \beforepoemtitleskip=\skip112
 \afterpoemtitleskip=\skip113
-\c@poem=\count192
+\c@poem=\count194
 \beforePoemTitleskip=\skip114
 \midPoemTitleskip=\skip115
 \afterPoemTitleskip=\skip116
@@ -131,7 +131,7 @@ Package: tabularx 2020/01/15 v2.11c `tabularx' package (DPC)
 \TX@old@col=\dimen147
 \TX@target=\dimen148
 \TX@delta=\dimen149
-\TX@cols=\count193
+\TX@cols=\count195
 \TX@ftn=\toks17
 )
 \heavyrulewidth=\dimen150
@@ -144,22 +144,22 @@ Package: tabularx 2020/01/15 v2.11c `tabularx' package (DPC)
 \cmidrulesep=\dimen157
 \cmidrulekern=\dimen158
 \defaultaddspace=\dimen159
-\@cmidla=\count194
-\@cmidlb=\count195
+\@cmidla=\count196
+\@cmidlb=\count197
 \@aboverulesep=\dimen160
 \@belowrulesep=\dimen161
-\@thisruleclass=\count196
-\@lastruleclass=\count197
+\@thisruleclass=\count198
+\@lastruleclass=\count199
 \@thisrulewidth=\dimen162
 \ctableftskip=\skip119
 \ctabrightskip=\skip120
-\abovecolumnspenalty=\count198
-\@linestogo=\count199
-\@cellstogo=\count266
-\@cellsincolumn=\count267
+\abovecolumnspenalty=\count266
+\@linestogo=\count267
+\@cellstogo=\count268
+\@cellsincolumn=\count269
 \crtok=\toks18
 \@mincolumnwidth=\dimen163
-\c@newflo@tctr=\count268
+\c@newflo@tctr=\count270
 \mem@margin@floatbox=\box49
 \@contcwidth=\skip121
 \@contindw=\skip122
@@ -171,7 +171,7 @@ Package: tabularx 2020/01/15 v2.11c `tabularx' package (DPC)
 \subfloatbottomskip=\skip128
 \subfloatlabelskip=\skip129
 \subfloatcapmargin=\dimen164
-\c@@contsubnum=\count269
+\c@@contsubnum=\count271
 \m@mscap@capbox=\box50
 \m@mscap@fbox=\box51
 \sidecapsep=\dimen165
@@ -215,7 +215,7 @@ LaTeX Info: Redefining \emph on input line 7686.
 \cftsubparagraphindent=\skip157
 \cftsubparagraphnumwidth=\skip158
 \prechapterprecisshift=\dimen174
-\c@maxsecnumdepth=\count270
+\c@maxsecnumdepth=\count272
 \bibindent=\dimen175
 \bibitemsep=\skip159
 \indexcolsep=\skip160
@@ -236,7 +236,7 @@ LaTeX Info: Redefining \emph on input line 7686.
 \footinsdim=\skip170
 \footinsv@r=\insert250
 \@mpfootinsv@r=\insert249
-\m@m@k=\count271
+\m@m@k=\count273
 \m@m@h=\dimen178
 \m@mipn@skip=\skip171
 \sidefootins=\insert248
@@ -246,56 +246,56 @@ LaTeX Info: Redefining \emph on input line 7686.
 \sidefootvsep=\skip175
 \sidefootwidth=\skip176
 \m@mdownsf=\skip177
-\c@sidefootnote=\count272
+\c@sidefootnote=\count274
 \sidefootmarkwidth=\skip178
 \sidefootmarksep=\skip179
 \sidefootparindent=\skip180
-\c@pagenote=\count273
-\c@pagenoteshadow=\count274
+\c@pagenote=\count275
+\c@pagenoteshadow=\count276
 \mem@pn@lastkern=\skip181
 \every@verbatim=\toks20
 \afterevery@verbatim=\toks21
 \verbatim@line=\toks22
-\tab@position=\count275
+\tab@position=\count277
 \verbatim@in@stream=\read2
 \verbatimindent=\skip182
 \verbatim@out=\write3
 \bvboxsep=\skip183
-\c@memfbvline=\count276
-\c@bvlinectr=\count277
+\c@memfbvline=\count278
+\c@bvlinectr=\count279
 \bvnumlength=\skip184
 \fb@frw=\dimen179
 \fb@frh=\dimen180
 \FrameRule=\dimen181
 \FrameSep=\dimen182
-\c@cp@cntr=\count278
-\c@ism@mctr=\count279
-\c@xsm@mctr=\count280
-\c@csm@mctr=\count281
-\c@ksm@mctr=\count282
-\c@xksm@mctr=\count283
-\c@cksm@mctr=\count284
-\c@msm@mctr=\count285
-\c@xmsm@mctr=\count286
-\c@cmsm@mctr=\count287
-\c@bsm@mctr=\count288
-\c@workm@mctr=\count289
-\c@sheetsequence=\count290
-\c@lastsheet=\count291
-\c@lastpage=\count292
+\c@cp@cntr=\count280
+\c@ism@mctr=\count281
+\c@xsm@mctr=\count282
+\c@csm@mctr=\count283
+\c@ksm@mctr=\count284
+\c@xksm@mctr=\count285
+\c@cksm@mctr=\count286
+\c@msm@mctr=\count287
+\c@xmsm@mctr=\count288
+\c@cmsm@mctr=\count289
+\c@bsm@mctr=\count290
+\c@workm@mctr=\count291
+\c@sheetsequence=\count292
+\c@lastsheet=\count293
+\c@lastpage=\count294
 
 Class memoir Warning: Haven't found the textcase package,
 (memoir)              resorting to embedded copy of v0.07 (2004/10/07),
 (memoir)              consider installing the textcase package on input line 13
 013.
 
-\c@figure=\count293
-\c@lofdepth=\count294
+\c@figure=\count295
+\c@lofdepth=\count296
 \cftbeforefigureskip=\skip185
 \cftfigureindent=\skip186
 \cftfigurenumwidth=\skip187
-\c@table=\count295
-\c@lotdepth=\count296
+\c@table=\count297
+\c@lotdepth=\count298
 \cftbeforetableskip=\skip188
 \cfttableindent=\skip189
 \cfttablenumwidth=\skip190
@@ -390,13 +390,13 @@ Package: amsbsy 1999/11/29 v1.2d Bold Symbols
 ) (/Users/lukas/Library/TinyTeX/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 2016/03/08 v2.02 operator names
 )
-\inf@bad=\count297
+\inf@bad=\count299
 LaTeX Info: Redefining \frac on input line 234.
-\uproot@=\count298
-\leftroot@=\count299
+\uproot@=\count300
+\leftroot@=\count301
 LaTeX Info: Redefining \overline on input line 399.
-\classnum@=\count300
-\DOTSCASE@=\count301
+\classnum@=\count302
+\DOTSCASE@=\count303
 LaTeX Info: Redefining \ldots on input line 496.
 LaTeX Info: Redefining \dots on input line 499.
 LaTeX Info: Redefining \cdots on input line 620.
@@ -405,15 +405,15 @@ LaTeX Info: Redefining \cdots on input line 620.
 \big@size=\dimen185
 LaTeX Font Info:    Redeclaring font encoding OML on input line 743.
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 744.
-\macc@depth=\count302
-\c@MaxMatrixCols=\count303
+\macc@depth=\count304
+\c@MaxMatrixCols=\count305
 \dotsspace@=\muskip16
-\c@parentequation=\count304
-\dspbrk@lvl=\count305
+\c@parentequation=\count306
+\dspbrk@lvl=\count307
 \tag@help=\toks25
-\row@=\count306
-\column@=\count307
-\maxfields@=\count308
+\row@=\count308
+\column@=\count309
+\maxfields@=\count310
 \andhelp@=\toks26
 \eqnshift@=\dimen186
 \alignsep@=\dimen187
@@ -445,23 +445,23 @@ Package: mathspec 2016/12/22 v0.2b LaTeX Package (Mathematics font selection fo
 r XeLaTeX)
 (/Users/lukas/Library/TinyTeX/texmf-dist/tex/latex/etoolbox/etoolbox.sty
 Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
-\etb@tempcnta=\count309
+\etb@tempcnta=\count311
 ) (/Users/lukas/Library/TinyTeX/texmf-dist/tex/latex/fontspec/fontspec.sty
 (/Users/lukas/Library/TinyTeX/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
 (/Users/lukas/Library/TinyTeX/texmf-dist/tex/latex/l3kernel/expl3.sty
-Package: expl3 2021-02-06 L3 programming layer (loader) 
+Package: expl3 2021-02-18 L3 programming layer (loader) 
 
 (/Users/lukas/Library/TinyTeX/texmf-dist/tex/latex/l3backend/l3backend-xetex.de
 f
-File: l3backend-xetex.def 2021-02-06 L3 backend support: XeTeX
+File: l3backend-xetex.def 2021-02-18 L3 backend support: XeTeX
 (|extractbb --version)
-\c__kernel_sys_dvipdfmx_version_int=\count310
-\l__color_backend_stack_int=\count311
-\g__graphics_track_int=\count312
+\c__kernel_sys_dvipdfmx_version_int=\count312
+\l__color_backend_stack_int=\count313
+\g__graphics_track_int=\count314
 \l__pdf_internal_box=\box54
-\g__pdf_backend_object_int=\count313
-\g__pdf_backend_annotation_int=\count314
-\g__pdf_backend_link_int=\count315
+\g__pdf_backend_object_int=\count315
+\g__pdf_backend_annotation_int=\count316
+\g__pdf_backend_link_int=\count317
 ))
 (/Users/lukas/Library/TinyTeX/texmf-dist/tex/latex/l3packages/xparse/xparse-202
 0-10-01.sty
@@ -471,17 +471,17 @@ Package: fontspec 2020/02/21 v2.7i Font selection for XeLaTeX and LuaLaTeX
 (/Users/lukas/Library/TinyTeX/texmf-dist/tex/latex/fontspec/fontspec-xetex.sty
 Package: fontspec-xetex 2020/02/21 v2.7i Font selection for XeLaTeX and LuaLaTe
 X
-\l__fontspec_script_int=\count316
-\l__fontspec_language_int=\count317
-\l__fontspec_strnum_int=\count318
-\l__fontspec_tmp_int=\count319
-\l__fontspec_tmpa_int=\count320
-\l__fontspec_tmpb_int=\count321
-\l__fontspec_tmpc_int=\count322
-\l__fontspec_em_int=\count323
-\l__fontspec_emdef_int=\count324
-\l__fontspec_strong_int=\count325
-\l__fontspec_strongdef_int=\count326
+\l__fontspec_script_int=\count318
+\l__fontspec_language_int=\count319
+\l__fontspec_strnum_int=\count320
+\l__fontspec_tmp_int=\count321
+\l__fontspec_tmpa_int=\count322
+\l__fontspec_tmpb_int=\count323
+\l__fontspec_tmpc_int=\count324
+\l__fontspec_em_int=\count325
+\l__fontspec_emdef_int=\count326
+\l__fontspec_strong_int=\count327
+\l__fontspec_strongdef_int=\count328
 \l__fontspec_tmpa_dim=\dimen192
 \l__fontspec_tmpb_dim=\dimen193
 \l__fontspec_tmpc_dim=\dimen194
@@ -495,12 +495,12 @@ s/lukas/Library/TinyTeX/texmf-dist/tex/generic/xkeyval/xkvutils.tex
 \XKV@toks=\toks29
 \XKV@tempa@toks=\toks30
 (/Users/lukas/Library/TinyTeX/texmf-dist/tex/generic/xkeyval/keyval.tex))
-\XKV@depth=\count327
+\XKV@depth=\count329
 File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
 ))
-\c@eu@=\count328
-\c@eu@i=\count329
-\c@mkern=\count330
+\c@eu@=\count330
+\c@eu@i=\count331
+\c@mkern=\count332
 ) (/Users/lukas/Library/TinyTeX/texmf-dist/tex/latex/hyperref/hyperref.sty
 Package: hyperref 2021-02-10 v7.00j Hypertext links for LaTeX
 (/Users/lukas/Library/TinyTeX/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
@@ -534,8 +534,8 @@ Package: auxhook 2019-12-17 v1.6 Hooks for auxiliary files (HO)
 Package: kvoptions 2020-10-07 v3.14 Key value format for package options (HO)
 )
 \@linkdim=\dimen195
-\Hy@linkcounter=\count331
-\Hy@pagecounter=\count332
+\Hy@linkcounter=\count333
+\Hy@pagecounter=\count334
 (/Users/lukas/Library/TinyTeX/texmf-dist/tex/latex/hyperref/pd1enc.def
 File: pd1enc.def 2021-02-10 v7.00j Hyperref: PDFDocEncoding definition (HO)
 )
@@ -548,7 +548,7 @@ Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
 ) (/Users/lukas/Library/TinyTeX/texmf-dist/tex/generic/etexcmds/etexcmds.sty
 Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
 )
-\Hy@SavedSpaceFactor=\count333
+\Hy@SavedSpaceFactor=\count335
 (/Users/lukas/Library/TinyTeX/texmf-dist/tex/latex/hyperref/puenc.def
 File: puenc.def 2021-02-10 v7.00j Hyperref: PDF Unicode definition (HO)
 )
@@ -559,7 +559,7 @@ Package hyperref Info: Plain pages OFF on input line 4207.
 Package hyperref Info: Backreferencing OFF on input line 4212.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4445.
-\c@Hy@tempcnt=\count334
+\c@Hy@tempcnt=\count336
 (/Users/lukas/Library/TinyTeX/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip17
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
@@ -572,7 +572,7 @@ Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
 Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
 )
 ))
-\Fld@menulength=\count335
+\Fld@menulength=\count337
 \Field@Width=\dimen197
 \Fld@charsize=\dimen198
 Package hyperref Info: Hyper figures OFF on input line 6075.
@@ -589,14 +589,14 @@ Package: atbegshi-ltx 2020/08/17 v1.0a Emulation of the original atbegshi packa
 ge
 with kernel methods
 )
-\Hy@abspage=\count336
-\c@Item=\count337
-\c@Hfootnote=\count338
+\Hy@abspage=\count338
+\c@Item=\count339
+\c@Hfootnote=\count340
 ) (/Users/lukas/Library/TinyTeX/texmf-dist/tex/latex/memoir/memhfixc.sty
 Package: memhfixc 2019/10/24 v1.18 nameref/hyperref package fixes for memoir cl
 ass
-\c@memhycontfloat=\count339
-\c@Hpagenote=\count340
+\c@memhycontfloat=\count341
+\c@Hpagenote=\count342
 )
 Package hyperref Info: Driver (autodetected): hxetex.
 (/Users/lukas/Library/TinyTeX/texmf-dist/tex/latex/hyperref/hxetex.def
@@ -606,10 +606,10 @@ Package: stringenc 2019/11/29 v1.12 Convert strings between diff. encodings (HO
 )
 )
 \pdfm@box=\box55
-\c@Hy@AnnotLevel=\count341
-\HyField@AnnotCount=\count342
-\Fld@listcount=\count343
-\c@bookmark@seq@number=\count344
+\c@Hy@AnnotLevel=\count343
+\HyField@AnnotCount=\count344
+\Fld@listcount=\count345
+\c@bookmark@seq@number=\count346
 
 (/Users/lukas/Library/TinyTeX/texmf-dist/tex/latex/rerunfilecheck/rerunfilechec
 k.sty
@@ -774,54 +774,54 @@ Package polyglossia Info: Making " an active character on input line 29.
 Package: biblatex 2020/12/31 v3.16 programmable bibliographies (PK/MW)
 (/Users/lukas/Library/TinyTeX/texmf-dist/tex/latex/logreq/logreq.sty
 Package: logreq 2010/08/04 v1.0 xml request logger
-\lrq@indent=\count345
+\lrq@indent=\count347
 (/Users/lukas/Library/TinyTeX/texmf-dist/tex/latex/logreq/logreq.def
 File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
 )) (/Users/lukas/Library/TinyTeX/texmf-dist/tex/latex/base/ifthen.sty
 Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
 )
-\c@tabx@nest=\count346
-\c@listtotal=\count347
-\c@listcount=\count348
-\c@liststart=\count349
-\c@liststop=\count350
-\c@citecount=\count351
-\c@citetotal=\count352
-\c@multicitecount=\count353
-\c@multicitetotal=\count354
-\c@instcount=\count355
-\c@maxnames=\count356
-\c@minnames=\count357
-\c@maxitems=\count358
-\c@minitems=\count359
-\c@citecounter=\count360
-\c@maxcitecounter=\count361
-\c@savedcitecounter=\count362
-\c@uniquelist=\count363
-\c@uniquename=\count364
-\c@refsection=\count365
-\c@refsegment=\count366
-\c@maxextratitle=\count367
-\c@maxextratitleyear=\count368
-\c@maxextraname=\count369
-\c@maxextradate=\count370
-\c@maxextraalpha=\count371
-\c@abbrvpenalty=\count372
-\c@highnamepenalty=\count373
-\c@lownamepenalty=\count374
-\c@maxparens=\count375
-\c@parenlevel=\count376
-\blx@tempcnta=\count377
-\blx@tempcntb=\count378
-\blx@tempcntc=\count379
-\blx@maxsection=\count380
-\blx@maxsegment@0=\count381
-\blx@notetype=\count382
-\blx@parenlevel@text=\count383
-\blx@parenlevel@foot=\count384
-\blx@sectionciteorder@0=\count385
-\blx@entrysetcounter=\count386
-\blx@biblioinstance=\count387
+\c@tabx@nest=\count348
+\c@listtotal=\count349
+\c@listcount=\count350
+\c@liststart=\count351
+\c@liststop=\count352
+\c@citecount=\count353
+\c@citetotal=\count354
+\c@multicitecount=\count355
+\c@multicitetotal=\count356
+\c@instcount=\count357
+\c@maxnames=\count358
+\c@minnames=\count359
+\c@maxitems=\count360
+\c@minitems=\count361
+\c@citecounter=\count362
+\c@maxcitecounter=\count363
+\c@savedcitecounter=\count364
+\c@uniquelist=\count365
+\c@uniquename=\count366
+\c@refsection=\count367
+\c@refsegment=\count368
+\c@maxextratitle=\count369
+\c@maxextratitleyear=\count370
+\c@maxextraname=\count371
+\c@maxextradate=\count372
+\c@maxextraalpha=\count373
+\c@abbrvpenalty=\count374
+\c@highnamepenalty=\count375
+\c@lownamepenalty=\count376
+\c@maxparens=\count377
+\c@parenlevel=\count378
+\blx@tempcnta=\count379
+\blx@tempcntb=\count380
+\blx@tempcntc=\count381
+\blx@maxsection=\count382
+\blx@maxsegment@0=\count383
+\blx@notetype=\count384
+\blx@parenlevel@text=\count385
+\blx@parenlevel@foot=\count386
+\blx@sectionciteorder@0=\count387
+\blx@entrysetcounter=\count388
+\blx@biblioinstance=\count389
 \labelnumberwidth=\skip195
 \labelalphawidth=\skip196
 \biblabelsep=\skip197
@@ -832,9 +832,9 @@ Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
 \blx@bcfin=\read3
 \blx@bcfout=\write4
 \blx@langwohyphens=\language3
-\c@mincomprange=\count388
-\c@maxcomprange=\count389
-\c@mincompwidth=\count390
+\c@mincomprange=\count390
+\c@maxcomprange=\count391
+\c@mincompwidth=\count392
 Package biblatex Info: Trying to load biblatex default data model...
 Package biblatex Info: ... file 'blx-dm.def' found.
 (/Users/lukas/Library/TinyTeX/texmf-dist/tex/latex/biblatex/blx-dm.def
@@ -847,86 +847,86 @@ File: apa.dbx 2020/08/28 v9.14 APA biblatex style data model
 )
 Package biblatex Info: Trying to load biblatex custom data model...
 Package biblatex Info: ... file 'biblatex-dm.cfg' not found.
-\c@afterword=\count391
-\c@savedafterword=\count392
-\c@annotator=\count393
-\c@savedannotator=\count394
-\c@author=\count395
-\c@savedauthor=\count396
-\c@bookauthor=\count397
-\c@savedbookauthor=\count398
-\c@commentator=\count399
-\c@savedcommentator=\count400
-\c@editor=\count401
-\c@savededitor=\count402
-\c@editora=\count403
-\c@savededitora=\count404
-\c@editorb=\count405
-\c@savededitorb=\count406
-\c@editorc=\count407
-\c@savededitorc=\count408
-\c@foreword=\count409
-\c@savedforeword=\count410
-\c@holder=\count411
-\c@savedholder=\count412
-\c@introduction=\count413
-\c@savedintroduction=\count414
-\c@namea=\count415
-\c@savednamea=\count416
-\c@nameb=\count417
-\c@savednameb=\count418
-\c@namec=\count419
-\c@savednamec=\count420
-\c@translator=\count421
-\c@savedtranslator=\count422
-\c@shortauthor=\count423
-\c@savedshortauthor=\count424
-\c@shorteditor=\count425
-\c@savedshorteditor=\count426
-\c@groupauthor=\count427
-\c@savedgroupauthor=\count428
-\c@narrator=\count429
-\c@savednarrator=\count430
-\c@execproducer=\count431
-\c@savedexecproducer=\count432
-\c@execdirector=\count433
-\c@savedexecdirector=\count434
-\c@with=\count435
-\c@savedwith=\count436
-\c@labelname=\count437
-\c@savedlabelname=\count438
-\c@institution=\count439
-\c@savedinstitution=\count440
-\c@lista=\count441
-\c@savedlista=\count442
-\c@listb=\count443
-\c@savedlistb=\count444
-\c@listc=\count445
-\c@savedlistc=\count446
-\c@listd=\count447
-\c@savedlistd=\count448
-\c@liste=\count449
-\c@savedliste=\count450
-\c@listf=\count451
-\c@savedlistf=\count452
-\c@location=\count453
-\c@savedlocation=\count454
-\c@organization=\count455
-\c@savedorganization=\count456
-\c@origlocation=\count457
-\c@savedoriglocation=\count458
-\c@origpublisher=\count459
-\c@savedorigpublisher=\count460
-\c@publisher=\count461
-\c@savedpublisher=\count462
-\c@language=\count463
-\c@savedlanguage=\count464
-\c@origlanguage=\count465
-\c@savedoriglanguage=\count466
-\c@citation=\count467
-\c@savedcitation=\count468
-\c@pageref=\count469
-\c@savedpageref=\count470
+\c@afterword=\count393
+\c@savedafterword=\count394
+\c@annotator=\count395
+\c@savedannotator=\count396
+\c@author=\count397
+\c@savedauthor=\count398
+\c@bookauthor=\count399
+\c@savedbookauthor=\count400
+\c@commentator=\count401
+\c@savedcommentator=\count402
+\c@editor=\count403
+\c@savededitor=\count404
+\c@editora=\count405
+\c@savededitora=\count406
+\c@editorb=\count407
+\c@savededitorb=\count408
+\c@editorc=\count409
+\c@savededitorc=\count410
+\c@foreword=\count411
+\c@savedforeword=\count412
+\c@holder=\count413
+\c@savedholder=\count414
+\c@introduction=\count415
+\c@savedintroduction=\count416
+\c@namea=\count417
+\c@savednamea=\count418
+\c@nameb=\count419
+\c@savednameb=\count420
+\c@namec=\count421
+\c@savednamec=\count422
+\c@translator=\count423
+\c@savedtranslator=\count424
+\c@shortauthor=\count425
+\c@savedshortauthor=\count426
+\c@shorteditor=\count427
+\c@savedshorteditor=\count428
+\c@groupauthor=\count429
+\c@savedgroupauthor=\count430
+\c@narrator=\count431
+\c@savednarrator=\count432
+\c@execproducer=\count433
+\c@savedexecproducer=\count434
+\c@execdirector=\count435
+\c@savedexecdirector=\count436
+\c@with=\count437
+\c@savedwith=\count438
+\c@labelname=\count439
+\c@savedlabelname=\count440
+\c@institution=\count441
+\c@savedinstitution=\count442
+\c@lista=\count443
+\c@savedlista=\count444
+\c@listb=\count445
+\c@savedlistb=\count446
+\c@listc=\count447
+\c@savedlistc=\count448
+\c@listd=\count449
+\c@savedlistd=\count450
+\c@liste=\count451
+\c@savedliste=\count452
+\c@listf=\count453
+\c@savedlistf=\count454
+\c@location=\count455
+\c@savedlocation=\count456
+\c@organization=\count457
+\c@savedorganization=\count458
+\c@origlocation=\count459
+\c@savedoriglocation=\count460
+\c@origpublisher=\count461
+\c@savedorigpublisher=\count462
+\c@publisher=\count463
+\c@savedpublisher=\count464
+\c@language=\count465
+\c@savedlanguage=\count466
+\c@origlanguage=\count467
+\c@savedoriglanguage=\count468
+\c@citation=\count469
+\c@savedcitation=\count470
+\c@pageref=\count471
+\c@savedpageref=\count472
 \shorthandwidth=\skip258
 \shortjournalwidth=\skip259
 \shortserieswidth=\skip260
@@ -953,19 +953,19 @@ Package biblatex Info: Trying to load generic definitions...
 Package biblatex Info: ... file 'biblatex.def' found.
 (/Users/lukas/Library/TinyTeX/texmf-dist/tex/latex/biblatex/biblatex.def
 File: biblatex.def 2020/12/31 v3.16 biblatex compatibility (PK/MW)
-\c@textcitecount=\count471
-\c@textcitetotal=\count472
-\c@textcitemaxnames=\count473
-\c@biburlbigbreakpenalty=\count474
-\c@biburlbreakpenalty=\count475
-\c@biburlnumpenalty=\count476
-\c@biburlucpenalty=\count477
-\c@biburllcpenalty=\count478
+\c@textcitecount=\count473
+\c@textcitetotal=\count474
+\c@textcitemaxnames=\count475
+\c@biburlbigbreakpenalty=\count476
+\c@biburlbreakpenalty=\count477
+\c@biburlnumpenalty=\count478
+\c@biburlucpenalty=\count479
+\c@biburllcpenalty=\count480
 \biburlbigskip=\muskip18
 \biburlnumskip=\muskip19
 \biburlucskip=\muskip20
 \biburllcskip=\muskip21
-\c@smartand=\count479
+\c@smartand=\count481
 )
 Package biblatex Info: Trying to load bibliography style 'apa'...
 Package biblatex Info: ... file 'apa.bbx' found.
@@ -975,8 +975,8 @@ Package biblatex Info: Trying to load bibliography style 'standard'...
 Package biblatex Info: ... file 'standard.bbx' found.
 (/Users/lukas/Library/TinyTeX/texmf-dist/tex/latex/biblatex/bbx/standard.bbx
 File: standard.bbx 2020/12/31 v3.16 biblatex bibliography style (PK/MW)
-\c@bbx:relatedcount=\count480
-\c@bbx:relatedtotal=\count481
+\c@bbx:relatedcount=\count482
+\c@bbx:relatedtotal=\count483
 ))
 Package biblatex Info: Trying to load citation style 'apa'...
 Package biblatex Info: ... file 'apa.cbx' found.
@@ -1014,69 +1014,19 @@ Package: longtable 2020/01/07 v4.13 Multi-page Table package (DPC)
 \LTright=\skip273
 \LTpre=\skip274
 \LTpost=\skip275
-\LTchunksize=\count482
+\LTchunksize=\count484
 \LTcapwidth=\dimen199
 \LT@head=\box56
 \LT@firsthead=\box57
 \LT@foot=\box58
 \LT@lastfoot=\box59
-\LT@cols=\count483
-\LT@rows=\count484
-\c@LT@tables=\count485
-\c@LT@chunks=\count486
+\LT@cols=\count485
+\LT@rows=\count486
+\c@LT@tables=\count487
+\c@LT@chunks=\count488
 \LT@p@ftn=\toks31
-)
-Class memoir Info: For the caption package to function properly with memoir, we
- will now reset \caption and friends to kernel defaults and then let the
-caption package take over. Remember: all caption configuration now goes via the
- caption package interface, not the interface from the memoir class.  on input 
-line 85.
-(/Users/lukas/Library/TinyTeX/texmf-dist/tex/latex/caption/caption.sty
-Package: caption 2020/10/26 v3.5g Customizing captions (AR)
-(/Users/lukas/Library/TinyTeX/texmf-dist/tex/latex/caption/caption3.sty
-Package: caption3 2020/10/21 v2.2e caption3 kernel (AR)
-\captionmargin=\dimen256
-\captionmargin@=\dimen257
-\captionwidth=\dimen258
-\caption@tempdima=\dimen259
-\caption@indent=\dimen260
-\caption@parindent=\dimen261
-\caption@hangindent=\dimen262
-Package caption Info: memoir document class detected.
-(/Users/lukas/Library/TinyTeX/texmf-dist/tex/latex/caption/caption-memoir.sto
-File: caption-memoir.sto 2020/10/10 v2.1 Adaption of the caption package to the
- memoir document class (AR)
-))
-\c@caption@flags=\count487
-\c@continuedfloat=\count488
-Package caption Info: changepage package is loaded.
-\caption@adjustwidth@hsize=\dimen263
-\caption@adjustwidth@linewidth=\dimen264
-Package caption Info: hyperref package is loaded.
-Package caption Info: longtable package is loaded.
-(/Users/lukas/Library/TinyTeX/texmf-dist/tex/latex/caption/ltcaption.sty
-Package: ltcaption 2020/05/30 v1.4b longtable captions (AR)
-)) (/Users/lukas/Library/TinyTeX/texmf-dist/tex/latex/geometry/geometry.sty
-Package: geometry 2020/01/02 v5.9 Page Geometry
-(/Users/lukas/Library/TinyTeX/texmf-dist/tex/generic/iftex/ifvtex.sty
-Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
-)
-\Gm@cnth=\count489
-\Gm@cntv=\count490
-\c@Gm@tempcnt=\count491
-\Gm@bindingoffset=\dimen265
-\Gm@wd@mp=\dimen266
-\Gm@odd@mp=\dimen267
-\Gm@even@mp=\dimen268
-\Gm@layoutwidth=\dimen269
-\Gm@layoutheight=\dimen270
-\Gm@layouthoffset=\dimen271
-\Gm@layoutvoffset=\dimen272
-\Gm@dimlist=\toks32
-) (/Users/lukas/Library/TinyTeX/texmf-dist/tex/latex/pdflscape/pdflscape.sty
-Package: pdflscape 2019/12/05 v0.12 Display of landscape pages in PDF (HO)
-(/Users/lukas/Library/TinyTeX/texmf-dist/tex/latex/graphics/lscape.sty
-Package: lscape 2020/05/28 v3.02 Landscape Pages (DPC)
+) (/Users/lukas/Library/TinyTeX/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2020/09/09 v1.2b Enhanced LaTeX Graphics (DPC,SPQR)
 (/Users/lukas/Library/TinyTeX/texmf-dist/tex/latex/graphics/graphics.sty
 Package: graphics 2020/08/30 v1.4c Standard LaTeX Graphics (DPC,SPQR)
 (/Users/lukas/Library/TinyTeX/texmf-dist/tex/latex/graphics/trig.sty
@@ -1087,23 +1037,83 @@ File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 Package graphics Info: Driver file: xetex.def on input line 105.
 (/Users/lukas/Library/TinyTeX/texmf-dist/tex/latex/graphics-def/xetex.def
 File: xetex.def 2020/08/26 v5.0i Graphics/color driver for xetex
-)))
+))
+\Gin@req@height=\dimen256
+\Gin@req@width=\dimen257
+) (/Users/lukas/Library/TinyTeX/texmf-dist/tex/latex/grffile/grffile.sty
+Package: grffile 2019/11/11 v2.1 Extended file name support for graphics (legac
+y)
+Package grffile Info: This package is an empty stub for compatibility on input 
+line 40.
+)
+Class memoir Info: For the caption package to function properly with memoir, we
+ will now reset \caption and friends to kernel defaults and then let the
+caption package take over. Remember: all caption configuration now goes via the
+ caption package interface, not the interface from the memoir class.  on input 
+line 94.
+(/Users/lukas/Library/TinyTeX/texmf-dist/tex/latex/caption/caption.sty
+Package: caption 2020/10/26 v3.5g Customizing captions (AR)
+(/Users/lukas/Library/TinyTeX/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2020/10/21 v2.2e caption3 kernel (AR)
+\captionmargin=\dimen258
+\captionmargin@=\dimen259
+\captionwidth=\dimen260
+\caption@tempdima=\dimen261
+\caption@indent=\dimen262
+\caption@parindent=\dimen263
+\caption@hangindent=\dimen264
+Package caption Info: memoir document class detected.
+(/Users/lukas/Library/TinyTeX/texmf-dist/tex/latex/caption/caption-memoir.sto
+File: caption-memoir.sto 2020/10/10 v2.1 Adaption of the caption package to the
+ memoir document class (AR)
+))
+\c@caption@flags=\count489
+\c@continuedfloat=\count490
+Package caption Info: changepage package is loaded.
+\caption@adjustwidth@hsize=\dimen265
+\caption@adjustwidth@linewidth=\dimen266
+Package caption Info: hyperref package is loaded.
+Package caption Info: longtable package is loaded.
+(/Users/lukas/Library/TinyTeX/texmf-dist/tex/latex/caption/ltcaption.sty
+Package: ltcaption 2020/05/30 v1.4b longtable captions (AR)
+)) (/Users/lukas/Library/TinyTeX/texmf-dist/tex/latex/geometry/geometry.sty
+Package: geometry 2020/01/02 v5.9 Page Geometry
+(/Users/lukas/Library/TinyTeX/texmf-dist/tex/generic/iftex/ifvtex.sty
+Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
+)
+\Gm@cnth=\count491
+\Gm@cntv=\count492
+\c@Gm@tempcnt=\count493
+\Gm@bindingoffset=\dimen267
+\Gm@wd@mp=\dimen268
+\Gm@odd@mp=\dimen269
+\Gm@even@mp=\dimen270
+\Gm@layoutwidth=\dimen271
+\Gm@layoutheight=\dimen272
+\Gm@layouthoffset=\dimen273
+\Gm@layoutvoffset=\dimen274
+\Gm@dimlist=\toks32
+) (/Users/lukas/Library/TinyTeX/texmf-dist/tex/latex/pdflscape/pdflscape.sty
+Package: pdflscape 2019/12/05 v0.12 Display of landscape pages in PDF (HO)
+(/Users/lukas/Library/TinyTeX/texmf-dist/tex/latex/graphics/lscape.sty
+Package: lscape 2020/05/28 v3.02 Landscape Pages (DPC)
+)
 Package pdflscape Info: Auto-detected driver: dvipdfm (xetex) on input line 98.
 
 ) (/Users/lukas/Library/TinyTeX/texmf-dist/tex/latex/bookmark/bookmark.sty
 Package: bookmark 2020-11-06 v1.29 PDF bookmarks (HO)
 (/Users/lukas/Library/TinyTeX/texmf-dist/tex/latex/bookmark/bkm-dvipdfm.def
 File: bkm-dvipdfm.def 2020-11-06 v1.29 bookmark driver for dvipdfm (HO)
-\BKM@id=\count492
+\BKM@id=\count494
 )) (/Users/lukas/Library/TinyTeX/texmf-dist/tex/latex/enumitem/enumitem.sty
 Package: enumitem 2019/06/20 v3.9 Customized lists
 \enitkv@toks@=\toks33
 \labelindent=\skip276
-\enit@outerparindent=\dimen273
+\enit@outerparindent=\dimen275
 \enit@toks=\toks34
 \enit@inbox=\box60
-\enit@count@id=\count493
-\enitdp@description=\count494
+\enit@count@id=\count495
+\enitdp@description=\count496
 ) (/Users/lukas/Library/TinyTeX/texmf-dist/tex/latex/xcolor/xcolor.sty
 Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
 (/Users/lukas/Library/TinyTeX/texmf-dist/tex/latex/graphics-cfg/color.cfg
@@ -1124,24 +1134,20 @@ File: dvipsnam.def 2016/06/17 v3.0m Driver-dependent file (DPC,SPQR)
 Package: pdfpages 2021/02/05 v0.5s Insert pages of external PDF documents (AM)
 (/Users/lukas/Library/TinyTeX/texmf-dist/tex/latex/tools/calc.sty
 Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
-\calc@Acount=\count495
-\calc@Bcount=\count496
-\calc@Adimen=\dimen274
-\calc@Bdimen=\dimen275
+\calc@Acount=\count497
+\calc@Bcount=\count498
+\calc@Adimen=\dimen276
+\calc@Bdimen=\dimen277
 \calc@Askip=\skip277
 \calc@Bskip=\skip278
 LaTeX Info: Redefining \setlength on input line 80.
 LaTeX Info: Redefining \addtolength on input line 81.
-\calc@Ccount=\count497
+\calc@Ccount=\count499
 \calc@Cskip=\skip279
 ) (/Users/lukas/Library/TinyTeX/texmf-dist/tex/latex/eso-pic/eso-pic.sty
 Package: eso-pic 2020/10/14 v3.0a eso-pic (RN)
-\ESO@tempdima=\dimen276
-\ESO@tempdimb=\dimen277
-) (/Users/lukas/Library/TinyTeX/texmf-dist/tex/latex/graphics/graphicx.sty
-Package: graphicx 2020/09/09 v1.2b Enhanced LaTeX Graphics (DPC,SPQR)
-\Gin@req@height=\dimen278
-\Gin@req@width=\dimen279
+\ESO@tempdima=\dimen278
+\ESO@tempdimb=\dimen279
 )
 \AM@pagewidth=\dimen280
 \AM@pageheight=\dimen281
@@ -1149,29 +1155,29 @@ Package: graphicx 2020/09/09 v1.2b Enhanced LaTeX Graphics (DPC,SPQR)
 (/Users/lukas/Library/TinyTeX/texmf-dist/tex/latex/pdfpages/ppxetex.def
 File: ppxetex.def 2021/02/05 v0.5s Pdfpages driver for XeTeX (AM)
 )
-\pdfpages@includegraphics@status=\count498
+\pdfpages@includegraphics@status=\count500
 \AM@pagebox=\box61
 \AM@global@opts=\toks35
-\AM@pagecnt=\count499
+\AM@pagecnt=\count501
 \AM@toc@title=\toks36
-\c@AM@survey=\count500
+\c@AM@survey=\count502
 \AM@templatesizebox=\box62
 ) (/Users/lukas/Library/TinyTeX/texmf-dist/tex/latex/multirow/multirow.sty
 Package: multirow 2021/01/29 v2.7 Span multiple rows of a table
 \multirow@colwidth=\skip280
-\multirow@cntb=\count501
+\multirow@cntb=\count503
 \multirow@dima=\skip281
 \bigstrutjot=\dimen283
 ) (/Users/lukas/Library/TinyTeX/texmf-dist/tex/latex/wrapfig/wrapfig.sty
 \wrapoverhang=\dimen284
 \WF@size=\dimen285
-\c@WF@wrappedlines=\count502
+\c@WF@wrappedlines=\count504
 \WF@box=\box63
 \WF@everypar=\toks37
 Package: wrapfig 2003/01/31  v 3.6
 ) (/Users/lukas/Library/TinyTeX/texmf-dist/tex/latex/float/float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
-\c@float@type=\count503
+\c@float@type=\count505
 \float@exts=\toks38
 \float@box=\box64
 \@float@everytoks=\toks39
@@ -1185,16 +1191,16 @@ Package: tabu 2019/01/11 v2.9 - flexible LaTeX tabulars (FC+tabu-fixed)
 (/Users/lukas/Library/TinyTeX/texmf-dist/tex/latex/varwidth/varwidth.sty
 Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
 \@vwid@box=\box66
-\sift@deathcycles=\count504
+\sift@deathcycles=\count506
 \@vwid@loff=\dimen286
 \@vwid@roff=\dimen287
 )
-\c@taburow=\count505
-\tabu@nbcols=\count506
-\tabu@cnt=\count507
-\tabu@Xcol=\count508
-\tabu@alloc=\count509
-\tabu@nested=\count510
+\c@taburow=\count507
+\tabu@nbcols=\count508
+\tabu@cnt=\count509
+\tabu@Xcol=\count510
+\tabu@alloc=\count511
+\tabu@nested=\count512
 \tabu@target=\dimen288
 \tabu@spreadtarget=\dimen289
 \tabu@naturalX=\dimen290
@@ -1232,7 +1238,7 @@ Package: trimspaces 2009/09/17 v1.1 Trim spaces around a token list
 \UL@skip=\skip285
 \UL@hook=\toks43
 \UL@height=\dimen297
-\UL@pe=\count511
+\UL@pe=\count513
 \UL@pixel=\dimen298
 \ULC@box=\box74
 Package: ulem 2019/11/18
@@ -1240,7 +1246,7 @@ Package: ulem 2019/11/18
 ) (/Users/lukas/Library/TinyTeX/texmf-dist/tex/latex/makecell/makecell.sty
 Package: makecell 2009/08/03 V0.1e Managing of Tab Column Heads and Cells
 \rotheadsize=\dimen300
-\c@nlinenum=\count512
+\c@nlinenum=\count514
 \TeXr@lab=\toks44
 )
 \longtablewidth=\skip286
@@ -1309,7 +1315,7 @@ t;"
 xt;"
 
 LaTeX Font Info:    Font shape `TU/MinionPro(0)/m/n' will be
-(Font)              scaled to size 11.8081pt on input line 136.
+(Font)              scaled to size 11.8081pt on input line 145.
 
 Package fontspec Info: Helvetica scale = 0.8272516712265912.
 
@@ -1422,7 +1428,7 @@ tex-text;"
 
 \symDigits:m:n=\mathgroup6
 LaTeX Font Info:    Font shape `TU/MinionPro(1)/m/n' will be
-(Font)              scaled to size 11.8081pt on input line 137.
+(Font)              scaled to size 11.8081pt on input line 146.
 
 Package fontspec Info: Minion Pro scale = 0.9840067584436999.
 
@@ -1436,27 +1442,27 @@ Package fontspec Info: Minion Pro scale = 0.9840067584436999.
 
 Package fontspec Info: Minion Pro scale = 0.9840067584436999.
 
-LaTeX Font Info:    Redeclaring math alphabet \mathrm on input line 138.
+LaTeX Font Info:    Redeclaring math alphabet \mathrm on input line 147.
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `bold'
 (Font)                  TU/MinionPro(0)/m/n --> TU/MinionPro(0)/bx/n on input l
-ine 138.
-LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 138.
+ine 147.
+LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 147.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  OT1/lmr/m/it --> TU/MinionPro(0)/m/it on input line 138
+(Font)                  OT1/lmr/m/it --> TU/MinionPro(0)/m/it on input line 147
 .
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  OT1/lmr/bx/it --> TU/MinionPro(0)/m/it on input line 13
-8.
-LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 138.
+(Font)                  OT1/lmr/bx/it --> TU/MinionPro(0)/m/it on input line 14
+7.
+LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 147.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  OT1/lmr/bx/n --> TU/MinionPro(0)/bx/n on input line 138
+(Font)                  OT1/lmr/bx/n --> TU/MinionPro(0)/bx/n on input line 147
 .
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
-(Font)                  OT1/lmr/bx/n --> TU/MinionPro(0)/bx/n on input line 138
+(Font)                  OT1/lmr/bx/n --> TU/MinionPro(0)/bx/n on input line 147
 .
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
 (Font)                  TU/MinionPro(0)/m/it --> TU/MinionPro(0)/bx/it on input
- line 138.
+ line 147.
 \symOperators:m:n=\mathgroup11
 
 ******************************************************
@@ -1498,8 +1504,8 @@ Sidefoothsep and sidefootwidth: 2.46019mm and 14.76114mm
 Sidefootvsep and sidefootheight: 5.0961mm and 207.41154mm
 ******************************************************
 
-\@quotelevel=\count513
-\@quotereset=\count514
+\@quotelevel=\count515
+\@quotereset=\count516
 (./thesis.aux
 Package polyglossia Info: Option: English, variant=american.
 Package polyglossia Info: Option: English, variant=american.
@@ -1520,45 +1526,45 @@ LaTeX Warning: Label `tab:tab-shared-states-S1' multiply defined.
 
 LaTeX Warning: Label `tab:tab-shared-states-S1' multiply defined.
 
-LaTeX Info: Redefining \rmfamily on input line 203.
-LaTeX Info: Redefining \sffamily on input line 203.
-LaTeX Info: Redefining \ttfamily on input line 203.
+LaTeX Info: Redefining \rmfamily on input line 243.
+LaTeX Info: Redefining \sffamily on input line 243.
+LaTeX Info: Redefining \ttfamily on input line 243.
 Package polyglossia Info: Option: English, variant=american.
 Package polyglossia Info: Option: English, variant=american.
-LaTeX Info: Redefining \rmfamily on input line 211.
-LaTeX Info: Redefining \sffamily on input line 211.
-LaTeX Info: Redefining \ttfamily on input line 211.
+LaTeX Info: Redefining \rmfamily on input line 251.
+LaTeX Info: Redefining \sffamily on input line 251.
+LaTeX Info: Redefining \ttfamily on input line 251.
 Package polyglossia Info: Option: English, variant=american.
 Package polyglossia Info: Option: English, variant=american.
 )
 \openout1 = `thesis.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 266.
-LaTeX Font Info:    ... okay on input line 266.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 266.
-LaTeX Font Info:    ... okay on input line 266.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 266.
-LaTeX Font Info:    ... okay on input line 266.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 266.
-LaTeX Font Info:    ... okay on input line 266.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 266.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 275.
+LaTeX Font Info:    ... okay on input line 275.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 275.
+LaTeX Font Info:    ... okay on input line 275.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 275.
+LaTeX Font Info:    ... okay on input line 275.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 275.
+LaTeX Font Info:    ... okay on input line 275.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 275.
 LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 2
-66.
+75.
 (/Users/lukas/Library/TinyTeX/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 266.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 266.
-LaTeX Font Info:    ... okay on input line 266.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 266.
-LaTeX Font Info:    ... okay on input line 266.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 266.
-LaTeX Font Info:    ... okay on input line 266.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 266.
-LaTeX Font Info:    ... okay on input line 266.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 266.
-LaTeX Font Info:    ... okay on input line 266.
-Package hyperref Info: Link coloring OFF on input line 266.
+LaTeX Font Info:    ... okay on input line 275.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 275.
+LaTeX Font Info:    ... okay on input line 275.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 275.
+LaTeX Font Info:    ... okay on input line 275.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 275.
+LaTeX Font Info:    ... okay on input line 275.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 275.
+LaTeX Font Info:    ... okay on input line 275.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 275.
+LaTeX Font Info:    ... okay on input line 275.
+Package hyperref Info: Link coloring OFF on input line 275.
 (/Users/lukas/Library/TinyTeX/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
 (/Users/lukas/Library/TinyTeX/texmf-dist/tex/latex/refcount/refcount.sty
@@ -1568,14 +1574,14 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 ing.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count515
+\c@section@level=\count517
 )
 Redoing nameref's sectioning
 Redoing nameref's label
-LaTeX Info: Redefining \nameref on input line 266.
-LaTeX Info: Redefining \ref on input line 266.
-LaTeX Info: Redefining \pageref on input line 266.
-LaTeX Info: Redefining \nameref on input line 266.
+LaTeX Info: Redefining \nameref on input line 275.
+LaTeX Info: Redefining \ref on input line 275.
+LaTeX Info: Redefining \pageref on input line 275.
+LaTeX Info: Redefining \nameref on input line 275.
 Package biblatex Info: Trying to load language 'dutch' -> 'dutch-apa'...
 Package biblatex Info: ... file 'dutch-apa.lbx' found.
 (/Users/lukas/Library/TinyTeX/texmf-dist/tex/latex/biblatex-apa/dutch-apa.lbx
@@ -1634,7 +1640,7 @@ Package biblatex Info: Automatic encoding selection.
 (biblatex)             Assuming data encoding 'utf8'.
 Package biblatex Info: Document encoding is UTF8 ....
 Package biblatex Info: ... and expl3
-(biblatex)             2021-02-06 L3 programming layer (loader) 
+(biblatex)             2021-02-18 L3 programming layer (loader) 
 (biblatex)             is new enough (at least 2020/04/06),
 (biblatex)             setting 'casechanger=expl3'.
 (/Users/lukas/Library/TinyTeX/texmf-dist/tex/latex/biblatex/blx-case-expl3.sty
@@ -1645,8 +1651,8 @@ Package: blx-case-expl3 2020/12/31 v3.16 expl3 case changing code for biblatex
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'thesis.bbl' found.
 (./thesis.bbl)
-Package biblatex Info: Reference section=0 on input line 266.
-Package biblatex Info: Reference segment=0 on input line 266.
+Package biblatex Info: Reference section=0 on input line 275.
+Package biblatex Info: Reference segment=0 on input line 275.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: float package is loaded.
 Package caption Info: threeparttable package is loaded.
@@ -1682,88 +1688,88 @@ Package caption Info: End \AtBeginDocument code.
 
 Package polyglossia Info: Option: English, variant=american.
 Package polyglossia Info: Option: English, variant=american.
-LaTeX Info: Redefining \rmfamily on input line 266.
-LaTeX Info: Redefining \sffamily on input line 266.
-LaTeX Info: Redefining \ttfamily on input line 266.
+LaTeX Info: Redefining \rmfamily on input line 275.
+LaTeX Info: Redefining \sffamily on input line 275.
+LaTeX Info: Redefining \ttfamily on input line 275.
 Package polyglossia Info: Option: English, variant=american.
 Package polyglossia Info: Option: English, variant=american.
 LaTeX Font Info:    Font shape `TU/MinionPro(0)/m/n' will be
-(Font)              scaled to size 24.48213pt on input line 275.
+(Font)              scaled to size 24.48213pt on input line 284.
 LaTeX Font Info:    Font shape `TU/MinionPro(0)/m/sc' will be
-(Font)              scaled to size 24.48213pt on input line 275.
+(Font)              scaled to size 24.48213pt on input line 284.
 [1
 
 
 ]
 LaTeX Font Info:    Font shape `TU/MinionPro(0)/m/n' will be
-(Font)              scaled to size 10.77489pt on input line 283.
+(Font)              scaled to size 10.77489pt on input line 292.
 LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 2
-87.
+96.
 (/Users/lukas/Library/TinyTeX/texmf-dist/tex/latex/lm/ot1lmr.fd
 File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OML+lmm on input line 2
-87.
+96.
 (/Users/lukas/Library/TinyTeX/texmf-dist/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 
-287.
+296.
 (/Users/lukas/Library/TinyTeX/texmf-dist/tex/latex/lm/omslmsy.fd
 File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 
-287.
+296.
 (/Users/lukas/Library/TinyTeX/texmf-dist/tex/latex/lm/omxlmex.fd
 File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10.95> on input line 287.
+(Font)              <10.95> on input line 296.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 287.
+(Font)              <8> on input line 296.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 287.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 287
+(Font)              <6> on input line 296.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 296
 .
 (/Users/lukas/Library/TinyTeX/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 287
+LaTeX Font Info:    Trying to load font information for U+msb on input line 296
 .
 (/Users/lukas/Library/TinyTeX/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    Font shape `TU/MinionPro(1)/m/n' will be
-(Font)              scaled to size 10.77489pt on input line 287.
+(Font)              scaled to size 10.77489pt on input line 296.
 LaTeX Font Info:    Font shape `TU/MinionPro(1)/m/n' will be
-(Font)              scaled to size 7.87207pt on input line 287.
+(Font)              scaled to size 7.87207pt on input line 296.
 LaTeX Font Info:    Font shape `TU/MinionPro(1)/m/n' will be
-(Font)              scaled to size 5.90405pt on input line 287.
+(Font)              scaled to size 5.90405pt on input line 296.
 LaTeX Font Info:    Font shape `TU/MinionPro(1)/m/it' will be
-(Font)              scaled to size 10.77489pt on input line 287.
+(Font)              scaled to size 10.77489pt on input line 296.
 LaTeX Font Info:    Font shape `TU/MinionPro(1)/m/it' will be
-(Font)              scaled to size 7.87207pt on input line 287.
+(Font)              scaled to size 7.87207pt on input line 296.
 LaTeX Font Info:    Font shape `TU/MinionPro(1)/m/it' will be
-(Font)              scaled to size 5.90405pt on input line 287.
+(Font)              scaled to size 5.90405pt on input line 296.
 LaTeX Font Info:    Font shape `TU/MinionPro(0)/m/n' will be
-(Font)              scaled to size 7.87207pt on input line 287.
+(Font)              scaled to size 7.87207pt on input line 296.
 LaTeX Font Info:    Font shape `TU/MinionPro(0)/m/n' will be
-(Font)              scaled to size 5.90405pt on input line 287.
+(Font)              scaled to size 5.90405pt on input line 296.
 [2
 
 ]
 LaTeX Font Info:    Font shape `TU/MinionPro(0)/b/n' will be
-(Font)              scaled to size 24.48213pt on input line 298.
+(Font)              scaled to size 24.48213pt on input line 307.
 LaTeX Font Info:    Font shape `TU/MinionPro(0)/m/n' will be
-(Font)              scaled to size 17.00366pt on input line 300.
+(Font)              scaled to size 17.00366pt on input line 309.
 LaTeX Font Info:    Font shape `TU/MinionPro(0)/m/it' will be
-(Font)              scaled to size 17.00366pt on input line 301.
+(Font)              scaled to size 17.00366pt on input line 310.
 LaTeX Font Info:    Font shape `TU/MinionPro(0)/m/n' will be
-(Font)              scaled to size 14.16971pt on input line 303.
+(Font)              scaled to size 14.16971pt on input line 312.
 LaTeX Font Info:    Font shape `TU/MinionPro(0)/m/sc' will be
-(Font)              scaled to size 14.16971pt on input line 303.
+(Font)              scaled to size 14.16971pt on input line 312.
 
-Overfull \hbox (65.40623pt too wide) in paragraph at lines 309--309
+Overfull \hbox (65.40623pt too wide) in paragraph at lines 318--318
  [][] 
  []
 
@@ -1771,23 +1777,23 @@ Overfull \hbox (65.40623pt too wide) in paragraph at lines 309--309
 
 ]
 LaTeX Font Info:    Font shape `TU/MinionPro(0)/b/n' will be
-(Font)              scaled to size 11.8081pt on input line 323.
+(Font)              scaled to size 11.8081pt on input line 332.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 325.
+(Font)              <12> on input line 334.
 LaTeX Font Info:    Font shape `TU/MinionPro(1)/m/it' will be
-(Font)              scaled to size 11.8081pt on input line 325.
+(Font)              scaled to size 11.8081pt on input line 334.
 
-Underfull \hbox (badness 10000) in paragraph at lines 323--342
+Underfull \hbox (badness 10000) in paragraph at lines 332--351
 
  []
 
 
-Overfull \hbox (50.10248pt too wide) in paragraph at lines 323--342
+Overfull \hbox (50.10248pt too wide) in paragraph at lines 332--351
 [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 323--342
+Underfull \hbox (badness 10000) in paragraph at lines 332--351
 
  []
 
@@ -1848,42 +1854,43 @@ LaTeX Font Info:    Font shape `TU/MinionPro(0)/m/n' will be
 (Font)              scaled to size 9.84009pt on input line 51.
 LaTeX Font Info:    Font shape `TU/MinionPro(0)/m/n' will be
 (Font)              scaled to size 6.88806pt on input line 51.
-LaTeX Info: Redefining \rmfamily on input line 77.
-LaTeX Info: Redefining \sffamily on input line 77.
-LaTeX Info: Redefining \ttfamily on input line 77.
+[7]
+LaTeX Info: Redefining \rmfamily on input line 95.
+LaTeX Info: Redefining \sffamily on input line 95.
+LaTeX Info: Redefining \ttfamily on input line 95.
 Package polyglossia Info: Option: English, variant=american.
 Package polyglossia Info: Option: English, variant=american.
-LaTeX Info: Redefining \rmfamily on input line 81.
-LaTeX Info: Redefining \sffamily on input line 81.
-LaTeX Info: Redefining \ttfamily on input line 81.
+LaTeX Info: Redefining \rmfamily on input line 99.
+LaTeX Info: Redefining \sffamily on input line 99.
+LaTeX Info: Redefining \ttfamily on input line 99.
 Package polyglossia Info: Option: English, variant=american.
 Package polyglossia Info: Option: English, variant=american.
-[7]) [8]
+) [8]
 LaTeX Font Info:    Font shape `TU/MinionPro(0)/m/n' will be
-(Font)              scaled to size 20.40834pt on input line 372.
+(Font)              scaled to size 20.40834pt on input line 381.
 LaTeX Font Info:    Font shape `TU/MinionPro(0)/m/sc' will be
-(Font)              scaled to size 20.40834pt on input line 372.
+(Font)              scaled to size 20.40834pt on input line 381.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 374.
+(Font)              <5> on input line 383.
 LaTeX Font Info:    Font shape `TU/MinionPro(1)/m/n' will be
-(Font)              scaled to size 4.92004pt on input line 374.
+(Font)              scaled to size 4.92004pt on input line 383.
 LaTeX Font Info:    Font shape `TU/MinionPro(1)/m/it' will be
-(Font)              scaled to size 4.92004pt on input line 374.
+(Font)              scaled to size 4.92004pt on input line 383.
 LaTeX Font Info:    Font shape `TU/MinionPro(0)/m/n' will be
-(Font)              scaled to size 4.92004pt on input line 374.
+(Font)              scaled to size 4.92004pt on input line 383.
 LaTeX Font Info:    Font shape `TU/MinionPro(0)/b/n' will be
-(Font)              scaled to size 17.00366pt on input line 381.
+(Font)              scaled to size 17.00366pt on input line 390.
 [1
 
 
 ] [2]
 LaTeX Font Info:    Font shape `TU/MinionPro(0)/m/it' will be
-(Font)              scaled to size 10.77489pt on input line 422.
+(Font)              scaled to size 10.77489pt on input line 431.
 [3
 
 ] [4] [5] [6] [7]
 LaTeX Font Info:    Font shape `TU/MinionPro(0)/b/it' will be
-(Font)              scaled to size 11.8081pt on input line 463.
+(Font)              scaled to size 11.8081pt on input line 472.
 [8] [9] [10
 
 ] [11
@@ -1896,79 +1903,131 @@ LaTeX Font Info:    Font shape `TU/MinionPro(0)/b/it' will be
 
 ]
 LaTeX Font Info:    Font shape `TU/MinionPro(0)/b/it' will be
-(Font)              scaled to size 17.00366pt on input line 493.
+(Font)              scaled to size 17.00366pt on input line 502.
 [15
 
 ] [16
 
 
 ]
-LaTeX Font Info:    Font shape `TU/MinionPro(0)/m/n' will be
-(Font)              scaled to size 8.85608pt on input line 518.
+Overfull \hbox (4.30997pt too wide) in paragraph at lines 621--621
+[]\TU/MinionPro(0)/m/n/10 Interoception|  
+ []
+
 [17
 
-] [18] [19]
-Overfull \vbox (17.337pt too high) has occurred while \output is active []
+] [18] [19] [20] [21] [22] [23]
+File: _bookdown_files/shared-states-files/figures/figure_S1.pdf Graphic file (t
+ype pdf)
+<use _bookdown_files/shared-states-files/figures/figure_S1.pdf>
+[24]
+File: _bookdown_files/shared-states-files/figures/figure_S2.pdf Graphic file (t
+ype pdf)
+<use _bookdown_files/shared-states-files/figures/figure_S2.pdf>
+LaTeX Font Info:    Font shape `TU/Helvetica(0)/b/n' will be
+(Font)              scaled to size 8.90054pt on input line 698.
+[25
 
-[20] [21
+]
+Overfull \vbox (24.52359pt too high) has occurred while \output is active []
 
-] [22
+[26]
+File: _bookdown_files/shared-states-files/figures/figure_S3.pdf Graphic file (t
+ype pdf)
+<use _bookdown_files/shared-states-files/figures/figure_S3.pdf>
 
-] [23
+LaTeX Warning: `h' float specifier changed to `ht'.
 
-] [24
+[27
 
-] [25
+]
+File: _bookdown_files/shared-states-files/figures/figure_S4.pdf Graphic file (t
+ype pdf)
+<use _bookdown_files/shared-states-files/figures/figure_S4.pdf>
+[28] [29]
+File: _bookdown_files/shared-states-files/figures/figure_S5.pdf Graphic file (t
+ype pdf)
+<use _bookdown_files/shared-states-files/figures/figure_S5.pdf>
+[30]
+Overfull \vbox (123.68202pt too high) has occurred while \output is active []
 
-] [26
+[31]
+File: _bookdown_files/shared-states-files/figures/figure_S6.pdf Graphic file (t
+ype pdf)
+<use _bookdown_files/shared-states-files/figures/figure_S6.pdf>
+[32]
+Overfull \vbox (9.79538pt too high) has occurred while \output is active []
+
+[33]
+File: _bookdown_files/shared-states-files/figures/figure_S7.pdf Graphic file (t
+ype pdf)
+<use _bookdown_files/shared-states-files/figures/figure_S7.pdf>
+[34]
+File: _bookdown_files/shared-states-files/figures/figure_S8.pdf Graphic file (t
+ype pdf)
+<use _bookdown_files/shared-states-files/figures/figure_S8.pdf>
+[35]
+Overfull \vbox (159.71771pt too high) has occurred while \output is active []
+
+[36] [37
+
+] [38
+
+] [39
+
+] [40
+
+] [41
+
+] [42
 
 
-] [27
+
+] [43] [44] [45
 
 ]
 LaTeX Font Info:    Font shape `TU/MinionPro(0)/b/n' will be
-(Font)              scaled to size 10.77489pt on input line 711.
+(Font)              scaled to size 10.77489pt on input line 855.
 
-Underfull \hbox (badness 10000) in paragraph at lines 711--712
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 713--714
+Underfull \hbox (badness 10000) in paragraph at lines 855--856
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 715--716
+Underfull \hbox (badness 10000) in paragraph at lines 857--858
 
  []
 
-[28
+
+Underfull \hbox (badness 10000) in paragraph at lines 859--860
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 861--862
+
+ []
+
+[46
 
 ]
-LaTeX Info: Redefining \rmfamily on input line 729.
-LaTeX Info: Redefining \sffamily on input line 729.
-LaTeX Info: Redefining \ttfamily on input line 729.
+LaTeX Info: Redefining \rmfamily on input line 873.
+LaTeX Info: Redefining \sffamily on input line 873.
+LaTeX Info: Redefining \ttfamily on input line 873.
 Package polyglossia Info: Option: English, variant=american.
-LaTeX Info: Redefining \rmfamily on input line 736.
-LaTeX Info: Redefining \sffamily on input line 736.
-LaTeX Info: Redefining \ttfamily on input line 736.
+LaTeX Info: Redefining \rmfamily on input line 880.
+LaTeX Info: Redefining \sffamily on input line 880.
+LaTeX Info: Redefining \ttfamily on input line 880.
 Package polyglossia Info: Option: English, variant=american.
-[29
+[47
 
 ]
-LaTeX Info: Redefining \rmfamily on input line 744.
-LaTeX Info: Redefining \sffamily on input line 744.
-LaTeX Info: Redefining \ttfamily on input line 744.
-[30
+LaTeX Info: Redefining \rmfamily on input line 888.
+LaTeX Info: Redefining \sffamily on input line 888.
+LaTeX Info: Redefining \ttfamily on input line 888.
+[48
 
 ]
-LaTeX Font Info:    Font shape `TU/MinionPro(0)/m/it' will be
-(Font)              scaled to size 9.84009pt on input line 747.
-[31
-
-
-] [32]
 The property list \polyglossia@langsetup contains the pairs (without outer
 braces):
 >  {latex/script}  =>  {latin}
@@ -2019,7 +2078,6 @@ braces):
 >  {dutch/babelname}  =>  {dutch}
 >  {dutch/localnumeral}  =>  {polyglossia@C@localnumeral}
 >  {dutch/Localnumeral}  =>  {polyglossia@C@localnumeral}.
-[33]
 \tf@toc=\write5
 \openout5 = `thesis.toc'.
 
@@ -2031,14 +2089,14 @@ LaTeX Info: Redefining \sffamily on input line 25.
 LaTeX Info: Redefining \ttfamily on input line 25.
 Package polyglossia Info: Option: English, variant=american.
 Package polyglossia Info: Option: English, variant=american.
-LaTeX Info: Redefining \rmfamily on input line 233.
-LaTeX Info: Redefining \sffamily on input line 233.
-LaTeX Info: Redefining \ttfamily on input line 233.
+LaTeX Info: Redefining \rmfamily on input line 302.
+LaTeX Info: Redefining \sffamily on input line 302.
+LaTeX Info: Redefining \ttfamily on input line 302.
 Package polyglossia Info: Option: English, variant=american.
 Package polyglossia Info: Option: English, variant=american.
-LaTeX Info: Redefining \rmfamily on input line 241.
-LaTeX Info: Redefining \sffamily on input line 241.
-LaTeX Info: Redefining \ttfamily on input line 241.
+LaTeX Info: Redefining \rmfamily on input line 310.
+LaTeX Info: Redefining \sffamily on input line 310.
+LaTeX Info: Redefining \ttfamily on input line 310.
 Package polyglossia Info: Option: English, variant=american.
 Package polyglossia Info: Option: English, variant=american.
 )
@@ -2057,12 +2115,12 @@ Package logreq Info: Writing requests to 'thesis.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 29608 strings out of 479210
- 557064 string characters out of 5873875
- 1522484 words of memory out of 5000000
- 48682 multiletter control sequences out of 15000+600000
- 440815 words of font info for 148 fonts, out of 8000000 for 9000
+ 29651 strings out of 478931
+ 559293 string characters out of 5866284
+ 1544351 words of memory out of 5000000
+ 49002 multiletter control sequences out of 15000+600000
+ 436777 words of font info for 140 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 95i,17n,126p,1812b,6171s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 95i,17n,126p,3689b,6171s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on thesis.pdf (41 pages).
+Output written on thesis.pdf (56 pages).
