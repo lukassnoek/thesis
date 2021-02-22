@@ -5,6 +5,12 @@
 
 ---
 
+```{r setup-chapter-02, include=FALSE}
+knitr::opts_chunk$set(results = 'hide', echo = FALSE, message = FALSE, warning = FALSE)
+library(tidyverse)
+library(kableExtra)
+```
+
 \small
 \noindent
 _This chapter has been published as_: Oosterwijk, S.\*, Snoek, L.\*, Rotteveel, M., Barrett, L. F., & Scholte, H. S. (2017). Shared states: using MVPA to test neural overlap between self-focused emotion imagery and other-focused emotion understanding. *Social cognitive and affective neuroscience, 12*(7), 1025-1035.
@@ -17,7 +23,7 @@ __Abstract__
 
 The present study tested whether the neural patterns that support imagining "performing an action", "feeling a bodily sensation" or "being in a situation" are directly involved in understanding *other people’s* actions, bodily sensations and situations. Subjects imagined the content of short sentences describing emotional actions, interoceptive sensations and situations (self-focused task), and processed scenes and focused on *how* the target person was expressing an emotion, *what* this person was feeling, and *why* this person was feeling an emotion (other-focused task). Using a linear support vector machine classifier on brain-wide multi-voxel patterns, we accurately decoded each individual class in the self-focused task. When generalizing the classifier from the self-focused task to the other-focused task, we also accurately decoded whether subjects focused on the emotional actions, interoceptive sensations and situations of *others*. These results show that the neural patterns that underlie self-imagined experience are involved in understanding the experience of other people. This supports the theoretical assumption that the basic components of emotion experience and understanding share resources in the brain.
 
-## Introduction {#Sharedstates-introduction}
+## Introduction {#shared-states-introduction}
 To navigate the social world successfully it is crucial to understand other people. But how do people generate meaningful representations of other people’s actions, sensations, thoughts and emotions? The dominant view assumes that representations of other people’s experiences are supported by the same neural systems as those that are involved in generating experience in the self [e.g., @gallese2004unifying; see for an overview @singer2012past]. We tested this principle of self-other neural overlap directly, using multi-voxel pattern analysis (MVPA), across three different aspects of experience that are central to emotions: actions, sensations from the body and situational knowledge.
 
 In recent years, evidence has accumulated that suggests a similarity between the neural patterns representing the self and others. For example, a great variety of studies have shown that observing actions and sensations in other people engages similar neural circuits as acting and feeling in the self [see for an overview @bastiaansen2009evidence]. Moreover, an extensive research program on pain has demonstrated an overlap between the experience of physical pain and the observation of pain in other people, utilizing both neuroimaging techniques [e.g., @lamm2011meta] and analgesic interventions [e.g., @rutgen2015placebo; @mischkowski2016painkiller]. This process of "vicarious experience" or "simulation" is viewed as an important component of empathy [@carr2003neural; @decety2011dissecting; @keysers2014dissociating]. In addition, it is argued that mentalizing (e.g. understanding the mental states of other people) involves the same brain networks as those involved in self-generated thoughts [@uddin2007self; @waytz2011two]. Specifying this idea further, a constructionist view on emotion proposes that both emotion experience and interpersonal emotion understanding are produced by the same large-scale distributed brain networks that support the processing of sensorimotor, interoceptive and situationally relevant information [@barrett2013large; @oosterwijk2014embodiment]. An implication of these views is that the representation of self- and other-focused emotional actions, interoceptive sensations and situations overlap in the brain.
@@ -32,14 +38,69 @@ MVPA is an analysis technique that decodes latent categories from fMRI data in t
 
 We tested the following two hypotheses. First, we tested whether we could classify *self-imagined* actions, interoceptive sensations and situations above chance level. Second, we tested whether the multivariate pattern underlying this classification could also be used to classify the how, what and why condition in the *other-focused* task.
 
-## Methods {#Sharedstates-methods}
+## Methods {#shared-states-methods}
 
-### Subjects
+### Subjects {#shared-states-methods-subjects}
 In total, we tested 22 Dutch undergraduate students from the University of Amsterdam (14 females; M~age~ = 21.48, s.d.~age~ = 1.75). Of those 22 subjects, 13 subjects were tested twice in 2 sessions about 1 week apart. Half of those sessions were used for the model optimization procedure. The other half of the sessions, combined with an additional nine subjects (who were tested only once), constituted the model validation set (see Model optimization procedure section). In total, two subjects were excluded from the model validation dataset: one subject was excluded because there was not enough time to complete the experimental protocol and another subject was excluded due to excessive movement (>3 mm within data acquisition runs).
 
 All subjects signed informed consent prior to the experiment. The experiment was approved by the University of Amsterdam’s ethical review board. Subjects received 22.50 euro per session. Standard exclusion criteria regarding MRI safety were applied and people who were on psychopharmacological medication were excluded a priori.
 
-### Experimental design
+### Experimental design {#shared-states-methods-experimental-design}
 
-#### Self-focused emotion imagery task
-The self-focused emotion imagery task (SF-task) was created to preferentially elicit *self-focused* processing of action, interoceptive or situational information associated with emotion. Subjects processed short linguistic cues that described actions (e.g., *pushing someone away*; *making a fist*), interoceptive sensations (e.g., *being out of breath*; *an increased heart rate*), or situations (e.g., *alone in a park at night*; *being falsely accused*) and were instructed to imagine performing or experiencing the content. The complete instruction is presented in the Supplementary Materials; all stimuli used in the SF-task are presented in Supplementary Table S1. Linguistic cues were selected from a pilot study performed on an independent sample of subjects (*n* = 24). Details about this pilot study are available on request. The descriptions generated in this pilot study were used as qualitative input to create short sentences that described actions, sensations or situations that were associated with negative emotions, without including discrete emotion terms. The cues did not differ in number of words, nor in number of characters (*F* < 1).
+#### Self-focused emotion imagery task {#shared-states-methods-experimental-design-sf-task}
+The self-focused emotion imagery task (SF-task) was created to preferentially elicit *self-focused* processing of action, interoceptive or situational information associated with emotion. Subjects processed short linguistic cues that described actions (e.g., *pushing someone away*; *making a fist*), interoceptive sensations (e.g., *being out of breath*; *an increased heart rate*), or situations (e.g., *alone in a park at night*; *being falsely accused*) and were instructed to imagine performing or experiencing the content. The complete instruction is presented in the Supplementary Materials; all stimuli used in the SF-task are presented in Supplementary Table \@ref(tab:tab-shared-states-S1). Linguistic cues were selected from a pilot study performed on an independent sample of subjects (*n* = 24). Details about this pilot study are available on request. The descriptions generated in this pilot study were used as qualitative input to create short sentences that described actions, sensations or situations that were associated with negative emotions, without including discrete emotion terms. The cues did not differ in number of words, nor in number of characters (*F* < 1).
+
+The SF-task was performed in two runs subsequent to the other-focused task using the software package Presentation (Version 16.4, [www.neurobs.com](www.neurobs.com)). Each run presented 60 sentences on a black background (20 per condition) in a fully randomized event-related fashion, with a different randomization for each subject. Note that implementing a separate randomization for each subject prevents inflated false positive pattern correlations between trials of the same condition, which may occur in single-trial designs with short inter-stimulus intervals (Mumford et al., 2014). A fixed inter-trial–interval of 2 seconds separating trials; 12 null-trials (i.e. a black screen for 8 seconds) were mixed with the experimental trials at random positions during each run (see Figure \@ref(fig:fig-shared-states-1)).
+
+```{r fig-shared-states-1, fig.cap='Overview of the self-focused and other-focused task.', results='show'}
+knitr::include_graphics("_bookdown_files/shared-states-files/figures/figure_1.png", auto_pdf = TRUE)
+```
+
+#### Other-focused emotion understanding task {#shared-states-methods-experimental-design-of-task}
+
+The other-focused emotion understanding task (OF-task) was created to preferentially elicit *other-focused* processing of action, interoceptive or situational information associated with emotion. Subjects viewed images of people in negative situations (e.g. a woman screaming at a man, a man held at gunpoint). A red rectangle highlighted the face of the person that the subjects should focus on to avoid ambiguity in images depicting more than one person. Image blocks were preceded by a cue indicating the strategy subjects should use in perceiving the emotional state of the people in the images [@spunt2012integrative]. The cue *How* instructed the subjects to identify actions that were informative about the person’s emotional state (i.e., *How* does this person express his/her emotions?). The cue *What* instructed subjects to identify interoceptive sensations that the person could experience (i.e., *What* does this person feel in his/her body). The cue *Why* instructed subjects to identify reasons or explanations for the person’s emotional state (i.e., *Why* does this person feel an emotion?). The complete instruction is presented in the [Supplementary Materials](#shared-states-supplement).
+
+Stimuli for the OF-task were selected from the International Affective Picture System database [IAPS; @lang2005international; @lang1997international], the image set developed by the Kveraga lab [[http://www.kveragalab.org/stimuli.html](http://www.kveragalab.org/stimuli.html); @kveraga2015if] and the internet (Google images). We selected images based on a pilot study, performed on an independent sample of subjects (*n* = 22). Details about this pilot study are available on request.
+
+The OF-task was presented using the software package Presentation. The task presented thirty images on a black background in blocked fashion, with each block starting with a what, why or how cue (see Figure \@ref(fig:fig-shared-states-1)). Each image was shown three times, once for each cue type. Images were presented in blocks of six, each lasting 6 seconds, followed by a fixed inter trial interval of 2 seconds. Null-trials were inserted at random positions within the blocks. Both the order of the blocks and the specific stimuli within and across blocks were fully randomized, with a different randomization for each subject.
+
+## Procedure {#shared-states-methods-procedure}
+Each experimental session lasted about 2 hours. Subjects who underwent two sessions had them on different days within a time span of 1 week. On arrival, subjects gave informed consent and received thorough task instructions, including practice trials (see the [Supplementary Materials](#shared-states-supplement) for a translation of the task instructions). The actual time in the scanner was 55 minutes, and included a rough 3D scout image, shimming sequence, 3-min structural T1-weighted scan, one functional run for the OF-task and two functional runs for the SF-task. We deliberately chose to present the SF-task after the OF-task to exclude the possibility that the SF-task affected the OF-task, thereby influencing the success of the decoding procedure.
+
+After each scanning session, subjects rated their success rate for the SF-task and OF-task (see Supplementary Figure \@ref(fig:fig-shared-states-S1)). In the second session, subjects filled out three personality questionnaires that will not be further discussed in this paper and were debriefed about the purpose of the study.
+
+## Image acquisition {#shared-states-methods-image-acquisition}
+Subjects were tested using a Philips Achieva 3T MRI scanner and a 32-channel SENSE headcoil. A survey scan was made for spatial planning of the subsequent scans. Following the survey scan, a 3-min structural T1-weighted scan was acquired using 3D fast field echo (TR: 82 ms, TE: 38 ms, flip angle: 8°, FOV: 240 × 188 mm, 220 slices acquired using single-shot ascending slice order and a voxel size of 1.0 × 1.0 × 1.0 mm). After the T1-weighted scan, functional T2*-weighted sequences were acquired using single shot gradient echo, echo planar imaging (TR = 2000 ms, TE = 27.63 ms, flip angle: 76.1°, FOV: 240 × 240 mm, in-plane resolution 64 × 64, 37 slices (with ascending acquisition), slice thickness 3 mm, slice gap 0.3 mm, voxel size 3 × 3 × 3 mm), covering the entire brain. For the SF-task, 301 volumes were acquired; for the OF-task 523 volumes were acquired.
+
+## Model optimization procedure {#shared-states-methods-model-optimization-procedure}
+As MVPA is a fairly novel technique, no consistent, optimal MVPA pipeline has been established [@etzel2011impact]. Therefore, we adopted a validation strategy in the present study that is advised in the pattern classification field [@kay2008identifying; @kriegeskorte2009circular]. This strategy entailed that we separated our data into an optimization dataset to find the most optimal parameters for preprocessing and analysis, and a validation dataset to independently verify classification success with those optimal parameters. We generated an optimization and validation dataset by running the SF-task and OF-task twice, in two identical experimental sessions for a set of thirteen subjects. The sessions were equally split between the optimization and validation set (see Figure 2A); first and second sessions were counterbalanced between the two sets. Based on a request received during the review process, we added nine new subjects to the validation dataset. Ultimately, the optimization-set held 13 sessions and the validation-set, after exclusion of 2 subjects (see Subjects section), held 20 sessions.
+
+```{r fig-shared-states-2, fig.cap='(ref:caption-fig-shared-states-S1)', results='show'}
+knitr::include_graphics("_bookdown_files/shared-states-files/figures/figure_1.png", auto_pdf = TRUE)
+```
+
+(ref:caption-fig-shared-states-2) Schematic overview of the cross-validation procedures. **A**) The partitioning of the dataset into an optimization-set (used for tuning of preprocessing and MVPA hyperparameters) and a validation-set (used to get a fully cross-validated, unbiased estimate of classification performance). The preprocessing and MVPA hyperparameters yielded from the optimization procedure were subsequently applied to the preprocessing and MVPA pipeline of the validation-set. **B**) The within-subject MVPA pipeline of the self- and cross-analysis implemented in a repeated random subsampling scheme with 100,000 iterations. In each iteration, 90% of the self-data trials (i.e. train-set) were used for estimating the scaling parameters, performing feature selection and fitting the SVM. These steps of the pipeline (i.e. scaling, feature selection, SVM fitting) were subsequently applied to the independent test-set of both the self-data trials and the other-data trials.
+
+In the optimization-set, we explored how different preprocessing options and the so-called ‘hyperparameters’ in the MVPA pipeline affected the performance of the (multivariate) analyses (visualized in Figure \@ref(fig:fig-shared-states-2)B; see [MVPA pipeline] subsection for more details). Thus, we performed the self- and cross-analyses *on the data of the optimization set* multiple times with different preprocessing options (i.e., smoothing kernel, low-pass filter and ICA-based denoising strategies) and MVPA hyperparameter values (i.e., univariate feature selection *threshold* and train/test size ratio during cross-validation). We determined the optimal parameters on the basis of classification performance, which was operationalized as the mean precision value after a repeated random subsampling procedure with 1000 iterations. A list with the results from the optimization procedure can be found in Supplementary Table \@ref(tab:tab-shared-states-S2) and Supplementary Figure \@ref(fig:fig-shared-states-S2). The optimal parameters were then used for preprocessing and the self- and cross-analysis within the validation-set, in which the findings from the optimization-set were replicated. All findings discussed in the \@ref(shared-states-results) section follow from the validation-set (see Supplementary Figure \@ref(fig:fig-shared-states-S3) for an overview of the findings from the optimization-set).
+
+## Preprocessing and single-trial modeling {#shared-states-methods-preprocessing}
+
+
+## Multi-voxel pattern analysis {#shared-states-methods-mvpa}
+
+### MVPA pipeline {#shared-states-methods-mvpa-pipeline}
+
+### Cross-validation scheme and bagging procedure {#shared-states-methods-mvpa-cv-and-bagging}
+
+### Statistical evaluation {#shared-states-methods-mvpa-statistical-evaluation}
+
+### Spatial representation {#shared-states-methods-mvpa-spatial-representation}
+
+## Additional analyses {#shared-states-methods-additional-analyses}
+
+## Univariate analysis {#shared-states-methods-univariate-analysis}
+
+## Code availability {#shared-states-methods-code-availability}
+
+# Results {#shared-states-results}
+

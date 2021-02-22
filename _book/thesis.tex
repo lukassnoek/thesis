@@ -438,8 +438,8 @@ Which need to be fit on complex, large datasets. (AOMIC)
 
 The present study tested whether the neural patterns that support imagining ``performing an action'', ``feeling a bodily sensation'' or ``being in a situation'' are directly involved in understanding \emph{other people's} actions, bodily sensations and situations. Subjects imagined the content of short sentences describing emotional actions, interoceptive sensations and situations (self-focused task), and processed scenes and focused on \emph{how} the target person was expressing an emotion, \emph{what} this person was feeling, and \emph{why} this person was feeling an emotion (other-focused task). Using a linear support vector machine classifier on brain-wide multi-voxel patterns, we accurately decoded each individual class in the self-focused task. When generalizing the classifier from the self-focused task to the other-focused task, we also accurately decoded whether subjects focused on the emotional actions, interoceptive sensations and situations of \emph{others}. These results show that the neural patterns that underlie self-imagined experience are involved in understanding the experience of other people. This supports the theoretical assumption that the basic components of emotion experience and understanding share resources in the brain.
 
-\hypertarget{Sharedstates-introduction}{%
-\section{Introduction}\label{Sharedstates-introduction}}
+\hypertarget{shared-states-introduction}{%
+\section{Introduction}\label{shared-states-introduction}}
 
 To navigate the social world successfully it is crucial to understand other people. But how do people generate meaningful representations of other people's actions, sensations, thoughts and emotions? The dominant view assumes that representations of other people's experiences are supported by the same neural systems as those that are involved in generating experience in the self \autocites[e.g.,][]{gallese2004unifying}[see for an overview][]{singer2012past}. We tested this principle of self-other neural overlap directly, using multi-voxel pattern analysis (MVPA), across three different aspects of experience that are central to emotions: actions, sensations from the body and situational knowledge.
 
@@ -455,23 +455,97 @@ MVPA is an analysis technique that decodes latent categories from fMRI data in t
 
 We tested the following two hypotheses. First, we tested whether we could classify \emph{self-imagined} actions, interoceptive sensations and situations above chance level. Second, we tested whether the multivariate pattern underlying this classification could also be used to classify the how, what and why condition in the \emph{other-focused} task.
 
-\hypertarget{Sharedstates-methods}{%
-\section{Methods}\label{Sharedstates-methods}}
+\hypertarget{shared-states-methods}{%
+\section{Methods}\label{shared-states-methods}}
 
-\hypertarget{subjects}{%
-\subsection{Subjects}\label{subjects}}
+\hypertarget{shared-states-methods-subjects}{%
+\subsection{Subjects}\label{shared-states-methods-subjects}}
 
 In total, we tested 22 Dutch undergraduate students from the University of Amsterdam (14 females; M\textsubscript{age} = 21.48, s.d.\textsubscript{age} = 1.75). Of those 22 subjects, 13 subjects were tested twice in 2 sessions about 1 week apart. Half of those sessions were used for the model optimization procedure. The other half of the sessions, combined with an additional nine subjects (who were tested only once), constituted the model validation set (see Model optimization procedure section). In total, two subjects were excluded from the model validation dataset: one subject was excluded because there was not enough time to complete the experimental protocol and another subject was excluded due to excessive movement (\textgreater3 mm within data acquisition runs).
 
 All subjects signed informed consent prior to the experiment. The experiment was approved by the University of Amsterdam's ethical review board. Subjects received 22.50 euro per session. Standard exclusion criteria regarding MRI safety were applied and people who were on psychopharmacological medication were excluded a priori.
 
-\hypertarget{experimental-design}{%
-\subsection{Experimental design}\label{experimental-design}}
+\hypertarget{shared-states-methods-experimental-design}{%
+\subsection{Experimental design}\label{shared-states-methods-experimental-design}}
 
-\hypertarget{self-focused-emotion-imagery-task}{%
-\subsubsection{Self-focused emotion imagery task}\label{self-focused-emotion-imagery-task}}
+\hypertarget{shared-states-methods-experimental-design-sf-task}{%
+\subsubsection{Self-focused emotion imagery task}\label{shared-states-methods-experimental-design-sf-task}}
 
-The self-focused emotion imagery task (SF-task) was created to preferentially elicit \emph{self-focused} processing of action, interoceptive or situational information associated with emotion. Subjects processed short linguistic cues that described actions (e.g., \emph{pushing someone away}; \emph{making a fist}), interoceptive sensations (e.g., \emph{being out of breath}; \emph{an increased heart rate}), or situations (e.g., \emph{alone in a park at night}; \emph{being falsely accused}) and were instructed to imagine performing or experiencing the content. The complete instruction is presented in the Supplementary Materials; all stimuli used in the SF-task are presented in Supplementary Table S1. Linguistic cues were selected from a pilot study performed on an independent sample of subjects (\emph{n} = 24). Details about this pilot study are available on request. The descriptions generated in this pilot study were used as qualitative input to create short sentences that described actions, sensations or situations that were associated with negative emotions, without including discrete emotion terms. The cues did not differ in number of words, nor in number of characters (\emph{F} \textless{} 1).
+The self-focused emotion imagery task (SF-task) was created to preferentially elicit \emph{self-focused} processing of action, interoceptive or situational information associated with emotion. Subjects processed short linguistic cues that described actions (e.g., \emph{pushing someone away}; \emph{making a fist}), interoceptive sensations (e.g., \emph{being out of breath}; \emph{an increased heart rate}), or situations (e.g., \emph{alone in a park at night}; \emph{being falsely accused}) and were instructed to imagine performing or experiencing the content. The complete instruction is presented in the Supplementary Materials; all stimuli used in the SF-task are presented in Supplementary Table \ref{tab:tab-shared-states-S1}. Linguistic cues were selected from a pilot study performed on an independent sample of subjects (\emph{n} = 24). Details about this pilot study are available on request. The descriptions generated in this pilot study were used as qualitative input to create short sentences that described actions, sensations or situations that were associated with negative emotions, without including discrete emotion terms. The cues did not differ in number of words, nor in number of characters (\emph{F} \textless{} 1).
+
+The SF-task was performed in two runs subsequent to the other-focused task using the software package Presentation (Version 16.4, \url{www.neurobs.com}). Each run presented 60 sentences on a black background (20 per condition) in a fully randomized event-related fashion, with a different randomization for each subject. Note that implementing a separate randomization for each subject prevents inflated false positive pattern correlations between trials of the same condition, which may occur in single-trial designs with short inter-stimulus intervals (Mumford et al., 2014). A fixed inter-trial--interval of 2 seconds separating trials; 12 null-trials (i.e.~a black screen for 8 seconds) were mixed with the experimental trials at random positions during each run (see Figure \ref{fig:fig-shared-states-1}).
+
+\begin{figure}
+\centering
+\includegraphics{_bookdown_files/shared-states-files/figures/figure_1.pdf}
+\caption{\label{fig:fig-shared-states-1}Overview of the self-focused and other-focused task.}
+\end{figure}
+
+\hypertarget{shared-states-methods-experimental-design-of-task}{%
+\subsubsection{Other-focused emotion understanding task}\label{shared-states-methods-experimental-design-of-task}}
+
+The other-focused emotion understanding task (OF-task) was created to preferentially elicit \emph{other-focused} processing of action, interoceptive or situational information associated with emotion. Subjects viewed images of people in negative situations (e.g.~a woman screaming at a man, a man held at gunpoint). A red rectangle highlighted the face of the person that the subjects should focus on to avoid ambiguity in images depicting more than one person. Image blocks were preceded by a cue indicating the strategy subjects should use in perceiving the emotional state of the people in the images \autocite{spunt2012integrative}. The cue \emph{How} instructed the subjects to identify actions that were informative about the person's emotional state (i.e., \emph{How} does this person express his/her emotions?). The cue \emph{What} instructed subjects to identify interoceptive sensations that the person could experience (i.e., \emph{What} does this person feel in his/her body). The cue \emph{Why} instructed subjects to identify reasons or explanations for the person's emotional state (i.e., \emph{Why} does this person feel an emotion?). The complete instruction is presented in the \protect\hyperlink{shared-states-supplement}{Supplementary Materials}.
+
+Stimuli for the OF-task were selected from the International Affective Picture System database \autocites[IAPS;][]{lang2005international}{lang1997international}, the image set developed by the Kveraga lab \autocite[\url{http://www.kveragalab.org/stimuli.html};][]{kveraga2015if} and the internet (Google images). We selected images based on a pilot study, performed on an independent sample of subjects (\emph{n} = 22). Details about this pilot study are available on request.
+
+The OF-task was presented using the software package Presentation. The task presented thirty images on a black background in blocked fashion, with each block starting with a what, why or how cue (see Figure \ref{fig:fig-shared-states-1}). Each image was shown three times, once for each cue type. Images were presented in blocks of six, each lasting 6 seconds, followed by a fixed inter trial interval of 2 seconds. Null-trials were inserted at random positions within the blocks. Both the order of the blocks and the specific stimuli within and across blocks were fully randomized, with a different randomization for each subject.
+
+\hypertarget{shared-states-methods-procedure}{%
+\section{Procedure}\label{shared-states-methods-procedure}}
+
+Each experimental session lasted about 2 hours. Subjects who underwent two sessions had them on different days within a time span of 1 week. On arrival, subjects gave informed consent and received thorough task instructions, including practice trials (see the \protect\hyperlink{shared-states-supplement}{Supplementary Materials} for a translation of the task instructions). The actual time in the scanner was 55 minutes, and included a rough 3D scout image, shimming sequence, 3-min structural T1-weighted scan, one functional run for the OF-task and two functional runs for the SF-task. We deliberately chose to present the SF-task after the OF-task to exclude the possibility that the SF-task affected the OF-task, thereby influencing the success of the decoding procedure.
+
+After each scanning session, subjects rated their success rate for the SF-task and OF-task (see Supplementary Figure \ref{fig:fig-shared-states-S1}). In the second session, subjects filled out three personality questionnaires that will not be further discussed in this paper and were debriefed about the purpose of the study.
+
+\hypertarget{shared-states-methods-image-acquisition}{%
+\section{Image acquisition}\label{shared-states-methods-image-acquisition}}
+
+Subjects were tested using a Philips Achieva 3T MRI scanner and a 32-channel SENSE headcoil. A survey scan was made for spatial planning of the subsequent scans. Following the survey scan, a 3-min structural T1-weighted scan was acquired using 3D fast field echo (TR: 82 ms, TE: 38 ms, flip angle: 8°, FOV: 240 × 188 mm, 220 slices acquired using single-shot ascending slice order and a voxel size of 1.0 × 1.0 × 1.0 mm). After the T1-weighted scan, functional T2*-weighted sequences were acquired using single shot gradient echo, echo planar imaging (TR = 2000 ms, TE = 27.63 ms, flip angle: 76.1°, FOV: 240 × 240 mm, in-plane resolution 64 × 64, 37 slices (with ascending acquisition), slice thickness 3 mm, slice gap 0.3 mm, voxel size 3 × 3 × 3 mm), covering the entire brain. For the SF-task, 301 volumes were acquired; for the OF-task 523 volumes were acquired.
+
+\hypertarget{shared-states-methods-model-optimization-procedure}{%
+\section{Model optimization procedure}\label{shared-states-methods-model-optimization-procedure}}
+
+As MVPA is a fairly novel technique, no consistent, optimal MVPA pipeline has been established \autocite{etzel2011impact}. Therefore, we adopted a validation strategy in the present study that is advised in the pattern classification field \autocite{kay2008identifying,kriegeskorte2009circular}. This strategy entailed that we separated our data into an optimization dataset to find the most optimal parameters for preprocessing and analysis, and a validation dataset to independently verify classification success with those optimal parameters. We generated an optimization and validation dataset by running the SF-task and OF-task twice, in two identical experimental sessions for a set of thirteen subjects. The sessions were equally split between the optimization and validation set (see Figure 2A); first and second sessions were counterbalanced between the two sets. Based on a request received during the review process, we added nine new subjects to the validation dataset. Ultimately, the optimization-set held 13 sessions and the validation-set, after exclusion of 2 subjects (see Subjects section), held 20 sessions.
+
+\begin{figure}
+\centering
+\includegraphics{_bookdown_files/shared-states-files/figures/figure_1.pdf}
+\caption{\label{fig:fig-shared-states-2}Mean percentage of trials successfully executed for the SF-task (left panel) and OF-task (right panel). Error bars indicate 95\% confidence intervals. A one-way ANOVA of the success-rates of the SF-task (left-panel) indicated no significant overall differences, \emph{F}(2, 17) = 1.03, p = 0.38. In the OF-task (right panel) however, a one-way ANOVA indicated that success-rates differed significantly between classes, \emph{F}(2, 17) = 17.74, \emph{p} \textless{} 0.001. Follow-up pairwise comparisons (Bonferroni corrected, two tailed) revealed that interoception-trials (\emph{M} = 74.00, \emph{SE} = 2.10) were significantly less successful (\emph{p} \textless{} 0.001) than both action-trials (\emph{M} = 85.50, \emph{SE} = 1.85) and situation trials (\emph{M} = 90.00, \emph{SE} = 1.92).}
+\end{figure}
+
+
+
+In the optimization-set, we explored how different preprocessing options and the so-called `hyperparameters' in the MVPA pipeline affected the performance of the (multivariate) analyses (visualized in Figure \ref{fig:fig-shared-states-2}B; see \protect\hyperlink{shared-states-methods-mvpa-pipeline}{MVPA pipeline} subsection for more details). Thus, we performed the self- and cross-analyses \emph{on the data of the optimization set} multiple times with different preprocessing options (i.e., smoothing kernel, low-pass filter and ICA-based denoising strategies) and MVPA hyperparameter values (i.e., univariate feature selection \emph{threshold} and train/test size ratio during cross-validation). We determined the optimal parameters on the basis of classification performance, which was operationalized as the mean precision value after a repeated random subsampling procedure with 1000 iterations. A list with the results from the optimization procedure can be found in Supplementary Table \ref{tab:tab-shared-states-S2} and Supplementary Figure \ref{fig:fig-shared-states-S2}. The optimal parameters were then used for preprocessing and the self- and cross-analysis within the validation-set, in which the findings from the optimization-set were replicated. All findings discussed in the @ref\{shared-states-results\} section follow from the validation-set (see Supplementary Figure \ref{fig:fig-shared-states-S3} for an overview of the findings from the optimization-set).
+
+\hypertarget{shared-states-methods-preprocessing}{%
+\section{Preprocessing and single-trial modeling}\label{shared-states-methods-preprocessing}}
+
+\hypertarget{shared-states-methods-mvpa}{%
+\section{Multi-voxel pattern analysis}\label{shared-states-methods-mvpa}}
+
+\hypertarget{shared-states-methods-mvpa-pipeline}{%
+\subsection{MVPA pipeline}\label{shared-states-methods-mvpa-pipeline}}
+
+\hypertarget{shared-states-methods-mvpa-cv-and-bagging}{%
+\subsection{Cross-validation scheme and bagging procedure}\label{shared-states-methods-mvpa-cv-and-bagging}}
+
+\hypertarget{shared-states-methods-mvpa-statistical-evaluation}{%
+\subsection{Statistical evaluation}\label{shared-states-methods-mvpa-statistical-evaluation}}
+
+\hypertarget{shared-states-methods-mvpa-spatial-representation}{%
+\subsection{Spatial representation}\label{shared-states-methods-mvpa-spatial-representation}}
+
+\hypertarget{shared-states-methods-additional-analyses}{%
+\section{Additional analyses}\label{shared-states-methods-additional-analyses}}
+
+\hypertarget{shared-states-methods-univariate-analysis}{%
+\section{Univariate analysis}\label{shared-states-methods-univariate-analysis}}
+
+\hypertarget{shared-states-methods-code-availability}{%
+\section{Code availability}\label{shared-states-methods-code-availability}}
+
+\hypertarget{shared-states-results}{%
+\chapter{Results}\label{shared-states-results}}
 
 \hypertarget{confounds-decoding}{%
 \chapter{How to control for confounds in decoding analyses of neuroimaging data}\label{confounds-decoding}}
@@ -810,6 +884,107 @@ ICA denoising & ICA vs. no ICA & No ICA\\
 \end{figure}
 
 
+
+\newpage
+\pagestyle{empty}
+
+\hypertarget{individual-subject-scores}{%
+\section{Individual subject scores}\label{individual-subject-scores}}
+
+\begingroup\fontsize{10}{12}\selectfont
+
+\begin{ThreePartTable}
+\begin{TableNotes}[para]
+\item \textit{Note: } 
+\item Supplementary Table 3 suggests individual variability in the extent to which neural resources are shared between self- and other-focused processes. In the SF-task all subjects demonstrated a mean classification score well above .33 (i.e., score associated with chance). When generalizing the SF-classifier to the OF-task, however, the classification scores appear to be bimodally distributed (see Supplementary Figure 5C). As can be seen in Table 3, some subjects demonstrated a relatively high mean classification score (i.e., > .45), whereas other subjects demonstrated a classification score at chance level or lower. Note that there is no significant difference between the OF classification scores for subjects who participated in the experiment for the first or second time (“Session” column in table; *t*(18) = 1.73, p = 0.10), nor for subjects who were or were not part of the optimization-set (“Part of optimization-set?” column in table; *t*(18) = -.95, p = 0.35), suggesting that inclusion in the optimization-set or session ordering is not a confound in the analyses. Regarding individual variability in self-other neural overlap, it is important to note that in the field of embodied cognition, there is increasing attention for the idea that simulation is both individually and contextually dynamic (Oosterwijk \& Barrett, 2014; Winkielman, Niedenthal, Wielgosz \& Kavanagh, 2015; see also Barrett, 2009). To better distinguish between meaningful individual variation and variation due to other factors (e.g., random noise), future research should test a priori formulated hypotheses about how and when individual variation is expected to occur. 
+\end{TableNotes}
+\begin{longtabu} to \linewidth {>{\raggedleft}X>{\raggedleft}X>{\raggedleft}X>{\raggedleft}X>{\raggedright}X}
+\caption{\label{tab:tab-shared-states-S3}Mean general classification scores per subject for the self- and cross-analysis on the validation-set only.}\\
+\toprule
+Subject nr. & Self-analysis precision & Cross-analysis precision & Session & Part of optimization-set?\\
+\midrule
+1 & 0.758 & 0.445 & 2 & y\\
+2 & 0.487 & 0.336 & 2 & y\\
+3 & 0.629 & 0.316 & 1 & y\\
+4 & 0.524 & 0.577 & 2 & y\\
+5 & 0.457 & 0.492 & 1 & y\\
+\addlinespace
+6 & 0.741 & 0.296 & 2 & y\\
+7 & 0.600 & 0.542 & 1 & y\\
+8 & 0.431 & 0.240 & 2 & y\\
+9 & 0.629 & 0.497 & 1 & y\\
+10 & 0.734 & 0.268 & 2 & y\\
+\addlinespace
+11 & 0.683 & 0.386 & 1 & y\\
+12 & 0.415 & 0.525 & 2 & y\\
+13 & 0.623 & 0.604 & 1 & y\\
+14 & 0.810 & 0.610 & 1 & n\\
+15 & 0.538 & 0.578 & 1 & n\\
+\addlinespace
+16 & 0.486 & 0.455 & 1 & n\\
+17 & 0.549 & 0.415 & 1 & n\\
+18 & 0.488 & 0.494 & 1 & n\\
+19 & 0.590 & 0.289 & 1 & n\\
+20 & 0.600 & 0.502 & 1 & n\\
+\bottomrule
+\insertTableNotes
+\end{longtabu}
+\end{ThreePartTable}
+\endgroup{}
+
+\newpage
+\pagestyle{empty}
+
+\hypertarget{brain-region-importance}{%
+\section{Brain region importance}\label{brain-region-importance}}
+
+\begingroup\fontsize{10}{12}\selectfont
+
+\begin{ThreePartTable}
+\begin{TableNotes}[para]
+\item \textit{Note: } 
+\item Brain regions were extracted from the Harvard-Oxford (bilateral) Cortical atlas. A minimum threshold for the probabilistic masks of 20 was chosen to minimize overlap between adjacent masks while maximizing coverage of the entire brain. The column *k* represents the absolute number of above-threshold voxels in the masks. The columns *Max*, *Mean*, and *Std* represent the maximum, mean, and standard deviation from the *t*-values included in the masks. Note that the *t*-values, corresponding to the mean weight across subjects normalized by the standard error of the weights across subjects (after correcting for a positive bias when taking the absolute of the weights), were thresholded at a minimum of 1.75, referring to a *p*-value of 0.05 of a one-sided *t*-test against zero with 19 degrees of freedom (i.e. *n* – 1). Note that this *t*-value map was not corrected for multiple comparisons, and is intended to visualize which regions in the brain were generally involved in our sample of subjects. The *X*, *Y*, and *Z* columns represent the MNI152 (2mm) coordinates of the peak (i.e. max) *t*-value for each listed brain region.
+\end{TableNotes}
+\begin{longtabu} to \linewidth {>{\raggedright}X>{\raggedleft}X>{\raggedleft}X>{\raggedleft}X>{\raggedleft}X}
+\caption{\label{tab:tab-shared-states-S4}Most important voxels in terms of their average weight across iterations and subjects.}\\
+\toprule
+Brain region & k & Max & Mean & Std\\
+\midrule
+Frontal pole & 1827 & 5.05 & 2.35 & 0.52\\
+Occipital pole & 1714 & 5.15 & 2.45 & 0.56\\
+Supramarginal gyrus anterior & 1573 & 7.48 & 2.84 & 0.91\\
+Lateral occipital cortex superior & 1060 & 4.52 & 2.18 & 0.39\\
+Lateral occipital cortex inferior & 923 & 4.73 & 2.36 & 0.49\\
+\addlinespace
+Angular gyrus & 856 & 4.52 & 2.24 & 0.40\\
+Supramarginal gyrus posterior & 806 & 4.49 & 2.29 & 0.45\\
+Middle temporal gyrus temporo-occipital & 798 & 4.00 & 2.33 & 0.48\\
+Temporal pole & 711 & 4.38 & 2.37 & 0.54\\
+Precentral gyrus & 568 & 3.54 & 2.14 & 0.31\\
+\addlinespace
+Superior temporal gyrus posterior & 549 & 3.64 & 2.27 & 0.41\\
+Superior frontal gyrus & 510 & 3.83 & 2.18 & 0.38\\
+Postcentral gyrus & 489 & 4.61 & 2.43 & 0.60\\
+Inferior frontal gyrus parstriangularis & 488 & 4.22 & 2.35 & 0.50\\
+Inferior frontal gyrus parsopercularis & 441 & 3.54 & 2.14 & 0.31\\
+\addlinespace
+Middle temporal gyrus posterior & 417 & 5.68 & 2.34 & 0.52\\
+Occipital fusiform & 400 & 4.28 & 2.14 & 0.37\\
+Middle temporal gyrus anterior & 398 & 5.68 & 2.58 & 0.76\\
+Middle frontal gyrus & 300 & 3.01 & 2.06 & 0.25\\
+Precuneus & 282 & 3.34 & 2.14 & 0.31\\
+\bottomrule
+\insertTableNotes
+\end{longtabu}
+\end{ThreePartTable}
+\endgroup{}
+
+\hypertarget{general-note-about-tables-with-voxel-coordinates}{%
+\section{General note about tables with voxel-coordinates}\label{general-note-about-tables-with-voxel-coordinates}}
+
+In order to keep the Supplementary materials concise and orderly, we chose not to include the actual tables with the peak coordinates of all significant clusters of the univariate analyses of the self- and other-task data (as these would amount to 25 pages). These tables, however, can be downloaded (as simple tab-separated-value files) from the study's \href{https://github.com/lukassnoek/SharedStates}{Github respository}. The voxel tables are listed under: \texttt{SharedStates/RESULTS/Voxel\_tables/*.tsv} (see green box in image below), and can be downloaded by cloning the remote Github repository locally or downloading the ZIP-file from the website (see red box in image below).
+
+\includegraphics{_bookdown_files/shared-states-files/figures/github.pdf}
 
 \hypertarget{confounds-decoding-supplement}{%
 \chapter{Supplement to Chapter \ref{confounds-decoding}}\label{confounds-decoding-supplement}}
