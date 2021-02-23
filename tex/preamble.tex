@@ -22,7 +22,6 @@
 \usepackage{makecell}
 \usepackage{xcolor}
 
-
 \let\oldhref\href % save command before redefininig, so we can turn it off again
 \renewcommand{\href}[2]{#2\footnote{\url{#1}}} % same as "link-as-notes: true"
 
@@ -126,55 +125,55 @@
 \captionsetup{labelfont={rm,sc},textfont={small,sf},labelsep=space} % small sans for table captions, with small caps for label
 
 %% Bibliography
-\renewcommand*{\bibfont}{\footnotesize}
+%\renewcommand*{\bibfont}{\footnotesize}  % lukas: commented out because error with none citationpackage
 
 % Hyperlink entire author-year citation; not just year
 %https://tex.stackexchange.com/questions/15951/hyperlink-name-with-biblatex-authoryear-biblatex-1-4b
-\DeclareFieldFormat{citehyperref}{%
-  \DeclareFieldAlias{bibhyperref}{noformat}% Avoid nested links
-  \bibhyperref{#1}}
-\DeclareFieldFormat{textcitehyperref}{%
-  \DeclareFieldAlias{bibhyperref}{noformat}% Avoid nested links
-  \bibhyperref{%
-    #1%
-    \ifbool{cbx:parens}
-      {\bibcloseparen\global\boolfalse{cbx:parens}}
-      {}}}
-\savebibmacro{cite}
-\savebibmacro{textcite}
-\renewbibmacro*{cite}{%
-  \printtext[citehyperref]{%
-    \restorebibmacro{cite}%
-    \usebibmacro{cite}}}
-\renewbibmacro*{textcite}{%
-  \ifboolexpr{
-    ( not test {\iffieldundef{prenote}} and
-      test {\ifnumequal{\value{citecount}}{1}} )
-    or
-    ( not test {\iffieldundef{postnote}} and
-      test {\ifnumequal{\value{citecount}}{\value{citetotal}}} )
-  }
-    {\DeclareFieldAlias{textcitehyperref}{noformat}}
-    {}%
-  \printtext[textcitehyperref]{%
-    \restorebibmacro{textcite}%
-    \usebibmacro{textcite}}}
+%\DeclareFieldFormat{citehyperref}{%
+%  \DeclareFieldAlias{bibhyperref}{noformat}% Avoid nested links
+%  \bibhyperref{#1}}
+%\DeclareFieldFormat{textcitehyperref}{%
+%  \DeclareFieldAlias{bibhyperref}{noformat}% Avoid nested links
+%  \bibhyperref{%
+%    #1%
+%    \ifbool{cbx:parens}
+%      {\bibcloseparen\global\boolfalse{cbx:parens}}
+%      {}}}
+%\savebibmacro{cite}
+%\savebibmacro{textcite}
+%\renewbibmacro*{cite}{%
+%  \printtext[citehyperref]{%
+%    \restorebibmacro{cite}%
+%    \usebibmacro{cite}}}
+%\renewbibmacro*{textcite}{%
+%  \ifboolexpr{
+%    ( not test {\iffieldundef{prenote}} and
+%      test {\ifnumequal{\value{citecount}}{1}} )
+%    or
+%    ( not test {\iffieldundef{postnote}} and
+%      test {\ifnumequal{\value{citecount}}{\value{citetotal}}} )
+%  }
+%    {\DeclareFieldAlias{textcitehyperref}{noformat}}
+%    {}%
+%  \printtext[textcitehyperref]{%
+%    \restorebibmacro{textcite}%
+%    \usebibmacro{textcite}}}
 
 % Handle prefixes in surnames (e.g. "van", "de") correctly
 %https://tex.stackexchange.com/questions/440133/prefixes-in-author-names-in-references-and-bibliography
-\DeclareSortingNamekeyTemplate{
-  \keypart{
-    \namepart{family}
-  }
-  \keypart{
-    \namepart{prefix}
-  }
-  \keypart{
-    \namepart{given}
-  }
-  \keypart{
-    \namepart{suffix}
-  }
-}
+%\DeclareSortingNamekeyTemplate{
+%  \keypart{
+%    \namepart{family}
+%  }
+%  \keypart{
+%    \namepart{prefix}
+%  }
+%  \keypart{
+%    \namepart{given}
+%  }
+%  \keypart{
+%    \namepart{suffix}
+%  }
+%}
 
-\renewbibmacro{begentry}{\midsentence}
+%\renewbibmacro{begentry}{\midsentence}

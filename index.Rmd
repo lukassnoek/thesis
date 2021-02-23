@@ -97,8 +97,8 @@ output:
     template: template.tex
     keep_tex: yes
     pandoc_args: [ "--csl", "bib/apa.csl" ]
-    latex_engine: xelatex
-    citation_package: biblatex
+    latex_engine: xelatex  # for the fontspec package
+    #citation_package: biblatex
     includes:
       in_header: tex/preamble.tex
       before_body: tex/front_matter.tex
