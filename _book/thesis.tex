@@ -447,7 +447,7 @@ In the \emph{self-focused} emotion imagery task (SF-task) subjects imagined perf
 
 With MVPA, we examined to what extent the SF- and OF-task evoked similar neural patterns. MVPA allows researchers to assess whether the neural pattern associated with one set of experimental conditions can be used to distinguish between another set of experimental conditions. This relatively novel technique has been successfully applied to the field of social neuroscience in general (e.g., Gilbert et al., \protect\hyperlink{ref-gilbert2012evaluative}{2012}; Brosch et al., \protect\hyperlink{ref-brosch2013implicit}{2013}; Parkinson et al., \protect\hyperlink{ref-parkinson2014common}{2014}), and the field of self-other neural overlap in particular. For example, several MVPA studies recently assessed whether experiencing pain and observing pain in others involved similar neural patterns (Corradi-Dell'Acqua et al., \protect\hyperlink{ref-corradi2016cross}{2016}; Krishnan et al., \protect\hyperlink{ref-krishnan2016somatic}{2016}). Although there is an ongoing discussion about the specifics of shared representation in pain based on these MVPA results (see for an overview Zaki et al., \protect\hyperlink{ref-zaki2016anatomy}{2016}), many authors emphasize the importance of this technique in the scientific study of self-other neural overlap (e.g., Corradi-Dell'Acqua et al., \protect\hyperlink{ref-corradi2016cross}{2016}; Krishnan et al., \protect\hyperlink{ref-krishnan2016somatic}{2016}).
 
-MVPA is an analysis technique that decodes latent categories from fMRI data in terms of multi-voxel patterns of activity (Norman et al., \protect\hyperlink{ref-norman2006beyond}{2006}). This technique is particularly suited for our research question for several reasons. First of all, although univariate techniques can demonstrate that tasks activate the same brain regions, only MVPA can statistically test for shared representation (Lamm \& Majdandžić, \protect\hyperlink{ref-lamm2015role}{2015}). We will evaluate whether multivariate brain patterns that distinguish between mental events in the SF-task can be used to distinguish, above chance level, between mental events in the OF-task. Second, MVPA analyses are particularly useful in research that is aimed at examining distributed representations (Singer, \protect\hyperlink{ref-singer2012past}{2012}). Based on our constructionist framework, we indeed hypothesize that the neural patterns that will represent self- and other focused mental events are distributed across large-scale brain networks. To capture these distributed patterns, we used MVPA in combination with data-driven univariate feature selection on whole-brain voxel patterns, instead of limiting our analysis to specific regions-of-interest (Haynes, \protect\hyperlink{ref-haynes2015primer}{2015}). And third, in contrast to univariate analyses that aggregate data across subjects, MVPA can be performed within-subjects and is thus able to incorporate individual variation in the representational content of multivariate brain patterns. In that aspect within-subject MVPA is sensitive to individual differences in how people imagine actions, sensations and situations, and how they understand others. In short, for our purpose to explicitly test the assumption that self and other focused processes share neural resources, MVPA is the designated method.
+MVPA is an analysis technique that decodes latent categories from fMRI data in terms of multi-voxel patterns of activity (Norman et al., \protect\hyperlink{ref-norman2006beyond}{2006}\protect\hyperlink{ref-norman2006beyond}{a}). This technique is particularly suited for our research question for several reasons. First of all, although univariate techniques can demonstrate that tasks activate the same brain regions, only MVPA can statistically test for shared representation (Lamm \& Majdandžić, \protect\hyperlink{ref-lamm2015role}{2015}). We will evaluate whether multivariate brain patterns that distinguish between mental events in the SF-task can be used to distinguish, above chance level, between mental events in the OF-task. Second, MVPA analyses are particularly useful in research that is aimed at examining distributed representations (Singer, \protect\hyperlink{ref-singer2012past}{2012}). Based on our constructionist framework, we indeed hypothesize that the neural patterns that will represent self- and other focused mental events are distributed across large-scale brain networks. To capture these distributed patterns, we used MVPA in combination with data-driven univariate feature selection on whole-brain voxel patterns, instead of limiting our analysis to specific regions-of-interest (Haynes, \protect\hyperlink{ref-haynes2015primer}{2015}). And third, in contrast to univariate analyses that aggregate data across subjects, MVPA can be performed within-subjects and is thus able to incorporate individual variation in the representational content of multivariate brain patterns. In that aspect within-subject MVPA is sensitive to individual differences in how people imagine actions, sensations and situations, and how they understand others. In short, for our purpose to explicitly test the assumption that self and other focused processes share neural resources, MVPA is the designated method.
 
 We tested the following two hypotheses. First, we tested whether we could classify \emph{self-imagined} actions, interoceptive sensations and situations above chance level. Second, we tested whether the multivariate pattern underlying this classification could also be used to classify the how, what and why condition in the \emph{other-focused} task.
 
@@ -629,6 +629,31 @@ The authors would like to thank David Amodio for his helpful comments on a previ
 
 \hypertarget{confounds-decoding}{%
 \chapter{How to control for confounds in decoding analyses of neuroimaging data}\label{confounds-decoding}}
+
+\chaptermark{Confounds in decoding analyses}
+
+\vspace*{\fill}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\small
+
+\noindent
+\emph{This chapter has been published as}: Snoek, L.*, Miletić, S.*, \& Scholte, H.S. (2019). How to control for confounds in decoding analyses of neuroimaging data. \emph{NeuroImage}, 184, 741-760.
+
+* Shared first authorship
+
+\newpage
+\normalsize
+
+\textbf{Abstract}
+
+Over the past decade, multivariate ``decoding analyses'' have become a popular alternative to traditional mass-univariate analyses in neuroimaging research. However, a fundamental limitation of using decoding analyses is that it remains ambiguous which source of information drives decoding performance, which becomes problematic when the to-be-decoded variable is confounded by variables that are not of primary interest. In this study, we use a comprehensive set of simulations as well as analyses of empirical data to evaluate two methods that were previously proposed and used to control for confounding variables in decoding analyses: post hoc counterbalancing and confound regression. In our empirical analyses, we attempt to decode gender from structural MRI data while controlling for the confound ``brain size''. We show that both methods introduce strong biases in decoding performance: post hoc counterbalancing leads to better performance than expected (i.e., positive bias), which we show in our simulations is due to the subsampling process that tends to remove samples that are hard to classify or would be wrongly classified; confound regression, on the other hand, leads to worse performance than expected (i.e., negative bias), even resulting in significant below chance performance in some realistic scenarios. In our simulations, we show that below chance accuracy can be predicted by the variance of the distribution of correlations between the features and the target. Importantly, we show that this negative bias disappears in both the empirical analyses and simulations when the confound regression procedure is performed in every fold of the cross-validation routine, yielding plausible (above chance) model performance. We conclude that, from the various methods tested, cross-validated confound regression is the only method that appears to appropriately control for confounds which thus can be used to gain more insight into the exact source(s) of information driving one's decoding analysis.
+
+\hypertarget{confounds-decoding-introduction}{%
+\section{Introduction}\label{confounds-decoding-introduction}}
+
+In the past decade, multivariate pattern analysis (MVPA) has emerged as a popular alternative to traditional univariate analyses of neuroimaging data (Haxby, \protect\hyperlink{ref-Haxby2012-sd}{2012}; Norman et al., \protect\hyperlink{ref-Norman2006-bt}{2006}\protect\hyperlink{ref-Norman2006-bt}{b}). The defining feature of MVPA is that it considers patterns of brain activation instead of single units of activation (i.e., voxels in MRI, sensors in MEG/EEG). One of the most-often used type of MVPA is ``decoding'', in which machine learning algorithms are applied to neuroimaging data to predict a particular stimulus, task, or psychometric feature. For example, decoding analyses have been used to successfully predict various experimental conditions within subjects, such as object category from fMRI activity patterns (Haxby et al., \protect\hyperlink{ref-Haxby2001-os}{2001}) and working memory representations from EEG data (LaRocque et al., \protect\hyperlink{ref-LaRocque2013-sh}{2013}), as well between-subject factors such as Alzheimer's disease (vs.~healthy controls) from structural MRI data (Cuingnet et al., \protect\hyperlink{ref-Cuingnet2011-hv}{2011}) and major depressive disorder (vs.~healthy controls) from resting-state functional connectivity (Craddock et al., \protect\hyperlink{ref-Craddock2009-kz}{2009}). One reason for the popularity of MVPA, and especially decoding, is that these methods appear to be more sensitive than traditional mass-univariate methods in detecting effects of interest. This increased sensitivity is often attributed to the ability to pick up multidimensional, spatially distributed representations which univariate methods, by definition, cannot do (Jimura \& Poldrack, \protect\hyperlink{ref-Jimura2012-lv}{2012}). A second important reason to use decoding analyses is that they allow researchers to make predictions about samples beyond the original dataset, which is more difficult using traditional univariate analyses (Hebart \& Baker, \protect\hyperlink{ref-Hebart2017-jn}{2017}).
 
 \hypertarget{AOMIC}{%
 \chapter{The Amsterdam Open MRI Collection, a set of multimodal MRI datasets for individual difference analyses}\label{AOMIC}}
@@ -1126,8 +1151,14 @@ Carr, L., Iacoboni, M., Dubeau, M.-C., Mazziotta, J. C., \& Lenzi, G. L. (2003).
 \leavevmode\hypertarget{ref-corradi2016cross}{}%
 Corradi-Dell'Acqua, C., Tusche, A., Vuilleumier, P., \& Singer, T. (2016). Cross-modal representations of first-hand and vicarious pain, disgust and fairness in insular and cingulate cortex. \emph{Nature Communications}, \emph{7}(1), 1--12.
 
+\leavevmode\hypertarget{ref-Craddock2009-kz}{}%
+Craddock, R. C., Holtzheimer, P. E., 3rd, Hu, X. P., \& Mayberg, H. S. (2009). Disease state prediction from resting state functional connectivity. \emph{Magn. Reson. Med.}, \emph{62}(6), 1619--1628.
+
 \leavevmode\hypertarget{ref-craig2009you}{}%
 Craig, A. D., \& Craig, A. (2009). How do you feel--now? The anterior insula and human awareness. \emph{Nature Reviews Neuroscience}, \emph{10}(1).
+
+\leavevmode\hypertarget{ref-Cuingnet2011-hv}{}%
+Cuingnet, R., Gerardin, E., Tessieras, J., Auzias, G., Lehéricy, S., Habert, M.-O., Chupin, M., Benali, H., Colliot, O., \& Alzheimer's Disease Neuroimaging Initiative. (2011). Automatic classification of patients with alzheimer's disease from structural MRI: A comparison of ten methods using the ADNI database. \emph{Neuroimage}, \emph{56}(2), 766--781.
 
 \leavevmode\hypertarget{ref-decety2011dissecting}{}%
 Decety, J. (2011). Dissecting the neural mechanisms mediating empathy. \emph{Emotion Review}, \emph{3}(1), 92--108.
@@ -1153,11 +1184,23 @@ Gilbert, S. J., Swencionis, J. K., \& Amodio, D. M. (2012). Evaluative vs. Trait
 \leavevmode\hypertarget{ref-guyon2002gene}{}%
 Guyon, I., Weston, J., Barnhill, S., \& Vapnik, V. (2002). Gene selection for cancer classification using support vector machines. \emph{Machine Learning}, \emph{46}(1), 389--422.
 
+\leavevmode\hypertarget{ref-Haxby2012-sd}{}%
+Haxby, J. V. (2012). Multivariate pattern analysis of fMRI: The early beginnings. \emph{Neuroimage}, \emph{62}(2), 852--855.
+
+\leavevmode\hypertarget{ref-Haxby2001-os}{}%
+Haxby, J. V., Gobbini, M. I., Furey, M. L., Ishai, A., Schouten, J. L., \& Pietrini, P. (2001). Distributed and overlapping representations of faces and objects in ventral temporal cortex. \emph{Science}, \emph{293}(5539), 2425--2430.
+
 \leavevmode\hypertarget{ref-haynes2015primer}{}%
 Haynes, J.-D. (2015). A primer on pattern-based approaches to fMRI: Principles, pitfalls, and perspectives. \emph{Neuron}, \emph{87}(2), 257--270.
 
+\leavevmode\hypertarget{ref-Hebart2017-jn}{}%
+Hebart, M. N., \& Baker, C. I. (2017). Deconstructing multivariate decoding for the study of brain function. \emph{Neuroimage}.
+
 \leavevmode\hypertarget{ref-jenkinson2012fsl}{}%
 Jenkinson, M., Beckmann, C. F., Behrens, T. E., Woolrich, M. W., \& Smith, S. M. (2012). Fsl. \emph{Neuroimage}, \emph{62}(2), 782--790.
+
+\leavevmode\hypertarget{ref-Jimura2012-lv}{}%
+Jimura, K., \& Poldrack, R. A. (2012). Analyses of regional-average activation and multivoxel pattern information tell complementary stories. \emph{Neuropsychologia}, \emph{50}(4), 544--552.
 
 \leavevmode\hypertarget{ref-kay2008identifying}{}%
 Kay, K. N., Naselaris, T., Prenger, R. J., \& Gallant, J. L. (2008). Identifying natural images from human brain activity. \emph{Nature}, \emph{452}(7185), 352--355.
@@ -1186,6 +1229,9 @@ Lang, P. J. (2005). International affective picture system (iaps): Affective rat
 \leavevmode\hypertarget{ref-lang1997international}{}%
 Lang, P. J., Bradley, M. M., Cuthbert, B. N., \& others. (1997). International affective picture system (iaps): Technical manual and affective ratings. \emph{NIMH Center for the Study of Emotion and Attention}, \emph{1}, 39--58.
 
+\leavevmode\hypertarget{ref-LaRocque2013-sh}{}%
+LaRocque, J. J., Lewis-Peacock, J. A., Drysdale, A. T., Oberauer, K., \& Postle, B. R. (2013). Decoding attended information in short-term memory: An EEG study. \emph{J. Cogn. Neurosci.}, \emph{25}(1), 127--142.
+
 \leavevmode\hypertarget{ref-legrand2009self}{}%
 Legrand, D., \& Ruby, P. (2009). What is self-specific? Theoretical investigation and critical review of neuroimaging results. \emph{Psychological Review}, \emph{116}(1), 252.
 
@@ -1211,7 +1257,10 @@ Mumford, J. A., Davis, T., \& Poldrack, R. A. (2014). The impact of study design
 Nichols, T. E., \& Holmes, A. P. (2002). Nonparametric permutation tests for functional neuroimaging: A primer with examples. \emph{Human Brain Mapping}, \emph{15}(1), 1--25.
 
 \leavevmode\hypertarget{ref-norman2006beyond}{}%
-Norman, K. A., Polyn, S. M., Detre, G. J., \& Haxby, J. V. (2006). Beyond mind-reading: Multi-voxel pattern analysis of fMRI data. \emph{Trends in Cognitive Sciences}, \emph{10}(9), 424--430.
+Norman, K. A., Polyn, S. M., Detre, G. J., \& Haxby, J. V. (2006a). Beyond mind-reading: Multi-voxel pattern analysis of fMRI data. \emph{Trends in Cognitive Sciences}, \emph{10}(9), 424--430.
+
+\leavevmode\hypertarget{ref-Norman2006-bt}{}%
+Norman, K. A., Polyn, S. M., Detre, G. J., \& Haxby, J. V. (2006b). Beyond mind-reading: Multi-voxel pattern analysis of fMRI data. \emph{Trends Cogn. Sci.}, \emph{10}(9), 424--430.
 
 \leavevmode\hypertarget{ref-oosterwijk2014embodiment}{}%
 Oosterwijk, S., \& Barrett, L. F. (2014). Embodiment in the construction of emotion experience and emotion understanding. \emph{Routledge Handbook of Embodied Cognition. New York: Routledge}, 250--260.
