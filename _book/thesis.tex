@@ -655,6 +655,34 @@ Over the past decade, multivariate ``decoding analyses'' have become a popular a
 
 In the past decade, multivariate pattern analysis (MVPA) has emerged as a popular alternative to traditional univariate analyses of neuroimaging data (Haxby, \protect\hyperlink{ref-Haxby2012-sd}{2012}; Norman et al., \protect\hyperlink{ref-Norman2006-bt}{2006}\protect\hyperlink{ref-Norman2006-bt}{b}). The defining feature of MVPA is that it considers patterns of brain activation instead of single units of activation (i.e., voxels in MRI, sensors in MEG/EEG). One of the most-often used type of MVPA is ``decoding'', in which machine learning algorithms are applied to neuroimaging data to predict a particular stimulus, task, or psychometric feature. For example, decoding analyses have been used to successfully predict various experimental conditions within subjects, such as object category from fMRI activity patterns (Haxby et al., \protect\hyperlink{ref-Haxby2001-os}{2001}) and working memory representations from EEG data (LaRocque et al., \protect\hyperlink{ref-LaRocque2013-sh}{2013}), as well between-subject factors such as Alzheimer's disease (vs.~healthy controls) from structural MRI data (Cuingnet et al., \protect\hyperlink{ref-Cuingnet2011-hv}{2011}) and major depressive disorder (vs.~healthy controls) from resting-state functional connectivity (Craddock et al., \protect\hyperlink{ref-Craddock2009-kz}{2009}). One reason for the popularity of MVPA, and especially decoding, is that these methods appear to be more sensitive than traditional mass-univariate methods in detecting effects of interest. This increased sensitivity is often attributed to the ability to pick up multidimensional, spatially distributed representations which univariate methods, by definition, cannot do (Jimura \& Poldrack, \protect\hyperlink{ref-Jimura2012-lv}{2012}). A second important reason to use decoding analyses is that they allow researchers to make predictions about samples beyond the original dataset, which is more difficult using traditional univariate analyses (Hebart \& Baker, \protect\hyperlink{ref-Hebart2017-jn}{2017}).
 
+In the past years, however, the use of MVPA has been criticized for a number of reasons, both statistical (Allefeld et al., \protect\hyperlink{ref-Allefeld2016-xp}{2016}; Davis et al., \protect\hyperlink{ref-Davis2014-lw}{2014}; Gilron et al., \protect\hyperlink{ref-Gilron2017-tl}{2017}; Haufe et al., \protect\hyperlink{ref-Haufe2014-el}{2014}) and more conceptual (Naselaris \& Kay, \protect\hyperlink{ref-Naselaris2015-jn}{2015}; Weichwald et al., \protect\hyperlink{ref-Weichwald2015-aj}{2015}) in nature. For the purposes of the current study, we focus on the specific criticism put forward by Naselaris \& Kay (\protect\hyperlink{ref-Naselaris2015-jn}{2015}) , who argue that decoding analyses are inherently ambiguous in terms of what information they use (see Popov et al., \protect\hyperlink{ref-popov2018practices}{2018} for a similar argument in the context of encoding analyses). This type of ambiguity arises when the classes of the to-be-decoded variable systematically vary in more than one source of information (see also Carlson \& Wardle, \protect\hyperlink{ref-Carlson2015-bz}{2015}; Ritchie et al., \protect\hyperlink{ref-Ritchie2017-gl}{2017}; Weichwald et al., \protect\hyperlink{ref-Weichwald2015-aj}{2015}). The current study aims to investigate how decoding analyses can be made more interpretable by reducing this type of ``source ambiguity''.
+
+To illustrate the problem of source ambiguity, consider, for example, the scenario in which a researcher wants to decode gender\footnote{The terms ``gender'' and ``sex'' are both used in the relevant research literature. Here, we use the term gender because we refer to self-reported identity in the data described below.} (male/female) from structural MRI with the aim of contributing to the understanding of gender differences --- an endeavor that generated considerable interest and controversy (Chekroud et al., \protect\hyperlink{ref-Chekroud2016-tc}{2016}; Del Giudice et al., \protect\hyperlink{ref-Del_Giudice2016-ns}{2016}; Glezerman, \protect\hyperlink{ref-Glezerman2016-xl}{2016}; Joel \& Fausto-Sterling, \protect\hyperlink{ref-Joel2016-uo}{2016}; Rosenblatt, \protect\hyperlink{ref-Rosenblatt2016-oy}{2016}). By performing a decoding analysis on the MRI data, the researcher hopes to capture meaningful patterns of variation in the data of male and female participants that are predictive of the participant's gender. The literature suggests that gender dimorphism in the brain is manifested in two major ways (Good et al., \protect\hyperlink{ref-Good2001-ak}{2001}; O'Brien et al., \protect\hyperlink{ref-OBrien2011-lj}{2011}). First, there is a \emph{global} difference between male and female brains: men have on average about 15\% larger intracranial volume than women, which falls in the range of mean gender differences in height (8.2\%) and weight (18.7\%; Gur et al., \protect\hyperlink{ref-Gur1999-qj}{1999}; Lüders et al., \protect\hyperlink{ref-Luders2002-ms}{2002})\footnote{Note that information related to global brain size persists when researchers analyze the structural MRI data in a common, normalized brain space, because spatial registration ``squeezes'' relatively large brains into a smaller template, increasing voxel statistics (e.g., gray matter density in VBM analyses), and vice versa (Douaud et al., \protect\hyperlink{ref-Douaud2007-sw}{2007}). This effect of global brain size similarly affects functional MRI analyses (Brodtmann et al., \protect\hyperlink{ref-brodtmann2009regional}{2009}).}. Second, brains of men and women are known to differ \emph{locally}: some specific brain areas are on average larger in women than in men (e.g., in superior and middle temporal cortex; Good et al., \protect\hyperlink{ref-Good2001-ak}{2001}) and vice versa (e.g., in frontomedial cortex; Goldstein et al., \protect\hyperlink{ref-Goldstein2001-dy}{2001}). One could argue that, given that one is interested in explaining behavioral or mental gender differences, global differences are relatively uninformative, as it reflects the fact than male \emph{bodies} are on average larger than female bodies (Gur et al., \protect\hyperlink{ref-Gur1999-qj}{1999}; Sepehrband et al., \protect\hyperlink{ref-Sepehrband2018-dy}{2018}). As such, our hypothetical researcher is likely primarily interested in the \emph{local} sources of variation in the neuroanatomy of male and female brains.
+
+Now, supposing that the researcher is able to decode gender from the MRI data significantly above chance, it remains unclear on which source of information the decoder is capitalizing: the (arguably meaningful) local difference in brain structure or the (in the context of this question arguably uninteresting) global difference in brain size? In other words, the data contain more than one source of information that may be used to predict gender. In the current study, we aim to evaluate methods that improve the interpretability of decoding analyses by controlling for ``uninteresting'' sources of information.
+
+\hypertarget{confounds-decoding-introduction-true-vs-confounded}{%
+\subsection{\texorpdfstring{Partitioning effects into \emph{true} signal and \emph{confounded} signal}{Partitioning effects into true signal and confounded signal}}\label{confounds-decoding-introduction-true-vs-confounded}}
+
+Are multiple sources of information necessarily problematic? And what makes a source of information interesting or uninteresting? The answers to these questions depend on the particular goal of the researcher using the decoding analysis (Hebart \& Baker, \protect\hyperlink{ref-Hebart2017-jn}{2017}). In principle, multiple sources of information in the data do not pose a problem if a researcher is only interested in accurate \emph{prediction}, but not in \emph{interpretability} of the model (Bzdok, \protect\hyperlink{ref-Bzdok2017-li}{2017}; Haufe et al., \protect\hyperlink{ref-Haufe2014-el}{2014}; Hebart \& Baker, \protect\hyperlink{ref-Hebart2017-jn}{2017}). In brain-computer interfaces (BCI), for example, accurate prediction is arguably more important than interpretability, i.e., knowing which sources of information are driving the decoder. Similarly, if the researcher from our gender decoding example is only interested in accurately predicting gender regardless of model interpretability, source ambiguity is not a problem\footnote{However, if accurate prediction is the only goal in this scenario, we would argue that there are probably easier and less expensive methods than neuroimaging to predict a participant's gender.}. In most scientific applications of decoding analyses, however, model interpretability is important, because researchers are often interested in the relative contributions of different sources of information to decoding performance. Specifically, in most decoding analyses, researchers often (implicitly) assume that the decoder is \emph{only} using information in the neuroimaging data that is related to the variable that is being decoded (Ritchie et al., \protect\hyperlink{ref-Ritchie2017-gl}{2017}). In this scenario, source ambiguity (i.e., the presence of \emph{multiple} sources of information) \emph{is} problematic as it violates this (implicit) assumption. Another way to conceptualize the problem of source ambiguity is that, using the aforementioned example, (global) brain size is \emph{confounding} the decoding analysis of gender. Here, we define a confound as \emph{a variable that is not of primary interest, correlates with the to-be-decoded variable (the target), and is encoded in the neuroimaging data.}
+
+To illustrate the issue of confounding variables in the context of decoding clinical disorders, suppose one is interested in building a classifier that is able to predict whether subjects are suffering from schizophrenia or not based on the subjects' gray matter data. Here, the variable ``schizophrenia-or-not'' is the variable of interest, which is assumed to be encoded in the neuroimaging data (i.e., the gray matter) and can thus be decoded. However, there are multiple factors known to covary with schizophrenia, such as gender (i.e., men are more often diagnosed with schizophrenia than women; McGrath et al., \protect\hyperlink{ref-McGrath2008-oj}{2008}) and substance abuse (Dixon, \protect\hyperlink{ref-Dixon1999-kl}{1999}), which are also known to affect gray matter (Bangalore et al., \protect\hyperlink{ref-Bangalore2008-kc}{2008}; Gur et al., \protect\hyperlink{ref-Gur1999-qj}{1999}; Van Haren et al., \protect\hyperlink{ref-Van_Haren2013-iv}{2013}). As such, the variables gender and substance abuse can be considered confounds according to our definition, because they are both correlated with the target (schizophrenia or not) and are known to be encoded in the neuroimaging data (i.e., the effect of these variables is present in the gray matter data). Now, if one is able to classify schizophrenia with above-chance accuracy from gray matter data, one cannot be sure which source of information within the data is picked up by the decoder: information (uniquely) associated with schizophrenia or (additionally) information associated with gender or substance abuse? If one is interested in more than mere accurate \emph{prediction} of schizophrenia, then this ambiguity due to confounding sources of information is problematic.
+
+Importantly, as our definition suggests, what \emph{is} or \emph{is not} regarded as a confound is relative --- it depends on whether the researchers deems it of (primary) interest or not. In the aforementioned hypothetical schizophrenia decoding study, for example, one may equally well define the severity of substance abuse as the to-be-decoded variable, in which the variable ``schizophrenia-or-no'''' becomes the confounding variable. In other words, one researcher's signal is another researcher's confound. Regardless, if decoding analyses of neuroimaging data are affected by confounds, the data thus contain two types of information: the ``true signal'' (i.e., variance in the neuroimaging data related to the target, but unrelated to the confound) and the ``confounded signal'' (i.e., variance in the neuroimaging data related to the target that is also related to the confound; see Figure \ref{fig:fig-confounds-decoding-1}). In other words, source ambiguity arises due to the presence of both true signal and confounded signal and, thus, controlling for confounds (by removing the confounded signal) provides a crucial methodological step forward in improving the interpretability of decoding analyses.
+
+\begin{figure}
+\centering
+\includegraphics{_bookdown_files/confounds-decoding-files/figures/figure_1.pdf}
+\caption{\label{fig:fig-confounds-decoding-1}Visualization of how variance in brain data (\emph{X}) can partitioned into ``True signal'' and ``Confounded signal'', depending on the correlation structure between the brain data (\emph{X}), the confound (\emph{C}), and the target (\emph{y}). Overlapping circles indicate a non-zero (squared) correlation between the two variables.}
+\end{figure}
+
+
+
+In the decoding literature, various methods have been applied to control for confounds. We next provide an overview of these methods, highlight their advantages and disadvantages, and discuss their rationale and the types of research settings they can be applied in. Subsequently, we focus on two of these methods to test whether these methods succeed in controlling for the influence of confounds.
+
+\hypertarget{confounds-decoding-introduction-methods-confound-control}{%
+\subsection{Methods for confound control}\label{confounds-decoding-introduction-methods-confound-control}}
+
 \hypertarget{AOMIC}{%
 \chapter{The Amsterdam Open MRI Collection, a set of multimodal MRI datasets for individual difference analyses}\label{AOMIC}}
 
@@ -1112,11 +1140,17 @@ In order to keep the Supplementary materials concise and orderly, we chose not t
 \setlength{\parskip}{0pt}
 
 \hypertarget{refs}{}
+\leavevmode\hypertarget{ref-Allefeld2016-xp}{}%
+Allefeld, C., Görgen, K., \& Haynes, J.-D. (2016). Valid population inference for information-based imaging: From the second-level t-test to prevalence inference. \emph{Neuroimage}, \emph{141}, 378--392.
+
 \leavevmode\hypertarget{ref-anderson2016precis}{}%
 Anderson, M. L. (2016). Précis of after phrenology: Neural reuse and the interactive brain. \emph{Behavioral and Brain Sciences}, \emph{39}.
 
 \leavevmode\hypertarget{ref-andrews2014default}{}%
 Andrews-Hanna, J. R., Smallwood, J., \& Spreng, R. N. (2014). The default network and self-generated thought: Component processes, dynamic control, and clinical relevance. \emph{Annals of the New York Academy of Sciences}, \emph{1316}(1), 29.
+
+\leavevmode\hypertarget{ref-Bangalore2008-kc}{}%
+Bangalore, S. S., Prasad, K. M. R., Montrose, D. M., Goradia, D. D., Diwadkar, V. A., \& Keshavan, M. S. (2008). Cannabis use and brain structural alterations in first episode schizophrenia---a region of interest, voxel based morphometric study. \emph{Schizophr. Res.}, \emph{99}(1), 1--6.
 
 \leavevmode\hypertarget{ref-barrett2009variety}{}%
 Barrett, L. F. (2009). Variety is the spice of life: A psychological construction approach to understanding variability in emotion. \emph{Cognition and Emotion}, \emph{23}(7), 1284--1306.
@@ -1142,11 +1176,23 @@ Binder, J. R., Desai, R. H., Graves, W. W., \& Conant, L. L. (2009). Where is th
 \leavevmode\hypertarget{ref-breiman1996bagging}{}%
 Breiman, L. (1996). Bagging predictors. \emph{Machine Learning}, \emph{24}(2), 123--140.
 
+\leavevmode\hypertarget{ref-brodtmann2009regional}{}%
+Brodtmann, A., Puce, A., Darby, D., \& Donnan, G. (2009). Regional fMRI brain activation does correlate with global brain volume. \emph{Brain Research}, \emph{1259}, 17--25.
+
 \leavevmode\hypertarget{ref-brosch2013implicit}{}%
 Brosch, T., Bar-David, E., \& Phelps, E. A. (2013). Implicit race bias decreases the similarity of neural representations of black and white faces. \emph{Psychological Science}, \emph{24}(2), 160--166.
 
+\leavevmode\hypertarget{ref-Bzdok2017-li}{}%
+Bzdok, D. (2017). Classical statistics and statistical learning in imaging neuroscience. \emph{Front. Neurosci.}, \emph{11}, 543.
+
+\leavevmode\hypertarget{ref-Carlson2015-bz}{}%
+Carlson, T. A., \& Wardle, S. G. (2015). Sensible decoding. \emph{Neuroimage}, \emph{110}, 217--218.
+
 \leavevmode\hypertarget{ref-carr2003neural}{}%
 Carr, L., Iacoboni, M., Dubeau, M.-C., Mazziotta, J. C., \& Lenzi, G. L. (2003). Neural mechanisms of empathy in humans: A relay from neural systems for imitation to limbic areas. \emph{Proceedings of the National Academy of Sciences}, \emph{100}(9), 5497--5502.
+
+\leavevmode\hypertarget{ref-Chekroud2016-tc}{}%
+Chekroud, A. M., Ward, E. J., Rosenberg, M. D., \& Holmes, A. J. (2016). Patterns in the human brain mosaic discriminate males from females. \emph{Proc. Natl. Acad. Sci. U. S. A.}, \emph{113}(14), E1968.
 
 \leavevmode\hypertarget{ref-corradi2016cross}{}%
 Corradi-Dell'Acqua, C., Tusche, A., Vuilleumier, P., \& Singer, T. (2016). Cross-modal representations of first-hand and vicarious pain, disgust and fairness in insular and cingulate cortex. \emph{Nature Communications}, \emph{7}(1), 1--12.
@@ -1160,11 +1206,23 @@ Craig, A. D., \& Craig, A. (2009). How do you feel--now? The anterior insula and
 \leavevmode\hypertarget{ref-Cuingnet2011-hv}{}%
 Cuingnet, R., Gerardin, E., Tessieras, J., Auzias, G., Lehéricy, S., Habert, M.-O., Chupin, M., Benali, H., Colliot, O., \& Alzheimer's Disease Neuroimaging Initiative. (2011). Automatic classification of patients with alzheimer's disease from structural MRI: A comparison of ten methods using the ADNI database. \emph{Neuroimage}, \emph{56}(2), 766--781.
 
+\leavevmode\hypertarget{ref-Davis2014-lw}{}%
+Davis, T., LaRocque, K. F., Mumford, J. A., Norman, K. A., Wagner, A. D., \& Poldrack, R. A. (2014). What do differences between multi-voxel and univariate analysis mean? How subject-, voxel-, and trial-level variance impact fMRI analysis. \emph{Neuroimage}, \emph{97}, 271--283.
+
 \leavevmode\hypertarget{ref-decety2011dissecting}{}%
 Decety, J. (2011). Dissecting the neural mechanisms mediating empathy. \emph{Emotion Review}, \emph{3}(1), 92--108.
 
+\leavevmode\hypertarget{ref-Del_Giudice2016-ns}{}%
+Del Giudice, M., Lippa, R. A., Puts, D. A., Bailey, D. H., Bailey, J. M., \& Schmitt, D. P. (2016). Joel et al.'s method systematically fails to detect large, consistent sex differences. \emph{Proc. Natl. Acad. Sci. U. S. A.}, \emph{113}(14), E1965.
+
 \leavevmode\hypertarget{ref-denny2012meta}{}%
 Denny, B. T., Kober, H., Wager, T. D., \& Ochsner, K. N. (2012). A meta-analysis of functional neuroimaging studies of self-and other judgments reveals a spatial gradient for mentalizing in medial prefrontal cortex. \emph{Journal of Cognitive Neuroscience}, \emph{24}(8), 1742--1752.
+
+\leavevmode\hypertarget{ref-Dixon1999-kl}{}%
+Dixon, L. (1999). Dual diagnosis of substance abuse in schizophrenia: Prevalence and impact on outcomes. \emph{Schizophr. Res.}, \emph{35 Suppl}, S93--100.
+
+\leavevmode\hypertarget{ref-Douaud2007-sw}{}%
+Douaud, G., Smith, S., Jenkinson, M., Behrens, T., Johansen-Berg, H., Vickers, J., James, S., Voets, N., Watkins, K., Matthews, P. M., \& James, A. (2007). Anatomically related grey and white matter abnormalities in adolescent-onset schizophrenia. \emph{Brain}, \emph{130}(Pt 9), 2375--2386.
 
 \leavevmode\hypertarget{ref-ethofer2009decoding}{}%
 Ethofer, T., Van De Ville, D., Scherer, K., \& Vuilleumier, P. (2009). Decoding of emotional information in voice-sensitive cortices. \emph{Current Biology}, \emph{19}(12), 1028--1033.
@@ -1181,8 +1239,26 @@ Gelder, B. de, Van den Stock, J., Meeren, H. K., Sinke, C. B., Kret, M. E., \& T
 \leavevmode\hypertarget{ref-gilbert2012evaluative}{}%
 Gilbert, S. J., Swencionis, J. K., \& Amodio, D. M. (2012). Evaluative vs. Trait representation in intergroup social judgments: Distinct roles of anterior temporal lobe and prefrontal cortex. \emph{Neuropsychologia}, \emph{50}(14), 3600--3611.
 
+\leavevmode\hypertarget{ref-Gilron2017-tl}{}%
+Gilron, R., Rosenblatt, J., Koyejo, O., Poldrack, R. A., \& Mukamel, R. (2017). What's in a pattern? Examining the type of signal multivariate analysis uncovers at the group level. \emph{Neuroimage}, \emph{146}, 113--120.
+
+\leavevmode\hypertarget{ref-Glezerman2016-xl}{}%
+Glezerman, M. (2016). Yes, there is a female and a male brain: Morphology versus functionality. \emph{Proceedings of the National Academy of Sciences}, \emph{113}(14), E1971--E1971.
+
+\leavevmode\hypertarget{ref-Goldstein2001-dy}{}%
+Goldstein, J. M., Seidman, L. J., Horton, N. J., Makris, N., Kennedy, D. N., Caviness, V. S., Jr, Faraone, S. V., \& Tsuang, M. T. (2001). Normal sexual dimorphism of the adult human brain assessed by in vivo magnetic resonance imaging. \emph{Cereb. Cortex}, \emph{11}(6), 490--497.
+
+\leavevmode\hypertarget{ref-Good2001-ak}{}%
+Good, C. D., Johnsrude, I., Ashburner, J., Henson, R. N., Friston, K. J., \& Frackowiak, R. S. (2001). Cerebral asymmetry and the effects of sex and handedness on brain structure: A voxel-based morphometric analysis of 465 normal adult human brains. \emph{Neuroimage}, \emph{14}(3), 685--700.
+
+\leavevmode\hypertarget{ref-Gur1999-qj}{}%
+Gur, R. C., Turetsky, B. I., Matsui, M., Yan, M., Bilker, W., Hughett, P., \& Gur, R. E. (1999). Sex differences in brain gray and white matter in healthy young adults: Correlations with cognitive performance. \emph{J. Neurosci.}, \emph{19}(10), 4065--4072.
+
 \leavevmode\hypertarget{ref-guyon2002gene}{}%
 Guyon, I., Weston, J., Barnhill, S., \& Vapnik, V. (2002). Gene selection for cancer classification using support vector machines. \emph{Machine Learning}, \emph{46}(1), 389--422.
+
+\leavevmode\hypertarget{ref-Haufe2014-el}{}%
+Haufe, S., Meinecke, F., Görgen, K., Dähne, S., Haynes, J.-D., Blankertz, B., \& Bießmann, F. (2014). On the interpretation of weight vectors of linear models in multivariate neuroimaging. \emph{Neuroimage}, \emph{87}, 96--110.
 
 \leavevmode\hypertarget{ref-Haxby2012-sd}{}%
 Haxby, J. V. (2012). Multivariate pattern analysis of fMRI: The early beginnings. \emph{Neuroimage}, \emph{62}(2), 852--855.
@@ -1201,6 +1277,9 @@ Jenkinson, M., Beckmann, C. F., Behrens, T. E., Woolrich, M. W., \& Smith, S. M.
 
 \leavevmode\hypertarget{ref-Jimura2012-lv}{}%
 Jimura, K., \& Poldrack, R. A. (2012). Analyses of regional-average activation and multivoxel pattern information tell complementary stories. \emph{Neuropsychologia}, \emph{50}(4), 544--552.
+
+\leavevmode\hypertarget{ref-Joel2016-uo}{}%
+Joel, D., \& Fausto-Sterling, A. (2016). Beyond sex differences: New approaches for thinking about variation in brain structure and function. \emph{Philos. Trans. R. Soc. Lond. B Biol. Sci.}, \emph{371}(1688), 20150451.
 
 \leavevmode\hypertarget{ref-kay2008identifying}{}%
 Kay, K. N., Naselaris, T., Prenger, R. J., \& Gallant, J. L. (2008). Identifying natural images from human brain activity. \emph{Nature}, \emph{452}(7185), 352--355.
@@ -1241,6 +1320,12 @@ Lench, H. C., Flores, S. A., \& Bench, S. W. (2011). Discrete emotions predict c
 \leavevmode\hypertarget{ref-lindquist2012brain}{}%
 Lindquist, K. A., Wager, T. D., Kober, H., Bliss-Moreau, E., \& Barrett, L. F. (2012). The brain basis of emotion: A meta-analytic review. \emph{The Behavioral and Brain Sciences}, \emph{35}(3), 121.
 
+\leavevmode\hypertarget{ref-Luders2002-ms}{}%
+Lüders, E., Steinmetz, H., \& Jäncke, L. (2002). Brain size and grey matter volume in the healthy human brain. \emph{Neuroreport}, \emph{13}(17), 2371--2374.
+
+\leavevmode\hypertarget{ref-McGrath2008-oj}{}%
+McGrath, J., Saha, S., Chant, D., \& Welham, J. (2008). Schizophrenia: A concise overview of incidence, prevalence, and mortality. \emph{Epidemiol. Rev.}, \emph{30}, 67--76.
+
 \leavevmode\hypertarget{ref-medford2010conjoint}{}%
 Medford, N., \& Critchley, H. D. (2010). Conjoint activity of anterior insular and anterior cingulate cortex: Awareness and response. \emph{Brain Structure and Function}, \emph{214}(5-6), 535--549.
 
@@ -1253,6 +1338,9 @@ Mischkowski, D., Crocker, J., \& Way, B. M. (2016). From painkiller to empathy k
 \leavevmode\hypertarget{ref-mumford2014impact}{}%
 Mumford, J. A., Davis, T., \& Poldrack, R. A. (2014). The impact of study design on pattern estimation for single-trial multivariate pattern analysis. \emph{Neuroimage}, \emph{103}, 130--138.
 
+\leavevmode\hypertarget{ref-Naselaris2015-jn}{}%
+Naselaris, T., \& Kay, K. N. (2015). Resolving ambiguities of MVPA using explicit models of representation. \emph{Trends Cogn. Sci.}, \emph{19}(10), 551--554.
+
 \leavevmode\hypertarget{ref-nichols2002nonparametric}{}%
 Nichols, T. E., \& Holmes, A. P. (2002). Nonparametric permutation tests for functional neuroimaging: A primer with examples. \emph{Human Brain Mapping}, \emph{15}(1), 1--25.
 
@@ -1261,6 +1349,9 @@ Norman, K. A., Polyn, S. M., Detre, G. J., \& Haxby, J. V. (2006a). Beyond mind-
 
 \leavevmode\hypertarget{ref-Norman2006-bt}{}%
 Norman, K. A., Polyn, S. M., Detre, G. J., \& Haxby, J. V. (2006b). Beyond mind-reading: Multi-voxel pattern analysis of fMRI data. \emph{Trends Cogn. Sci.}, \emph{10}(9), 424--430.
+
+\leavevmode\hypertarget{ref-OBrien2011-lj}{}%
+O'Brien, L. M., Ziegler, D. A., Deutsch, C. K., Frazier, J. A., Herbert, M. R., \& Locascio, J. J. (2011). Statistical adjustments for brain size in volumetric neuroimaging studies: Some practical implications in methods. \emph{Psychiatry Res.}, \emph{193}(2), 113--122.
 
 \leavevmode\hypertarget{ref-oosterwijk2014embodiment}{}%
 Oosterwijk, S., \& Barrett, L. F. (2014). Embodiment in the construction of emotion experience and emotion understanding. \emph{Routledge Handbook of Embodied Cognition. New York: Routledge}, 250--260.
@@ -1280,8 +1371,17 @@ Pedregosa, F., Varoquaux, G., Gramfort, A., Michel, V., Thirion, B., Grisel, O.,
 \leavevmode\hypertarget{ref-peelen2010supramodal}{}%
 Peelen, M. V., Atkinson, A. P., \& Vuilleumier, P. (2010). Supramodal representations of perceived emotions in the human brain. \emph{Journal of Neuroscience}, \emph{30}(30), 10127--10134.
 
+\leavevmode\hypertarget{ref-popov2018practices}{}%
+Popov, V., Ostarek, M., \& Tenison, C. (2018). Practices and pitfalls in inferring neural representations. \emph{NeuroImage}, \emph{174}, 340--351.
+
 \leavevmode\hypertarget{ref-pulvermuller2010active}{}%
 Pulvermüller, F., \& Fadiga, L. (2010). Active perception: Sensorimotor circuits as a cortical basis for language. \emph{Nature Reviews Neuroscience}, \emph{11}(5), 351--360.
+
+\leavevmode\hypertarget{ref-Ritchie2017-gl}{}%
+Ritchie, J. B., Kaplan, D. M., \& Klein, C. (2017). Decoding the brain: Neural representation and the limits of multivariate pattern analysis in cognitive neuroscience. \emph{Br. J. Philos. Sci.}
+
+\leavevmode\hypertarget{ref-Rosenblatt2016-oy}{}%
+Rosenblatt, J. D. (2016). Multivariate revisit to ``sex beyond the genitalia''. \emph{Proc. Natl. Acad. Sci. U. S. A.}, \emph{113}(14), E1966--7.
 
 \leavevmode\hypertarget{ref-rutgen2015placebo}{}%
 Rütgen, M., Seidel, E.-M., Silani, G., Riečansky, I., Hummer, A., Windischberger, C., Petrovic, P., \& Lamm, C. (2015). Placebo analgesia and its opioidergic regulation suggest that empathy for pain is grounded in self pain. \emph{Proceedings of the National Academy of Sciences}, \emph{112}(41), E5638--E5646.
@@ -1291,6 +1391,9 @@ Sabatinelli, D., Fortune, E. E., Li, Q., Siddiqui, A., Krafft, C., Oliver, W. T.
 
 \leavevmode\hypertarget{ref-salimi2014automatic}{}%
 Salimi-Khorshidi, G., Douaud, G., Beckmann, C. F., Glasser, M. F., Griffanti, L., \& Smith, S. M. (2014). Automatic denoising of functional mri data: Combining independent component analysis and hierarchical fusion of classifiers. \emph{Neuroimage}, \emph{90}, 449--468.
+
+\leavevmode\hypertarget{ref-Sepehrband2018-dy}{}%
+Sepehrband, F., Lynch, K. M., Cabeen, R. P., Gonzalez-Zacarias, C., Zhao, L., D'Arcy, M., Kesselman, C., Herting, M. M., Dinov, I. D., Toga, A. W., \& Clark, K. A. (2018). Neuroanatomical morphometric characterization of sex differences in youth using statistical learning. \emph{Neuroimage}, \emph{172}, 217--227.
 
 \leavevmode\hypertarget{ref-singer2012past}{}%
 Singer, T. (2012). The past, present and future of social neuroscience: A european perspective. \emph{Neuroimage}, \emph{61}(2), 437--449.
@@ -1307,6 +1410,9 @@ Stelzer, J., Buschmann, T., Lohmann, G., Margulies, D. S., Trampel, R., \& Turne
 \leavevmode\hypertarget{ref-uddin2007self}{}%
 Uddin, L. Q., Iacoboni, M., Lange, C., \& Keenan, J. P. (2007). The self and social cognition: The role of cortical midline structures and mirror neurons. \emph{Trends in Cognitive Sciences}, \emph{11}(4), 153--157.
 
+\leavevmode\hypertarget{ref-Van_Haren2013-iv}{}%
+Van Haren, N. E., Cahn, W., Hulshoff Pol, H. E., \& Kahn, R. S. (2013). Confounders of excessive brain volume loss in schizophrenia. \emph{Neurosci. Biobehav. Rev.}, \emph{37}(10 Pt 1), 2418--2423.
+
 \leavevmode\hypertarget{ref-van2009understanding}{}%
 Van Overwalle, F., \& Baetens, K. (2009). Understanding others' actions and goals by mirror and mentalizing systems: A meta-analysis. \emph{Neuroimage}, \emph{48}(3), 564--584.
 
@@ -1315,6 +1421,9 @@ Varoquaux, G. (2018). Cross-validation failure: Small sample sizes lead to large
 
 \leavevmode\hypertarget{ref-waytz2011two}{}%
 Waytz, A., \& Mitchell, J. P. (2011). Two mechanisms for simulating other minds: Dissociations between mirroring and self-projection. \emph{Current Directions in Psychological Science}, \emph{20}(3), 197--200.
+
+\leavevmode\hypertarget{ref-Weichwald2015-aj}{}%
+Weichwald, S., Meyer, T., Özdenizci, O., Schölkopf, B., Ball, T., \& Grosse-Wentrup, M. (2015). Causal interpretation rules for encoding and decoding models in neuroimaging. \emph{Neuroimage}, \emph{110}, 48--59.
 
 \leavevmode\hypertarget{ref-wilson2011grounding}{}%
 Wilson-Mendenhall, C. D., Barrett, L. F., Simmons, W. K., \& Barsalou, L. W. (2011). Grounding emotion in situated conceptualization. \emph{Neuropsychologia}, \emph{49}(5), 1105--1127.
