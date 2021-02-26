@@ -14,7 +14,7 @@ nocite: |
 \appendixpage*
 \setlength\beforechapskip{-\baselineskip}
 
-```{r setup, include=FALSE}
+```{r setup-shared-states-supplement, include=FALSE}
 knitr::opts_chunk$set(results = 'hide', echo = FALSE, message = FALSE, warning = FALSE)
 library(tidyverse)
 library(kableExtra)

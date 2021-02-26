@@ -1,3 +1,13 @@
+---
+nocite: | 
+  @Diedrichsen2017-ab
+---
+```{r setup-confounds-decoding, include=FALSE}
+knitr::opts_chunk$set(results = 'hide', echo = FALSE, message = FALSE, warning = FALSE)
+library(tidyverse)
+library(kableExtra)
+```
+
 # How to control for confounds in decoding analyses of neuroimaging data {#confounds-decoding}
 \chaptermark{Confounds in decoding analyses}
 
@@ -44,4 +54,122 @@ knitr::include_graphics("_bookdown_files/confounds-decoding-files/figures/figure
 
 In the decoding literature, various methods have been applied to control for confounds. We next provide an overview of these methods, highlight their advantages and disadvantages, and discuss their rationale and the types of research settings they can be applied in. Subsequently, we focus on two of these methods to test whether these methods succeed in controlling for the influence of confounds.
 
-### Methods for confound control {#confounds-decoding-introduction-methods-confound-control}
+### Methods for confound control {#confounds-decoding-introduction-methods}
+
+In decoding analyses, one aims to predict a certain target variable from patterns of neuroimaging data. Various methods discussed in this section are supplemented with a mathematical formalization; for consistency and readability, we define the notation we will use in Table \@ref(tab:tab-confounds-decoding-1).
+
+```{r tab-confounds-decoding-1, results='asis'}
+data = read_csv('_bookdown_files/confounds-decoding-files/table_1_data.csv')
+options(knitr.kable.NA = '')
+kbl(data, booktabs = T, longtable = T, escape = F, caption = 'Notation.') %>%
+    kable_styling(full_width = T, font_size = 10) %>%
+    column_spec(column = c(1, 2), width = "3em") %>%
+    footnote(footnote_as_chunk = T, title_format = "italic", threeparttable = T, escape = F,
+             general = 'Format based on Diedrichsen and Kriegeskorte (2017). For the correlations ($r$), we assume that $P = 1$ and thus that the correlations in the table reduce to a scalar.')
+```
+
+#### A priori counterbalancing {#confounds-decoding-introduction-methods-apriori-counterbalancing}
+
+Ideally, one would prevent confounding variables from influencing the results as much as possible before the acquisition of the neuroimaging data.5 One common way do this (in both traditional “activation-based” and decoding analyses) is to make sure that potential confounding variables are counterbalanced in the experimental design (Görgen et al., 2017). In experimental research, this would entail randomly assigning subjects to design cells (e.g., treatment groups) such that there is no structural correlation between characteristics of the subjects and design cells. In observational designs (e.g., in the gender/brain size example described earlier), it means that the sample is chosen such that there is no correlation between the confound (brain size) and observed target variable (gender). That is, given that men on average have larger brains than women, this would entail including only men with relatively small brains and women with relatively large brains.6 The distinction between experimental and observational studies is important because the former allow the researcher to randomly draw samples from the population, while the latter require the researcher to choose a sample that is not representative of the population, which limits the conclusions that can be drawn about the population (we will revisit this issue in the Discussion section).
+
+#### Include confounds in the data {#confounds-decoding-introduction-methods-include-in-data}
+
+
+#### Control for confounds during pattern estimation {#confounds-decoding-introduction-methods-pattern-estimation}
+
+
+#### Post hoc counterbalancing of confounds {#confounds-decoding-introduction-methods-posthoc-counterbalancing}
+
+
+#### Confound regression {#confounds-decoding-introduction-methods-confound-regression}
+
+### Current study {#confounds-decoding-introduction-current-study}
+
+## Methods {#confounds-decoding-methods}
+
+### Data {#confounds-decoding-methods-data}
+
+#### VBM acquisition & analysis {#confounds-decoding-methods-data-vbm}
+
+#### TBSS acquisition & analysis {#confounds-decoding-methods-data-tbss}
+
+#### Brain size estimation {#confounds-decoding-methods-data-brainsize}
+
+#### Data and code availability {#confounds-decoding-methods-data-data-and-code}
+
+### Decoding pipeline {#confounds-decoding-methods-pipeline}
+
+### Evaluated methods for confound control {#confounds-decoding-methods-evaluated-methods}
+
+#### Post hoc counterbalancing {#confounds-decoding-methods-evaluated-methods-counterbalancing}
+
+#### Confound regression
+
+#### Control for confounds during pattern estimation
+
+### Analyses of simulated data
+
+#### Efficacy analyses
+
+#### Analysis of positive bias after post hoc counterbalancing
+
+#### Analysis of negative bias after WDCR
+
+## Results
+
+### Influence of brain size
+
+### Baseline model: no confound control
+
+### Post hoc counterbalancing
+
+#### Empirical results
+
+#### Efficacy analysis
+
+#### Analysis of positive bias after post hoc counterbalancing
+
+### Whole-dataset confound regression (WDCR)
+
+#### Empirical results
+
+#### Efficacy analysis
+
+#### Analysis of negative bias after WDCR
+
+### Cross-validated confound regression (CVCR)
+
+#### Empirical results
+
+#### Efficacy analysis
+
+### Summary methods for confound control
+
+## Discussion
+
+### Relevance and consequences for previous and future research
+
+#### A priori and post hoc counterbalancing
+
+#### Confound regression
+
+#### Relevance to other analysis methods
+
+####  Importance for gender decoding studies
+
+### Choosing a confound model: linear vs. nonlinear models
+
+### Practical recommendations
+
+## Conclusions
+
+
+
+
+
+
+
+
+
+
+

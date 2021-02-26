@@ -1,0 +1,12 @@
+﻿Symbol,Dims.,Description
+$N$,-,Number of samples (usually subjects or trials)
+$K$,-,"Number of neuroimaging features (e.g., voxels or sensors)"
+$P$,-,"Number of confound variables (e.g., age, reaction time, or brain size)"
+$X_{ij}$,$N \times K$,"The neuroimaging patterns (often called the ""data"" in the current article), where the subescript $i \in {1 \dots N}$ refers to the individual samples (rows), and the subscript $j \in {1 \dots K}$ to individual features (columns)"
+$y$,$N \times 1$,"The target variable (i.e., what is to be decoded)"
+$C$,$N \times P$,The confound variable(s)
+$\hat{\beta}$,$K + 1$,The parameters estimated in a general linear model (GLM)
+$w$,$K + 1$,The parameters estimated in a decoding model
+$r_{Cy}$,-,Sample Pearson correlation coefficient between $C$ and $y$
+$r_{y(X.C)}$,-,"Sample semipartial Pearson correlation coefficient between $X$ and $y$, controlled for $C$"
+$p(r_{Cy})$,-,$p$-value of sample Pearson correlation between $C$ and $y$
