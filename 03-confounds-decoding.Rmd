@@ -284,9 +284,34 @@ Then, in a second simulation, we similarly simulated null data as in the previou
 
 ### Influence of brain size
 
+Before evaluating the different methods for confound control, we determined whether brain size is truly a confound given our proposed definition ("a variable that is not of primary interest, correlates with the target, and is encoded in the neuroimaging data"). We evaluated the relationship between the target and the confound in two ways. First, we calculated the (point-biserial) correlation between gender and brain size, which was significant for both the estimation based on white matter, $r(216) = .645, p < 0.001$, and the estimation based on grey matter, $r(216) = .588, p < 0.001$, corroborating the findings by @Smith2018-th. Second, as recommended by @Gorgen2017-sy, who argue that the potential influence of confounds can be discovered by running a classification analysis using the confound as the (single) feature predicting the target, we ran our decoding pipeline (without univariate feature selection) using brain size as a single feature to predict gender. This analysis yielded a mean classification performance ($F_{1}$ score) of 0.78 (*SD* = .10) when using brain size estimated from white matter and 0.81 (*SD* = .09) when using brain size estimated from gray matter, which are both significant with $p < 0.001$ (see Figure \@ref(fig:fig-confounds-decoding-4)A).
+
+```{r fig-confounds-decoding-4, fig.cap='(ref:caption-fig-confounds-decoding-4)', results='show'}
+knitr::include_graphics("_bookdown_files/confounds-decoding-files/figures/figure_4.png", auto_pdf = TRUE)
+```
+
+(ref:caption-fig-confounds-decoding-4) A) Model performance when using brain size to predict gender for both brain-size estimated from grey matter (left) and from white matter (right). Points in yellow depict individual $F_{1}$ scores per fold in the 10-fold cross-validation scheme. Whiskers of the box plot are 1.5x the interquartile range. B) Distributions of observed correlations between brain size and voxels ($r_{XC}$), overlayed with the analytic sampling distribution of correlation coefficients when $\rho = 0$ and $N = 217$, for both the VBM data (left) and TBSS data (right). Density estimates are obtained by kernel density estimation with a Gaussian kernel and Scott's rule [@scott1979optimal] for bandwidth selection.
+
+To estimate whether brain size is encoded in the neuroimaging data, we compared the distribution of bivariate correlation coefficients (of each voxel with brain size) with the sampling distribution of correlation coefficients when $\rho = 0$ and $N = 217$ (see section [Analysis of negative bias after WDCR](#confounds-decoding-results-wdcr-bias) for details). Under the null hypothesis that there are no correlations between brain size and voxel intensities, each individual correlation coefficient between a voxel and the confound can be regarded as an independent sample with $N = 217$ (ignoring correlations between voxels for simplicity). Because $K$ is very large for both the VBM and TBSS data, the empirical distribution of correlation coefficients should, under the null hypothesis, approach the analytic distribution of correlation coefficients parametrized by $\rho = 0$ and $N = 217$. Contrarily, the density plots in Fig. \@ref(fig:fig-confounds-decoding-4)B clearly show that the observed correlation coefficients distribution does not follow the sampling distribution (with both an increase in variance and a shift of the mode). This indicates that at least some of the correlation coefficients between voxel intensities and brain size are extremely unlikely under the null hypothesis. Note that this interpretation is contingent on the assumption that the relation between brain size and VBM/TBSS data is linear. In the Supplementary Materials and Results (Supplementary Figures \@ref(fig:fig-confounds-decoding-S7)-\@ref(fig:fig-confounds-decoding-S9)), we provide some evidence for the validity of this assumption.
+
 ### Baseline model: no confound control
 
+In our baseline model on the empirical data, for different numbers of voxels, we predicted gender from structural MRI data (VBM and TBSS) without controlling for brain size (see Figure \@ref(fig:fig-confounds-decoding-5)). The results show significant above chance performance of the MVPA pipeline based on both the VBM data and the TBSS data. All performance scores averaged across folds were significant ($p < 0.001$).
+
+```{r fig-confounds-decoding-5, fig.cap='(ref:caption-fig-confounds-decoding-5)', results='show'}
+knitr::include_graphics("_bookdown_files/confounds-decoding-files/figures/figure_5.png", auto_pdf = TRUE)
+```
+
+(ref:caption-fig-confounds-decoding-5) Baseline scores using the VBM (left) and TBSS (right) data without any confound control. Scores reflect the average $F_{1}$ score across 10 folds; error bars reflect 95% confidence intervals. The dashed black line reflect theoretical chance-level performance and the dashed orange line reflects the average model performance when only brain size is used as a predictor for reference; Asterisks indicates significant performance above chance: *** = $p < 0.001$, ** = $p < 0.01$, * = $p < 0.05$.
+
+These above chance performance estimates replicate previous studies on gender decoding using structural MRI data [@Del_Giudice2016-ns; @Rosenblatt2016-oy; @Sepehrband2018-dy] and will serve as a baseline estimate of model performance to which the confound control methods will be compared.
+
+In the next three subsections, we will report the results from the three discussed methods to control for confounds: post hoc counterbalancing, whole-dataset confound regression (WDCR), and cross-validated confound regression (CVCR).
+
 ### Post hoc counterbalancing
+
+
+
 
 #### Empirical results
 
@@ -300,7 +325,7 @@ Then, in a second simulation, we similarly simulated null data as in the previou
 
 #### Efficacy analysis
 
-#### Analysis of negative bias after WDCR
+#### Analysis of negative bias after WDCR {#confounds-decoding-results-wdcr-bias}
 
 ### Cross-validated confound regression (CVCR)
 
