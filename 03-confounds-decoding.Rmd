@@ -310,12 +310,35 @@ In the next three subsections, we will report the results from the three discuss
 
 ### Post hoc counterbalancing
 
-
-
-
 #### Empirical results
 
-#### Efficacy analysis
+In order to decorrelate brain size and gender (i.e., $r_{Cy} > 0.1$), our subsampling algorithm selected 117 samples in the VBM data (i.e., a sample size reduction of 46.1%) and 131 samples in the TBSS data (i.e., a reduction of 39.6%). The model performance for different values of  (number of voxels) are shown in Figure \@ref(fig:fig-confounds-decoding-6). Contrary to our expectations, the predictive accuracy of our decoding pipeline after counterbalancing was similar to baseline performance. This is particularly surprising in light of the large reductions in sample size, which results in a substantial loss in power, which in turn is expected to lead to lower model performance.
+
+```{r fig-confounds-decoding-6, fig.cap='(ref:caption-fig-confounds-decoding-6)', results='show'}
+knitr::include_graphics("_bookdown_files/confounds-decoding-files/figures/figure_6.png", auto_pdf = TRUE)
+```
+
+(ref:caption-fig-confounds-decoding-6) Model performance after counterbalancing (green) versus the baseline performance (blue) for both the VBM (left) and TBSS (right) data (upper row) and the difference in performance between the methods (lower row). Performance reflects the average (difference) $F_{1}$ score across 10 folds; error bars reflect 95% confidence intervals. The dashed black line reflect theoretical chance-level performance (0.5) and the dashed orange line reflects the average model performance when only brain size is used as a predictor. Asterisks indicates significant performance above chance: *** = $p < 0.001$, ** = $p < 0.01$, * = $p < 0.05$.
+
+One could argue that the lack of expected decrease in model performance after counterbalancing can be explained by the possibility that the subsampling and counterbalancing procedure just leads to the selection of different features during univariate feature selection compared to the baseline model. In other words, the increase in model performance may be caused by the feature selection function, which selects "better" voxels (i.e., containing more "robust" signal), resulting in similar model performance in spite of the reduction in sample size. However, this does not explain the similar scores for counterbalancing and the baseline model when using all voxels (the data points at $K \mathrm{voxels} = \dots \mathrm{(all)}$ in Figure \@ref(fig:fig-confounds-decoding-6)). Another possibility for the relative increase in model performance based on the counterbalanced data versus the baseline model is that counterbalancing increased the amount of signal in the data. Indeed, counterbalancing appeared to increase the (absolute) correlations between the data and the target ($r_{yX}$), which is visualized in Figure \@ref(fig:fig-confounds-decoding-7), suggesting an increase in signal.
+
+```{r fig-confounds-decoding-7, fig.cap='(ref:caption-fig-confounds-decoding-7)', results='show'}
+knitr::include_graphics("_bookdown_files/confounds-decoding-files/figures/figure_7.png", auto_pdf = TRUE)
+```
+
+(ref:caption-fig-confounds-decoding-7) Density plots of the correlations between the target and voxels across all voxels before (blue) and after (green) subsampling for both the VBM and TBSS data. Density estimates are obtained by kernel density estimation with a Gaussian kernel and Scott's rule [@scott1979optimal] for bandwidth selection.
+
+This apparent increase in the correlations between the target and neuroimaging data goes against the intuition that removing the influence of a confound that is highly correlated with the target will reduce decoding performance. To further investigate this, we replicated this effect of post hoc counterbalancing on simulated data, as described in the next section ([Efficacy analyses](#confounds-decoding-results-cb-efficacy)), and additionally investigated the cause of the negative bias observed after WDCR using a separate set of simulations.
+
+#### Efficacy analysis {#confounds-decoding-results-cb-efficacy}
+
+To evaluate the efficacy of the three confound control methods, we simulated data in which we varied the strength of confound $R^2$ and signal $R^2$, after which we applied the three confound control methods to the data. The results of this analysis show that counterbalancing maintains chance-level model performance when there is almost no signal in the data (i.e., signal $R^2 = 0.004$; Figure \@ref(fig:fig-confounds-decoding-8), left graph, green line). However, when there is some signal (i.e., signal $R^2 = 0.1$; Fig. 8, right graph), we observed that counterbalancing yields similar or even higher scores than the baseline model, replicating the effects observed in the empirical analyses.
+
+```{r fig-confounds-decoding-8, fig.cap='(ref:caption-fig-confounds-decoding-8)', results='show'}
+knitr::include_graphics("_bookdown_files/confounds-decoding-files/figures/figure_8.png", auto_pdf = TRUE)
+```
+
+(ref:caption-fig-confounds-decoding-8) Results from the different confound control methods on simulated data without any experimental effect (signal $R^2 = 0.004$; left graph) and with some experimental effect (signal $R^2 = 0.1$; right graph) for different values of confound $R^2$. The orange line represents the average performance (±1 SD) when confound $R^2 = 0$, which serves as a “reference performance” for when there is no confounded signal in the data. For both graphs, the correlation between the target and the confound, $r_{yC}$, is fixed at 0.65. The results from the WDCR and CVCR methods are explained later.
 
 #### Analysis of positive bias after post hoc counterbalancing
 

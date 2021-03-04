@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020) (preloaded format=xelatex 2021.2.23)  4 MAR 2021 10:09
+This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020) (preloaded format=xelatex 2021.2.23)  4 MAR 2021 10:51
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1270,14 +1270,14 @@ LaTeX Info: Redefining \sffamily on input line 21.
 LaTeX Info: Redefining \ttfamily on input line 21.
 Package polyglossia Info: Option: English, variant=american.
 Package polyglossia Info: Option: English, variant=american.
-LaTeX Info: Redefining \rmfamily on input line 356.
-LaTeX Info: Redefining \sffamily on input line 356.
-LaTeX Info: Redefining \ttfamily on input line 356.
+LaTeX Info: Redefining \rmfamily on input line 362.
+LaTeX Info: Redefining \sffamily on input line 362.
+LaTeX Info: Redefining \ttfamily on input line 362.
 Package polyglossia Info: Option: English, variant=american.
 Package polyglossia Info: Option: English, variant=american.
-LaTeX Info: Redefining \rmfamily on input line 364.
-LaTeX Info: Redefining \sffamily on input line 364.
-LaTeX Info: Redefining \ttfamily on input line 364.
+LaTeX Info: Redefining \rmfamily on input line 370.
+LaTeX Info: Redefining \sffamily on input line 370.
+LaTeX Info: Redefining \ttfamily on input line 370.
 Package polyglossia Info: Option: English, variant=american.
 Package polyglossia Info: Option: English, variant=american.
 )
@@ -1618,10 +1618,6 @@ put line 828.
 
 [51] [52]
 
-LaTeX Warning: Reference `fig:fig-confounds-decoding-8' on page 53 undefined on
- input line 840.
-
-
 LaTeX Warning: Reference `fig:fig-confounds-decoding-10' on page 53 undefined o
 n input line 840.
 
@@ -1677,94 +1673,106 @@ n input line 972.
 File: _bookdown_files/confounds-decoding-files/figures/figure_5.pdf Graphic fil
 e (type pdf)
 <use _bookdown_files/confounds-decoding-files/figures/figure_5.pdf>
-[66] [67] [68
+[66]
+File: _bookdown_files/confounds-decoding-files/figures/figure_6.pdf Graphic fil
+e (type pdf)
+<use _bookdown_files/confounds-decoding-files/figures/figure_6.pdf>
+[67]
+File: _bookdown_files/confounds-decoding-files/figures/figure_7.pdf Graphic fil
+e (type pdf)
+<use _bookdown_files/confounds-decoding-files/figures/figure_7.pdf>
+[68]
+File: _bookdown_files/confounds-decoding-files/figures/figure_8.pdf Graphic fil
+e (type pdf)
+<use _bookdown_files/confounds-decoding-files/figures/figure_8.pdf>
+[69] [70] [71
 
-] [69
-
-] [70
-
-] [71
-
-]
-LaTeX Font Info:    Font shape `TU/MinionPro(0)/b/it' will be
-(Font)              scaled to size 17.00366pt on input line 1073.
-[72
+] [72
 
 ] [73
 
+] [74
 
 ]
-Overfull \hbox (4.30997pt too wide) in paragraph at lines 1183--1183
+LaTeX Font Info:    Font shape `TU/MinionPro(0)/b/it' will be
+(Font)              scaled to size 17.00366pt on input line 1109.
+[75
+
+] [76
+
+
+]
+Overfull \hbox (4.30997pt too wide) in paragraph at lines 1219--1219
 []\TU/MinionPro(0)/m/n/10 Interoception|  
  []
 
-[74
+[77
 
-] [75] [76] [77] [78] [79] [80]
+] [78] [79] [80] [81] [82] [83]
 File: _bookdown_files/shared-states-files/figures/figure_S1.pdf Graphic file (t
 ype pdf)
 <use _bookdown_files/shared-states-files/figures/figure_S1.pdf>
-[81]
+[84]
 File: _bookdown_files/shared-states-files/figures/figure_S2.pdf Graphic file (t
 ype pdf)
 <use _bookdown_files/shared-states-files/figures/figure_S2.pdf>
-[82
+[85
 
 ]
 Overfull \vbox (24.52359pt too high) has occurred while \output is active []
 
-[83]
+[86]
 File: _bookdown_files/shared-states-files/figures/figure_S3.pdf Graphic file (t
 ype pdf)
 <use _bookdown_files/shared-states-files/figures/figure_S3.pdf>
-[84
+[87
 
 ]
 File: _bookdown_files/shared-states-files/figures/figure_S4.pdf Graphic file (t
 ype pdf)
 <use _bookdown_files/shared-states-files/figures/figure_S4.pdf>
-[85] [86]
+[88] [89]
 File: _bookdown_files/shared-states-files/figures/figure_S5.pdf Graphic file (t
 ype pdf)
 <use _bookdown_files/shared-states-files/figures/figure_S5.pdf>
-[87]
+[90]
 Overfull \vbox (123.68202pt too high) has occurred while \output is active []
 
-[88]
+[91]
 File: _bookdown_files/shared-states-files/figures/figure_S6.pdf Graphic file (t
 ype pdf)
 <use _bookdown_files/shared-states-files/figures/figure_S6.pdf>
-[89]
+[92]
 Overfull \vbox (9.79538pt too high) has occurred while \output is active []
 
-[90]
+[93]
 File: _bookdown_files/shared-states-files/figures/figure_S7.pdf Graphic file (t
 ype pdf)
 <use _bookdown_files/shared-states-files/figures/figure_S7.pdf>
-[91]
+[94]
 File: _bookdown_files/shared-states-files/figures/figure_S8.pdf Graphic file (t
 ype pdf)
 <use _bookdown_files/shared-states-files/figures/figure_S8.pdf>
-[92]
+[95]
 Overfull \vbox (159.71771pt too high) has occurred while \output is active []
 
-[93]
-Overfull \hbox (6.48112pt too wide) in paragraph at lines 1419--1419
+[96]
+Overfull \hbox (6.48112pt too wide) in paragraph at lines 1455--1455
 \TU/MinionPro(0)/m/n/10 optimization- 
  []
 
-[94] [95]
-Overfull \hbox (10.28923pt too wide) in paragraph at lines 1466--1466
+[97] [98]
+Overfull \hbox (10.28923pt too wide) in paragraph at lines 1502--1502
 []\TU/MinionPro(0)/m/n/10 Supramarginal 
  []
 
 
-Overfull \hbox (10.28923pt too wide) in paragraph at lines 1466--1466
+Overfull \hbox (10.28923pt too wide) in paragraph at lines 1502--1502
 []\TU/MinionPro(0)/m/n/10 Supramarginal 
  []
 
-[96] [97]
-Underfull \hbox (badness 5316) in paragraph at lines 1473--1474
+[99] [100]
+Underfull \hbox (badness 5316) in paragraph at lines 1509--1510
 \TU/MinionPro(0)/m/n/12 orderly, we chose not to include the actual tables with
 
  []
@@ -1772,67 +1780,67 @@ Underfull \hbox (badness 5316) in paragraph at lines 1473--1474
 File: _bookdown_files/shared-states-files/figures/github.pdf Graphic file (type
  pdf)
 <use _bookdown_files/shared-states-files/figures/github.pdf>
-[98] [99] [100
-
-] [101
-
-] [102
-
-] [103
+[101] [102] [103
 
 ] [104
 
 ] [105
 
+] [106
 
-] [106] [107]
-Underfull \hbox (badness 8132) in paragraph at lines 1597--1599
+] [107
+
+] [108
+
+
+] [109] [110]
+Underfull \hbox (badness 8132) in paragraph at lines 1633--1635
  \TU/MinionPro(0)/m/n/12 schizophrenia: Prevalence and impact on outcomes.
  []
 
-[108] [109] [110] [111] [112] [113] [114] [115] [116] [117] [118] [119
+[111] [112] [113] [114] [115] [116] [117] [118] [119] [120] [121] [122
 
 ]
 LaTeX Font Info:    Font shape `TU/MinionPro(0)/b/n' will be
-(Font)              scaled to size 10.77489pt on input line 1898.
+(Font)              scaled to size 10.77489pt on input line 1934.
 
-Underfull \hbox (badness 10000) in paragraph at lines 1898--1899
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1900--1901
+Underfull \hbox (badness 10000) in paragraph at lines 1934--1935
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1902--1903
+Underfull \hbox (badness 10000) in paragraph at lines 1936--1937
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1904--1905
+Underfull \hbox (badness 10000) in paragraph at lines 1938--1939
 
  []
 
-[120
+
+Underfull \hbox (badness 10000) in paragraph at lines 1940--1941
+
+ []
+
+[123
 
 ]
-LaTeX Info: Redefining \rmfamily on input line 1916.
-LaTeX Info: Redefining \sffamily on input line 1916.
-LaTeX Info: Redefining \ttfamily on input line 1916.
+LaTeX Info: Redefining \rmfamily on input line 1952.
+LaTeX Info: Redefining \sffamily on input line 1952.
+LaTeX Info: Redefining \ttfamily on input line 1952.
 Package polyglossia Info: Option: English, variant=american.
-LaTeX Info: Redefining \rmfamily on input line 1923.
-LaTeX Info: Redefining \sffamily on input line 1923.
-LaTeX Info: Redefining \ttfamily on input line 1923.
+LaTeX Info: Redefining \rmfamily on input line 1959.
+LaTeX Info: Redefining \sffamily on input line 1959.
+LaTeX Info: Redefining \ttfamily on input line 1959.
 Package polyglossia Info: Option: English, variant=american.
-[121
+[124
 
 ]
-LaTeX Info: Redefining \rmfamily on input line 1931.
-LaTeX Info: Redefining \sffamily on input line 1931.
-LaTeX Info: Redefining \ttfamily on input line 1931.
-[122
+LaTeX Info: Redefining \rmfamily on input line 1967.
+LaTeX Info: Redefining \sffamily on input line 1967.
+LaTeX Info: Redefining \ttfamily on input line 1967.
+[125
 
 ]
 The property list \polyglossia@langsetup contains the pairs (without outer
@@ -1896,14 +1904,14 @@ LaTeX Info: Redefining \sffamily on input line 21.
 LaTeX Info: Redefining \ttfamily on input line 21.
 Package polyglossia Info: Option: English, variant=american.
 Package polyglossia Info: Option: English, variant=american.
-LaTeX Info: Redefining \rmfamily on input line 356.
-LaTeX Info: Redefining \sffamily on input line 356.
-LaTeX Info: Redefining \ttfamily on input line 356.
+LaTeX Info: Redefining \rmfamily on input line 362.
+LaTeX Info: Redefining \sffamily on input line 362.
+LaTeX Info: Redefining \ttfamily on input line 362.
 Package polyglossia Info: Option: English, variant=american.
 Package polyglossia Info: Option: English, variant=american.
-LaTeX Info: Redefining \rmfamily on input line 364.
-LaTeX Info: Redefining \sffamily on input line 364.
-LaTeX Info: Redefining \ttfamily on input line 364.
+LaTeX Info: Redefining \rmfamily on input line 370.
+LaTeX Info: Redefining \sffamily on input line 370.
+LaTeX Info: Redefining \ttfamily on input line 370.
 Package polyglossia Info: Option: English, variant=american.
 Package polyglossia Info: Option: English, variant=american.
 )
@@ -1912,12 +1920,12 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 21897 strings out of 478880
- 398153 string characters out of 5865192
- 906962 words of memory out of 5000000
- 41312 multiletter control sequences out of 15000+600000
+ 21917 strings out of 478880
+ 399267 string characters out of 5865192
+ 910480 words of memory out of 5000000
+ 41329 multiletter control sequences out of 15000+600000
  436833 words of font info for 147 fonts, out of 8000000 for 9000
  54 hyphenation exceptions out of 8191
  95i,17n,126p,3689b,706s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on thesis.pdf (130 pages).
+Output written on thesis.pdf (133 pages).
