@@ -1,14 +1,15 @@
 # Preface {-}
 
-This is the `html` output of the University of Amsterdam PhD thesis template from the [`amsterdown` package](https://github.com/lcreteig/amsterdown). You can view access the `pdf` version(s) of the output from the toolbar above.
+```{r align='center', out.width='390px', out.height='550px', echo=FALSE, include = knitr::is_html_output()}
+knitr::include_graphics(file.path('cover', 'thesis_cover.jpg')) # show thesis cover
+```
 
-This section will only show in the `html` version. Here you can add some general info about your thesis that's typically included in the `pdf`. For example:
+Bla bla.
 
-* who your supervisors were
-* where the project was conducted
-* the license the thesis is published under
-* funding info
-* an image of the cover of your thesis
-* etc.
+---
 
-For these and other ideas, see what this section looks like in [my PhD thesis](https://lcreteig.github.io/thesis/) (and also check out the source file [here](https://github.com/lcreteig/thesis/blob/master/_00-preface.Rmd)).
+This PhD project was conducted under the supervision of Dr. [H. Steven Scholte](https://scholtelab.io/steven-scholte/) and Dr. [Suzanne Oosterwijk](https://sites.google.com/site/suzanneoosterwijk/) at the [Department of Psychology](https://psyres.uva.nl/), Faculty of Behavioral and Social Sciences, University of Amsterdam.
+
+```{=html}
+<p><a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />The online version of this thesis is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>. The <i class="fa fa-file-pdf-o"></i> pdf version of the thesis is available for download on the toolbar above.</p>
+```

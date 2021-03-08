@@ -1,9 +1,7 @@
 ---
 ### Title page
-title: "Learning from the brain"
-subtitle: | 
-  | Best practices for the use of neuroimaging data
-  | in psychology research
+title: "Towards prediction"
+subtitle: Studying the mind and brain in the age of machine learning
 
 author: "Lukas Snoek"
 date: "maandag 21 oktober 2021"
@@ -101,7 +99,6 @@ output:
     #citation_package: biblatex
     includes:
       in_header: tex/preamble.tex
-      before_body: tex/front_matter.tex
 
 indent: false # indent new paragraphs, instead of leaving whitespace
 links-as-notes: true # in the pdf, print hyperlink URLS as footnotes (as they can't be clicked on)

@@ -219,6 +219,16 @@ $endfor$
 %%%%%%%%%%%%% BEGIN DOCUMENT %%%%%%%%%%%%%
 \begin{document}
 
+%% Page 0: cover  % LS
+
+% for some reason this cannot be in the preamble
+\setlength{\abstitleskip}{-\absparindent}
+
+% Include the cover page
+\pagestyle{empty}
+\renewcommand{\thepage}{\CoverName} % make sure this page is "numbered" with a name, not as page 1 or I
+\includepdf{./cover/thesis_cover.pdf}
+
 %% Page I: the half-title / "Franse pagina" %LCR
 \frontmatter
 \thispagestyle{empty}
