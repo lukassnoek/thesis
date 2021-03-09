@@ -816,7 +816,7 @@ In the Github repository corresponding to this article (\url{https://github.com/
 \hypertarget{confounds-decoding-methods-pipeline}{%
 \subsection{Decoding pipeline}\label{confounds-decoding-methods-pipeline}}
 
-All empirical analyses and simulations used a common decoding pipeline, implemented using functionality from the \emph{scikit-learn} Python package for machine learning (Abraham et al., \protect\hyperlink{ref-Abraham2014-ef}{2014}; Pedregosa, Varoquaux, Gramfort, Michel, Thirion, Grisel, Blondel, Prettenhofer, Weiss, Dubourg, Vanderplas, et al., \protect\hyperlink{ref-Pedregosa2011-bp}{2011}). This pipeline included univariate feature selection (based on a prespecified amount of voxels with highest univariate difference in terms of the ANOVA \emph{F}-statistic), feature-scaling (ensuring zero mean and unit standard deviation for each feature), and a support vector classifier (SVC) with a linear kernel, fixed regularization parameter (\emph{C} = 1), and sample weights set to be inversely proportional to class frequency (to account for class imbalance). In our empirical analyses, we evaluated model performance for different numbers of voxels (as selected by the univariate feature selection). For our empirical analyses, we report model performance as the \(F_{1}\) score, which is insensitive to class imbalance (which, in addition to adjusted sample weights, prevents the classifier from learning the relative probabilities of target classes instead of representative information in the features; see also Supplementary Figure \ref{fig:fig-shared-states-S14} for a replication of part of the results using AUROC, another metric that is insensitive to class imbalance). At chance level classification, the \(F_{1}\) score is expected to be 0.5. For our simulations, in which there is no class imbalance, we report model performance using accuracy scores. In figures showing error bars around the average model performance scores, the error bars represent 95\% confidence intervals estimated using the ``bias-corrected and accelerated'' (BCA) bootstrap method using 10,000 bootstrap replications (Efron, \protect\hyperlink{ref-efron1987better}{1987}). For calculating BCA bootstrap confidence intervals, we used the implementation from the open source ``scikits.bootstrap'' Python package (\url{https://github.com/cgevans/scikits-bootstrap}). Statistical significance was calculated using non-parametric permutation tests, as implemented in scikit-learn, with 1000 permutations (Ojala \& Garriga, \protect\hyperlink{ref-Ojala2010-rc}{2010}).
+All empirical analyses and simulations used a common decoding pipeline, implemented using functionality from the \emph{scikit-learn} Python package for machine learning (Abraham et al., \protect\hyperlink{ref-Abraham2014-ef}{2014}; Pedregosa, Varoquaux, Gramfort, Michel, Thirion, Grisel, Blondel, Prettenhofer, Weiss, Dubourg, Vanderplas, et al., \protect\hyperlink{ref-Pedregosa2011-bp}{2011}). This pipeline included univariate feature selection (based on a prespecified amount of voxels with highest univariate difference in terms of the ANOVA \emph{F}-statistic), feature-scaling (ensuring zero mean and unit standard deviation for each feature), and a support vector classifier (SVC) with a linear kernel, fixed regularization parameter (\emph{C} = 1), and sample weights set to be inversely proportional to class frequency (to account for class imbalance). In our empirical analyses, we evaluated model performance for different numbers of voxels (as selected by the univariate feature selection). For our empirical analyses, we report model performance as the \(F_{1}\) score, which is insensitive to class imbalance (which, in addition to adjusted sample weights, prevents the classifier from learning the relative probabilities of target classes instead of representative information in the features; see also Supplementary Figure \ref{fig:fig-confounds-decoding-S14} for a replication of part of the results using AUROC, another metric that is insensitive to class imbalance). At chance level classification, the \(F_{1}\) score is expected to be 0.5. For our simulations, in which there is no class imbalance, we report model performance using accuracy scores. In figures showing error bars around the average model performance scores, the error bars represent 95\% confidence intervals estimated using the ``bias-corrected and accelerated'' (BCA) bootstrap method using 10,000 bootstrap replications (Efron, \protect\hyperlink{ref-efron1987better}{1987}). For calculating BCA bootstrap confidence intervals, we used the implementation from the open source ``scikits.bootstrap'' Python package (\url{https://github.com/cgevans/scikits-bootstrap}). Statistical significance was calculated using non-parametric permutation tests, as implemented in scikit-learn, with 1000 permutations (Ojala \& Garriga, \protect\hyperlink{ref-Ojala2010-rc}{2010}).
 
 \hypertarget{confounds-decoding-methods-evaluated-methods}{%
 \subsection{Evaluated methods for confound control}\label{confounds-decoding-methods-evaluated-methods}}
@@ -835,7 +835,7 @@ Then, given that the subsampled dataset is counterbalanced with respect to the c
 \hypertarget{confound-regression}{%
 \subsubsection{Confound regression}\label{confound-regression}}
 
-In our empirical analyses and simulations, we tested two different versions of confound regression, which we call ``whole-dataset confound regression'' (WDCR) and ``cross-validated confound regression'' (CVCR). In WDCR, we regressed out the confounds from the predictors \emph{from the entire dataset at once}, i.e., before entering the iterative cross-validated MVPA pipeline (the approach taken by Abdulkadir et al., \protect\hyperlink{ref-Abdulkadir2014-bh}{2014}; Dubois et al., \protect\hyperlink{ref-Dubois2017-fl}{2017}; Kostro et al., \protect\hyperlink{ref-Kostro2014-cm}{2014}; Todd et al., \protect\hyperlink{ref-Todd2013-sd}{2013}). Note that we can do this for all \(K\) voxels at once using the closed-form OLS solution, in which we first estimated the parameters \(\hat{\beta}_{C}\):
+In our empirical analyses and simulations, we tested two different versions of confound regression, which we call ``whole-dataset confound regression'' (WDCR) and ``cross-validated confound regression'' (CVCR). In WDCR, we regressed out the confounds from the predictors \emph{from the entire dataset at once}, i.e., before entering the iterative cross-validated MVPA pipeline (the approach taken by Abdulkadir et al., \protect\hyperlink{ref-Abdulkadir2014-bh}{2014}; Dubois et al., \protect\hyperlink{ref-dubois2018resting}{2018}; Kostro et al., \protect\hyperlink{ref-Kostro2014-cm}{2014}; Todd et al., \protect\hyperlink{ref-Todd2013-sd}{2013}). Note that we can do this for all \(K\) voxels at once using the closed-form OLS solution, in which we first estimated the parameters \(\hat{\beta}_{C}\):
 
 \begin{equation}
 \hat{\beta}_{C} = (C^{T}C)^{-1}C^{T}X
@@ -906,8 +906,8 @@ We evaluated the different methods for confound control for two values of signal
 
 After the data were generated, a baseline model (no confound control) and the three methods outlined above (post hoc counterbalancing, WDCR, and CVCR) were applied to the simulated data using the standard pipeline described in the \protect\hyperlink{confounds-decoding-methods-pipeline}{Decoding pipeline} section (but without univariate feature selection) and compared to the reference performance.
 
-\hypertarget{analysis-of-positive-bias-after-post-hoc-counterbalancing}{%
-\subsubsection{Analysis of positive bias after post hoc counterbalancing}\label{analysis-of-positive-bias-after-post-hoc-counterbalancing}}
+\hypertarget{confounds-decoding-methods-counterbalancing-bias}{%
+\subsubsection{Analysis of positive bias after post hoc counterbalancing}\label{confounds-decoding-methods-counterbalancing-bias}}
 
 As detailed below, post hoc counterbalancing did not lead to the expected decrease in model performance; instead, there appeared to be a trend towards an \emph{increase} in model performance. To further investigate the cause of this unexpected result, we simulated a multivariate normal dataset with three variables, reflecting our data (\(X\)), target (\(y\)), and confound (\(C\)), with 1000 samples (\(N\)) and a single feature (\(K = 1\)). We iterated this data generation process 1000 times and subsequently selected the dataset which yielded the largest (positive) difference between model performance after post hoc counterbalancing versus no confound control. In other words, we used the dataset in which the counterbalancing issue was most apparent. While not necessarily representative of typical (neuroimaging) datasets, this process allowed us to explain and visualize how it is possible that model performance increases after counterbalancing the data.
 
@@ -1020,8 +1020,48 @@ To evaluate the efficacy of the three confound control methods, we simulated dat
 
 
 
-\hypertarget{analysis-of-positive-bias-after-post-hoc-counterbalancing-1}{%
-\subsubsection{Analysis of positive bias after post hoc counterbalancing}\label{analysis-of-positive-bias-after-post-hoc-counterbalancing-1}}
+As is apparent from Figure \ref{fig:fig-confounds-decoding-8} (right panel), when there is some signal, the counterbalanced data seem to yield better performance than the baseline model only for relatively low confound \(R^2\) values (confound \(R^2 < 0.15\)). As suggested by our findings in the empirical data (see Figure @(ref:fig-confounds-decoding-7)), we hypothesized that the observed improvement in model performance after counterbalancing was caused by the increase in correlations between the target and features in the neuroimaging data. In support of this hypothesis, Figure \ref{fig:fig-confounds-decoding-9} illustrates the relations between the strength of the confound (confound \(R^2\), color coded), the increase in correlations after post hoc counterbalancing (\(\delta r_{yX} = r_{yX}^{\mathrm{after}} - r_{yX}^{\mathrm{after}}\); x-axis) for each confound \(R^2\), and the resulting difference in model performance (\(\mathrm{ACC}_{\mathrm{CB}} - \mathrm{ACC}_{\mathrm{baseline}}\); y-axis). The figure shows that the increase or decrease in accuracy after counterbalancing (compared to baseline) depends on \(\delta r_{yX}\) (\(r(79) = .922\), \(p < 0.001\)), which in turn depends on confound \(R^2\) (\(r(79) = -0.987\), \(p < 0.001\)). To reiterate, these differences in model performance are only due to the post hoc counterbalancing procedure and not due to varying signal in the simulated data. The effect of post hoc counterbalancing on model performance thus seems to depend on the strength of the confound.
+
+\begin{figure}
+\centering
+\includegraphics{_bookdown_files/confounds-decoding-files/figures/figure_9.pdf}
+\caption{\label{fig:fig-confounds-decoding-9}The relationship between the increase in correlations between target and data (\(r_{yX}\)) after subsampling, confound \(R^2\), difference in model performance (here: accuracy) between the counterbalance model and baseline model (\(\mathrm{ACC}_{\mathrm{CB}} - \mathrm{ACC}_{\mathrm{baseline}}\)).}
+\end{figure}
+
+
+
+While this relationship in Figure \ref{fig:fig-confounds-decoding-9} might be statistically interesting, it does not explain why post hoc counterbalancing tends to increase the correlations between neuroimaging data and target, and even outperforms the baseline model when confound \(R^2\) is low and some signal is present. More importantly, it does not tell us whether the post hoc counterbalancing procedure uncovers signal that is truly related to the target --- in which case the procedure suppresses noise --- or inflates performance estimates and thereby introduces positive bias. Therefore, in the next section, we report and discuss results from a follow-up simulation that intuitively shows why post hoc counterbalancing leads to an increase in performance, and furthermore shows that this increase is in fact a positive bias.
+
+\hypertarget{analysis-of-positive-bias-after-post-hoc-counterbalancing}{%
+\subsubsection{Analysis of positive bias after post hoc counterbalancing}\label{analysis-of-positive-bias-after-post-hoc-counterbalancing}}
+
+With this follow-up analysis, we aimed to visualize the scenario in which post hoc counterbalancing leads to a clearly better performance than model performance without confound control. As such, we generated 1000 data sets using a covariance matrix that we knew leads to a large difference between the baseline model and model performance after counterbalancing (i.e., data with a low confound \(R^2\)). From these 1000 datasets, we selected the dataset that yielded the largest difference for our visualization (see the \protect\hyperlink{confounds-decoding-methods-counterbalancing-bias}{Analysis of positive bias after post hoc counterbalancing} section in the Methods for details).
+
+The data that yielded the largest difference (i.e., a performance increase from 0.613 to 0.804, a 31\% increase) are visualized in Figure \ref{fig:fig-confounds-decoding-10}. Each sample's confound value (\(C\)) is plotted against its feature value (\(X\)), both before subsampling (upper scatter plot) and after subsampling (lower scatter plot). From visual inspection, it appears that the samples rejected by the subsampling procedure (i.e., the samples with the white border) have relatively large absolute values of the confound variable, which tend to lie close to or on the ``wrong'' side of the classification boundary (i.e., the dashed black line) in this specific configuration of the data. In other words, subsampling seems to reject samples that are harder to classify or would be incorrectly classified based on the data (here, the single feature of \(X\)). The density plots in Figure \ref{fig:fig-confounds-decoding-10} show the same effect in a different way: while the difference in the modes of the distributions of the confound (\(C\)) between classes is reduced after subsampling (i.e., the density plots parallel to the y-axis), the difference in the modes of the distributions of the data (\(X\)) between classes is actually increased after subsampling (i.e., the density plots parallel to the x-axis).
+
+\begin{figure}
+\centering
+\includegraphics{_bookdown_files/confounds-decoding-files/figures/figure_10.pdf}
+\caption{\label{fig:fig-confounds-decoding-10}Both scatterplots visualize the relationship between the data (\(X\) with \(K=1\), on the x-axis), the confound (\(C\), on the y-axis) and the target (\(y\)). Dots with a white border in the upper scatterplot indicate samples that are rejected in the subsampling process; the lower scatterplot visualizes the data without these rejected samples. The dashed black lines in the scatterplot represent the decision boundary of the SVM classifier; the color of the background shows how samples in that area are classified (a blue background means a prediction of \(y = 0\) and a green background means a prediction of \(y = 1\)). The density plots parallel to the y-axis depict the distribution of the confound (\(C\)) for the samples in which \(y = 0\) (blue) and in which \(y = 1\) (green). The density plots parallel to x-axis depict the distribution of the data (\(X\)) for the samples in which \(y = 0\) (blue) and in which \(y = 1\) (green). Density estimates are obtained by kernel density estimation with a Gaussian kernel and Scott's rule (Scott, \protect\hyperlink{ref-scott1979optimal}{1979}) for bandwidth selection.}
+\end{figure}
+
+
+
+We quantified this effect of subsampling by comparing the signed distance from the decision boundary (i.e., the dashed line in the upper scatter plot) between the retained samples and the rejected (subsampled) samples, in which a larger distance from the decision boundary reflects a higher confidence of the classifier's prediction (see Figure \ref{fig:fig-confounds-decoding-3} for a visualization of this method). Indeed, we found that samples that are removed by subsampling lie significantly closer to (or on the ``wrong'' side of) the decision boundary (\emph{M} = -.358, \emph{SD} = .619) than samples that are retained after subsampling (\emph{M} = .506, \emph{SD} = .580), as indicated by a independent samples \emph{t}-test, \(t(998) = 22.32\), \(p < 0.001\). Also (which follows from the previous observation), samples that would have been removed by subsampling are more often classified incorrectly (75\% incorrect) than the samples that would have been retained by subsampling (20\% incorrect), as indicated by a chi-squared test, \(\chi^{2} = 270.29\), \(p < 0.001\).
+
+To show that the same effect (i.e., removing samples that tend to be hard to classify or would be wrongly classified) occurred in the empirical data after counterbalancing as well, we applied the same analysis of comparing model performance and distance to boundary between the retained and rejected samples to the empirical data. Indeed, across all different numbers of voxels (\(K\)), the retained samples were significantly more often classified correctly (Figure \ref{fig:fig-confounds-decoding-11}A) and had a significantly larger distance to the classification boundary (Figure \ref{fig:fig-confounds-decoding-11}B) than the rejected samples. This demonstrates that the same effect of post hoc counterbalancing, as shown in the simulated data, likely underlies the increase in model performance of the counterbalanced data relative to the baseline model in the empirical data.
+
+\begin{figure}
+\centering
+\includegraphics{_bookdown_files/confounds-decoding-files/figures/figure_11.pdf}
+\caption{\label{fig:fig-confounds-decoding-11}\textbf{A}) The proportion of samples classified correctly, separately for the ``retained'' samples (blue line) and ``rejected'' samples (green line); the dashed line represents chance level (0.5). \textbf{B}) The average distance to the classification boundary for the retained and rejected samples; the dashed line represents the decision boundary, with values below the line representing samples on the ``wrong'' side of the boundary (and vice versa). Asterisks indicates a significant difference between the retained and rejected samples: *** = \(p < 0.001\), ** = \(p < 0.01\), * = \(p < 0.05\).}
+\end{figure}
+
+
+
+One can wonder how much the occurrence of these observed biases in post hoc counterbalancing depends on the specific method of subsampling used. Random subsampling led to qualitatively similar results as targeted subsampling (cf.~Supplementary Figures \ref{fig:fig-confounds-decoding-S13} and \ref{fig:fig-confounds-decoding-S14} with random subsampling). Instead, the bias is introduced through features that weakly correlate with the target in the whole sample, but strongly in subsamples where there is no correlation between target and the confound (features which, as our results show, exist in the neuroimaging data). That is, the bias is an indirect result of decorrelating target and confound in the sample, which is an essential step in post hoc counterbalancing (in fact, it is the \emph{goal} of counterbalancing). For this reason, we consider it unlikely (but not impossible) that there exists a way to subsample data without introducing biases.
+
+In summary, removing a subset of observations to correct for the influence of a confound can induce substantial bias by removing samples that are harder to classify using the available data. The bias itself can be subtle (e.g., in our empirical results, the predictive performance falls in a realistic range of predictive performances), and could remain undetected when present. Therefore, we believe that post hoc counterbalancing by subsampling the data is an inappropriate method to control for confounds.
 
 \hypertarget{whole-dataset-confound-regression-wdcr}{%
 \subsection{Whole-dataset confound regression (WDCR)}\label{whole-dataset-confound-regression-wdcr}}
@@ -1029,11 +1069,58 @@ To evaluate the efficacy of the three confound control methods, we simulated dat
 \hypertarget{empirical-results-1}{%
 \subsubsection{Empirical results}\label{empirical-results-1}}
 
+In addition to post hoc counterbalancing, we evaluated the efficacy of ``whole-dataset confound regression'' (WDCR), i.e.~regressing out the confound from each feature separately using all samples from the dataset to control for confounds. Compared to the baseline model, WDCR yielded a strong decrease in performance, even dropping (significantly) below chance for all TBSS analyses and a subset of the VBM analyses (see Figure \ref{fig:fig-confounds-decoding-12}).
+
+\begin{figure}
+\centering
+\includegraphics{_bookdown_files/confounds-decoding-files/figures/figure_12.pdf}
+\caption{\label{fig:fig-confounds-decoding-12}Model performance after WDCR (orange) versus the baseline performance (blue) for both the VBM (left) and TBSS (right) data. Performance reflects the average \(F_{1}\) score across 10 folds; error bars reflect 95\% confidence intervals. The dashed black line reflect theoretical chance-level performance (0.5) and the dashed orange line reflects the average model performance when only brain size is used as a predictor. Asterisks indicates performance of the WDCR model that is significantly above or below chance: *** = \(p < 0.001\), ** = \(p < 0.01\), * = \(p < 0.05\).}
+\end{figure}
+
+
+
+This strong (and implausible) reduction in model performance after WDCR is investigated in more detail in the next two sections on the results from the simulations.
+
 \hypertarget{efficacy-analysis}{%
 \subsubsection{Efficacy analysis}\label{efficacy-analysis}}
 
+The results from the analyses investigating the efficacy of the confound control methods (see Figure \ref{fig:fig-confounds-decoding-8}) show that WDCR accurately corrects for the confound in both in data without signal (i.e., when signal \(R^2 = 0.004\)) and in data with some signal (i.e., when signal \(R^2 = 0.1\)), as evident from the fact that the performance after WDCR is similar to the reference performance. This result (i.e., plausible performance after confound control) stands in contrast to the results from the empirical analyses, which is why we ran a follow-up analysis on simulated data to investigate this specific issue.
+
 \hypertarget{confounds-decoding-results-wdcr-bias}{%
 \subsubsection{Analysis of negative bias after WDCR}\label{confounds-decoding-results-wdcr-bias}}
+
+Inspired by the work of Jamalabadi et al. (\protect\hyperlink{ref-jamalabadi2016classification}{2016}) on below chance accuracy in decoding analyses, we ran several follow-up analyses to get insight into why WDCR leads to below chance model performance. As Jamalabadi et al.~show, below chance model performance occurs when the data contain little signal. In our first follow-up simulation, we sought to refine the explanation of the cause of below chance model performance by linking it to the observed standard deviation of the empirical distribution of correlations between the data (\(X\)) and the target (\(y\)). To do so, we simulated random data (\(X\)) and a binary target (\(y \in \{0, 1\}\)) and estimated (per fold) the cross-validated classification accuracy using the standard pipeline described in the methods section. We repeated this process 500 times, yielding 500 data sets. The expected \emph{average} predictive accuracy for each dataset is 0.5, but this varies randomly across folds and iterations. We hypothesized that this variance can be explained by the standard deviation (``width'') of the initial feature-target correlation distribution, \emph{sd}(\(r_{Xy}\)): narrower distributions may yield relatively lower cross-validated classification accuracy than relatively wider feature-target correlation distributions. Indeed, we find that the initial standard deviation of this distribution is significantly correlated with the cross-validated accuracy, \(r(499) = 0.73\), \(p < 0.001\) (Figure \ref{fig:fig-confounds-decoding-13}A). Importantly, we find that this relationship holds for different values of \(N\) (see Supplementary Figure \ref{fig:fig-confounds-decoding-S15}, for different sizes of the test set (see Supplementary Figure \ref{fig:fig-confounds-decoding-S16}), and for different sizes of \(K\) (see Supplementary Figure \ref{fig:fig-confounds-decoding-S17}).
+
+\begin{figure}
+\centering
+\includegraphics{_bookdown_files/confounds-decoding-files/figures/figure_13.pdf}
+\caption{\label{fig:fig-confounds-decoding-13}\textbf{A}) The relationship between the standard deviation of the distribution of feature-target correlations, \emph{sd}(\(r_{yX}\)), and accuracy across iterations of cross-validated classification analyses of null data. The vertical dashed line represents the standard deviation from the sampling distribution parameterized with \(\rho = 0\) and \(N = 100\) (i.e., the same parameters used to generate the null data); the horizontal dashed line represents the expected accuracy for data with this standard deviation based on the regression line estimated from the data across simulations (see Supplementary Figure \ref{fig:fig-confounds-decoding-S15} for the same plot with different values for \(N\)). \textbf{B}) The relationship between the proportion of features of which the sign of their correlation with the target (\(r_{Xy}\)) ``flips'' between the train-set and the test-set and accuracy. The vertical dashed line represents a proportion of 0.5., i.e., 50\% of the features flip their correlation sign, which corresponds approximately with an accuracy of 0.5. \textbf{C}) The relationship between the weighted difference between feature-target correlations in the train and test set (see equation \eqref{eq:dataset-shift}) and accuracy.}
+\end{figure}
+
+
+
+This observation, then, begs the question: \emph{why} do narrower-than-chance correlation distributions lead to below chance accuracy? One potential explanation of below chance accuracy is that the classifier may learn a particular (linear) relationship between features and the target in the train set (e.g., \(r_{Xy} = 0.05\)), while the sign of this relationship is ``flipped'' in the test set (e.g., \(r_{Xy} = -0.03\); see Jamalabadi et al., \protect\hyperlink{ref-jamalabadi2016classification}{2016}), which is known in the machine learning literature as ``dataset shift'' (Quionero-Candela et al., \protect\hyperlink{ref-Quionero-Candela2009-ge}{2009}). This situation would lead classifiers to predict the exact opposite classes for samples in the test set, leading to below chance accuracy. In the results of our simulated data, the standard deviation of the feature-target distribution was indeed significantly negatively correlated with the proportion of features that flipped the sign of their correlation between the train set and test set, \(r(499) = -.687\), \(p < 0.001\). This means that a higher density of feature-target correlations around 0 (i.e., a narrower width of the corresponding distribution) leads to more ``sign flips''. This phenomenon of ``sign flipping'' has been reported before in the context of (a priori) counterbalancing of categorical variables (\(X\)) with respect to the target (\(y\)), where it was observed that complete counterbalancing led to consistent ``sign flipping'' and consequently 0\% accuracy (Görgen et al., \protect\hyperlink{ref-Gorgen2017-sy}{2017}). Similarly, we found that the proportion of features that flip sign was significantly negatively correlated with accuracy, \(r = -.565\), \(p < 0.001\), indicating that larger proportions of features that flip sign leads to lower accuracy (see Figure \ref{fig:fig-confounds-decoding-13}B). Interestingly, at a proportion of 0.5, accuracy is approximately at chance level (0.5; dashed lines in Figure \ref{fig:fig-confounds-decoding-13}B).
+
+This relationship between ``sign flipping'' and accuracy, however, leaves room for improvement in terms of explaining the variance of accuracy scores. Therefore, we sought to further refine our ``model'' of accuracy by defining dataset shift not by the proportion of sign flips, but by the average \emph{difference} between the feature-target correlations between the train set and test set. Moreover, because not all features contribute equally strongly to a classifier's prediction (i.e., they are weighted), we furthermore weighed each feature's ``shift'' by the associated classifier weight (\(w_{j}\)). Formally, we estimated dataset shift (\(\hat{ds}\)) thus as follows:
+
+\begin{equation}
+\hat{ds} = \frac{1}{K}\sum_{j=1}^{K}(r_{X_{j,\mathrm{train}},y_\mathrm{train}} - r_{X_{j,\mathrm{test}},y_\mathrm{test}})w_{j}
+\label{eq:dataset-shift}
+\end{equation}
+
+Indeed, the correlation between this particular operationalization of ``dataset shift'' and accuracy across simulations was much higher than just the proportion of sign flips, \(r(499) = −0.934\) (Figure \ref{fig:fig-confounds-decoding-13}B).
+
+Having established the relation between the standard deviation of the initial feature-target correlation distribution and accuracy, we followed up our simulation by investigating specifically the effect of WDCR on the standard deviation of the correlation distribution. We investigated this by simulating data with different strengths of the correlation between the confound and the target (\(r_{Cy}\)) and the number of features (\(K\)). From Figure \ref{fig:fig-confounds-decoding-14}A, it is clear that, while the expected chance level is 0.5 in all cases, model performance quickly drops below chance for increasing correlations between the target and the confound, as well as for increasing numbers of features; even leading to a model performance of 0\% when the confound is perfectly correlated with the target and when using 1000 features. Figure \ref{fig:fig-confounds-decoding-14}C shows that, indeed, higher values lead to narrower correlation distributions, which is shown in Figure \ref{fig:fig-confounds-decoding-14}D to yield relatively lower accuracy scores.
+
+\begin{figure}
+\centering
+\includegraphics{_bookdown_files/confounds-decoding-files/figures/figure_14.pdf}
+\caption{\label{fig:fig-confounds-decoding-14}\textbf{A}) The effect of WDCR on data varying in the correlation of the confound with the target (\(r_{Cy}\); x-axis) and the number of features (\(K\); different lines). \textbf{B}) The effect of CVCR on data varying in the correlation of the confound with the target and the number of features. The dashed black line represents chance model performance in subplots A and B. \textbf{C}) The relation between the correlation of the confound with the target (\(r_{Cy}\)) and the standard deviation of the feature-target correlation distribution, \emph{sd}(\(r_{yX}\)) for the WDCR data. The dashed black line represents the standard deviation of the correlation distribution predicted by the sampling distribution. \textbf{D}) The relation of the standard deviation of the correlation distribution and accuracy for the WDCR data (only shown for the data when \(K = 100\); see Supplementary Figure \ref{fig:fig-confounds-decoding-S18} for visualizations of this effect for different values of \(K\)). The data depicted in all panels are null data.}
+\end{figure}
+
+
+
+In summary, our simulations show that below chance accuracy is accurately predicted by the standard deviation (i.e., ``width'') of the distribution of empirical feature-target correlations and that WDCR reduces this standard deviation, which explains why the empirical analyses yielded below chance model performance (especially for larger numbers of voxels).
 
 \hypertarget{cross-validated-confound-regression-cvcr}{%
 \subsection{Cross-validated confound regression (CVCR)}\label{cross-validated-confound-regression-cvcr}}
@@ -1041,14 +1128,44 @@ To evaluate the efficacy of the three confound control methods, we simulated dat
 \hypertarget{empirical-results-2}{%
 \subsubsection{Empirical results}\label{empirical-results-2}}
 
+As the results from the empirical analyses and simulations suggest, the use of WDCR is problematic because of the partitioning of the dataset into a separate train set and test set after confound regression. As such, our proposed cross-validated confound regression (CVCR) methods suggests to move the confound regression procedure inside the cross-validation loop, thereby also cross-validating this step. As expected, compared to the baseline model (i.e., no confound control), the results from the empirical analyses using CVCR show reduced (but not below chance) model performance for both VBM and TBSS data, and all different numbers of voxels (see Figure \ref{fig:fig-confounds-decoding-15}). Notably, for some numbers of voxels, model performance was not significantly above chance level.
+
+\begin{figure}
+\centering
+\includegraphics{_bookdown_files/confounds-decoding-files/figures/figure_15.pdf}
+\caption{\label{fig:fig-confounds-decoding-15}Model performance after CVCR (pink) versus the baseline performance (blue) for both the VBM (left) and TBSS (right) data. Performance reflects the average \(F_{1}\) score across 10 folds; error bars reflect 95\% confidence intervals across 1000 bootstrap replications. The dashed black line reflect theoretical chance level performance (0.5) and the dashed orange line reflects the average model performance when only brain size is used as a predictor. Asterisks indicates performance of the CVCR model that is significantly above or below chance: *** = \(p < 0.001\), ** = \(p < 0.01\), * = \(p < 0.05\).}
+\end{figure}
+
+
+
+We also evaluated whether regressing the confound from the train set only was sufficient to control for confounds, but found that it does not effectively control for confounds when there is no true signal (i.e., there is positive bias), which is visualized in more detail in Supplementary Figure \ref{fig:fig-confounds-decoding-S10} (cf.~Figure \ref{fig:fig-confounds-decoding-8}).
+
 \hypertarget{efficacy-analysis-1}{%
 \subsubsection{Efficacy analysis}\label{efficacy-analysis-1}}
+
+Similar to WDCR, CVCR yielded plausible and unbiased model performance (see Figure \ref{fig:fig-confounds-decoding-8}, pink line). Moreover, when applied to the simulated null data, CVCR yielded model performance scores at chance level across all levels of the confound-target correlation and numbers of features (see Figure \ref{fig:fig-confounds-decoding-14}B).
 
 \hypertarget{summary-methods-for-confound-control}{%
 \subsection{Summary methods for confound control}\label{summary-methods-for-confound-control}}
 
+In this section, we investigated the effects of different method to control confounds (post hoc counterbalancing, WDCR, and CVCR) on empirical MRI data and simulated data (see Figure \ref{fig:fig-confounds-decoding-16} for a summary of the empirical results). Post hoc counterbalancing was, at least using the subsampling method described, clearly unable to effectively control for confounding influences, which is putatively caused by indirect circularity in the analysis process due to subsampling. Confound regression showed an expected drop in model performance (but not below chance level), but only when the confound regression step is properly cross-validated (i.e., the CVCR version).
+
+\begin{figure}
+\centering
+\includegraphics{_bookdown_files/confounds-decoding-files/figures/figure_16.pdf}
+\caption{\label{fig:fig-confounds-decoding-16}An overview of the empirical results on the four different confound methods: None, post hoc counterbalancing, WDCR, and CVCR.}
+\end{figure}
+
+
+
 \hypertarget{confounds-decoding-discussion}{%
 \section{Discussion}\label{confounds-decoding-discussion}}
+
+Decoding analyses have become a popular alternative to univariate analyses of neuroimaging data. This analysis approach, however, inherently suffers from ambiguity in terms of which source of information is picked up by the decoder (Naselaris \& Kay, \protect\hyperlink{ref-Naselaris2015-jn}{2015}). Given that one is often interested in model interpretability rather than merely accurate prediction (Hebart \& Baker, \protect\hyperlink{ref-Hebart2017-jn}{2017}), one should strive to control for alternative sources of information (i.e., other than the target of interest) that might drive decoding. Effectively controlling for these alternative sources of information, or \emph{confounds}, helps in disambiguating decoding models. In this article, we reviewed and tested two generic, broadly applicable methods that aim to control for confounds in decoding analyses: post hoc counterbalancing and confound regression. Additionally, we proposed a third method that, unlike the other two methods, has shown to effectively control for confounds.
+
+Both when applied to empirical and simulated data, we found that neither post hoc counterbalancing nor (whole-dataset) confound regression yielded plausible and unbiased model performance estimates. First, we found that post hoc counterbalancing leads to \emph{optimistic} (i.e., positively biased) model performance estimates, which is a result of removing samples that are hard to classify or would be wrongly classified, during the subsampling process. Because this subsampling process is applied to the entire dataset at once (i.e., it is not cross-validated), it can be seen as a form of indirect circular analysis (Kriegeskorte, Simmons, Bellgowan, et al., \protect\hyperlink{ref-Kriegeskorte2009-yz}{2009}\protect\hyperlink{ref-Kriegeskorte2009-yz}{b}), in which the data themselves are used to inform analysis decisions, which can lead to biased generalization estimates. Second, our initial evaluation of confound regression, which was applied on the entire dataset (``WDCR''), yielded pessimistic (i.e., negatively biased) and even significantly below chance model performance estimates. Extending previous research (Jamalabadi et al., \protect\hyperlink{ref-jamalabadi2016classification}{2016}), we show that this negative bias occurs when the ``signal'' in the data (operationalized as the width of the feature-target correlation distribution) is lower than would be expected by chance, which we link to the sampling distribution of the Pearson correlation coefficient. Importantly, we show that WDCR systematically narrows the width of the correlation distribution --- and thus leads to lower model performance --- which is exacerbated by both higher correlations between target and confound, as well as by a larger number of features.
+
+The negative bias observed in WDCR is caused by the fact that it is performed on the whole dataset at once, leading to statistical dependencies between subsequent train and test partitions. To overcome this negative bias, we propose to cross-validate the confound regression procedure (which we call ``Cross-Validated Confound Regression'', CVCR). We show that this method yields plausible model performance in the empirical analyses (i.e., significantly above chance model performance) and nearly unbiased model performance in the simulations, for different datasets varying in the amount of features (\(K\)) and the strength of the confound (\(r_{Cy}\)). Moreover, initial supplementary simulations suggest that these results generalize to (simulated) fMRI data (Supplementary Figure \ref{fig:fig-confounds-decoding-S1}), seemingly demonstrating effective control of confounds across different degrees of autocorrelation (Supplementary Figure \ref{fig:fig-confounds-decoding-S2}). The method may show some negative bias in some scenarios due to the fact that, in the train set, CVCR will remove all variance associated with the confound (even variance \emph{spuriously} correlated with the confound). However, this bias seems, at least in the simulated scenarios, very small. Overall, we believe that our results demonstrate that CVCR is a flexible and effective method to control for confounds in decoding analyses of neuroimaging data.
 
 \hypertarget{relevance-and-consequences-for-previous-and-future-research}{%
 \subsection{Relevance and consequences for previous and future research}\label{relevance-and-consequences-for-previous-and-future-research}}
@@ -1056,23 +1173,45 @@ To evaluate the efficacy of the three confound control methods, we simulated dat
 \hypertarget{a-priori-and-post-hoc-counterbalancing}{%
 \subsubsection{A priori and post hoc counterbalancing}\label{a-priori-and-post-hoc-counterbalancing}}
 
+We believe our results have implications not only for post hoc counterbalancing, but a priori counterbalancing in observational designs in general. In both behavioral research (Wacholder et al., \protect\hyperlink{ref-Wacholder1992-wb}{1992}) and neuroimaging research {[}Gorgen2017-sy{]}, a priori counterbalancing (or case-control ``matching'') is a common strategy to avoid effects of confounds. However, as we show in the current study, this may unintentionally remove samples that are harder to predict, especially when there is little shared variance between the confound and the other predictors (i.e., when there is low confound \(R^2\)). Because, conceptually, this represents a form of circular analysis, counterbalancing --- regardless of whether it is applied a priori or post hoc --- can yield biased model performance estimates. To some extent, the bias in the post hoc counterbalancing results should not come as a surprise: as noted in the \protect\hyperlink{confounds-decoding-methods}{Methods} section, counterbalancing in observational research requires the researcher to choose a sample that is not representative of the population (see also Sedgwick, \protect\hyperlink{ref-Sedgwick2013-op}{2013}). As a result, out-of-sample predictive performance drops significantly, in our case even to chance level.
+
+Since post hoc counterbalancing does not show any positive bias in model performance when there is no signal at all (i.e., signal \(R^2\)), one could argue that any observed significant above chance effect, while positively biased in terms of effect magnitude, can be interpreted as evidence that there must be signal in the data in the first place. However, we argue against this interpretation for two reasons. First, any above chance predictive performance of models fitted after subsampling is not only positively biased, but also does not cross-validate to the rejected samples (see Figure \ref{fig:fig-confounds-decoding-11}). That is, the model picks up relations between features and target that are only present in the subsample, and not in the samples left out of the analysis. As a result, it is questionable whether (and if so, how) the model should be interpreted --- after all, we assume that the rejected samples were drawn from the population of interest in a valid way. Second, any possible absence of above chance model performance after subsampling can neither be interpreted as evidence for an \emph{absence} of a true effect, since the subsampling procedure necessarily leads to a (often substantial) power loss. It could still well be that in the original sample there was a true relation between features and target. Thus, interpretation of modelling efforts after subsampling is problematic in case of both \emph{presence} and \emph{absence} of above chance model performances.
+
 \hypertarget{confound-regression-1}{%
 \subsubsection{Confound regression}\label{confound-regression-1}}
+
+In contrast to post hoc counterbalancing, confound regression in its uncross-validated form (i.e., WDCR) has been applied widely in the context of decoding analyses (Dubois et al., \protect\hyperlink{ref-dubois2018resting}{2018}; Kostro et al., \protect\hyperlink{ref-Kostro2014-cm}{2014}; Rao et al., \protect\hyperlink{ref-Rao2017-bw}{2017}; Todd et al., \protect\hyperlink{ref-Todd2013-sd}{2013}). Indeed, the first study that systematically investigated the effect of confounds in decoding analyses (Todd et al., \protect\hyperlink{ref-Todd2013-sd}{2013}) used WDCR to account for the confounding effect of reaction times (RT) on decoding of rule representations and found that WDCR completely eliminated the predictive performance that was found without controlling for RT. This observation, however, can potentially be explained by the negative bias induced by WDCR. This possible explanation is corroborated by a follow-up study that similarly looked into RT confounding the decoding of rule representations (Woolgar et al., \protect\hyperlink{ref-Woolgar2014-jb}{2014}), who did not use WDCR but accounted for RT confounding by including it as a covariate during the pattern estimation procedure (see \protect\hyperlink{confounds-decoding-supplement}{Supplementary Materials} for a tentative evaluation of this method), which in contrast to the study by Todd et al.~yielded significant decoding performance. Moreover, while not specifically investigated here, we expect a similar negative bias to occur when a confound is removed from a continuous target variable using WDCR --- which may offer an explanation for the null finding of Dubois et al. (\protect\hyperlink{ref-dubois2018resting}{2018}), who fail to decode personality characteristics from resting-state fMRI.
 
 \hypertarget{relevance-to-other-analysis-methods}{%
 \subsubsection{Relevance to other analysis methods}\label{relevance-to-other-analysis-methods}}
 
+While this article focuses on controlling for confounds in decoding analyses specifically, we believe that our findings may be relevant for analysis methods beyond decoding analyses as well. In fact, methods for controlling for confounds (or alternative sources of information) have previously been investigated and applied in another type of MVPA named ``representational similarity analysis'' (RSA; Kriegeskorte et al., \protect\hyperlink{ref-kriegeskorte2008representational}{2008}). In the context of RSA, the explained variance in the neural data is often partitioned into different (model-based) feature sets (i.e., sources of information), which allows one to draw conclusions about the unique influence of each source of information (see, e.g., Groen et al., \protect\hyperlink{ref-Groen2018-qo}{2018}; Hebart et al., \protect\hyperlink{ref-Hebart2018-dz}{2018}; Ramakrishnan et al., \protect\hyperlink{ref-Ramakrishnan2014-ki}{2014}). Specifically, variance partitioning in RSA is done by removing the variance from the representational dissimilarity matrix (RDM) based on the feature set that needs to be controlled for. Notably, the variance of the RDMs that are not of interest can be removed from only the neural RDM (Hebart et al., \protect\hyperlink{ref-Hebart2018-dz}{2018}; Ramakrishnan et al., \protect\hyperlink{ref-Ramakrishnan2014-ki}{2014}) or both from the neural RDM and the RDM of interest (Groen et al., \protect\hyperlink{ref-Groen2018-qo}{2018}). While the analysis context is different, the underlying technique is identical to confound regression as described and evaluated in this article. Importantly, the studies employing this variance partitioning technique (Groen et al., \protect\hyperlink{ref-Groen2018-qo}{2018}; Hebart et al., \protect\hyperlink{ref-Hebart2018-dz}{2018}; Ramakrishnan et al., \protect\hyperlink{ref-Ramakrishnan2014-ki}{2014}) similarly report plausible model performances after confound regression (i.e., relatively lower but not below chance performance), corroborating our results with (cross-validated) confound regression. Note that the distinction between WDCR and CVCR in the context of most RSA studies (including the aforementioned studies) is largely irrelevant, as representational similarity analyses are not commonly cross-validated. However, recently, some have proposed to use cross-validated distance measures (such as the cross-validated Mahalanobis distance; Guggenmos et al., \protect\hyperlink{ref-Guggenmos2018-rr}{2018}; Walther et al., \protect\hyperlink{ref-Walther2016-je}{2016}) in RSA, which could suffer from negative bias when combined with (not cross-validated) variance partitioning similar to what we observed with WDCR in the context of decoding analyses.
+
+We believe that especially our findings with regard to WDCR and CVCR may be relevant for any cross-validated analysis, regardless of the ``direction'' of analysis (encoding vs.~decoding) and the dimensionality of the neural data (univariate vs.~multivariate approaches). In general, our findings with respect to negative bias after WDCR were to be expected, as it introduces dependence between the train set and the test set which violates the crucial assumption of independence of any cross-validated analysis. While a violation of the independence assumption often leads to positive bias such as in ``double dipping'' (Kriegeskorte, Simmons, Bellgowan, et al., \protect\hyperlink{ref-Kriegeskorte2009-yz}{2009}\protect\hyperlink{ref-Kriegeskorte2009-yz}{b}), we show here that it may also lead to negative bias. Either way, our findings reinforce the idea that data analysis operations should \emph{never} be applied to the entire dataset before subjecting the data to a cross-validated analysis. Therefore, we believe that our findings with respect to WDCR and CVCR will generalize to any cross-validated analysis (such as cross-validated MANOVA, Allefeld \& Haynes, \protect\hyperlink{ref-allefeld2014searchlight}{2014}; or cross-validated encoding models, Naselaris et al., \protect\hyperlink{ref-naselaris2011encoding}{2011}), but future research is necessary to substantiate this claim.
+
 \hypertarget{importance-for-gender-decoding-studies}{%
 \subsubsection{Importance for gender decoding studies}\label{importance-for-gender-decoding-studies}}
+
+The importance of proper confound control is moreover highlighted by the empirical question we address. Without any optimization of the prediction pipeline, we were able to predict gender with a model performance up to approximately 0.85 without confound control. This is in line with reports from various other studies (Del Giudice et al., \protect\hyperlink{ref-Del_Giudice2016-ns}{2016}; Rosenblatt, \protect\hyperlink{ref-Rosenblatt2016-oy}{2016}; Sepehrband et al., \protect\hyperlink{ref-Sepehrband2018-dy}{2018}). However, this predictive performance is driven by a mixture two sources of information: global and local differences in brain structure. With confound control, however, we show that predictive performance using only local differences lies around 0.6 for VBM data and 0.7 for TBSS data --- a substantial drop in performance. Especially because the remaining predictive performance is lower than predictive performance using only brain size, we argue that the use of proper confound control may lead one to draw substantially different conclusions about the differences in brain structure between men and women. For the debate on gender dimorphism, it is thus extremely important to take global brain size into account in the context of decoding analyses (as has been similarly recommended for mass-univariate analyses; Barnes et al., \protect\hyperlink{ref-Barnes2010-pu}{2010}).
 
 \hypertarget{choosing-a-confound-model-linear-vs.-nonlinear-models}{%
 \subsection{Choosing a confound model: linear vs.~nonlinear models}\label{choosing-a-confound-model-linear-vs.-nonlinear-models}}
 
+In the present paper, we focused on the use of linear models for confound control. It is crucial to note that the efficacy of confound control depends on the suitability of the confound regression model employed. Removing variance associated with a confound using a linear model removes only the variance of data (features) that is linearly related to the confound. When a confound is nonlinearly related to the data, some variance associated with the confound can remain in the data after a linear confound model is used to regress out variance. It is possible that the decoding model subsequently applied still picks up this residual ``confounded'' variance. In other words, an unsuitable confound model may control for confounds imperfectly.
+
+The exact relation between confound and (brain) data is hardly ever known a priori. However, it is possible to explore the nature of this relation using the data at hand. For example, a researcher can apply a cross-validated prediction pipeline to predict a feature (e.g., VBM voxel intensity) from the confound. The researcher can then test what type of model (linear or nonlinear) describes the relation between confound and data best. In the \protect\hyperlink{confounds-decoding-supplement}{Supplementary Materials} (section ``Linear vs nonlinear confound models: predicting VBM and TBSS data based on brain size''), we provide an example of this approach. We used linear, quadratic, and cubic regression models to predict VBM and TBSS voxel intensity using brain size as feature. In the Supplementary Results, we show that linear models perform equally well as or better than polynomial models for the majority of voxels (Supplementary Figures \ref{fig:fig-confounds-decoding-S7} and \ref{fig:fig-confounds-decoding-S9}). Further, for voxels where polynomials outperform linear models, the difference between model performances is minimal (Supplementary Figure \ref{fig:fig-confounds-decoding-S8}). Thus, in the empirical research question explored in this paper, a linear confound model seems to suit the data very well.
+
 \hypertarget{practical-recommendations}{%
 \subsection{Practical recommendations}\label{practical-recommendations}}
 
+As indicated by the title of this article, we will now outline some practical recommendations for dealing with confounds in decoding analyses of neuroimaging data. First, one needs to obtain an accurate measurement of potential confounds (Westfall \& Yarkoni, \protect\hyperlink{ref-westfall2016statistically}{2016}). While we assumed the availability of such a measure in this article, this is not always trivial. In experimental settings, for example, reaction times can potentially be identified as a confound (Todd et al., \protect\hyperlink{ref-Todd2013-sd}{2013}; Woolgar et al., \protect\hyperlink{ref-Woolgar2014-jb}{2014}), but arguably, it is not reaction time but rather an unobserved variable related to reaction time (e.g., difficulty or attention) that confounds the analysis. In such scenarios, the best one can do is measure reaction time as a proxy, and be aware that any subsequent confound control method is limited by how well this proxy corresponds to the actual confound. Second, one needs to identify which variables actually confound a decoding analysis. To detect confounds, we recommend using the ``same analysis approach'' outlined by Görgen et al. (\protect\hyperlink{ref-Gorgen2017-sy}{2017}). In short, this method involves trying to predict the target variable using your confound(s) as predictive features (for example, when using only brain size to predict gender). In case of significant above chance decoding performance, and assuming the confounds are actually encoded in the neuroimaging data, the hypothesized confounds will most likely influence the actual decoding analysis. While in the current article we focused on simple univariate confounding effects (i.e., confounding by a single variable), the same analysis approach is not limited to detecting univariate confounds --- it facilitates detecting multivariate (i.e., confounding by multiple variables) or interaction effects (i.e., confounding by interaction effects between variables) as well. For example, if one hypothesizes that the target variable is related to the interaction between confound \(C_{1}\) and \(C_{2}\) (i.e., \(C_{1} \times C_{2}\)), one can simply use the interaction term as the potential confound in the same analysis approach to evaluate the potential confounding influence.
+
+Once the specific confound terms have been identified, we recommend regressing out the confound from the data in a cross-validated manner (i.e., using CVCR). Specifically, we recommend including confound regression as the first step in your decoding pipeline to avoid the effect of confounds on other operations in the pipeline (such as univariate feature selection; Chu et al., \protect\hyperlink{ref-chu2012does}{2012}). In this article, we used ordinary least squares (OLS) regression to remove the influence of confounds from the data, because a linear model describes the relation between brain size and VBM/TBSS voxel intensities well (see Supplementary Figures \ref{fig:fig-confounds-decoding-S7}-\ref{fig:fig-confounds-decoding-S9}). However, not only linear models can be used to remove variance associated with a confound from the data --- it is possible to use nonlinear models (potentially with multiple confounds and interactions between them) if it is clear that the relation between confounds and neuroimaging features is nonlinear (see previous section for details on choosing a confound model). However, as a limitation to the presented results, we did not test whether CVCR also leads to (nearly) unbiased results when used with nonlinear models. We advise, therefore, in such cases, to first test in a simulation study whether CVCR provides an unbiased confound control method with nonlinear models before use with actual data.
+
 \hypertarget{conclusions}{%
 \section{Conclusions}\label{conclusions}}
+
+In general, we believe that the contributions of the current study are twofold. First and foremost, it provides a systematic evaluation of widely applicable methods to control for confounds and shows that, of the methods investigated, only one (``cross-validated confound regression'') appears to yield plausible and almost unbiased results. The results from this evaluation hopefully prevents researchers from using post hoc counterbalancing and whole-dataset confound regression, which we show may introduce (unintended) biases. Moreover, we made all analyses and preprocessed data openly available (\url{https://github.com/lukassnoek/MVCA}) and provide a simple implementation for cross-validated confound regression that interfaces with the popular scikit-learn package in the Python programming language. Second, we believe that this study improves understanding of the elusive phenomenon of below chance accuracy (building on previous work by Jamalabadi et al., \protect\hyperlink{ref-jamalabadi2016classification}{2016}). In general, we hope that this study helps researchers in gaining more insight into their decoding analyses by providing a method that disentangles the contributions of different sources of information that may be encoded in their data.
 
 \hypertarget{AOMIC}{%
 \chapter{The Amsterdam Open MRI Collection, a set of multimodal MRI datasets for individual difference analyses}\label{AOMIC}}
@@ -1504,6 +1643,293 @@ In order to keep the Supplementary materials concise and orderly, we chose not t
 \hypertarget{confounds-decoding-supplement}{%
 \chapter{Supplement to Chapter \ref{confounds-decoding}}\label{confounds-decoding-supplement}}
 
+The following supplementary methods describe the methods for the additional analyses done related to controlling for confounds in decoding analyses of (simulated) fMRI data and the validation of using linear confound models for brain size. All code for these simulations, analyses, and results for the fMRI-related sections can be found in \texttt{functional\_MRI\_simulation.ipynb} notebook. The code for the validation of linear confound models can be found in the notebook \texttt{empirical\_analysis\_gender\_classification.ipynb}. Both notebooks are stored in the project's Github repository (\url{https://github.com/lukassnoek/MVCA}).
+
+\hypertarget{supplementary-methods}{%
+\section{Supplementary methods}\label{supplementary-methods}}
+
+\hypertarget{functional-mri-simulation}{%
+\subsection{Functional MRI simulation}\label{functional-mri-simulation}}
+
+\hypertarget{rationale}{%
+\subsubsection{Rationale}\label{rationale}}
+
+The simulations of fMRI data as described here are meant to test the efficacy of our proposed methods for confound control (CVCR) and those proposed by others {[}``Control for confounds during pattern estimation''; Woolgar et al. (\protect\hyperlink{ref-Woolgar2014-jb}{2014})) when applied to fMRI data instead of structural MRI data, as we did in the main text. One reason to suspect differences in how these methods behave between structural and functional MRI data is that we need to estimate the feature patterns (\(X\)) from time series for fMRI data while the feature patterns in structural MRI data are readily available. Moreover, samples in pattern analyses of fMRI data are often correlated (due to temporal autocorrelation in the fMRI signal) while it is reasonable to believe that structural MRI yields independent samples (often individual subjects).
+
+\hypertarget{generation-of-the-data-x-y-c}{%
+\subsubsection{\texorpdfstring{Generation of the data (\(X\), \(y\), \(C\))}{Generation of the data (X, y, C)}}\label{generation-of-the-data-x-y-c}}
+
+In these simulations, we generated fMRI time series data across a grid of ``voxels'' (\(K\)) which may or may not activate in trials from different conditions. Additionally, we allow for the additive influence of a confounding variable with a prespecified correlation to the target variable (corresponding to the ``additive'' model from Woolgar et al., \protect\hyperlink{ref-Woolgar2014-jb}{2014}). In short, we generate voxel signal (\(s\)) as a function of both true effects of the trials from different conditions (\(\beta_{X}\)), the effect of the confound (\(\beta_{C}\)), and autocorrelated noise (\(\epsilon\)):
+
+\begin{equation}
+s = X\beta_{X} + C\beta_{C} + \epsilon, \epsilon \sim \mathcal{N}(0, V)
+\end{equation}
+
+where \(V\) specifies the covariance matrix of a signal autocorrelated as described by to an AR(1) process (we use \(\phi_{1} = 0.5\)). Note that, here, \(X\) and \(C\) refer to time-varying (HRF-convolved) predictors instead of, as in in the main text, arrays of features (voxels) across different samples. In this simulation, we evaluate two types of MVPA approaches. In the first approach, which we call ``trial-wise decoding'', an activity pattern is estimated for each trial separately using the least-squares all technique (LSA; Abdulrahman \& Henson, \protect\hyperlink{ref-abdulrahman2016effect}{2016}). In LSA, each trial gets its own regressor in a first-level GLM. This approach is often used when there is only a single fMRI run available. In the second approach, which we call ``run-wise decoding'', an activity pattern is estimated for each condition separately. Now, suppose one acquires a single run with two conditions and twenty trials per condition. In the trial-wise decoding approach, one would estimate the patterns of 40 trials (twenty for condition 1 and twenty for condition 2). Alternatively, suppose that one acquires ten runs with two conditions and again twenty trials per run. In the run-wise decoding approach, one would estimate in total twenty patterns (ten for condition 1 and ten for condition 2).
+
+Formally, for \(I\) trials across \(P\) conditions, \(X\) is ultimately of shape \(T\) (timepoints) \(\times (I \times P + 1)\) in the trial-wise decoding approach and \(T \times (P+1)\) in the run-wise decoding approach (the \(+ 1\) refers to the addition of an intercept). In our trial-wise simulations, we simulate 40 trials (\(I\)) across 2 conditions (\(P\)). In our run-wise simulations, we simulate 40 trials across 2 conditions in 10 runs. Note that the length of the fMRI run is automatically adjusted to the number of trials (\(I\)), conditions (\(P\)), trial duration, and interstimulus interval (ISI); increasing any of these parameters will increase the length of the run. We use a trial duration of 1 second and a jittered ISI between 4 and 5 seconds (mean = 4.5 seconds).
+
+The initial (non-HRF-convolved) confound (\(C\), with shape \(N \times 1\)) is generated with a prespecified correlation to the target (\(y\)) by adding noise (\(\epsilon\)) drawn from a standard normal distribution multiplied by a scaling factor (\(\gamma\)):
+
+\begin{equation}
+C = y + \gamma\epsilon
+\end{equation}
+
+This process starts with a very small scaling factor (\(\gamma\)). If the correlation between the target and the confound is too high, the scaling factor is increased and the process is repeated, which is iterated until the desired correlation has been found. The confound is then scaled from 0 to 1 using min-max scaling. After scaling, similar to the single-trial regressors (\(X_{j}\)), the confound (\(C\)) is also convolved with an HRF (the SPM default), representing a regressor which is parametrically modulated by the value of the confound for each trial (which could represent, for example, reaction time). The confound, \(C\), now represents a time-varying array of shape \(T \times 1\). This process is identical for the trial-wise and run-wise decoding approaches. However, when evaluating the efficacy of confound regression (as explained in the next section) in the context of run-wise decoding, we used the means per condition of the confound instead of the trial-wise confound values.
+
+The simulation draws the true activation parameters for the trials from different conditions (\(y \in \{0,1\}\) for \(P=2\)) from a normal distribution with a specified mean and standard deviation. To generate null data (i.e., without any true difference across, e.g., two conditions), we generate the true parameters as follows:
+
+\begin{equation}
+\beta_{X(y = p)} \sim \mathcal{N}(\mu, \sigma)
+\end{equation}
+
+where, in the case of null data, \(\mu\) represents the same mean for all conditions \(p = 0, \dots , P-1\). The weight of the confound (\(\beta_{C}\)) is also drawn from a normal distribution with a prespecified mean (\(\mu_{C}\)) and standard deviation (\(\sigma_{C}\)):
+
+\begin{equation}
+\beta_{C} \sim \mathcal{N}(\mu_{C}, \sigma_{C})
+\end{equation}
+
+The weights for both \(X\) and \(C\) are drawn independently for the \(K\) voxels (we use \(10 \times 10 = 100\) voxels for all our simulations). However, to simulate spatial autocorrelation in our grid of artificial voxels, we smooth all \(T\) 2D ``volumes'' (of shape \(\sqrt{K} \times \sqrt{K}\)) separately with a 2D Gaussian smoothing kernel with a prespecified standard deviation. For our simulations, we use a standard deviation of 1 for the kernel.
+
+\hypertarget{estimating-activity-patterns-from-the-data}{%
+\subsubsection{Estimating activity patterns from the data}\label{estimating-activity-patterns-from-the-data}}
+
+After generating the signals (\(s\)) of shape \(T \times K\) (in which the 2D voxel dimension has been flattened to a single dimension), the ``activity'' parameters (\(\hat{\beta}_{X}\)) for the trials (for trial-wise decoding) or conditions (for run-wise decoding) are estimated across all K voxels. We estimate these parameters using a generalized least squares (GLS) model on \(y\) using the design matrix \(X\) and covariance matrix \(V\):
+
+\begin{equation}
+\hat{\beta}_{X} = (X^{T}V^{-1}X)^{-1}X^{T}V^{-1}y
+\end{equation}
+
+where \(\hat{\beta}_{X}\) is of shape \(N \times K\) (where \(N\) refers to the amount of trials in trial-wise decoding and the amount of conditions in run-wise decoding). Note that \(C\) is not part of the design matrix \(X\), here. This would amount to the ``control for confounds during pattern estimation'' discussed in Supplementary Methods section ``Controlling for confounds during pattern estimation''. Before entering these activity estimates (\(\hat{\beta}_{X}\)) in our decoding pipeline, we divide these them by their standard error to generate \(t\)-values (as advised in Misaki et al., \protect\hyperlink{ref-misaki2010comparison}{2010}):
+
+\begin{equation}
+t_{\hat{\beta}_{X}} = \frac{\hat{\beta}_{X}}{\sqrt{\sigma^{2}\mathrm{diag}(X^{T}V^{-1}X)^{-1}}}
+\end{equation}
+
+where \(\sigma^{2}\) is the sum-of-squares error divided by the degrees of freedom (\(T-N-1\)).
+
+To summarize, in all of our simulations, we keep the following ``experimental'' parameters constant: we simulate data from two conditions (\(y \in \{0,1\}\), which we refer to as ``condition 0'' and ``condition 1''), each condition has 40 trials, trial duration is 1 second, ISIs are jittered between 4 and 5 seconds (mean = 4.5), noise is autocorrelated according to an AR(1) process (with \(\phi_{1} = 0.5)\), and the data is spatially smoothed using a Gaussian filter with a standard deviation of 2 across a \(10 \times 10\) grid of voxels. For run-wise decoding, we simulate 10 runs.
+
+\hypertarget{testing-confound-regression-on-simulated-fmri-data}{%
+\subsection{Testing confound regression on simulated fMRI data}\label{testing-confound-regression-on-simulated-fmri-data}}
+
+In this simulation, we aim to test whether confound regression is able to remove the influence of confounds in fMRI data for both trial-wise and run-wise decoding analyses. Similar to the analyses reported in the main article, we contrast WDCR and CVCR, expecting that WDCR leads to similar negative bias while CVCR leads to similar (nearly) unbiased results. We use the same pipeline as in the other simulations, which consists of a normalization step to ensure that each feature has a mean of zero and a unit standard deviation, and a support vector classifier with a linear kernel (regularization parameter \(C=1\)). The decoding pipeline uses a 10-fold stratified cross-validation scheme. For the run-wise decoding analyses, this is equivalent to a leave-one-run-out cross-validation scheme. Model performance in this simulation is reported as accuracy (as there is no class imbalance). The simulation was repeated 10 times for robustness.
+
+Specifically, we evaluate and report model performance after confound regression both in the trial-wise decoding and run-wise decoding context and for different strengths of the correlation between the target and the confound (\(r_{Cy} \in \{0,0.1, \dots ,0.9,1\}\)). Because arguably the temporal autocorrelation of fMRI data is the most prominent difference between fMRI and structural MRI data, and thus might impact decoding analyses differently (Gilron et al., \protect\hyperlink{ref-gilron2016addressing}{2016}), we additionally test CVCR on data that differs in the degree of autocorrelation. We manipulate autocorrelation by temporally smoothing the signals (\(y\)) before fitting the first-level GLM using a Gaussian filter with increasing widths (\(\sigma_{\mathrm{filter}} = \{0, 1 , \dots , 5\}\)), yielding data with increasing autocorrelation. We used a grid of \(4 \times 4\) voxels for this simulation to reduce computation time.
+
+\hypertarget{controlling-for-confounds-during-pattern-estimation}{%
+\subsection{Controlling for confounds during pattern estimation}\label{controlling-for-confounds-during-pattern-estimation}}
+
+As discussed in the main text, one way to potentially control for confounds in fMRI data is to remove their influence when estimating the activity patterns in an initial first-level model (Woolgar et al., \protect\hyperlink{ref-Woolgar2014-jb}{2014}). In this section of the Supplementary methods, we tested the efficacy of this method on simulated fMRI data in both trial-wise decoding and run-wise decoding contexts. Note that the original article on this method (Woolgar et al., \protect\hyperlink{ref-Woolgar2014-jb}{2014}) performed run-wise decoding.
+
+Specifically, we tested whether confounds can be controlled by adding the (HRF-convolved) confound to the design matrix \(X\) in the first-level pattern estimation procedure. According to @{[}Woolgar2014-jb{]}, when assuming that the confound has a truly additive effect, adding the confound to the design matrix will yield (single-trial) pattern estimates (\(\hat{\beta}_{X}\)X) that only capture unique variance (i.e., no variance related to the confound). In our simulations, we tested two versions of this method. In one version, which we call the ``default'' version, the confound is added to the design matrix and the (GLS) model is estimated on using the design-matrix including both the single-trial (for trial-wise decoding) or condition regressors (for run-wise decoding) and the confound regressor. In the other version, which we call the ``aggressive'' version (reflecting the same terminology as the fMRI-denoising method ``ICA-AROMA''; Pruim et al., \protect\hyperlink{ref-pruim2015ica}{2015}), the confound regressor is first regressed out of the signal (\(s_{\mathrm{corr}} = s- C\hat{\beta}_{C}\)) before fitting the regular first-level model using the design matrix (\(X\)) without the confound regressor. The reason for testing these two methods is because it is unclear from the original Woolgar et al.~articles (Woolgar et al., \protect\hyperlink{ref-woolgar2011multi}{2011}, \protect\hyperlink{ref-Woolgar2014-jb}{2014}) which version was used and whether the two versions yield different results.
+
+In our simulation, we varied the correlation between the (non-HRF-convolved) confound and the target (here, \(y \in \{0,1\}\)). Importantly, we generated data without any effect, i.e., the parameters of the trials from the two different conditions (\(\beta_{X | y = 0}\) and \(\beta_{X | y = 1}\)) were (independently) drawn from the same normal distribution with a mean of 1 and standard deviation of 0.5. Similar to the other simulations, we use patterns of t-values in our decoding pipeline (unless explicitly stated otherwise). For both trial-wise and run-wise decoding, we report results from the default and aggressive procedure. All analyses are documented in the aforementioned notebook containing the fMRI simulations.
+
+\hypertarget{linear-vs-nonlinear-confound-models-predicting-vbm-and-tbss-data-based-on-brain-size}{%
+\subsection{Linear vs nonlinear confound models: predicting VBM and TBSS data based on brain size}\label{linear-vs-nonlinear-confound-models-predicting-vbm-and-tbss-data-based-on-brain-size}}
+
+In the main text, we used linear models to regress out variance associated with brain size from VBM and TBSS data. Here, we test whether a linear model of the relation between brain size and VBM and TBSS data is suitable, and whether possibly a nonlinear model should have been preferred. We do this by performing a model comparison between linear, quadratic, and cubic regression models. All analyses and results can be found in the \texttt{brain\_data\_vs\_brainsize.ipynb} notebook from the Github repository associated with this article.
+
+For all analyses in this section, brain size with and without second and third degree polynomials were used as independent variables. As target variables, we created four voxel sets: first, we selected 500 random voxels from the VBM and TBSS data (voxel set A). Second, to inspect how large the \emph{misfit} of a linear model could be, we selected as target variables the 500 voxels which have the highest quadratic (voxel set B) and cubic (voxel set C) correlation with brain size. Finally we select the 500 voxels with highest linear correlation with brain size (voxel set D), to inspect how large the misfit of a polynomial model is in these voxels.
+
+We applied a 10-fold cross-validation pipeline which consisted of scaling features to mean 0 and standard deviation 1, and fitting an ordinary least squares regression model. Explained variance (\(R^2\)) was used as a metric of model performance. The pipeline was repeated 50 times with random shuffling of samples.
+
+For each voxel, we calculated the difference between model performance of linear and polynomial models. Negative differences (\(\Delta R^2_{\mathrm{linear - polynomial}} < 0\)) indicate that the polynomial model has higher cross-validated \(R^2\) than a linear model, and thus, that a linear confound regression model would leave variance arguably associated with the confound in the target voxel. We plot the distributions of \(\Delta R^2_{\mathrm{linear - polynomial}}\) to inspect for how many voxels this is the case, and for how many voxels linear models perform better.
+
+\hypertarget{supplementary-results}{%
+\section{Supplementary results}\label{supplementary-results}}
+
+The following supplementary results describe the results from the supplementary analyses related to controlling for confounds in decoding analyses of (simulated) fMRI data.
+
+\hypertarget{testing-confound-regression-on-simulated-fmri-data-1}{%
+\subsection{Testing confound regression on simulated fMRI data}\label{testing-confound-regression-on-simulated-fmri-data-1}}
+
+Here, we evaluated the efficacy of confound regression (both WDCR and CVCR) on simulated fMRI data in both trial-wise and run-wise decoding analyses across different strengths of the correlation between the target and the confound. Similar to the results reported in the main article, we find that WDCR yields consistent below chance accuracy in both the trial-wise and run-wise decoding analyses (Supplementary Figure \ref{fig:fig-confounds-decoding-S1}, upper panels) and that CVCR yields (nearly) unbiased results for both trial-wise and run-wise decoding (Supplementary Figure \ref{fig:fig-confounds-decoding-S1}, lower panels).
+
+\begin{figure}
+\centering
+\includegraphics{_bookdown_files/confounds-decoding-files/figures/figure_S1.pdf}
+\caption{\label{fig:fig-confounds-decoding-S1}Model performance when using WDCR (upper panels) and CVCR (lower panels) to remove the influence of confounds in simulated fMRI data across different correlations between the confound and the target (\(r_{Cy}\)). Error-bars reflect the 95\% CI across iterations.}
+\end{figure}
+
+
+
+Moreover, CVCR effectively controls for confounds on fMRI data with varying amounts of autocorrelation for both trial-wise and run-wise decoding analyses, as is shown in Supplementary Figure \ref{fig:fig-confounds-decoding-S2}.
+
+\begin{figure}
+\centering
+\includegraphics{_bookdown_files/confounds-decoding-files/figures/figure_S2.pdf}
+\caption{\label{fig:fig-confounds-decoding-S2}Model performance using CVCR versus no control and baseline (data with no confound) for different levels of autocorrelation (after smoothing with a Gaussian filter with an increasing standard deviation, \(\sigma_{\mathrm{filter}}\)) for trial-wise and run-wise decoding. Note that for trial-wise decoding, high autocorrelation leads to below chance-accuracy for CVCR, but this is also present in the baseline data, which suggests that high autocorrelation in general leads to negative bias (at least in our simulation).}
+\end{figure}
+
+
+
+\hypertarget{controlling-for-confounds-during-pattern-estimation-1}{%
+\subsection{Controlling for confounds during pattern estimation}\label{controlling-for-confounds-during-pattern-estimation-1}}
+
+Here, we tested the efficacy of controlling for confound during pattern estimation (as proposed by Woolgar et al., \protect\hyperlink{ref-Woolgar2014-jb}{2014}). Similar to the previous Supplementary analyses, we evaluated this method's efficacy in both trial-wise and run-wise decoding analyses. We furthermore evaluated both the ``default'' (add the confound to the first-level design matrix) and ``aggressive'' (regress the confound from the signal before fitting the first-level model) approaches.
+
+\begin{figure}
+\centering
+\includegraphics{_bookdown_files/confounds-decoding-files/figures/figure_S3.pdf}
+\caption{\label{fig:fig-confounds-decoding-S3}Model performance when controlling for confounds during pattern estimation using the ``default'' (upper panels) and ``aggressive'' (lower panels) versions for both trial-wise (left panels) and run-wise decoding (right panels). Note that, in these analyses, patterns of t-values from the first-level model are used as features.}
+\end{figure}
+
+
+
+As can be seen in Supplementary Figure \ref{fig:fig-confounds-decoding-S3}, this method fails to control for confounds for all variants that are tested (trial-wise vs.~run-wise decoding, ``default'' vs.~"aggressive\textbar). Below, we provide a potential explanation of this bias. We argue that the mechanism underlying this bias is different in trial-wise decoding than in run-wise decoding. We will first focus on the trial-wise decoding analyses.
+
+\hypertarget{explanation-for-bias-in-trial-wise-decoding-analyses}{%
+\subsubsection{Explanation for bias in trial-wise decoding analyses}\label{explanation-for-bias-in-trial-wise-decoding-analyses}}
+
+To supplement this explanation, in Supplementary Figure \ref{fig:fig-confounds-decoding-S4} we visualized the distribution of parameter estimates from the first-level model, \(\hat{\beta}_{X}\) across the two conditions after controlling for the confound during pattern estimation using the ``aggressive'' version in trial-wise decoding (but the graphs are similar when plotting the data from the ``default'' version; graphs for run-wise decoding analyses are, however, different, which will be discussed later).
+
+\begin{figure}
+\centering
+\includegraphics{_bookdown_files/confounds-decoding-files/figures/figure_S4.pdf}
+\caption{\label{fig:fig-confounds-decoding-S4}Distribution of first-level parameter estimates, \(\hat{\beta}_{X}\), for the two conditions (condition 0 in blue, condition 1 in orange) across different correlations between the target and the confound (\(r_{Cy}\)), with the colored dashed lines indicating the mean feature value for each condition.}
+\end{figure}
+
+
+
+When inspecting Supplementary Figure \ref{fig:fig-confounds-decoding-S4}, recall that the data were generated with a confound that was positively correlated with the target. Given that the target variable represents the two different conditions (\(y \in \{0, 1\}\)), the existence of a positive correlation between the target and the confound implies that the confound increases the activation of the voxel in trials from condition 0. The confound's effect on the voxel increases with higher correlations between the target and the confound. For example, suppose trials from condition 0 and condition 1 both truly activate the voxel with 1 unit (\(\beta_{X | y=0} = 1\) and \(\beta_{X | y = 1} = 1\); Supplementary Figure \ref{fig:fig-confounds-decoding-S5}, upper panel), and that the confound is perfectly correlated with the target (\(r_{Cy} = 1\)) and thus activates the voxel additionally with 1 unit (\(\beta_{C} = 1\)). In this case, without confound control, one would expect the voxel to be activated in response to trials from condition 1 with a magnitude of 2 (\(\hat{\beta}_{X | y = 1} \approx \beta_{X | y = 1} + \beta_{C}\); Supplementary Figure \ref{fig:fig-confounds-decoding-S5}, middle panel). If one in fact would control for the confound by regressing out the confound from the signal (i.e., the ``aggressive'' approach), one would completely remove both the true effect (\(\beta_{X|y=1}\)) and the confound effect (\(\beta_{C}\)), driving the estimated activation parameter for condition 1 towards 0 (\(\hat{\beta}_{X|y=1} \approx 0\)). The activation parameter for condition 0 is unaffected by removing the confound, as they are uncorrelated, and will thus be estimated correctly (\(\hat{\beta}_{X|y=0} = 1\); see Supplementary Figure \ref{fig:fig-confounds-decoding-S5}, lower panel). In this way, controlling for the confound created an artificial ``effect'': trials from condition 0 seem to activate the voxel more than trials from condition 1 (\(\hat{\beta}_{X|y=0} > \hat{\beta}_{X|y=1}\)). We believe that this phenomenon underlies the positive bias when controlling for confounds during pattern estimation in trial-wise decoding analyses.\footnote{One could argue that this issue only poses a problem when the true parameters are non-zero (\(\beta_{X|y=0} = \beta_{X|y=1} \neq 0\)) and when the true parameters are in fact all zero (\(\beta_{X|y=0} = \beta_{X|y=1} = 0\)), there would be no positive bias. This is indeed the case, but we note that the true parameters are never known in empirical anlayses, so we nonetheless advise against using this method.}
+
+\begin{figure}
+\centering
+\includegraphics{_bookdown_files/confounds-decoding-files/figures/figure_S5.pdf}
+\caption{\label{fig:fig-confounds-decoding-S5}Visualization of the issue underlying positive bias arising when controlling for confounds during pattern estimation. The upper panel (``true generative model'') shows the individual single-trial regressors for the different conditions, scaled by their true weight (here,\(\beta_{X|y=0} = \beta_{X|y=1} = 1\)) and the confound (here, \(r_{Cy} = 0.9\)). The middle panel (``signal'') shows the signal resulting from the generative model (including noise, \(\epsilon\)). The lower panel (``estimated parameters'') shows the estimated model parameters for the different single-trial regressors. The dashed lines represent the average estimated parameter per condition, which shows that the estimated parameters of the condition that is correlated with the confound are driven towards zero.}
+\end{figure}
+
+
+
+\hypertarget{explanation-for-bias-in-run-wise-decoding-analyses}{%
+\subsubsection{Explanation for bias in run-wise decoding analyses}\label{explanation-for-bias-in-run-wise-decoding-analyses}}
+
+We believe that the cause of bias in run-wise decoding analyses after controlling for confounds during pattern estimation is different than the cause of bias in trial-wise decoding analyses. Upon further inspection of the results of this simulation, we found that in the specific case of run-wise decoding with the ``default'' approach (i.e., including the confound in the first-level model instead of regressing the confound out of the signal before fitting the first-level model), there is no bias when using patterns of parameter estimates (\(X\)) instead of patterns of \emph{t}-values (\emph{t}(\(X\)); Supplementary Figure \ref{fig:fig-confounds-decoding-S6}, upper row, left panel). Indeed, when visualizing the distributions of the feature values (Supplementary Figure \ref{fig:fig-confounds-decoding-S6}, lower row), using the ``raw'' parameter estimates (\(\hat{\beta}_{X}\), left column) or \emph{t}-values (right column), it is clear that the bias only arises when using \emph{t}-values. In fact, this bias in \emph{t}-values is caused by unequal variance (Supplementary Figure \ref{fig:fig-confounds-decoding-S6}, middle panel) of the parameter estimates. The cause of the increased variance for condition 1, here, is due to the fact that a positive correlation between the confound and target (\(r_{Cy}\)) results in a relatively higher correlation between the regressor of condition 1 and the confound regressor compared to the correlation between the regressor of condition 0 and the confound regressor. (Note that if the correlation would be negative, e.g., \(r_{Cy} = -0.9\), then the reverse would be true.) This issue of classifiers picking up differences in parameter variance in the process of estimating patterns for MVPA has been termed ``variance decoding'', which is described in detail in
+Görgen et al. (\protect\hyperlink{ref-Gorgen2017-sy}{2017}) and Hebart \& Baker (\protect\hyperlink{ref-Hebart2017-jn}{2017}).
+
+\begin{figure}
+\centering
+\includegraphics{_bookdown_files/confounds-decoding-files/figures/figure_S6.pdf}
+\caption{\label{fig:fig-confounds-decoding-S6}Visualization of model performance and feature distributions based on patterns of ``raw'' parameter estimates (\(\hat{\beta}_{X}\)), variance of parameter estimates (\(\mathrm{var}(\hat{\beta}_{X})\)), or \emph{t}-values (\(t(\hat{\beta}_{X})\))) after controlling for confounds. The upper row shows the average accuracy across folds across different values of the correlation between the confound and the target (\(r_{Cy}\)) for the different types of features. Note that the middle panel shows that ``variance decoding'' only occurs when controlling for confounds, as model performance is at chance when using patterns of variance estimates (the blue line in the middle panel). The lower row represents the distributions of feature values for the three different statistics when \(r_{Cy} = 0.9\).}
+\end{figure}
+
+
+
+To summarize, we found that controlling for confound during pattern estimation leads to positive bias in all cases except in run-wise decoding using the ``default'' approach. We believe that cross-validated confound regression (CVCR) is nevertheless preferable to this method because it both controls for confounds effectively and allows the use of \emph{t}-values (or other statistics based on parameter estimates, like multivariate noise-normalized parameter estimates), which has been shown to be more sensitive than using ``raw'' parameter estimates in MVPA (Guggenmos et al., \protect\hyperlink{ref-Guggenmos2018-rr}{2018}; Misaki et al., \protect\hyperlink{ref-misaki2010comparison}{2010}; Walther et al., \protect\hyperlink{ref-Walther2016-je}{2016}).
+
+\hypertarget{linear-vs.-nonlinear-confound-models-predicting-vbm-and-tbss-intensity-using-brain-size}{%
+\subsection{Linear vs.~nonlinear confound models: predicting VBM and TBSS intensity using brain size}\label{linear-vs.-nonlinear-confound-models-predicting-vbm-and-tbss-intensity-using-brain-size}}
+
+Supplementary Figure \ref{fig:fig-confounds-decoding-S7} (top left panel) shows the distributions of difference in cross-validated \(R^2\) (Linear - Polynomial) for the VBM data with 500 randomly selected voxels (voxel set A). A linear model performs (slightly) better (positive \(R^2\)) than a quadratic model for 86.6\% of these voxels (mean \(\Delta R^{2}_{\mathrm{linear-quadratic}} = 0.009\), \emph{SD} = 0.006), and better than a cubic model for 90.8\% of the voxels (mean \(\Delta R^{2}_{\mathrm{linear-cubic}} = 0.019\), \emph{SD} = 0.027). Note that it can be expected that polynomial and cubic models perform better in a minority of the voxels simply due to random noise in the data (since we compare 500 \(R^2\)-values), even if the ``true'' underlying relation is linear. To visualize the quality of fit of these models fit, brain size is plotted against VBM voxel intensity for a randomly selected voxel from this set in the bottom left panel. Lines are regression lines for the linear, quadratic, and cubic models. Supporting the use of a linear model, there is no clear deviation from bivariate normality.
+
+\begin{figure}
+\centering
+\includegraphics{_bookdown_files/confounds-decoding-files/figures/figure_S7.pdf}
+\caption{\label{fig:fig-confounds-decoding-S7}Top row: \(R^2\) distributions for the four voxel sets of the VBM data. Density estimates are obtained by kernel density estimation with a Gaussian kernel and Scott's rule (Scott, 1979) for bandwidth selection. Bottom row: scatter plots of the relation between brain size (scaled to mean 0 and SD 1) and voxel intensity from randomly selected voxels from each voxel sets. These panels are included to visualize the quality of model fits and to inspect whether there are no obvious misfits, i.e., whether the models miss patterns in the data. This is not the case --- all models seem to fit the distributions reasonably well.}
+\end{figure}
+
+
+
+To explore further how well linear models perform in voxels where we expect polynomial models to perform best, we plotted the \(R^2\) distributions for the 500 voxels with the highest overall quadratic correlation with brain size (voxel set B; second column). These are the voxels where a quadratic model would remove most variance (if used in a confound regression procedure). Also for these voxels, a linear model performs equally well as or better than a quadratic model (\(R^2_{\mathrm{linear-quadratic}} > 0\) for 89.4\% of the voxels, mean \(\Delta R^{2}_{\mathrm{linear-quadratic}} = 0.006\), \emph{SD} = 0.007) and a cubic model (\(\Delta R^{2}_{\mathrm{linear-cubic}} > 0\) for 57.8\% of these voxels, mean \(\Delta R^2_{\mathrm{linear-cubic}} = 0.003\), \emph{SD} = 0.015). For a randomly selected voxel from this set, a scatter plot is included in the bottom panel to visualize how well the regression models fit. The plot indicates no obvious misfit of any of the models.
+
+The same analysis was also performed for the 500 voxels that have the highest overall cubic correlation with brain size (voxel set C; third column). The histograms look similar to the histograms in the second column because voxel sets B and C consisted of largely the same voxels. It should not thus not be surprising that linear models again perform well compared to quadratic models (\(\Delta R^{2}_{\mathrm{linear-quadratic}} > 0\) for 90.4\% of the voxels, mean \(\Delta R^2_{\mathrm{linear-quadratic}} = 0.006\), \emph{SD} = 0.006), and compared to cubic models (\(\Delta R^{2}_{\mathrm{linear-cubic}} > 0\) for 57.6\% of these voxels, mean \(\Delta R^{2}_{\mathrm{linear-cubic}} = 0.003\), \emph{SD} = 0.014). The bottom panel shows a randomly selected voxel from this voxel set, which again shows no obvious misfit.
+
+Finally, we inspect the 500 voxels with the highest overall linear correlation with brain size (voxel set D, fourth column). Again, these turned out the be partly the same voxels as in set B and C. Therefore, linear models perform again equally well as or better than quadratic models (\(\Delta R^2_{\mathrm{linear-quadratic}} > 0\) for 94.2\% of the voxels, mean \(\Delta R^2_{\mathrm{linear-quadratic}} = 0.007\), \emph{SD} = 0.004) and cubic models (\(\Delta R^{2}_{\mathrm{linear-quadratic}} > 0\) for 59.2\% of the voxels, mean \(\Delta R^{2}_{\mathrm{linear-quadratic}} = 0.004\), \emph{SD} = 0.014). The bottom panel show a randomly selected voxel from this voxel set, and indicates that all models capture the structure in the data.
+
+Together, these results seem to imply that for all voxel sets, linear models perform mostly equally well as or better than polynomial models. Yet, it is interesting to inspect the ``worst case'' voxels; that is, to inspect how large the maximal misfit of a linear model is. Therefore, in Supplementary Figure \ref{fig:fig-confounds-decoding-S8}, we plot the relation between brain size and VBM intensity for the voxel with most negative \(\Delta R^{2}_{\mathrm{linear-cubic}}\) from voxel set A (left panel) and voxel set B. For comparison, we also plot the relation between brain size and the voxel where a linear model performs better than a cubic model (selected from voxel set B). For the selected voxels, \(\Delta R^{2}_{\mathrm{linear-cubic}}\) values are -0.036 (left panel), -0.039(middle panel) and 0.032. Especially in the middle and right panel, the difference in fit between the linear and cubic model is mostly apparent the tails of the brain size distribution, where the model fit is based on least observations. For most brain sizes, both models make similar predictions about voxel intensity.
+
+\begin{figure}
+\centering
+\includegraphics{_bookdown_files/confounds-decoding-files/figures/figure_S8.pdf}
+\caption{\label{fig:fig-confounds-decoding-S8}Visualisation of the relation between brain size and VBM intensity for three voxels. The left two voxels have most negative \(\Delta R^{2}_{\mathrm{linear-cubic}}\) (i.e., the cubic model performs maximally better than the linear model) in voxel sets A and B, respectively. The voxel plotted in the right panel has the most positive \(\Delta R^{2}_{\mathrm{linear-cubic}}\) in voxel set B.}
+\end{figure}
+
+
+
+We repeated the same analyses for the TBSS data, and summarize the results in Supplementary Figure \ref{fig:fig-confounds-decoding-S9}. Since the results are qualitatively the same as for the VBM data, and lead to the same conclusions, we do not discuss them in detail. Those interested can find additional details in the notebook of this simulation.
+
+\begin{figure}
+\centering
+\includegraphics{_bookdown_files/confounds-decoding-files/figures/figure_S9.pdf}
+\caption{\label{fig:fig-confounds-decoding-S9}Top row: \(R^2\) distributions for the four voxel sets of the TBSS data. Density estimates are obtained by kernel density estimation with a Gaussian kernel and Scott's rule (Scott, 1979) for bandwidth selection. Bottom row: scatter plots of the relation between brain size (scaled to mean 0 and SD 1) and voxel intensity from randomly selected voxels from each voxel sets. These panels are included to visualize the quality of model fits and to inspect whether there are no obvious misfits, i.e., whether the models miss patterns in the data. This is not the case --- all models seem to fit the distributions well.}
+\end{figure}
+
+
+
+\begin{figure}
+\centering
+\includegraphics{_bookdown_files/confounds-decoding-files/figures/figure_S10.pdf}
+\caption{\label{fig:fig-confounds-decoding-S10}Model performance of fully cross-validated confound regression (CVCR) versus confound regression on the train-set only (``train only'') on simulated data without any experimental effect (signal \(R^2 = 0.004\); left graph) and with some experimental effect (signal \(R^2 = 0.1\); right graph) for different values of confound \(R^2\) (cf.~Figure \ref{fig:fig-confounds-decoding-8} in the main text). The orange line represents the average performance (± 1 SD) when confound \(R^2\) = 0, which serves as a ``reference performance'' for when there is no confounded signal in the data. For both graphs, the correlation between the target and the confound, \(r_{yC}\), is fixed at 0.65. The reason for testing this version of confound regression (i.e., on the train-set only) is because it reduces the computation time substantially compared to fully cross-validated confound regression (as it does not have to compute \(X_{\mathrm{test}} = X_{\mathrm{test}} - C_{\mathrm{test}}\hat{\beta}_{C}\)). However, this method seems to yield substantial bias when there is (almost) no signal (left graph), but intriguingly not when there is true signal (right graph).}
+\end{figure}
+
+
+
+\begin{figure}
+\centering
+\includegraphics{_bookdown_files/confounds-decoding-files/figures/figure_S11.pdf}
+\caption{\label{fig:fig-confounds-decoding-S11}Model performance of the different evaluated methods for confound control but using the AUC-ROC metric to measure model performance instead of \(F_{1}\) score, as this latter metric has been criticized because it neglects false negatives (Powers, \protect\hyperlink{ref-powers2020evaluation}{2011}). The results are highly similar to results obtained when using the \(F_{1}\) score (cf.~Figure \ref{fig:fig-confounds-decoding-8} in the main text).}
+\end{figure}
+
+
+
+\begin{figure}
+\centering
+\includegraphics{_bookdown_files/confounds-decoding-files/figures/figure_S12.pdf}
+\caption{\label{fig:fig-confounds-decoding-S12}Model performance of the different evaluated methods for confound control, including a method proposed by a reviewer. This method entails training the decoding model on data including the confound as a predictor (i.e., an implementation of the ``Include confound in model'' method), but setting the confound values to their mean in the test set. The rationale is that the decoding model cannot profit from the confound in the test set. However, contrary to expectations, this method performs similarly to not controlling for confounds.}
+\end{figure}
+
+
+
+\begin{figure}
+\centering
+\includegraphics{_bookdown_files/confounds-decoding-files/figures/figure_S13.pdf}
+\caption{\label{fig:fig-confounds-decoding-S13}Reproduction of Figure \ref{fig:fig-confounds-decoding-8} from the main text (``generic simulation'' results), but with the random subsampling procedure instead of the targeted subsampling procedure (from only a single iteration due to time constraints). This procedure attempts to find a subsample of the data of a given size without a correlation between target and confound for 10.000 tries. If such a subsample cannot be found, the subsample size is decreased by 1, after which again 10.000 attempts are made to find a good subsample with the new size. The results from counterbalancing, here, are qualitatively similar to the results when using the ``targeted subsampling'' method (cf.~Figure \ref{fig:fig-confounds-decoding-8} in the main text), albeit much slower.}
+\end{figure}
+
+
+
+\begin{figure}
+\centering
+\includegraphics{_bookdown_files/confounds-decoding-files/figures/figure_S14.pdf}
+\caption{\label{fig:fig-confounds-decoding-S14}Reproduction of Figure \ref{fig:fig-confounds-decoding-10} from the main text, but with the random subsampling procedure instead of the targeted subsampling procedure. This procedure attempts to find a subsample of the data of a given size without a correlation between target and confound for 10.000 tries. If such a subsample cannot be found, the subsample size is decreased by 1, after which again 10.000 attempts are made to find a good subsample with the new size. The plot shows that also random subsampling can induce a positive bias, even with extreme power loss (90\% smaller sample).}
+\end{figure}
+
+
+
+\begin{figure}
+\centering
+\includegraphics{_bookdown_files/confounds-decoding-files/figures/figure_S15.pdf}
+\caption{\label{fig:fig-confounds-decoding-S15}These plots show that the relationship between the standard deviation of the empirical feature-target correlation distribution, \emph{sd}(\(r_{yX}\)), and accuracy holds for different samples sizes (i.e., values for \(N\)). Note that the predicted accuracy based on the standard deviation expected from the sampling distribution is at 0.5 for every plot. The data were generated in the same manner as reported in the WDCR follow-up section.}
+\end{figure}
+
+
+
+\begin{figure}
+\centering
+\includegraphics{_bookdown_files/confounds-decoding-files/figures/figure_S16.pdf}
+\caption{\label{fig:fig-confounds-decoding-S16}These plots show that the relationship between the standard deviation of the empirical feature-target correlation distribution and accuracy also holds for sizes of the test-set (replicating results from H. Jamalabadi et al., \protect\hyperlink{ref-Jamalabadi2016-gr}{2016}). Note that the predicted accuracy is again at 0.5 for every plot. The data were generated in the same manner as reported in the WDCR follow-up section.}
+\end{figure}
+
+
+
+\begin{figure}
+\centering
+\includegraphics{_bookdown_files/confounds-decoding-files/figures/figure_S17.pdf}
+\caption{\label{fig:fig-confounds-decoding-S17}These plots show that the relationship between the standard deviation of the empirical feature-target correlation distribution, \emph{sd}(\(r_{yX}\)), and accuracy also holds for different numbers of features (\(K\)). Note that the predicted accuracy based on \emph{sd}(\(r_{yX}\)) is approximately at 0.5 for every plot. The data were generated in the same manner as reported in the WDCR follow-up section.}
+\end{figure}
+
+
+
+\begin{figure}
+\centering
+\includegraphics{_bookdown_files/confounds-decoding-files/figures/figure_S18.pdf}
+\caption{\label{fig:fig-confounds-decoding-S18}The relation of the standard deviation of the correlation distribution and accuracy for different values of \(K\).}
+\end{figure}
+
+
+
 \hypertarget{morbid-curiosity-supplement}{%
 \chapter{Supplement to Chapter \ref{morbid-curiosity}}\label{morbid-curiosity-supplement}}
 
@@ -1534,6 +1960,9 @@ In order to keep the Supplementary materials concise and orderly, we chose not t
 \leavevmode\hypertarget{ref-Abdulkadir2014-bh}{}%
 Abdulkadir, A., Ronneberger, O., Tabrizi, S. J., \& Klöppel, S. (2014). Reduction of confounding effects with voxel-wise gaussian process regression in structural MRI. \emph{2014 International Workshop on Pattern Recognition in Neuroimaging}, 1--4.
 
+\leavevmode\hypertarget{ref-abdulrahman2016effect}{}%
+Abdulrahman, H., \& Henson, R. N. (2016). Effect of trial-to-trial variability on optimal event-related fMRI design: Implications for beta-series correlation and multi-voxel pattern analysis. \emph{NeuroImage}, \emph{125}, 756--766.
+
 \leavevmode\hypertarget{ref-Abraham2014-ef}{}%
 Abraham, A., Pedregosa, F., Eickenberg, M., Gervais, P., Mueller, A., Kossaifi, J., Gramfort, A., Thirion, B., \& Varoquaux, G. (2014). Machine learning for neuroimaging with scikit-learn. \emph{Front. Neuroinform.}, \emph{8}, 14.
 
@@ -1542,6 +1971,9 @@ Alizadeh, S., Jamalabadi, H., Schönauer, M., Leibold, C., \& Gais, S. (2017). D
 
 \leavevmode\hypertarget{ref-Allefeld2016-xp}{}%
 Allefeld, C., Görgen, K., \& Haynes, J.-D. (2016). Valid population inference for information-based imaging: From the second-level t-test to prevalence inference. \emph{Neuroimage}, \emph{141}, 378--392.
+
+\leavevmode\hypertarget{ref-allefeld2014searchlight}{}%
+Allefeld, C., \& Haynes, J.-D. (2014). Searchlight-based multi-voxel pattern analysis of fMRI by cross-validated manova. \emph{Neuroimage}, \emph{89}, 345--357.
 
 \leavevmode\hypertarget{ref-anderson2016precis}{}%
 Anderson, M. L. (2016). Précis of after phrenology: Neural reuse and the interactive brain. \emph{Behavioral and Brain Sciences}, \emph{39}.
@@ -1594,6 +2026,9 @@ Carr, L., Iacoboni, M., Dubeau, M.-C., Mazziotta, J. C., \& Lenzi, G. L. (2003).
 \leavevmode\hypertarget{ref-Chekroud2016-tc}{}%
 Chekroud, A. M., Ward, E. J., Rosenberg, M. D., \& Holmes, A. J. (2016). Patterns in the human brain mosaic discriminate males from females. \emph{Proc. Natl. Acad. Sci. U. S. A.}, \emph{113}(14), E1968.
 
+\leavevmode\hypertarget{ref-chu2012does}{}%
+Chu, C., Hsu, A.-L., Chou, K.-H., Bandettini, P., Lin, C., Initiative, A. D. N., \& others. (2012). Does feature selection improve classification accuracy? Impact of sample size and feature selection on classification using anatomical magnetic resonance images. \emph{Neuroimage}, \emph{60}(1), 59--70.
+
 \leavevmode\hypertarget{ref-corradi2016cross}{}%
 Corradi-Dell'Acqua, C., Tusche, A., Vuilleumier, P., \& Singer, T. (2016). Cross-modal representations of first-hand and vicarious pain, disgust and fairness in insular and cingulate cortex. \emph{Nature Communications}, \emph{7}(1), 1--12.
 
@@ -1627,8 +2062,8 @@ Dixon, L. (1999). Dual diagnosis of substance abuse in schizophrenia: Prevalence
 \leavevmode\hypertarget{ref-Douaud2007-sw}{}%
 Douaud, G., Smith, S., Jenkinson, M., Behrens, T., Johansen-Berg, H., Vickers, J., James, S., Voets, N., Watkins, K., Matthews, P. M., \& James, A. (2007). Anatomically related grey and white matter abnormalities in adolescent-onset schizophrenia. \emph{Brain}, \emph{130}(Pt 9), 2375--2386.
 
-\leavevmode\hypertarget{ref-Dubois2017-fl}{}%
-Dubois, J., Galdi, P., Han, Y., Paul, L. K., \& Adolphs, R. (2017). Predicting personality traits from resting-state fMRI. In \emph{bioRxiv} (p. 215129).
+\leavevmode\hypertarget{ref-dubois2018resting}{}%
+Dubois, J., Galdi, P., Han, Y., Paul, L. K., \& Adolphs, R. (2018). Resting-state functional brain connectivity best predicts the personality dimension of openness to experience. \emph{Personality Neuroscience}, \emph{1}.
 
 \leavevmode\hypertarget{ref-Dukart2011-aq}{}%
 Dukart, J., Schroeter, M. L., Mueller, K., Initiative, A. D. N., \& Others. (2011). Age correction in dementia--matching to a healthy brain. \emph{PLoS One}, \emph{6}(7), e22193.
@@ -1651,6 +2086,9 @@ Gelder, B. de, Van den Stock, J., Meeren, H. K., Sinke, C. B., Kret, M. E., \& T
 \leavevmode\hypertarget{ref-gilbert2012evaluative}{}%
 Gilbert, S. J., Swencionis, J. K., \& Amodio, D. M. (2012). Evaluative vs. Trait representation in intergroup social judgments: Distinct roles of anterior temporal lobe and prefrontal cortex. \emph{Neuropsychologia}, \emph{50}(14), 3600--3611.
 
+\leavevmode\hypertarget{ref-gilron2016addressing}{}%
+Gilron, R., Rosenblatt, J. D., \& Mukamel, R. (2016). Addressing the" problem" of temporal correlations in mvpa analysis. \emph{2016 International Workshop on Pattern Recognition in Neuroimaging (Prni)}, 1--4.
+
 \leavevmode\hypertarget{ref-Gilron2017-tl}{}%
 Gilron, R., Rosenblatt, J., Koyejo, O., Poldrack, R. A., \& Mukamel, R. (2017). What's in a pattern? Examining the type of signal multivariate analysis uncovers at the group level. \emph{Neuroimage}, \emph{146}, 113--120.
 
@@ -1665,6 +2103,12 @@ Good, C. D., Johnsrude, I., Ashburner, J., Henson, R. N., Friston, K. J., \& Fra
 
 \leavevmode\hypertarget{ref-Gorgen2017-sy}{}%
 Görgen, K., Hebart, M. N., Allefeld, C., \& Haynes, J.-D. (2017). The same analysis approach: Practical protection against the pitfalls of novel neuroimaging analysis methods. \emph{Neuroimage}.
+
+\leavevmode\hypertarget{ref-Groen2018-qo}{}%
+Groen, I. I., Greene, M. R., Baldassano, C., Fei-Fei, L., Beck, D. M., \& Baker, C. I. (2018). Distinct contributions of functional and deep neural network features to representational similarity of scenes in human brain and behavior. \emph{Elife}, \emph{7}.
+
+\leavevmode\hypertarget{ref-Guggenmos2018-rr}{}%
+Guggenmos, M., Sterzer, P., \& Cichy, R. M. (2018). Multivariate pattern analysis for MEG: A comparison of dissimilarity measures. \emph{Neuroimage}, \emph{173}, 434--447.
 
 \leavevmode\hypertarget{ref-Gur1999-qj}{}%
 Gur, R. C., Turetsky, B. I., Matsui, M., Yan, M., Bilker, W., Hughett, P., \& Gur, R. E. (1999). Sex differences in brain gray and white matter in healthy young adults: Correlations with cognitive performance. \emph{J. Neurosci.}, \emph{19}(10), 4065--4072.
@@ -1687,8 +2131,14 @@ Haynes, J.-D. (2015). A primer on pattern-based approaches to fMRI: Principles, 
 \leavevmode\hypertarget{ref-Hebart2017-jn}{}%
 Hebart, M. N., \& Baker, C. I. (2017). Deconstructing multivariate decoding for the study of brain function. \emph{Neuroimage}.
 
+\leavevmode\hypertarget{ref-Hebart2018-dz}{}%
+Hebart, M. N., Bankson, B. B., Harel, A., Baker, C. I., \& Cichy, R. M. (2018). The representational dynamics of task and object processing in humans. \emph{Elife}, \emph{7}.
+
 \leavevmode\hypertarget{ref-jamalabadi2016classification}{}%
 Jamalabadi, H., Alizadeh, S., Schönauer, M., Leibold, C., \& Gais, S. (2016). Classification based hypothesis testing in neuroscience: Below-chance level classification rates and overlooked statistical properties of linear parametric classifiers. \emph{Human Brain Mapping}, \emph{37}(5), 1842--1855.
+
+\leavevmode\hypertarget{ref-Jamalabadi2016-gr}{}%
+Jamalabadi, H., Alizadeh, S., Schönauer - Human brain \ldots, M., \& 2016. (2016). Classification based hypothesis testing in neuroscience: Below‐chance level classification rates and overlooked statistical properties of linear parametric classifiers. \emph{Wiley Online Library}.
 
 \leavevmode\hypertarget{ref-jenkinson2012fsl}{}%
 Jenkinson, M., Beckmann, C. F., Behrens, T. E., Woolrich, M. W., \& Smith, S. M. (2012). Fsl. \emph{Neuroimage}, \emph{62}(2), 782--790.
@@ -1713,6 +2163,9 @@ Keysers, C., \& Gazzola, V. (2014). Dissociating the ability and propensity for 
 
 \leavevmode\hypertarget{ref-Kostro2014-cm}{}%
 Kostro, D., Abdulkadir, A., Durr, A., Roos, R., Leavitt, B. R., Johnson, H., Cash, D., Tabrizi, S. J., Scahill, R. I., Ronneberger, O., Klöppel, S., \& Track-HD Investigators. (2014). Correction of inter-scanner and within-subject variance in structural MRI based automated diagnosing. \emph{Neuroimage}, \emph{98}, 405--415.
+
+\leavevmode\hypertarget{ref-kriegeskorte2008representational}{}%
+Kriegeskorte, N., Mur, M., \& Bandettini, P. A. (2008). Representational similarity analysis-connecting the branches of systems neuroscience. \emph{Frontiers in Systems Neuroscience}, \emph{2}, 4.
 
 \leavevmode\hypertarget{ref-kriegeskorte2009circular}{}%
 Kriegeskorte, N., Simmons, W. K., Bellgowan, P. S., \& Baker, C. I. (2009a). Circular analysis in systems neuroscience: The dangers of double dipping. \emph{Nature Neuroscience}, \emph{12}(5), 535.
@@ -1774,6 +2227,9 @@ Mumford, J. A., Davis, T., \& Poldrack, R. A. (2014). The impact of study design
 \leavevmode\hypertarget{ref-Naselaris2015-jn}{}%
 Naselaris, T., \& Kay, K. N. (2015). Resolving ambiguities of MVPA using explicit models of representation. \emph{Trends Cogn. Sci.}, \emph{19}(10), 551--554.
 
+\leavevmode\hypertarget{ref-naselaris2011encoding}{}%
+Naselaris, T., Kay, K. N., Nishimoto, S., \& Gallant, J. L. (2011). Encoding and decoding in fMRI. \emph{Neuroimage}, \emph{56}(2), 400--410.
+
 \leavevmode\hypertarget{ref-nichols2002nonparametric}{}%
 Nichols, T. E., \& Holmes, A. P. (2002). Nonparametric permutation tests for functional neuroimaging: A primer with examples. \emph{Human Brain Mapping}, \emph{15}(1), 1--25.
 
@@ -1816,8 +2272,20 @@ Peelen, M. V., Atkinson, A. P., \& Vuilleumier, P. (2010). Supramodal representa
 \leavevmode\hypertarget{ref-popov2018practices}{}%
 Popov, V., Ostarek, M., \& Tenison, C. (2018). Practices and pitfalls in inferring neural representations. \emph{NeuroImage}, \emph{174}, 340--351.
 
+\leavevmode\hypertarget{ref-powers2020evaluation}{}%
+Powers, D. M. (2011). Evaluation: From precision, recall and f-measure to roc, informedness, markedness and correlation. \emph{arXiv Preprint arXiv:2010.16061}.
+
+\leavevmode\hypertarget{ref-pruim2015ica}{}%
+Pruim, R. H., Mennes, M., Rooij, D. van, Llera, A., Buitelaar, J. K., \& Beckmann, C. F. (2015). ICA-aroma: A robust ica-based strategy for removing motion artifacts from fMRI data. \emph{Neuroimage}, \emph{112}, 267--277.
+
 \leavevmode\hypertarget{ref-pulvermuller2010active}{}%
 Pulvermüller, F., \& Fadiga, L. (2010). Active perception: Sensorimotor circuits as a cortical basis for language. \emph{Nature Reviews Neuroscience}, \emph{11}(5), 351--360.
+
+\leavevmode\hypertarget{ref-Quionero-Candela2009-ge}{}%
+Quionero-Candela, J., Sugiyama, M., Schwaighofer, A., \& Lawrence, N. D. (2009). \emph{Dataset shift in machine learning}. The MIT Press.
+
+\leavevmode\hypertarget{ref-Ramakrishnan2014-ki}{}%
+Ramakrishnan, K., Scholte, H. S., Groen, I. I. A., Smeulders, A. W. M., \& Ghebreab, S. (2014). Visual dictionaries as intermediate features in the human brain. \emph{Front. Comput. Neurosci.}, \emph{8}, 168.
 
 \leavevmode\hypertarget{ref-Rao2017-bw}{}%
 Rao, A., Monteiro, J. M., Mourao-Miranda, J., \& Alzheimer's Disease Initiative. (2017). Predictive modelling using neuroimaging data in the presence of confounds. \emph{Neuroimage}, \emph{150}, 23--49.
@@ -1836,6 +2304,9 @@ Sabatinelli, D., Fortune, E. E., Li, Q., Siddiqui, A., Krafft, C., Oliver, W. T.
 
 \leavevmode\hypertarget{ref-scott1979optimal}{}%
 Scott, D. W. (1979). On optimal and data-based histograms. \emph{Biometrika}, \emph{66}(3), 605--610.
+
+\leavevmode\hypertarget{ref-Sedgwick2013-op}{}%
+Sedgwick, P. (2013). Analysing case-control studies: Adjusting for confounding. \emph{BMJ: British Medical Journal}, \emph{346}.
 
 \leavevmode\hypertarget{ref-Sepehrband2018-dy}{}%
 Sepehrband, F., Lynch, K. M., Cabeen, R. P., Gonzalez-Zacarias, C., Zhao, L., D'Arcy, M., Kesselman, C., Herting, M. M., Dinov, I. D., Toga, A. W., \& Clark, K. A. (2018). Neuroanatomical morphometric characterization of sex differences in youth using statistical learning. \emph{Neuroimage}, \emph{172}, 217--227.
@@ -1879,17 +2350,29 @@ Varoquaux, G. (2018). Cross-validation failure: Small sample sizes lead to large
 \leavevmode\hypertarget{ref-Van_Waarde2014-sh}{}%
 Waarde, J. A. van, Scholte, H. S., Oudheusden, L. J. B. van, Verwey, B., Denys, D., \& Wingen, G. A. van. (2014). A functional MRI marker may predict the outcome of electroconvulsive therapy in severe and treatment-resistant depression. \emph{Mol. Psychiatry}, \emph{20}, 609.
 
+\leavevmode\hypertarget{ref-Wacholder1992-wb}{}%
+Wacholder, S., Silverman, D. T., McLaughlin, J. K., \& Mandel, J. S. (1992). Selection of controls in case-control studies. III. Design options. \emph{Am. J. Epidemiol.}, \emph{135}(9), 1042--1050.
+
+\leavevmode\hypertarget{ref-Walther2016-je}{}%
+Walther, A., Nili, H., Ejaz, N., Alink, A., Kriegeskorte, N., \& Diedrichsen, J. (2016). Reliability of dissimilarity measures for multi-voxel pattern analysis. \emph{Neuroimage}, \emph{137}, 188--200.
+
 \leavevmode\hypertarget{ref-waytz2011two}{}%
 Waytz, A., \& Mitchell, J. P. (2011). Two mechanisms for simulating other minds: Dissociations between mirroring and self-projection. \emph{Current Directions in Psychological Science}, \emph{20}(3), 197--200.
 
 \leavevmode\hypertarget{ref-Weichwald2015-aj}{}%
 Weichwald, S., Meyer, T., Özdenizci, O., Schölkopf, B., Ball, T., \& Grosse-Wentrup, M. (2015). Causal interpretation rules for encoding and decoding models in neuroimaging. \emph{Neuroimage}, \emph{110}, 48--59.
 
+\leavevmode\hypertarget{ref-westfall2016statistically}{}%
+Westfall, J., \& Yarkoni, T. (2016). Statistically controlling for confounding constructs is harder than you think. \emph{PloS One}, \emph{11}(3), e0152719.
+
 \leavevmode\hypertarget{ref-wilson2011grounding}{}%
 Wilson-Mendenhall, C. D., Barrett, L. F., Simmons, W. K., \& Barsalou, L. W. (2011). Grounding emotion in situated conceptualization. \emph{Neuropsychologia}, \emph{49}(5), 1105--1127.
 
 \leavevmode\hypertarget{ref-Woolgar2014-jb}{}%
 Woolgar, A., Golland, P., \& Bode, S. (2014). Coping with confounds in multivoxel pattern analysis: What should we do about reaction time differences? A comment on todd, nystrom \& cohen 2013. \emph{Neuroimage}, \emph{98}, 506--512.
+
+\leavevmode\hypertarget{ref-woolgar2011multi}{}%
+Woolgar, A., Thompson, R., Bor, D., \& Duncan, J. (2011). Multi-voxel coding of stimuli, rules, and responses in human frontoparietal cortex. \emph{Neuroimage}, \emph{56}(2), 744--752.
 
 \leavevmode\hypertarget{ref-wurm2015decoding}{}%
 Wurm, M. F., \& Lingnau, A. (2015). Decoding actions at different levels of abstraction. \emph{Journal of Neuroscience}, \emph{35}(20), 7727--7735.
