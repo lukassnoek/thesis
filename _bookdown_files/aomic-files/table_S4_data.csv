@@ -1,0 +1,22 @@
+﻿DWI scan parameters,ID1000,PIOP1,PIOP2
+Number of scans,3,1,1
+Scan technique,SE-DWI,SE-DWI,SE-DWI
+Shell,Single,Single,Single
+Nr. of b0 images,1,1,1
+Nr. of diffusion-weighted dirs.,32,32,32
+Sampling scheme,Half sphere,Half sphere,Half sphere
+DWI b-value,1000 s/mm2,1000 s/mm2,1000 s/mm2
+Coverage,Whole-brain (partial cerebellum),Whole-brain (partial cerebellum),Whole-brain (partial cerebellum)
+FOV (RL / AP / FH),224×224×120,224×224×120,224×224×120
+Voxel size (mm.),2×2×2,2×2×2,2×2×2
+Matrix size,112×112,112×112,112×112
+Nr. of slices,60,60,60
+Slice gap (mm.),0,0,0
+TR / TE (ms.),6312* / 74,7387* / 86,7387* / 86
+Water-fat shift (pix.),13.539,18.926,18.926
+Bandwidth (Hz/pix.),33.8,22.9,22.9
+Flip angle (deg.),90,90,90
+Phase accell. (SENSE),3 (AP),2 (AP),2 (AP)
+Phase encoding dir.,P >> A,P >> A,P >> A
+Slice encoding direction,F >> H,F >> H,F >> H
+Duration,4 min 49 sec,5 min 27 sec,5 min 27 sec

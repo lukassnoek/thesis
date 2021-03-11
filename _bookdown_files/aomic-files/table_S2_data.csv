@@ -1,0 +1,14 @@
+﻿Phase-difference fieldmap parameters,ID1000,PIOP1,PIOP2
+Scan technique,n/a,n/a,3D MPRAGE
+Fat suppression,n/a,n/a,No
+Coverage,n/a,n/a,Whole-brain
+FOV (RL / AP / FH; mm),n/a,n/a,208×256×256
+Voxel size (mm),n/a,n/a,2×2×2
+TR / TE (ms),n/a,n/a,3-Nov
+Delta TE (ms),n/a,n/a,5
+Water-fat shift (pix),n/a,n/a,1.134
+Bandwidth (Hz/pix),n/a,n/a,383
+Flip angle (deg),n/a,n/a,8
+Phase accell. factor (SENSE),n/a,n/a,2.5 (RL) / 2 (FH)
+Acquisition direction,n/a,n/a,Axial
+Duration,n/a,n/a,1 min 44

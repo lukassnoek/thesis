@@ -1,0 +1,5 @@
+﻿BIS/BAS (N = 928),BAS drive,BAS fun,BAS reward,BIS
+BAS drive,1,0.45**,0.34**,-0.19**
+BAS fun,,1,0.39**,-0.13**
+BAS reward,,,1,0.19**
+BIS,,,,1

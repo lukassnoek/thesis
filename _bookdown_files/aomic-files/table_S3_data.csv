@@ -1,0 +1,20 @@
+﻿fMRI scan parameters,ID1000,PIOP1 (MB)*,PIOP1 (seq)*,PIOP2
+Number of scans,1,2,3,4
+Scan technique,GE-EPI,GE-EPI,GE-EPI,GE-EPI
+Coverage,Whole-brain,Whole-brain,Whole-brain,
+FOV  (RL / AP / FH),138×192×192,240×240×118,240x240x122,240x240x122
+Voxel size (mm.),3×3×3,3×3×3,3×3×3,3×3×3
+Matrix size,64x64,80x80,80x80,80x80
+Nr. of slices,40,36,37,37
+Slice gap (mm.),0.3,0.3,0.3,0.3
+TR / TE (ms.),2200 / 28,750 / 28,2000,28
+Water-fat shift (pix.),11.575,11.001,11.502,11.502
+Bandwidth (Hz/Pix),34.6,39.5,37.8,37.8
+Flip angle (deg.),90,60,76.1,76.1
+Phase accell. factor (SENSE),0,2 (AP),2 (AP),2 (AP)
+Phase encoding direction,P >> A,P >> A,P >> A,P >> A
+Multiband acceleration factor,n/a,3,n/a,n/a
+Multiband FOV shift,n/a,None,n/a,n/a
+Slice encoding direction,L >> R (sequential),F >> H (sequential),F >> H (sequential),F >> H (sequential)
+Nr. of dummy scans,2,2,2,2
+Dynamic stabilization,none,enhanced,enhanced,enhanced

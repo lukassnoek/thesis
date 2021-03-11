@@ -1,0 +1,15 @@
+﻿T1w scan parameter,ID1000,PIOP1,PIOP2
+Number of scans,3,1,1
+Scan technique,3D MPRAGE,3D MPRAGE,3D MPRAGE
+Number of signals (repetitions),1,2,2
+Fat suppression,Yes,Yes,Yes
+Coverage,Whole-brain*,Whole-brain*,Whole-brain*
+FOV (RL / AP / FH; mm),160×256×256,188×240×220,188×240×220
+Voxel size (mm),1×1×1,1×1×1,1×1×1
+TR / TE (ms),8.1 / 3.7,8.5 / 3.9,8.5 / 3.9
+Water-fat shift (pix),2.268,2.268,2.268
+Bandwidth (Hz/pix),191.5,191.5,191.5
+Flip angle (deg),8,8,8
+Phase accell. factor (SENSE),1.5 (RL),2.5 (RL) / 2 (FH),2.5 (RL) / 2 (FH)
+Acquisition direction,Sagittal,Axial,Axial
+Duration,5 min 58 sec,6 min 3 sec,6 min 3

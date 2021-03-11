@@ -1,0 +1,32 @@
+﻿Data type,Identifier (ext.),Description,Modality
+Raw,_T1w (nii.gz),T1-weighted scan,Anatomical MRI
+,_bold (nii.gz),Functional (BOLD) MRI scan,Functional MRI
+,_magnitude1 (nii.gz),Average magnitude image (across two echoes) of B0 fieldmap scan (PIOP2 only),Fieldmap
+,_phasediff (nii.gz),Difference between two phase images of B0 fieldmap scan,Fieldmap
+,_dwi (.nii.gz),Diffusion-weighted scan,DWI
+,_dwi (.bvec),Diffusion gradient table (plain-text file),DWI
+,_dwi (.bval),Diffusion b-value sequence (plain-text file),DWI
+,_physio (tsv.gz),Physiology (cardiac/respiratory traces + volume onsets),Physiology
+,_events (tsv),"Onsets, durations, and other relevant properties of events during task fMRI",Behavior
+,* (.json),"Metadata associated with a specific file, acquisition type, or file type",All modalities
+Deriv.,_T1w (nii.gz),Preprocessed T1-weighted scan,Functional MRI
+,_mask (nii.gz),"Binary brain mask (0: not brain, 1: brain)",Functional / anatomical / diffusion MRI
+,_dseg (nii.gz),"Discrete segmentation (0: background, 1: gray matter, 2: white matter, 3: cerebrospinal fluid)",Anatomical MRI
+,_probseg (nii.gz),"Probabilistic segmentation (1st volume: gray matter, 2nd volume: white matter",
+,.surf (.gii),"Reconstructed surfaces (e.g., inflated, midthickness, pial, and smoothwm) ",Anatomical MRI
+,_xfm (.h5),"Linear + non-linear transformation parameters between two spaces (orig, T1w, MNI152NLin2009cAsym, and fsaverage5)",Functional / anatomica MRI
+,_xfm (.txt),"Linear transformation parameters between two spaces (orig, T1w, MNI152NLin2009cAsym, and fsaverage5)",Functional / anatomical MRI
+,_bold (nii.gz),Preprocessed BOLD-MRI scan,Functional MRI
+,_boldref (nii.gz),Reference volume used for computing transformation parameters,Functional MRI
+,_regressors (tsv),Table with confound regressors for BOLD-MRI data,Functional MRI
+,* (.json),Metadata from file with the same name (excluding extension),All modalities
+,_dwi (.nii.gz),Preprocessed diffusion-weighted scan,DWI
+,_dwi (.bvec),Preprocessed gradient table,DWI
+,_dwi (.bval),Preprocessed b-value sequence,DWI
+,_mask (.nii.gz),"Binary brain mask (0: not brain, 1: brain)",DWI
+,_diffmodel,Estimated parameters from the diffusion tensor model,DWI
+,_EVECS,Eigenvectors from the diffusion tensor model,DWI
+,_FA,Fractional anisotropy map,DWI
+,GMvolume,Estimated voxelwise gray matter volume map ,Anatomical MRI
+,_stats,Morphological statistics per anatomical region from a particular atlas,Anatomical MRI
+,_regressors,"Physiology-derived RETROICOR, HRV, and RVT regressors for BOLD-MRI data",Physiology

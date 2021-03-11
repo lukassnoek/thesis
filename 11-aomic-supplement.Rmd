@@ -1,0 +1,71 @@
+```{r setup-aomic-supplement, include=FALSE}
+knitr::opts_chunk$set(results = 'hide', echo = FALSE, message = FALSE, warning = FALSE)
+library(tidyverse)
+library(kableExtra)
+```
+
+`r if (knitr::is_html_output()) '
+# Supplement to Chapter 4 {#aomic-supplement}
+' else '
+# Supplement to Chapter \\@ref(aomic) {#aomic-supplement}
+'`
+
+```{r tab-aomic-S1, results='asis'}
+data = read_csv('_bookdown_files/aomic-files/table_S1_data.csv')
+options(knitr.kable.NA = '')
+kbl(data, booktabs = T, longtable = T,
+    caption = 'Acquisition parameters for the T1-weighted scans acquired across all three datasets.') %>%
+    kable_styling(full_width = T, font_size = 8) %>%
+    footnote(footnote_as_chunk = T, title_format = "italic", threeparttable = T, escape = F, 
+             general = 'MPRAGE: Magnetization Prepared Rapid Gradient Echo, FOV: field-of-view, RL: right-left, AP: anterior-posterior, FH: feet-head, TR: time to repetition, TE: time to echo, n/a: not applicable. * Whole-brain coverage included the brain-stem and cerebellum, unless otherwise stated.')
+```
+<br>
+```{r tab-aomic-S2, results='asis'}
+data = read_csv('_bookdown_files/aomic-files/table_S2_data.csv')
+options(knitr.kable.NA = '')
+kbl(data, booktabs = T, longtable = T,
+    caption = 'Acquisition parameters for the phase-difference fieldmap scans acquired across all three datasets.') %>%
+    kable_styling(full_width = T, font_size = 8) %>%
+    footnote(footnote_as_chunk = T, title_format = "italic", threeparttable = T, escape = F, 
+             general = 'MPRAGE: Magnetization Prepared Rapid Gradient Echo, FOV: field-of-view, RL: right-left, AP: anterior-posterior, FH: feet-head, TR: time to repetition, TE: time to echo.')
+```
+<br>
+```{r tab-aomic-S3, results='asis'}
+data = read_csv('_bookdown_files/aomic-files/table_S3_data.csv')
+options(knitr.kable.NA = '')
+kbl(data, booktabs = T, longtable = T,
+    caption = 'Acquisition parameters for the fMRI scans acquired across all three datasets.') %>%
+    kable_styling(full_width = T, font_size = 8) %>%
+    footnote(footnote_as_chunk = T, title_format = "italic", threeparttable = T, escape = F, 
+             general = 'MPRAGE: Magnetization Prepared Rapid Gradient Echo, GE-EPI: gradient-echo echo-planar imaging, FOV: field-of-view, RL: right-left, AP: anterior-posterior, FH: feet-head, TR: time to repetition, TE: time to echo, Seq.: sequential (non-multiband), MB: multiband (i.e., simultaneous slice excitation). * MB scans were acquired for the face perception and resting-state paradigms of PIOP2. Sequential scans were acquired for the movie watching (ID1000), working memory, emotion matching, gender stroop, emotion anticipation, stop signal paradigms (PIOP1 and PIOP2). ')
+```
+<br>
+```{r tab-aomic-S4, results='asis'}
+data = read_csv('_bookdown_files/aomic-files/table_S4_data.csv')
+options(knitr.kable.NA = '')
+kbl(data, booktabs = T, longtable = T,
+    caption = 'Acquisition parameters for the DWI scans acquired across all three datasets.') %>%
+    kable_styling(full_width = T, font_size = 8) %>%
+    footnote(footnote_as_chunk = T, title_format = "italic", threeparttable = T, escape = F, 
+             general = 'SE-DWI: Spin-Echo Diffusion-Weighted Imaging,, FOV: field-of-view, RL: right-left, AP: anterior-posterior, FH: feet-head, TR: time to repetition, TE: time to echo. *DWI scans were acquired with the shortest possible TR ("shortest" setting on Philips scanners), causing the actual TR values to vary from scan to scan. The TRs reported in this table reflect the median TR across all DWI scans per dataset (see the Raw data standardization section for more information.')
+```
+<br>
+```{r tab-aomic-S5, results='asis'}
+data = read_csv('_bookdown_files/aomic-files/table_S5_data.csv')
+options(knitr.kable.NA = '')
+kbl(data, booktabs = T, longtable = T,
+    caption = 'Description of the subject variables and psychometric variables.') %>%
+    kable_styling(full_width = T, font_size = 8) %>%
+    column_spec(1, width = '8em') %>%
+    footnote(footnote_as_chunk = T, title_format = "italic", threeparttable = T, escape = F, 
+             general = 'The “variable name” coincides with the column name for that variable in the participants.tsv file. Note that missing values in this file are coded with “n/a”. A.U.: arbitrary units.')
+```
+<br>
+```{r tab-aomic-S6, results='asis'}
+data = read_csv('_bookdown_files/aomic-files/table_S6_data.csv')
+options(knitr.kable.NA = '') 
+kbl(data, booktabs = T, longtable = T,
+    caption = 'All data types with associated identifiers, descriptions, and modalities.') %>%
+    kable_styling(full_width = T, font_size = 8) %>%
+    column_spec(1, width = '2em')
+```
