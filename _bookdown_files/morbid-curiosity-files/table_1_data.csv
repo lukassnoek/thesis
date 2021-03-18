@@ -1,0 +1,33 @@
+﻿Cluster nr,Cluster size,Cluster max,X,Y,Z,Region,K,Max
+1,"3,158",4.82, − 8,30,24,Left paracingulate gyrus,831,4.58
+,,,,,,Right paracingulate gyrus,741,4.7
+,,,,,,Left superior frontal gyrus,657,4.64
+,,,,,,"Right cingulate gyrus, anterior division",317,4.42
+,,,,,,"Left cingulate gyrus, anterior division",300,4.82
+,,,,,,Right superior frontal gyrus,201,3.94
+,,,,,,Left juxtapositional lobule cortex,76,3.27
+,,,,,,,,
+2,1928,4.84, − 42,20,4,Left frontal orbital cortex,602,4.64
+,,,,,,Left insular cortex,234,4.17
+,,,,,,"Left inferior frontal gyrus, pars triangularis",229,4.17
+,,,,,,Left frontal operculum cortex,205,4.84
+,,,,,,"Left inferior frontal gyrus, pars opercularis",93,3.65
+,,,,,,Left temporal pole,57,4.31
+,,,,,,Left subcallosal cortex,29,3.22
+,,,,,,Left caudate,121,3.48
+,,,,,,Left Putamen,110,3.86
+,,,,,,Left thalamus,48,3.84
+,,,,,,Left accumbens,39,3.52
+,,,,,,,,
+3,692,4.64,36,24,-16,Right frontal orbital cortex,443,4.64
+,,,,,,Right insular cortex,79,3.8
+,,,,,,Right frontal operculum cortex,70,3.39
+,,,,,,Right temporal pole,44,3.4
+,,,,,,"Right inferior frontal gyrus, pars triangularis",30,3.27
+,,,,,,,,
+4,464,4.74,10,14,4,Right caudate,265,4.74
+,,,,,,Right putamen,26,3.49
+,,,,,,,,
+5,296,3.81, − 36,12,26,Left middle frontal gyrus,111,3.72
+,,,,,,"Left inferior frontal gyrus, pars opercularis",111,3.81
+,,,,,,Left precentral gyrus,64,3.46

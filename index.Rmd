@@ -106,6 +106,7 @@ bibliography:
   - bib/shared-states.bib
   - bib/confounds-decoding.bib
   - bib/aomic.bib
+  - bib/morbid-curiosity.bib
 citation_package: none
 biblio-style: "apa"
 link-citations: true # make clickable hyperlinks from in-text citations to bibliography at the end
