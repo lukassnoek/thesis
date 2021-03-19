@@ -1,0 +1,63 @@
+﻿Cluster nr.,Cluster size,Cluster max.,X,Y,Z,Region,K,Max.
+1,12024,6.41,34,28,-6,Left Frontal Pole,997,4.99
+,,,,,,Right Frontal Orbital Cortex,870,6.41
+,,,,,,Left Frontal Orbital Cortex,802,5.49
+,,,,,,Right Frontal Pole,743,5.19
+,,,,,,"Right Inferior Frontal Gyrus, pars triangularis",647,5.33
+,,,,,,Left Temporal Pole,640,4.64
+,,,,,,Left Insular Cortex,634,6.23
+,,,,,,Right Temporal Pole,616,4.75
+,,,,,,Right Insular Cortex,381,5.94
+,,,,,,"Left Inferior Frontal Gyrus, pars opercularis",373,4.53
+,,,,,,Left Frontal Operculum Cortex,365,5.37
+,,,,,,"Left Inferior Frontal Gyrus, pars triangularis",324,5.49
+,,,,,,Right Frontal Operculum Cortex,287,5.21
+,,,,,,"Right Inferior Frontal Gyrus, pars opercularis",218,4.48
+,,,,,,Left Middle Frontal Gyrus,192,3.8
+,,,,,,Right Middle Frontal Gyrus,102,3.5
+,,,,,,"Right Middle Temporal Gyrus, anterior division",39,3.63
+,,,,,,Left Subcallosal Cortex,39,4.23
+,,,,,,Left Precentral Gyrus,27,3.22
+,,,,,,Left Central Opercular Cortex,27,3.12
+,,,,,,Right Thalamus,462,4.76
+,,,,,,"Brain-Stem, left part",447,4.19
+,,,,,,Left Thalamus,446,4.4
+,,,,,,Left Caudate,257,4.39
+,,,,,,Right Caudate,239,4.95
+,,,,,,Right Putamen,211,4.53
+,,,,,,Left Putamen,173,4.88
+,,,,,,"Brain-Stem, right part",153,4.34
+,,,,,,Left Accumbens,61,4.16
+,,,,,,Right Pallidum,34,3.63
+,,,,,,Right Accumbens,29,4.31
+,,,,,,Right Amygdala,26,3.69
+,,,,,,,,
+2,7133,6.17,8,30,26,Right Paracingulate Gyrus,974,5.95
+,,,,,,"Right Cingulate Gyrus, anterior division",897,6.17
+,,,,,,Left Paracingulate Gyrus,835,5.99
+,,,,,,Left Superior Frontal Gyrus,832,4.73
+,,,,,,"Left Cingulate Gyrus, anterior division",797,5.89
+,,,,,,Right Superior Frontal Gyrus,646,4.67
+,,,,,,Right Frontal Pole,443,4.25
+,,,,,,Left Juxtapositional Lobule Cortex,360,5.04
+,,,,,,Left Postcentral Gyrus,287,4.15
+,,,,,,Left Precentral Gyrus,283,4.08
+,,,,,,Right Juxtapositional Lobule Cortex,281,4.78
+,,,,,,Left Frontal Pole,179,4.11
+,,,,,,Left Middle Frontal Gyrus,124,4.03
+,,,,,,Left Superior Parietal Lobule,42,3.64
+,,,,,,"Right Cingulate Gyrus, posterior division",40,3.41
+,,,,,,Right Frontal Medial Cortex,23,3.13
+,,,,,,,,
+3,534,5.05,-34,-46,-24,"Left Temporal Fusiform Cortex, posterior division",95,3.98
+,,,,,,Left Temporal Occipital Fusiform Cortex,76,5.05
+,,,,,,,,
+4,401,4.13,20,-50,0,Right Lingual Gyrus,182,4.13
+,,,,,,Right Intracalcarine Cortex,119,3.77
+,,,,,,Right Supracalcarine Cortex,38,3.47
+,,,,,,"Right Cingulate Gyrus, posterior division",35,3.78
+,,,,,,,,
+5,375,4.7,-16,-50,-2,Left Lingual Gyrus,115,4.7
+,,,,,,"Left Cingulate Gyrus, posterior division",111,4.05
+,,,,,,Left Precuneous Cortex,61,3.97
+,,,,,,Left Intracalcarine Cortex,43,3.05

@@ -1,0 +1,48 @@
+﻿Cluster nr.,Cluster size,Cluster max.,X,Y,Z,Region,K,Max.
+1,1857,4.4,0,6,48,"Right Cingulate Gyrus, anterior division",400,4.1
+,,,,,,Left Juxtapositional Lobule Cortex (formerly Supplementary Motor Cortex),347,4.4
+,,,,,,"Left Cingulate Gyrus, anterior division",347,4.34
+,,,,,,Right Paracingulate Gyrus,208,4.02
+,,,,,,Right Juxtapositional Lobule Cortex (formerly Supplementary Motor Cortex),164,4.27
+,,,,,,Left Paracingulate Gyrus,158,4.27
+,,,,,,"Right Cingulate Gyrus, posterior division",67,3.55
+,,,,,,Left Superior Frontal Gyrus,51,4.06
+,,,,,,Left Precentral Gyrus,40,3.35
+,,,,,,"Left Cingulate Gyrus, posterior division",28,3.22
+,,,,,,,,
+2,1651,4.54,50,36,2,Right Frontal Pole,463,4.54
+,,,,,,"Right Inferior Frontal Gyrus, pars triangularis",304,4.51
+,,,,,,Right Frontal Orbital Cortex,240,3.95
+,,,,,,Right Insular Cortex,228,4.21
+,,,,,,Right Temporal Pole,143,3.66
+,,,,,,Right Frontal Operculum Cortex,117,4.12
+,,,,,,"Right Superior Temporal Gyrus, anterior division",48,3.44
+,,,,,,"Right Superior Temporal Gyrus, posterior division",36,3.19
+,,,,,,"Right Inferior Frontal Gyrus, pars opercularis",27,3.02
+,,,,,,,,
+3,1196,4.57,-40,14,-8,Left Insular Cortex,421,4.57
+,,,,,,Left Frontal Pole,377,4.51
+,,,,,,Left Frontal Orbital Cortex,128,3.7
+,,,,,,Left Frontal Operculum Cortex,107,3.82
+,,,,,,"Left Inferior Frontal Gyrus, pars triangularis",59,3.67
+,,,,,,Left Putamen,40,3.55
+,,,,,,,,
+4,931,4.84,-34,-46,-20,Left Temporal Occipital Fusiform Cortex,60,4.84
+,,,,,,"Left Temporal Fusiform Cortex, posterior division",44,4.11
+,,,,,,,,
+5,570,3.98,-48,-26,42,Left Postcentral Gyrus,300,3.98
+,,,,,,Left Precentral Gyrus,220,3.83
+,,,,,,"Left Supramarginal Gyrus, anterior division",35,3.27
+,,,,,,,,
+6,422,3.95,-26,-26,64,Left Postcentral Gyrus,136,3.43
+,,,,,,"Left Lateral Occipital Cortex, superior division",117,3.85
+,,,,,,Left Superior Parietal Lobule,82,3.65
+,,,,,,Left Precentral Gyrus,67,3.95
+,,,,,,,,
+7,332,4.11,26,-68,-4,Right Lingual Gyrus,149,3.62
+,,,,,,Right Intracalcarine Cortex,97,3.33
+,,,,,,Right Supracalcarine Cortex,39,3.75
+,,,,,,Right Occipital Fusiform Gyrus,25,4.11
+,,,,,,,,
+8,266,3.84,-8,-18,4,Right Thalamus,128,3.71
+,,,,,,Left Thalamus,127,3.84

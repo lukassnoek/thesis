@@ -1,5 +1,64 @@
+---
+output:
+  pdf_document: default
+  html_document: default
+---
+```{r setup-morbid-curiosity-supplement, include=FALSE}
+knitr::opts_chunk$set(results = 'hide', echo = FALSE, message = FALSE, warning = FALSE)
+library(tidyverse)
+library(kableExtra)
+```
+
 `r if (knitr::is_html_output()) '
 # Supplement to Chapter 5 {#morbid-curiosity-supplement}
 ' else '
 # Supplement to Chapter \\@ref(morbid-curiosity) {#morbid-curiosity-supplement}
 '`
+
+```{r tab-morbid-curiosity-S1, results='asis'}
+data = read_csv('_bookdown_files/morbid-curiosity-files/table_S1_data.csv')
+options(knitr.kable.NA = '')
+kbl(data, booktabs = T, longtable = T,
+    caption = ' List of Neurosynth terms associated with the results of the exploratory whole-brain
+analyses.') %>%
+    kable_styling(full_width = T, font_size = 8) %>%
+    footnote(footnote_as_chunk = T, title_format = "italic", threeparttable = T, escape = F, 
+             general = 'The ten terms with the highest spatial correlation with the whole-brain
+maps (excluding anatomical terms) are reported.')
+```
+
+
+```{r tab-morbid-curiosity-S2, results='asis'}
+data = suppressWarnings(read_csv('_bookdown_files/morbid-curiosity-files/table_S2_data.csv'))
+options(knitr.kable.NA = '')
+kbl(data, booktabs = T, longtable = T, caption = 'Cluster statistics and associated brain regions from the exploratory whole-brain analysis.') %>%
+    kable_styling(full_width = T, font_size = 9) %>%
+    column_spec(column = c(1, 2, 3, 4, 5, 6, 8, 9), width = "1em") %>%
+    footnote(footnote_as_chunk = T, title_format = "italic", threeparttable = T, escape = F, 
+             general = 'The X, Y, and Z coordinates refer to MNI152 (2 mm) space. The regions are taken from the Harvard–Oxford (sub)cortical atlas and voxels are assigned to regions based on their maximum probability across all ROIs within the atlas. *K* refers to the number of voxels within a particular region.')
+```
+
+```{r tab-morbid-curiosity-S3, results='asis'}
+data = suppressWarnings(read_csv('_bookdown_files/morbid-curiosity-files/table_S3_data.csv'))
+options(knitr.kable.NA = '')
+kbl(data, booktabs = T, longtable = T, caption = 'Cluster statistics and associated brain regions from the exploratory whole-brain analysis.') %>%
+    kable_styling(full_width = T, font_size = 9) %>%
+    column_spec(column = c(1, 2, 3, 4, 5, 6, 8, 9), width = "1em") %>%
+    footnote(footnote_as_chunk = T, title_format = "italic", threeparttable = T, escape = F, 
+             general = 'The X, Y, and Z coordinates refer to MNI152 (2 mm) space. The regions are taken from the Harvard–Oxford (sub)cortical atlas and voxels are assigned to regions based on their maximum probability across all ROIs within the atlas. *K* refers to the number of voxels within a particular region.')
+```
+
+```{r tab-morbid-curiosity-S4, results='asis'}
+data = suppressWarnings(read_csv('_bookdown_files/morbid-curiosity-files/table_S4_data.csv'))
+options(knitr.kable.NA = '')
+kbl(data, booktabs = T, longtable = T, caption = 'Stimulus codes for the images used in the choice task.') %>%
+    kable_styling(full_width = T, font_size = 9) %>%
+    footnote(footnote_as_chunk = T, title_format = "italic", threeparttable = T, escape = T, 
+             general = 'Images were taken from both the IAPS (Lang, Bradley, & Cuthbert, 1997) and NAPS (Marchewka, Żurawski, Jednoróg, & Grabowska, 2014) database.')
+```
+
+```{r fig-morbid-curiosity-S1, fig.cap='(ref:caption-fig-morbid-curiosity-S1)', results='show'}
+knitr::include_graphics("_bookdown_files/morbid-curiosity-files/figures/figure_S1.png", auto_pdf = TRUE)
+```
+
+(ref:caption-fig-morbid-curiosity-S1) Subplots of individual regressors from the significant voxels in the confirmatory contrast negative~active - passive~ - positive~active - passive~ in the induction-phase. These plots show the direction of the effects. Plots are averaged over all significant voxels within each ROI (striatum in upper plots, IFG in lower plots), separately for the negative trials (left plots) and positive trials (right plots) with subplots for the active choice and passive viewing condition. Dots represent the participant-specific ROI-average parameter estimate from the first-level analysis. The horizontal line in the boxplots represents the median and the whiskers represent the interquartile range. Note that this figure is only meant to show the directionality of the effects, not their statistical significance (as the ROIs itself only contain voxels that were significant in the group-analysis).

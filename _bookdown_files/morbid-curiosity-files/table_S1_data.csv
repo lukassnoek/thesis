@@ -1,0 +1,33 @@
+﻿Contrast,Neurosynth term,Overall corr.,Cortical corr.,Subcortical corr.
+Negative (act - pas),Goal,0.22,0.24,0.18
+,Fear,0.18,0.3,-0.04
+,Reward,0.17,0.08,0.43
+,Task,0.17,0.19,0.17
+,Conflict,0.16,0.2,0.02
+,Anticipation,0.16,0.1,0.4
+,Monetary,0.15,0.04,0.4
+,Incentive,0.14,0.01,0.38
+,Demands,0.14,0.17,0.01
+,Incentive delay,0.13,0.02,0.36
+,,,,
+Positive (act - pas),Pain,0.15,0.16,0.28
+,Painful,0.14,0.15,0.17
+,Execution,0.14,0.14,0.07
+,Somatosensory,0.13,0.14,0.2
+,Finger,0.13,0.12,0.16
+,Movement,0.13,.13.,0.18
+,Goal,0.13,.15.,0.06
+,Hand,0.11,0.11,0.18
+,Task,0.12,0.12,0.19
+,Tapping,0.11,0.12,0.13
+,,,,
+Negative (act - pas) - Positiv (act - pas),Reward,0.2,0.09,0.48
+,Task,0.19,0.21,0.2
+,Monetary,0.17,0.05,0.44
+,Semantic,0.18,0.22,-0.02
+,Anticipation,0.17,0.07,0.43
+,Incentive,0.16,0.02,0.42
+,Demands,0.17,0.2,0
+,Fear,0.15,0.22,0.05
+,Autobiographical,0.16,0.19,0.02
+,Retrieval,0.16,0.2,-0.06
