@@ -2,9 +2,13 @@
 \chaptermark{Acknowledgments}
 
 * Steven, Suzanne
-* Tomas, Agneta
+* Tomas, Agneta, Han
 * Lab (Jessica, Lynn, Noor)
+* Kamer (incl. Leon)
 * Daniel
+* Steven M.
+* Lesgeven: Noor, Claire, Han, Jessica, studenten
+* Interns (Cas, Andreas, Maite, Max, Sjoerd, Jurriaan, Lara)
 * Midas & Anne, mam
 * Pap
 * Pia

@@ -103,10 +103,13 @@ output:
 indent: false # indent new paragraphs, instead of leaving whitespace
 links-as-notes: true # in the pdf, print hyperlink URLS as footnotes (as they can't be clicked on)
 bibliography: 
+  - bib/misc.bib
   - bib/shared-states.bib
   - bib/confounds-decoding.bib
   - bib/aomic.bib
   - bib/morbid-curiosity.bib
+  - bib/static-vs-dynamic.bib
+
 citation_package: none
 biblio-style: "apa"
 link-citations: true # make clickable hyperlinks from in-text citations to bibliography at the end

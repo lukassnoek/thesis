@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020) (preloaded format=xelatex 2021.3.19)  19 MAR 2021 10:13
+This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020) (preloaded format=xelatex 2021.3.19)  24 MAY 2021 19:09
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1270,45 +1270,45 @@ LaTeX Info: Redefining \sffamily on input line 21.
 LaTeX Info: Redefining \ttfamily on input line 21.
 Package polyglossia Info: Option: English, variant=american.
 Package polyglossia Info: Option: English, variant=american.
-LaTeX Info: Redefining \rmfamily on input line 774.
-LaTeX Info: Redefining \sffamily on input line 774.
-LaTeX Info: Redefining \ttfamily on input line 774.
+LaTeX Info: Redefining \rmfamily on input line 876.
+LaTeX Info: Redefining \sffamily on input line 876.
+LaTeX Info: Redefining \ttfamily on input line 876.
 Package polyglossia Info: Option: English, variant=american.
 Package polyglossia Info: Option: English, variant=american.
-LaTeX Info: Redefining \rmfamily on input line 782.
-LaTeX Info: Redefining \sffamily on input line 782.
-LaTeX Info: Redefining \ttfamily on input line 782.
+LaTeX Info: Redefining \rmfamily on input line 884.
+LaTeX Info: Redefining \sffamily on input line 884.
+LaTeX Info: Redefining \ttfamily on input line 884.
 Package polyglossia Info: Option: English, variant=american.
 Package polyglossia Info: Option: English, variant=american.
 )
 \openout1 = `thesis.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 271.
-LaTeX Font Info:    ... okay on input line 271.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 271.
-LaTeX Font Info:    ... okay on input line 271.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 271.
-LaTeX Font Info:    ... okay on input line 271.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 271.
-LaTeX Font Info:    ... okay on input line 271.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 271.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 285.
+LaTeX Font Info:    ... okay on input line 285.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 285.
+LaTeX Font Info:    ... okay on input line 285.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 285.
+LaTeX Font Info:    ... okay on input line 285.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 285.
+LaTeX Font Info:    ... okay on input line 285.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 285.
 LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 2
-71.
+85.
 (/Users/lukas/Library/TinyTeX/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 271.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 271.
-LaTeX Font Info:    ... okay on input line 271.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 271.
-LaTeX Font Info:    ... okay on input line 271.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 271.
-LaTeX Font Info:    ... okay on input line 271.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 271.
-LaTeX Font Info:    ... okay on input line 271.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 271.
-LaTeX Font Info:    ... okay on input line 271.
-Package hyperref Info: Link coloring OFF on input line 271.
+LaTeX Font Info:    ... okay on input line 285.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 285.
+LaTeX Font Info:    ... okay on input line 285.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 285.
+LaTeX Font Info:    ... okay on input line 285.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 285.
+LaTeX Font Info:    ... okay on input line 285.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 285.
+LaTeX Font Info:    ... okay on input line 285.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 285.
+LaTeX Font Info:    ... okay on input line 285.
+Package hyperref Info: Link coloring OFF on input line 285.
 (/Users/lukas/Library/TinyTeX/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
 (/Users/lukas/Library/TinyTeX/texmf-dist/tex/latex/refcount/refcount.sty
@@ -1322,10 +1322,10 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
 Redoing nameref's sectioning
 Redoing nameref's label
-LaTeX Info: Redefining \nameref on input line 271.
-LaTeX Info: Redefining \ref on input line 271.
-LaTeX Info: Redefining \pageref on input line 271.
-LaTeX Info: Redefining \nameref on input line 271.
+LaTeX Info: Redefining \nameref on input line 285.
+LaTeX Info: Redefining \ref on input line 285.
+LaTeX Info: Redefining \pageref on input line 285.
+LaTeX Info: Redefining \nameref on input line 285.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: float package is loaded.
 Package caption Info: threeparttable package is loaded.
@@ -1361,9 +1361,9 @@ Package caption Info: End \AtBeginDocument code.
 
 Package polyglossia Info: Option: English, variant=american.
 Package polyglossia Info: Option: English, variant=american.
-LaTeX Info: Redefining \rmfamily on input line 271.
-LaTeX Info: Redefining \sffamily on input line 271.
-LaTeX Info: Redefining \ttfamily on input line 271.
+LaTeX Info: Redefining \rmfamily on input line 285.
+LaTeX Info: Redefining \sffamily on input line 285.
+LaTeX Info: Redefining \ttfamily on input line 285.
 Package polyglossia Info: Option: English, variant=american.
 Package polyglossia Info: Option: English, variant=american.
 File: ./cover/thesis_cover.pdf Graphic file (type pdf)
@@ -1384,81 +1384,81 @@ File: ./cover/thesis_cover.pdf Graphic file (type pdf)
 
 ]
 LaTeX Font Info:    Font shape `TU/MinionPro(0)/m/n' will be
-(Font)              scaled to size 24.48213pt on input line 290.
+(Font)              scaled to size 24.48213pt on input line 304.
 LaTeX Font Info:    Font shape `TU/MinionPro(0)/m/sc' will be
-(Font)              scaled to size 24.48213pt on input line 290.
+(Font)              scaled to size 24.48213pt on input line 304.
 [1
 
 ]
 LaTeX Font Info:    Font shape `TU/MinionPro(0)/m/n' will be
-(Font)              scaled to size 10.77489pt on input line 298.
+(Font)              scaled to size 10.77489pt on input line 312.
 LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 3
-02.
+16.
 (/Users/lukas/Library/TinyTeX/texmf-dist/tex/latex/lm/ot1lmr.fd
 File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OML+lmm on input line 3
-02.
+16.
 (/Users/lukas/Library/TinyTeX/texmf-dist/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 
-302.
+316.
 (/Users/lukas/Library/TinyTeX/texmf-dist/tex/latex/lm/omslmsy.fd
 File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 
-302.
+316.
 (/Users/lukas/Library/TinyTeX/texmf-dist/tex/latex/lm/omxlmex.fd
 File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10.95> on input line 302.
+(Font)              <10.95> on input line 316.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 302.
+(Font)              <8> on input line 316.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 302.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 302
+(Font)              <6> on input line 316.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 316
 .
 (/Users/lukas/Library/TinyTeX/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 302
+LaTeX Font Info:    Trying to load font information for U+msb on input line 316
 .
 (/Users/lukas/Library/TinyTeX/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    Font shape `TU/MinionPro(1)/m/n' will be
-(Font)              scaled to size 10.77489pt on input line 302.
+(Font)              scaled to size 10.77489pt on input line 316.
 LaTeX Font Info:    Font shape `TU/MinionPro(1)/m/n' will be
-(Font)              scaled to size 7.87207pt on input line 302.
+(Font)              scaled to size 7.87207pt on input line 316.
 LaTeX Font Info:    Font shape `TU/MinionPro(1)/m/n' will be
-(Font)              scaled to size 5.90405pt on input line 302.
+(Font)              scaled to size 5.90405pt on input line 316.
 LaTeX Font Info:    Font shape `TU/MinionPro(1)/m/it' will be
-(Font)              scaled to size 10.77489pt on input line 302.
+(Font)              scaled to size 10.77489pt on input line 316.
 LaTeX Font Info:    Font shape `TU/MinionPro(1)/m/it' will be
-(Font)              scaled to size 7.87207pt on input line 302.
+(Font)              scaled to size 7.87207pt on input line 316.
 LaTeX Font Info:    Font shape `TU/MinionPro(1)/m/it' will be
-(Font)              scaled to size 5.90405pt on input line 302.
+(Font)              scaled to size 5.90405pt on input line 316.
 LaTeX Font Info:    Font shape `TU/MinionPro(0)/m/n' will be
-(Font)              scaled to size 7.87207pt on input line 302.
+(Font)              scaled to size 7.87207pt on input line 316.
 LaTeX Font Info:    Font shape `TU/MinionPro(0)/m/n' will be
-(Font)              scaled to size 5.90405pt on input line 302.
+(Font)              scaled to size 5.90405pt on input line 316.
 [2
 
 ]
 LaTeX Font Info:    Font shape `TU/MinionPro(0)/b/n' will be
-(Font)              scaled to size 24.48213pt on input line 313.
+(Font)              scaled to size 24.48213pt on input line 327.
 LaTeX Font Info:    Font shape `TU/MinionPro(0)/m/n' will be
-(Font)              scaled to size 17.00366pt on input line 315.
+(Font)              scaled to size 17.00366pt on input line 329.
 LaTeX Font Info:    Font shape `TU/MinionPro(0)/m/it' will be
-(Font)              scaled to size 17.00366pt on input line 315.
+(Font)              scaled to size 17.00366pt on input line 329.
 LaTeX Font Info:    Font shape `TU/MinionPro(0)/m/n' will be
-(Font)              scaled to size 14.16971pt on input line 317.
+(Font)              scaled to size 14.16971pt on input line 331.
 LaTeX Font Info:    Font shape `TU/MinionPro(0)/m/sc' will be
-(Font)              scaled to size 14.16971pt on input line 317.
+(Font)              scaled to size 14.16971pt on input line 331.
 
-Overfull \hbox (65.40623pt too wide) in paragraph at lines 323--323
+Overfull \hbox (65.40623pt too wide) in paragraph at lines 337--337
  [][] 
  []
 
@@ -1466,27 +1466,32 @@ Overfull \hbox (65.40623pt too wide) in paragraph at lines 323--323
 
 ]
 LaTeX Font Info:    Font shape `TU/MinionPro(0)/b/n' will be
-(Font)              scaled to size 11.8081pt on input line 337.
+(Font)              scaled to size 11.8081pt on input line 351.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 339.
+(Font)              <12> on input line 353.
 LaTeX Font Info:    Font shape `TU/MinionPro(1)/m/it' will be
-(Font)              scaled to size 11.8081pt on input line 339.
+(Font)              scaled to size 11.8081pt on input line 353.
 
-Underfull \hbox (badness 10000) in paragraph at lines 337--356
+Underfull \hbox (badness 10000) in paragraph at lines 351--370
 
  []
 
 
-Overfull \hbox (50.10248pt too wide) in paragraph at lines 337--356
+Overfull \hbox (50.10248pt too wide) in paragraph at lines 351--370
 [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 337--356
+Underfull \hbox (badness 10000) in paragraph at lines 351--370
 
  []
 
 [4
+
+]
+LaTeX Font Info:    Font shape `TU/MinionPro(0)/m/it' will be
+(Font)              scaled to size 11.8081pt on input line 378.
+[5
 
 ] (./thesis.toc
 Package polyglossia Info: Option: English, variant=american.
@@ -1496,81 +1501,79 @@ LaTeX Info: Redefining \sffamily on input line 1.
 LaTeX Info: Redefining \ttfamily on input line 1.
 Package polyglossia Info: Option: English, variant=american.
 Package polyglossia Info: Option: English, variant=american.
-[5
+[6
 
-]
-LaTeX Font Info:    Font shape `TU/MinionPro(0)/m/it' will be
-(Font)              scaled to size 11.8081pt on input line 159.
-[6]
+
+] [7]
 LaTeX Font Info:    Font shape `TU/MinionPro(0)/b/n' will be
-(Font)              scaled to size 14.16971pt on input line 161.
+(Font)              scaled to size 14.16971pt on input line 195.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <14.4> on input line 161.
+(Font)              <14.4> on input line 195.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 161.
+(Font)              <10> on input line 195.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 161.
+(Font)              <7> on input line 195.
 LaTeX Font Info:    Font shape `TU/MinionPro(1)/m/n' will be
-(Font)              scaled to size 14.16971pt on input line 161.
+(Font)              scaled to size 14.16971pt on input line 195.
 LaTeX Font Info:    Font shape `TU/MinionPro(1)/m/n' will be
-(Font)              scaled to size 9.84009pt on input line 161.
+(Font)              scaled to size 9.84009pt on input line 195.
 LaTeX Font Info:    Font shape `TU/MinionPro(1)/m/n' will be
-(Font)              scaled to size 6.88806pt on input line 161.
+(Font)              scaled to size 6.88806pt on input line 195.
 LaTeX Font Info:    Font shape `TU/MinionPro(1)/m/it' will be
-(Font)              scaled to size 14.16971pt on input line 161.
+(Font)              scaled to size 14.16971pt on input line 195.
 LaTeX Font Info:    Font shape `TU/MinionPro(1)/m/it' will be
-(Font)              scaled to size 9.84009pt on input line 161.
+(Font)              scaled to size 9.84009pt on input line 195.
 LaTeX Font Info:    Font shape `TU/MinionPro(1)/m/it' will be
-(Font)              scaled to size 6.88806pt on input line 161.
+(Font)              scaled to size 6.88806pt on input line 195.
 LaTeX Font Info:    Font shape `TU/MinionPro(0)/m/n' will be
-(Font)              scaled to size 9.84009pt on input line 161.
+(Font)              scaled to size 9.84009pt on input line 195.
 LaTeX Font Info:    Font shape `TU/MinionPro(0)/m/n' will be
-(Font)              scaled to size 6.88806pt on input line 161.
-[7]
-LaTeX Info: Redefining \rmfamily on input line 201.
-LaTeX Info: Redefining \sffamily on input line 201.
-LaTeX Info: Redefining \ttfamily on input line 201.
+(Font)              scaled to size 6.88806pt on input line 195.
+[8]
+LaTeX Info: Redefining \rmfamily on input line 235.
+LaTeX Info: Redefining \sffamily on input line 235.
+LaTeX Info: Redefining \ttfamily on input line 235.
 Package polyglossia Info: Option: English, variant=american.
 Package polyglossia Info: Option: English, variant=american.
-LaTeX Info: Redefining \rmfamily on input line 203.
-LaTeX Info: Redefining \sffamily on input line 203.
-LaTeX Info: Redefining \ttfamily on input line 203.
+LaTeX Info: Redefining \rmfamily on input line 237.
+LaTeX Info: Redefining \sffamily on input line 237.
+LaTeX Info: Redefining \ttfamily on input line 237.
 Package polyglossia Info: Option: English, variant=american.
 Package polyglossia Info: Option: English, variant=american.
-) [8]
+) [9]
 LaTeX Font Info:    Font shape `TU/MinionPro(0)/m/n' will be
-(Font)              scaled to size 20.40834pt on input line 370.
+(Font)              scaled to size 20.40834pt on input line 395.
 LaTeX Font Info:    Font shape `TU/MinionPro(0)/m/sc' will be
-(Font)              scaled to size 20.40834pt on input line 370.
+(Font)              scaled to size 20.40834pt on input line 395.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 372.
+(Font)              <5> on input line 397.
 LaTeX Font Info:    Font shape `TU/MinionPro(1)/m/n' will be
-(Font)              scaled to size 4.92004pt on input line 372.
+(Font)              scaled to size 4.92004pt on input line 397.
 LaTeX Font Info:    Font shape `TU/MinionPro(1)/m/it' will be
-(Font)              scaled to size 4.92004pt on input line 372.
+(Font)              scaled to size 4.92004pt on input line 397.
 LaTeX Font Info:    Font shape `TU/MinionPro(0)/m/n' will be
-(Font)              scaled to size 4.92004pt on input line 372.
+(Font)              scaled to size 4.92004pt on input line 397.
 LaTeX Font Info:    Font shape `TU/MinionPro(0)/b/n' will be
-(Font)              scaled to size 17.00366pt on input line 379.
+(Font)              scaled to size 17.00366pt on input line 404.
 [1
 
 
 ] [2]
 LaTeX Font Info:    Font shape `TU/MinionPro(0)/m/it' will be
-(Font)              scaled to size 10.77489pt on input line 420.
+(Font)              scaled to size 10.77489pt on input line 445.
 [3
 
 ] [4] [5] [6] [7]
 LaTeX Font Info:    Font shape `TU/MinionPro(0)/b/it' will be
-(Font)              scaled to size 11.8081pt on input line 461.
+(Font)              scaled to size 11.8081pt on input line 486.
 [8]
 File: _bookdown_files/shared-states-files/figures/figure_1.pdf Graphic file (ty
 pe pdf)
 <use _bookdown_files/shared-states-files/figures/figure_1.pdf>
 LaTeX Font Info:    Font shape `TU/MinionPro(0)/m/sc' will be
-(Font)              scaled to size 11.8081pt on input line 470.
+(Font)              scaled to size 11.8081pt on input line 495.
 LaTeX Font Info:    Font shape `TU/Helvetica(0)/m/n' will be
-(Font)              scaled to size 9.05844pt on input line 470.
+(Font)              scaled to size 9.05844pt on input line 495.
 [9] [10] [11]
 Missing character: There is no   in font Minion Pro/OT:script=latn;language=dfl
 t;mapping=tex-text;!
@@ -1579,7 +1582,7 @@ File: _bookdown_files/shared-states-files/figures/figure_2.pdf Graphic file (ty
 pe pdf)
 <use _bookdown_files/shared-states-files/figures/figure_2.pdf>
 LaTeX Font Info:    Font shape `TU/Helvetica(0)/b/n' will be
-(Font)              scaled to size 8.90054pt on input line 502.
+(Font)              scaled to size 8.90054pt on input line 527.
 [13] [14] [15] [16] [17] [18] [19] [20]
 File: _bookdown_files/shared-states-files/figures/figure_3.pdf Graphic file (ty
 pe pdf)
@@ -1589,7 +1592,7 @@ File: _bookdown_files/shared-states-files/figures/figure_4.pdf Graphic file (ty
 pe pdf)
 <use _bookdown_files/shared-states-files/figures/figure_4.pdf>
 LaTeX Font Info:    Font shape `TU/Helvetica(0)/m/it' will be
-(Font)              scaled to size 9.05844pt on input line 577.
+(Font)              scaled to size 9.05844pt on input line 602.
 File: _bookdown_files/shared-states-files/figures/figure_5.pdf Graphic file (ty
 pe pdf)
 <use _bookdown_files/shared-states-files/figures/figure_5.pdf>
@@ -1597,7 +1600,7 @@ pe pdf)
 
 ] [31] [32] [33]
 LaTeX Font Info:    Font shape `TU/MinionPro(0)/b/it' will be
-(Font)              scaled to size 14.16971pt on input line 658.
+(Font)              scaled to size 14.16971pt on input line 678.
 [34] [35] [36]
 File: _bookdown_files/confounds-decoding-files/figures/figure_1.pdf Graphic fil
 e (type pdf)
@@ -1607,12 +1610,12 @@ File: _bookdown_files/confounds-decoding-files/figures/figure_2.pdf Graphic fil
 e (type pdf)
 <use _bookdown_files/confounds-decoding-files/figures/figure_2.pdf>
 [44] [45] [46] [47] [48] [49] [50]
-Underfull \hbox (badness 10000) in paragraph at lines 816--817
+Underfull \hbox (badness 10000) in paragraph at lines 836--837
 \TU/MinionPro(0)/m/n/12 In the Github repository corresponding to this article
  []
 
 [51] [52] [53] [54] [55]
-Underfull \hbox (badness 4229) in paragraph at lines 874--875
+Underfull \hbox (badness 4229) in paragraph at lines 894--895
 []\TU/MinionPro(0)/m/n/12 Thus, essentially, CVCR is the cross-validated versio
 n of
  []
@@ -1626,9 +1629,9 @@ File: _bookdown_files/confounds-decoding-files/figures/figure_4.pdf Graphic fil
 e (type pdf)
 <use _bookdown_files/confounds-decoding-files/figures/figure_4.pdf>
 LaTeX Font Info:    Font shape `TU/Helvetica(0)/m/n' will be
-(Font)              scaled to size 6.61804pt on input line 960.
+(Font)              scaled to size 6.61804pt on input line 980.
 LaTeX Font Info:    Font shape `TU/Helvetica(0)/m/n' will be
-(Font)              scaled to size 4.96353pt on input line 960.
+(Font)              scaled to size 4.96353pt on input line 980.
 [64] [65]
 File: _bookdown_files/confounds-decoding-files/figures/figure_5.pdf Graphic fil
 e (type pdf)
@@ -1654,7 +1657,7 @@ File: _bookdown_files/confounds-decoding-files/figures/figure_10.pdf Graphic fi
 le (type pdf)
 <use _bookdown_files/confounds-decoding-files/figures/figure_10.pdf>
 
-LaTeX Warning: Float too large for page by 14.2407pt on input line 1048.
+LaTeX Warning: Float too large for page by 14.2407pt on input line 1068.
 
 [72] [73]
 File: _bookdown_files/confounds-decoding-files/figures/figure_11.pdf Graphic fi
@@ -1688,7 +1691,7 @@ le (type pdf)
 File: _bookdown_files/aomic-files/figures/figure_1.pdf Graphic file (type pdf)
 <use _bookdown_files/aomic-files/figures/figure_1.pdf>
 [97]
-Overfull \hbox (1.79912pt too wide) in paragraph at lines 1283--1283
+Overfull \hbox (1.79912pt too wide) in paragraph at lines 1303--1303
 []\TU/MinionPro(0)/m/n/10 ID1000|  
  []
 
@@ -1700,7 +1703,7 @@ Overfull \hbox (1.79912pt too wide) in paragraph at lines 1283--1283
 File: _bookdown_files/aomic-files/figures/figure_2.pdf Graphic file (type pdf)
 <use _bookdown_files/aomic-files/figures/figure_2.pdf>
 [106] [107] [108] [109] [110] [111] [112] [113] [114] [115] [116] [117] [118]
-Overfull \hbox (0.24374pt too wide) in paragraph at lines 1487--1488
+Overfull \hbox (0.24374pt too wide) in paragraph at lines 1507--1508
 \TU/MinionPro(0)/m/n/12 three point scale (low: 1, medium: 2, high: 3). This re
 vealed that,
  []
@@ -1709,19 +1712,19 @@ vealed that,
 File: _bookdown_files/aomic-files/figures/figure_3.pdf Graphic file (type pdf)
 <use _bookdown_files/aomic-files/figures/figure_3.pdf>
 [122] [123]
-Underfull \hbox (badness 4328) in paragraph at lines 1554--1555
+Underfull \hbox (badness 4328) in paragraph at lines 1574--1575
 \TU/MinionPro(0)/m/n/12 O. Esteban, Markiewicz, Blair, Moodie, Isik, Erramuzpe,
 
  []
 
 [124] [125]
-Underfull \hbox (badness 10000) in paragraph at lines 1562--1564
+Underfull \hbox (badness 10000) in paragraph at lines 1582--1584
 []\TU/MinionPro(0)/m/n/12 Many internal operations of Fmriprep use \TU/MinionPr
 o(0)/m/it/12 Nilearn
  []
 
 [126] [127]
-Underfull \hbox (badness 4013) in paragraph at lines 1582--1583
+Underfull \hbox (badness 4013) in paragraph at lines 1602--1603
 \TU/MinionPro(0)/m/n/12 In addition to the Fmriprep-preprocessed anatomical T1-
 
  []
@@ -1753,176 +1756,176 @@ File: _bookdown_files/aomic-files/figures/figure_12.pdf Graphic file (type pdf)
 
 <use _bookdown_files/aomic-files/figures/figure_12.pdf>
 
-Overfull \hbox (7.85214pt too wide) in paragraph at lines 1780--1780
+Overfull \hbox (7.85214pt too wide) in paragraph at lines 1800--1800
 []\TU/MinionPro(0)/m/n/8 Background 
  []
 
 
-Overfull \hbox (1.61748pt too wide) in paragraph at lines 1780--1780
+Overfull \hbox (1.61748pt too wide) in paragraph at lines 1800--1800
 []\TU/MinionPro(0)/m/n/8 Education|  
  []
 
 
-Overfull \hbox (7.85214pt too wide) in paragraph at lines 1780--1780
+Overfull \hbox (7.85214pt too wide) in paragraph at lines 1800--1800
 []\TU/MinionPro(0)/m/n/8 Background 
  []
 
 
-Overfull \hbox (1.61748pt too wide) in paragraph at lines 1780--1780
+Overfull \hbox (1.61748pt too wide) in paragraph at lines 1800--1800
 []\TU/MinionPro(0)/m/n/8 Education|  
  []
 
 [144]
-Overfull \hbox (1.55986pt too wide) in paragraph at lines 1823--1823
+Overfull \hbox (1.55986pt too wide) in paragraph at lines 1843--1843
  []\TU/MinionPro(0)/m/n/8 Neuroticism|
  []
 
 
-Overfull \hbox (2.26047pt too wide) in paragraph at lines 1823--1823
+Overfull \hbox (2.26047pt too wide) in paragraph at lines 1843--1843
 []\TU/MinionPro(0)/m/n/8 Extraversion|  
  []
 
 
-Overfull \hbox (7.02307pt too wide) in paragraph at lines 1823--1823
+Overfull \hbox (7.02307pt too wide) in paragraph at lines 1843--1843
 []\TU/MinionPro(0)/m/n/8 Agreeableness|  
  []
 
 
-Overfull \hbox (20.626pt too wide) in paragraph at lines 1823--1823
+Overfull \hbox (20.626pt too wide) in paragraph at lines 1843--1843
 []\TU/MinionPro(0)/m/n/8 Conscientiousness|  
  []
 
 
-Overfull \hbox (1.55986pt too wide) in paragraph at lines 1823--1823
+Overfull \hbox (1.55986pt too wide) in paragraph at lines 1843--1843
 []\TU/MinionPro(0)/m/n/8 Neuroticism|  
  []
 
 
-Overfull \hbox (2.26047pt too wide) in paragraph at lines 1823--1823
+Overfull \hbox (2.26047pt too wide) in paragraph at lines 1843--1843
 []\TU/MinionPro(0)/m/n/8 Extraversion|  
  []
 
 
-Overfull \hbox (7.02307pt too wide) in paragraph at lines 1823--1823
+Overfull \hbox (7.02307pt too wide) in paragraph at lines 1843--1843
 []\TU/MinionPro(0)/m/n/8 Agreeableness|  
  []
 
 
-Overfull \hbox (20.626pt too wide) in paragraph at lines 1823--1823
+Overfull \hbox (20.626pt too wide) in paragraph at lines 1843--1843
 []\TU/MinionPro(0)/m/n/8 Conscientiousness|  
  []
 
 
-Overfull \hbox (1.55986pt too wide) in paragraph at lines 1823--1823
+Overfull \hbox (1.55986pt too wide) in paragraph at lines 1843--1843
 []\TU/MinionPro(0)/m/n/8 Neuroticism|  
  []
 
 
-Overfull \hbox (2.26047pt too wide) in paragraph at lines 1823--1823
+Overfull \hbox (2.26047pt too wide) in paragraph at lines 1843--1843
 []\TU/MinionPro(0)/m/n/8 Extraversion|  
  []
 
 
-Overfull \hbox (7.02307pt too wide) in paragraph at lines 1823--1823
+Overfull \hbox (7.02307pt too wide) in paragraph at lines 1843--1843
 []\TU/MinionPro(0)/m/n/8 Agreeableness|  
  []
 
 
-Overfull \hbox (20.626pt too wide) in paragraph at lines 1823--1823
+Overfull \hbox (20.626pt too wide) in paragraph at lines 1843--1843
 []\TU/MinionPro(0)/m/n/8 Conscientiousness|  
  []
 
 
-Overfull \hbox (1.55986pt too wide) in paragraph at lines 1823--1823
+Overfull \hbox (1.55986pt too wide) in paragraph at lines 1843--1843
 []\TU/MinionPro(0)/m/n/8 Neuroticism|  
  []
 
 
-Overfull \hbox (2.26047pt too wide) in paragraph at lines 1823--1823
+Overfull \hbox (2.26047pt too wide) in paragraph at lines 1843--1843
 []\TU/MinionPro(0)/m/n/8 Extraversion|  
  []
 
 
-Overfull \hbox (7.02307pt too wide) in paragraph at lines 1823--1823
+Overfull \hbox (7.02307pt too wide) in paragraph at lines 1843--1843
 []\TU/MinionPro(0)/m/n/8 Agreeableness|  
  []
 
 
-Overfull \hbox (20.626pt too wide) in paragraph at lines 1823--1823
+Overfull \hbox (20.626pt too wide) in paragraph at lines 1843--1843
 []\TU/MinionPro(0)/m/n/8 Conscientiousness|  
  []
 
-[145] [146] [147] [148]
-Underfull \hbox (badness 5607) in paragraph at lines 1869--1870
+[145] [146] [147]
+Underfull \hbox (badness 5607) in paragraph at lines 1884--1885
 \TU/MinionPro(0)/m/n/12 Github organization: []$[][][][][] [] [] [] [][][][][][
 ] [] [][][] [] [][][][] [] [][][][][][][][][][]$[].
  []
 
 
-Underfull \hbox (badness 4621) in paragraph at lines 1869--1870
+Underfull \hbox (badness 4621) in paragraph at lines 1884--1885
 \TU/MinionPro(0)/m/n/12 Many pre and postprocessing steps were identical across
 
  []
 
 
-Underfull \hbox (badness 6236) in paragraph at lines 1869--1870
+Underfull \hbox (badness 6236) in paragraph at lines 1884--1885
 \TU/MinionPro(0)/m/n/12 datasets, so the code for these procedures is stored in
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1869--1870
+Underfull \hbox (badness 10000) in paragraph at lines 1884--1885
 \TU/MinionPro(0)/m/n/12 a single repository: []$[][][][][] [] [] [] [][][][][][
 ] [] [][][] [] [][][][][][][][][][] []
  []
 
-[149] [150] [151] [152
+[148] [149] [150] [151
 
-] [153]
-Underfull \hbox (badness 4366) in paragraph at lines 1905--1906
+] [152]
+Underfull \hbox (badness 4366) in paragraph at lines 1920--1921
 \TU/MinionPro(0)/m/n/12 and parietal regions often associated with cognitive co
 n-
  []
 
-[154] [155] [156] [157] [158]
+[153] [154] [155] [156] [157]
 File: _bookdown_files/morbid-curiosity-files/figures/figure_1.pdf Graphic file 
 (type pdf)
 <use _bookdown_files/morbid-curiosity-files/figures/figure_1.pdf>
-[159] [160] [161] [162] [163] [164] [165] [166] [167] [168] [169] [170] [171] [
-172] [173]
+[158] [159] [160] [161] [162] [163] [164] [165] [166] [167] [168] [169] [170] [
+171] [172]
 File: _bookdown_files/morbid-curiosity-files/figures/figure_2.pdf Graphic file 
 (type pdf)
 <use _bookdown_files/morbid-curiosity-files/figures/figure_2.pdf>
-[174] [175]
+[173] [174]
 File: _bookdown_files/morbid-curiosity-files/figures/figure_3.pdf Graphic file 
 (type pdf)
 <use _bookdown_files/morbid-curiosity-files/figures/figure_3.pdf>
 
-Underfull \hbox (badness 5939) in paragraph at lines 2091--2091
+Underfull \hbox (badness 5939) in paragraph at lines 2106--2106
 []\TU/MinionPro(0)/m/sc/12 Figure 5.3 |[]\TU/Helvetica(0)/m/n/10.95 Results of 
 the exploratory whole-brain analyses for
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2091--2091
+Underfull \hbox (badness 10000) in paragraph at lines 2106--2106
 \TU/Helvetica(0)/m/n/10.95 the induction phase: (\TU/Helvetica(0)/b/n/10.95 A\T
 U/Helvetica(0)/m/n/10.95 ) the contrast negative$[]$ (red),
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2091--2091
+Underfull \hbox (badness 10000) in paragraph at lines 2106--2106
 \TU/Helvetica(0)/m/n/10.95 positive$[]$ (blue), and their conjunction (yellow);
  (\TU/Helvetica(0)/b/n/10.95 B\TU/Helvetica(0)/m/n/10.95 ) the
  []
 
 
-Underfull \hbox (badness 6236) in paragraph at lines 2091--2091
+Underfull \hbox (badness 6236) in paragraph at lines 2106--2106
 \TU/Helvetica(0)/m/n/10.95 contrast negative$[]$ > positive$[]$; (\TU/Helvetica
 (0)/b/n/10.95 C\TU/Helvetica(0)/m/n/10.95 ) the contrast
  []
 
 LaTeX Font Info:    Font shape `TU/MinionPro(0)/m/n' will be
-(Font)              scaled to size 8.85608pt on input line 2096.
+(Font)              scaled to size 8.85608pt on input line 2111.
 Missing character: There is no   in font Minion Pro/OT:script=latn;language=dfl
 t;mapping=tex-text;!
 Missing character: There is no   in font Minion Pro/OT:script=latn;language=dfl
@@ -1936,410 +1939,461 @@ t;mapping=tex-text;!
 Missing character: There is no   in font Minion Pro/OT:script=latn;language=dfl
 t;mapping=tex-text;!
 
-Overfull \hbox (16.79112pt too wide) in paragraph at lines 2148--2148
+Overfull \hbox (16.79112pt too wide) in paragraph at lines 2163--2163
  []\TU/MinionPro(0)/m/n/9 Cluster
  []
 
 
-Overfull \hbox (16.79112pt too wide) in paragraph at lines 2148--2148
+Overfull \hbox (16.79112pt too wide) in paragraph at lines 2163--2163
  []\TU/MinionPro(0)/m/n/9 Cluster
  []
 
 
-Overfull \hbox (4.25092pt too wide) in paragraph at lines 2148--2148
+Overfull \hbox (4.25092pt too wide) in paragraph at lines 2163--2163
  \TU/MinionPro(0)/m/n/9 size|
  []
 
 
-Overfull \hbox (16.79112pt too wide) in paragraph at lines 2148--2148
+Overfull \hbox (16.79112pt too wide) in paragraph at lines 2163--2163
  []\TU/MinionPro(0)/m/n/9 Cluster
  []
 
 
-Overfull \hbox (6.43837pt too wide) in paragraph at lines 2148--2148
+Overfull \hbox (6.43837pt too wide) in paragraph at lines 2163--2163
  \TU/MinionPro(0)/m/n/9 max|
  []
 
 
-Overfull \hbox (6.95203pt too wide) in paragraph at lines 2148--2148
+Overfull \hbox (6.95203pt too wide) in paragraph at lines 2163--2163
  []\TU/MinionPro(0)/m/n/9 Max|
  []
 
 
-Overfull \hbox (8.1476pt too wide) in paragraph at lines 2148--2148
+Overfull \hbox (8.1476pt too wide) in paragraph at lines 2163--2163
  []\TU/MinionPro(0)/m/n/9 3158|
  []
 
 
-Overfull \hbox (5.91586pt too wide) in paragraph at lines 2148--2148
+Overfull \hbox (5.91586pt too wide) in paragraph at lines 2163--2163
  []\TU/MinionPro(0)/m/n/9 4.82|
  []
 
 Missing character: There is no   in font Minion Pro/OT:script=latn;language=dfl
 t;mapping=tex-text;!
 
-Overfull \hbox (2.30258pt too wide) in paragraph at lines 2148--2148
+Overfull \hbox (2.30258pt too wide) in paragraph at lines 2163--2163
 []\TU/MinionPro(0)/m/n/9 − 8|  
  []
 
 
-Overfull \hbox (3.89668pt too wide) in paragraph at lines 2148--2148
+Overfull \hbox (3.89668pt too wide) in paragraph at lines 2163--2163
  []\TU/MinionPro(0)/m/n/9 831|
  []
 
 
-Overfull \hbox (5.91586pt too wide) in paragraph at lines 2148--2148
+Overfull \hbox (5.91586pt too wide) in paragraph at lines 2163--2163
  []\TU/MinionPro(0)/m/n/9 4.58|
  []
 
 
-Overfull \hbox (3.89668pt too wide) in paragraph at lines 2148--2148
+Overfull \hbox (3.89668pt too wide) in paragraph at lines 2163--2163
  []\TU/MinionPro(0)/m/n/9 741|
  []
 
 
-Overfull \hbox (5.91586pt too wide) in paragraph at lines 2148--2148
+Overfull \hbox (5.91586pt too wide) in paragraph at lines 2163--2163
  []\TU/MinionPro(0)/m/n/9 4.70|
  []
 
 
-Overfull \hbox (3.89668pt too wide) in paragraph at lines 2148--2148
+Overfull \hbox (3.89668pt too wide) in paragraph at lines 2163--2163
  []\TU/MinionPro(0)/m/n/9 657|
  []
 
 
-Overfull \hbox (5.91586pt too wide) in paragraph at lines 2148--2148
+Overfull \hbox (5.91586pt too wide) in paragraph at lines 2163--2163
  []\TU/MinionPro(0)/m/n/9 4.64|
  []
 
 
-Overfull \hbox (3.89668pt too wide) in paragraph at lines 2148--2148
+Overfull \hbox (3.89668pt too wide) in paragraph at lines 2163--2163
  []\TU/MinionPro(0)/m/n/9 317|
  []
 
 
-Overfull \hbox (5.91586pt too wide) in paragraph at lines 2148--2148
+Overfull \hbox (5.91586pt too wide) in paragraph at lines 2163--2163
  []\TU/MinionPro(0)/m/n/9 4.42|
  []
 
 
-Overfull \hbox (3.89668pt too wide) in paragraph at lines 2148--2148
+Overfull \hbox (3.89668pt too wide) in paragraph at lines 2163--2163
  []\TU/MinionPro(0)/m/n/9 300|
  []
 
 
-Overfull \hbox (5.91586pt too wide) in paragraph at lines 2148--2148
+Overfull \hbox (5.91586pt too wide) in paragraph at lines 2163--2163
  []\TU/MinionPro(0)/m/n/9 4.82|
  []
 
 
-Overfull \hbox (3.89668pt too wide) in paragraph at lines 2148--2148
+Overfull \hbox (3.89668pt too wide) in paragraph at lines 2163--2163
  []\TU/MinionPro(0)/m/n/9 201|
  []
 
 
-Overfull \hbox (5.91586pt too wide) in paragraph at lines 2148--2148
+Overfull \hbox (5.91586pt too wide) in paragraph at lines 2163--2163
  []\TU/MinionPro(0)/m/n/9 3.94|
  []
 
 
-Overfull \hbox (5.91586pt too wide) in paragraph at lines 2148--2148
+Overfull \hbox (5.91586pt too wide) in paragraph at lines 2163--2163
  []\TU/MinionPro(0)/m/n/9 3.27|
  []
 
 
-Overfull \hbox (8.1476pt too wide) in paragraph at lines 2148--2148
+Overfull \hbox (8.1476pt too wide) in paragraph at lines 2163--2163
  []\TU/MinionPro(0)/m/n/9 1928|
  []
 
 
-Overfull \hbox (5.91586pt too wide) in paragraph at lines 2148--2148
+Overfull \hbox (5.91586pt too wide) in paragraph at lines 2163--2163
  []\TU/MinionPro(0)/m/n/9 4.84|
  []
 
 Missing character: There is no   in font Minion Pro/OT:script=latn;language=dfl
 t;mapping=tex-text;!
 
-Overfull \hbox (6.5535pt too wide) in paragraph at lines 2148--2148
+Overfull \hbox (6.5535pt too wide) in paragraph at lines 2163--2163
 []\TU/MinionPro(0)/m/n/9 − 42|  
  []
 
 
-Overfull \hbox (3.89668pt too wide) in paragraph at lines 2148--2148
+Overfull \hbox (3.89668pt too wide) in paragraph at lines 2163--2163
  []\TU/MinionPro(0)/m/n/9 602|
  []
 
 
-Overfull \hbox (5.91586pt too wide) in paragraph at lines 2148--2148
+Overfull \hbox (5.91586pt too wide) in paragraph at lines 2163--2163
  []\TU/MinionPro(0)/m/n/9 4.64|
  []
 
 
-Overfull \hbox (3.89668pt too wide) in paragraph at lines 2148--2148
+Overfull \hbox (3.89668pt too wide) in paragraph at lines 2163--2163
  []\TU/MinionPro(0)/m/n/9 234|
  []
 
 
-Overfull \hbox (5.91586pt too wide) in paragraph at lines 2148--2148
+Overfull \hbox (5.91586pt too wide) in paragraph at lines 2163--2163
  []\TU/MinionPro(0)/m/n/9 4.17|
  []
 
 
-Overfull \hbox (3.89668pt too wide) in paragraph at lines 2148--2148
+Overfull \hbox (3.89668pt too wide) in paragraph at lines 2163--2163
  []\TU/MinionPro(0)/m/n/9 229|
  []
 
 
-Overfull \hbox (5.91586pt too wide) in paragraph at lines 2148--2148
+Overfull \hbox (5.91586pt too wide) in paragraph at lines 2163--2163
  []\TU/MinionPro(0)/m/n/9 4.17|
  []
 
 
-Overfull \hbox (3.89668pt too wide) in paragraph at lines 2148--2148
+Overfull \hbox (3.89668pt too wide) in paragraph at lines 2163--2163
  []\TU/MinionPro(0)/m/n/9 205|
  []
 
 
-Overfull \hbox (5.91586pt too wide) in paragraph at lines 2148--2148
+Overfull \hbox (5.91586pt too wide) in paragraph at lines 2163--2163
  []\TU/MinionPro(0)/m/n/9 4.84|
  []
 
 
-Overfull \hbox (5.91586pt too wide) in paragraph at lines 2148--2148
+Overfull \hbox (5.91586pt too wide) in paragraph at lines 2163--2163
  []\TU/MinionPro(0)/m/n/9 3.65|
  []
 
 
-Overfull \hbox (5.91586pt too wide) in paragraph at lines 2148--2148
+Overfull \hbox (5.91586pt too wide) in paragraph at lines 2163--2163
  []\TU/MinionPro(0)/m/n/9 4.31|
  []
 
 
-Overfull \hbox (5.91586pt too wide) in paragraph at lines 2148--2148
+Overfull \hbox (5.91586pt too wide) in paragraph at lines 2163--2163
  []\TU/MinionPro(0)/m/n/9 3.22|
  []
 
 
-Overfull \hbox (3.89668pt too wide) in paragraph at lines 2148--2148
+Overfull \hbox (3.89668pt too wide) in paragraph at lines 2163--2163
  []\TU/MinionPro(0)/m/n/9 121|
  []
 
 
-Overfull \hbox (5.91586pt too wide) in paragraph at lines 2148--2148
+Overfull \hbox (5.91586pt too wide) in paragraph at lines 2163--2163
  []\TU/MinionPro(0)/m/n/9 3.48|
  []
 
 
-Overfull \hbox (3.89668pt too wide) in paragraph at lines 2148--2148
+Overfull \hbox (3.89668pt too wide) in paragraph at lines 2163--2163
  []\TU/MinionPro(0)/m/n/9 110|
  []
 
 
-Overfull \hbox (5.91586pt too wide) in paragraph at lines 2148--2148
+Overfull \hbox (5.91586pt too wide) in paragraph at lines 2163--2163
  []\TU/MinionPro(0)/m/n/9 3.86|
  []
 
 
-Overfull \hbox (5.91586pt too wide) in paragraph at lines 2148--2148
+Overfull \hbox (5.91586pt too wide) in paragraph at lines 2163--2163
  []\TU/MinionPro(0)/m/n/9 3.84|
  []
 
 
-Overfull \hbox (5.91586pt too wide) in paragraph at lines 2148--2148
+Overfull \hbox (5.91586pt too wide) in paragraph at lines 2163--2163
  []\TU/MinionPro(0)/m/n/9 3.52|
  []
 
 
-Overfull \hbox (3.89668pt too wide) in paragraph at lines 2148--2148
+Overfull \hbox (3.89668pt too wide) in paragraph at lines 2163--2163
  []\TU/MinionPro(0)/m/n/9 692|
  []
 
 
-Overfull \hbox (5.91586pt too wide) in paragraph at lines 2148--2148
+Overfull \hbox (5.91586pt too wide) in paragraph at lines 2163--2163
  []\TU/MinionPro(0)/m/n/9 4.64|
  []
 
 
-Overfull \hbox (3.89668pt too wide) in paragraph at lines 2148--2148
+Overfull \hbox (3.89668pt too wide) in paragraph at lines 2163--2163
  []\TU/MinionPro(0)/m/n/9 443|
  []
 
 
-Overfull \hbox (5.91586pt too wide) in paragraph at lines 2148--2148
+Overfull \hbox (5.91586pt too wide) in paragraph at lines 2163--2163
  []\TU/MinionPro(0)/m/n/9 4.64|
  []
 
 
-Overfull \hbox (5.91586pt too wide) in paragraph at lines 2148--2148
+Overfull \hbox (5.91586pt too wide) in paragraph at lines 2163--2163
  []\TU/MinionPro(0)/m/n/9 3.80|
  []
 
 
-Overfull \hbox (5.91586pt too wide) in paragraph at lines 2148--2148
+Overfull \hbox (5.91586pt too wide) in paragraph at lines 2163--2163
  []\TU/MinionPro(0)/m/n/9 3.39|
  []
 
 
-Overfull \hbox (5.91586pt too wide) in paragraph at lines 2148--2148
+Overfull \hbox (5.91586pt too wide) in paragraph at lines 2163--2163
  []\TU/MinionPro(0)/m/n/9 3.40|
  []
 
 
-Overfull \hbox (5.91586pt too wide) in paragraph at lines 2148--2148
+Overfull \hbox (5.91586pt too wide) in paragraph at lines 2163--2163
  []\TU/MinionPro(0)/m/n/9 3.27|
  []
 
 
-Overfull \hbox (3.89668pt too wide) in paragraph at lines 2148--2148
+Overfull \hbox (3.89668pt too wide) in paragraph at lines 2163--2163
  []\TU/MinionPro(0)/m/n/9 464|
  []
 
 
-Overfull \hbox (5.91586pt too wide) in paragraph at lines 2148--2148
+Overfull \hbox (5.91586pt too wide) in paragraph at lines 2163--2163
  []\TU/MinionPro(0)/m/n/9 4.74|
  []
 
 
-Overfull \hbox (3.89668pt too wide) in paragraph at lines 2148--2148
+Overfull \hbox (3.89668pt too wide) in paragraph at lines 2163--2163
  []\TU/MinionPro(0)/m/n/9 265|
  []
 
 
-Overfull \hbox (5.91586pt too wide) in paragraph at lines 2148--2148
+Overfull \hbox (5.91586pt too wide) in paragraph at lines 2163--2163
  []\TU/MinionPro(0)/m/n/9 4.74|
  []
 
 
-Overfull \hbox (5.91586pt too wide) in paragraph at lines 2148--2148
+Overfull \hbox (5.91586pt too wide) in paragraph at lines 2163--2163
  []\TU/MinionPro(0)/m/n/9 3.49|
  []
 
 
-Overfull \hbox (3.89668pt too wide) in paragraph at lines 2148--2148
+Overfull \hbox (3.89668pt too wide) in paragraph at lines 2163--2163
  []\TU/MinionPro(0)/m/n/9 296|
  []
 
 
-Overfull \hbox (5.91586pt too wide) in paragraph at lines 2148--2148
+Overfull \hbox (5.91586pt too wide) in paragraph at lines 2163--2163
  []\TU/MinionPro(0)/m/n/9 3.81|
  []
 
 Missing character: There is no   in font Minion Pro/OT:script=latn;language=dfl
 t;mapping=tex-text;!
 
-Overfull \hbox (6.5535pt too wide) in paragraph at lines 2148--2148
+Overfull \hbox (6.5535pt too wide) in paragraph at lines 2163--2163
 []\TU/MinionPro(0)/m/n/9 − 36|  
  []
 
 
-Overfull \hbox (3.89668pt too wide) in paragraph at lines 2148--2148
+Overfull \hbox (3.89668pt too wide) in paragraph at lines 2163--2163
  []\TU/MinionPro(0)/m/n/9 111|
  []
 
 
-Overfull \hbox (5.91586pt too wide) in paragraph at lines 2148--2148
+Overfull \hbox (5.91586pt too wide) in paragraph at lines 2163--2163
  []\TU/MinionPro(0)/m/n/9 3.72|
  []
 
 
-Overfull \hbox (3.89668pt too wide) in paragraph at lines 2148--2148
+Overfull \hbox (3.89668pt too wide) in paragraph at lines 2163--2163
  []\TU/MinionPro(0)/m/n/9 111|
  []
 
 
-Overfull \hbox (5.91586pt too wide) in paragraph at lines 2148--2148
+Overfull \hbox (5.91586pt too wide) in paragraph at lines 2163--2163
  []\TU/MinionPro(0)/m/n/9 3.81|
  []
 
 
-Overfull \hbox (5.91586pt too wide) in paragraph at lines 2148--2148
+Overfull \hbox (5.91586pt too wide) in paragraph at lines 2163--2163
  []\TU/MinionPro(0)/m/n/9 3.46|
  []
 
-[176] [177] [178] [179] [180] [181] [182] [183] [184] [185] [186
+[175] [176] [177] [178] [179] [180] [181] [182] [183] [184] [185
 
-] [187
+] [186
 
-]
+] [187] [188] [189]
+Underfull \hbox (badness 10000) in paragraph at lines 2224--2224
+[][] [][][][]$[][][][][] [] [] [] [][][][][] [] [][][][][][][][][] [] [][][] []
+ [][][][][][] [] [][][][][][][][] [] [][][][][][][][][][][][][][][][][][][] [] 
+[][][][]$[]\TU/MinionPro(0)/m/n/10 ,
+ []
+
+[190]
+File: _bookdown_files/static-vs-dynamic-files/figures/figure_1.pdf Graphic file
+ (type pdf)
+<use _bookdown_files/static-vs-dynamic-files/figures/figure_1.pdf>
+[191] [192] [193] [194] [195] [196] [197]
+File: _bookdown_files/static-vs-dynamic-files/figures/figure_2.pdf Graphic file
+ (type pdf)
+<use _bookdown_files/static-vs-dynamic-files/figures/figure_2.pdf>
+[198] [199] [200]
+File: _bookdown_files/static-vs-dynamic-files/figures/figure_3.pdf Graphic file
+ (type pdf)
+<use _bookdown_files/static-vs-dynamic-files/figures/figure_3.pdf>
+[201] [202] [203] [204] [205] [206] [207] [208] [209] [210] [211] [212] [213]
+File: _bookdown_files/static-vs-dynamic-files/figures/figure_4.pdf Graphic file
+ (type pdf)
+<use _bookdown_files/static-vs-dynamic-files/figures/figure_4.pdf>
+
+Underfull \hbox (badness 10000) in paragraph at lines 2465--2466
+\TU/MinionPro(0)/m/n/12 are available on Github: []$[][][][][] [] [] [] [][][][
+][][] [] [][][] [] [][][][][][][][][][] []
+ []
+
+
+Underfull \hbox (badness 6364) in paragraph at lines 2465--2466
+[][][][][][][][][][][][][][][][][][][]$[]\TU/MinionPro(0)/m/n/12 . Additionally
+, code to estimate noise
+ []
+
+[214] [215]
+File: _bookdown_files/static-vs-dynamic-files/figures/figure_5.pdf Graphic file
+ (type pdf)
+<use _bookdown_files/static-vs-dynamic-files/figures/figure_5.pdf>
+[216]
+File: _bookdown_files/static-vs-dynamic-files/figures/figure_6.pdf Graphic file
+ (type pdf)
+<use _bookdown_files/static-vs-dynamic-files/figures/figure_6.pdf>
+[217] [218] [219]
+File: _bookdown_files/static-vs-dynamic-files/figures/figure_7.pdf Graphic file
+ (type pdf)
+<use _bookdown_files/static-vs-dynamic-files/figures/figure_7.pdf>
+[220] [221]
+File: _bookdown_files/static-vs-dynamic-files/figures/figure_8.pdf Graphic file
+ (type pdf)
+<use _bookdown_files/static-vs-dynamic-files/figures/figure_8.pdf>
+[222] [223] [224] [225] [226] [227] [228] [229] [230]
 LaTeX Font Info:    Font shape `TU/MinionPro(0)/b/it' will be
-(Font)              scaled to size 17.00366pt on input line 2198.
-[188
+(Font)              scaled to size 17.00366pt on input line 2603.
+[231
 
-] [189
+] [232
 
 
 ]
-Overfull \hbox (4.30997pt too wide) in paragraph at lines 2308--2308
+Overfull \hbox (4.30997pt too wide) in paragraph at lines 2713--2713
 []\TU/MinionPro(0)/m/n/10 Interoception|  
  []
 
-[190
+[233
 
-] [191] [192] [193] [194] [195] [196]
+] [234] [235] [236] [237] [238] [239]
 File: _bookdown_files/shared-states-files/figures/figure_S1.pdf Graphic file (t
 ype pdf)
 <use _bookdown_files/shared-states-files/figures/figure_S1.pdf>
-[197]
+[240]
 File: _bookdown_files/shared-states-files/figures/figure_S2.pdf Graphic file (t
 ype pdf)
 <use _bookdown_files/shared-states-files/figures/figure_S2.pdf>
-[198
+[241
 
 ]
 Overfull \vbox (24.52359pt too high) has occurred while \output is active []
 
-[199]
+[242]
 File: _bookdown_files/shared-states-files/figures/figure_S3.pdf Graphic file (t
 ype pdf)
 <use _bookdown_files/shared-states-files/figures/figure_S3.pdf>
-[200
+[243
 
 ]
 File: _bookdown_files/shared-states-files/figures/figure_S4.pdf Graphic file (t
 ype pdf)
 <use _bookdown_files/shared-states-files/figures/figure_S4.pdf>
-[201] [202]
+[244] [245]
 File: _bookdown_files/shared-states-files/figures/figure_S5.pdf Graphic file (t
 ype pdf)
 <use _bookdown_files/shared-states-files/figures/figure_S5.pdf>
-[203]
+[246]
 Overfull \vbox (123.68202pt too high) has occurred while \output is active []
 
-[204]
+[247]
 File: _bookdown_files/shared-states-files/figures/figure_S6.pdf Graphic file (t
 ype pdf)
 <use _bookdown_files/shared-states-files/figures/figure_S6.pdf>
-[205]
+[248]
 Overfull \vbox (9.79538pt too high) has occurred while \output is active []
 
-[206]
+[249]
 File: _bookdown_files/shared-states-files/figures/figure_S7.pdf Graphic file (t
 ype pdf)
 <use _bookdown_files/shared-states-files/figures/figure_S7.pdf>
-[207]
+[250]
 File: _bookdown_files/shared-states-files/figures/figure_S8.pdf Graphic file (t
 ype pdf)
 <use _bookdown_files/shared-states-files/figures/figure_S8.pdf>
-[208]
+[251]
 Overfull \vbox (159.71771pt too high) has occurred while \output is active []
 
-[209]
-Overfull \hbox (6.48112pt too wide) in paragraph at lines 2544--2544
+[252]
+Overfull \hbox (6.48112pt too wide) in paragraph at lines 2949--2949
 \TU/MinionPro(0)/m/n/10 optimization- 
  []
 
-[210] [211]
-Overfull \hbox (10.28923pt too wide) in paragraph at lines 2591--2591
+[253] [254]
+Overfull \hbox (10.28923pt too wide) in paragraph at lines 2996--2996
 []\TU/MinionPro(0)/m/n/10 Supramarginal 
  []
 
 
-Overfull \hbox (10.28923pt too wide) in paragraph at lines 2591--2591
+Overfull \hbox (10.28923pt too wide) in paragraph at lines 2996--2996
 []\TU/MinionPro(0)/m/n/10 Supramarginal 
  []
 
-[212] [213]
-Underfull \hbox (badness 5316) in paragraph at lines 2598--2599
+[255] [256]
+Underfull \hbox (badness 5316) in paragraph at lines 3003--3004
 \TU/MinionPro(0)/m/n/12 orderly, we chose not to include the actual tables with
 
  []
@@ -2347,1230 +2401,1273 @@ Underfull \hbox (badness 5316) in paragraph at lines 2598--2599
 File: _bookdown_files/shared-states-files/figures/github.pdf Graphic file (type
  pdf)
 <use _bookdown_files/shared-states-files/figures/github.pdf>
-[214] [215]
-Underfull \hbox (badness 10000) in paragraph at lines 2605--2606
+[257] [258]
+Underfull \hbox (badness 10000) in paragraph at lines 3010--3011
 \TU/MinionPro(0)/m/n/12 notebook. The code for the validation of linear
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2605--2606
+Underfull \hbox (badness 10000) in paragraph at lines 3010--3011
 \TU/MinionPro(0)/m/n/12 confound models can be found in the notebook
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2605--2606
+Underfull \hbox (badness 10000) in paragraph at lines 3010--3011
 \TU/lmtt/m/n/12 empirical_analysis_gender_classification.ipynb\TU/MinionPro(0)/
 m/n/12 .
  []
 
-[216
+[259
 
-] [217] [218] [219] [220] [221] [222] [223] [224]
+] [260] [261] [262] [263] [264] [265] [266] [267]
 File: _bookdown_files/confounds-decoding-files/figures/figure_S1.pdf Graphic fi
 le (type pdf)
 <use _bookdown_files/confounds-decoding-files/figures/figure_S1.pdf>
 File: _bookdown_files/confounds-decoding-files/figures/figure_S2.pdf Graphic fi
 le (type pdf)
 <use _bookdown_files/confounds-decoding-files/figures/figure_S2.pdf>
-[225]
+[268]
 File: _bookdown_files/confounds-decoding-files/figures/figure_S3.pdf Graphic fi
 le (type pdf)
 <use _bookdown_files/confounds-decoding-files/figures/figure_S3.pdf>
-[226]
+[269]
 File: _bookdown_files/confounds-decoding-files/figures/figure_S4.pdf Graphic fi
 le (type pdf)
 <use _bookdown_files/confounds-decoding-files/figures/figure_S4.pdf>
-[227] [228]
+[270] [271]
 File: _bookdown_files/confounds-decoding-files/figures/figure_S5.pdf Graphic fi
 le (type pdf)
 <use _bookdown_files/confounds-decoding-files/figures/figure_S5.pdf>
-[229] [230]
+[272] [273]
 File: _bookdown_files/confounds-decoding-files/figures/figure_S6.pdf Graphic fi
 le (type pdf)
 <use _bookdown_files/confounds-decoding-files/figures/figure_S6.pdf>
-[231] [232]
+[274] [275]
 File: _bookdown_files/confounds-decoding-files/figures/figure_S7.pdf Graphic fi
 le (type pdf)
 <use _bookdown_files/confounds-decoding-files/figures/figure_S7.pdf>
-[233] [234] [235]
+[276] [277] [278]
 File: _bookdown_files/confounds-decoding-files/figures/figure_S8.pdf Graphic fi
 le (type pdf)
 <use _bookdown_files/confounds-decoding-files/figures/figure_S8.pdf>
 File: _bookdown_files/confounds-decoding-files/figures/figure_S9.pdf Graphic fi
 le (type pdf)
 <use _bookdown_files/confounds-decoding-files/figures/figure_S9.pdf>
-[236]
+[279]
 File: _bookdown_files/confounds-decoding-files/figures/figure_S10.pdf Graphic f
 ile (type pdf)
 <use _bookdown_files/confounds-decoding-files/figures/figure_S10.pdf>
-[237]
+[280]
 File: _bookdown_files/confounds-decoding-files/figures/figure_S11.pdf Graphic f
 ile (type pdf)
 <use _bookdown_files/confounds-decoding-files/figures/figure_S11.pdf>
 File: _bookdown_files/confounds-decoding-files/figures/figure_S12.pdf Graphic f
 ile (type pdf)
 <use _bookdown_files/confounds-decoding-files/figures/figure_S12.pdf>
-[238]
+[281]
 File: _bookdown_files/confounds-decoding-files/figures/figure_S13.pdf Graphic f
 ile (type pdf)
 <use _bookdown_files/confounds-decoding-files/figures/figure_S13.pdf>
 File: _bookdown_files/confounds-decoding-files/figures/figure_S14.pdf Graphic f
 ile (type pdf)
 <use _bookdown_files/confounds-decoding-files/figures/figure_S14.pdf>
-[239]
+[282]
 File: _bookdown_files/confounds-decoding-files/figures/figure_S15.pdf Graphic f
 ile (type pdf)
 <use _bookdown_files/confounds-decoding-files/figures/figure_S15.pdf>
-[240]
+[283]
 File: _bookdown_files/confounds-decoding-files/figures/figure_S16.pdf Graphic f
 ile (type pdf)
 <use _bookdown_files/confounds-decoding-files/figures/figure_S16.pdf>
 File: _bookdown_files/confounds-decoding-files/figures/figure_S17.pdf Graphic f
 ile (type pdf)
 <use _bookdown_files/confounds-decoding-files/figures/figure_S17.pdf>
-[241]
+[284]
 File: _bookdown_files/confounds-decoding-files/figures/figure_S18.pdf Graphic f
 ile (type pdf)
 <use _bookdown_files/confounds-decoding-files/figures/figure_S18.pdf>
-[242] [243
+[285] [286
 
-] [244] [245]
-Overfull \hbox (2.21992pt too wide) in paragraph at lines 3094--3094
+] [287] [288]
+Overfull \hbox (2.21992pt too wide) in paragraph at lines 3499--3499
 []\TU/MinionPro(0)/m/n/8 sexual_attraction_M|  
  []
 
 
-Overfull \hbox (4.14857pt too wide) in paragraph at lines 3094--3094
+Overfull \hbox (4.14857pt too wide) in paragraph at lines 3499--3499
 []\TU/MinionPro(0)/m/n/8 educational_category|  
  []
 
 
-Overfull \hbox (3.15671pt too wide) in paragraph at lines 3094--3094
+Overfull \hbox (3.15671pt too wide) in paragraph at lines 3499--3499
 []\TU/MinionPro(0)/m/n/8 religious_upbringing|  
  []
 
 
-Overfull \hbox (4.30603pt too wide) in paragraph at lines 3094--3094
+Overfull \hbox (4.30603pt too wide) in paragraph at lines 3499--3499
 []\TU/MinionPro(0)/m/n/8 religious_importance|  
  []
 
 
-Overfull \hbox (6.28978pt too wide) in paragraph at lines 3094--3094
+Overfull \hbox (6.28978pt too wide) in paragraph at lines 3499--3499
 []\TU/MinionPro(0)/m/n/8 IST_total_intelligence|  
  []
 
 
-Overfull \hbox (0.93388pt too wide) in paragraph at lines 3094--3094
+Overfull \hbox (0.93388pt too wide) in paragraph at lines 3499--3499
 []\TU/MinionPro(0)/m/n/8 Agreeableness 
  []
 
 
-Overfull \hbox (14.53682pt too wide) in paragraph at lines 3094--3094
+Overfull \hbox (14.53682pt too wide) in paragraph at lines 3499--3499
 []\TU/MinionPro(0)/m/n/8 Conscientiousness 
  []
 
-[246] [247] [248]
-Overfull \hbox (3.32202pt too wide) in paragraph at lines 3143--3143
+[289] [290] [291]
+Overfull \hbox (3.32202pt too wide) in paragraph at lines 3548--3548
 []\TU/MinionPro(0)/m/n/8 Deriv.|  
  []
 
 
-Overfull \hbox (3.87085pt too wide) in paragraph at lines 3143--3143
+Overfull \hbox (3.87085pt too wide) in paragraph at lines 3548--3548
 \TU/MinionPro(0)/m/n/8 MNI152NLin2009cAsym, 
  []
 
 
-Overfull \hbox (3.87085pt too wide) in paragraph at lines 3143--3143
+Overfull \hbox (3.87085pt too wide) in paragraph at lines 3548--3548
 \TU/MinionPro(0)/m/n/8 MNI152NLin2009cAsym, 
  []
 
-[249] [250] [251]
-Overfull \hbox (7.1345pt too wide) in paragraph at lines 3203--3203
+[292] [293] [294]
+Overfull \hbox (7.1345pt too wide) in paragraph at lines 3608--3608
 []\TU/MinionPro(0)/m/n/8 Autobiographical|  
  []
 
-[252
+[295
 
 ]
-Overfull \hbox (16.79112pt too wide) in paragraph at lines 3295--3295
+Overfull \hbox (16.79112pt too wide) in paragraph at lines 3700--3700
  []\TU/MinionPro(0)/m/n/9 Cluster
  []
 
 
-Overfull \hbox (0.73506pt too wide) in paragraph at lines 3295--3295
+Overfull \hbox (0.73506pt too wide) in paragraph at lines 3700--3700
  \TU/MinionPro(0)/m/n/9 nr.|
  []
 
 
-Overfull \hbox (16.79112pt too wide) in paragraph at lines 3295--3295
+Overfull \hbox (16.79112pt too wide) in paragraph at lines 3700--3700
  []\TU/MinionPro(0)/m/n/9 Cluster
  []
 
 
-Overfull \hbox (4.25092pt too wide) in paragraph at lines 3295--3295
+Overfull \hbox (4.25092pt too wide) in paragraph at lines 3700--3700
  \TU/MinionPro(0)/m/n/9 size|
  []
 
 
-Overfull \hbox (16.79112pt too wide) in paragraph at lines 3295--3295
+Overfull \hbox (16.79112pt too wide) in paragraph at lines 3700--3700
  []\TU/MinionPro(0)/m/n/9 Cluster
  []
 
 
-Overfull \hbox (8.45755pt too wide) in paragraph at lines 3295--3295
+Overfull \hbox (8.45755pt too wide) in paragraph at lines 3700--3700
  \TU/MinionPro(0)/m/n/9 max.|
  []
 
 
-Overfull \hbox (8.9712pt too wide) in paragraph at lines 3295--3295
+Overfull \hbox (8.9712pt too wide) in paragraph at lines 3700--3700
  []\TU/MinionPro(0)/m/n/9 Max.|
  []
 
 
-Overfull \hbox (12.39851pt too wide) in paragraph at lines 3295--3295
+Overfull \hbox (12.39851pt too wide) in paragraph at lines 3700--3700
  []\TU/MinionPro(0)/m/n/9 12024|
  []
 
 
-Overfull \hbox (5.91586pt too wide) in paragraph at lines 3295--3295
+Overfull \hbox (5.91586pt too wide) in paragraph at lines 3700--3700
  []\TU/MinionPro(0)/m/n/9 6.41|
  []
 
 
-Overfull \hbox (3.89668pt too wide) in paragraph at lines 3295--3295
+Overfull \hbox (3.89668pt too wide) in paragraph at lines 3700--3700
  []\TU/MinionPro(0)/m/n/9 997|
  []
 
 
-Overfull \hbox (5.91586pt too wide) in paragraph at lines 3295--3295
+Overfull \hbox (5.91586pt too wide) in paragraph at lines 3700--3700
  []\TU/MinionPro(0)/m/n/9 4.99|
  []
 
 
-Overfull \hbox (3.89668pt too wide) in paragraph at lines 3295--3295
+Overfull \hbox (3.89668pt too wide) in paragraph at lines 3700--3700
  []\TU/MinionPro(0)/m/n/9 870|
  []
 
 
-Overfull \hbox (5.91586pt too wide) in paragraph at lines 3295--3295
+Overfull \hbox (5.91586pt too wide) in paragraph at lines 3700--3700
  []\TU/MinionPro(0)/m/n/9 6.41|
  []
 
 
-Overfull \hbox (3.89668pt too wide) in paragraph at lines 3295--3295
+Overfull \hbox (3.89668pt too wide) in paragraph at lines 3700--3700
  []\TU/MinionPro(0)/m/n/9 802|
  []
 
 
-Overfull \hbox (5.91586pt too wide) in paragraph at lines 3295--3295
+Overfull \hbox (5.91586pt too wide) in paragraph at lines 3700--3700
  []\TU/MinionPro(0)/m/n/9 5.49|
  []
 
 
-Overfull \hbox (3.89668pt too wide) in paragraph at lines 3295--3295
+Overfull \hbox (3.89668pt too wide) in paragraph at lines 3700--3700
  []\TU/MinionPro(0)/m/n/9 743|
  []
 
 
-Overfull \hbox (5.91586pt too wide) in paragraph at lines 3295--3295
+Overfull \hbox (5.91586pt too wide) in paragraph at lines 3700--3700
  []\TU/MinionPro(0)/m/n/9 5.19|
  []
 
 
-Overfull \hbox (3.89668pt too wide) in paragraph at lines 3295--3295
+Overfull \hbox (3.89668pt too wide) in paragraph at lines 3700--3700
  []\TU/MinionPro(0)/m/n/9 647|
  []
 
 
-Overfull \hbox (5.91586pt too wide) in paragraph at lines 3295--3295
+Overfull \hbox (5.91586pt too wide) in paragraph at lines 3700--3700
  []\TU/MinionPro(0)/m/n/9 5.33|
  []
 
 
-Overfull \hbox (3.89668pt too wide) in paragraph at lines 3295--3295
+Overfull \hbox (3.89668pt too wide) in paragraph at lines 3700--3700
  []\TU/MinionPro(0)/m/n/9 640|
  []
 
 
-Overfull \hbox (5.91586pt too wide) in paragraph at lines 3295--3295
+Overfull \hbox (5.91586pt too wide) in paragraph at lines 3700--3700
  []\TU/MinionPro(0)/m/n/9 4.64|
  []
 
 
-Overfull \hbox (3.89668pt too wide) in paragraph at lines 3295--3295
+Overfull \hbox (3.89668pt too wide) in paragraph at lines 3700--3700
  []\TU/MinionPro(0)/m/n/9 634|
  []
 
 
-Overfull \hbox (5.91586pt too wide) in paragraph at lines 3295--3295
+Overfull \hbox (5.91586pt too wide) in paragraph at lines 3700--3700
  []\TU/MinionPro(0)/m/n/9 6.23|
  []
 
 
-Overfull \hbox (3.89668pt too wide) in paragraph at lines 3295--3295
+Overfull \hbox (3.89668pt too wide) in paragraph at lines 3700--3700
  []\TU/MinionPro(0)/m/n/9 616|
  []
 
 
-Overfull \hbox (5.91586pt too wide) in paragraph at lines 3295--3295
+Overfull \hbox (5.91586pt too wide) in paragraph at lines 3700--3700
  []\TU/MinionPro(0)/m/n/9 4.75|
  []
 
 
-Overfull \hbox (3.89668pt too wide) in paragraph at lines 3295--3295
+Overfull \hbox (3.89668pt too wide) in paragraph at lines 3700--3700
  []\TU/MinionPro(0)/m/n/9 381|
  []
 
 
-Overfull \hbox (5.91586pt too wide) in paragraph at lines 3295--3295
+Overfull \hbox (5.91586pt too wide) in paragraph at lines 3700--3700
  []\TU/MinionPro(0)/m/n/9 5.94|
  []
 
 
-Overfull \hbox (3.89668pt too wide) in paragraph at lines 3295--3295
+Overfull \hbox (3.89668pt too wide) in paragraph at lines 3700--3700
  []\TU/MinionPro(0)/m/n/9 373|
  []
 
 
-Overfull \hbox (5.91586pt too wide) in paragraph at lines 3295--3295
+Overfull \hbox (5.91586pt too wide) in paragraph at lines 3700--3700
  []\TU/MinionPro(0)/m/n/9 4.53|
  []
 
 
-Overfull \hbox (3.89668pt too wide) in paragraph at lines 3295--3295
+Overfull \hbox (3.89668pt too wide) in paragraph at lines 3700--3700
  []\TU/MinionPro(0)/m/n/9 365|
  []
 
 
-Overfull \hbox (5.91586pt too wide) in paragraph at lines 3295--3295
+Overfull \hbox (5.91586pt too wide) in paragraph at lines 3700--3700
  []\TU/MinionPro(0)/m/n/9 5.37|
  []
 
 
-Overfull \hbox (3.89668pt too wide) in paragraph at lines 3295--3295
+Overfull \hbox (3.89668pt too wide) in paragraph at lines 3700--3700
  []\TU/MinionPro(0)/m/n/9 324|
  []
 
 
-Overfull \hbox (5.91586pt too wide) in paragraph at lines 3295--3295
+Overfull \hbox (5.91586pt too wide) in paragraph at lines 3700--3700
  []\TU/MinionPro(0)/m/n/9 5.49|
  []
 
 
-Overfull \hbox (3.89668pt too wide) in paragraph at lines 3295--3295
+Overfull \hbox (3.89668pt too wide) in paragraph at lines 3700--3700
  []\TU/MinionPro(0)/m/n/9 287|
  []
 
 
-Overfull \hbox (5.91586pt too wide) in paragraph at lines 3295--3295
+Overfull \hbox (5.91586pt too wide) in paragraph at lines 3700--3700
  []\TU/MinionPro(0)/m/n/9 5.21|
  []
 
 
-Overfull \hbox (3.89668pt too wide) in paragraph at lines 3295--3295
+Overfull \hbox (3.89668pt too wide) in paragraph at lines 3700--3700
  []\TU/MinionPro(0)/m/n/9 218|
  []
 
 
-Overfull \hbox (5.91586pt too wide) in paragraph at lines 3295--3295
+Overfull \hbox (5.91586pt too wide) in paragraph at lines 3700--3700
  []\TU/MinionPro(0)/m/n/9 4.48|
  []
 
 
-Overfull \hbox (3.89668pt too wide) in paragraph at lines 3295--3295
+Overfull \hbox (3.89668pt too wide) in paragraph at lines 3700--3700
  []\TU/MinionPro(0)/m/n/9 192|
  []
 
 
-Overfull \hbox (5.91586pt too wide) in paragraph at lines 3295--3295
+Overfull \hbox (5.91586pt too wide) in paragraph at lines 3700--3700
  []\TU/MinionPro(0)/m/n/9 3.80|
  []
 
 
-Overfull \hbox (3.89668pt too wide) in paragraph at lines 3295--3295
+Overfull \hbox (3.89668pt too wide) in paragraph at lines 3700--3700
  []\TU/MinionPro(0)/m/n/9 102|
  []
 
 
-Overfull \hbox (5.91586pt too wide) in paragraph at lines 3295--3295
+Overfull \hbox (5.91586pt too wide) in paragraph at lines 3700--3700
  []\TU/MinionPro(0)/m/n/9 3.50|
  []
 
 
-Overfull \hbox (5.91586pt too wide) in paragraph at lines 3295--3295
+Overfull \hbox (5.91586pt too wide) in paragraph at lines 3700--3700
  []\TU/MinionPro(0)/m/n/9 3.63|
  []
 
 
-Overfull \hbox (5.91586pt too wide) in paragraph at lines 3295--3295
+Overfull \hbox (5.91586pt too wide) in paragraph at lines 3700--3700
  []\TU/MinionPro(0)/m/n/9 4.23|
  []
 
 
-Overfull \hbox (5.91586pt too wide) in paragraph at lines 3295--3295
+Overfull \hbox (5.91586pt too wide) in paragraph at lines 3700--3700
  []\TU/MinionPro(0)/m/n/9 3.22|
  []
 
 
-Overfull \hbox (5.91586pt too wide) in paragraph at lines 3295--3295
+Overfull \hbox (5.91586pt too wide) in paragraph at lines 3700--3700
  []\TU/MinionPro(0)/m/n/9 3.12|
  []
 
 
-Overfull \hbox (3.89668pt too wide) in paragraph at lines 3295--3295
+Overfull \hbox (3.89668pt too wide) in paragraph at lines 3700--3700
  []\TU/MinionPro(0)/m/n/9 462|
  []
 
 
-Overfull \hbox (5.91586pt too wide) in paragraph at lines 3295--3295
+Overfull \hbox (5.91586pt too wide) in paragraph at lines 3700--3700
  []\TU/MinionPro(0)/m/n/9 4.76|
  []
 
 
-Overfull \hbox (3.89668pt too wide) in paragraph at lines 3295--3295
+Overfull \hbox (3.89668pt too wide) in paragraph at lines 3700--3700
  []\TU/MinionPro(0)/m/n/9 447|
  []
 
 
-Overfull \hbox (5.91586pt too wide) in paragraph at lines 3295--3295
+Overfull \hbox (5.91586pt too wide) in paragraph at lines 3700--3700
  []\TU/MinionPro(0)/m/n/9 4.19|
  []
 
 
-Overfull \hbox (3.89668pt too wide) in paragraph at lines 3295--3295
+Overfull \hbox (3.89668pt too wide) in paragraph at lines 3700--3700
  []\TU/MinionPro(0)/m/n/9 446|
  []
 
 
-Overfull \hbox (5.91586pt too wide) in paragraph at lines 3295--3295
+Overfull \hbox (5.91586pt too wide) in paragraph at lines 3700--3700
  []\TU/MinionPro(0)/m/n/9 4.40|
  []
 
 
-Overfull \hbox (3.89668pt too wide) in paragraph at lines 3295--3295
+Overfull \hbox (3.89668pt too wide) in paragraph at lines 3700--3700
  []\TU/MinionPro(0)/m/n/9 257|
  []
 
 
-Overfull \hbox (5.91586pt too wide) in paragraph at lines 3295--3295
+Overfull \hbox (5.91586pt too wide) in paragraph at lines 3700--3700
  []\TU/MinionPro(0)/m/n/9 4.39|
  []
 
 
-Overfull \hbox (3.89668pt too wide) in paragraph at lines 3295--3295
+Overfull \hbox (3.89668pt too wide) in paragraph at lines 3700--3700
  []\TU/MinionPro(0)/m/n/9 239|
  []
 
 
-Overfull \hbox (5.91586pt too wide) in paragraph at lines 3295--3295
+Overfull \hbox (5.91586pt too wide) in paragraph at lines 3700--3700
  []\TU/MinionPro(0)/m/n/9 4.95|
  []
 
 
-Overfull \hbox (3.89668pt too wide) in paragraph at lines 3295--3295
+Overfull \hbox (3.89668pt too wide) in paragraph at lines 3700--3700
  []\TU/MinionPro(0)/m/n/9 211|
  []
 
 
-Overfull \hbox (5.91586pt too wide) in paragraph at lines 3295--3295
+Overfull \hbox (5.91586pt too wide) in paragraph at lines 3700--3700
  []\TU/MinionPro(0)/m/n/9 4.53|
  []
 
 
-Overfull \hbox (3.89668pt too wide) in paragraph at lines 3295--3295
+Overfull \hbox (3.89668pt too wide) in paragraph at lines 3700--3700
  []\TU/MinionPro(0)/m/n/9 173|
  []
 
 
-Overfull \hbox (5.91586pt too wide) in paragraph at lines 3295--3295
+Overfull \hbox (5.91586pt too wide) in paragraph at lines 3700--3700
  []\TU/MinionPro(0)/m/n/9 4.88|
  []
 
 
-Overfull \hbox (3.89668pt too wide) in paragraph at lines 3295--3295
+Overfull \hbox (3.89668pt too wide) in paragraph at lines 3700--3700
  []\TU/MinionPro(0)/m/n/9 153|
  []
 
 
-Overfull \hbox (5.91586pt too wide) in paragraph at lines 3295--3295
+Overfull \hbox (5.91586pt too wide) in paragraph at lines 3700--3700
  []\TU/MinionPro(0)/m/n/9 4.34|
  []
 
 
-Overfull \hbox (5.91586pt too wide) in paragraph at lines 3295--3295
+Overfull \hbox (5.91586pt too wide) in paragraph at lines 3700--3700
  []\TU/MinionPro(0)/m/n/9 4.16|
  []
 
 
-Overfull \hbox (5.91586pt too wide) in paragraph at lines 3295--3295
+Overfull \hbox (5.91586pt too wide) in paragraph at lines 3700--3700
  []\TU/MinionPro(0)/m/n/9 3.63|
  []
 
 
-Overfull \hbox (5.91586pt too wide) in paragraph at lines 3295--3295
+Overfull \hbox (5.91586pt too wide) in paragraph at lines 3700--3700
  []\TU/MinionPro(0)/m/n/9 4.31|
  []
 
 
-Overfull \hbox (5.91586pt too wide) in paragraph at lines 3295--3295
+Overfull \hbox (5.91586pt too wide) in paragraph at lines 3700--3700
  []\TU/MinionPro(0)/m/n/9 3.69|
  []
 
 
-Overfull \hbox (8.1476pt too wide) in paragraph at lines 3295--3295
+Overfull \hbox (8.1476pt too wide) in paragraph at lines 3700--3700
  []\TU/MinionPro(0)/m/n/9 7133|
  []
 
 
-Overfull \hbox (5.91586pt too wide) in paragraph at lines 3295--3295
+Overfull \hbox (5.91586pt too wide) in paragraph at lines 3700--3700
  []\TU/MinionPro(0)/m/n/9 6.17|
  []
 
 
-Overfull \hbox (3.89668pt too wide) in paragraph at lines 3295--3295
+Overfull \hbox (3.89668pt too wide) in paragraph at lines 3700--3700
  []\TU/MinionPro(0)/m/n/9 974|
  []
 
 
-Overfull \hbox (5.91586pt too wide) in paragraph at lines 3295--3295
+Overfull \hbox (5.91586pt too wide) in paragraph at lines 3700--3700
  []\TU/MinionPro(0)/m/n/9 5.95|
  []
 
 
-Overfull \hbox (3.89668pt too wide) in paragraph at lines 3295--3295
+Overfull \hbox (3.89668pt too wide) in paragraph at lines 3700--3700
  []\TU/MinionPro(0)/m/n/9 897|
  []
 
 
-Overfull \hbox (5.91586pt too wide) in paragraph at lines 3295--3295
+Overfull \hbox (5.91586pt too wide) in paragraph at lines 3700--3700
  []\TU/MinionPro(0)/m/n/9 6.17|
  []
 
 
-Overfull \hbox (3.89668pt too wide) in paragraph at lines 3295--3295
+Overfull \hbox (3.89668pt too wide) in paragraph at lines 3700--3700
  []\TU/MinionPro(0)/m/n/9 835|
  []
 
 
-Overfull \hbox (5.91586pt too wide) in paragraph at lines 3295--3295
+Overfull \hbox (5.91586pt too wide) in paragraph at lines 3700--3700
  []\TU/MinionPro(0)/m/n/9 5.99|
  []
 
 
-Overfull \hbox (3.89668pt too wide) in paragraph at lines 3295--3295
+Overfull \hbox (3.89668pt too wide) in paragraph at lines 3700--3700
  []\TU/MinionPro(0)/m/n/9 832|
  []
 
 
-Overfull \hbox (5.91586pt too wide) in paragraph at lines 3295--3295
+Overfull \hbox (5.91586pt too wide) in paragraph at lines 3700--3700
  []\TU/MinionPro(0)/m/n/9 4.73|
  []
 
 
-Overfull \hbox (3.89668pt too wide) in paragraph at lines 3295--3295
+Overfull \hbox (3.89668pt too wide) in paragraph at lines 3700--3700
  []\TU/MinionPro(0)/m/n/9 797|
  []
 
 
-Overfull \hbox (5.91586pt too wide) in paragraph at lines 3295--3295
+Overfull \hbox (5.91586pt too wide) in paragraph at lines 3700--3700
  []\TU/MinionPro(0)/m/n/9 5.89|
  []
 
 
-Overfull \hbox (3.89668pt too wide) in paragraph at lines 3295--3295
+Overfull \hbox (3.89668pt too wide) in paragraph at lines 3700--3700
  []\TU/MinionPro(0)/m/n/9 646|
  []
 
 
-Overfull \hbox (5.91586pt too wide) in paragraph at lines 3295--3295
+Overfull \hbox (5.91586pt too wide) in paragraph at lines 3700--3700
  []\TU/MinionPro(0)/m/n/9 4.67|
  []
 
 
-Overfull \hbox (3.89668pt too wide) in paragraph at lines 3295--3295
+Overfull \hbox (3.89668pt too wide) in paragraph at lines 3700--3700
  []\TU/MinionPro(0)/m/n/9 443|
  []
 
 
-Overfull \hbox (5.91586pt too wide) in paragraph at lines 3295--3295
+Overfull \hbox (5.91586pt too wide) in paragraph at lines 3700--3700
  []\TU/MinionPro(0)/m/n/9 4.25|
  []
 
 
-Overfull \hbox (3.89668pt too wide) in paragraph at lines 3295--3295
+Overfull \hbox (3.89668pt too wide) in paragraph at lines 3700--3700
  []\TU/MinionPro(0)/m/n/9 360|
  []
 
 
-Overfull \hbox (5.91586pt too wide) in paragraph at lines 3295--3295
+Overfull \hbox (5.91586pt too wide) in paragraph at lines 3700--3700
  []\TU/MinionPro(0)/m/n/9 5.04|
  []
 
 
-Overfull \hbox (3.89668pt too wide) in paragraph at lines 3295--3295
+Overfull \hbox (3.89668pt too wide) in paragraph at lines 3700--3700
  []\TU/MinionPro(0)/m/n/9 287|
  []
 
 
-Overfull \hbox (5.91586pt too wide) in paragraph at lines 3295--3295
+Overfull \hbox (5.91586pt too wide) in paragraph at lines 3700--3700
  []\TU/MinionPro(0)/m/n/9 4.15|
  []
 
 
-Overfull \hbox (3.89668pt too wide) in paragraph at lines 3295--3295
+Overfull \hbox (3.89668pt too wide) in paragraph at lines 3700--3700
  []\TU/MinionPro(0)/m/n/9 283|
  []
 
 
-Overfull \hbox (5.91586pt too wide) in paragraph at lines 3295--3295
+Overfull \hbox (5.91586pt too wide) in paragraph at lines 3700--3700
  []\TU/MinionPro(0)/m/n/9 4.08|
  []
 
 
-Overfull \hbox (3.89668pt too wide) in paragraph at lines 3295--3295
+Overfull \hbox (3.89668pt too wide) in paragraph at lines 3700--3700
  []\TU/MinionPro(0)/m/n/9 281|
  []
 
 
-Overfull \hbox (5.91586pt too wide) in paragraph at lines 3295--3295
+Overfull \hbox (5.91586pt too wide) in paragraph at lines 3700--3700
  []\TU/MinionPro(0)/m/n/9 4.78|
  []
 
 
-Overfull \hbox (3.89668pt too wide) in paragraph at lines 3295--3295
+Overfull \hbox (3.89668pt too wide) in paragraph at lines 3700--3700
  []\TU/MinionPro(0)/m/n/9 179|
  []
 
 
-Overfull \hbox (5.91586pt too wide) in paragraph at lines 3295--3295
+Overfull \hbox (5.91586pt too wide) in paragraph at lines 3700--3700
  []\TU/MinionPro(0)/m/n/9 4.11|
  []
 
 
-Overfull \hbox (3.89668pt too wide) in paragraph at lines 3295--3295
+Overfull \hbox (3.89668pt too wide) in paragraph at lines 3700--3700
  []\TU/MinionPro(0)/m/n/9 124|
  []
 
 
-Overfull \hbox (5.91586pt too wide) in paragraph at lines 3295--3295
+Overfull \hbox (5.91586pt too wide) in paragraph at lines 3700--3700
  []\TU/MinionPro(0)/m/n/9 4.03|
  []
 
 
-Overfull \hbox (5.91586pt too wide) in paragraph at lines 3295--3295
+Overfull \hbox (5.91586pt too wide) in paragraph at lines 3700--3700
  []\TU/MinionPro(0)/m/n/9 3.64|
  []
 
 
-Overfull \hbox (5.91586pt too wide) in paragraph at lines 3295--3295
+Overfull \hbox (5.91586pt too wide) in paragraph at lines 3700--3700
  []\TU/MinionPro(0)/m/n/9 3.41|
  []
 
 
-Overfull \hbox (5.91586pt too wide) in paragraph at lines 3295--3295
+Overfull \hbox (5.91586pt too wide) in paragraph at lines 3700--3700
  []\TU/MinionPro(0)/m/n/9 3.13|
  []
 
 
-Overfull \hbox (3.89668pt too wide) in paragraph at lines 3295--3295
+Overfull \hbox (3.89668pt too wide) in paragraph at lines 3700--3700
  []\TU/MinionPro(0)/m/n/9 534|
  []
 
 
-Overfull \hbox (5.91586pt too wide) in paragraph at lines 3295--3295
+Overfull \hbox (5.91586pt too wide) in paragraph at lines 3700--3700
  []\TU/MinionPro(0)/m/n/9 5.05|
  []
 
 
-Overfull \hbox (5.91586pt too wide) in paragraph at lines 3295--3295
+Overfull \hbox (5.91586pt too wide) in paragraph at lines 3700--3700
  []\TU/MinionPro(0)/m/n/9 3.98|
  []
 
 
-Overfull \hbox (5.91586pt too wide) in paragraph at lines 3295--3295
+Overfull \hbox (5.91586pt too wide) in paragraph at lines 3700--3700
  []\TU/MinionPro(0)/m/n/9 5.05|
  []
 
 
-Overfull \hbox (3.89668pt too wide) in paragraph at lines 3295--3295
+Overfull \hbox (3.89668pt too wide) in paragraph at lines 3700--3700
  []\TU/MinionPro(0)/m/n/9 401|
  []
 
 
-Overfull \hbox (5.91586pt too wide) in paragraph at lines 3295--3295
+Overfull \hbox (5.91586pt too wide) in paragraph at lines 3700--3700
  []\TU/MinionPro(0)/m/n/9 4.13|
  []
 
 
-Overfull \hbox (3.89668pt too wide) in paragraph at lines 3295--3295
+Overfull \hbox (3.89668pt too wide) in paragraph at lines 3700--3700
  []\TU/MinionPro(0)/m/n/9 182|
  []
 
 
-Overfull \hbox (5.91586pt too wide) in paragraph at lines 3295--3295
+Overfull \hbox (5.91586pt too wide) in paragraph at lines 3700--3700
  []\TU/MinionPro(0)/m/n/9 4.13|
  []
 
 
-Overfull \hbox (3.89668pt too wide) in paragraph at lines 3295--3295
+Overfull \hbox (3.89668pt too wide) in paragraph at lines 3700--3700
  []\TU/MinionPro(0)/m/n/9 119|
  []
 
 
-Overfull \hbox (5.91586pt too wide) in paragraph at lines 3295--3295
+Overfull \hbox (5.91586pt too wide) in paragraph at lines 3700--3700
  []\TU/MinionPro(0)/m/n/9 3.77|
  []
 
 
-Overfull \hbox (5.91586pt too wide) in paragraph at lines 3295--3295
+Overfull \hbox (5.91586pt too wide) in paragraph at lines 3700--3700
  []\TU/MinionPro(0)/m/n/9 3.47|
  []
 
 
-Overfull \hbox (5.91586pt too wide) in paragraph at lines 3295--3295
+Overfull \hbox (5.91586pt too wide) in paragraph at lines 3700--3700
  []\TU/MinionPro(0)/m/n/9 3.78|
  []
 
 
-Overfull \hbox (3.89668pt too wide) in paragraph at lines 3295--3295
+Overfull \hbox (3.89668pt too wide) in paragraph at lines 3700--3700
  []\TU/MinionPro(0)/m/n/9 375|
  []
 
 
-Overfull \hbox (5.91586pt too wide) in paragraph at lines 3295--3295
+Overfull \hbox (5.91586pt too wide) in paragraph at lines 3700--3700
  []\TU/MinionPro(0)/m/n/9 4.70|
  []
 
 
-Overfull \hbox (3.89668pt too wide) in paragraph at lines 3295--3295
+Overfull \hbox (3.89668pt too wide) in paragraph at lines 3700--3700
  []\TU/MinionPro(0)/m/n/9 115|
  []
 
 
-Overfull \hbox (5.91586pt too wide) in paragraph at lines 3295--3295
+Overfull \hbox (5.91586pt too wide) in paragraph at lines 3700--3700
  []\TU/MinionPro(0)/m/n/9 4.70|
  []
 
 
-Overfull \hbox (3.89668pt too wide) in paragraph at lines 3295--3295
+Overfull \hbox (3.89668pt too wide) in paragraph at lines 3700--3700
  []\TU/MinionPro(0)/m/n/9 111|
  []
 
 
-Overfull \hbox (5.91586pt too wide) in paragraph at lines 3295--3295
+Overfull \hbox (5.91586pt too wide) in paragraph at lines 3700--3700
  []\TU/MinionPro(0)/m/n/9 4.05|
  []
 
 
-Overfull \hbox (5.91586pt too wide) in paragraph at lines 3295--3295
+Overfull \hbox (5.91586pt too wide) in paragraph at lines 3700--3700
  []\TU/MinionPro(0)/m/n/9 3.97|
  []
 
 
-Overfull \hbox (5.91586pt too wide) in paragraph at lines 3295--3295
+Overfull \hbox (5.91586pt too wide) in paragraph at lines 3700--3700
  []\TU/MinionPro(0)/m/n/9 3.05|
  []
 
-[253] [254] [255]
-Overfull \hbox (16.79112pt too wide) in paragraph at lines 3369--3369
+[296] [297] [298]
+Overfull \hbox (16.79112pt too wide) in paragraph at lines 3774--3774
  []\TU/MinionPro(0)/m/n/9 Cluster
  []
 
 
-Overfull \hbox (0.73506pt too wide) in paragraph at lines 3369--3369
+Overfull \hbox (0.73506pt too wide) in paragraph at lines 3774--3774
  \TU/MinionPro(0)/m/n/9 nr.|
  []
 
 
-Overfull \hbox (16.79112pt too wide) in paragraph at lines 3369--3369
+Overfull \hbox (16.79112pt too wide) in paragraph at lines 3774--3774
  []\TU/MinionPro(0)/m/n/9 Cluster
  []
 
 
-Overfull \hbox (4.25092pt too wide) in paragraph at lines 3369--3369
+Overfull \hbox (4.25092pt too wide) in paragraph at lines 3774--3774
  \TU/MinionPro(0)/m/n/9 size|
  []
 
 
-Overfull \hbox (16.79112pt too wide) in paragraph at lines 3369--3369
+Overfull \hbox (16.79112pt too wide) in paragraph at lines 3774--3774
  []\TU/MinionPro(0)/m/n/9 Cluster
  []
 
 
-Overfull \hbox (8.45755pt too wide) in paragraph at lines 3369--3369
+Overfull \hbox (8.45755pt too wide) in paragraph at lines 3774--3774
  \TU/MinionPro(0)/m/n/9 max.|
  []
 
 
-Overfull \hbox (8.9712pt too wide) in paragraph at lines 3369--3369
+Overfull \hbox (8.9712pt too wide) in paragraph at lines 3774--3774
  []\TU/MinionPro(0)/m/n/9 Max.|
  []
 
 
-Overfull \hbox (8.1476pt too wide) in paragraph at lines 3369--3369
+Overfull \hbox (8.1476pt too wide) in paragraph at lines 3774--3774
  []\TU/MinionPro(0)/m/n/9 1857|
  []
 
 
-Overfull \hbox (5.91586pt too wide) in paragraph at lines 3369--3369
+Overfull \hbox (5.91586pt too wide) in paragraph at lines 3774--3774
  []\TU/MinionPro(0)/m/n/9 4.40|
  []
 
 
-Overfull \hbox (3.89668pt too wide) in paragraph at lines 3369--3369
+Overfull \hbox (3.89668pt too wide) in paragraph at lines 3774--3774
  []\TU/MinionPro(0)/m/n/9 400|
  []
 
 
-Overfull \hbox (5.91586pt too wide) in paragraph at lines 3369--3369
+Overfull \hbox (5.91586pt too wide) in paragraph at lines 3774--3774
  []\TU/MinionPro(0)/m/n/9 4.10|
  []
 
 
-Overfull \hbox (3.89668pt too wide) in paragraph at lines 3369--3369
+Overfull \hbox (3.89668pt too wide) in paragraph at lines 3774--3774
  []\TU/MinionPro(0)/m/n/9 347|
  []
 
 
-Overfull \hbox (5.91586pt too wide) in paragraph at lines 3369--3369
+Overfull \hbox (5.91586pt too wide) in paragraph at lines 3774--3774
  []\TU/MinionPro(0)/m/n/9 4.40|
  []
 
 
-Overfull \hbox (3.89668pt too wide) in paragraph at lines 3369--3369
+Overfull \hbox (3.89668pt too wide) in paragraph at lines 3774--3774
  []\TU/MinionPro(0)/m/n/9 347|
  []
 
 
-Overfull \hbox (5.91586pt too wide) in paragraph at lines 3369--3369
+Overfull \hbox (5.91586pt too wide) in paragraph at lines 3774--3774
  []\TU/MinionPro(0)/m/n/9 4.34|
  []
 
 
-Overfull \hbox (3.89668pt too wide) in paragraph at lines 3369--3369
+Overfull \hbox (3.89668pt too wide) in paragraph at lines 3774--3774
  []\TU/MinionPro(0)/m/n/9 208|
  []
 
 
-Overfull \hbox (5.91586pt too wide) in paragraph at lines 3369--3369
+Overfull \hbox (5.91586pt too wide) in paragraph at lines 3774--3774
  []\TU/MinionPro(0)/m/n/9 4.02|
  []
 
 
-Overfull \hbox (3.89668pt too wide) in paragraph at lines 3369--3369
+Overfull \hbox (3.89668pt too wide) in paragraph at lines 3774--3774
  []\TU/MinionPro(0)/m/n/9 164|
  []
 
 
-Overfull \hbox (5.91586pt too wide) in paragraph at lines 3369--3369
+Overfull \hbox (5.91586pt too wide) in paragraph at lines 3774--3774
  []\TU/MinionPro(0)/m/n/9 4.27|
  []
 
 
-Overfull \hbox (3.89668pt too wide) in paragraph at lines 3369--3369
+Overfull \hbox (3.89668pt too wide) in paragraph at lines 3774--3774
  []\TU/MinionPro(0)/m/n/9 158|
  []
 
 
-Overfull \hbox (5.91586pt too wide) in paragraph at lines 3369--3369
+Overfull \hbox (5.91586pt too wide) in paragraph at lines 3774--3774
  []\TU/MinionPro(0)/m/n/9 4.27|
  []
 
 
-Overfull \hbox (5.91586pt too wide) in paragraph at lines 3369--3369
+Overfull \hbox (5.91586pt too wide) in paragraph at lines 3774--3774
  []\TU/MinionPro(0)/m/n/9 3.55|
  []
 
 
-Overfull \hbox (5.91586pt too wide) in paragraph at lines 3369--3369
+Overfull \hbox (5.91586pt too wide) in paragraph at lines 3774--3774
  []\TU/MinionPro(0)/m/n/9 4.06|
  []
 
 
-Overfull \hbox (5.91586pt too wide) in paragraph at lines 3369--3369
+Overfull \hbox (5.91586pt too wide) in paragraph at lines 3774--3774
  []\TU/MinionPro(0)/m/n/9 3.35|
  []
 
 
-Overfull \hbox (5.91586pt too wide) in paragraph at lines 3369--3369
+Overfull \hbox (5.91586pt too wide) in paragraph at lines 3774--3774
  []\TU/MinionPro(0)/m/n/9 3.22|
  []
 
 
-Overfull \hbox (8.1476pt too wide) in paragraph at lines 3369--3369
+Overfull \hbox (8.1476pt too wide) in paragraph at lines 3774--3774
  []\TU/MinionPro(0)/m/n/9 1651|
  []
 
 
-Overfull \hbox (5.91586pt too wide) in paragraph at lines 3369--3369
+Overfull \hbox (5.91586pt too wide) in paragraph at lines 3774--3774
  []\TU/MinionPro(0)/m/n/9 4.54|
  []
 
 
-Overfull \hbox (3.89668pt too wide) in paragraph at lines 3369--3369
+Overfull \hbox (3.89668pt too wide) in paragraph at lines 3774--3774
  []\TU/MinionPro(0)/m/n/9 463|
  []
 
 
-Overfull \hbox (5.91586pt too wide) in paragraph at lines 3369--3369
+Overfull \hbox (5.91586pt too wide) in paragraph at lines 3774--3774
  []\TU/MinionPro(0)/m/n/9 4.54|
  []
 
 
-Overfull \hbox (3.89668pt too wide) in paragraph at lines 3369--3369
+Overfull \hbox (3.89668pt too wide) in paragraph at lines 3774--3774
  []\TU/MinionPro(0)/m/n/9 304|
  []
 
 
-Overfull \hbox (5.91586pt too wide) in paragraph at lines 3369--3369
+Overfull \hbox (5.91586pt too wide) in paragraph at lines 3774--3774
  []\TU/MinionPro(0)/m/n/9 4.51|
  []
 
 
-Overfull \hbox (3.89668pt too wide) in paragraph at lines 3369--3369
+Overfull \hbox (3.89668pt too wide) in paragraph at lines 3774--3774
  []\TU/MinionPro(0)/m/n/9 240|
  []
 
 
-Overfull \hbox (5.91586pt too wide) in paragraph at lines 3369--3369
+Overfull \hbox (5.91586pt too wide) in paragraph at lines 3774--3774
  []\TU/MinionPro(0)/m/n/9 3.95|
  []
 
 
-Overfull \hbox (3.89668pt too wide) in paragraph at lines 3369--3369
+Overfull \hbox (3.89668pt too wide) in paragraph at lines 3774--3774
  []\TU/MinionPro(0)/m/n/9 228|
  []
 
 
-Overfull \hbox (5.91586pt too wide) in paragraph at lines 3369--3369
+Overfull \hbox (5.91586pt too wide) in paragraph at lines 3774--3774
  []\TU/MinionPro(0)/m/n/9 4.21|
  []
 
 
-Overfull \hbox (3.89668pt too wide) in paragraph at lines 3369--3369
+Overfull \hbox (3.89668pt too wide) in paragraph at lines 3774--3774
  []\TU/MinionPro(0)/m/n/9 143|
  []
 
 
-Overfull \hbox (5.91586pt too wide) in paragraph at lines 3369--3369
+Overfull \hbox (5.91586pt too wide) in paragraph at lines 3774--3774
  []\TU/MinionPro(0)/m/n/9 3.66|
  []
 
 
-Overfull \hbox (3.89668pt too wide) in paragraph at lines 3369--3369
+Overfull \hbox (3.89668pt too wide) in paragraph at lines 3774--3774
  []\TU/MinionPro(0)/m/n/9 117|
  []
 
 
-Overfull \hbox (5.91586pt too wide) in paragraph at lines 3369--3369
+Overfull \hbox (5.91586pt too wide) in paragraph at lines 3774--3774
  []\TU/MinionPro(0)/m/n/9 4.12|
  []
 
 
-Overfull \hbox (5.91586pt too wide) in paragraph at lines 3369--3369
+Overfull \hbox (5.91586pt too wide) in paragraph at lines 3774--3774
  []\TU/MinionPro(0)/m/n/9 3.44|
  []
 
 
-Overfull \hbox (5.91586pt too wide) in paragraph at lines 3369--3369
+Overfull \hbox (5.91586pt too wide) in paragraph at lines 3774--3774
  []\TU/MinionPro(0)/m/n/9 3.19|
  []
 
 
-Overfull \hbox (5.91586pt too wide) in paragraph at lines 3369--3369
+Overfull \hbox (5.91586pt too wide) in paragraph at lines 3774--3774
  []\TU/MinionPro(0)/m/n/9 3.02|
  []
 
 
-Overfull \hbox (8.1476pt too wide) in paragraph at lines 3369--3369
+Overfull \hbox (8.1476pt too wide) in paragraph at lines 3774--3774
  []\TU/MinionPro(0)/m/n/9 1196|
  []
 
 
-Overfull \hbox (5.91586pt too wide) in paragraph at lines 3369--3369
+Overfull \hbox (5.91586pt too wide) in paragraph at lines 3774--3774
  []\TU/MinionPro(0)/m/n/9 4.57|
  []
 
 
-Overfull \hbox (3.89668pt too wide) in paragraph at lines 3369--3369
+Overfull \hbox (3.89668pt too wide) in paragraph at lines 3774--3774
  []\TU/MinionPro(0)/m/n/9 421|
  []
 
 
-Overfull \hbox (5.91586pt too wide) in paragraph at lines 3369--3369
+Overfull \hbox (5.91586pt too wide) in paragraph at lines 3774--3774
  []\TU/MinionPro(0)/m/n/9 4.57|
  []
 
 
-Overfull \hbox (3.89668pt too wide) in paragraph at lines 3369--3369
+Overfull \hbox (3.89668pt too wide) in paragraph at lines 3774--3774
  []\TU/MinionPro(0)/m/n/9 377|
  []
 
 
-Overfull \hbox (5.91586pt too wide) in paragraph at lines 3369--3369
+Overfull \hbox (5.91586pt too wide) in paragraph at lines 3774--3774
  []\TU/MinionPro(0)/m/n/9 4.51|
  []
 
 
-Overfull \hbox (3.89668pt too wide) in paragraph at lines 3369--3369
+Overfull \hbox (3.89668pt too wide) in paragraph at lines 3774--3774
  []\TU/MinionPro(0)/m/n/9 128|
  []
 
 
-Overfull \hbox (5.91586pt too wide) in paragraph at lines 3369--3369
+Overfull \hbox (5.91586pt too wide) in paragraph at lines 3774--3774
  []\TU/MinionPro(0)/m/n/9 3.70|
  []
 
 
-Overfull \hbox (3.89668pt too wide) in paragraph at lines 3369--3369
+Overfull \hbox (3.89668pt too wide) in paragraph at lines 3774--3774
  []\TU/MinionPro(0)/m/n/9 107|
  []
 
 
-Overfull \hbox (5.91586pt too wide) in paragraph at lines 3369--3369
+Overfull \hbox (5.91586pt too wide) in paragraph at lines 3774--3774
  []\TU/MinionPro(0)/m/n/9 3.82|
  []
 
 
-Overfull \hbox (5.91586pt too wide) in paragraph at lines 3369--3369
+Overfull \hbox (5.91586pt too wide) in paragraph at lines 3774--3774
  []\TU/MinionPro(0)/m/n/9 3.67|
  []
 
 
-Overfull \hbox (5.91586pt too wide) in paragraph at lines 3369--3369
+Overfull \hbox (5.91586pt too wide) in paragraph at lines 3774--3774
  []\TU/MinionPro(0)/m/n/9 3.55|
  []
 
 
-Overfull \hbox (3.89668pt too wide) in paragraph at lines 3369--3369
+Overfull \hbox (3.89668pt too wide) in paragraph at lines 3774--3774
  []\TU/MinionPro(0)/m/n/9 931|
  []
 
 
-Overfull \hbox (5.91586pt too wide) in paragraph at lines 3369--3369
+Overfull \hbox (5.91586pt too wide) in paragraph at lines 3774--3774
  []\TU/MinionPro(0)/m/n/9 4.84|
  []
 
 
-Overfull \hbox (5.91586pt too wide) in paragraph at lines 3369--3369
+Overfull \hbox (5.91586pt too wide) in paragraph at lines 3774--3774
  []\TU/MinionPro(0)/m/n/9 4.84|
  []
 
 
-Overfull \hbox (5.91586pt too wide) in paragraph at lines 3369--3369
+Overfull \hbox (5.91586pt too wide) in paragraph at lines 3774--3774
  []\TU/MinionPro(0)/m/n/9 4.11|
  []
 
 
-Overfull \hbox (3.89668pt too wide) in paragraph at lines 3369--3369
+Overfull \hbox (3.89668pt too wide) in paragraph at lines 3774--3774
  []\TU/MinionPro(0)/m/n/9 570|
  []
 
 
-Overfull \hbox (5.91586pt too wide) in paragraph at lines 3369--3369
+Overfull \hbox (5.91586pt too wide) in paragraph at lines 3774--3774
  []\TU/MinionPro(0)/m/n/9 3.98|
  []
 
 
-Overfull \hbox (3.89668pt too wide) in paragraph at lines 3369--3369
+Overfull \hbox (3.89668pt too wide) in paragraph at lines 3774--3774
  []\TU/MinionPro(0)/m/n/9 300|
  []
 
 
-Overfull \hbox (5.91586pt too wide) in paragraph at lines 3369--3369
+Overfull \hbox (5.91586pt too wide) in paragraph at lines 3774--3774
  []\TU/MinionPro(0)/m/n/9 3.98|
  []
 
 
-Overfull \hbox (3.89668pt too wide) in paragraph at lines 3369--3369
+Overfull \hbox (3.89668pt too wide) in paragraph at lines 3774--3774
  []\TU/MinionPro(0)/m/n/9 220|
  []
 
 
-Overfull \hbox (5.91586pt too wide) in paragraph at lines 3369--3369
+Overfull \hbox (5.91586pt too wide) in paragraph at lines 3774--3774
  []\TU/MinionPro(0)/m/n/9 3.83|
  []
 
 
-Overfull \hbox (5.91586pt too wide) in paragraph at lines 3369--3369
+Overfull \hbox (5.91586pt too wide) in paragraph at lines 3774--3774
  []\TU/MinionPro(0)/m/n/9 3.27|
  []
 
 
-Overfull \hbox (3.89668pt too wide) in paragraph at lines 3369--3369
+Overfull \hbox (3.89668pt too wide) in paragraph at lines 3774--3774
  []\TU/MinionPro(0)/m/n/9 422|
  []
 
 
-Overfull \hbox (5.91586pt too wide) in paragraph at lines 3369--3369
+Overfull \hbox (5.91586pt too wide) in paragraph at lines 3774--3774
  []\TU/MinionPro(0)/m/n/9 3.95|
  []
 
 
-Overfull \hbox (3.89668pt too wide) in paragraph at lines 3369--3369
+Overfull \hbox (3.89668pt too wide) in paragraph at lines 3774--3774
  []\TU/MinionPro(0)/m/n/9 136|
  []
 
 
-Overfull \hbox (5.91586pt too wide) in paragraph at lines 3369--3369
+Overfull \hbox (5.91586pt too wide) in paragraph at lines 3774--3774
  []\TU/MinionPro(0)/m/n/9 3.43|
  []
 
 
-Overfull \hbox (3.89668pt too wide) in paragraph at lines 3369--3369
+Overfull \hbox (3.89668pt too wide) in paragraph at lines 3774--3774
  []\TU/MinionPro(0)/m/n/9 117|
  []
 
 
-Overfull \hbox (5.91586pt too wide) in paragraph at lines 3369--3369
+Overfull \hbox (5.91586pt too wide) in paragraph at lines 3774--3774
  []\TU/MinionPro(0)/m/n/9 3.85|
  []
 
 
-Overfull \hbox (5.91586pt too wide) in paragraph at lines 3369--3369
+Overfull \hbox (5.91586pt too wide) in paragraph at lines 3774--3774
  []\TU/MinionPro(0)/m/n/9 3.65|
  []
 
 
-Overfull \hbox (5.91586pt too wide) in paragraph at lines 3369--3369
+Overfull \hbox (5.91586pt too wide) in paragraph at lines 3774--3774
  []\TU/MinionPro(0)/m/n/9 3.95|
  []
 
 
-Overfull \hbox (3.89668pt too wide) in paragraph at lines 3369--3369
+Overfull \hbox (3.89668pt too wide) in paragraph at lines 3774--3774
  []\TU/MinionPro(0)/m/n/9 332|
  []
 
 
-Overfull \hbox (5.91586pt too wide) in paragraph at lines 3369--3369
+Overfull \hbox (5.91586pt too wide) in paragraph at lines 3774--3774
  []\TU/MinionPro(0)/m/n/9 4.11|
  []
 
 
-Overfull \hbox (3.89668pt too wide) in paragraph at lines 3369--3369
+Overfull \hbox (3.89668pt too wide) in paragraph at lines 3774--3774
  []\TU/MinionPro(0)/m/n/9 149|
  []
 
 
-Overfull \hbox (5.91586pt too wide) in paragraph at lines 3369--3369
+Overfull \hbox (5.91586pt too wide) in paragraph at lines 3774--3774
  []\TU/MinionPro(0)/m/n/9 3.62|
  []
 
 
-Overfull \hbox (5.91586pt too wide) in paragraph at lines 3369--3369
+Overfull \hbox (5.91586pt too wide) in paragraph at lines 3774--3774
  []\TU/MinionPro(0)/m/n/9 3.33|
  []
 
 
-Overfull \hbox (5.91586pt too wide) in paragraph at lines 3369--3369
+Overfull \hbox (5.91586pt too wide) in paragraph at lines 3774--3774
  []\TU/MinionPro(0)/m/n/9 3.75|
  []
 
 
-Overfull \hbox (5.91586pt too wide) in paragraph at lines 3369--3369
+Overfull \hbox (5.91586pt too wide) in paragraph at lines 3774--3774
  []\TU/MinionPro(0)/m/n/9 4.11|
  []
 
 
-Overfull \hbox (3.89668pt too wide) in paragraph at lines 3369--3369
+Overfull \hbox (3.89668pt too wide) in paragraph at lines 3774--3774
  []\TU/MinionPro(0)/m/n/9 266|
  []
 
 
-Overfull \hbox (5.91586pt too wide) in paragraph at lines 3369--3369
+Overfull \hbox (5.91586pt too wide) in paragraph at lines 3774--3774
  []\TU/MinionPro(0)/m/n/9 3.84|
  []
 
 
-Overfull \hbox (3.89668pt too wide) in paragraph at lines 3369--3369
+Overfull \hbox (3.89668pt too wide) in paragraph at lines 3774--3774
  []\TU/MinionPro(0)/m/n/9 128|
  []
 
 
-Overfull \hbox (5.91586pt too wide) in paragraph at lines 3369--3369
+Overfull \hbox (5.91586pt too wide) in paragraph at lines 3774--3774
  []\TU/MinionPro(0)/m/n/9 3.71|
  []
 
 
-Overfull \hbox (3.89668pt too wide) in paragraph at lines 3369--3369
+Overfull \hbox (3.89668pt too wide) in paragraph at lines 3774--3774
  []\TU/MinionPro(0)/m/n/9 127|
  []
 
 
-Overfull \hbox (5.91586pt too wide) in paragraph at lines 3369--3369
+Overfull \hbox (5.91586pt too wide) in paragraph at lines 3774--3774
  []\TU/MinionPro(0)/m/n/9 3.84|
  []
 
-[256] [257] [258] [259]
+[299] [300] [301] [302]
 File: _bookdown_files/morbid-curiosity-files/figures/figure_S1.pdf Graphic file
  (type pdf)
 <use _bookdown_files/morbid-curiosity-files/figures/figure_S1.pdf>
-[260] [261] [262
+[303] [304] [305
 
-] [263
+]
+File: _bookdown_files/static-vs-dynamic-files/figures/figure_S1.pdf Graphic fil
+e (type pdf)
+<use _bookdown_files/static-vs-dynamic-files/figures/figure_S1.pdf>
+File: _bookdown_files/static-vs-dynamic-files/figures/figure_S2.pdf Graphic fil
+e (type pdf)
+<use _bookdown_files/static-vs-dynamic-files/figures/figure_S2.pdf>
+[306
 
-] [264
+]
+File: _bookdown_files/static-vs-dynamic-files/figures/figure_S3.pdf Graphic fil
+e (type pdf)
+<use _bookdown_files/static-vs-dynamic-files/figures/figure_S3.pdf>
+[307]
+File: _bookdown_files/static-vs-dynamic-files/figures/figure_S4.pdf Graphic fil
+e (type pdf)
+<use _bookdown_files/static-vs-dynamic-files/figures/figure_S4.pdf>
+File: _bookdown_files/static-vs-dynamic-files/figures/figure_S5.pdf Graphic fil
+e (type pdf)
+<use _bookdown_files/static-vs-dynamic-files/figures/figure_S5.pdf>
+[308]
+File: _bookdown_files/static-vs-dynamic-files/figures/figure_S6.pdf Graphic fil
+e (type pdf)
+<use _bookdown_files/static-vs-dynamic-files/figures/figure_S6.pdf>
+[309]
+File: _bookdown_files/static-vs-dynamic-files/figures/figure_S7.pdf Graphic fil
+e (type pdf)
+<use _bookdown_files/static-vs-dynamic-files/figures/figure_S7.pdf>
+[310]
+File: _bookdown_files/static-vs-dynamic-files/figures/figure_S8.pdf Graphic fil
+e (type pdf)
+<use _bookdown_files/static-vs-dynamic-files/figures/figure_S8.pdf>
+[311]
+File: _bookdown_files/static-vs-dynamic-files/figures/figure_S9.pdf Graphic fil
+e (type pdf)
+<use _bookdown_files/static-vs-dynamic-files/figures/figure_S9.pdf>
+[312] [313] [314
 
-] [265
+] [315
 
 
-] [266] [267] [268] [269] [270] [271]
-Underfull \hbox (badness 8132) in paragraph at lines 3683--3685
+] [316] [317] [318] [319] [320] [321] [322] [323]
+Underfull \hbox (badness 8132) in paragraph at lines 4220--4222
  \TU/MinionPro(0)/m/n/12 schizophrenia: Prevalence and impact on outcomes.
  []
 
-[272] [273] [274] [275]
-Underfull \hbox (badness 4303) in paragraph at lines 3785--3787
+[324] [325] [326] [327] [328]
+Underfull \hbox (badness 4303) in paragraph at lines 4337--4339
  [][]\TU/MinionPro(0)/m/n/12 Gorgolewski, K., Burns, C. D., Madison, C., Clark,
  D.,
  []
 
-[276]
-Underfull \hbox (badness 4303) in paragraph at lines 3788--3790
+
+Underfull \hbox (badness 4303) in paragraph at lines 4340--4342
  [][]\TU/MinionPro(0)/m/n/12 Gorgolewski, K., Burns, C. D., Madison, C., Clark,
  D.,
  []
 
-[277] [278] [279] [280] [281] [282] [283] [284] [285] [286] [287] [288] [289] [
-290] [291] [292] [293] [294] [295] [296] [297] [298] [299] [300
+[329] [330] [331]
+Missing character: There is no ́ in font Minion Pro/OT:script=latn;language=dfl
+t;mapping=tex-text;!
+[332]
+Underfull \hbox (badness 10000) in paragraph at lines 4460--4462
+ \TU/MinionPro(0)/m/n/12 inference of population prevalence. In \TU/MinionPro(0
+)/m/it/12 bioRxiv \TU/MinionPro(0)/m/n/12 (p.
+ []
 
-]
+[333] [334] [335] [336] [337] [338] [339] [340] [341] [342] [343] [344] [345] [
+346] [347] [348] [349] [350] [351] [352] [353] [354] [355] [356] [357]
 LaTeX Font Info:    Font shape `TU/MinionPro(0)/b/n' will be
-(Font)              scaled to size 10.77489pt on input line 4461.
+(Font)              scaled to size 10.77489pt on input line 5182.
+[358
 
-Underfull \hbox (badness 10000) in paragraph at lines 4461--4462
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 4463--4464
+] [359]
+Underfull \hbox (badness 10000) in paragraph at lines 5218--5219
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4465--4466
+Underfull \hbox (badness 10000) in paragraph at lines 5220--5221
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4467--4468
+Underfull \hbox (badness 10000) in paragraph at lines 5222--5223
 
  []
 
-[301
+
+Underfull \hbox (badness 10000) in paragraph at lines 5224--5225
+
+ []
+
+[360
 
 ]
-LaTeX Info: Redefining \rmfamily on input line 4479.
-LaTeX Info: Redefining \sffamily on input line 4479.
-LaTeX Info: Redefining \ttfamily on input line 4479.
+LaTeX Info: Redefining \rmfamily on input line 5236.
+LaTeX Info: Redefining \sffamily on input line 5236.
+LaTeX Info: Redefining \ttfamily on input line 5236.
 Package polyglossia Info: Option: English, variant=american.
-LaTeX Info: Redefining \rmfamily on input line 4486.
-LaTeX Info: Redefining \sffamily on input line 4486.
-LaTeX Info: Redefining \ttfamily on input line 4486.
+LaTeX Info: Redefining \rmfamily on input line 5243.
+LaTeX Info: Redefining \sffamily on input line 5243.
+LaTeX Info: Redefining \ttfamily on input line 5243.
 Package polyglossia Info: Option: English, variant=american.
-[302
+[361
 
-] [303
+] [362
 
 ]
 The property list \polyglossia@langsetup contains the pairs (without outer
@@ -3634,24 +3731,24 @@ LaTeX Info: Redefining \sffamily on input line 21.
 LaTeX Info: Redefining \ttfamily on input line 21.
 Package polyglossia Info: Option: English, variant=american.
 Package polyglossia Info: Option: English, variant=american.
-LaTeX Info: Redefining \rmfamily on input line 774.
-LaTeX Info: Redefining \sffamily on input line 774.
-LaTeX Info: Redefining \ttfamily on input line 774.
+LaTeX Info: Redefining \rmfamily on input line 876.
+LaTeX Info: Redefining \sffamily on input line 876.
+LaTeX Info: Redefining \ttfamily on input line 876.
 Package polyglossia Info: Option: English, variant=american.
 Package polyglossia Info: Option: English, variant=american.
-LaTeX Info: Redefining \rmfamily on input line 782.
-LaTeX Info: Redefining \sffamily on input line 782.
-LaTeX Info: Redefining \ttfamily on input line 782.
+LaTeX Info: Redefining \rmfamily on input line 884.
+LaTeX Info: Redefining \sffamily on input line 884.
+LaTeX Info: Redefining \ttfamily on input line 884.
 Package polyglossia Info: Option: English, variant=american.
 Package polyglossia Info: Option: English, variant=american.
 ) ) 
 Here is how much of TeX's memory you used:
- 22341 strings out of 478871
- 417769 string characters out of 5864928
- 1027756 words of memory out of 5000000
- 41734 multiletter control sequences out of 15000+600000
- 440887 words of font info for 157 fonts, out of 8000000 for 9000
+ 22484 strings out of 478871
+ 424871 string characters out of 5864928
+ 1048908 words of memory out of 5000000
+ 41875 multiletter control sequences out of 15000+600000
+ 440895 words of font info for 158 fonts, out of 8000000 for 9000
  54 hyphenation exceptions out of 8191
  95i,17n,126p,3691b,734s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on thesis.pdf (312 pages).
+Output written on thesis.pdf (372 pages).

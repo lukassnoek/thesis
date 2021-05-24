@@ -13,7 +13,7 @@ library(kableExtra)
 
 \small
 \noindent
-_This chapter has been published as_: Snoek, L., van der Miesen, M.M., Beemsterboer, T., van der Leij, A., Eigenhuis, A., & Scholte, H.S. (2021). The Amsterdam Open MRI Collection, a set of multimodal MRI datasets for individual difference analyses. _Nature Scientific Data_.
+_This chapter has been published as_: Snoek, L., van der Miesen, M.M., Beemsterboer, T., van der Leij, A., Eigenhuis, A., & Scholte, H.S. (2021). The Amsterdam Open MRI Collection, a set of multimodal MRI datasets for individual difference analyses. _Nature Scientific Data, 8_, 85.
 
 \newpage
 \normalsize
@@ -463,10 +463,6 @@ kbl(data, booktabs = T, longtable = T,
 #### STAI-T
 
 The STAI-T scale measures trait anxiety. Because this instrument only consists of one scale we evaluate its reliability on the degree in which it shows correlations with other questionnaire scales that also have a pretension of measuring negative emotionality. Because we observe positive correlations with both Neuroticisms, $r(927) = 0.77$, $p < 0.001$) and BIS, $r(927) = 0.514$, $p < 0.001$) we conclude that the reported scales are reliable and consistent. 
-
-## Acknowledgements
-
-We thank all research assistants and students who helped collecting the data of the three projects, Jasper Wijnen and Marco Teunisse for advice and guidance with respect to anonymization and GDPR-related concerns, Jos Bloemers, Sennay Ghebreab, Adriaan Tuiten, Joram van Driel, Christian Olivers, Ilja Sligte, Sara Jahfari, Guido van Wingen, and Suzanne Oosterwijk for help with designing the paradigms, Marcus Spaan for technical support, and Franklin Feingold and Joe Wexler for help with uploading the datasets to OpenNeuro. The acquisition of the ID1000 dataset was funded by a grant from the Alan Turing Institute (Almere, The Netherlands).
 
 ## Code availability {#aomic-code-availability}
 

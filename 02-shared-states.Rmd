@@ -178,7 +178,3 @@ In our constructionist view, we posit that emotion imagery and understanding sha
 Our explicit manipulation of the weight of action, interoceptive and situational information in the SF-task and the OF-task tests the possibility of shared representation in a novel way. Although this procedure may seem artificial, social neuroscience studies support the notion that there is contextual variety in the contribution of action, interoceptive, and situation information when understanding other people [@van2009understanding; @oosterwijk2015concepts]. Moreover, this weighting may mimic the variability with which these sources of information contribute to different instances of subjective emotional experience in reality [@barrett2012emotions]. In future directions, it may be relevant to apply the current paradigm to the study of individuals in which access to these sources of information is disturbed (e.g., individuals with different types of psychopathology) or facilitated (e.g., individuals with high interoceptive sensitivity).
 
 In short, the present study demonstrates that the neural patterns that support imagining "performing an action", "feeling a bodily sensation" or "being in a situation" are directly involved in understanding other people’s actions, sensations and situations. This supports our prediction that self- and other-focused emotion processes share resources in the brain.
-
-## Acknowledgements {#shared-states-acknowledgements}
-
-The authors would like to thank David Amodio for his helpful comments on a previous draft of this manuscript.
