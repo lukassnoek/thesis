@@ -34,10 +34,14 @@
 
  %LCR
 \usepackage{hyperref}
+\PassOptionsToPackage{usenames,dvipsnames}{color} % color is loaded by hyperref
 \hypersetup{unicode=true,
             pdftitle={Towards prediction},
             pdfauthor={Lukas Snoek},
-            pdfborder={0 0 0},
+            colorlinks=true,
+            linkcolor=Maroon,
+            citecolor=gray,
+            urlcolor=Blue,
             breaklinks=true}
 \urlstyle{same}  % don't use monospace font for urls
 \ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
@@ -89,185 +93,6 @@
 % https://github.com/jgm/pandoc/issues/5801
 \renewcommand{\linethickness}{0.05em}
 
-\usepackage{caption}
-\usepackage[pass]{geometry} % load the package, but none of the default settings
-\usepackage{pdflscape} % landscape pages and rotation
-\usepackage{bookmark} % section links in pdf
-\usepackage{enumitem} % formatting lists
-\usepackage[dvipsnames]{xcolor} % prevent error in pdfpages
-\usepackage{pdfpages} % for adding the book cover
-
-% LS: add stuff for kableExtra
-\usepackage{booktabs}
-\usepackage{longtable}
-\usepackage{array}
-\usepackage{multirow}
-\usepackage{wrapfig}
-\usepackage{float}
-\usepackage{colortbl}
-\usepackage{pdflscape}
-\usepackage{tabu}
-\usepackage{threeparttable}
-\usepackage{threeparttablex}
-\usepackage[normalem]{ulem}
-\usepackage{makecell}
-\usepackage{xcolor}
-
-\let\oldhref\href % save command before redefininig, so we can turn it off again
-\renewcommand{\href}[2]{#2\footnote{\url{#1}}} % same as "link-as-notes: true"
-
-\newcommand{\blandscape}{\begin{landscape}}
-\newcommand{\elandscape}{\end{landscape}}
-\AtBeginDocument{\let\maketitle\relax} % don't make automatic title page as first page
-
-\newcommand{\CoverName}{cover} % to set page numbers of cover pages to "cover"
-
-% change toc depth (to remove subsections in Dutch Summary from toc)
-\newcommand{\changelocaltocdepth}[1]{%
-  \addtocontents{toc}{\protect\setcounter{tocdepth}{#1}}%
-  \setcounter{tocdepth}{#1}%
-}
-
-% From https://tex.stackexchange.com/questions/32547/how-to-measure-the-width-of-a-longtable-dynamically-and-use-this-width-in-footer
-% papaja requires the \getlongtablewidth command when using the longtable=TRUE option with apa_table
-\makeatletter
-\newcommand\LastLTentrywidth{1em}
-\newlength\longtablewidth
-\setlength{\longtablewidth}{1in}
-\newcommand{\getlongtablewidth}{\begingroup \ifcsname LT@\roman{LT@tables}\endcsname \global\longtablewidth=0pt \renewcommand{\LT@entry}[2]{\global\advance\longtablewidth by ##2\relax\gdef\LastLTentrywidth{##2}}\@nameuse{LT@\roman{LT@tables}} \fi \endgroup}
-\makeatother
-
-%% Typefaces
-\usepackage{fontspec}
-\setmainfont{Minion Pro}
-\setsansfont[Ligatures=TeX]{Helvetica}
-\setmathsfont(Digits,Greek,Latin)[Numbers={Proportional}]{Minion Pro}
-\setmathrm{Minion Pro}
-
-%% Page layout
-
-% The length of the lowercase alphabet in 11 pt Minion Pro is 127.80293pt (116.7151 pt for 10pt).
-% According to equation 2.1 of the memoir manual, the optimal width of the typeblock (66 characters) would then be 294.38358306 pt, or 103.9 mm
-% According to table 2.2 of the memoir manual, the typeblock should be between 22 pica's (= 93.13 mm), which would be 59 characters wide, or 26 pica's a little bit more than 22 pica's (= 110.1 mm), which would be 70 characters wide. 
-
-\setstocksize{240mm}{170mm} % adjusted B5, with no bleed on each side for now
-\settrimmedsize{240mm}{170mm}{*} % adjusted B5 (standard thesis size)
-\setpageml{\paperheight}{\paperwidth}{*} % center the adjusted B5 page to the middle left (so the right, bottom and top will be trimmed)
-\settypeblocksize{*}{105mm}{1.618} % typeblock of 105 mm wide (little wider than optimal, to save paper). The golden ratio is a good rule to set the height, which amounts to about 105*1.618 = 170. The actual height of the text block will differ slightly, because it has to fit an integer number of lines.
-\setlrmargins{*}{40mm}{*} % leaves 170-105 = 65 mm for margins. Set the foredge margin so its relation to the spine margin is about the golden ratio as well (65/1.618 is 40.2). A foreedge of twice the spine is also common, but I think this makes the foreedge a bit too big. The spine is then 65-40 = 25 mm.
-\setulmargins{25mm}{*}{*} % the top margin is often 1/9 of the page height, or 1/9 * 240 mm = 27 mm. Often the top margin is also the same as the spine. Both of these rules almost converge here. 
-% This automatically determines the bottom margin at 240 - 25 - 170 = 45. This is bigger than the top margin, which is good, as this is where you hold the book (often the bottom margin is even twice as big as the top).
-%\setheadfoot{\onelineskip}{2\onelineskip} % defaults from memoir manual
-%\setheaderspaces{*}{2\onelineskip}{*} % defaults from memoir manual
-\setmarginnotes{5mm}{15mm}{\onelineskip} % too narrow (15mm, with 5 mm separation from text) for actual margin notes; but some chapter / pagestyles (e.g. companion) run off the page if this is not set.
-\settypeoutlayoutunit{mm} % use mm for printing to the log
-\checkandfixthelayout
-
-%% Page and chapter styles
-\chapterstyle{companion}
-
-\def\defstyle{Ruled} % pagestyle set here will be used on all pages with regular text
-\makeevenhead{Ruled}{\leftmark}{}{} % get rid of small caps in verso headers
-
-% distinguish lower-level headings
-\setsubsubsecheadstyle{\normalsize\bfseries\itshape} % bold italic
-\setparaheadstyle{\normalsize\itshape} % just italic
-
-%% Spacing
-\midsloppy % middle ground between overfull lines ("fussy"), or lots of variation in interword spaces ("sloppy")
-
-% try to avoid widows (last line of paragraph at the top of otherwise empty page)
-\setlength{\topskip}{1.6\topskip}
-\checkandfixthelayout
-\sloppybottom
-
-\renewcommand{\arraystretch}{1.5} % increase vertical spacing in tables
-
-% when figures/tables are wider than text block, center them with respect to text block
-\setfloatadjustment{figure}{\centerfloat}
-\setfloatadjustment{table}{\centerfloat}
-
-%\setlength{\cftpartnumwidth}{2.5em} % more space for part numbering in ToC
-%\setlength\cftchapternumwidth{2.5em} % also adjust others to match
-%\setlength\cftsectionindent{2.5em} % also adjust others to match
-
-%% Abstracts
-\abstractrunin % set "ABSTRACT" title in-line
-\renewcommand{\abstractnamefont}{\normalfont\normalsize\scshape\bfseries} % set "ABSTRACT" in bold small scaps
-\renewcommand{\abstracttextfont}{\normalfont\normalsize} % normalsize for text
-\setlength{\absleftindent}{0pt} % don't increase left margin for abstracts
-\setlength{\absrightindent}{0pt} % don't increase right margin for abstracts
-\abslabeldelim{\quad} % some space after "ABSTRACT"
-% see front_matter.tex for two more commands
-
-%% Part titles 
-%format similarly to companion chapter style
-\renewcommand{\partnamefont}{\normalfont\huge\scshape}
-\renewcommand{\partnumfont}{\normalfont\HUGE}
-
-%\setlength\beforechapskip{-\baselineskip} % this would remove any space above the chapter titles
-
-%% Captions
-% Memoir:
-\captionnamefont{\small\sffamily}
-\captiontitlefont{\small\sffamily}
-\hangcaption
-% caption package:
-\captionsetup{labelfont={rm,sc},textfont={small,sf},labelsep=space} % small sans for table captions, with small caps for label
-
-%% Bibliography
-%\renewcommand*{\bibfont}{\footnotesize}  % lukas: commented out because error with none citationpackage
-
-% Hyperlink entire author-year citation; not just year
-%https://tex.stackexchange.com/questions/15951/hyperlink-name-with-biblatex-authoryear-biblatex-1-4b
-%\DeclareFieldFormat{citehyperref}{%
-%  \DeclareFieldAlias{bibhyperref}{noformat}% Avoid nested links
-%  \bibhyperref{#1}}
-%\DeclareFieldFormat{textcitehyperref}{%
-%  \DeclareFieldAlias{bibhyperref}{noformat}% Avoid nested links
-%  \bibhyperref{%
-%    #1%
-%    \ifbool{cbx:parens}
-%      {\bibcloseparen\global\boolfalse{cbx:parens}}
-%      {}}}
-%\savebibmacro{cite}
-%\savebibmacro{textcite}
-%\renewbibmacro*{cite}{%
-%  \printtext[citehyperref]{%
-%    \restorebibmacro{cite}%
-%    \usebibmacro{cite}}}
-%\renewbibmacro*{textcite}{%
-%  \ifboolexpr{
-%    ( not test {\iffieldundef{prenote}} and
-%      test {\ifnumequal{\value{citecount}}{1}} )
-%    or
-%    ( not test {\iffieldundef{postnote}} and
-%      test {\ifnumequal{\value{citecount}}{\value{citetotal}}} )
-%  }
-%    {\DeclareFieldAlias{textcitehyperref}{noformat}}
-%    {}%
-%  \printtext[textcitehyperref]{%
-%    \restorebibmacro{textcite}%
-%    \usebibmacro{textcite}}}
-
-% Handle prefixes in surnames (e.g. "van", "de") correctly
-%https://tex.stackexchange.com/questions/440133/prefixes-in-author-names-in-references-and-bibliography
-%\DeclareSortingNamekeyTemplate{
-%  \keypart{
-%    \namepart{family}
-%  }
-%  \keypart{
-%    \namepart{prefix}
-%  }
-%  \keypart{
-%    \namepart{given}
-%  }
-%  \keypart{
-%    \namepart{suffix}
-%  }
-%}
-
-%\renewbibmacro{begentry}{\midsentence}
 \usepackage{booktabs}
 \usepackage{longtable}
 \usepackage{array}
@@ -389,6 +214,7 @@ Overige leden:
 \clearpage
 \thispagestyle{empty}
 {
+\hypersetup{linkcolor=black}
 \setcounter{tocdepth}{1}
 \tableofcontents
 }
@@ -396,41 +222,26 @@ Overige leden:
 \hypertarget{introduction}{%
 \chapter{Introduction}\label{introduction}}
 
-\emph{The first chapter of the thesis, which introduces your PhD project. The filler-text below was created with the \href{http://www.elsewhere.org/journal/pomo}{postmodernism generator}.}
+\begin{quote}
+``Science advances by playing twenty questions with nature.
+The proper tactic is to frame a general question, hopefully binary,
+that can be attacked experimentally. Having settled that bits-worth,
+one can proceed to the next. The policy appears optimal -- one never risks much,
+there is feedback from nature at every step, and progress is inevitable.
+Unfortunately, the questions never seem to be really answered,
+the strategy does not seem to work.''
 
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+\hfill --- Allen Newell (1973)
+\end{quote}
 
-Something about the coming about of this thesis. More of a ``lessons learned'' rather than a coherent research topic.
+Almost fifty years ago, the artificial intelligence pioneer and cognitive psychologist Allen Newell summarized his discontent with the field of psychology with the sentence ``you cannot play twenty questions with nature and win''. In a game of ``twenty questions'', one player thinks of a person or object and the other player attempts to guess it by asking up to twenty questions, such as ``is it a person?'', ``is he a man?''. Only questions that require a binary (yes/no) answer are allowed. Newell argued that most (cognitive) psychology research attempts to understand human behavior and cognition in a manner analogous to a game of twenty questions; that is, by repeatedly asking and trying to answer ``binary'' research questions --- such as ``Does cognition impact perception?'' and ``Are emotional facial expressions innate?'' --- researchers attempt to gradually explore and reduce the space of possible scientific explanations in the hope to, ultimately, converge on the ``the right answer''. Almost fifty years after Newell's twenty questions article, most of the research in both psychology and cognitive neuroscience still revolves around asking binary research questions about the mind and brain, framed as hypotheses that are evaluated using an ever increasingly sophisticated toolbox of statistical significance tests. Newell, however, believed that in order to gain a fundamental understanding of how the mind and brain work, we need to go beyond asking binary questions and try to investigate human behavior and cognition in all its complexity using quantitative, predictive models that implement human cognitive capacities and behaviors. I believe that this argument is still as relevant today as it was almost fifty years ago.
 
-\hypertarget{the-brain-is-not-a-dictionary}{%
-\section{The brain is not a dictionary}\label{the-brain-is-not-a-dictionary}}
+In this thesis, I explore a different, complementary approach to the traditional methodology of hypothesis testing used in psychology and cognitive neuroscience research. Although this alternative approach has deep roots in psychology and is thus by no means new, the version I advocate and have used in this thesis extends it with ideas and techniques from the rapidly growing field of artificial intelligence and specifically machine learning. As I will describe in more detail in the next section, the crucial difference between the ``hypothesis testing approach'' and the ``predictive approach'', as advocated by Newell, is the way they go about trying to explain and understand a particular cognitive capacity or behavior (Breiman, \protect\hyperlink{ref-Breiman2001-lf}{2001}). Although I believe that both approaches have their merits, I think that the predictive approach may be particularly promising given the increasing availability of large datasets and rapid advances in artificial intelligence and machine learning (Halevy et al., \protect\hyperlink{ref-Halevy2009-cv}{2009}; Yarkoni \& Westfall, \protect\hyperlink{ref-Yarkoni2017-om}{2017}).
 
-Something about looking at populations of neurons/voxels/areas rather than simple one-to-one relationships. Shared states.
+This thesis features research that applies, adapts, and contributes to machine learning techniques and methods in the context of predictive models of behavior and neuroimaging data. Specifically, chapters in this thesis describe both examples of predictive models applied to neuroimaging data (chapter \ref{shared-states}) and behavior (chapter \ref{hypothesis-kernel-analysis} and \ref{static-vs-dynamic} as well as elements that facilitate and enrich the predictive modelling framework, such as the value of making datasets publicly accessible (chapter \ref{aomic}; Adjerid \& Kelley, \protect\hyperlink{ref-Adjerid2018-vs}{2018}; Poldrack \& Gorgolewski, \protect\hyperlink{ref-Poldrack2014-ov}{2014}), and a method to aid interpretation of predictive models (chapter \ref{confounds-decoding}). Note that the studies contained in this thesis do not all fall squarely in the predictive approach. For example, chapter \ref{morbid-curiosity} features a study that revolved around a confirmatory (and preregistered) hypothesis and chapter \ref{shared-states} describes a study that in fact tests a very specific hypothesis using a predictive model. In what follows, I will argue that the predictive approach represents a useful and promising way of doing research that complements the traditional hypothesis testing approach with respect to their common goal of explanation and gaining understanding of the brain and mind. But first, I will illustrate that these two approaches can be thought of as different inferences from the same model which helps to identify their relative (dis)advantages later.
 
-\hypertarget{the-brain-probably-does-not-care-about-your-hypothesis}{%
-\section{The brain (probably) does not care about your hypothesis}\label{the-brain-probably-does-not-care-about-your-hypothesis}}
-
-Facial expression models.
-
-\hypertarget{interpretability-and-prediction-are-a-trade-off-for-now}{%
-\section{Interpretability and prediction are a trade-off (for now)}\label{interpretability-and-prediction-are-a-trade-off-for-now}}
-
-A plea for prediction but a cautionary tale for interpreting predictive models (confounds)
-
-\hypertarget{exploration-should-be-embraced-more}{%
-\section{Exploration should be embraced more}\label{exploration-should-be-embraced-more}}
-
-Something about the ``context of discovery'' (cf.~TCM), preregistration, and confirmation vs.~exploration (Morbid curiosity.)
-
-\hypertarget{proper-generalization-is-hard}{%
-\section{Proper generalization is hard}\label{proper-generalization-is-hard}}
-
-Within and between subject variance is not noise, but unexplained variance (AU limitations).
-
-\hypertarget{psychology-is-complex-so-it-needs-complex-models}{%
-\section{Psychology is complex, so it needs complex models}\label{psychology-is-complex-so-it-needs-complex-models}}
-
-Which need to be fit on complex, large datasets. (AOMIC)
+\hypertarget{inference-done-differently}{%
+\section{Inference done differently}\label{inference-done-differently}}
 
 \hypertarget{shared-states}{%
 \chapter{Shared states: using MVPA to test neural overlap between self-focused emotion imagery and other-focused emotion understanding}\label{shared-states}}
@@ -450,9 +261,9 @@ Which need to be fit on complex, large datasets. (AOMIC)
 \newpage
 \normalsize
 
-\textbf{Abstract}
-
+\begin{abstract}
 The present study tested whether the neural patterns that support imagining ``performing an action'', ``feeling a bodily sensation'' or ``being in a situation'' are directly involved in understanding \emph{other people's} actions, bodily sensations and situations. Subjects imagined the content of short sentences describing emotional actions, interoceptive sensations and situations (self-focused task), and processed scenes and focused on \emph{how} the target person was expressing an emotion, \emph{what} this person was feeling, and \emph{why} this person was feeling an emotion (other-focused task). Using a linear support vector machine classifier on brain-wide multi-voxel patterns, we accurately decoded each individual class in the self-focused task. When generalizing the classifier from the self-focused task to the other-focused task, we also accurately decoded whether subjects focused on the emotional actions, interoceptive sensations and situations of \emph{others}. These results show that the neural patterns that underlie self-imagined experience are involved in understanding the experience of other people. This supports the theoretical assumption that the basic components of emotion experience and understanding share resources in the brain.
+\end{abstract} \newpage
 
 \hypertarget{shared-states-introduction}{%
 \section{Introduction}\label{shared-states-introduction}}
@@ -661,9 +472,9 @@ In short, the present study demonstrates that the neural patterns that support i
 \newpage
 \normalsize
 
-\textbf{Abstract}
-
+\begin{abstract}
 Over the past decade, multivariate ``decoding analyses'' have become a popular alternative to traditional mass-univariate analyses in neuroimaging research. However, a fundamental limitation of using decoding analyses is that it remains ambiguous which source of information drives decoding performance, which becomes problematic when the to-be-decoded variable is confounded by variables that are not of primary interest. In this study, we use a comprehensive set of simulations as well as analyses of empirical data to evaluate two methods that were previously proposed and used to control for confounding variables in decoding analyses: post hoc counterbalancing and confound regression. In our empirical analyses, we attempt to decode gender from structural MRI data while controlling for the confound ``brain size''. We show that both methods introduce strong biases in decoding performance: post hoc counterbalancing leads to better performance than expected (i.e., positive bias), which we show in our simulations is due to the subsampling process that tends to remove samples that are hard to classify or would be wrongly classified; confound regression, on the other hand, leads to worse performance than expected (i.e., negative bias), even resulting in significant below chance performance in some realistic scenarios. In our simulations, we show that below chance accuracy can be predicted by the variance of the distribution of correlations between the features and the target. Importantly, we show that this negative bias disappears in both the empirical analyses and simulations when the confound regression procedure is performed in every fold of the cross-validation routine, yielding plausible (above chance) model performance. We conclude that, from the various methods tested, cross-validated confound regression is the only method that appears to appropriately control for confounds which thus can be used to gain more insight into the exact source(s) of information driving one's decoding analysis.
+\end{abstract} \newpage
 
 \hypertarget{confounds-decoding-introduction}{%
 \section{Introduction}\label{confounds-decoding-introduction}}
@@ -1254,9 +1065,9 @@ In general, we believe that the contributions of the current study are twofold. 
 \newpage
 \normalsize
 
-\textbf{Abstract}
-
+\begin{abstract}
 We present the Amsterdam Open MRI Collection (AOMIC): three datasets with multimodal (3T) MRI data including structural (T1-weighted), diffusion-weighted, and (resting-state and task-based) functional BOLD MRI data, as well as detailed demographics and psychometric variables from a large set of healthy participants (\emph{N} = 928, \emph{N} = 226, and \emph{N} = 216). Notably, task-based fMRI was collected during various robust paradigms (targeting naturalistic vision, emotion perception, working memory, face perception, cognitive conflict and control, and response inhibition) for which extensively annotated event-files are available. For each dataset and data modality, we provide the data in both raw and preprocessed form (both compliant with the Brain Imaging Data Structure), which were subjected to extensive (automated and manual) quality control. All data is publicly available from the OpenNeuro data sharing platform.
+\end{abstract} \newpage
 
 \hypertarget{background-summary}{%
 \section{Background \& summary}\label{background-summary}}
@@ -1908,9 +1719,9 @@ First-level functional MRI analyses for technical validation were implemented us
 \newpage
 \normalsize
 
-\textbf{Abstract}
-
+\begin{abstract}
 People often seek out stories, videos or images that detail death, violence or harm. Considering the ubiquity of this behavior, it is surprising that we know very little about the neural circuits involved in choosing negative information. Using fMRI, the present study shows that choosing intensely negative stimuli engages similar brain regions as those that support extrinsic incentives and ``regular'' curiosity. Participants made choices to view negative and positive images, based on negative (e.g., a soldier kicks a civilian against his head) and positive (e.g., children throw flower petals at a wedding) verbal cues. We hypothesized that the conflicting, but relatively informative act of choosing to view a negative image, resulted in stronger activation of reward circuitry as opposed to the relatively uncomplicated act of choosing to view a positive stimulus. Indeed, as preregistered, we found that choosing negative cues was associated with activation of the striatum, inferior frontal gyrus, anterior insula, and anterior cingulate cortex, both when contrasting against a passive viewing condition, and when contrasting against positive cues. These findings nuance models of decision-making, valuation and curiosity, and are an important starting point when considering the value of seeking out negative content.
+\end{abstract} \newpage
 
 \hypertarget{morbid-curiosity-introduction}{%
 \section{Introduction}\label{morbid-curiosity-introduction}}
@@ -2198,6 +2009,15 @@ Despite the questions that the present study provokes, our findings represent an
 \hypertarget{hypothesis-kernel-analysis}{%
 \chapter{Using predictive modeling to quantify the importance and limitations of action units in emotion perception}\label{hypothesis-kernel-analysis}}
 
+\chaptermark{Predictive modelling of action units}
+
+\newpage
+\normalsize
+
+\begin{abstract}
+Bla bla
+\end{abstract} \newpage
+
 \hypertarget{static-vs-dynamic}{%
 \chapter{Affective face perception integrates both static and dynamic information}\label{static-vs-dynamic}}
 
@@ -2210,9 +2030,9 @@ Despite the questions that the present study provokes, our findings represent an
 \newpage
 \normalsize
 
-\textbf{Abstract}
-
+\begin{abstract}
 Facial movements are crucial for affective face perception, yet research has shown that people are also influenced by features of the static face such as facial morphology. Most studies have either manipulated dynamic features (i.e., facial movements) or static features (i.e., facial morphology) making it impossible to evaluate the relative contribution of either. The current study investigates the effects of static and dynamic facial features on three affective properties (categorical emotion, valence, and arousal) inferred from stimuli in which both types of features have been independently manipulated. Using predictive machine learning models, we show that static and dynamic features both explain substantial and orthogonal variance in categorical emotion and valence ratings, while arousal ratings are only predicted accurately using dynamic, but not static, features. Moreover, using a multivariate reverse correlation approach, we show that static and dynamic features communicating the same affective property (e.g., categorical emotions) are manifested differently in the face. Our results demonstrate that in order to understand affective face perception, both facial morphology and facial movements should be considered independently.
+\end{abstract} \newpage
 
 \hypertarget{svsd-introduction}{%
 \section{Introduction}\label{svsd-introduction}}
@@ -2578,7 +2398,7 @@ The current study used a predictive modelling approach (as opposed to null-hypot
 \hypertarget{limitations-and-further-directions}{%
 \subsubsection{Limitations and further directions}\label{limitations-and-further-directions}}
 
-Although we believe the current study yields important insights into the role of static and dynamic information in affective face perception, it suffers from several limitations that affect its generalizability, which in turn provides directions for future research. First, we specifically investigated categorical emotion as an affective state of the expressor and valence/arousal as an affective experience of the observer, but this covers only a part of the possibilities. Future studies could additionally investigate how static and dynamic information are related to categorical emotions as an affective state of the observer and valence/arousal as an affective state of the expressor. Second, although we investigated multiple affective properties of the face, they do not capture affective face perception in its full complexity. For example, the six basic categorical emotions we investigated are a subset of a larger range of known categorical affective states (Cowen et al., \protect\hyperlink{ref-Cowen2021-ld}{2021}; Cowen \& Keltner, \protect\hyperlink{ref-Cowen2017-vz}{2017}). Future research could use the approach from the current study to investigate whether the largely independent contribution of static and dynamic information holds for affective states beyond those investigated in the current study. Second, although our psychophysics approach samples the space of dynamic and static information more extensively than most studies, the stimulus set we used remains limited. Although random sampling of facial movements ensures that analyses and subsequent results are relatively unbiased by existing theoretical considerations (Jack et al., \protect\hyperlink{ref-Jack2017-qp}{2017}), they may yield facial expressions that are unlikely to be encountered in daily life. As a consequence, these facial expressions may be rated relatively inconsistently and subsequently bias model performance downwards. In addition, our stimulus set was generated to optimize for variance in facial movements. As such, while our stimulus set covers a large part of the space of possible facial movements, it is unclear to what degree the fifty different faces in our stimulus set cover the range of variation in facial morphology. Specifically, to improve the variance in static features, future studies could benefit from including faces from different ethnicities and a wider age range, which may in turn improve generalizability of the results.
+Although we believe the current study yields important insights into the role of static and dynamic information in affective face perception, it suffers from several limitations that affect its generalizability, which in turn provides directions for future research. First, we specifically investigated categorical emotion as an affective state of the expressor and valence/arousal as an affective experience of the observer, but this covers only a part of the possibilities. Future studies could additionally investigate how static and dynamic information are related to categorical emotions as an affective state of the observer and valence/arousal as an affective state of the expressor. Second, although we investigated multiple affective properties of the face, they do not capture affective face perception in its full complexity. For example, the six basic categorical emotions we investigated are a subset of a larger range of known categorical affective states (Cowen et al., \protect\hyperlink{ref-Cowen2021-ld}{2021}; Cowen \& Keltner, \protect\hyperlink{ref-Cowen2017-vz}{2017}). Future research could use the approach from the current study to investigate whether the largely independent contribution of static and dynamic information holds for affective states beyond those investigated in the current study. Second, although our psychophysics approach samples the space of dynamic and static information more extensively than most studies, the stimulus set we used remains limited. Although random sampling of facial movements ensures that analyses and subsequent results are relatively unbiased by existing theoretical considerations (R. E. Jack et al., \protect\hyperlink{ref-Jack2017-qp}{2017}), they may yield facial expressions that are unlikely to be encountered in daily life. As a consequence, these facial expressions may be rated relatively inconsistently and subsequently bias model performance downwards. In addition, our stimulus set was generated to optimize for variance in facial movements. As such, while our stimulus set covers a large part of the space of possible facial movements, it is unclear to what degree the fifty different faces in our stimulus set cover the range of variation in facial morphology. Specifically, to improve the variance in static features, future studies could benefit from including faces from different ethnicities and a wider age range, which may in turn improve generalizability of the results.
 
 \hypertarget{svsd-conclusion}{%
 \section{Conclusion}\label{svsd-conclusion}}
@@ -3858,25 +3678,66 @@ Positive & IAPS 2091 & NAPS faces 107\\
 
 
 \hypertarget{resources-supplement}{%
-\chapter{Data, code and (educational) materials}\label{resources-supplement}}
+\chapter{Data, code, software and educational materials}\label{resources-supplement}}
 
-\vspace{-12pt}
+I value open science and transparency, so I published my code and data whenever possible. In Table \ref{tab:tab-resources-chapters}, all publicly available resources are listed per chapter.
 
-\begingroup
-\renewcommand*{\arraystretch}{1}
-\setlength{\tabcolsep}{0pt}
-\setlength{\LTleft}{-20cm plus -1fill}
-\setlength{\LTright}{\LTleft}
-\footnotesize
+\begingroup\fontsize{8}{10}\selectfont
 
-\begin{longtable}[]{@{}llll@{}}
+\begin{ThreePartTable}
+\begin{TableNotes}[para]
+\item \textit{Note: } 
+\item OpenNeuro repositories contain raw and preprocessed data from individual participants, while NeuroVault contains group-level aggregate data (e.g., statistical brain maps from group-level analyses).
+\end{TableNotes}
+\begin{longtabu} to \linewidth {>{\raggedleft\arraybackslash}p{2.5em}>{\raggedright\arraybackslash}p{5em}>{\raggedright\arraybackslash}p{5em}>{\raggedright}X}
+\caption{\label{tab:tab-resources-chapters}Chapter resources}\\
 \toprule
-Chapter & Resource & Platform & DOI / URL\tabularnewline
+Chapter & Resource & Platform & DOI / URL\\
 \midrule
-\endhead
-\textbf{Chapter \ref{tDCS-att-review}} & Code & Github &\tabularnewline
+2 & Code & Github & https://github.com/lukassnoek/SharedStates\\
+ & Data & OpenNeuro & 10.18112/openneuro.ds002547.v1.1.0\\
+3 & Code & Github & https://github.com/lukassnoek/MVCA\\
+ & Data & OpenNeuro & 10.18112/openneuro.ds002785.v2.0.0\\
+4 & Overview & Website & https://nilab-uva.github.io/AOMIC.github.io/\\
+\addlinespace
+ & Code & Github & https://github.com/NILAB-UvA/AOMIC-common-scripts\\
+ &  &  & https://github.com/NILAB-UvA/ID1000\\
+ &  &  & https://github.com/NILAB-UvA/PIOP1\\
+ &  &  & https://github.com/NILAB-UvA/PIOP2\\
+ & Data & OpenNeuro & 10.18112/openneuro.ds003097.v1.2.1\\
+\addlinespace
+ &  &  & 10.18112/openneuro.ds002785.v2.0.0\\
+ &  &  & 10.18112/openneuro.ds002790.v2.0.0\\
+ &  & NeuroVault & https://identifiers.org/neurovault.collection:7105\\
+ &  &  & https://identifiers.org/neurovault.collection:7103\\
+ &  &  & https://identifiers.org/neurovault.collection:7104\\
+\addlinespace
+5 & Pre-registration & OSF & osf.io/gdtk9\\
+ & Code & Github & https://github.com/lukassnoek/MorbidCuriosityFMRI\\
+ & Data &  & \\
+6 & Code & Github & https://github.com/lukassnoek/hypothesis-kernel-analysis\\
+7 & Code & Github & https://github.com/lukassnoek/static-vs-dynamic\\
 \bottomrule
-\end{longtable}
+\insertTableNotes
+\end{longtabu}
+\end{ThreePartTable}
+\endgroup{}
+
+As part of my PhD, I also (co-)developed several courses, which I made publicly accessible. These course materials are listed in Table \ref{tab:tab-resources-teaching}.
+
+\begingroup\fontsize{8}{10}\selectfont
+
+\begin{longtabu} to \linewidth {>{\raggedright}X>{\raggedright}X>{\raggedright}X>{\raggedright}X}
+\caption{\label{tab:tab-resources-teaching}Teaching resources}\\
+\toprule
+Course name & Description & Co-developers & URL\\
+\midrule
+Programming in Psychological Science & An introduction to Python and PsychoPy & Emma Schreurs & https://lukas-snoek.com/introPy\\
+Neuroimaging: BOLD-fMRI & An introduction to fMRI data analysis & Noor Seijdel, Jessica Loke, \& H. Steven Scholte & https://lukas-snoek.com/NI-edu\\
+Neuroimaging: pattern analysis & Multivariate analyses of neuroimaging data & Noor Seijdel \& H. Steven Scholte & https://lukas-snoek.com/NI-edu\\
+\bottomrule
+\end{longtabu}
+\endgroup{}
 
 \backmatter
 
@@ -3910,6 +3771,9 @@ Adams, R. B., Jr, Garrido, C. O., Albohn, D. N., Hess, U., \& Kleck, R. E. (2016
 
 \leavevmode\hypertarget{ref-Adams2012-dl}{}%
 Adams, R. B., Jr, Nelson, A. J., Soto, J. A., Hess, U., \& Kleck, R. E. (2012). Emotion in the neutral face: A mechanism for impression formation? \emph{Cogn. Emot.}, \emph{26}(3), 431--441.
+
+\leavevmode\hypertarget{ref-Adjerid2018-vs}{}%
+Adjerid, I., \& Kelley, K. (2018). Big data in psychology: A framework for research advancement. \emph{Am. Psychol.}, \emph{73}(7), 899--917.
 
 \leavevmode\hypertarget{ref-alizadeh2017decoding}{}%
 Alizadeh, S., Jamalabadi, H., Schönauer, M., Leibold, C., \& Gais, S. (2017). Decoding cognitive concepts from neuroimaging data using multivariate pattern analysis. \emph{Neuroimage}, \emph{159}, 449--458.
@@ -4031,6 +3895,9 @@ Braver, T. S., Krug, M. K., Chiew, K. S., Kool, W., Westbrook, J. A., Clement, N
 \leavevmode\hypertarget{ref-breiman1996bagging}{}%
 Breiman, L. (1996). Bagging predictors. \emph{Machine Learning}, \emph{24}(2), 123--140.
 
+\leavevmode\hypertarget{ref-Breiman2001-lf}{}%
+Breiman, L. (2001). Statistical modeling: The two cultures (with comments and a rejoinder by the author). \emph{SSO Schweiz. Monatsschr. Zahnheilkd.}, \emph{16}(3), 199--231.
+
 \leavevmode\hypertarget{ref-Brinkman2017-hg}{}%
 Brinkman, L., Todorov, A., \& Dotsch, R. (2017). Visualising mental representations: A primer on noise-based reverse correlation in social psychology. \emph{European Review of Social Psychology}, \emph{28}(1), 333--361.
 
@@ -4147,9 +4014,6 @@ Destrieux, C., Fischl, B., Dale, A., \& Halgren, E. (2010). Automatic parcellati
 
 \leavevmode\hypertarget{ref-Dhollander2016-dx}{}%
 Dhollander, T., Raffelt, D., \& Connelly, A. (2016). Unsupervised 3-tissue response function estimation from single-shell or multi-shell diffusion MR data without a co-registered T1 image. \emph{ISMRM Workshop on Breaking the Barriers of Diffusion MRI}, \emph{5}, 5.
-
-\leavevmode\hypertarget{ref-Diedrichsen2017-ab}{}%
-Diedrichsen, J., \& Kriegeskorte, N. (2017). Representational models: A common framework for understanding encoding, pattern-component, and representational-similarity analysis. \emph{PLoS Comput. Biol.}, \emph{13}(4), e1005508.
 
 \leavevmode\hypertarget{ref-diekhof2012role}{}%
 Diekhof, E. K., Kaps, L., Falkai, P., \& Gruber, O. (2012). The role of the human ventral striatum and the medial orbitofrontal cortex in the representation of reward magnitude--an activation likelihood estimation meta-analysis of neuroimaging studies of passive reward expectancy and outcome processing. \emph{Neuropsychologia}, \emph{50}(7), 1252--1266.
@@ -4337,6 +4201,9 @@ Gur, R. C., Turetsky, B. I., Matsui, M., Yan, M., Bilker, W., Hughett, P., \& Gu
 \leavevmode\hypertarget{ref-guyon2002gene}{}%
 Guyon, I., Weston, J., Barnhill, S., \& Vapnik, V. (2002). Gene selection for cancer classification using support vector machines. \emph{Machine Learning}, \emph{46}(1), 389--422.
 
+\leavevmode\hypertarget{ref-Halevy2009-cv}{}%
+Halevy, A., Norvig, P., \& Pereira, F. (2009). The unreasonable effectiveness of data. \emph{IEEE Intell. Syst.}, \emph{24}(2), 8--12.
+
 \leavevmode\hypertarget{ref-Hariri2000-sc}{}%
 Hariri, A. R., Bookheimer, S. Y., \& Mazziotta, J. C. (2000). Modulating emotional responses: Effects of a neocortical network on the limbic system. \emph{Neuroreport}, \emph{11}(1), 43--48.
 
@@ -4400,11 +4267,11 @@ Hunter. (2007). Matplotlib: A 2D graphics environment. \emph{IEEE Ann. Hist. Com
 \leavevmode\hypertarget{ref-Ince2020-mr}{}%
 Ince, R. A. A., Kay, J. W., \& Schyns, P. G. (2020). Bayesian inference of population prevalence. In \emph{bioRxiv} (p. 2020.07.08.191106).
 
-\leavevmode\hypertarget{ref-Jack2017-qp}{}%
-Jack, R., Crivelli, C., \& Wheatley, T. (2017). Data-Driven methods to diversify knowledge of human psychology. \emph{Trends Cogn. Sci.}
-
 \leavevmode\hypertarget{ref-Jack2009-yy}{}%
 Jack, R. E., Blais, C., Scheepers, C., Schyns, P. G., \& Caldara, R. (2009). Cultural confusions show that facial expressions are not universal. \emph{Curr. Biol.}, \emph{19}(18), 1543--1548.
+
+\leavevmode\hypertarget{ref-Jack2017-qp}{}%
+Jack, R. E., Crivelli, C., \& Wheatley, T. (2017). Data-Driven methods to diversify knowledge of human psychology. \emph{Trends Cogn. Sci.}
 
 \leavevmode\hypertarget{ref-Jack2014-ku}{}%
 Jack, R. E., Garrod, O. G. B., \& Schyns, P. G. (2014). Dynamic facial expressions of emotion transmit an evolving hierarchy of signals over time. \emph{Curr. Biol.}, \emph{24}(2), 187--192.
@@ -4676,6 +4543,9 @@ Neri, P., Parker, A. J., \& Blakemore, C. (1999). Probing the human stereoscopic
 \leavevmode\hypertarget{ref-Neth2009-eh}{}%
 Neth, D., \& Martinez, A. M. (2009). Emotion perception in emotionless face images suggests a norm-based representation. \emph{J. Vis.}, \emph{9}(1), 5.1--11.
 
+\leavevmode\hypertarget{ref-Newell1973-no}{}%
+Newell, A. (1973). You can't play 20 questions with nature and win: Projective comments on the papers of this symposium. In W. G. Chase (Ed.), \emph{Visual information processing}. New York: Academic Press.
+
 \leavevmode\hypertarget{ref-nichols2005valid}{}%
 Nichols, T., Brett, M., Andersson, J., Wager, T., \& Poline, J.-B. (2005). Valid conjunction inference with the minimum statistic. \emph{Neuroimage}, \emph{25}(3), 653--660.
 
@@ -4753,6 +4623,9 @@ Pinto, Y., Leij, A. R. van der, Sligte, I. G., Lamme, V. A. F., \& Scholte, H. S
 
 \leavevmode\hypertarget{ref-poldrack2006can}{}%
 Poldrack, R. A. (2006). Can cognitive processes be inferred from neuroimaging data? \emph{Trends in Cognitive Sciences}, \emph{10}(2), 59--63.
+
+\leavevmode\hypertarget{ref-Poldrack2014-ov}{}%
+Poldrack, R. A., \& Gorgolewski, K. J. (2014). Making big data open: Data sharing in neuroimaging. \emph{Nat. Neurosci.}, \emph{17}(11), 1510--1517.
 
 \leavevmode\hypertarget{ref-popov2018practices}{}%
 Popov, V., Ostarek, M., \& Tenison, C. (2018). Practices and pitfalls in inferring neural representations. \emph{NeuroImage}, \emph{174}, 340--351.
@@ -5188,7 +5061,7 @@ Van Mourik, T., \textbf{Snoek, L.}, Knapen, T., \& Norris, D. G. (2018). Porcupi
 
 \begin{dutch}
 
-\emph{Richting voorspelling: onderzoek naar geest en brein in het tijdperk van machine learning}
+\emph{Het belang van voorspellen: onderzoek naar de psyche en het brein in het tijdperk van machine learning}
 
 \bigskip
 

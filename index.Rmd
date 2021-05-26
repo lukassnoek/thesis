@@ -102,7 +102,8 @@ output:
 
 indent: false # indent new paragraphs, instead of leaving whitespace
 links-as-notes: true # in the pdf, print hyperlink URLS as footnotes (as they can't be clicked on)
-bibliography: 
+bibliography:
+  - bib/introduction_discussion.bib
   - bib/misc.bib
   - bib/shared-states.bib
   - bib/confounds-decoding.bib
@@ -112,6 +113,7 @@ bibliography:
 
 citation_package: none
 biblio-style: "apa"
+citecolor: gray
 link-citations: true # make clickable hyperlinks from in-text citations to bibliography at the end
 ---
 

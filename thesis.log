@@ -1,19 +1,19 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021) (preloaded format=xelatex 2021.5.26)  26 MAY 2021 12:02
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021) (preloaded format=xelatex 2021.5.26)  26 MAY 2021 17:29
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
 **thesis.tex
 (./thesis.tex
 LaTeX2e <2020-10-01> patch level 4
-L3 programming layer <2021-05-11> (/Users/lukas/Library/TinyTeX/texmf-dist/tex/
+L3 programming layer <2021-05-25> (/Users/lukas/Library/TinyTeX/texmf-dist/tex/
 latex/memoir/memoir.cls
 Document Class: memoir 2021/03/23 v3.7o configurable book, report, article docu
 ment class
 \onelineskip=\skip47
 \lxvchars=\skip48
 \xlvchars=\skip49
-\@memcnta=\count175
-\c@@memmarkcntra=\count176
+\@memcnta=\count177
+\c@@memmarkcntra=\count178
 (/Users/lukas/Library/TinyTeX/texmf-dist/tex/generic/iftex/iftex.sty
 Package: iftex 2020/03/06 v1.0d TeX engine tests
 )
@@ -34,20 +34,20 @@ File: mem11.clo 2008/01/30 v0.3 memoir class 11pt size option
 \mem@maxheadheight=\skip61
 \mem@maxfootheight=\skip62
 \headwidth=\skip63
-\c@storedpagenumber=\count177
+\c@storedpagenumber=\count179
 \memPD=\dimen138
 \m@mabparskip=\skip64
 \thanksmarkwidth=\skip65
 \thanksmarksep=\skip66
 \droptitle=\skip67
-\c@book=\count178
-\c@part=\count179
-\c@chapter=\count180
-\c@section=\count181
-\c@subsection=\count182
-\c@subsubsection=\count183
-\c@paragraph=\count184
-\c@subparagraph=\count185
+\c@book=\count180
+\c@part=\count181
+\c@chapter=\count182
+\c@section=\count183
+\c@subsection=\count184
+\c@subsubsection=\count185
+\c@paragraph=\count186
+\c@subparagraph=\count187
 \beforechapskip=\skip68
 \midchapskip=\skip69
 \afterchapskip=\skip70
@@ -69,8 +69,8 @@ File: mem11.clo 2008/01/30 v0.3 memoir class 11pt size option
 \beforesubparaskip=\skip86
 \aftersubparaskip=\skip87
 \pfbreakskip=\skip88
-\c@@ppsavesec=\count186
-\c@@ppsaveapp=\count187
+\c@@ppsavesec=\count188
+\c@@ppsaveapp=\count189
 \ragrparindent=\dimen139
 \everylistparindent=\dimen140
 \parsepi=\skip89
@@ -92,10 +92,10 @@ File: mem11.clo 2008/01/30 v0.3 memoir class 11pt size option
 \absrightindent=\skip103
 \absparindent=\skip104
 \absparsep=\skip105
-\c@vslineno=\count188
-\c@poemline=\count189
-\c@modulo@vs=\count190
-\c@memfvsline=\count191
+\c@vslineno=\count190
+\c@poemline=\count191
+\c@modulo@vs=\count192
+\c@memfvsline=\count193
 \vleftskip=\skip106
 \vrightskip=\skip107
 \stanzaskip=\skip108
@@ -103,11 +103,11 @@ File: mem11.clo 2008/01/30 v0.3 memoir class 11pt size option
 \vgap=\skip110
 \vindent=\skip111
 \vleftmargin=\dimen142
-\c@verse=\count192
-\c@chrsinstr=\count193
+\c@verse=\count194
+\c@chrsinstr=\count195
 \beforepoemtitleskip=\skip112
 \afterpoemtitleskip=\skip113
-\c@poem=\count194
+\c@poem=\count196
 \beforePoemTitleskip=\skip114
 \midPoemTitleskip=\skip115
 \afterPoemTitleskip=\skip116
@@ -131,7 +131,7 @@ Package: tabularx 2020/01/15 v2.11c `tabularx' package (DPC)
 \TX@old@col=\dimen147
 \TX@target=\dimen148
 \TX@delta=\dimen149
-\TX@cols=\count195
+\TX@cols=\count197
 \TX@ftn=\toks17
 )
 \heavyrulewidth=\dimen150
@@ -144,22 +144,22 @@ Package: tabularx 2020/01/15 v2.11c `tabularx' package (DPC)
 \cmidrulesep=\dimen157
 \cmidrulekern=\dimen158
 \defaultaddspace=\dimen159
-\@cmidla=\count196
-\@cmidlb=\count197
+\@cmidla=\count198
+\@cmidlb=\count199
 \@aboverulesep=\dimen160
 \@belowrulesep=\dimen161
-\@thisruleclass=\count198
-\@lastruleclass=\count199
+\@thisruleclass=\count266
+\@lastruleclass=\count267
 \@thisrulewidth=\dimen162
 \ctableftskip=\skip119
 \ctabrightskip=\skip120
-\abovecolumnspenalty=\count266
-\@linestogo=\count267
-\@cellstogo=\count268
-\@cellsincolumn=\count269
+\abovecolumnspenalty=\count268
+\@linestogo=\count269
+\@cellstogo=\count270
+\@cellsincolumn=\count271
 \crtok=\toks18
 \@mincolumnwidth=\dimen163
-\c@newflo@tctr=\count270
+\c@newflo@tctr=\count272
 \mem@margin@floatbox=\box49
 \@contcwidth=\skip121
 \@contindw=\skip122
@@ -171,7 +171,7 @@ Package: tabularx 2020/01/15 v2.11c `tabularx' package (DPC)
 \subfloatbottomskip=\skip128
 \subfloatlabelskip=\skip129
 \subfloatcapmargin=\dimen164
-\c@@contsubnum=\count271
+\c@@contsubnum=\count273
 \m@mscap@capbox=\box50
 \m@mscap@fbox=\box51
 \sidecapsep=\dimen165
@@ -215,7 +215,7 @@ LaTeX Info: Redefining \emph on input line 7658.
 \cftsubparagraphindent=\skip157
 \cftsubparagraphnumwidth=\skip158
 \prechapterprecisshift=\dimen174
-\c@maxsecnumdepth=\count272
+\c@maxsecnumdepth=\count274
 \bibindent=\dimen175
 \bibitemsep=\skip159
 \indexcolsep=\skip160
@@ -236,7 +236,7 @@ LaTeX Info: Redefining \emph on input line 7658.
 \footinsdim=\skip170
 \footinsv@r=\insert250
 \@mpfootinsv@r=\insert249
-\m@m@k=\count273
+\m@m@k=\count275
 \m@m@h=\dimen178
 \m@mipn@skip=\skip171
 \sidefootins=\insert248
@@ -246,56 +246,56 @@ LaTeX Info: Redefining \emph on input line 7658.
 \sidefootvsep=\skip175
 \sidefootwidth=\skip176
 \m@mdownsf=\skip177
-\c@sidefootnote=\count274
+\c@sidefootnote=\count276
 \sidefootmarkwidth=\skip178
 \sidefootmarksep=\skip179
 \sidefootparindent=\skip180
-\c@pagenote=\count275
-\c@pagenoteshadow=\count276
+\c@pagenote=\count277
+\c@pagenoteshadow=\count278
 \mem@pn@lastkern=\skip181
 \every@verbatim=\toks20
 \afterevery@verbatim=\toks21
 \verbatim@line=\toks22
-\tab@position=\count277
+\tab@position=\count279
 \verbatim@in@stream=\read2
 \verbatimindent=\skip182
 \verbatim@out=\write3
 \bvboxsep=\skip183
-\c@memfbvline=\count278
-\c@bvlinectr=\count279
+\c@memfbvline=\count280
+\c@bvlinectr=\count281
 \bvnumlength=\skip184
 \fb@frw=\dimen179
 \fb@frh=\dimen180
 \FrameRule=\dimen181
 \FrameSep=\dimen182
-\c@cp@cntr=\count280
-\c@ism@mctr=\count281
-\c@xsm@mctr=\count282
-\c@csm@mctr=\count283
-\c@ksm@mctr=\count284
-\c@xksm@mctr=\count285
-\c@cksm@mctr=\count286
-\c@msm@mctr=\count287
-\c@xmsm@mctr=\count288
-\c@cmsm@mctr=\count289
-\c@bsm@mctr=\count290
-\c@workm@mctr=\count291
-\c@sheetsequence=\count292
-\c@lastsheet=\count293
-\c@lastpage=\count294
+\c@cp@cntr=\count282
+\c@ism@mctr=\count283
+\c@xsm@mctr=\count284
+\c@csm@mctr=\count285
+\c@ksm@mctr=\count286
+\c@xksm@mctr=\count287
+\c@cksm@mctr=\count288
+\c@msm@mctr=\count289
+\c@xmsm@mctr=\count290
+\c@cmsm@mctr=\count291
+\c@bsm@mctr=\count292
+\c@workm@mctr=\count293
+\c@sheetsequence=\count294
+\c@lastsheet=\count295
+\c@lastpage=\count296
 
 Class memoir Warning: Haven't found the textcase package,
 (memoir)              resorting to embedded copy of v0.07 (2004/10/07),
 (memoir)              consider installing the textcase package on input line 12
 985.
 
-\c@figure=\count295
-\c@lofdepth=\count296
+\c@figure=\count297
+\c@lofdepth=\count298
 \cftbeforefigureskip=\skip185
 \cftfigureindent=\skip186
 \cftfigurenumwidth=\skip187
-\c@table=\count297
-\c@lotdepth=\count298
+\c@table=\count299
+\c@lotdepth=\count300
 \cftbeforetableskip=\skip188
 \cfttableindent=\skip189
 \cfttablenumwidth=\skip190
@@ -389,13 +389,13 @@ Package: amsbsy 1999/11/29 v1.2d Bold Symbols
 ) (/Users/lukas/Library/TinyTeX/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 2016/03/08 v2.02 operator names
 )
-\inf@bad=\count299
+\inf@bad=\count301
 LaTeX Info: Redefining \frac on input line 234.
-\uproot@=\count300
-\leftroot@=\count301
+\uproot@=\count302
+\leftroot@=\count303
 LaTeX Info: Redefining \overline on input line 399.
-\classnum@=\count302
-\DOTSCASE@=\count303
+\classnum@=\count304
+\DOTSCASE@=\count305
 LaTeX Info: Redefining \ldots on input line 496.
 LaTeX Info: Redefining \dots on input line 499.
 LaTeX Info: Redefining \cdots on input line 620.
@@ -404,15 +404,15 @@ LaTeX Info: Redefining \cdots on input line 620.
 \big@size=\dimen185
 LaTeX Font Info:    Redeclaring font encoding OML on input line 743.
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 744.
-\macc@depth=\count304
-\c@MaxMatrixCols=\count305
+\macc@depth=\count306
+\c@MaxMatrixCols=\count307
 \dotsspace@=\muskip16
-\c@parentequation=\count306
-\dspbrk@lvl=\count307
+\c@parentequation=\count308
+\dspbrk@lvl=\count309
 \tag@help=\toks25
-\row@=\count308
-\column@=\count309
-\maxfields@=\count310
+\row@=\count310
+\column@=\count311
+\maxfields@=\count312
 \andhelp@=\toks26
 \eqnshift@=\dimen186
 \alignsep@=\dimen187
@@ -444,24 +444,24 @@ Package: mathspec 2016/12/22 v0.2b LaTeX Package (Mathematics font selection fo
 r XeLaTeX)
 (/Users/lukas/Library/TinyTeX/texmf-dist/tex/latex/etoolbox/etoolbox.sty
 Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
-\etb@tempcnta=\count311
+\etb@tempcnta=\count313
 ) (/Users/lukas/Library/TinyTeX/texmf-dist/tex/latex/fontspec/fontspec.sty
 (/Users/lukas/Library/TinyTeX/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
 (/Users/lukas/Library/TinyTeX/texmf-dist/tex/latex/l3kernel/expl3.sty
-Package: expl3 2021-05-11 L3 programming layer (loader) 
+Package: expl3 2021-05-25 L3 programming layer (loader) 
 
 (/Users/lukas/Library/TinyTeX/texmf-dist/tex/latex/l3backend/l3backend-xetex.de
 f
 File: l3backend-xetex.def 2021-05-07 L3 backend support: XeTeX
 (|extractbb --version)
-\c__kernel_sys_dvipdfmx_version_int=\count312
-\l__color_backend_stack_int=\count313
-\g__color_backend_stack_int=\count314
-\g__graphics_track_int=\count315
+\c__kernel_sys_dvipdfmx_version_int=\count314
+\l__color_backend_stack_int=\count315
+\g__color_backend_stack_int=\count316
+\g__graphics_track_int=\count317
 \l__pdf_internal_box=\box54
-\g__pdf_backend_object_int=\count316
-\g__pdf_backend_annotation_int=\count317
-\g__pdf_backend_link_int=\count318
+\g__pdf_backend_object_int=\count318
+\g__pdf_backend_annotation_int=\count319
+\g__pdf_backend_link_int=\count320
 ))
 (/Users/lukas/Library/TinyTeX/texmf-dist/tex/latex/l3packages/xparse/xparse-202
 0-10-01.sty
@@ -471,17 +471,17 @@ Package: fontspec 2020/02/21 v2.7i Font selection for XeLaTeX and LuaLaTeX
 (/Users/lukas/Library/TinyTeX/texmf-dist/tex/latex/fontspec/fontspec-xetex.sty
 Package: fontspec-xetex 2020/02/21 v2.7i Font selection for XeLaTeX and LuaLaTe
 X
-\l__fontspec_script_int=\count319
-\l__fontspec_language_int=\count320
-\l__fontspec_strnum_int=\count321
-\l__fontspec_tmp_int=\count322
-\l__fontspec_tmpa_int=\count323
-\l__fontspec_tmpb_int=\count324
-\l__fontspec_tmpc_int=\count325
-\l__fontspec_em_int=\count326
-\l__fontspec_emdef_int=\count327
-\l__fontspec_strong_int=\count328
-\l__fontspec_strongdef_int=\count329
+\l__fontspec_script_int=\count321
+\l__fontspec_language_int=\count322
+\l__fontspec_strnum_int=\count323
+\l__fontspec_tmp_int=\count324
+\l__fontspec_tmpa_int=\count325
+\l__fontspec_tmpb_int=\count326
+\l__fontspec_tmpc_int=\count327
+\l__fontspec_em_int=\count328
+\l__fontspec_emdef_int=\count329
+\l__fontspec_strong_int=\count330
+\l__fontspec_strongdef_int=\count331
 \l__fontspec_tmpa_dim=\dimen192
 \l__fontspec_tmpb_dim=\dimen193
 \l__fontspec_tmpc_dim=\dimen194
@@ -495,20 +495,20 @@ s/lukas/Library/TinyTeX/texmf-dist/tex/generic/xkeyval/xkvutils.tex
 \XKV@toks=\toks29
 \XKV@tempa@toks=\toks30
 (/Users/lukas/Library/TinyTeX/texmf-dist/tex/generic/xkeyval/keyval.tex))
-\XKV@depth=\count330
+\XKV@depth=\count332
 File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
 ))
-\c@eu@=\count331
-\c@eu@i=\count332
-\c@mkern=\count333
+\c@eu@=\count333
+\c@eu@i=\count334
+\c@mkern=\count335
 ) (/Users/lukas/Library/TinyTeX/texmf-dist/tex/latex/geometry/geometry.sty
 Package: geometry 2020/01/02 v5.9 Page Geometry
 (/Users/lukas/Library/TinyTeX/texmf-dist/tex/generic/iftex/ifvtex.sty
 Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
 )
-\Gm@cnth=\count334
-\Gm@cntv=\count335
-\c@Gm@tempcnt=\count336
+\Gm@cnth=\count336
+\Gm@cntv=\count337
+\c@Gm@tempcnt=\count338
 \Gm@bindingoffset=\dimen195
 \Gm@wd@mp=\dimen196
 \Gm@odd@mp=\dimen197
@@ -551,8 +551,8 @@ Package: auxhook 2019-12-17 v1.6 Hooks for auxiliary files (HO)
 Package: kvoptions 2020-10-07 v3.14 Key value format for package options (HO)
 )
 \@linkdim=\dimen259
-\Hy@linkcounter=\count337
-\Hy@pagecounter=\count338
+\Hy@linkcounter=\count339
+\Hy@pagecounter=\count340
 (/Users/lukas/Library/TinyTeX/texmf-dist/tex/latex/hyperref/pd1enc.def
 File: pd1enc.def 2021-02-27 v7.00k Hyperref: PDFDocEncoding definition (HO)
 )
@@ -565,7 +565,7 @@ Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
 ) (/Users/lukas/Library/TinyTeX/texmf-dist/tex/generic/etexcmds/etexcmds.sty
 Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
 )
-\Hy@SavedSpaceFactor=\count339
+\Hy@SavedSpaceFactor=\count341
 (/Users/lukas/Library/TinyTeX/texmf-dist/tex/latex/hyperref/puenc.def
 File: puenc.def 2021-02-27 v7.00k Hyperref: PDF Unicode definition (HO)
 )
@@ -576,7 +576,7 @@ Package hyperref Info: Plain pages OFF on input line 4207.
 Package hyperref Info: Backreferencing OFF on input line 4212.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4445.
-\c@Hy@tempcnt=\count340
+\c@Hy@tempcnt=\count342
 (/Users/lukas/Library/TinyTeX/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip17
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
@@ -589,7 +589,7 @@ Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
 Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
 )
 ))
-\Fld@menulength=\count341
+\Fld@menulength=\count343
 \Field@Width=\dimen261
 \Fld@charsize=\dimen262
 Package hyperref Info: Hyper figures OFF on input line 6075.
@@ -606,14 +606,14 @@ Package: atbegshi-ltx 2020/08/17 v1.0a Emulation of the original atbegshi packa
 ge
 with kernel methods
 )
-\Hy@abspage=\count342
-\c@Item=\count343
-\c@Hfootnote=\count344
+\Hy@abspage=\count344
+\c@Item=\count345
+\c@Hfootnote=\count346
 ) (/Users/lukas/Library/TinyTeX/texmf-dist/tex/latex/memoir/memhfixc.sty
 Package: memhfixc 2019/10/24 v1.18 nameref/hyperref package fixes for memoir cl
 ass
-\c@memhycontfloat=\count345
-\c@Hpagenote=\count346
+\c@memhycontfloat=\count347
+\c@Hpagenote=\count348
 )
 Package hyperref Info: Driver (autodetected): hxetex.
 (/Users/lukas/Library/TinyTeX/texmf-dist/tex/latex/hyperref/hxetex.def
@@ -623,10 +623,10 @@ Package: stringenc 2019/11/29 v1.12 Convert strings between diff. encodings (HO
 )
 )
 \pdfm@box=\box55
-\c@Hy@AnnotLevel=\count347
-\HyField@AnnotCount=\count348
-\Fld@listcount=\count349
-\c@bookmark@seq@number=\count350
+\c@Hy@AnnotLevel=\count349
+\HyField@AnnotCount=\count350
+\Fld@listcount=\count351
+\c@bookmark@seq@number=\count352
 
 (/Users/lukas/Library/TinyTeX/texmf-dist/tex/latex/rerunfilecheck/rerunfilechec
 k.sty
@@ -645,8 +645,9 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 )
 \Hy@SectionHShift=\skip194
 )
-Package hyperref Info: Option `unicode' set `true' on input line 41.
-Package hyperref Info: Option `breaklinks' set `true' on input line 41.
+Package hyperref Info: Option `unicode' set `true' on input line 45.
+Package hyperref Info: Option `colorlinks' set `true' on input line 45.
+Package hyperref Info: Option `breaklinks' set `true' on input line 45.
 (/Users/lukas/Library/TinyTeX/texmf-dist/tex/latex/polyglossia/polyglossia.sty
 Package: polyglossia 2021/04/12 v1.53 Modern multilingual typesetting with XeLa
 TeX and LuaLaTeX
@@ -787,16 +788,16 @@ Package: longtable 2020/01/07 v4.13 Multi-page Table package (DPC)
 \LTright=\skip196
 \LTpre=\skip197
 \LTpost=\skip198
-\LTchunksize=\count351
+\LTchunksize=\count353
 \LTcapwidth=\dimen263
 \LT@head=\box56
 \LT@firsthead=\box57
 \LT@foot=\box58
 \LT@lastfoot=\box59
-\LT@cols=\count352
-\LT@rows=\count353
-\c@LT@tables=\count354
-\c@LT@chunks=\count355
+\LT@cols=\count354
+\LT@rows=\count355
+\c@LT@tables=\count356
+\c@LT@chunks=\count357
 \LT@p@ftn=\toks32
 ) (/Users/lukas/Library/TinyTeX/texmf-dist/tex/latex/graphics/graphicx.sty
 Package: graphicx 2020/09/09 v1.2b Enhanced LaTeX Graphics (DPC,SPQR)
@@ -818,48 +819,241 @@ Package: grffile 2019/11/11 v2.1 Extended file name support for graphics (legac
 y)
 Package grffile Info: This package is an empty stub for compatibility on input 
 line 40.
-) (/Users/lukas/Library/TinyTeX/texmf-dist/tex/latex/caption/caption.sty
-Package: caption 2020/10/26 v3.5g Customizing captions (AR)
-(/Users/lukas/Library/TinyTeX/texmf-dist/tex/latex/caption/caption3.sty
-Package: caption3 2020/10/21 v2.2e caption3 kernel (AR)
-\captionmargin=\dimen266
-\captionmargin@=\dimen267
-\captionwidth=\dimen268
-\caption@tempdima=\dimen269
-\caption@indent=\dimen270
-\caption@parindent=\dimen271
-\caption@hangindent=\dimen272
-Package caption Info: memoir document class detected.
-(/Users/lukas/Library/TinyTeX/texmf-dist/tex/latex/caption/caption-memoir.sto
-File: caption-memoir.sto 2020/10/10 v2.1 Adaption of the caption package to the
- memoir document class (AR)
+) (/Users/lukas/Library/TinyTeX/texmf-dist/tex/latex/multirow/multirow.sty
+Package: multirow 2021/03/15 v2.8 Span multiple rows of a table
+\multirow@colwidth=\skip199
+\multirow@cntb=\count358
+\multirow@dima=\skip256
+\bigstrutjot=\dimen266
+) (/Users/lukas/Library/TinyTeX/texmf-dist/tex/latex/wrapfig/wrapfig.sty
+\wrapoverhang=\dimen267
+\WF@size=\dimen268
+\c@WF@wrappedlines=\count359
+\WF@box=\box60
+\WF@everypar=\toks33
+Package: wrapfig 2003/01/31  v 3.6
+) (/Users/lukas/Library/TinyTeX/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count360
+\float@exts=\toks34
+\float@box=\box61
+\@float@everytoks=\toks35
+\@floatcapt=\box62
+) (/Users/lukas/Library/TinyTeX/texmf-dist/tex/latex/colortbl/colortbl.sty
+Package: colortbl 2020/01/04 v1.0e Color table columns (DPC)
+(/Users/lukas/Library/TinyTeX/texmf-dist/tex/latex/graphics/color.sty
+Package: color 2020/02/24 v1.2b Standard LaTeX Color (DPC)
+(/Users/lukas/Library/TinyTeX/texmf-dist/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package color Info: Driver file: xetex.def on input line 147.
+(/Users/lukas/Library/TinyTeX/texmf-dist/tex/latex/graphics/dvipsnam.def
+File: dvipsnam.def 2016/06/17 v3.0m Driver-dependent file (DPC,SPQR)
 ))
-\c@caption@flags=\count356
-\c@continuedfloat=\count357
-Package caption Info: changepage package is loaded.
-\caption@adjustwidth@hsize=\dimen273
-\caption@adjustwidth@linewidth=\dimen274
-Package caption Info: hyperref package is loaded.
-Package caption Info: longtable package is loaded.
-(/Users/lukas/Library/TinyTeX/texmf-dist/tex/latex/caption/ltcaption.sty
-Package: ltcaption 2020/05/30 v1.4b longtable captions (AR)
+\everycr=\toks36
+\minrowclearance=\skip257
+) (/Users/lukas/Library/TinyTeX/texmf-dist/tex/latex/pdflscape/pdflscape.sty
+Package: pdflscape 2019/12/05 v0.12 Display of landscape pages in PDF (HO)
+(/Users/lukas/Library/TinyTeX/texmf-dist/tex/latex/graphics/lscape.sty
+Package: lscape 2020/05/28 v3.02 Landscape Pages (DPC)
+)
+Package pdflscape Info: Auto-detected driver: dvipdfm (xetex) on input line 98.
+
+) (/Users/lukas/Library/TinyTeX/texmf-dist/tex/latex/tabu/tabu.sty
+Package: tabu 2019/01/11 v2.9 - flexible LaTeX tabulars (FC+tabu-fixed)
+(/Users/lukas/Library/TinyTeX/texmf-dist/tex/latex/varwidth/varwidth.sty
+Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
+\@vwid@box=\box63
+\sift@deathcycles=\count361
+\@vwid@loff=\dimen269
+\@vwid@roff=\dimen270
+)
+\c@taburow=\count362
+\tabu@nbcols=\count363
+\tabu@cnt=\count364
+\tabu@Xcol=\count365
+\tabu@alloc=\count366
+\tabu@nested=\count367
+\tabu@target=\dimen271
+\tabu@spreadtarget=\dimen272
+\tabu@naturalX=\dimen273
+\tabucolX=\dimen274
+\tabu@Xsum=\dimen275
+\extrarowdepth=\dimen276
+\abovetabulinesep=\dimen277
+\belowtabulinesep=\dimen278
+\tabustrutrule=\dimen279
+\tabu@thebody=\toks37
+\tabu@footnotes=\toks38
+\tabu@box=\box64
+\tabu@arstrutbox=\box65
+\tabu@hleads=\box66
+\tabu@vleads=\box67
+\tabu@cellskip=\skip258
+)
+(/Users/lukas/Library/TinyTeX/texmf-dist/tex/latex/threeparttable/threeparttabl
+e.sty
+Package: threeparttable 2003/06/13  v 3.0
+\@tempboxb=\box68
+)
+(/Users/lukas/Library/TinyTeX/texmf-dist/tex/latex/threeparttablex/threeparttab
+lex.sty
+Package: threeparttablex 2013/07/23 v0.3 by daleif
+(/Users/lukas/Library/TinyTeX/texmf-dist/tex/latex/environ/environ.sty
+Package: environ 2014/05/04 v0.3 A new way to define environments
+(/Users/lukas/Library/TinyTeX/texmf-dist/tex/latex/trimspaces/trimspaces.sty
+Package: trimspaces 2009/09/17 v1.1 Trim spaces around a token list
 ))
+\TPTL@width=\skip259
+) (/Users/lukas/Library/TinyTeX/texmf-dist/tex/generic/ulem/ulem.sty
+\UL@box=\box69
+\UL@hyphenbox=\box70
+\UL@skip=\skip260
+\UL@hook=\toks39
+\UL@height=\dimen280
+\UL@pe=\count368
+\UL@pixel=\dimen281
+\ULC@box=\box71
+Package: ulem 2019/11/18
+\ULdepth=\dimen282
+) (/Users/lukas/Library/TinyTeX/texmf-dist/tex/latex/makecell/makecell.sty
+Package: makecell 2009/08/03 V0.1e Managing of Tab Column Heads and Cells
+\rotheadsize=\dimen283
+\c@nlinenum=\count369
+\TeXr@lab=\toks40
+) (/Users/lukas/Library/TinyTeX/texmf-dist/tex/latex/xcolor/xcolor.sty
+Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
+(/Users/lukas/Library/TinyTeX/texmf-dist/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: xetex.def on input line 225.
+LaTeX Info: Redefining \color on input line 709.
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1348.
+Package xcolor Info: Model `RGB' extended on input line 1364.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1366.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1367.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1368.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1369.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1370.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
+) (./thesis.aux
+Package polyglossia Info: Option: English, variant=american.
+Package polyglossia Info: Option: English, variant=american.
+LaTeX Info: Redefining \rmfamily on input line 21.
+LaTeX Info: Redefining \sffamily on input line 21.
+LaTeX Info: Redefining \ttfamily on input line 21.
+Package polyglossia Info: Option: English, variant=american.
+Package polyglossia Info: Option: English, variant=american.
+LaTeX Info: Redefining \rmfamily on input line 856.
+LaTeX Info: Redefining \sffamily on input line 856.
+LaTeX Info: Redefining \ttfamily on input line 856.
+Package polyglossia Info: Option: English, variant=american.
+Package polyglossia Info: Option: English, variant=american.
+LaTeX Info: Redefining \rmfamily on input line 864.
+LaTeX Info: Redefining \sffamily on input line 864.
+LaTeX Info: Redefining \ttfamily on input line 864.
+Package polyglossia Info: Option: English, variant=american.
+Package polyglossia Info: Option: English, variant=american.
+)
+\openout1 = `thesis.aux'.
 
-! LaTeX Error: Option clash for package geometry.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 112.
+LaTeX Font Info:    ... okay on input line 112.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 112.
+LaTeX Font Info:    ... okay on input line 112.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 112.
+LaTeX Font Info:    ... okay on input line 112.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 112.
+LaTeX Font Info:    ... okay on input line 112.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 112.
+LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 1
+12.
+(/Users/lukas/Library/TinyTeX/texmf-dist/tex/latex/base/ts1cmr.fd
+File: ts1cmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
+)
+LaTeX Font Info:    ... okay on input line 112.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 112.
+LaTeX Font Info:    ... okay on input line 112.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 112.
+LaTeX Font Info:    ... okay on input line 112.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 112.
+LaTeX Font Info:    ... okay on input line 112.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 112.
+LaTeX Font Info:    ... okay on input line 112.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 112.
+LaTeX Font Info:    ... okay on input line 112.
+*geometry* driver: auto-detecting
+*geometry* detected driver: xetex
+*geometry* verbose mode - [ preamble ] result:
+* driver: xetex
+* paper: custom
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: twoside 
+* h-part:(L,W,R)=(58.04419pt, 338.5863pt, 87.06635pt)
+* v-part:(T,H,B)=(81.94476pt, 478.0042pt, 122.91718pt)
+* \paperwidth=483.69684pt
+* \paperheight=682.86613pt
+* \textwidth=338.5863pt
+* \textheight=478.0042pt
+* \oddsidemargin=-14.2258pt
+* \evensidemargin=14.79636pt
+* \topmargin=-23.79903pt
+* \headheight=13.6pt
+* \headsep=19.8738pt
+* \topskip=11.0pt
+* \footskip=27.46295pt
+* \marginparwidth=111.0pt
+* \marginparsep=7.0pt
+* \columnsep=10.0pt
+* \skip\footins=12.0pt plus 4.0pt minus 4.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidetrue
+* \@mparswitchtrue
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.94 \usepackage
-                {pdflscape} % landscape pages and rotation 
+Package hyperref Info: Link coloring ON on input line 112.
+(/Users/lukas/Library/TinyTeX/texmf-dist/tex/latex/hyperref/nameref.sty
+Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
+(/Users/lukas/Library/TinyTeX/texmf-dist/tex/latex/refcount/refcount.sty
+Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
+)
+(/Users/lukas/Library/TinyTeX/texmf-dist/tex/generic/gettitlestring/gettitlestr
+ing.sty
+Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
+)
+\c@section@level=\count370
+)
+Redoing nameref's sectioning
+Redoing nameref's label
+LaTeX Info: Redefining \nameref on input line 112.
+LaTeX Info: Redefining \ref on input line 112.
+LaTeX Info: Redefining \pageref on input line 112.
+LaTeX Info: Redefining \nameref on input line 112.
+\@outlinefile=\write4
+\openout4 = `thesis.out'.
+
+Package polyglossia Info: Option: English, variant=american.
+Package polyglossia Info: Option: English, variant=american.
+LaTeX Info: Redefining \rmfamily on input line 112.
+LaTeX Info: Redefining \sffamily on input line 112.
+LaTeX Info: Redefining \ttfamily on input line 112.
+Package polyglossia Info: Option: English, variant=american.
+Package polyglossia Info: Option: English, variant=american.
+! Undefined control sequence.
+l.122 \includepdf
+                 {./cover/thesis_cover.pdf} 
 Here is how much of TeX's memory you used:
- 17573 strings out of 478713
- 318645 string characters out of 5862331
- 721325 words of memory out of 5000000
- 37418 multiletter control sequences out of 15000+600000
- 403822 words of font info for 32 fonts, out of 8000000 for 9000
+ 18820 strings out of 478631
+ 334220 string characters out of 5860930
+ 848128 words of memory out of 5000000
+ 38676 multiletter control sequences out of 15000+600000
+ 403928 words of font info for 33 fonts, out of 8000000 for 9000
  54 hyphenation exceptions out of 8191
- 87i,1n,117p,339b,266s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 87i,1n,95p,3691b,433s stack positions out of 5000i,500n,10000p,200000b,80000s
 
 No pages of output.

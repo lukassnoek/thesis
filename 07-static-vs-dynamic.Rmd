@@ -14,9 +14,10 @@ library(kableExtra)
 \newpage
 \normalsize
 
-__Abstract__
-
+`<p><strong>Abstract</strong></p>`{=html}
+`\begin{abstract}`{=latex}
 Facial movements are crucial for affective face perception, yet research has shown that people are also influenced by features of the static face such as facial morphology. Most studies have either manipulated dynamic features (i.e., facial movements) or static features (i.e., facial morphology) making it impossible to evaluate the relative contribution of either. The current study investigates the effects of static and dynamic facial features on three affective properties (categorical emotion, valence, and arousal) inferred from stimuli in which both types of features have been independently manipulated. Using predictive machine learning models, we show that static and dynamic features both explain substantial and orthogonal variance in categorical emotion and valence ratings, while arousal ratings are only predicted accurately using dynamic, but not static, features. Moreover, using a multivariate reverse correlation approach, we show that static and dynamic features communicating the same affective property (e.g., categorical emotions) are manifested differently in the face. Our results demonstrate that in order to understand affective face perception, both facial morphology and facial movements should be considered independently.
+`\end{abstract} \newpage`{=latex}
 
 ## Introduction {#svsd-introduction}
 

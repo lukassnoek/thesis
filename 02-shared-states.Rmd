@@ -19,9 +19,10 @@ _This chapter has been published as_: Oosterwijk, S.\*, Snoek, L.\*, Rotteveel, 
 \newpage
 \normalsize
 
-__Abstract__
-
+`<p><strong>Abstract</strong></p>`{=html}
+`\begin{abstract}`{=latex}
 The present study tested whether the neural patterns that support imagining "performing an action", "feeling a bodily sensation" or "being in a situation" are directly involved in understanding *other people’s* actions, bodily sensations and situations. Subjects imagined the content of short sentences describing emotional actions, interoceptive sensations and situations (self-focused task), and processed scenes and focused on *how* the target person was expressing an emotion, *what* this person was feeling, and *why* this person was feeling an emotion (other-focused task). Using a linear support vector machine classifier on brain-wide multi-voxel patterns, we accurately decoded each individual class in the self-focused task. When generalizing the classifier from the self-focused task to the other-focused task, we also accurately decoded whether subjects focused on the emotional actions, interoceptive sensations and situations of *others*. These results show that the neural patterns that underlie self-imagined experience are involved in understanding the experience of other people. This supports the theoretical assumption that the basic components of emotion experience and understanding share resources in the brain.
+`\end{abstract} \newpage`{=latex}
 
 ## Introduction {#shared-states-introduction}
 

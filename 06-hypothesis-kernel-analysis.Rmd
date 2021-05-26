@@ -1,2 +1,16 @@
-# Using predictive modeling to quantify the importance and limitations of action units in emotion perception {#hypothesis-kernel-analysis}
+```{r setup-hypothesis-kernel-analysis, include=FALSE}
+knitr::opts_chunk$set(results = 'hide', echo = FALSE, message = FALSE, warning = FALSE)
+library(tidyverse)
+library(kableExtra)
+```
 
+# Using predictive modeling to quantify the importance and limitations of action units in emotion perception {#hypothesis-kernel-analysis}
+\chaptermark{Predictive modelling of action units}
+
+\newpage
+\normalsize
+
+`<p><strong>Abstract</strong></p>`{=html}
+`\begin{abstract}`{=latex}
+Bla bla
+`\end{abstract} \newpage`{=latex}

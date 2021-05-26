@@ -1,25 +1,29 @@
-# Introduction
-
-_The first chapter of the thesis, which introduces your PhD project. The filler-text below was created with the [postmodernism generator](http://www.elsewhere.org/journal/pomo)._
-
+---
+nocite: | 
+  @Newell1973-no
 ---
 
-Something about the coming about of this thesis. More of a "lessons learned" rather than a coherent research topic.
+```{r setup-intro, include=FALSE}
+library(tufte)
+```
 
-## The brain is not a dictionary
-Something about looking at populations of neurons/voxels/areas rather than simple one-to-one relationships. Shared states.
+# Introduction
 
-## The brain (probably) does not care about your hypothesis
-Facial expression models.
+> "Science advances by playing twenty questions with nature.
+> The proper tactic is to frame a general question, hopefully binary, 
+> that can be attacked experimentally. Having settled that bits-worth, 
+> one can proceed to the next. The policy appears optimal – one never risks much, 
+> there is feedback from  nature at every step, and progress is inevitable. 
+> Unfortunately, the questions never seem to be really answered, 
+> the strategy does not seem to work."
+> 
+> `r tufte::quote_footer('--- Allen Newell (1973)')`
 
-## Interpretability and prediction are a trade-off (for now)
-A plea for prediction but a cautionary tale for interpreting predictive models (confounds)
+Almost fifty years ago, the artificial intelligence pioneer and cognitive psychologist Allen Newell summarized his discontent with the field of psychology with the sentence “you cannot play twenty questions with nature and win”. In a game of “twenty questions”, one player thinks of a person or object and the other player attempts to guess it by asking up to twenty questions, such as “is it a person?”, “is he a man?”. Only questions that require a binary (yes/no) answer are allowed. Newell argued that most (cognitive) psychology research attempts to understand human behavior and cognition in a manner analogous to a game of twenty questions; that is, by repeatedly asking and trying to answer “binary” research questions — such as “Does cognition impact perception?” and “Are emotional facial expressions innate?” — researchers attempt to gradually explore and reduce the space of possible scientific explanations in the hope to, ultimately, converge on the “the right answer”. Almost fifty years after Newell’s twenty questions article, most of the research in both psychology and cognitive neuroscience still revolves around asking binary research questions about the mind and brain, framed as hypotheses that are evaluated using an ever increasingly sophisticated toolbox of statistical significance tests. Newell, however, believed that in order to gain a fundamental understanding of how the mind and brain work, we need to go beyond asking binary questions and try to investigate human behavior and cognition in all its complexity using quantitative, predictive models that implement human cognitive capacities and behaviors. I believe that this argument is still as relevant today as it was almost fifty years ago.
 
-## Exploration should be embraced more
-Something about the "context of discovery" (cf. TCM), preregistration, and confirmation vs. exploration (Morbid curiosity.)
+In this thesis, I explore a different, complementary approach to the traditional methodology of hypothesis testing used in psychology and cognitive neuroscience research. Although this alternative approach has deep roots in psychology and is thus by no means new, the version I advocate and have used in this thesis extends it with ideas and techniques from the rapidly growing field of artificial intelligence and specifically machine learning. As I will describe in more detail in the next section, the crucial difference between the “hypothesis testing approach” and the “predictive approach”, as advocated by Newell, is the way they go about trying to explain and understand a particular cognitive capacity or behavior [@Breiman2001-lf]. Although I believe that both approaches have their merits, I think that the predictive approach may be particularly promising given the increasing availability of large datasets and rapid advances in artificial intelligence and machine learning [@Halevy2009-cv; @Yarkoni2017-om].
 
-## Proper generalization is hard
-Within and between subject variance is not noise, but unexplained variance (AU limitations).
+This thesis features research that applies, adapts, and contributes to machine learning techniques and methods in the context of predictive models of behavior and neuroimaging data. Specifically, chapters in this thesis describe both examples of predictive models applied to neuroimaging data (chapter \@ref(shared-states)) and behavior (chapter \@ref(hypothesis-kernel-analysis) and \@ref(static-vs-dynamic) as well as elements that facilitate and enrich the predictive modelling framework, such as the value of making datasets publicly accessible [chapter \@ref(aomic); @Adjerid2018-vs; @Poldrack2014-ov], and a method to aid interpretation of predictive models (chapter \@ref(confounds-decoding)). Note that the studies contained in this thesis do not all fall squarely in the predictive approach. For example, chapter \@ref(morbid-curiosity) features a study that revolved around a confirmatory (and preregistered) hypothesis and chapter \@ref(shared-states) describes a study that in fact tests a very specific hypothesis using a predictive model. In what follows, I will argue that the predictive approach represents a useful and promising way of doing research that complements the traditional hypothesis testing approach with respect to their common goal of explanation and gaining understanding of the brain and mind. But first, I will illustrate that these two approaches can be thought of as different inferences from the same model which helps to identify their relative (dis)advantages later.
 
-## Psychology is complex, so it needs complex models
-Which need to be fit on complex, large datasets. (AOMIC)
+## Inference done differently
+

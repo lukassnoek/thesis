@@ -1,0 +1,21 @@
+﻿Chapter,Resource,Platform,DOI / URL
+2,Code,Github,https://github.com/lukassnoek/SharedStates
+,Data,OpenNeuro,10.18112/openneuro.ds002547.v1.1.0
+3,Code,Github,https://github.com/lukassnoek/MVCA
+,Data,OpenNeuro,10.18112/openneuro.ds002785.v2.0.0
+4,Overview,Website,https://nilab-uva.github.io/AOMIC.github.io/
+,Code,Github,https://github.com/NILAB-UvA/AOMIC-common-scripts
+,,,https://github.com/NILAB-UvA/ID1000
+,,,https://github.com/NILAB-UvA/PIOP1
+,,,https://github.com/NILAB-UvA/PIOP2
+,Data,OpenNeuro,10.18112/openneuro.ds003097.v1.2.1
+,,,10.18112/openneuro.ds002785.v2.0.0
+,,,10.18112/openneuro.ds002790.v2.0.0
+,,NeuroVault,https://identifiers.org/neurovault.collection:7105
+,,,https://identifiers.org/neurovault.collection:7103
+,,,https://identifiers.org/neurovault.collection:7104
+5,Pre-registration,OSF,osf.io/gdtk9
+,Code,Github,https://github.com/lukassnoek/MorbidCuriosityFMRI
+,Data,,
+6,Code,Github,https://github.com/lukassnoek/hypothesis-kernel-analysis
+7,Code,Github,https://github.com/lukassnoek/static-vs-dynamic

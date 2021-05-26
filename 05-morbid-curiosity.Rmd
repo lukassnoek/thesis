@@ -18,9 +18,10 @@ _This chapter has been published as_: Oosterwijk, S., Snoek, L., Tekoppele, J., 
 \newpage
 \normalsize
 
-__Abstract__
-
+`<p><strong>Abstract</strong></p>`{=html}
+`\begin{abstract}`{=latex}
 People often seek out stories, videos or images that detail death, violence or harm. Considering the ubiquity of this behavior, it is surprising that we know very little about the neural circuits involved in choosing negative information. Using fMRI, the present study shows that choosing intensely negative stimuli engages similar brain regions as those that support extrinsic incentives and “regular” curiosity. Participants made choices to view negative and positive images, based on negative (e.g., a soldier kicks a civilian against his head) and positive (e.g., children throw flower petals at a wedding) verbal cues. We hypothesized that the conflicting, but relatively informative act of choosing to view a negative image, resulted in stronger activation of reward circuitry as opposed to the relatively uncomplicated act of choosing to view a positive stimulus. Indeed, as preregistered, we found that choosing negative cues was associated with activation of the striatum, inferior frontal gyrus, anterior insula, and anterior cingulate cortex, both when contrasting against a passive viewing condition, and when contrasting against positive cues. These findings nuance models of decision-making, valuation and curiosity, and are an important starting point when considering the value of seeking out negative content.
+`\end{abstract} \newpage`{=latex}
 
 ## Introduction {#morbid-curiosity-introduction}
 

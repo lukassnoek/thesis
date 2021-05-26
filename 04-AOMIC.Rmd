@@ -18,9 +18,10 @@ _This chapter has been published as_: Snoek, L., van der Miesen, M.M., Beemsterb
 \newpage
 \normalsize
 
-__Abstract__
-
+`<p><strong>Abstract</strong></p>`{=html}
+`\begin{abstract}`{=latex}
 We present the Amsterdam Open MRI Collection (AOMIC): three datasets with multimodal (3T) MRI data including structural (T1-weighted), diffusion-weighted, and (resting-state and task-based) functional BOLD MRI data, as well as detailed demographics and psychometric variables from a large set of healthy participants (*N* = 928, *N* = 226, and *N* = 216). Notably, task-based fMRI was collected during various robust paradigms (targeting naturalistic vision, emotion perception, working memory, face perception, cognitive conflict and control, and response inhibition) for which extensively annotated event-files are available. For each dataset and data modality, we provide the data in both raw and preprocessed form (both compliant with the Brain Imaging Data Structure), which were subjected to extensive (automated and manual) quality control. All data is publicly available from the OpenNeuro data sharing platform.
+`\end{abstract} \newpage`{=latex}
 
 ## Background & summary
 

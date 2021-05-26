@@ -1,16 +1,30 @@
-# Data, code and (educational) materials {#resources-supplement}
-
-\vspace{-12pt}
-
-```{=latex}
-\begingroup
-\renewcommand*{\arraystretch}{1}
-\setlength{\tabcolsep}{0pt}
-\setlength{\LTleft}{-20cm plus -1fill}
-\setlength{\LTright}{\LTleft}
-\footnotesize
+```{r setup-resources-supplement, include=FALSE}
+knitr::opts_chunk$set(results = 'hide', echo = FALSE, message = FALSE, warning = FALSE)
+library(tidyverse)
+library(kableExtra)
 ```
 
-| Chapter                                  | Resource     | Platform                                  | DOI / URL                          |
-|------------------------------------------|--------------|-------------------------------------------|------------------------------------|
-| **Chapter \@ref(tDCS-att-review)**       |  Code        | Github                                    |                                    |
+# Data, code, software and educational materials {#resources-supplement}
+
+I value open science and transparency, so I published my code and data whenever possible. In Table \@ref(tab:tab-resources-chapters), all publicly available resources are listed per chapter.
+
+```{r tab-resources-chapters, results='asis'}
+data = read_csv('_bookdown_files/resources-files/table_1_data.csv')
+options(knitr.kable.NA = '')
+kbl(data, booktabs = T, longtable = T, caption = 'Chapter resources') %>%
+    kable_styling(full_width = T, font_size = 8) %>%
+    column_spec(column = 1, width = "2.5em") %>%
+    column_spec(column = 2, width = "5em") %>%
+    column_spec(column = 3, width = "5em") %>%
+    footnote(footnote_as_chunk = T, title_format = "italic", threeparttable = T, escape = F, 
+             general = 'OpenNeuro repositories contain raw and preprocessed data from individual participants, while NeuroVault contains group-level aggregate data (e.g., statistical brain maps from group-level analyses).')
+```
+
+As part of my PhD, I also (co-)developed several courses, which I made publicly accessible. These course materials are listed in Table \@ref(tab:tab-resources-teaching).
+
+```{r tab-resources-teaching, results='asis'}
+data = read_csv('_bookdown_files/resources-files/table_2_data.csv')
+options(knitr.kable.NA = '')
+kbl(data, booktabs = T, longtable = T, caption = 'Teaching resources') %>%
+    kable_styling(full_width = T, font_size = 8)
+```

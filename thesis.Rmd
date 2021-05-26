@@ -97,12 +97,13 @@ output:
     pandoc_args: [ "--csl", "bib/apa.csl" ]
     latex_engine: xelatex  # for the fontspec package
     #citation_package: biblatex
-    includes:
-      in_header: tex/preamble.tex
+    #includes:
+    #  in_header: tex/preamble.tex
 
 indent: false # indent new paragraphs, instead of leaving whitespace
 links-as-notes: true # in the pdf, print hyperlink URLS as footnotes (as they can't be clicked on)
-bibliography: 
+bibliography:
+  - bib/introduction_discussion.bib
   - bib/misc.bib
   - bib/shared-states.bib
   - bib/confounds-decoding.bib
@@ -112,6 +113,7 @@ bibliography:
 
 citation_package: none
 biblio-style: "apa"
+citecolor: gray
 link-citations: true # make clickable hyperlinks from in-text citations to bibliography at the end
 ---
 
@@ -120,31 +122,35 @@ link-citations: true # make clickable hyperlinks from in-text citations to bibli
 
 <!--chapter:end:index.Rmd-->
 
-# Introduction
-
-_The first chapter of the thesis, which introduces your PhD project. The filler-text below was created with the [postmodernism generator](http://www.elsewhere.org/journal/pomo)._
-
+---
+nocite: | 
+  @Newell1973-no
 ---
 
-Something about the coming about of this thesis. More of a "lessons learned" rather than a coherent research topic.
+```{r setup-intro, include=FALSE}
+library(tufte)
+```
 
-## The brain is not a dictionary
-Something about looking at populations of neurons/voxels/areas rather than simple one-to-one relationships. Shared states.
+# Introduction
 
-## The brain (probably) does not care about your hypothesis
-Facial expression models.
+> "Science advances by playing twenty questions with nature.
+> The proper tactic is to frame a general question, hopefully binary, 
+> that can be attacked experimentally. Having settled that bits-worth, 
+> one can proceed to the next. The policy appears optimal – one never risks much, 
+> there is feedback from  nature at every step, and progress is inevitable. 
+> Unfortunately, the questions never seem to be really answered, 
+> the strategy does not seem to work."
+> 
+> `r tufte::quote_footer('--- Allen Newell (1973)')`
 
-## Interpretability and prediction are a trade-off (for now)
-A plea for prediction but a cautionary tale for interpreting predictive models (confounds)
+Almost fifty years ago, the artificial intelligence pioneer and cognitive psychologist Allen Newell summarized his discontent with the field of psychology with the sentence “you cannot play twenty questions with nature and win”. In a game of “twenty questions”, one player thinks of a person or object and the other player attempts to guess it by asking up to twenty questions, such as “is it a person?”, “is he a man?”. Only questions that require a binary (yes/no) answer are allowed. Newell argued that most (cognitive) psychology research attempts to understand human behavior and cognition in a manner analogous to a game of twenty questions; that is, by repeatedly asking and trying to answer “binary” research questions — such as “Does cognition impact perception?” and “Are emotional facial expressions innate?” — researchers attempt to gradually explore and reduce the space of possible scientific explanations in the hope to, ultimately, converge on the “the right answer”. Almost fifty years after Newell’s twenty questions article, most of the research in both psychology and cognitive neuroscience still revolves around asking binary research questions about the mind and brain, framed as hypotheses that are evaluated using an ever increasingly sophisticated toolbox of statistical significance tests. Newell, however, believed that in order to gain a fundamental understanding of how the mind and brain work, we need to go beyond asking binary questions and try to investigate human behavior and cognition in all its complexity using quantitative, predictive models that implement human cognitive capacities and behaviors. I believe that this argument is still as relevant today as it was almost fifty years ago.
 
-## Exploration should be embraced more
-Something about the "context of discovery" (cf. TCM), preregistration, and confirmation vs. exploration (Morbid curiosity.)
+In this thesis, I explore a different, complementary approach to the traditional methodology of hypothesis testing used in psychology and cognitive neuroscience research. Although this alternative approach has deep roots in psychology and is thus by no means new, the version I advocate and have used in this thesis extends it with ideas and techniques from the rapidly growing field of artificial intelligence and specifically machine learning. As I will describe in more detail in the next section, the crucial difference between the “hypothesis testing approach” and the “predictive approach”, as advocated by Newell, is the way they go about trying to explain and understand a particular cognitive capacity or behavior [@Breiman2001-lf]. Although I believe that both approaches have their merits, I think that the predictive approach may be particularly promising given the increasing availability of large datasets and rapid advances in artificial intelligence and machine learning [@Halevy2009-cv; @Yarkoni2017-om].
 
-## Proper generalization is hard
-Within and between subject variance is not noise, but unexplained variance (AU limitations).
+This thesis features research that applies, adapts, and contributes to machine learning techniques and methods in the context of predictive models of behavior and neuroimaging data. Specifically, chapters in this thesis describe both examples of predictive models applied to neuroimaging data (chapter \@ref(shared-states)) and behavior (chapter \@ref(hypothesis-kernel-analysis) and \@ref(static-vs-dynamic) as well as elements that facilitate and enrich the predictive modelling framework, such as the value of making datasets publicly accessible [chapter \@ref(aomic); @Adjerid2018-vs; @Poldrack2014-ov], and a method to aid interpretation of predictive models (chapter \@ref(confounds-decoding)). Note that the studies contained in this thesis do not all fall squarely in the predictive approach. For example, chapter \@ref(morbid-curiosity) features a study that revolved around a confirmatory (and preregistered) hypothesis and chapter \@ref(shared-states) describes a study that in fact tests a very specific hypothesis using a predictive model. In what follows, I will argue that the predictive approach represents a useful and promising way of doing research that complements the traditional hypothesis testing approach with respect to their common goal of explanation and gaining understanding of the brain and mind. But first, I will illustrate that these two approaches can be thought of as different inferences from the same model which helps to identify their relative (dis)advantages later.
 
-## Psychology is complex, so it needs complex models
-Which need to be fit on complex, large datasets. (AOMIC)
+## Inference done differently
+
 
 <!--chapter:end:01-introduction.Rmd-->
 
@@ -169,9 +175,10 @@ _This chapter has been published as_: Oosterwijk, S.\*, Snoek, L.\*, Rotteveel, 
 \newpage
 \normalsize
 
-__Abstract__
-
+`<p><strong>Abstract</strong></p>`{=html}
+`\begin{abstract}`{=latex}
 The present study tested whether the neural patterns that support imagining "performing an action", "feeling a bodily sensation" or "being in a situation" are directly involved in understanding *other people’s* actions, bodily sensations and situations. Subjects imagined the content of short sentences describing emotional actions, interoceptive sensations and situations (self-focused task), and processed scenes and focused on *how* the target person was expressing an emotion, *what* this person was feeling, and *why* this person was feeling an emotion (other-focused task). Using a linear support vector machine classifier on brain-wide multi-voxel patterns, we accurately decoded each individual class in the self-focused task. When generalizing the classifier from the self-focused task to the other-focused task, we also accurately decoded whether subjects focused on the emotional actions, interoceptive sensations and situations of *others*. These results show that the neural patterns that underlie self-imagined experience are involved in understanding the experience of other people. This supports the theoretical assumption that the basic components of emotion experience and understanding share resources in the brain.
+`\end{abstract} \newpage`{=latex}
 
 ## Introduction {#shared-states-introduction}
 
@@ -357,9 +364,10 @@ _This chapter has been published as_: Snoek, L.\*, Miletić, S.\*, & Scholte, H.
 \newpage
 \normalsize
 
-__Abstract__
-
+`<p><strong>Abstract</strong></p>`{=html}
+`\begin{abstract}`{=latex}
 Over the past decade, multivariate "decoding analyses" have become a popular alternative to traditional mass-univariate analyses in neuroimaging research. However, a fundamental limitation of using decoding analyses is that it remains ambiguous which source of information drives decoding performance, which becomes problematic when the to-be-decoded variable is confounded by variables that are not of primary interest. In this study, we use a comprehensive set of simulations as well as analyses of empirical data to evaluate two methods that were previously proposed and used to control for confounding variables in decoding analyses: post hoc counterbalancing and confound regression. In our empirical analyses, we attempt to decode gender from structural MRI data while controlling for the confound "brain size". We show that both methods introduce strong biases in decoding performance: post hoc counterbalancing leads to better performance than expected (i.e., positive bias), which we show in our simulations is due to the subsampling process that tends to remove samples that are hard to classify or would be wrongly classified; confound regression, on the other hand, leads to worse performance than expected (i.e., negative bias), even resulting in significant below chance performance in some realistic scenarios. In our simulations, we show that below chance accuracy can be predicted by the variance of the distribution of correlations between the features and the target. Importantly, we show that this negative bias disappears in both the empirical analyses and simulations when the confound regression procedure is performed in every fold of the cross-validation routine, yielding plausible (above chance) model performance. We conclude that, from the various methods tested, cross-validated confound regression is the only method that appears to appropriately control for confounds which thus can be used to gain more insight into the exact source(s) of information driving one's decoding analysis.
+`\end{abstract} \newpage`{=latex}
 
 ## Introduction {#confounds-decoding-introduction}
 
@@ -865,9 +873,10 @@ _This chapter has been published as_: Snoek, L., van der Miesen, M.M., Beemsterb
 \newpage
 \normalsize
 
-__Abstract__
-
+`<p><strong>Abstract</strong></p>`{=html}
+`\begin{abstract}`{=latex}
 We present the Amsterdam Open MRI Collection (AOMIC): three datasets with multimodal (3T) MRI data including structural (T1-weighted), diffusion-weighted, and (resting-state and task-based) functional BOLD MRI data, as well as detailed demographics and psychometric variables from a large set of healthy participants (*N* = 928, *N* = 226, and *N* = 216). Notably, task-based fMRI was collected during various robust paradigms (targeting naturalistic vision, emotion perception, working memory, face perception, cognitive conflict and control, and response inhibition) for which extensively annotated event-files are available. For each dataset and data modality, we provide the data in both raw and preprocessed form (both compliant with the Brain Imaging Data Structure), which were subjected to extensive (automated and manual) quality control. All data is publicly available from the OpenNeuro data sharing platform.
+`\end{abstract} \newpage`{=latex}
 
 ## Background & summary
 
@@ -1343,9 +1352,10 @@ _This chapter has been published as_: Oosterwijk, S., Snoek, L., Tekoppele, J., 
 \newpage
 \normalsize
 
-__Abstract__
-
+`<p><strong>Abstract</strong></p>`{=html}
+`\begin{abstract}`{=latex}
 People often seek out stories, videos or images that detail death, violence or harm. Considering the ubiquity of this behavior, it is surprising that we know very little about the neural circuits involved in choosing negative information. Using fMRI, the present study shows that choosing intensely negative stimuli engages similar brain regions as those that support extrinsic incentives and “regular” curiosity. Participants made choices to view negative and positive images, based on negative (e.g., a soldier kicks a civilian against his head) and positive (e.g., children throw flower petals at a wedding) verbal cues. We hypothesized that the conflicting, but relatively informative act of choosing to view a negative image, resulted in stronger activation of reward circuitry as opposed to the relatively uncomplicated act of choosing to view a positive stimulus. Indeed, as preregistered, we found that choosing negative cues was associated with activation of the striatum, inferior frontal gyrus, anterior insula, and anterior cingulate cortex, both when contrasting against a passive viewing condition, and when contrasting against positive cues. These findings nuance models of decision-making, valuation and curiosity, and are an important starting point when considering the value of seeking out negative content.
+`\end{abstract} \newpage`{=latex}
 
 ## Introduction {#morbid-curiosity-introduction}
 
@@ -1542,8 +1552,22 @@ Despite the questions that the present study provokes, our findings represent an
 
 <!--chapter:end:05-morbid-curiosity.Rmd-->
 
-# Using predictive modeling to quantify the importance and limitations of action units in emotion perception {#hypothesis-kernel-analysis}
+```{r setup-hypothesis-kernel-analysis, include=FALSE}
+knitr::opts_chunk$set(results = 'hide', echo = FALSE, message = FALSE, warning = FALSE)
+library(tidyverse)
+library(kableExtra)
+```
 
+# Using predictive modeling to quantify the importance and limitations of action units in emotion perception {#hypothesis-kernel-analysis}
+\chaptermark{Predictive modelling of action units}
+
+\newpage
+\normalsize
+
+`<p><strong>Abstract</strong></p>`{=html}
+`\begin{abstract}`{=latex}
+Bla bla
+`\end{abstract} \newpage`{=latex}
 
 <!--chapter:end:06-hypothesis-kernel-analysis.Rmd-->
 
@@ -1563,9 +1587,10 @@ library(kableExtra)
 \newpage
 \normalsize
 
-__Abstract__
-
+`<p><strong>Abstract</strong></p>`{=html}
+`\begin{abstract}`{=latex}
 Facial movements are crucial for affective face perception, yet research has shown that people are also influenced by features of the static face such as facial morphology. Most studies have either manipulated dynamic features (i.e., facial movements) or static features (i.e., facial morphology) making it impossible to evaluate the relative contribution of either. The current study investigates the effects of static and dynamic facial features on three affective properties (categorical emotion, valence, and arousal) inferred from stimuli in which both types of features have been independently manipulated. Using predictive machine learning models, we show that static and dynamic features both explain substantial and orthogonal variance in categorical emotion and valence ratings, while arousal ratings are only predicted accurately using dynamic, but not static, features. Moreover, using a multivariate reverse correlation approach, we show that static and dynamic features communicating the same affective property (e.g., categorical emotions) are manifested differently in the face. Our results demonstrate that in order to understand affective face perception, both facial morphology and facial movements should be considered independently.
+`\end{abstract} \newpage`{=latex}
 
 ## Introduction {#svsd-introduction}
 
@@ -2537,22 +2562,36 @@ knitr::include_graphics("_bookdown_files/static-vs-dynamic-files/figures/figure_
 
 <!--chapter:end:14-static-vs-dynamic-supplement.Rmd-->
 
-# Data, code and (educational) materials {#resources-supplement}
-
-\vspace{-12pt}
-
-```{=latex}
-\begingroup
-\renewcommand*{\arraystretch}{1}
-\setlength{\tabcolsep}{0pt}
-\setlength{\LTleft}{-20cm plus -1fill}
-\setlength{\LTright}{\LTleft}
-\footnotesize
+```{r setup-resources-supplement, include=FALSE}
+knitr::opts_chunk$set(results = 'hide', echo = FALSE, message = FALSE, warning = FALSE)
+library(tidyverse)
+library(kableExtra)
 ```
 
-| Chapter                                  | Resource     | Platform                                  | DOI / URL                          |
-|------------------------------------------|--------------|-------------------------------------------|------------------------------------|
-| **Chapter \@ref(tDCS-att-review)**       |  Code        | Github                                    |                                    |
+# Data, code, software and educational materials {#resources-supplement}
+
+I value open science and transparency, so I published my code and data whenever possible. In Table \@ref(tab:tab-resources-chapters), all publicly available resources are listed per chapter.
+
+```{r tab-resources-chapters, results='asis'}
+data = read_csv('_bookdown_files/resources-files/table_1_data.csv')
+options(knitr.kable.NA = '')
+kbl(data, booktabs = T, longtable = T, caption = 'Chapter resources') %>%
+    kable_styling(full_width = T, font_size = 8) %>%
+    column_spec(column = 1, width = "2.5em") %>%
+    column_spec(column = 2, width = "5em") %>%
+    column_spec(column = 3, width = "5em") %>%
+    footnote(footnote_as_chunk = T, title_format = "italic", threeparttable = T, escape = F, 
+             general = 'OpenNeuro repositories contain raw and preprocessed data from individual participants, while NeuroVault contains group-level aggregate data (e.g., statistical brain maps from group-level analyses).')
+```
+
+As part of my PhD, I also (co-)developed several courses, which I made publicly accessible. These course materials are listed in Table \@ref(tab:tab-resources-teaching).
+
+```{r tab-resources-teaching, results='asis'}
+data = read_csv('_bookdown_files/resources-files/table_2_data.csv')
+options(knitr.kable.NA = '')
+kbl(data, booktabs = T, longtable = T, caption = 'Teaching resources') %>%
+    kable_styling(full_width = T, font_size = 8)
+```
 
 <!--chapter:end:15-resources-supplement.Rmd-->
 
@@ -2655,7 +2694,7 @@ Van Mourik, T., **Snoek, L.**, Knapen, T., & Norris, D. G. (2018). Porcupine: a 
 
 ::: {lang=nl}
 
-_Richting voorspelling: onderzoek naar geest en brein in het tijdperk van machine learning_
+_Het belang van voorspellen: onderzoek naar de psyche en het brein in het tijdperk van machine learning_
 
 \bigskip
 <br>
