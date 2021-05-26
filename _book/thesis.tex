@@ -211,24 +211,6 @@
 
 %\setlength\beforechapskip{-\baselineskip} % this would remove any space above the chapter titles
 
-% LS: style
-\chapterstyle{companion}
-
-\def\defstyle{Ruled} % pagestyle set here will be used on all pages with regular text
-\makeevenhead{Ruled}{\leftmark}{}{} % get rid of small caps in verso headers
-
-% distinguish lower-level headings
-\setsubsubsecheadstyle{\normalsize\bfseries\itshape} % bold italic
-\setparaheadstyle{\normalsize\itshape} % just italic
-
-%% Spacing
-\midsloppy % middle ground between overfull lines ("fussy"), or lots of variation in interword spaces ("sloppy")
-
-% try to avoid widows (last line of paragraph at the top of otherwise empty page)
-\setlength{\topskip}{1.6\topskip}
-\checkandfixthelayout
-\sloppybottom
-
 %% Captions
 % Memoir:
 \captionnamefont{\small\sffamily}
@@ -305,10 +287,11 @@
 \usepackage{makecell}
 \usepackage{xcolor}
 
+
 %%%%%%%%%%%%% BEGIN DOCUMENT %%%%%%%%%%%%%
 \begin{document}
 
-%% Page 0: cover  % LS
+%% Page 0: cover  % LS 
 
 % for some reason this cannot be in the preamble
 \setlength{\abstitleskip}{-\absparindent}
@@ -416,8 +399,8 @@ Overige leden:
 \tableofcontents
 }
 \mainmatter
-\hypertarget{introduction}{%
-\chapter{Introduction}\label{introduction}}
+\hypertarget{general-introduction}{%
+\chapter{Introduction}\label{general-introduction}}
 
 \begin{quote}
 ``Science advances by playing twenty questions with nature.
@@ -439,6 +422,68 @@ This thesis features research that applies, adapts, and contributes to machine l
 
 \hypertarget{inference-done-differently}{%
 \section{Inference done differently}\label{inference-done-differently}}
+
+Both hypothesis testing and predictive modelling are scientific methods used in psychology and neuroscience to gain understanding of human cognition and behavior. Both approaches share an important common component: a statistical model (Breiman, \protect\hyperlink{ref-Breiman2001-lf}{2001}). Although there are many different definitions and interpretations of the term ``model'' (Kellen, \protect\hyperlink{ref-Kellen2019-af}{2019}), in this chapter, I define a statistical model as a quantitative representation of (a part of) a target system (Frigg \& Hartmann, \protect\hyperlink{ref-Frigg2020-hp}{2020}). In psychology and cognitive neuroscience, a target system may refer to a specific cognitive capacity (e.g., emotion recognition) or behavior (e.g., instrumental learning; Cummins, \protect\hyperlink{ref-Cummins2000-pk}{2000}; Rooij \& Baggio, \protect\hyperlink{ref-Van_Rooij2021-bk}{2021}). Models are used to create a quantitative description, or hypothesis, of how data within a target system may have been generated. Specifically, statistical models describe how one quantity of interest within the target system, \(y\) (the ``target variable''), may arise as a function (\(f\)) of one or more other quantities in the target system, \(X\) (the predictor variables or features), often in the presence of noise (\(\epsilon\)):
+
+\begin{equation}
+y = f(X) + \epsilon
+\end{equation}
+
+Put differently, models represent explanations of how variability in a particular aspect of the target system (\(y\)) arises as the result of a set of (causally related) features (@ Cummins, \protect\hyperlink{ref-Cummins2000-pk}{2000}; Kay, \protect\hyperlink{ref-Kay2017-vr}{2017}). For example, chapter \ref{hypothesis-kernel-analysis} and \ref{static-vs-dynamic} describe models that attempt to explain the emotion people see in others' facial expressions (\(y\)) as a function of a combination of facial movements (\(X\)):
+
+\begin{align}
+\mathrm{emotion} = f(X_{\mathrm{mov}}) + \epsilon
+\end{align}
+
+In principle, the function linking the predictors to the target can be any function that maps a vector of numbers (the predictors, \(X_{i}\)) to a single number (the target value, \(y_{i}\)), but almost all statistical tests as well as most predictive models in psychology and cognitive neuroscience use a variant of the general(ized) linear model (GLM; Ivanova et al., \protect\hyperlink{ref-Ivanova2021-wk}{2021}; Lindeløv, \protect\hyperlink{ref-Lindelov2019-jk}{2019}). A linear model assumes that the target variable (which we assume to be continuous for now) can be expressed as the sum of a set of features (\(X_{1}, X_{2}, \dots , X_{P}\)) weighted by a corresponding set of parameters (\(\beta_{1}, \beta_{2}, \dots , \beta_{P}\)). When the target variable is continuous, the corresponding linear model is more commonly known as a \emph{linear regression} model\footnote{In this chapter, we assume for simplicity that the target variable, \(y\), is continuous. The target variable, however, does not need to be continuous; in that case, linear models from the GLM additionally include an ``inverse link function'', \(g^{-1}\), that maps the linear combination of features to the right domain: \(y = g^{-1}(X\beta)\).}:
+
+\begin{equation}
+f(X) = \sum_{j=1}^{P}X_{j} \beta_{j}
+\end{equation}
+
+In linear models, like the linear regression model above, the parameters quantify the strength of the association between each predictor and the target variable. Model parameters are considered unknown and need to be estimated from data. Here, ``data'' refers to a specific number of observations of the target variable (\(y\)) and the predictor variables (\(X\)). There are various mathematical techniques to estimate the model parameters, including the well-known (ordinary) least squares analytical solution, iterative gradient-based methods, regularized least squares, and Bayesian parameter inference. These methods differ in how they estimate the data (or, in more technical terms, which particular function they optimize or minimize during estimation), but they all return an \emph{estimate} of the parameters of the model. These estimated parameters are often denoted with a ``hat'' (＾; i.e., \(\hat{\beta}\)) to distinguish them from the true, but unknown, parameters (i.e., \(\beta\)).
+
+After obtaining estimates of the model parameters, the model can be used to make predictions about the value of the target variable (\(y\)) given observations of the predictor variables (\(X\)):
+
+\begin{equation}
+\hat{y} = \sum_{j=1}^{P}X_{j} \hat{\beta}_{j}
+\end{equation}
+
+Like the ``hat'' is used to distinguish estimated from true parameters, the ``hat'' used in the equation above is used to distinguish a prediction (i.e., an estimate of the target variable, \(\hat{y}\)) from the true target value (\(y\)). The model predictions can be compared to the actual target values to evaluate the model's predictive accuracy (which is alternatively called ``model fit'' or simply ``accuracy''), which is usually summarized in a single number using metrics such as \(R^{2}\) (also more colloquially known as ``explained variance'').
+
+Thus far, the specification of a (linear) model and the estimation of its parameters is common to both the traditional and the predictive approach. The crucial difference between the two approaches, at this point, is what element they treat as unknown and perform inference on. In the hypothesis testing approach, inference is performed on the estimated model parameters while in the predictive approach, inference is performed on the model's predictive accuracy (Bzdok, \protect\hyperlink{ref-Bzdok2017-li}{2017}).
+
+This difference in their focus of inference is associated with different cultures of research which use statistical models to explain a target system in different ways (Breiman, \protect\hyperlink{ref-Breiman2001-lf}{2001}). In the traditional hypothesis testing approach, the inferences about model parameters are not meant to \emph{directly} explain (parts of) a target system. Instead, the target system is verbally described and explained by a \emph{theory} (Kellen, \protect\hyperlink{ref-Kellen2019-af}{2019}). Explanation of the system occurs via testing hypotheses about very specific aspects of the system that are implied by a theory, often in strictly confirmatory experiments (Wagenmakers et al., \protect\hyperlink{ref-Wagenmakers2012-vd}{2012}). Because such hypothesis-driven studies often use strictly controlled experiments in which the factor(s) of interest are explicitly manipulated, these studies afford \emph{causal} interpretation of the observed statistical effects (Groot, \protect\hyperlink{ref-degroot}{1961}). For example, if a particular theory about emotion (e.g., basic emotion theory) implies that certain categorical emotions should be universally recognized (Keltner et al., \protect\hyperlink{ref-Keltner2019-tm}{2019}), then statistical tests that show that people across the globe are able to distinguish these emotions above chance level (e.g., Ekman et al., \protect\hyperlink{ref-Ekman1969-pu}{1969}) corroborate this theory. The logic behind this approach is that we get an increasingly better understanding of the target system if we keep testing hypotheses implied by the corresponding theory. Or in Newell's terminology, if we just keep asking nature questions, we will at some point understand it.
+
+Theories play a less significant role in the predictive modelling culture. Although theories may inspire particular classes of models and constrain the space of possible models (Rooij \& Baggio, \protect\hyperlink{ref-Van_Rooij2021-bk}{2021}), they do not necessarily represent (a description of) the target system itself. Instead of theories, the predictive approach uses models themselves to both describe and explain a target system {[}Guest \& Martin (\protect\hyperlink{ref-Guest2020-ef}{2020}){[}. These models can be thought of as algorithmic or mechanistic hypotheses of how a particular cognitive capacity or behavior may emerge (Kriegeskorte \& Douglas, \protect\hyperlink{ref-Kriegeskorte2018-om}{2018}). For example, the categorical emotion model in chapter \ref{static-vs-dynamic} represents the mechanistic hypothesis that the capacity of people to infer and recognize emotions from others' faces occurs through an integration of weighted linear combinations of both facial movements and facial morphological features. Another example is illustrated in Chapter \ref{shared-states}, which describes a study in which we hypothesized that the same brain networks associated with emotion experience underlie the capacity for emotion understanding (Oosterwijk et al., \protect\hyperlink{ref-Oosterwijk2017-sc}{2017}). Using a predictive model trained on neural patterns associated with components of emotion experience, we could accurately predict emotion components associated with emotion understanding in others, which suggests that these two processes share a common neural implementation (Peelen \& Downing, \protect\hyperlink{ref-Peelen2007-ew}{2007}). Importantly, in the predictive approach, progress in terms of explanation and understanding is not achieved by binary tests of these theory-driven hypotheses, but by the exploration and development of increasingly accurate models of the target system itself (Naselaris et al., \protect\hyperlink{ref-Naselaris2011-oh}{2011}\protect\hyperlink{ref-Naselaris2011-oh}{b}).
+
+To be clear, although the research in this thesis often uses techniques and models from machine learning, the predictive approach should not be equated with machine learning. The origins of this approach, at least in the domain of psychology, can be traced back to the psychophysics studies in the late nineteenth century. Psychophysics studies aim to develop lawlike models of how stimulus attributes give rise to sensory experiences and rarely feature explicit hypothesis tests of model parameters (Gescheider, \protect\hyperlink{ref-Gescheider2013-zm}{2013}). Predictive, computational models also play a central role in the field of cognitive science, in which they are used as formal representations and implementations of cognitive processes (Núñez et al., \protect\hyperlink{ref-Nunez2019-lh}{2019}). While hypothesis testing has dominated much of psychology and cognitive neuroscience apart from psychophysics and cognitive science, the predictive approach has become more prominent in both psychology (Yarkoni \& Westfall, \protect\hyperlink{ref-Yarkoni2017-om}{2017}) and cognitive neuroscience (Varoquaux \& Thirion, \protect\hyperlink{ref-Varoquaux2014-su}{2014}) in recent years. Machine learning has been particularly influential in cognitive neuroscience, where it was introduced as ``pattern analysis'' (Norman et al., \protect\hyperlink{ref-Norman2006-bt}{2006}\protect\hyperlink{ref-Norman2006-bt}{b}), but there are many other examples of predictive approaches in psychology and cognitive neuroscience. These approaches include network analysis (Borsboom \& Cramer, \protect\hyperlink{ref-Borsboom2013-wb}{2013}) and structural equation modelling (Streiner, \protect\hyperlink{ref-Streiner2006-ze}{2006}) in psychology and system identification (Wu et al., \protect\hyperlink{ref-Wu2006-qs}{2006}), model-based cognitive neuroscience (Forstmann \& Wagenmakers, \protect\hyperlink{ref-Forstmann2015-rz}{2015}; Turner et al., \protect\hyperlink{ref-Turner2017-fi}{2017}), and encoding models in cognitive neuroscience (Holdgraf et al., \protect\hyperlink{ref-Holdgraf2017-eu}{2017}; Naselaris et al., \protect\hyperlink{ref-Naselaris2011-oh}{2011}\protect\hyperlink{ref-Naselaris2011-oh}{b}). Although these approaches differ in the way they construct and apply models, they all emphasize predictive accuracy rather than hypothesis testing.
+
+In sum, although the traditional and predictive approach share a core component --- a quantitative model --- they differ in what aspect of the model they use for inference. The associated research cultures implement different approaches to explain and gain understanding of a target system. As I will discuss in the next section, the predictive and hypothesis testing approach each have specific advantages and, when used in combination, can compensate for the weaknesses of the other.
+
+\hypertarget{towards-prediction}{%
+\section{Towards prediction}\label{towards-prediction}}
+
+Scientific models come in many forms and can have many different purposes. In psychology and cognitive neuroscience, researchers use scientific models primarily to explain cognitive capacities and behaviors (Yarkoni \& Westfall, \protect\hyperlink{ref-Yarkoni2017-om}{2017}). Here I use the term ``explanation'' to be the identification of the causal components of a particular target system (ibid.). Specifically, scientific models used for hypothesis tests serve as tests of the existence of causal components implied by a particular theory. Explanation is, arguably, not the only function of scientific models. Two other functions often attributed to scientific models are prediction and exploration (Cichy \& Kaiser, \protect\hyperlink{ref-Cichy2019-zf}{2019}; Gelfert, \protect\hyperlink{ref-Gelfert2016-hd}{2016}). In what follows, I will evaluate the models from the hypothesis testing and the predictive approach on these criteria and argue that they emphasize these criteria differently.
+
+In terms of their ability to \emph{explain}, models from the hypothesis testing approach are hard to beat. By employing carefully controlled experiments in which usually only a single factor is manipulated, hypothesis tests of models are able to clearly establish the presence of specific causal components of the target system. Moreover, these models usually contain few variables and parameters and are almost always linear, which makes for easy interpretation of the estimated causal effects. The strict experimental setup and simplicity of the models, however, leave little room for \emph{exploration} of alternative, possibly better models of the target system of phenomenon. In fact, exploration is often explicitly discouraged in the context of hypothesis testing (Wagenmakers et al., \protect\hyperlink{ref-Wagenmakers2012-vd}{2012}), which forces researchers to set up a completely new study in order to test an alternative model. Not only exploration suffers from the emphasis on explanation, but prediction as well. The very fact that most models for hypothesis testing only intend to investigate and test a very specific part of the target system results in very simple models that, arguably, cannot capture the complexity of the cognitive capacities and behaviors studied by psychologists and cognitive neuroscientists (Jolly \& Chang, \protect\hyperlink{ref-Jolly2019-lx}{2019}; Tosh et al., \protect\hyperlink{ref-Tosh2020-sf}{2020}). The result is that each individual model is usually only able to correctly \emph{predict} a fraction of the variance of the target variable. In a large sample of psychology studies, Schäfer \& Schwarz (\protect\hyperlink{ref-Schafer2019-ue}{2019}) found that the median model performance, expressed as the proportion of explained variance of the target variable, was only 12.6\% and was found to be as low as 2.5\% for purely confirmatory and preregistered studies.\footnote{Note that the original article by @Schäfer \& Schwarz (\protect\hyperlink{ref-Schafer2019-ue}{2019}) reported effect size, \(r\), instead of ``variance explained'', \(R^{2}\). In analyses that are not cross-validated, the latter can be obtained by squaring the former (but see Funder \& Ozer, \protect\hyperlink{ref-Funder2019-ow}{2019}).}
+
+A prerequisite for comparing different predictive models is that, ideally, they use the same dataset. Using the same dataset to evaluate different models not only facilitates model comparison but also facilitates incremental progress over time. The famous ImageNet dataset used in computer vision provides a striking example of the impact common datasets can have on the field (Deng et al., \protect\hyperlink{ref-Deng2009-bp}{2009}). Since 2011, the ImageNet dataset has been used in the yearly ImageNet Large Scale Visual Recognition Challenge (Russakovsky et al., \protect\hyperlink{ref-Russakovsky2015-oo}{2015}), a competition in which researchers can submit object recognition models trained and evaluated on the ImageNet dataset. In 2011, the best performing model achieved 51\% accuracy, which has improved yearly, with the best performing model in the 2021 edition achieving 91\%.6.\footnote{Retrieved from \url{https://paperswithcode.com/sota/image-classification-on-imagenet}.} In the past decade, public datasets have emerged in psychology and cognitive neuroscience as well, often motivated by the desire to improve research transparency and reproducibility (Gewin, \protect\hyperlink{ref-Gewin2016-ff}{2016}). However, few have emerged as de facto benchmarks for a given subdomain like ImageNet is for object recognition, which may be due to the fact that most of these datasets are acquired in strictly controlled experiments that strongly limit the variety of models that can be explored and thus limit their reuse (Naselaris et al., \protect\hyperlink{ref-Naselaris2021-ba}{2021}). In cognitive neuroscience, there have been some notable exceptions, which include the Natural Scenes Database (Allen et al., \protect\hyperlink{ref-Allen2021-zd}{2021}) and the Naturalistic Neuroimaging Database (Aliko et al., \protect\hyperlink{ref-Aliko2020-ry}{2020}), both with the goal to facilitate the development of models for real-world vision. In Chapter \ref{aomic}, I describe our effort to release a large, richly annotated dataset to the public domain (Snoek et al., \protect\hyperlink{ref-Snoek2021-jx}{2021}). This dataset, the Amsterdam Open MRI Collection, contains a set of multimodal MRI datasets for individual difference analyses, which colleagues and I made publicly available. Not only does the variety in data sources (MRI, physiological, demographic, and psychometric data) allow for the development of a wide variety of novel models, it can also be used to evaluate the generalizability of existing models (see e.g.~Ngo et al., \protect\hyperlink{ref-Ngo2021-kf}{2021}).
+
+The predictive accuracy of predictive models trained on large, observational datasets, however, does not come for free. One major disadvantage of the predictive approach is that the mechanisms their models represent may not represent the actual mechanisms underlying human cognition and behavior. In other words, complex models may represent what the philosopher Daniel Dennett called ``cognitive wheels'': useful inventions that may solve practical problems, but just like wheels do not occur in nature, do not reflect the true mechanisms underlying human cognitive capacities and behaviors (Dennett, \protect\hyperlink{ref-Dennett2006-el}{2006}; see also Maas et al., \protect\hyperlink{ref-Van_der_Maas2021-rx}{2021}). A famous example of a cognitive wheel is the finding that state-of-the-art object recognition models seem to rely more on the texture than the shape of the object, which seems to be the other way around in humans (Baker et al., \protect\hyperlink{ref-baker2018deep}{2018}). Relatedly, models used in artificial intelligence seem to be extremely sensitive to spurious, non-causal relationships (Geirhos et al., \protect\hyperlink{ref-Geirhos2020-af}{2020}). A famous example of this issue is the observation that a model trained on X-ray data to predict pneumonia diagnosis in fact used text annotations included in the X-ray images rather than the images themselves (Zech et al., \protect\hyperlink{ref-Zech2018-bq}{2018}). These limitations have led to the critique that using complex predictive models to explain and understand a target system, especially when using highly non-linear models as is common in many artificial intelligence applications, is like trading in one black box for another (Kay, \protect\hyperlink{ref-Kay2017-vr}{2017}). Indeed, given the definition of ``explanation'' as identification of causal components of a target system, it is hard to argue that predictive models by themselves explain anything.
+
+It is fair to say predictive models, by themselves, are not sufficient as a satisfactory explanation of a target system, but this is not an insurmountable issue. I would argue that the construction and evaluation of a predictive model is only the first step; the second step would be to gain insight into the mechanism that is learned by the model (Cichy \& Kaiser, \protect\hyperlink{ref-Cichy2019-zf}{2019}). In this second step, the models are treated as concrete representations of the target system that can be manipulated, experimented with, and picked apart in order to gain insights into its mechanism \$mdash; not unlike model organisms in animal research (Scholte, \protect\hyperlink{ref-Scholte2018-he}{2018}). In both the machine learning community and the psychology and cognitive neuroscience community, techniques have been developed to gain insight into the mechanisms of predictive models. One common technique is to selectively manipulate specific model components, such as parameters or intermediate stimulus representations, to test whether these manipulations lead to similar changes in behavior in models and humans (e.g., Seijdel et al., \protect\hyperlink{ref-Seijdel2020-ff}{2020}). A related technique is to selectively manipulate the input to the model instead of manipulating the model itself. Chapter \ref{confounds-decoding} outlines such a method that can be used to control for specific stimulus features (``confounds'') in predictive models applied to neuroimaging data (see also Dinga et al., \protect\hyperlink{ref-Dinga2020-si}{2020}), which can prevent models from learning spurious relationships. Another technique to increase the evidence for a ``valid'' model (rather than a cognitive wheel) is to show that key components of the model have plausible neural correlates (Güçlü \& Gerven, \protect\hyperlink{ref-Guclu2015-qj}{2015}; Kriegeskorte, Mur, \& Bandettini, \protect\hyperlink{ref-Kriegeskorte2008-kv}{2008}\protect\hyperlink{ref-Kriegeskorte2008-kv}{a}; Yamins et al., \protect\hyperlink{ref-yamins2014performance}{2014}) or to directly constrain models with neural data (Turner et al., \protect\hyperlink{ref-Turner2017-fi}{2017}). The underlying idea of applying these different techniques is that explanation and understanding of a target system is not something that is achieved by experiments on the target system directly, but with experiments on the models that represent them (Cichy \& Kaiser, \protect\hyperlink{ref-Cichy2019-zf}{2019}).
+
+Even though some of the weaknesses of the predictive approach can be mitigated, this does not mean that hypothesis testing should be abandoned. I believe that hypothesis testing remains and will remain an important tool in psychology and cognitive neuroscience and that there are plenty of scenarios in which hypothesis testing should in fact be preferred. First, if the goal is not to provide explanations and gain understanding of some target system, but to test an intervention, then hypothesis testing is an appropriate method. For example, if one wants to know whether some educational intervention improves reading skills in children, then running a randomized controlled experiment and associated hypothesis test is an excellent way to answer this question. Second, hypothesis tests may be useful in providing answers to important (binary) questions that may challenge important assumptions in a particular research domain or theory. For example, Chapter \ref{morbid-curiosity} describes a neuroimaging study that investigated the neural correlates of curiosity for negative information (``morbid curiosity''; Oosterwijk et al., \protect\hyperlink{ref-Oosterwijk2020-uf}{2020}), with the preregistered hypothesis that it activated the same neural circuitry as regular curiosity. The observation that, indeed, curiosity for negative and positive information engaged the same reward-related brain circuits provided an important challenge to the assumption that people actively avoid negative information. Finally, phenomena established by the hypothesis testing approach may inform and constrain the development of predictive models (Borsboom et al., \protect\hyperlink{ref-Borsboom2020-xg}{2020}; Kellen, \protect\hyperlink{ref-Kellen2019-af}{2019}). An example of this feature is illustrated in Chapter \ref{static-vs-dynamic}, which describes a model that uses variance in facial morphology to predict the emotions people see in ``neutral'' faces. The development of this model was inspired by the extensive literature on the associations between factors related to variance in facial morphology (e.g., age, gender, and ethnicity) and the emotional interpretations of static, ``neutral'' faces (Hess, Adams, \& Kleck, \protect\hyperlink{ref-Hess2009-xo}{2009}). Although the predictive models were not developed to test specific effects, we actually observed (or ``replicated'' if you will) several well-known effects from the emotional expression literature, such as the visual similarity and conceptual confusion between anger and disgust expressions (Jack et al., \protect\hyperlink{ref-Jack2014-ku}{2014}).
+
+To summarize, I believe that the predictive approach represents a useful addition to the methodological toolbelt of psychologists and cognitive neuroscientists. Given the striking progress in machine learning and artificial intelligence, I think that shifting the focus from explanation to prediction may be a promising avenue for psychology and cognitive neuroscience, but theory and hypothesis testing will remain important to constrain, inform, and test models --- an idea that will be revisited in the \protect\hyperlink{general-discussion}{general discussion}.
+
+\hypertarget{outline-of-this-thesis}{%
+\section{Outline of this thesis}\label{outline-of-this-thesis}}
+
+Although the chapters of this thesis have been shortly introduced in the previous sections, I will shortly summarize them here for convenience.
+
+In \textbf{chapter \ref{shared-states}}, I describe a study in which we used predictive models applied to functional MRI data, known as ``decoding models'' in the neuroimaging literature, to test an hypothesis about the shared neural basis of emotion experience and emotion understanding. To remedy the interpretational difficulties inherent to decoding analyses (and predictive models in general), \textbf{chapter \ref{confounds-decoding}} outlines a method we developed to adjust for confounds in decoding analyses which helps to rule out alternative explanations of the results. Moving away from the focus on predictive models, \textbf{chapter \ref{aomic}} is the result from our effort to publish the ``Amsterdam Open MRI Collection'' (AOMIC), a set of three large, multimodal, MRI datasets, and \textbf{chapter \ref{morbid-curiosity}} describes a confirmatory, fully pre-registered neuroimaging study on a psychological phenomenon called ``morbid curiosity''. Finally, the last two chapters return to the use of predictive models, this time in the context of facial expression perception. \textbf{Chapter \ref{hypothesis-kernel-analysis}} outlines a method we developed (``hypothesis kernel analysis'') to formalize verbal hypotheses as quantitative predictive models, which we apply to a specific set of hypotheses about how facial movements relate to categorical emotions. At last, \textbf{chapter \ref{static-vs-dynamic}} concludes this thesis with a study that compares predictive models of affective face perception based on static features (i.e., facial morphology) and dynamic features (i.e., facial movements), which shows that people integrate both sources of information in their affective inferences and experiences.
 
 \hypertarget{shared-states}{%
 \chapter{Shared states: using MVPA to test neural overlap between self-focused emotion imagery and other-focused emotion understanding}\label{shared-states}}
@@ -1217,7 +1262,7 @@ In contrast to post hoc counterbalancing, confound regression in its uncross-val
 \hypertarget{relevance-to-other-analysis-methods}{%
 \subsubsection{Relevance to other analysis methods}\label{relevance-to-other-analysis-methods}}
 
-While this article focuses on controlling for confounds in decoding analyses specifically, we believe that our findings may be relevant for analysis methods beyond decoding analyses as well. In fact, methods for controlling for confounds (or alternative sources of information) have previously been investigated and applied in another type of MVPA named ``representational similarity analysis'' (RSA; Kriegeskorte et al., \protect\hyperlink{ref-kriegeskorte2008representational}{2008}). In the context of RSA, the explained variance in the neural data is often partitioned into different (model-based) feature sets (i.e., sources of information), which allows one to draw conclusions about the unique influence of each source of information (see, e.g., Groen et al., \protect\hyperlink{ref-Groen2018-qo}{2018}; Hebart et al., \protect\hyperlink{ref-Hebart2018-dz}{2018}; Ramakrishnan et al., \protect\hyperlink{ref-Ramakrishnan2014-ki}{2014}). Specifically, variance partitioning in RSA is done by removing the variance from the representational dissimilarity matrix (RDM) based on the feature set that needs to be controlled for. Notably, the variance of the RDMs that are not of interest can be removed from only the neural RDM (Hebart et al., \protect\hyperlink{ref-Hebart2018-dz}{2018}; Ramakrishnan et al., \protect\hyperlink{ref-Ramakrishnan2014-ki}{2014}) or both from the neural RDM and the RDM of interest (Groen et al., \protect\hyperlink{ref-Groen2018-qo}{2018}). While the analysis context is different, the underlying technique is identical to confound regression as described and evaluated in this article. Importantly, the studies employing this variance partitioning technique (Groen et al., \protect\hyperlink{ref-Groen2018-qo}{2018}; Hebart et al., \protect\hyperlink{ref-Hebart2018-dz}{2018}; Ramakrishnan et al., \protect\hyperlink{ref-Ramakrishnan2014-ki}{2014}) similarly report plausible model performances after confound regression (i.e., relatively lower but not below chance performance), corroborating our results with (cross-validated) confound regression. Note that the distinction between WDCR and CVCR in the context of most RSA studies (including the aforementioned studies) is largely irrelevant, as representational similarity analyses are not commonly cross-validated. However, recently, some have proposed to use cross-validated distance measures (such as the cross-validated Mahalanobis distance; Guggenmos et al., \protect\hyperlink{ref-Guggenmos2018-rr}{2018}; Walther et al., \protect\hyperlink{ref-Walther2016-je}{2016}) in RSA, which could suffer from negative bias when combined with (not cross-validated) variance partitioning similar to what we observed with WDCR in the context of decoding analyses.
+While this article focuses on controlling for confounds in decoding analyses specifically, we believe that our findings may be relevant for analysis methods beyond decoding analyses as well. In fact, methods for controlling for confounds (or alternative sources of information) have previously been investigated and applied in another type of MVPA named ``representational similarity analysis'' (RSA; Kriegeskorte, Mur, \& Bandettini, \protect\hyperlink{ref-kriegeskorte2008representational}{2008}\protect\hyperlink{ref-kriegeskorte2008representational}{b}). In the context of RSA, the explained variance in the neural data is often partitioned into different (model-based) feature sets (i.e., sources of information), which allows one to draw conclusions about the unique influence of each source of information (see, e.g., Groen et al., \protect\hyperlink{ref-Groen2018-qo}{2018}; Hebart et al., \protect\hyperlink{ref-Hebart2018-dz}{2018}; Ramakrishnan et al., \protect\hyperlink{ref-Ramakrishnan2014-ki}{2014}). Specifically, variance partitioning in RSA is done by removing the variance from the representational dissimilarity matrix (RDM) based on the feature set that needs to be controlled for. Notably, the variance of the RDMs that are not of interest can be removed from only the neural RDM (Hebart et al., \protect\hyperlink{ref-Hebart2018-dz}{2018}; Ramakrishnan et al., \protect\hyperlink{ref-Ramakrishnan2014-ki}{2014}) or both from the neural RDM and the RDM of interest (Groen et al., \protect\hyperlink{ref-Groen2018-qo}{2018}). While the analysis context is different, the underlying technique is identical to confound regression as described and evaluated in this article. Importantly, the studies employing this variance partitioning technique (Groen et al., \protect\hyperlink{ref-Groen2018-qo}{2018}; Hebart et al., \protect\hyperlink{ref-Hebart2018-dz}{2018}; Ramakrishnan et al., \protect\hyperlink{ref-Ramakrishnan2014-ki}{2014}) similarly report plausible model performances after confound regression (i.e., relatively lower but not below chance performance), corroborating our results with (cross-validated) confound regression. Note that the distinction between WDCR and CVCR in the context of most RSA studies (including the aforementioned studies) is largely irrelevant, as representational similarity analyses are not commonly cross-validated. However, recently, some have proposed to use cross-validated distance measures (such as the cross-validated Mahalanobis distance; Guggenmos et al., \protect\hyperlink{ref-Guggenmos2018-rr}{2018}; Walther et al., \protect\hyperlink{ref-Walther2016-je}{2016}) in RSA, which could suffer from negative bias when combined with (not cross-validated) variance partitioning similar to what we observed with WDCR in the context of decoding analyses.
 
 We believe that especially our findings with regard to WDCR and CVCR may be relevant for any cross-validated analysis, regardless of the ``direction'' of analysis (encoding vs.~decoding) and the dimensionality of the neural data (univariate vs.~multivariate approaches). In general, our findings with respect to negative bias after WDCR were to be expected, as it introduces dependence between the train set and the test set which violates the crucial assumption of independence of any cross-validated analysis. While a violation of the independence assumption often leads to positive bias such as in ``double dipping'' (Kriegeskorte, Simmons, Bellgowan, et al., \protect\hyperlink{ref-Kriegeskorte2009-yz}{2009}\protect\hyperlink{ref-Kriegeskorte2009-yz}{b}), we show here that it may also lead to negative bias. Either way, our findings reinforce the idea that data analysis operations should \emph{never} be applied to the entire dataset before subjecting the data to a cross-validated analysis. Therefore, we believe that our findings with respect to WDCR and CVCR will generalize to any cross-validated analysis (such as cross-validated MANOVA, Allefeld \& Haynes, \protect\hyperlink{ref-allefeld2014searchlight}{2014}; or cross-validated encoding models, Naselaris et al., \protect\hyperlink{ref-naselaris2011encoding}{2011}\protect\hyperlink{ref-naselaris2011encoding}{a}), but future research is necessary to substantiate this claim.
 
@@ -2434,7 +2479,7 @@ This formulation follows from the fact that regression models must make the exac
 \hypertarget{svsd-bayes}{%
 \subsection{Bayesian reconstructions}\label{svsd-bayes}}
 
-The predictive analyses in the current study predict the the affective property (\(y\)) given a set of static or dynamic features (\(X\)), with the aim to approximate the process underlying affective face perception. Another, complementary goal might be to estimate and visualize, or ``reconstruct'', the features (\(X\)) that underlie a particular affective percept (\(y\)), as is commonly done in reverse correlation studies (Brinkman et al., \protect\hyperlink{ref-Brinkman2017-hg}{2017}; R. E. Jack \& Schyns, \protect\hyperlink{ref-Jack2017-gt}{2017}; Jack \& Schyns, \protect\hyperlink{ref-Jack2015-sh}{2015}). Usually, such reverse correlation studies estimate the relationship between stimulus features (\(X\)) and the target variable (\(y\)) separately for each feature and (in case of a categorical target variable) different classes of the target variable. Although this strictly univariate approach has yielded valuable insights across various scientific domains including vision (Neri et al., \protect\hyperlink{ref-Neri1999-rj}{1999}), neuroscience (Ringach \& Shapley, \protect\hyperlink{ref-Ringach2004-nn}{2004}), and more recently, social psychology (Brinkman et al., \protect\hyperlink{ref-Brinkman2017-hg}{2017}), we believe it can be improved in terms of parsimony and flexibility. First, univariate correlation methods assume that each feature (\(X_{j}\)) is independent from all other features. This assumption may hold for stimulus sets that are completely randomly generated, but for stimuli that are parameterized by more complex and correlated features (such as facial movements), this assumption may break down. Furthermore, typical reverse correlation methods yield point estimates of the relationship between features and the target variable (usually correlations), which ignores the uncertainty of the resulting feature space visualizations.
+The predictive analyses in the current study predict the the affective property (\(y\)) given a set of static or dynamic features (\(X\)), with the aim to approximate the process underlying affective face perception. Another, complementary goal might be to estimate and visualize, or ``reconstruct'', the features (\(X\)) that underlie a particular affective percept (\(y\)), as is commonly done in reverse correlation studies (Brinkman et al., \protect\hyperlink{ref-Brinkman2017-hg}{2017}; Jack \& Schyns, \protect\hyperlink{ref-Jack2015-sh}{2015}, \protect\hyperlink{ref-Jack2017-gt}{2017}). Usually, such reverse correlation studies estimate the relationship between stimulus features (\(X\)) and the target variable (\(y\)) separately for each feature and (in case of a categorical target variable) different classes of the target variable. Although this strictly univariate approach has yielded valuable insights across various scientific domains including vision (Neri et al., \protect\hyperlink{ref-Neri1999-rj}{1999}), neuroscience (Ringach \& Shapley, \protect\hyperlink{ref-Ringach2004-nn}{2004}), and more recently, social psychology (Brinkman et al., \protect\hyperlink{ref-Brinkman2017-hg}{2017}), we believe it can be improved in terms of parsimony and flexibility. First, univariate correlation methods assume that each feature (\(X_{j}\)) is independent from all other features. This assumption may hold for stimulus sets that are completely randomly generated, but for stimuli that are parameterized by more complex and correlated features (such as facial movements), this assumption may break down. Furthermore, typical reverse correlation methods yield point estimates of the relationship between features and the target variable (usually correlations), which ignores the uncertainty of the resulting feature space visualizations.
 
 To overcome these limitations, we use a multivariate Bayesian version of reverse correlation to reconstruct the typical dynamic and static features underlying categorical emotions and valence and arousal levels. This technique is increasingly popular in systems neuroscience (Bergen et al., \protect\hyperlink{ref-Van_Bergen2015-kl}{2015}; Naselaris et al., \protect\hyperlink{ref-Naselaris2011-oh}{2011}\protect\hyperlink{ref-Naselaris2011-oh}{b}; Wu et al., \protect\hyperlink{ref-Wu2006-qs}{2006}), where it is used to reconstruct stimulus features (such as the stimulus orientation) or complete stimuli (i.e., their pixel values) from neural data. This approach consists of two steps. First, an \emph{encoding} (or \emph{forward}) model is estimated, which predicts the neural data as a (usually linear) function of the stimulus features. Second, using Bayes theorem, the encoding model is ``inverted'' to generate a \emph{reconstruction} (or \emph{backward}) model that estimates the stimulus features for a given pattern of neural data. Formally, for a given encoding model estimating the probability of the target variable given a set of stimulus features, \(p(y | X)\) (i.e., the likelihood), the reconstruction model, \(p(X | y)\) (i.e., the posterior) can be obtained as follows:
 
@@ -2595,7 +2640,7 @@ The current study used a predictive modelling approach (as opposed to null-hypot
 \hypertarget{limitations-and-further-directions}{%
 \subsubsection{Limitations and further directions}\label{limitations-and-further-directions}}
 
-Although we believe the current study yields important insights into the role of static and dynamic information in affective face perception, it suffers from several limitations that affect its generalizability, which in turn provides directions for future research. First, we specifically investigated categorical emotion as an affective state of the expressor and valence/arousal as an affective experience of the observer, but this covers only a part of the possibilities. Future studies could additionally investigate how static and dynamic information are related to categorical emotions as an affective state of the observer and valence/arousal as an affective state of the expressor. Second, although we investigated multiple affective properties of the face, they do not capture affective face perception in its full complexity. For example, the six basic categorical emotions we investigated are a subset of a larger range of known categorical affective states (Cowen et al., \protect\hyperlink{ref-Cowen2021-ld}{2021}; Cowen \& Keltner, \protect\hyperlink{ref-Cowen2017-vz}{2017}). Future research could use the approach from the current study to investigate whether the largely independent contribution of static and dynamic information holds for affective states beyond those investigated in the current study. Second, although our psychophysics approach samples the space of dynamic and static information more extensively than most studies, the stimulus set we used remains limited. Although random sampling of facial movements ensures that analyses and subsequent results are relatively unbiased by existing theoretical considerations (R. E. Jack et al., \protect\hyperlink{ref-Jack2017-qp}{2017}), they may yield facial expressions that are unlikely to be encountered in daily life. As a consequence, these facial expressions may be rated relatively inconsistently and subsequently bias model performance downwards. In addition, our stimulus set was generated to optimize for variance in facial movements. As such, while our stimulus set covers a large part of the space of possible facial movements, it is unclear to what degree the fifty different faces in our stimulus set cover the range of variation in facial morphology. Specifically, to improve the variance in static features, future studies could benefit from including faces from different ethnicities and a wider age range, which may in turn improve generalizability of the results.
+Although we believe the current study yields important insights into the role of static and dynamic information in affective face perception, it suffers from several limitations that affect its generalizability, which in turn provides directions for future research. First, we specifically investigated categorical emotion as an affective state of the expressor and valence/arousal as an affective experience of the observer, but this covers only a part of the possibilities. Future studies could additionally investigate how static and dynamic information are related to categorical emotions as an affective state of the observer and valence/arousal as an affective state of the expressor. Second, although we investigated multiple affective properties of the face, they do not capture affective face perception in its full complexity. For example, the six basic categorical emotions we investigated are a subset of a larger range of known categorical affective states (Cowen et al., \protect\hyperlink{ref-Cowen2021-ld}{2021}; Cowen \& Keltner, \protect\hyperlink{ref-Cowen2017-vz}{2017}). Future research could use the approach from the current study to investigate whether the largely independent contribution of static and dynamic information holds for affective states beyond those investigated in the current study. Second, although our psychophysics approach samples the space of dynamic and static information more extensively than most studies, the stimulus set we used remains limited. Although random sampling of facial movements ensures that analyses and subsequent results are relatively unbiased by existing theoretical considerations (Jack et al., \protect\hyperlink{ref-Jack2017-qp}{2017}), they may yield facial expressions that are unlikely to be encountered in daily life. As a consequence, these facial expressions may be rated relatively inconsistently and subsequently bias model performance downwards. In addition, our stimulus set was generated to optimize for variance in facial movements. As such, while our stimulus set covers a large part of the space of possible facial movements, it is unclear to what degree the fifty different faces in our stimulus set cover the range of variation in facial morphology. Specifically, to improve the variance in static features, future studies could benefit from including faces from different ethnicities and a wider age range, which may in turn improve generalizability of the results.
 
 \hypertarget{svsd-conclusion}{%
 \section{Conclusion}\label{svsd-conclusion}}
@@ -2608,25 +2653,28 @@ In this study, we show that both dynamic information (i.e., facial movements) an
 We thank Maite van der Miesen and Sjoerd Evelo for their help with data acquisition and
 Steven Miletić for helpful discussions regarding the Bayesian multivariate reverse correlation analyses.
 
-\hypertarget{summary-and-general-discussion}{%
-\chapter{Summary and general discussion}\label{summary-and-general-discussion}}
+\hypertarget{general-discussion}{%
+\chapter{Discussion}\label{general-discussion}}
 
-My view on going forward.
+Psychology and cognitive neuroscience are relatively young scientific fields. Using the empirical experimental cycle, these fields have developed and tested many different theories about the human mind and brain over the years, almost exclusively by means of hypothesis testing. In the past twenty years or so, we have seen a (renewed) interest in a more computational, predictive approach that is used in addition and complementary to the traditional hypothesis testing approach. In this thesis, inspired by techniques and models from machine learning, I explored how this predictive approach can be applied and adapted to behavioral research (chapter \ref{hypothesis-kernel-analysis} and \ref{static-vs-dynamic}) and neuroimaging research (chapter \ref{shared-states} and \ref{confounds-decoding}). This thesis also addresses the importance of large, publicly accessible datasets, an example of which is described in chapter \ref{aomic}. Finally, highlighting the fact that arguably the most effective scientific methodology embraces both predictive modelling and hypothesis testing, chapter \ref{morbid-curiosity} outlined an example of a fully preregistered, confirmatory neuroimaging study. In the \protect\hyperlink{general-introduction}{general introduction} to this thesis, I described how predictive modelling can complement the hypothesis testing approach in psychology and cognitive neuroscience; in what follows, I will outline what I think is necessary to facilitate the adoption of this approach.
 
-\hypertarget{explore}{%
-\section{Explore!}\label{explore}}
+An important step in the adoption of a ``predictive approach'' is changing the way we derive research questions and hypotheses. The hypothetico-deductive tradition in psychology and cognitive neuroscience has taught us that research questions should be based on theories that, ideally, can be answered using statistical tests of binary hypotheses (Kellen, \protect\hyperlink{ref-Kellen2019-af}{2019}). The consequence of this approach is that research questions only capture a very specific part of a target system. Instead, we should steer our research questions towards the mechanisms behind particular cognitive capacities and behaviors (Rooij \& Baggio, \protect\hyperlink{ref-Van_Rooij2021-bk}{2021}). For example, instead of investigating whether certain categorical emotions are universally recognized, one could try to construct a model of emotion recognition and show if and how culture affects this model {[}Jack et al. (\protect\hyperlink{ref-Jack2009-yy}{2009}); Chapter \ref{hypothesis-kernel-analysis}{]}. As chapter \ref{shared-states} in this thesis shows, however, studies may feature both hypothesis tests as well as (elements of) predictive models. I think that if one aims to adopt a predictive approach, a good rule of thumb is to ask oneself whether the research question can be answered with ``yes'' or ``no''; if that is the case, I would recommend to try to rephrase the question such that the research question revolves around the word ``how'' and cannot be answered using a simple ``yes'' or ``no'' answer.
 
-Theories are like toothbrushes, no one likes to use someone else's.
+Adopting a more predictive approach also means that we should perhaps not let theory guide our research as much as in the hypothesis testing approach. Of course, theories may inspire elements of predictive models (e.g., constructionism tells us that we should not limit our models of emotion to perceptual inputs only; Barrett et al., \protect\hyperlink{ref-Barrett2019-bc}{2019}), but they should not determine all aspects of the study design, experiment, and statistical model (Jack et al., \protect\hyperlink{ref-Jack2017-qp}{2017}). Instead, the data used for predictive modelling, whether that is observational or experimental data, should ideally allow for exploration and comparison of different models (Gelfert, \protect\hyperlink{ref-Gelfert2016-hd}{2016}). This way, the ``information gain'' from a single experiment or study can be much higher than when conducting a single hypothesis test.
 
-\hypertarget{think-big}{%
-\section{\texorpdfstring{Think \emph{big}}{Think big}}\label{think-big}}
+The exploratory mindset of the predictive modelling approach calls for a different way to think about the data that we use for our models. In hypothesis testing, we usually want to limit our inferences to a single factor, which we explicitly manipulate in our experiments. For predictive modelling, on the other hand, the data should ideally vary in all the dimensions that are relevant for the capacity or behavior that is investigated. These ``rich'' datasets do not only allow for more exploration and a better generalizability, but are also less constrained (or ``biased'') a priori by existing theories (Jack et al., \protect\hyperlink{ref-Jack2017-qp}{2017}). Chapter \ref{static-vs-dynamic} provides an illustrative example of an experimental approach to create datasets that are relatively rich and unbiased by theory. In this study, we used a ``social psychophysics'' approach (Jack \& Schyns, \protect\hyperlink{ref-Jack2017-gt}{2017}) to create facial expression stimuli that randomly varied in both facial movements (sampled uniformly from a large set of ``action units'') as well as facial morphology (sampled from a large database of individuals). This allowed us to explore different models based on dynamic features (i.e., facial movement) and compare these to models based on static features (i.e., facial morphology).
 
-Big, complex datasets to train big, complex models.
+The development of such rich datasets, however, may pose practical problems. One prominent issue is that, with each additional dimension that is considered, the space of the data grows exponentially, a phenomenon known as the ``curse of dimensionality''. With increasingly higher dimensional spaces, randomly sampling data quickly becomes practically infeasible. One solution for this issue is to constrain the (co)variance of the data using prior information, like we did in chapter \ref{static-vs-dynamic} by restricting facial movements to those that have been consistently shown to be important in affective face perception. For observational data, constraints on (random) sampling can also be achieved by the use of ``naturalistic'' or ``ecologically valid'' data, which has been increasingly popular in cognitive neuroscience (Nastase et al., \protect\hyperlink{ref-Nastase2020-he}{2020}).
 
-\hypertarget{rethink-psychology-education}{%
-\section{Rethink psychology education}\label{rethink-psychology-education}}
+Rich and naturalistic datasets by themselves are, however, not enough. Like machine learning researchers have done in computer vision with datasets such as ImageNet, we should strive to collaboratively create large, rich, and importantly \emph{publicly available} datasets that can be used as benchmarks for the development and evaluation of predictive models. An important prerequisite for this endeavor is that research communities can agree on which particular cognitive capacity or behavior should be targeted, how to operationalize this, and which stimulus or task dimensions should be sampled (Adjerid \& Kelley, \protect\hyperlink{ref-Adjerid2018-vs}{2018}). Although focused on hypothesis testing instead of predictive modelling, initiatives such as the \emph{Psychological Science Accelerator} (Moshontz et al., \protect\hyperlink{ref-Moshontz2018-rc}{2018}) and the different \emph{ManyLabs} projects (Ebersole et al., \protect\hyperlink{ref-Ebersole2016-cr}{2016}; Klein et al., \protect\hyperlink{ref-Klein2018-un}{2018}) have shown that such large-scale efforts are possible. Moreover, I think that competitions and challenges centered around these benchmark datasets can lead to rapid progress in explanation and understanding of specific cognitive capacities and behaviors, like ImageNet has done for object recognition.
 
-Embrace and teach interdisciplinary.
+The development of rich datasets afford the use of more complex predictive models, which in my opinion are necessary to capture the complex, high-dimensional nature of cognitive capacities and behavior (Jolly \& Chang, \protect\hyperlink{ref-Jolly2019-lx}{2019}). Complexity, here, can mean two things. One interpretation of model complexity refers to the high dimensionality of models, i.e., models that work with data with many predictors. These high-dimensional inputs may either be directly measured or computationally derived from the data, which are subsequently related to the target variable using a (linear) model. An example of the former strategy in the context of neuroimaging is a ``decoding model'', which aims to relate high-dimensional patterns of brain data to experimental features (see Chapter 2 and 3). In my opinion, the latter strategy that uses a computational model to explicitly derive model features is more promising. In cognitive neuroscience, such computational models are known as ``linearizing models'' (Naselaris et al., \protect\hyperlink{ref-Naselaris2011-oh}{2011}\protect\hyperlink{ref-Naselaris2011-oh}{b}), because the model relates features resulting from a potentially non-linear computational model to the target variable using a linear model (i.e., the approach \emph{linearizes} the mapping from input to the target variable). We used this approach in chapter \ref{static-vs-dynamic}, in which we used a computational model from computer vision (a 3D morphable model; Yu et al., \protect\hyperlink{ref-Yu2012-ag}{2012}) to generate facial shape features which were subsequently used to predict categorical emotion, valence, and arousal ratings using a logistic regression model.
+
+Another, and more common, interpretation of model complexity is related to the number of model parameters. In the past, models usually limited the number of parameters to prevent overfitting, but the increase in available data and compute power in the 21st century enabled training models with an increasingly larger number of parameters. The most popular class of models resulting from these developments are known as ``deep learning'' models, a type of artificial neural network that maps inputs to outputs using a series of non-linear transformations (LeCun et al., \protect\hyperlink{ref-LeCun2015-xa}{2015}). Deep learning models represent the state-of-the-art in almost all domains of artificial intelligence, including object recognition, reinforcement learning, and natural language processing (Maas et al., \protect\hyperlink{ref-Van_der_Maas2021-rx}{2021}). In cognitive neuroscience, too, deep learning models tend to outperform traditional computational vision models in predicting neural activity in response to visual stimuli (Khaligh-Razavi \& Kriegeskorte, \protect\hyperlink{ref-khaligh2014deep}{2014}; Kriegeskorte, \protect\hyperlink{ref-Kriegeskorte2015-qi}{2015}).
+
+As discussed in the general introduction to this thesis, using complex predictive models trained on observational data may feel like trading in one black box (the brain/mind) for another (a model), which does not yield an improved understanding of the investigated target system. This trade-off between \emph{prediction} and \emph{explanation} is to some extent unavoidable but, I would argue, a trade-off worth making. I would rather have a black box with 90\% accuracy than a directly interpretable model with 10\% accuracy. The reason for this preference stems from the fact that a highly predictive model can be used as a ``surrogate'' (or model organism; (Scholte, 2018) of the target system, which can be inspected, manipulated, and experimented with in order to explain and gain understanding of it. With decades of experience with experimentation and deriving causal insights from empirical research, I think that psychologists and cognitive neuroscientists are superbly equipped for this role.
+
+The development of a research climate that combines the strengths of both the predictive and the hypothesis testing approach is not something that will happen overnight. The predictive approach represents more than a choice of model. It requires a different type of experimental cycle, which revolves less on theory and hypotheses and more on exploration and post-hoc explanation. We have to start asking different questions (about mechanisms, not effects); we have to embrace the complexity of human cognition and behavior and build datasets and models that reflect this complexity; we have to sacrifice interpretability for accuracy. Like any break with tradition, this may feel uncomfortable at first, but in doing so, I believe that a promising future lies ahead.
 
 \hypertarget{appendix-appendix}{%
 \appendix}
@@ -3972,6 +4020,9 @@ Adams, R. B., Jr, Nelson, A. J., Soto, J. A., Hess, U., \& Kleck, R. E. (2012). 
 \leavevmode\hypertarget{ref-Adjerid2018-vs}{}%
 Adjerid, I., \& Kelley, K. (2018). Big data in psychology: A framework for research advancement. \emph{Am. Psychol.}, \emph{73}(7), 899--917.
 
+\leavevmode\hypertarget{ref-Aliko2020-ry}{}%
+Aliko, S., Huang, J., Gheorghiu, F., Meliss, S., \& Skipper, J. I. (2020). A naturalistic neuroimaging database for understanding the brain using ecological stimuli. \emph{Sci Data}, \emph{7}(1), 347.
+
 \leavevmode\hypertarget{ref-alizadeh2017decoding}{}%
 Alizadeh, S., Jamalabadi, H., Schönauer, M., Leibold, C., \& Gais, S. (2017). Decoding cognitive concepts from neuroimaging data using multivariate pattern analysis. \emph{Neuroimage}, \emph{159}, 449--458.
 
@@ -3980,6 +4031,9 @@ Allefeld, C., Görgen, K., \& Haynes, J.-D. (2016). Valid population inference f
 
 \leavevmode\hypertarget{ref-allefeld2014searchlight}{}%
 Allefeld, C., \& Haynes, J.-D. (2014). Searchlight-based multi-voxel pattern analysis of fMRI by cross-validated manova. \emph{Neuroimage}, \emph{89}, 345--357.
+
+\leavevmode\hypertarget{ref-Allen2021-zd}{}%
+Allen, E. J., St-Yves, G., Wu, Y., Breedlove, J. L., Dowdle, L. T., \& others. (2021). A massive 7T fMRI dataset to bridge cognitive and computational neuroscience. \emph{bioRxiv}.
 
 \leavevmode\hypertarget{ref-amat2005medial}{}%
 Amat, J., Baratta, M. V., Paul, E., Bland, S. T., Watkins, L. R., \& Maier, S. F. (2005). Medial prefrontal cortex determines how stressor controllability affects behavior and dorsal raphe nucleus. \emph{Nature Neuroscience}, \emph{8}(3), 365--371.
@@ -4016,6 +4070,9 @@ Babayan, A., Erbey, M., Kumral, D., Reinelt, J. D., Reiter, A. M. F., Röbbig, J
 
 \leavevmode\hypertarget{ref-bach2012knowing}{}%
 Bach, D. R., \& Dolan, R. J. (2012). Knowing how much you don't know: A neural organization of uncertainty estimates. \emph{Nature Reviews Neuroscience}, \emph{13}(8), 572--586.
+
+\leavevmode\hypertarget{ref-baker2018deep}{}%
+Baker, N., Lu, H., Erlikhman, G., \& Kellman, P. J. (2018). Deep convolutional networks do not classify based on global object shape. \emph{PLoS Computational Biology}, \emph{14}(12), e1006613.
 
 \leavevmode\hypertarget{ref-Bangalore2008-kc}{}%
 Bangalore, S. S., Prasad, K. M. R., Montrose, D. M., Goradia, D. D., Diwadkar, V. A., \& Keshavan, M. S. (2008). Cannabis use and brain structural alterations in first episode schizophrenia---a region of interest, voxel based morphometric study. \emph{Schizophr. Res.}, \emph{99}(1), 1--6.
@@ -4083,6 +4140,12 @@ Binder, J. R., Desai, R. H., Graves, W. W., \& Conant, L. L. (2009). Where is th
 \leavevmode\hypertarget{ref-Birn2008-ti}{}%
 Birn, R. M., Smith, M. A., Jones, T. B., \& Bandettini, P. A. (2008). The respiration response function: The temporal dynamics of fMRI signal fluctuations related to changes in respiration. \emph{Neuroimage}, \emph{40}(2), 644--654.
 
+\leavevmode\hypertarget{ref-Borsboom2013-wb}{}%
+Borsboom, D., \& Cramer, A. O. J. (2013). Network analysis: An integrative approach to the structure of psychopathology. \emph{Annu. Rev. Clin. Psychol.}, \emph{9}, 91--121.
+
+\leavevmode\hypertarget{ref-Borsboom2020-xg}{}%
+Borsboom, D., Maas, H. van der, Dalege, J., Kievit, R., \& Haig, B. (2020). \emph{Theory construction methodology: A practical framework for theory formation in psychology}.
+
 \leavevmode\hypertarget{ref-brand2015beyond}{}%
 Brand, A., Allen, L., Altman, M., Hlava, M., \& Scott, J. (2015). Beyond authorship: Attribution, contribution, collaboration, and credit. \emph{Learned Publishing}, \emph{28}(2), 151--155.
 
@@ -4140,6 +4203,9 @@ Chen, C., Crivelli, C., Garrod, O. G., Schyns, P. G., Fernández-Dols, J.-M., \&
 \leavevmode\hypertarget{ref-chu2012does}{}%
 Chu, C., Hsu, A.-L., Chou, K.-H., Bandettini, P., Lin, C., Initiative, A. D. N., \& others. (2012). Does feature selection improve classification accuracy? Impact of sample size and feature selection on classification using anatomical magnetic resonance images. \emph{Neuroimage}, \emph{60}(1), 59--70.
 
+\leavevmode\hypertarget{ref-Cichy2019-zf}{}%
+Cichy, R. M., \& Kaiser, D. (2019). Deep neural networks as scientific models. \emph{Trends Cogn. Sci.}, \emph{23}(4), 305--317.
+
 \leavevmode\hypertarget{ref-citron2014emotional}{}%
 Citron, F. M., Gray, M. A., Critchley, H. D., Weekes, B. S., \& Ferstl, E. C. (2014). Emotional valence and arousal affect reading in an interactive way: Neuroimaging evidence for an approach-withdrawal framework. \emph{Neuropsychologia}, \emph{56}, 79--89.
 
@@ -4173,6 +4239,9 @@ Craig, B. M., \& Lipp, O. V. (2018). The influence of multiple social categories
 \leavevmode\hypertarget{ref-Cuingnet2011-hv}{}%
 Cuingnet, R., Gerardin, E., Tessieras, J., Auzias, G., Lehéricy, S., Habert, M.-O., Chupin, M., Benali, H., Colliot, O., \& Alzheimer's Disease Neuroimaging Initiative. (2011). Automatic classification of patients with alzheimer's disease from structural MRI: A comparison of ten methods using the ADNI database. \emph{Neuroimage}, \emph{56}(2), 766--781.
 
+\leavevmode\hypertarget{ref-Cummins2000-pk}{}%
+Cummins, R. (2000). How does it work?{}`` Versus'' what are the laws?{}``: Two conceptions of psychological explanation. \emph{Explanation and Cognition}, 117--144.
+
 \leavevmode\hypertarget{ref-dale1999cortical}{}%
 Dale, A. M., Fischl, B., \& Sereno, M. I. (1999). Cortical surface-based analysis: I. Segmentation and surface reconstruction. \emph{Neuroimage}, \emph{9}(2), 179--194.
 
@@ -4197,6 +4266,12 @@ Del Giudice, M., Lippa, R. A., Puts, D. A., Bailey, D. H., Bailey, J. M., \& Sch
 \leavevmode\hypertarget{ref-Demetriou2018-xp}{}%
 Demetriou, L., Kowalczyk, O. S., Tyson, G., Bello, T., Newbould, R. D., \& Wall, M. B. (2018). A comprehensive evaluation of increasing temporal resolution with multiband-accelerated protocols and effects on statistical outcome measures in fMRI. \emph{Neuroimage}, \emph{176}, 404--416.
 
+\leavevmode\hypertarget{ref-Deng2009-bp}{}%
+Deng, J., Dong, W., Socher, R., Li, L.-J., Li, K., \& Fei-Fei, L. (2009). ImageNet: A large-scale hierarchical image database. \emph{2009 IEEE Conference on Computer Vision and Pattern Recognition}, 248--255.
+
+\leavevmode\hypertarget{ref-Dennett2006-el}{}%
+Dennett, D. C. (2006). The frame problem of AI. \emph{Philosophy of Psychology: Contemporary Readings}, \emph{433}, 67--83.
+
 \leavevmode\hypertarget{ref-denny2012meta}{}%
 Denny, B. T., Kober, H., Wager, T. D., \& Ochsner, K. N. (2012). A meta-analysis of functional neuroimaging studies of self-and other judgments reveals a spatial gradient for mentalizing in medial prefrontal cortex. \emph{Journal of Cognitive Neuroscience}, \emph{24}(8), 1742--1752.
 
@@ -4218,6 +4293,9 @@ Diekhof, E. K., Kaps, L., Falkai, P., \& Gruber, O. (2012). The role of the huma
 \leavevmode\hypertarget{ref-Dinga2019-mh}{}%
 Dinga, R., Penninx, B., Veltman, D. J., Schmaal, L., \& others. (2019). Beyond accuracy: Measures for assessing machine learning models, pitfalls and guidelines. \emph{bioRxiv}.
 
+\leavevmode\hypertarget{ref-Dinga2020-si}{}%
+Dinga, R., Schmaal, L., Penninx, B. W. J., Veltman, D. J., \& Marquand, A. F. (2020). Controlling for effects of confounding variables on machine learning predictions. In \emph{bioRxiv} (p. 2020.08.17.255034).
+
 \leavevmode\hypertarget{ref-Dixon1999-kl}{}%
 Dixon, L. (1999). Dual diagnosis of substance abuse in schizophrenia: Prevalence and impact on outcomes. \emph{Schizophr. Res.}, \emph{35 Suppl}, S93--100.
 
@@ -4232,6 +4310,9 @@ Dubois, J., Galdi, P., Han, Y., Paul, L. K., \& Adolphs, R. (2018). Resting-stat
 
 \leavevmode\hypertarget{ref-Dukart2011-aq}{}%
 Dukart, J., Schroeter, M. L., Mueller, K., Initiative, A. D. N., \& Others. (2011). Age correction in dementia--matching to a healthy brain. \emph{PLoS One}, \emph{6}(7), e22193.
+
+\leavevmode\hypertarget{ref-Ebersole2016-cr}{}%
+Ebersole, C. R., Atherton, O. E., Belanger, A. L., Skulborstad, H. M., Allen, J. M., Banks, J. B., Baranski, E., Bernstein, M. J., Bonfiglio, D. B. V., Boucher, L., Brown, E. R., Budiman, N. I., Cairo, A. H., Capaldi, C. A., Chartier, C. R., Chung, J. M., Cicero, D. C., Coleman, J. A., Conway, J. G., \ldots{} Nosek, B. A. (2016). Many labs 3: Evaluating participant pool quality across the academic semester via replication. \emph{J. Exp. Soc. Psychol.}, \emph{67}, 68--82.
 
 \leavevmode\hypertarget{ref-efron1987better}{}%
 Efron, B. (1987). Better bootstrap confidence intervals. \emph{Journal of the American Statistical Association}, \emph{82}(397), 171--185.
@@ -4284,6 +4365,9 @@ Fonov, V. S., Evans, A. C., McKinstry, R. C., Almli, C., \& Collins, D. (2009). 
 \leavevmode\hypertarget{ref-Fonov2009-sr}{}%
 Fonov, V. S., Evans, A. C., McKinstry, R. C., Almli, C. R., \& Collins, D. L. (2009). Unbiased nonlinear average age-appropriate brain templates from birth to adulthood. \emph{Neuroimage}, \emph{Supplement 1}(47), S102.
 
+\leavevmode\hypertarget{ref-Forstmann2015-rz}{}%
+Forstmann, B. U., \& Wagenmakers, E.-J. (2015). \emph{An introduction to Model-Based cognitive neuroscience} (B. U. Forstmann \& E.-J. Wagenmakers, Eds.). Springer, New York, NY.
+
 \leavevmode\hypertarget{ref-Folster2014-zy}{}%
 Fölster, M., Hess, U., \& Werheid, K. (2014). Facial age affects emotional expression decoding. \emph{Front. Psychol.}, \emph{5}, 30.
 
@@ -4292,6 +4376,12 @@ Franken, I. H. A., Muris, P., \& Rassin, E. (2005). Psychometric properties of t
 
 \leavevmode\hypertarget{ref-Franklin2019-qo}{}%
 Franklin, R. G., Adams, R. B., Steiner, T. G., \& Zebrowitz, L. A. (2019). Reading the lines in the face: The contribution of angularity and roundness to perceptions of facial anger and joy. \emph{Emotion}, \emph{19}(2), 209--218.
+
+\leavevmode\hypertarget{ref-Frigg2020-hp}{}%
+Frigg, R., \& Hartmann, S. (2020). Models in Science. In E. N. Zalta (Ed.), \emph{The Stanford encyclopedia of philosophy} (Spring 2020). Metaphysics Research Lab, Stanford University.
+
+\leavevmode\hypertarget{ref-Funder2019-ow}{}%
+Funder, D. C., \& Ozer, D. J. (2019). Evaluating effect size in psychological research: Sense and nonsense. \emph{Advances in Methods and Practices in Psychological Science}, \emph{2}(2), 156--168.
 
 \leavevmode\hypertarget{ref-gallese2004unifying}{}%
 Gallese, V., Keysers, C., \& Rizzolatti, G. (2004). A unifying view of the basis of social cognition. \emph{Trends in Cognitive Sciences}, \emph{8}(9), 396--403.
@@ -4302,8 +4392,20 @@ Ganzetti, M., Wenderoth, N., \& Mantini, D. (2016). Intensity inhomogeneity corr
 \leavevmode\hypertarget{ref-Gazendam2015-fr}{}%
 Gazendam, F. J., Kamphuis, J. H., Eigenhuis, A., Huizenga, H. M. H., Soeter, M., Bos, M. G. N., Sevenster, D., \& Kindt, M. (2015). Personality predicts individual variation in fear learning: A multilevel growth modeling approach. \emph{Clin. Psychol. Sci.}, \emph{3}(2), 175--188.
 
+\leavevmode\hypertarget{ref-Geirhos2020-af}{}%
+Geirhos, R., Jacobsen, J.-H., Michaelis, C., Zemel, R., Brendel, W., Bethge, M., \& Wichmann, F. A. (2020). Shortcut learning in deep neural networks. \emph{Nature Machine Intelligence}, \emph{2}(11), 665--673.
+
 \leavevmode\hypertarget{ref-de2010standing}{}%
 Gelder, B. de, Van den Stock, J., Meeren, H. K., Sinke, C. B., Kret, M. E., \& Tamietto, M. (2010). Standing up for the body. Recent progress in uncovering the networks involved in the perception of bodies and bodily expressions. \emph{Neuroscience \& Biobehavioral Reviews}, \emph{34}(4), 513--527.
+
+\leavevmode\hypertarget{ref-Gelfert2016-hd}{}%
+Gelfert, A. (2016). \emph{How to do science with models: A philosophical primer}. Springer, Cham.
+
+\leavevmode\hypertarget{ref-Gescheider2013-zm}{}%
+Gescheider, G. A. (2013). \emph{Psychophysics: The fundamentals}. Psychology Press.
+
+\leavevmode\hypertarget{ref-Gewin2016-ff}{}%
+Gewin, V. (2016). Data sharing: An open mind on open data. \emph{Nature}, \emph{529}(7584), 117--119.
 
 \leavevmode\hypertarget{ref-gilbert2012evaluative}{}%
 Gilbert, S. J., Swencionis, J. K., \& Amodio, D. M. (2012). Evaluative vs. Trait representation in intergroup social judgments: Distinct roles of anterior temporal lobe and prefrontal cortex. \emph{Neuropsychologia}, \emph{50}(14), 3600--3611.
@@ -4377,6 +4479,9 @@ Greve, D. N., \& Fischl, B. (2009b). Accurate and robust brain image alignment u
 \leavevmode\hypertarget{ref-Groen2018-qo}{}%
 Groen, I. I., Greene, M. R., Baldassano, C., Fei-Fei, L., Beck, D. M., \& Baker, C. I. (2018). Distinct contributions of functional and deep neural network features to representational similarity of scenes in human brain and behavior. \emph{Elife}, \emph{7}.
 
+\leavevmode\hypertarget{ref-degroot}{}%
+Groot, A. D. de. (1961). \emph{An introduction to Model-Based cognitive neuroscience}. Mouton, 's-Gravenhage.
+
 \leavevmode\hypertarget{ref-gruber2014states}{}%
 Gruber, M. J., Gelman, B. D., \& Ranganath, C. (2014). States of curiosity modulate hippocampus-dependent learning via the dopaminergic circuit. \emph{Neuron}, \emph{84}(2), 486--496.
 
@@ -4385,6 +4490,9 @@ Gruber, M. J., \& Ranganath, C. (2019). How curiosity enhances hippocampus-depen
 
 \leavevmode\hypertarget{ref-Guan2018-hq}{}%
 Guan, J., Ryali, C. K., \& Angela, J. Y. (2018). Computational modeling of social face perception in humans: Leveraging the active appearance model. \emph{bioRxiv}.
+
+\leavevmode\hypertarget{ref-Guest2020-ef}{}%
+Guest, O., \& Martin, A. E. (2020). \emph{How computational modeling can force theory building in psychological science}.
 
 \leavevmode\hypertarget{ref-Guggenmos2018-rr}{}%
 Guggenmos, M., Sterzer, P., \& Cichy, R. M. (2018). Multivariate pattern analysis for MEG: A comparison of dissimilarity measures. \emph{Neuroimage}, \emph{173}, 434--447.
@@ -4397,6 +4505,9 @@ Gur, R. C., Turetsky, B. I., Matsui, M., Yan, M., Bilker, W., Hughett, P., \& Gu
 
 \leavevmode\hypertarget{ref-guyon2002gene}{}%
 Guyon, I., Weston, J., Barnhill, S., \& Vapnik, V. (2002). Gene selection for cancer classification using support vector machines. \emph{Machine Learning}, \emph{46}(1), 389--422.
+
+\leavevmode\hypertarget{ref-Guclu2015-qj}{}%
+Güçlü, U., \& Gerven, M. A. J. van. (2015). Deep neural networks reveal a gradient in the complexity of neural representations across the ventral stream. \emph{J. Neurosci.}, \emph{35}(27), 10005--10014.
 
 \leavevmode\hypertarget{ref-Halevy2009-cv}{}%
 Halevy, A., Norvig, P., \& Pereira, F. (2009). The unreasonable effectiveness of data. \emph{IEEE Intell. Syst.}, \emph{24}(2), 8--12.
@@ -4446,6 +4557,9 @@ Hess, U., Adams, R. B., \& Kleck, R. E. (2009). The categorical perception of em
 \leavevmode\hypertarget{ref-Hoekstra1996-kv}{}%
 Hoekstra, H. A., Ormel, H., \& De Fruyt, F. (1996). \emph{Persoonlijkheidsvragenlijsten: NEO-pi-r \& neo-ffi}. Swets \& Zeitlinger.
 
+\leavevmode\hypertarget{ref-Holdgraf2017-eu}{}%
+Holdgraf, C. R., Rieger, J. W., Micheli, C., Martin, S., Knight, R. T., \& Theunissen, F. E. (2017). Encoding and decoding models in cognitive electrophysiology. \emph{Front. Syst. Neurosci.}, \emph{11}, 61.
+
 \leavevmode\hypertarget{ref-Hoogeveen2020-qp}{}%
 Hoogeveen, S., Snoek, L., \& Elk, M. van. (2020). Religious belief and cognitive conflict sensitivity: A preregistered fMRI study. \emph{Cortex}, \emph{129}, 247--265.
 
@@ -4464,11 +4578,14 @@ Hunter. (2007). Matplotlib: A 2D graphics environment. \emph{IEEE Ann. Hist. Com
 \leavevmode\hypertarget{ref-Ince2020-mr}{}%
 Ince, R. A. A., Kay, J. W., \& Schyns, P. G. (2020). Bayesian inference of population prevalence. In \emph{bioRxiv} (p. 2020.07.08.191106).
 
-\leavevmode\hypertarget{ref-Jack2009-yy}{}%
-Jack, R. E., Blais, C., Scheepers, C., Schyns, P. G., \& Caldara, R. (2009). Cultural confusions show that facial expressions are not universal. \emph{Curr. Biol.}, \emph{19}(18), 1543--1548.
+\leavevmode\hypertarget{ref-Ivanova2021-wk}{}%
+Ivanova, A. A., Schrimpf, M., Anzellotti, S., Zaslavsky, N., \& others. (2021). Is it that simple? Linear mapping models in cognitive neuroscience. \emph{bioRxiv}.
 
 \leavevmode\hypertarget{ref-Jack2017-qp}{}%
-Jack, R. E., Crivelli, C., \& Wheatley, T. (2017). Data-Driven methods to diversify knowledge of human psychology. \emph{Trends Cogn. Sci.}
+Jack, R., Crivelli, C., \& Wheatley, T. (2017). Data-Driven methods to diversify knowledge of human psychology. \emph{Trends Cogn. Sci.}
+
+\leavevmode\hypertarget{ref-Jack2009-yy}{}%
+Jack, R. E., Blais, C., Scheepers, C., Schyns, P. G., \& Caldara, R. (2009). Cultural confusions show that facial expressions are not universal. \emph{Curr. Biol.}, \emph{19}(18), 1543--1548.
 
 \leavevmode\hypertarget{ref-Jack2014-ku}{}%
 Jack, R. E., Garrod, O. G. B., \& Schyns, P. G. (2014). Dynamic facial expressions of emotion transmit an evolving hierarchy of signals over time. \emph{Curr. Biol.}, \emph{24}(2), 187--192.
@@ -4476,14 +4593,14 @@ Jack, R. E., Garrod, O. G. B., \& Schyns, P. G. (2014). Dynamic facial expressio
 \leavevmode\hypertarget{ref-Jack2012-eq}{}%
 Jack, R. E., Garrod, O. G. B., Yu, H., Caldara, R., \& Schyns, P. G. (2012). Facial expressions of emotion are not culturally universal. \emph{Proc. Natl. Acad. Sci. U. S. A.}, \emph{109}(19), 7241--7244.
 
-\leavevmode\hypertarget{ref-Jack2017-gt}{}%
-Jack, R. E., \& Schyns, P. G. (2017). Toward a social psychophysics of face communication. \emph{Annu. Rev. Psychol.}, \emph{68}, 269--297.
-
 \leavevmode\hypertarget{ref-Jack2015-sh}{}%
 Jack, R. E., \& Schyns, P. G. (2015). The human face as a dynamic tool for social communication. \emph{Curr. Biol.}, \emph{25}(14), R621--34.
 
 \leavevmode\hypertarget{ref-Jack2016-jq}{}%
 Jack, R. E., Sun, W., Delis, I., Garrod, O. G. B., \& Schyns, P. G. (2016). Four not six: Revealing culturally common facial expressions of emotion. \emph{J. Exp. Psychol. Gen.}, \emph{145}(6), 708--730.
+
+\leavevmode\hypertarget{ref-Jack2017-gt}{}%
+Jack, R., \& Schyns, P. G. (2017). Toward a social psychophysics of face communication. \emph{Annu. Rev. Psychol.}, \emph{68}, 269--297.
 
 \leavevmode\hypertarget{ref-Jaeger2020-sr}{}%
 Jaeger, B., Oud, B., Williams, T., Krumhuber, E., Fehr, E., \& Engelmann, J. B. (2020). \emph{Can people detect the trustworthiness of strangers based on their facial appearance?}
@@ -4530,6 +4647,9 @@ Joel, D., \& Fausto-Sterling, A. (2016). Beyond sex differences: New approaches 
 \leavevmode\hypertarget{ref-Johnstone2006-tn}{}%
 Johnstone, T., Ores Walsh, K. S., Greischar, L. L., Alexander, A. L., Fox, A. S., Davidson, R. J., \& Oakes, T. R. (2006). Motion correction and the use of motion covariates in multiple-subject fMRI analysis. \emph{Hum. Brain Mapp.}, \emph{27}(10), 779--788.
 
+\leavevmode\hypertarget{ref-Jolly2019-lx}{}%
+Jolly, E., \& Chang, L. J. (2019). The flatland fallacy: Moving beyond low--dimensional thinking. \emph{Top. Cogn. Sci.}
+
 \leavevmode\hypertarget{ref-kang2009wick}{}%
 Kang, M. J., Hsu, M., Krajbich, I. M., Loewenstein, G., McClure, S. M., Wang, J. T.-y., \& Camerer, C. F. (2009). The wick in the candle of learning: Epistemic curiosity activates reward circuitry and enhances memory. \emph{Psychological Science}, \emph{20}(8), 963--973.
 
@@ -4539,11 +4659,20 @@ Kashdan, T. B., \& Silvia, P. J. (2009). Curiosity and interest: The benefits of
 \leavevmode\hypertarget{ref-Kasper2017-lp}{}%
 Kasper, L., Bollmann, S., Diaconescu, A. O., Hutton, C., Heinzle, J., Iglesias, S., Hauser, T. U., Sebold, M., Manjaly, Z.-M., Pruessmann, K. P., \& Stephan, K. E. (2017). The PhysIO toolbox for modeling physiological noise in fMRI data. \emph{J. Neurosci. Methods}, \emph{276}, 56--72.
 
+\leavevmode\hypertarget{ref-Kay2017-vr}{}%
+Kay, K. N. (2017). Principles for models of neural information processing. \emph{Neuroimage}.
+
 \leavevmode\hypertarget{ref-kay2008identifying}{}%
 Kay, K. N., Naselaris, T., Prenger, R. J., \& Gallant, J. L. (2008). Identifying natural images from human brain activity. \emph{Nature}, \emph{452}(7185), 352--355.
 
+\leavevmode\hypertarget{ref-Kellen2019-af}{}%
+Kellen, D. (2019). A model hierarchy for psychological science. \emph{Computational Brain \& Behavior}, \emph{2}(3), 160--165.
+
 \leavevmode\hypertarget{ref-Kellner2016-xb}{}%
 Kellner, E., Dhital, B., Kiselev, V. G., \& Reisert, M. (2016). Gibbs-ringing artifact removal based on local subvoxel-shifts. \emph{Magn. Reson. Med.}, \emph{76}(5), 1574--1581.
+
+\leavevmode\hypertarget{ref-Keltner2019-tm}{}%
+Keltner, D., Sauter, D., Tracy, J., \& Cowen, A. (2019). Emotional expression: Advances in basic emotion theory. \emph{J. Nonverbal Behav.}, \emph{43}(2), 133--160.
 
 \leavevmode\hypertarget{ref-kendall1973functional}{}%
 Kendall, M. G., \& Stuart, A. (1973). Functional and structural relationship. \emph{The Advanced Theory of Statistics}, \emph{2}, 399--343.
@@ -4551,11 +4680,17 @@ Kendall, M. G., \& Stuart, A. (1973). Functional and structural relationship. \e
 \leavevmode\hypertarget{ref-keysers2014dissociating}{}%
 Keysers, C., \& Gazzola, V. (2014). Dissociating the ability and propensity for empathy. \emph{Trends in Cognitive Sciences}, \emph{18}(4), 163--166.
 
+\leavevmode\hypertarget{ref-khaligh2014deep}{}%
+Khaligh-Razavi, S.-M., \& Kriegeskorte, N. (2014). Deep supervised, but not unsupervised, models may explain it cortical representation. \emph{PLoS Computational Biology}, \emph{10}(11), e1003915.
+
 \leavevmode\hypertarget{ref-kidd2015psychology}{}%
 Kidd, C., \& Hayden, B. Y. (2015). The psychology and neuroscience of curiosity. \emph{Neuron}, \emph{88}(3), 449--460.
 
 \leavevmode\hypertarget{ref-Klein2017-su}{}%
 Klein, A., Ghosh, S. S., Bao, F. S., Giard, J., Häme, Y., Stavsky, E., Lee, N., Rossa, B., Reuter, M., Chaibub Neto, E., \& Keshavan, A. (2017). Mindboggling morphometry of human brains. \emph{PLoS Comput. Biol.}, \emph{13}(2), e1005350.
+
+\leavevmode\hypertarget{ref-Klein2018-un}{}%
+Klein, R. A., Vianello, M., Hasselman, F., Adams, B. G., Adams, R. B., Alper, S., Aveyard, M., Axt, J. R., Babalola, M. T., Bahnı́k, Š., Batra, R., Berkics, M., Bernstein, M. J., Berry, D. R., Bialobrzeska, O., Binan, E. D., Bocian, K., Brandt, M. J., Busching, R., \ldots{} Nosek, B. A. (2018). Many labs 2: Investigating variation in replicability across samples and settings. \emph{Advances in Methods and Practices in Psychological Science}, \emph{1}(4), 443--490.
 
 \leavevmode\hypertarget{ref-Ko2018-rv}{}%
 Ko, B. C. (2018). A brief review of facial emotion recognition based on visual information. \emph{Sensors}, \emph{18}(2).
@@ -4569,8 +4704,17 @@ Koolschijn, P. C. M. P., Geurts, H. M., Leij, A. R. van der, \& Scholte, H. S. (
 \leavevmode\hypertarget{ref-Kostro2014-cm}{}%
 Kostro, D., Abdulkadir, A., Durr, A., Roos, R., Leavitt, B. R., Johnson, H., Cash, D., Tabrizi, S. J., Scahill, R. I., Ronneberger, O., Klöppel, S., \& Track-HD Investigators. (2014). Correction of inter-scanner and within-subject variance in structural MRI based automated diagnosing. \emph{Neuroimage}, \emph{98}, 405--415.
 
+\leavevmode\hypertarget{ref-Kriegeskorte2015-qi}{}%
+Kriegeskorte, N. (2015). Deep neural networks: A new framework for modeling biological vision and brain information processing. \emph{Annu Rev Vis Sci}, \emph{1}, 417--446.
+
+\leavevmode\hypertarget{ref-Kriegeskorte2018-om}{}%
+Kriegeskorte, N., \& Douglas, P. K. (2018). Cognitive computational neuroscience. \emph{Nat. Neurosci.}, \emph{21}(9), 1148--1160.
+
+\leavevmode\hypertarget{ref-Kriegeskorte2008-kv}{}%
+Kriegeskorte, N., Mur, M., \& Bandettini, P. (2008a). Representational similarity analysis - connecting the branches of systems neuroscience. \emph{Front. Syst. Neurosci.}, \emph{2}, 4.
+
 \leavevmode\hypertarget{ref-kriegeskorte2008representational}{}%
-Kriegeskorte, N., Mur, M., \& Bandettini, P. A. (2008). Representational similarity analysis-connecting the branches of systems neuroscience. \emph{Frontiers in Systems Neuroscience}, \emph{2}, 4.
+Kriegeskorte, N., Mur, M., \& Bandettini, P. A. (2008b). Representational similarity analysis-connecting the branches of systems neuroscience. \emph{Frontiers in Systems Neuroscience}, \emph{2}, 4.
 
 \leavevmode\hypertarget{ref-kriegeskorte2009circular}{}%
 Kriegeskorte, N., Simmons, W. K., Bellgowan, P. S., \& Baker, C. I. (2009a). Circular analysis in systems neuroscience: The dangers of double dipping. \emph{Nature Neuroscience}, \emph{12}(5), 535.
@@ -4617,6 +4761,9 @@ Lang, P. J., Bradley, M. M., Cuthbert, B. N., \& others. (1997). International a
 \leavevmode\hypertarget{ref-LaRocque2013-sh}{}%
 LaRocque, J. J., Lewis-Peacock, J. A., Drysdale, A. T., Oberauer, K., \& Postle, B. R. (2013). Decoding attended information in short-term memory: An EEG study. \emph{J. Cogn. Neurosci.}, \emph{25}(1), 127--142.
 
+\leavevmode\hypertarget{ref-LeCun2015-xa}{}%
+LeCun, Y., Bengio, Y., \& Hinton, G. (2015). Deep learning. \emph{Nature}, \emph{521}(7553), 436--444.
+
 \leavevmode\hypertarget{ref-Lefevre2014-vo}{}%
 Lefevre, C. E., Etchells, P. J., Howell, E. C., Clark, A. P., \& Penton-Voak, I. S. (2014). Facial width-to-height ratio predicts self-reported dominance and aggression in males and females, but a measure of masculinity does not. \emph{Biol. Lett.}, \emph{10}(10), 20140729.
 
@@ -4637,6 +4784,9 @@ Lien, J. J., Kanade, T., Cohn, J. F., \& Ching-Chung Li. (1998). Automated facia
 
 \leavevmode\hypertarget{ref-van2018induction}{}%
 Lieshout, L. L. van, Vandenbroucke, A. R., Müller, N. C., Cools, R., \& Lange, F. P. de. (2018). Induction and relief of curiosity elicit parietal and frontal activity. \emph{Journal of Neuroscience}, \emph{38}(10), 2579--2588.
+
+\leavevmode\hypertarget{ref-Lindelov2019-jk}{}%
+Lindeløv, J. K. (2019). \emph{Common statistical tests are linear models}. \url{https://lindeloev.github.io/tests-as-linear/}.
 
 \leavevmode\hypertarget{ref-lindquist2016brain}{}%
 Lindquist, K. A., Satpute, A. B., Wager, T. D., Weber, J., \& Barrett, L. F. (2016). The brain basis of positive and negative affect: Evidence from a meta-analysis of the human neuroimaging literature. \emph{Cerebral Cortex}, \emph{26}(5), 1910--1922.
@@ -4661,6 +4811,9 @@ Long, B., Yu, C. P., \& Konkle, T. (2017). A mid-level organization of the ventr
 
 \leavevmode\hypertarget{ref-Luders2002-ms}{}%
 Lüders, E., Steinmetz, H., \& Jäncke, L. (2002). Brain size and grey matter volume in the healthy human brain. \emph{Neuroreport}, \emph{13}(17), 2371--2374.
+
+\leavevmode\hypertarget{ref-Van_der_Maas2021-rx}{}%
+Maas, H. L. J. van der, Snoek, L., \& Stevenson, C. E. (2021). How much intelligence is there in artificial intelligence? A 2020 update. \emph{Intelligence}, \emph{87}.
 
 \leavevmode\hypertarget{ref-Magnotta2006-zs}{}%
 Magnotta, V. A., Friedman, L., \& FIRST BIRN. (2006). Measurement of Signal-to-Noise and Contrast-to-Noise in the fBIRN multicenter imaging study. \emph{J. Digit. Imaging}, \emph{19}(2), 140--147.
@@ -4713,6 +4866,9 @@ Mischkowski, D., Crocker, J., \& Way, B. M. (2016). From painkiller to empathy k
 \leavevmode\hypertarget{ref-Montepare2003-hy}{}%
 Montepare, J. M., \& Dobish, H. (2003). The contribution of emotion perceptions and their overgeneralizations to trait impressions. \emph{J. Nonverbal Behav.}, \emph{27}(4), 237--254.
 
+\leavevmode\hypertarget{ref-Moshontz2018-rc}{}%
+Moshontz, H., Campbell, L., Ebersole, C. R., IJzerman, H., Urry, H. L., Forscher, P. S., Grahe, J. E., McCarthy, R. J., Musser, E. D., Antfolk, J., Castille, C. M., Evans, T. R., Fiedler, S., Flake, J. K., Forero, D. A., Janssen, S. M. J., Keene, J. R., Protzko, J., Aczel, B., \ldots{} Chartier, C. R. (2018). The psychological science accelerator: Advancing psychology through a distributed collaborative network. \emph{Adv Methods Pract Psychol Sci}, \emph{1}(4), 501--515.
+
 \leavevmode\hypertarget{ref-mumford2014impact}{}%
 Mumford, J. A., Davis, T., \& Poldrack, R. A. (2014). The impact of study design on pattern estimation for single-trial multivariate pattern analysis. \emph{Neuroimage}, \emph{103}, 130--138.
 
@@ -4725,6 +4881,9 @@ Murayama, K., FitzGibbon, L., \& Sakaki, M. (2019). Process account of curiosity
 \leavevmode\hypertarget{ref-Murugappan2021-yj}{}%
 Murugappan, M., \& Mutawa, A. (2021). Facial geometric feature extraction based emotional expression classification using machine learning algorithms. \emph{PLoS One}, \emph{16}(2), e0247131.
 
+\leavevmode\hypertarget{ref-Naselaris2021-ba}{}%
+Naselaris, T., Allen, E., \& Kay, K. (2021). Extensive sampling for complete models of individual brains. \emph{Current Opinion in Behavioral Sciences}, \emph{40}, 45--51.
+
 \leavevmode\hypertarget{ref-Naselaris2015-jn}{}%
 Naselaris, T., \& Kay, K. N. (2015). Resolving ambiguities of MVPA using explicit models of representation. \emph{Trends Cogn. Sci.}, \emph{19}(10), 551--554.
 
@@ -4734,6 +4893,9 @@ Naselaris, T., Kay, K. N., Nishimoto, S., \& Gallant, J. L. (2011a). Encoding an
 \leavevmode\hypertarget{ref-Naselaris2011-oh}{}%
 Naselaris, T., Kay, K. N., Nishimoto, S., \& Gallant, J. L. (2011b). Encoding and decoding in fMRI. \emph{Neuroimage}, \emph{56}(2), 400--410.
 
+\leavevmode\hypertarget{ref-Nastase2020-he}{}%
+Nastase, S. A., Goldstein, A., \& Hasson, U. (2020). Keep it real: Rethinking the primacy of experimental control in cognitive neuroscience. \emph{Neuroimage}, \emph{222}, 117254.
+
 \leavevmode\hypertarget{ref-Neri1999-rj}{}%
 Neri, P., Parker, A. J., \& Blakemore, C. (1999). Probing the human stereoscopic system with reverse correlation. \emph{Nature}, \emph{401}(6754), 695--698.
 
@@ -4742,6 +4904,9 @@ Neth, D., \& Martinez, A. M. (2009). Emotion perception in emotionless face imag
 
 \leavevmode\hypertarget{ref-Newell1973-no}{}%
 Newell, A. (1973). You can't play 20 questions with nature and win: Projective comments on the papers of this symposium. In W. G. Chase (Ed.), \emph{Visual information processing}. New York: Academic Press.
+
+\leavevmode\hypertarget{ref-Ngo2021-kf}{}%
+Ngo, G., Khosla, M., Jamison, K., Kuceyeski, A., \& others. (2021). Predicting individual task contrasts from resting-state functional connectivity using a surface-based convolutional network. \emph{bioRxiv}.
 
 \leavevmode\hypertarget{ref-nichols2005valid}{}%
 Nichols, T., Brett, M., Andersson, J., Wager, T., \& Poline, J.-B. (2005). Valid conjunction inference with the minimum statistic. \emph{Neuroimage}, \emph{25}(3), 653--660.
@@ -4757,6 +4922,9 @@ Norman, K. A., Polyn, S. M., Detre, G. J., \& Haxby, J. V. (2006a). Beyond mind-
 
 \leavevmode\hypertarget{ref-Norman2006-bt}{}%
 Norman, K. A., Polyn, S. M., Detre, G. J., \& Haxby, J. V. (2006b). Beyond mind-reading: Multi-voxel pattern analysis of fMRI data. \emph{Trends Cogn. Sci.}, \emph{10}(9), 424--430.
+
+\leavevmode\hypertarget{ref-Nunez2019-lh}{}%
+Núñez, R., Allen, M., Gao, R., Miller Rigoli, C., Relaford-Doyle, J., \& Semenuks, A. (2019). What happened to cognitive science? \emph{Nat Hum Behav}, \emph{3}(8), 782--791.
 
 \leavevmode\hypertarget{ref-OBrien2011-lj}{}%
 O'Brien, L. M., Ziegler, D. A., Deutsch, C. K., Frazier, J. A., Herbert, M. R., \& Locascio, J. J. (2011). Statistical adjustments for brain size in volumetric neuroimaging studies: Some practical implications in methods. \emph{Psychiatry Res.}, \emph{193}(2), 113--122.
@@ -4791,6 +4959,9 @@ Oosterwijk, S., Lindquist, K. A., Anderson, E., Dautoff, R., Moriguchi, Y., \& B
 \leavevmode\hypertarget{ref-oosterwijk2015concepts}{}%
 Oosterwijk, S., Mackey, S., Wilson-Mendenhall, C., Winkielman, P., \& Paulus, M. P. (2015). Concepts in context: Processing mental state concepts with internal or external focus involves different neural systems. \emph{Social Neuroscience}, \emph{10}(3), 294--307.
 
+\leavevmode\hypertarget{ref-Oosterwijk2017-sc}{}%
+Oosterwijk, S., Snoek, L., Rotteveel, M., Barrett, L. F., \& Scholte, H. S. (2017). Shared states: Using MVPA to test neural overlap between self-focused emotion imagery and other-focused emotion understanding. \emph{Soc. Cogn. Affect. Neurosci.}, \emph{12}(7), 1025--1035.
+
 \leavevmode\hypertarget{ref-Oosterwijk2020-uf}{}%
 Oosterwijk, S., Snoek, L., Tekoppele, J., Engelbert, L. H., \& Scholte, H. S. (2020). Choosing to view morbid information involves reward circuitry. \emph{Sci. Rep.}, \emph{10}(1), 15291.
 
@@ -4808,6 +4979,9 @@ Pedregosa, F., Varoquaux, G., Gramfort, A., Michel, V., Thirion, B., Grisel, O.,
 
 \leavevmode\hypertarget{ref-peelen2010supramodal}{}%
 Peelen, M. V., Atkinson, A. P., \& Vuilleumier, P. (2010). Supramodal representations of perceived emotions in the human brain. \emph{Journal of Neuroscience}, \emph{30}(30), 10127--10134.
+
+\leavevmode\hypertarget{ref-Peelen2007-ew}{}%
+Peelen, M. V., \& Downing, P. E. (2007). Using multi-voxel pattern analysis of fMRI data to interpret overlapping functional activations. \emph{Trends Cogn. Sci.}, \emph{11}(1), 4--5.
 
 \leavevmode\hypertarget{ref-Peirce2019-rj}{}%
 Peirce, J., Gray, J. R., Simpson, S., MacAskill, M., Höchenberger, R., Sogo, H., Kastman, E., \& Lindeløv, J. K. (2019). PsychoPy2: Experiments in behavior made easy. \emph{Behav. Res. Methods}, \emph{51}(1), 195--203.
@@ -4872,11 +5046,17 @@ Ringach, D., \& Shapley, R. (2004). Reverse correlation in neurophysiology. \emp
 \leavevmode\hypertarget{ref-Ritchie2017-gl}{}%
 Ritchie, J. B., Kaplan, D. M., \& Klein, C. (2017). Decoding the brain: Neural representation and the limits of multivariate pattern analysis in cognitive neuroscience. \emph{Br. J. Philos. Sci.}
 
+\leavevmode\hypertarget{ref-Van_Rooij2021-bk}{}%
+Rooij, I. van, \& Baggio, G. (2021). Theory before the test: How to build High-Verisimilitude explanatory theories in psychological science. \emph{Perspect. Psychol. Sci.}, 1745691620970604.
+
 \leavevmode\hypertarget{ref-Rosenblatt2016-oy}{}%
 Rosenblatt, J. D. (2016). Multivariate revisit to ``sex beyond the genitalia''. \emph{Proc. Natl. Acad. Sci. U. S. A.}, \emph{113}(14), E1966--7.
 
 \leavevmode\hypertarget{ref-Rosenblatt2014-az}{}%
 Rosenblatt, J. D., Vink, M., \& Benjamini, Y. (2014). Revisiting multi-subject random effects in fMRI: Advocating prevalence estimation. \emph{Neuroimage}, \emph{84}, 113--121.
+
+\leavevmode\hypertarget{ref-Russakovsky2015-oo}{}%
+Russakovsky, O., Deng, J., Su, H., Krause, J., Satheesh, S., Ma, S., Huang, Z., Karpathy, A., Khosla, A., Bernstein, M., Berg, A. C., \& Fei-Fei, L. (2015). ImageNet large scale visual recognition challenge. \emph{Int. J. Comput. Vis.}, \emph{115}(3), 211--252.
 
 \leavevmode\hypertarget{ref-rutgen2015placebo}{}%
 Rütgen, M., Seidel, E.-M., Silani, G., Riečansky, I., Hummer, A., Windischberger, C., Petrovic, P., \& Lamm, C. (2015). Placebo analgesia and its opioidergic regulation suggest that empathy for pain is grounded in self pain. \emph{Proceedings of the National Academy of Sciences}, \emph{112}(41), E5638--E5646.
@@ -4911,6 +5091,12 @@ Satpute, A. B., Kragel, P. A., Barrett, L. F., Wager, T. D., \& Bianciardi, M. (
 \leavevmode\hypertarget{ref-Van_der_Schalk2011-bq}{}%
 Schalk, J. van der, Hawk, S. T., Fischer, A. H., \& Doosje, B. (2011). Moving faces, looking places: Validation of the amsterdam dynamic facial expression set (ADFES). \emph{Emotion}, \emph{11}(4), 907--920.
 
+\leavevmode\hypertarget{ref-Schafer2019-ue}{}%
+Schäfer, T., \& Schwarz, M. A. (2019). The meaningfulness of effect sizes in psychological research: Differences between Sub-Disciplines and the impact of potential biases. \emph{Front. Psychol.}, \emph{10}, 813.
+
+\leavevmode\hypertarget{ref-Scholte2018-he}{}%
+Scholte, H. S. (2018). Fantastic DNimals and where to find them. \emph{Neuroimage}, \emph{180}(Pt A), 112--113.
+
 \leavevmode\hypertarget{ref-Schoppe2016-bu}{}%
 Schoppe, O., Harper, N. S., Willmore, B. D. B., King, A. J., \& Schnupp, J. W. H. (2016). Measuring the performance of neural models. \emph{Front. Comput. Neurosci.}, \emph{10}, 10.
 
@@ -4919,6 +5105,9 @@ Scott, D. W. (1979). On optimal and data-based histograms. \emph{Biometrika}, \e
 
 \leavevmode\hypertarget{ref-Sedgwick2013-op}{}%
 Sedgwick, P. (2013). Analysing case-control studies: Adjusting for confounding. \emph{BMJ: British Medical Journal}, \emph{346}.
+
+\leavevmode\hypertarget{ref-Seijdel2020-ff}{}%
+Seijdel, N., Tsakmakidis, N., Haan, E. H. F. de, Bohte, S. M., \& Scholte, H. S. (2020). Depth in convolutional neural networks solves scene segmentation. \emph{PLoS Comput. Biol.}, \emph{16}(7), e1008022.
 
 \leavevmode\hypertarget{ref-Sepehrband2018-dy}{}%
 Sepehrband, F., Lynch, K. M., Cabeen, R. P., Gonzalez-Zacarias, C., Zhao, L., D'Arcy, M., Kesselman, C., Herting, M. M., Dinov, I. D., Toga, A. W., \& Clark, K. A. (2018). Neuroanatomical morphometric characterization of sex differences in youth using statistical learning. \emph{Neuroimage}, \emph{172}, 217--227.
@@ -4968,6 +5157,9 @@ Snoek, L., Miesen, M. van der, Beemsterboer, T., Van Der Leij, A., Eigenhuis, A.
 \leavevmode\hypertarget{ref-Snoek2020-piop2}{}%
 Snoek, L., Miesen, M. van der, Beemsterboer, T., Van Der Leij, A., Eigenhuis, A., \& Scholte, H. S. \&. (2020f). \emph{AOMIC-PIOP2 OpenNeuro}.
 
+\leavevmode\hypertarget{ref-Snoek2021-jx}{}%
+Snoek, L., Miesen, M. M. van der, Beemsterboer, T., Leij, A. van der, Eigenhuis, A., \& Steven Scholte, H. (2021). The amsterdam open MRI collection, a set of multimodal MRI datasets for individual difference analyses. \emph{Sci Data}, \emph{8}(1), 85.
+
 \leavevmode\hypertarget{ref-Snoek2019-my}{}%
 Snoek, L., Miletić, S., \& Scholte, H. S. (2019). How to control for confounds in decoding analyses of neuroimaging data. \emph{Neuroimage}, \emph{184}, 741--760.
 
@@ -4985,6 +5177,9 @@ Spunt, R. P., \& Lieberman, M. D. (2012). An integrative model of the neural sys
 
 \leavevmode\hypertarget{ref-stelzer2014prioritizing}{}%
 Stelzer, J., Buschmann, T., Lohmann, G., Margulies, D. S., Trampel, R., \& Turner, R. (2014). Prioritizing spatial accuracy in high-resolution fMRI data using multivariate feature weight mapping. \emph{Frontiers in Neuroscience}, \emph{8}, 66.
+
+\leavevmode\hypertarget{ref-Streiner2006-ze}{}%
+Streiner, D. L. (2006). Building a better model: An introduction to structural equation modelling. \emph{Can. J. Psychiatry}, \emph{51}(5), 317--324.
 
 \leavevmode\hypertarget{ref-tamir2016people}{}%
 Tamir, M. (2016). Why do people regulate their emotions? A taxonomy of motives in emotion regulation. \emph{Personality and Social Psychology Review}, \emph{20}(3), 199--222.
@@ -5004,6 +5199,9 @@ Todorov, A., Baron, S. G., \& Oosterhof, N. N. (2008). Evaluating face trustwort
 \leavevmode\hypertarget{ref-Toisoul2021-yc}{}%
 Toisoul, A., Kossaifi, J., Bulat, A., Tzimiropoulos, G., \& Pantic, M. (2021). Estimation of continuous valence and arousal levels from faces in naturalistic conditions. \emph{Nature Machine Intelligence}, \emph{3}(1), 42--50.
 
+\leavevmode\hypertarget{ref-Tosh2020-sf}{}%
+Tosh, C., Greengard, P., Goodrich, B., Gelman, A., Vehtari, A., \& Hsu, D. (2020). \emph{The piranha problem: Large effects swimming in a small pond}. \url{http://www.stat.columbia.edu/~gelman/research/unpublished/piranhas.pdf}; stat.columbia.edu.
+
 \leavevmode\hypertarget{ref-Tottenham2009-vn}{}%
 Tottenham, N., Tanaka, J. W., Leon, A. C., McCarry, T., Nurse, M., Hare, T. A., Marcus, D. J., Westerlund, A., Casey, B. J., \& Nelson, C. (2009). The NimStim set of facial expressions: Judgments from untrained research participants. \emph{Psychiatry Res.}, \emph{168}(3), 242--249.
 
@@ -5012,6 +5210,9 @@ Tournier, J.-D., Smith, R., Raffelt, D., Tabbara, R., Dhollander, T., Pietsch, M
 
 \leavevmode\hypertarget{ref-Treiber2016-mc}{}%
 Treiber, J. M., White, N. S., Steed, T. C., Bartsch, H., Holland, D., Farid, N., McDonald, C. R., Carter, B. S., Dale, A. M., \& Chen, C. C. (2016). Characterization and correction of geometric distortions in 814 diffusion weighted images. \emph{PLoS One}, \emph{11}(3), e0152472.
+
+\leavevmode\hypertarget{ref-Turner2017-fi}{}%
+Turner, B. M., Forstmann, B. U., Love, B. C., Palmeri, T. J., \& Van Maanen, L. (2017). Approaches to analysis in model-based cognitive neuroscience. \emph{J. Math. Psychol.}, \emph{76}(B), 65--79.
 
 \leavevmode\hypertarget{ref-tustison2010n4itk}{}%
 Tustison, N. J., Avants, B. B., Cook, P. A., Zheng, Y., Egan, A., Yushkevich, P. A., \& Gee, J. C. (2010a). N4ITK: Improved n3 bias correction. \emph{IEEE Transactions on Medical Imaging}, \emph{29}(6), 1310--1320.
@@ -5046,6 +5247,9 @@ Varoquaux, G. (2018b). Cross-validation failure: Small sample sizes lead to larg
 \leavevmode\hypertarget{ref-Varoquaux2017-fj}{}%
 Varoquaux, G., Raamana, P. R., Engemann, D. A., Hoyos-Idrobo, A., Schwartz, Y., \& Thirion, B. (2017). Assessing and tuning brain decoders: Cross-validation, caveats, and guidelines. \emph{Neuroimage}, \emph{145}(Pt B), 166--179.
 
+\leavevmode\hypertarget{ref-Varoquaux2014-su}{}%
+Varoquaux, G., \& Thirion, B. (2014). How machine learning is shaping cognitive neuroimaging. \emph{Gigascience}, \emph{3}, 28.
+
 \leavevmode\hypertarget{ref-Veraart2016-zi}{}%
 Veraart, J., Fieremans, E., \& Novikov, D. S. (2016). Diffusion MRI noise mapping using random matrix theory. \emph{Magn. Reson. Med.}, \emph{76}(5), 1582--1593.
 
@@ -5063,6 +5267,9 @@ Waarde, J. A. van, Scholte, H. S., Oudheusden, L. J. B. van, Verwey, B., Denys, 
 
 \leavevmode\hypertarget{ref-Wacholder1992-wb}{}%
 Wacholder, S., Silverman, D. T., McLaughlin, J. K., \& Mandel, J. S. (1992). Selection of controls in case-control studies. III. Design options. \emph{Am. J. Epidemiol.}, \emph{135}(9), 1042--1050.
+
+\leavevmode\hypertarget{ref-Wagenmakers2012-vd}{}%
+Wagenmakers, E.-J., Wetzels, R., Borsboom, D., Maas, H. L. J. van der, \& Kievit, R. A. (2012). An agenda for purely confirmatory research. \emph{Perspect. Psychol. Sci.}, \emph{7}(6), 632--638.
 
 \leavevmode\hypertarget{ref-wager2008prefrontal}{}%
 Wager, T. D., Davidson, M. L., Hughes, B. L., Lindquist, M. A., \& Ochsner, K. N. (2008). Prefrontal-subcortical pathways mediating successful emotion regulation. \emph{Neuron}, \emph{59}(6), 1037--1050.
@@ -5139,6 +5346,9 @@ Xie, X., \& Lam, K.-M. (2009). Facial expression recognition based on shape and 
 \leavevmode\hypertarget{ref-Xu2020-jd}{}%
 Xu, T., White, J., Kalkan, S., \& Gunes, H. (2020). Investigating bias and fairness in facial expression recognition. \emph{Computer Vision -- ECCV 2020 Workshops}, 506--523.
 
+\leavevmode\hypertarget{ref-yamins2014performance}{}%
+Yamins, D. L., Hong, H., Cadieu, C. F., Solomon, E. A., Seibert, D., \& DiCarlo, J. J. (2014). Performance-optimized hierarchical models predict neural responses in higher visual cortex. \emph{Proceedings of the National Academy of Sciences}, \emph{111}(23), 8619--8624.
+
 \leavevmode\hypertarget{ref-Yarkoni2009-pz}{}%
 Yarkoni, T. (2009). Big correlations in little studies: Inflated fMRI correlations reflect low statistical Power---Commentary on vul et al. (2009). \emph{Perspect. Psychol. Sci.}, \emph{4}(3), 294--298.
 
@@ -5162,6 +5372,9 @@ Zaki, J., Wager, T. D., Singer, T., Keysers, C., \& Gazzola, V. (2016). The anat
 
 \leavevmode\hypertarget{ref-Zebrowitz2017-qe}{}%
 Zebrowitz, L. A. (2017). First impressions from faces. \emph{Curr. Dir. Psychol. Sci.}, \emph{26}(3), 237--242.
+
+\leavevmode\hypertarget{ref-Zech2018-bq}{}%
+Zech, J. R., Badgeley, M. A., Liu, M., Costa, A. B., Titano, J. J., \& Oermann, E. K. (2018). Variable generalization performance of a deep learning model to detect pneumonia in chest radiographs: A cross-sectional study. \emph{PLoS Med.}, \emph{15}(11), e1002683.
 
 \leavevmode\hypertarget{ref-zhang2001segmentation}{}%
 Zhang, Y., Brady, M., \& Smith, S. (2001). Segmentation of brain mr images through a hidden markov random field model and the expectation-maximization algorithm. \emph{IEEE Transactions on Medical Imaging}, \emph{20}(1), 45--57.
