@@ -1,7 +1,7 @@
 # List of other publications {-}
 \chaptermark{List of other publications}
 
-van der Maas, H.L.J., **Snoek, L.**, & Stevenson, C. (2021). How much intelligence is there in artificial intelligence? A 2020 update.\newline
+van der Maas, H.L.J., **Snoek, L.**, & Stevenson, C. (2021). How much intelligence is there in artificial intelligence? A 2020 update. _Intelligence, 87_, 101548.\newline
 
 Hoogeveen, S., **Snoek, L.**, & Van Elk, M. (2020). Religious belief and cognitive conflict sensitivity: A preregistered fMRI study. _Cortex, 129_, 247--265.\newline
 
