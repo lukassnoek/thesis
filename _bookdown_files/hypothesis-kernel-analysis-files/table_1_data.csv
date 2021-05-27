@@ -1,0 +1,29 @@
+﻿Emotion category,Darwin (1872),EMFACS,Matsumoto et al. (2008),Cordaro et al. (2018) - ref.,Cordaro et al. (2018) - ICP,Keltner et al. (2019),Jack/Schyns
+Anger,4 + 5 + 24 + 38,$\boldsymbol{\cdot}$ 4 + 5 + 7 + 10 + 22 + 23 + (25 $\lor$ 26),4 + (5 $\lor$ 7) + 22 + 23 + 24,4 + 5 + 7 + 23,4 + 7,4 + 7,4 + 5 + 17 + 23 +24
+,,$\boldsymbol{\cdot}$ 4 + 5 + 7 + 10 + 23 + (25 $\lor$ 26),,,,,
+,,$\boldsymbol{\cdot}$ 4 + 5 + 7 + 17 + (23 $\lor$ 24),,,,,
+,,$\boldsymbol{\cdot}$ 4 + 5 + 7 + (23 $\lor$ 24),,,,,
+,,$\boldsymbol{\cdot}$ 4 + (5 $\lor$ 7),,,,,
+,,$\boldsymbol{\cdot}$ 17 + 24,,,,,
+Disgust,10 + 16 + 22 + 25 + 26,$\boldsymbol{\cdot}$ (9 $\lor$ 10) + 17,"(9 $\lor$ 10), (25 $\lor$ 26)",9 + 15 + 16,4 + 6 + 7 + 9 + 10 + 25 + (26 $\lor$ 27),7 + 9 + 19 + 25 + 26,9 + 10 + 11 + 43
+,,$\boldsymbol{\cdot}$ (9 $\lor$ 10) + 16 + (25 $\lor$ 26),,,,,
+,,$\boldsymbol{\cdot}$ (9 $\lor$ 10),,,,,
+Fear,1 + 2 + 5 + 20,$\boldsymbol{\cdot}$ 1 + 2 + 4,"1 + 2 + 4 + 5 + 20, (25 $\lor$ 26)",1 + 2 + 4 + 5 + 20 + 25 + 26,1 + 2 + 5 + 7 + 25 + (26 $\lor$ 27),1 + 2 + 4 + 5 + 7 + 20 + 25,4 + 5 + 20
+,,$\boldsymbol{\cdot}$ 1 + 2 + 4 + 5 + 20 + (25 $\lor$ 26 $\lor$ 27),,,,,
+,,$\boldsymbol{\cdot}$ 1 + 2 + 4 + 5,,,,,
+,,$\boldsymbol{\cdot}$ 1 + 2 + =5 + (25 $\lor$ 26 $\lor$ 27),,,,,
+,,$\boldsymbol{\cdot}$ 5 + 20 + (25 $\lor$ 26 $\lor$ 27),,,,,
+,,$\boldsymbol{\cdot}$ 5 + 20,,,,,
+,,$\boldsymbol{\cdot}$ 20,,,,,
+Happiness,6 + 12,$\boldsymbol{\cdot}$ 12,6 + 12,6 + 12,6 + 7 + 12 + 16 + 25 + (26 $\lor$ 27),6 + 7 + 12 + 25 + 26,6 + 12 + 13 + 14 +25
+,,$\boldsymbol{\cdot}$ 6 + 12,,,,,
+Sadness,1 + 15,$\boldsymbol{\cdot}$ 1 + 4,"1 + 15, 4, 17",1 + 4 + 5,4 + 43,1 + 4 + 6 + 15 + 17,4 + 15 + 17 + 24 + 43
+,,$\boldsymbol{\cdot}$ 1 + 4 + (11 $\lor$ 15),,,,,
+,,$\boldsymbol{\cdot}$ 1 + 4 + 15 + 17,,,,,
+,,$\boldsymbol{\cdot}$ 6 + 15,,,,,
+,,$\boldsymbol{\cdot}$ 11 + 17,,,,,
+,,$\boldsymbol{\cdot}$ 1,,,,,
+Surprise,1 + 2 + 5 + 25 + 26,$\boldsymbol{\cdot}$ 1 + 2 + 5 + (26 $\lor$ 27),1 + 2 + 5 + (25 $\lor$ 26),1 + 2 + 5 + 26,1 + 2 + 5 + 25 + (26 $\lor$ 27),1 + 2 + 5 + 25 + 26,1 + 2 + 5 + 26 + 27
+,,$\boldsymbol{\cdot}$ 1 + 2 + 5,,,,,
+,,$\boldsymbol{\cdot}$ 1 + 2 + (26 $\lor$ 27),,,,,
+,,$\boldsymbol{\cdot}$ 5 + (26 $\lor$ 27),,,,,

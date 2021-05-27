@@ -109,6 +109,7 @@ bibliography:
   - bib/confounds-decoding.bib
   - bib/aomic.bib
   - bib/morbid-curiosity.bib
+  - bib/hypothesis-kernel-analysis.bib
   - bib/static-vs-dynamic.bib
 
 citation_package: none

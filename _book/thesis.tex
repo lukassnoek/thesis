@@ -2260,6 +2260,154 @@ Despite the questions that the present study provokes, our findings represent an
 Bla bla
 \end{abstract} \newpage
 
+\hypertarget{hka-methods}{%
+\section{Methods}\label{hka-methods}}
+
+\hypertarget{hypothesis-kernel-analysis-1}{%
+\subsection{Hypothesis kernel analysis}\label{hypothesis-kernel-analysis-1}}
+
+To formalize AU-emotion mappings as predictive models, we propose a novel method which we call ``hypothesis kernel analysis''. In the context of the current study, we use this method to reframe AU-emotion mappings as classification models that predict the probability of an emotion given a set of AUs (analogous to how people attempt to infer the emotion from others' facial emotion expressions; Jack \& Schyns, \protect\hyperlink{ref-Jack2015-sh}{2015}). In what follows, we conceptually explain how the method works. For a detailed and more mathematical description of the method, we refer the reader to the \protect\hyperlink{hypothesis-kernel-analysis-supplement}{Supplementary Methods}.
+
+The underlying idea of the hypothesis kernel analysis is to predict a categorical dependent variable (e.g., the perceived emotion) based on the similarity between an \emph{observation} with a particular set of features (e.g., a face with a particular set of AUs; the independent variables) and statements of a \emph{hypothesis} (e.g., ``happiness is expressed by AUs 6 and 12''). This prediction can then be compared to real observations to evaluate the accuracy of the hypothesis. The three methodological challenges of this approach are how to measure the similarity between an observation and a hypothesis statement, how to derive a prediction based on this similarity, and how to compare the predictions to real data. Figure \ref{fig:fig-hka-2} outlines how we have solved these challenges in five steps, which we will describe in turn.
+
+\begin{figure}
+\centering
+\includegraphics{_bookdown_files/hypothesis-kernel-analysis-files/figures/figure_2.pdf}
+\caption{\label{fig:fig-hka-2}Schematic visualization of the proposed method using a set of hypothetical AU-emotion mappings (\(\mathbf{M}\)) and stimuli (\(\mathbf{S}\)) based on a small set of AUs (five in total). The variable \(P\) represents the number of variables (here: AUs), \(Q\) represents the number of classes (here: emotions), and \(N\) represents the number of trials (here: facial expression stimuli). Note that the AU space technically may contain any number of (\(P\)) dimensions, but is shown here in two dimensions for convenience.}
+\end{figure}
+
+
+
+To quantify the similarity between an observation and a hypothesis statement, we embed both in a multidimensional space that is spanned by a particular set of variables (e.g., different AUs). In this space, we start by representing each class of the dependent variable (corresponding to the statements of the hypothesis) as a separate point. In the current study, this amounts to embedding the different hypothesized AU configurations (e.g., ``happiness = AU12 + 6''; \(\mathbf{M}\) in Figure \ref{fig:fig-hka-2}) as points in ``AU space'', separately for each categorical emotion (see step 1 in Figure \ref{fig:fig-hka-2}). The coordinates of each point are determined by the hypothesized ``importance'' of each independent variable for that given class of the target variable. For example, the coordinates of each point in AU space represents the hypothesized relative intensity of each AU for a given emotion. As the AU-emotion mappings evaluated in the current study only specify whether an AU is included or excluded within a particular emotional configuration, we specify the coordinates of their embedding to be binary (0: excluded, 1: included). A different interpretation of the class embeddings described here is that they represent the location of a typical facial expression for this emotion in ``AU space'' according to a particular hypothesis.
+
+As a second step, we embed each data point in the same space as the hypotheses. This means, the data used for this purpose should contain the same variables as were used to embed the hypotheses. For example, in this study, we use emotion ratings (i.e., the target variable) in response to dynamic facial expression stimuli with random configurations of AUs (i.e., the independent variables; \(\mathbf{S}\) in Figure \ref{fig:fig-hka-2}) to test the hypothesized AU-emotion mappings (see \protect\hyperlink{hka-dataset}{Dataset used to evaluate mappings}).
+
+With the hypotheses and the data in the same space, the next step in our method is to compute, for each observation separately, the ``similarity'' between the data and each class of the target. For this purpose, we use \emph{kernel functions} (step 3 in Figure \ref{fig:fig-hka-2}), a technique that quantifies the similarity of two vectors. Any kernel function that computes a measure of similarity can be used, but in our analyses we use the cosine similarity as it normalizes the similarity by the magnitude (specifically, the L2 norm) of the data and hypothesis embeddings (but see Supplementary Figure \ref{fig:fig-hka-S3} for a comparison of model performance across different similarity and distance metrics).
+
+As a fourth step, we interpret the similarity between the data and a given class embedding as being proportional to the evidence for a given class. In other words, the more similar a data point is to the statement of a hypothesis the stronger the prediction for the associated class. To produce a probabilistic prediction of the classes given a particular observation and hypothesis, we normalize the similarity values to the 0-1 range using the \emph{softmax} function (step 4 in Figure \ref{fig:fig-hka-2}).\footnote{Readers familiar with machine learning algorithms may recognize this as a specific implementation of a K-nearest neighbor classification model with \emph{K} = 1, which is fit on the embedded hypotheses (\(\mathbf{M}\)) and cross-validated on the data (\(\mathbf{S}\)).}
+
+Finally, the accuracy of the model can be summarized by comparing its predictions to the actual values of the target variable in the dataset (see step 5 in Figure \ref{fig:fig-hka-2}). In this study, this means that the predictions are compared to the actual emotion ratings from participants. Although any model performance metric can be used, we use the ``Area under the Receiver operating curve'' (AUROC) as our model performance metric, because it is insensitive to class imbalance, allows for class-specific scores, and can handle probabilistic predictions (Dinga et al., \protect\hyperlink{ref-Dinga2019-mh}{2019}). We report class-specific scores, which means that each class of the categorical dependent variable (i.e., different emotions) gets a separate score with a chance level of 0.5 and a theoretical maximum score of 1.
+
+\hypertarget{ablation-and-follow-up-exploration-analyses}{%
+\subsection{Ablation and follow-up exploration analyses}\label{ablation-and-follow-up-exploration-analyses}}
+
+To gain a better understanding of why some mappings perform better than others, we performed an ``ablation analysis'', which entails removing (or ``ablating'') AUs one by one from each configuration for each evaluated mapping and subsequently rerunning the kernel analysis to observe how this impacts model performance. If ablating a particular AU \emph{decreases} model performance for a given emotion, it means that this AU is important for perceiving this emotion. If on the other hand ablating an AU \emph{increases} performance for a given emotion, it could mean that the inclusion of this AU in a given mapping is incorrect.
+
+Using the results from the ablation analyses, we explored strategies to enhance existing mappings. Specifically, we computed for each emotion which AUs, on average across mappings, led to a decrease in model performance after being ablated. We then ran follow-up analyses in which we enhanced existing mappings with the AUs that were found to decrease model performance in the ablation analyses and reran the predictive analysis. This was done for each AU and emotion separately. For example, if ablation of AU4 was found to decrease model performance for ``fear'' on average across mappings that included AU4 (i.e., all but Cordaro et al., 2018; ICP), we would rerun the predictive analysis for the mapping(s) that did not contain AU4 (i.e., Cordaro et al., 2018; ICP) using an ``enhanced'' mapping with AU4 appended.
+
+Finally, we constructed ``optimized'' models by, for each mapping separately, adding all AUs that led to a \emph{decrease} in model performance after ablation and removing all AUs that led to an \emph{increase} in model performance after ablation. Then, the predictive analysis was rerun and the ``optimized'' model performance was compared to the original model performance.
+
+\hypertarget{hka-noise-ceiling}{%
+\subsection{Noise ceiling estimation}\label{hka-noise-ceiling}}
+
+Instead of interpreting model performance relative to the theoretical optimum performance, we propose to interpret model performance relative to the \emph{noise ceiling}, an estimate of the in principle explainable portion of the target variable. The noise ceiling is a concept often used in systems neuroscience to correct model performance for noise in the measured brain data (Hsu et al., \protect\hyperlink{ref-Hsu2004-hs}{2004}; Huth et al., \protect\hyperlink{ref-Huth2012-yc}{2012}; Kay et al., \protect\hyperlink{ref-Kay2013-ch}{2013}). Traditionally, noise ceilings in neuroscience are applied in the context of within-subject regression models (Lage-Castellanos et al., \protect\hyperlink{ref-Lage-Castellanos2019-dm}{2019}\protect\hyperlink{ref-Lage-Castellanos2019-dm}{a}). Here, we develop a method to derive noise ceilings for classification models, i.e., models with a categorical target variable (such as categorical emotion ratings) that are applicable to both within-subject and between-subject models (see also Hebart et al., \protect\hyperlink{ref-Hebart2020-wp}{2020}). In this section, we explain our derivation of noise ceilings for classification models conceptually; the \protect\hyperlink{hypothesis-kernel-analysis-supplement}{Supplementary Methods} outline a more detailed and formal description.
+
+Noise ceiling estimation is a method that adjusts the theoretical maximum performance of a predictive model for the presence of irreducible noise in the data. As such, like the theoretical maximum, the noise ceiling imposes an upper bound on model performance. Another way to think about noise ceilings is that they split the variance of the data into three portions: the explained variance, the unexplained variance, and the ``irreducible'' noise (see Figure \ref{fig:fig-hka-3}). ``Irreducible'' is put in quotes because this proportion of noise can, in fact, be explained in principle as will be discussed in the \protect\hyperlink{kha-discussion}{Discussion} (see also the \protect\hyperlink{hypothesis-kernel-analysis-supplement}{Supplementary Methods}. Importantly, the noise ceiling thus indicates how much improvement in terms of model performance can be gained for a given dataset (i.e., unexplained variance) and how much cannot be explained by the model (i.e., the ``irreducible'' noise).
+
+\begin{figure}
+\centering
+\includegraphics{_bookdown_files/hypothesis-kernel-analysis-files/figures/figure_3.pdf}
+\caption{\label{fig:fig-hka-3}The noise ceiling partitions the variance into \emph{explained variance}, \emph{unexplained variance}, and \emph{``irreducible'' noise} for any given model (\(\mathbf{M}\)). Here, AUROC is used as the metric of model performance, but the noise ceiling can be estimated using any metric.}
+\end{figure}
+
+
+
+In the context of the current study, we use the variance (or ``inconsistency'') in emotion ratings across participants in response to the same set of facial expression stimuli to estimate a noise ceiling for the different AU-based models. The noise ceiling gives us insight into whether the evaluated set of AU-based models are sufficiently accurate to explain variance that can in principle be explained by AUs or whether we may need differently parameterized AU-based models. This way, the importance and limitations of AUs can be estimated empirically.
+
+\hypertarget{evaluated-mappings}{%
+\subsection{Evaluated mappings}\label{evaluated-mappings}}
+
+Many different AU-emotion mappings have been put forward, but in this study we assess those summarized in Barrett et al. (\protect\hyperlink{ref-Barrett2019-bc}{2019}) (Table 1). Additionally, we included the AU-emotion mappings from the ``emotional FACS'' (EMFACS) manual (Friesen \& Ekman, \protect\hyperlink{ref-Friesen1983-ft}{1983}). So, in total, we evaluated six hypothesized AU-emotion mappings, which are summarized in Table \ref{tab:tab-hka-1} (and an additional data-driven AU-emotion mapping, see below).
+
+\newpage
+\pagestyle{empty}
+\blandscape
+
+\begingroup\fontsize{7}{9}\selectfont
+
+\begin{ThreePartTable}
+\begin{TableNotes}[para]
+\item \textit{Note: } 
+\item Mappings evaluated in the current study. The mappings from Darwin (1872) were taken from Matsumoto et al. (2018). Both the “reference configuration” (ref.) and the “international core pattern” (ICP) from Cordaro et al. (2018) are included. The + symbol means that AUs occur together. AUs following a comma represent optional AUs. The inverted \textasciicircum{} symbol represents “or”. When multiple configurations are explicitly proposed for a given emotion (i.e., a “many-to-one” mapping), they are represented as separate bullet points.
+\end{TableNotes}
+\begin{longtabu} to \linewidth {>{\raggedright\arraybackslash}p{4em}>{\raggedright}X>{\raggedright\arraybackslash}p{10em}>{\raggedright}X>{\raggedright}X>{\raggedright}X>{\raggedright}X>{\raggedright}X}
+\caption{\label{tab:tab-hka-1}Evaluated AU-emotion mappings in our study}\\
+\toprule
+Emotion category & Darwin (1872) & EMFACS & Matsumoto et al. (2008) & Cordaro et al. (2018) - ref. & Cordaro et al. (2018) - ICP & Keltner et al. (2019) & Jack/Schyns\\
+\midrule
+\endfirsthead
+\caption[]{\label{tab:tab-hka-1}Evaluated AU-emotion mappings in our study \textit{(continued)}}\\
+\toprule
+Emotion category & Darwin (1872) & EMFACS & Matsumoto et al. (2008) & Cordaro et al. (2018) - ref. & Cordaro et al. (2018) - ICP & Keltner et al. (2019) & Jack/Schyns\\
+\midrule
+\endhead
+
+\endfoot
+\bottomrule
+\insertTableNotes
+\endlastfoot
+Anger & 4 + 5 + 24 + 38 & $\boldsymbol{\cdot}$ 4 + 5 + 7 + 10 + 22 + 23 + (25 $\lor$ 26) & 4 + (5 $\lor$ 7) + 22 + 23 + 24 & 4 + 5 + 7 + 23 & 4 + 7 & 4 + 7 & 4 + 5 + 17 + 23 +24\\
+ &  & $\boldsymbol{\cdot}$ 4 + 5 + 7 + 10 + 23 + (25 $\lor$ 26) &  &  &  &  & \\
+ &  & $\boldsymbol{\cdot}$ 4 + 5 + 7 + 17 + (23 $\lor$ 24) &  &  &  &  & \\
+ &  & $\boldsymbol{\cdot}$ 4 + 5 + 7 + (23 $\lor$ 24) &  &  &  &  & \\
+ &  & $\boldsymbol{\cdot}$ 4 + (5 $\lor$ 7) &  &  &  &  & \\
+ &  & $\boldsymbol{\cdot}$ 17 + 24 &  &  &  &  & \\
+Disgust & 10 + 16 + 22 + 25 + 26 & $\boldsymbol{\cdot}$ (9 $\lor$ 10) + 17 & (9 $\lor$ 10), (25 $\lor$ 26) & 9 + 15 + 16 & 4 + 6 + 7 + 9 + 10 + 25 + (26 $\lor$ 27) & 7 + 9 + 19 + 25 + 26 & 9 + 10 + 11 + 43\\
+ &  & $\boldsymbol{\cdot}$ (9 $\lor$ 10) + 16 + (25 $\lor$ 26) &  &  &  &  & \\
+ &  & $\boldsymbol{\cdot}$ (9 $\lor$ 10) &  &  &  &  & \\
+Fear & 1 + 2 + 5 + 20 & $\boldsymbol{\cdot}$ 1 + 2 + 4 & 1 + 2 + 4 + 5 + 20, (25 $\lor$ 26) & 1 + 2 + 4 + 5 + 20 + 25 + 26 & 1 + 2 + 5 + 7 + 25 + (26 $\lor$ 27) & 1 + 2 + 4 + 5 + 7 + 20 + 25 & 4 + 5 + 20\\
+ &  & $\boldsymbol{\cdot}$ 1 + 2 + 4 + 5 + 20 + (25 $\lor$ 26 $\lor$ 27) &  &  &  &  & \\
+ &  & $\boldsymbol{\cdot}$ 1 + 2 + 4 + 5 &  &  &  &  & \\
+ &  & $\boldsymbol{\cdot}$ 1 + 2 + =5 + (25 $\lor$ 26 $\lor$ 27) &  &  &  &  & \\
+ &  & $\boldsymbol{\cdot}$ 5 + 20 + (25 $\lor$ 26 $\lor$ 27) &  &  &  &  & \\
+ &  & $\boldsymbol{\cdot}$ 5 + 20 &  &  &  &  & \\
+ &  & $\boldsymbol{\cdot}$ 20 &  &  &  &  & \\
+Happiness & 6 + 12 & $\boldsymbol{\cdot}$ 12 & 6 + 12 & 6 + 12 & 6 + 7 + 12 + 16 + 25 + (26 $\lor$ 27) & 6 + 7 + 12 + 25 + 26 & 6 + 12 + 13 + 14 +25\\
+ &  & $\boldsymbol{\cdot}$ 6 + 12 &  &  &  &  & \\
+Sadness & 1 + 15 & $\boldsymbol{\cdot}$ 1 + 4 & 1 + 15, 4, 17 & 1 + 4 + 5 & 4 + 43 & 1 + 4 + 6 + 15 + 17 & 4 + 15 + 17 + 24 + 43\\
+ &  & $\boldsymbol{\cdot}$ 1 + 4 + (11 $\lor$ 15) &  &  &  &  & \\
+ &  & $\boldsymbol{\cdot}$ 1 + 4 + 15 + 17 &  &  &  &  & \\
+ &  & $\boldsymbol{\cdot}$ 6 + 15 &  &  &  &  & \\
+ &  & $\boldsymbol{\cdot}$ 11 + 17 &  &  &  &  & \\
+ &  & $\boldsymbol{\cdot}$ 1 &  &  &  &  & \\
+Surprise & 1 + 2 + 5 + 25 + 26 & $\boldsymbol{\cdot}$ 1 + 2 + 5 + (26 $\lor$ 27) & 1 + 2 + 5 + (25 $\lor$ 26) & 1 + 2 + 5 + 26 & 1 + 2 + 5 + 25 + (26 $\lor$ 27) & 1 + 2 + 5 + 25 + 26 & 1 + 2 + 5 + 26 + 27\\
+ &  & $\boldsymbol{\cdot}$ 1 + 2 + 5 &  &  &  &  & \\
+ &  & $\boldsymbol{\cdot}$ 1 + 2 + (26 $\lor$ 27) &  &  &  &  & \\
+ &  & $\boldsymbol{\cdot}$ 5 + (26 $\lor$ 27) &  &  &  &  & \\*
+\end{longtabu}
+\end{ThreePartTable}
+\endgroup{}
+
+\elandscape
+\newpage
+\pagestyle{empty}
+
+All of these mappings propose that a number of AUs must occur together to communicate a particular emotion. However, the comparison between them is complicated by the fact that not all of them posit a single, consistent set of AUs per emotion. First, some contain multiple sets, such as the EMFACS manual (Friesen \& Ekman, \protect\hyperlink{ref-Friesen1983-ft}{1983}) proposing that ``sadness'' can be expressed with AUs 1 + 4 or AUs 6 + 15. Second, some offer optional AUs for a set, such as Matsumoto et al. (\protect\hyperlink{ref-Matsumoto2008-qk}{2008}) proposing that ``sadness'' is associated with AUs 1 + 15 and optionally with AUs 4 and/or 17. Thirdly, some describe \emph{mutually exclusive} options of AUs for a set, such as Matsumoto et al. (\protect\hyperlink{ref-Matsumoto2008-qk}{2008}) proposing that ``surprise'' can be communicated with AUs 1 + 2 + 5 in combination with \emph{either} AU25 \emph{or} AU26.
+
+We address this issue by explicitly formulating all possible AU configurations that communicate a particular emotion for each mapping. For example, Matsumoto et al.~(2008) propose that ``disgust'' is associated with AU 9 or 10 and, optionally, AU 25 or 26, which yields six different possible configurations (9; 10; 9 + 25; 9 + 26; 10 + 25; 10 + 26). The specific configurations for each emotion derived from each evaluated mapping can be viewed in the study's code repository (in \texttt{mappings.py}; see \protect\hyperlink{hka-code}{Code Availability} section). In our analysis framework, we deal with multiple configurations per emotion (within a particular mapping), for each prediction separately, by using the configuration with the largest similarity to the stimulus under consideration (which occurs in between steps 3 and 4 in Figure \ref{fig:fig-hka-2}). We demonstrate that this procedure does not give an unfair advantage to mappings with more configurations using a simulation analysis (see Supplementary Figure \ref{fig:fig-hka-S4}).
+
+In addition to evaluating existing mappings from the literature, we also constructed a mapping based on a data-driven analysis of the relationship between the AUs and emotion ratings from the dataset we use to evaluate the mappings. Importantly, to avoid circularity in our data-driven analysis (``double dipping''; Kriegeskorte, Simmons, Bellgowan, et al., \protect\hyperlink{ref-Kriegeskorte2009-yz}{2009}\protect\hyperlink{ref-Kriegeskorte2009-yz}{b}), we performed the mapping estimation and evaluation on different partitions of the data (i.e., cross-validation). Specifically, we estimated the mapping on approximately 50\% of the trials from 50\% of the participants (the ``train set'') and evaluated the mapping on the other 50\% of trials from the other 50\% of the participants (the ``test set''). Importantly, the train and test set contained unique facial expressions and unique face identities, thus effectively treating both subject and stimulus as a random effect (Westfall et al., \protect\hyperlink{ref-westfall2016fixing}{2016}).
+
+To estimate the data-driven mapping, we followed the procedure specified in Yu et al. (\protect\hyperlink{ref-Yu2012-ag}{2012}). For each AU and emotion, we computed the Pearson correlation between the binary activation values (1 if active, 0 otherwise) and the binary emotion rating (1 if this emotion was rated, 0 otherwise) for each participant in the train set. The raw correlations were averaged across the participants and binarized based on whether the correlation was statistically significant at \(\alpha = 0.05\) (1 if significant, 0 otherwise; uncorrected for multiple comparisons), which resulted in a binary 6 (emotion) × 33 (AU) mapping matrix.
+
+\hypertarget{hka-dataset}{%
+\subsection{Dataset used to evaluate mappings}\label{hka-dataset}}
+
+We use data from an existing dataset (@ Yu et al., \protect\hyperlink{ref-Yu2012-ag}{2012}) which contains emotion ratings in response to 2400 dynamic facial expressions (with a duration of 1.25 seconds) with random AU configurations from 60 subjects. Each stimulus was composed of one of eight ``base faces'' and a random number of activated AUs drawn from a set of 42 AUs. Per stimulus, the number of AUs was drawn from a binomial distribution with parameters \(n = 6\) and \(p = 0.5\). The selected AUs varied in amplitude from 0 (not activated) to 1 (fully activated) in steps of 0.25 and a set of temporal parameters which determined the exact time course of each AU (see for details Yu et al., 2012). The original set of 42 AUs contained both compound AUs (such as AU25-12 and AU1-2) and AUs that could be activated both unilaterally (left or right) and bilaterally (such as AU12). In order to encode these AUs into independent variables, we recoded the compound AUs (e.g., activation of AU1-2 was recoded as activation of both AU1 and AU2) and bilateral AUs (e.g., activation of AU12 was recoded as activation of both AU12L and AU12R), yielding a total of 33 AUs: 1, 2L, 2R, 4, 5, 6L, 6R, 7L, 7R, 9, 10L, 10R, 11L, 11R, 12L, 12R, 13, 14L, 14R, 15, 16, 17, 20L, 20R, 22, 23, 24, 25, 26, 27, 38, 39, 43 (where L = left, R = right).
+
+The emotion ratings were collected in a 7 alternative forced-choice facial expression categorization task in which participants were instructed to label the stimuli using one of the six universal basic emotions (``anger'', ``disgust'', ``fear'', ``happiness'', ``sadness'', and ``surprise) or, when the stimulus matched none of the emotion categories, ``other''. In addition, participants rated the ``intensity'' of the perceived emotion, which ranged from 1 (not intense at all) to 5 (very intense). Trials in which the stimulus was rated as ``other'' were removed from the dataset (because the evaluated mappings do not contain hypotheses about this category) leaving a grand total of 121,902 trials (average per subject: 2031.7 trials, \emph{SD}: 311.5) for our analysis. This grand total contains 4660 repeated observations with an average of 26.16 (\emph{SD}: 14.92) repetitions.
+
+\hypertarget{hka-code}{%
+\subsection{Code availability}\label{hka-code}}
+
+All code used for this study's analysis and visualization of results is publicly available from Github: \url{https://github.com/lukassnoek/hypothesis-kernel-analysis}. The analyses were implemented in the Python programming language (version 3.7) and use several third-party packages, including \emph{numpy} (Harris et al., \protect\hyperlink{ref-Harris2020-en}{2020}), \emph{pandas} (McKinney \& Others, \protect\hyperlink{ref-McKinney2011-kl}{2011}), \emph{scikit-learn} (Pedregosa, Varoquaux, Gramfort, Michel, Thirion, Grisel, Blondel, Prettenhofer, Weiss, Dubourg, \& others, \protect\hyperlink{ref-pedregosa2011scikit}{2011}), and \emph{seaborn} (Waskom, \protect\hyperlink{ref-waskom2021seaborn}{2021}). A Python package to compute noise ceilings as described in the current study can be found on Github: \url{https://github.com/lukassnoek/noiseceiling}.
+
+\hypertarget{hka-results}{%
+\section{Results}\label{hka-results}}
+
+\hypertarget{hka-discussion}{%
+\section{Discussion}\label{hka-discussion}}
+
 \hypertarget{static-vs-dynamic}{%
 \chapter{Affective face perception integrates both static and dynamic information}\label{static-vs-dynamic}}
 
@@ -2460,7 +2608,7 @@ The issues associated with group-level tests of model performance against chance
 \hypertarget{noise-ceiling-estimation}{%
 \subsection{Noise ceiling estimation}\label{noise-ceiling-estimation}}
 
-If there is measurement noise in the target variable, perfect model performance (i.e., at the theoretical maximum) is impossible. In case of measurement noise, it is more insightful to compare model performance to an estimate of the \emph{noise ceiling}, an upper bound that is adjusted for measurement noise in the target variable (Lage-Castellanos et al., \protect\hyperlink{ref-lage2019methods}{2019}). We developed a method to derive noise ceilings for classification models, which is reported and explained in detail in Chapter 7. We use this method to estimate noise ceilings for our categorical emotion models.
+If there is measurement noise in the target variable, perfect model performance (i.e., at the theoretical maximum) is impossible. In case of measurement noise, it is more insightful to compare model performance to an estimate of the \emph{noise ceiling}, an upper bound that is adjusted for measurement noise in the target variable (Lage-Castellanos et al., \protect\hyperlink{ref-lage2019methods}{2019}\protect\hyperlink{ref-lage2019methods}{b}). We developed a method to derive noise ceilings for classification models, which is reported and explained in detail in Chapter 7. We use this method to estimate noise ceilings for our categorical emotion models.
 
 For the valence and arousal models, we developed a method to estimate a noise ceiling, assuming that the regular \(R^{2}\) score is used, that is very similar to the aforementioned method to estimate noise ceilings for classification models (see for a related method, Sahani \& Linden, \protect\hyperlink{ref-Sahani2003-kk}{2003}; Schoppe et al., \protect\hyperlink{ref-Schoppe2016-bu}{2016}). Recall that the \(R^{2}\) score is computed as 1 minus the ratio of the residual sum of squares (RSS) to the total sums of squares (TSS):
 
@@ -2656,9 +2804,9 @@ Steven Miletić for helpful discussions regarding the Bayesian multivariate reve
 \hypertarget{general-discussion}{%
 \chapter{Discussion}\label{general-discussion}}
 
-Psychology and cognitive neuroscience are relatively young scientific fields. Using the empirical experimental cycle, these fields have developed and tested many different theories about the human mind and brain over the years, almost exclusively by means of hypothesis testing. In the past twenty years or so, we have seen a (renewed) interest in a more computational, predictive approach that is used in addition and complementary to the traditional hypothesis testing approach. In this thesis, inspired by techniques and models from machine learning, I explored how this predictive approach can be applied and adapted to behavioral research (chapter \ref{hypothesis-kernel-analysis} and \ref{static-vs-dynamic}) and neuroimaging research (chapter \ref{shared-states} and \ref{confounds-decoding}). This thesis also addresses the importance of large, publicly accessible datasets, an example of which is described in chapter \ref{aomic}. Finally, highlighting the fact that arguably the most effective scientific methodology embraces both predictive modelling and hypothesis testing, chapter \ref{morbid-curiosity} outlined an example of a fully preregistered, confirmatory neuroimaging study. In the \protect\hyperlink{general-introduction}{general introduction} to this thesis, I described how predictive modelling can complement the hypothesis testing approach in psychology and cognitive neuroscience; in what follows, I will outline what I think is necessary to facilitate the adoption of this approach.
+Psychology and cognitive neuroscience are relatively young scientific fields. Using the empirical cycle, these fields have developed and tested many different theories about the human mind and brain over the years, almost exclusively by means of hypothesis testing. In the past twenty years or so, we have seen a (renewed) interest in a more computational, predictive approach that is used in addition and complementary to the traditional hypothesis testing approach (Yarkoni \& Westfall, \protect\hyperlink{ref-Yarkoni2017-om}{2017}). In this thesis, inspired by techniques and models from machine learning, I explored how this predictive approach can be applied and adapted to behavioral research (chapter \ref{hypothesis-kernel-analysis} and \ref{static-vs-dynamic}) and neuroimaging research (chapter \ref{shared-states} and \ref{confounds-decoding}). This thesis also addresses the importance of large, publicly accessible datasets, an example of which is described in chapter \ref{aomic}. Finally, highlighting the fact that arguably the most effective scientific methodology embraces both predictive modelling and hypothesis testing, chapter \ref{morbid-curiosity} outlined an example of a fully preregistered, confirmatory neuroimaging study. In the \protect\hyperlink{general-introduction}{general introduction} to this thesis, I described how predictive modelling can complement the hypothesis testing approach in psychology and cognitive neuroscience; in what follows, I will outline what I think is necessary to facilitate the adoption of this approach.
 
-An important step in the adoption of a ``predictive approach'' is changing the way we derive research questions and hypotheses. The hypothetico-deductive tradition in psychology and cognitive neuroscience has taught us that research questions should be based on theories that, ideally, can be answered using statistical tests of binary hypotheses (Kellen, \protect\hyperlink{ref-Kellen2019-af}{2019}). The consequence of this approach is that research questions only capture a very specific part of a target system. Instead, we should steer our research questions towards the mechanisms behind particular cognitive capacities and behaviors (Rooij \& Baggio, \protect\hyperlink{ref-Van_Rooij2021-bk}{2021}). For example, instead of investigating whether certain categorical emotions are universally recognized, one could try to construct a model of emotion recognition and show if and how culture affects this model {[}Jack et al. (\protect\hyperlink{ref-Jack2009-yy}{2009}); Chapter \ref{hypothesis-kernel-analysis}{]}. As chapter \ref{shared-states} in this thesis shows, however, studies may feature both hypothesis tests as well as (elements of) predictive models. I think that if one aims to adopt a predictive approach, a good rule of thumb is to ask oneself whether the research question can be answered with ``yes'' or ``no''; if that is the case, I would recommend to try to rephrase the question such that the research question revolves around the word ``how'' and cannot be answered using a simple ``yes'' or ``no'' answer.
+An important step in the adoption of a ``predictive approach'' is changing the way we derive research questions and hypotheses. The hypothetico-deductive tradition in psychology and cognitive neuroscience has taught us that research questions should be based on theories that, ideally, can be answered using statistical tests of binary hypotheses (Kellen, \protect\hyperlink{ref-Kellen2019-af}{2019}). The consequence of this approach is that research questions only capture a very specific part of a target system. Instead, we should steer our research questions towards the mechanisms behind particular cognitive capacities and behaviors (Rooij \& Baggio, \protect\hyperlink{ref-Van_Rooij2021-bk}{2021}). For example, instead of investigating whether certain categorical emotions are universally recognized, one could try to construct a model of emotion recognition and show if and how culture affects this model (Jack et al., \protect\hyperlink{ref-Jack2009-yy}{2009}). As chapter \ref{shared-states} in this thesis shows, however, studies may feature both hypothesis tests as well as (elements of) predictive models. I think that if one aims to adopt a predictive approach, a good rule of thumb is to ask oneself whether the research question can be answered with ``yes'' or ``no''; if that is the case, I would recommend to try to rephrase the question such that the research question revolves around the word ``how'' and cannot be answered using a simple ``yes'' or ``no'' answer.
 
 Adopting a more predictive approach also means that we should perhaps not let theory guide our research as much as in the hypothesis testing approach. Of course, theories may inspire elements of predictive models (e.g., constructionism tells us that we should not limit our models of emotion to perceptual inputs only; Barrett et al., \protect\hyperlink{ref-Barrett2019-bc}{2019}), but they should not determine all aspects of the study design, experiment, and statistical model (Jack et al., \protect\hyperlink{ref-Jack2017-qp}{2017}). Instead, the data used for predictive modelling, whether that is observational or experimental data, should ideally allow for exploration and comparison of different models (Gelfert, \protect\hyperlink{ref-Gelfert2016-hd}{2016}). This way, the ``information gain'' from a single experiment or study can be much higher than when conducting a single hypothesis test.
 
@@ -4377,6 +4525,9 @@ Franken, I. H. A., Muris, P., \& Rassin, E. (2005). Psychometric properties of t
 \leavevmode\hypertarget{ref-Franklin2019-qo}{}%
 Franklin, R. G., Adams, R. B., Steiner, T. G., \& Zebrowitz, L. A. (2019). Reading the lines in the face: The contribution of angularity and roundness to perceptions of facial anger and joy. \emph{Emotion}, \emph{19}(2), 209--218.
 
+\leavevmode\hypertarget{ref-Friesen1983-ft}{}%
+Friesen, W. V., \& Ekman. (1983). EMFACS-7: Emotional facial action coding system. \emph{Unpublished Manuscript, University of California at San Francisco}, \emph{2}(36), 1.
+
 \leavevmode\hypertarget{ref-Frigg2020-hp}{}%
 Frigg, R., \& Hartmann, S. (2020). Models in Science. In E. N. Zalta (Ed.), \emph{The Stanford encyclopedia of philosophy} (Spring 2020). Metaphysics Research Lab, Stanford University.
 
@@ -4545,6 +4696,9 @@ Hebart, M. N., \& Baker, C. I. (2017). Deconstructing multivariate decoding for 
 \leavevmode\hypertarget{ref-Hebart2018-dz}{}%
 Hebart, M. N., Bankson, B. B., Harel, A., Baker, C. I., \& Cichy, R. M. (2018). The representational dynamics of task and object processing in humans. \emph{Elife}, \emph{7}.
 
+\leavevmode\hypertarget{ref-Hebart2020-wp}{}%
+Hebart, M. N., Zheng, C. Y., Pereira, F., \& Baker, C. I. (2020). Revealing the multidimensional mental representations of natural objects underlying human similarity judgements. \emph{Nat Hum Behav}, \emph{4}(11), 1173--1185.
+
 \leavevmode\hypertarget{ref-Hess2009-jz}{}%
 Hess, U., Adams, R. B., Jr, Grammer, K., \& Kleck, R. E. (2009). Face gender and emotion expression: Are angry women more like men? \emph{J. Vis.}, \emph{9}(12), 19.1--8.
 
@@ -4569,11 +4723,17 @@ Höfling, T. T. A., Gerdes, A. B. M., Föhl, U., \& Alpers, G. W. (2020). Read m
 \leavevmode\hypertarget{ref-hsee2016pandora}{}%
 Hsee, C. K., \& Ruan, B. (2016). The pandora effect: The power and peril of curiosity. \emph{Psychological Science}, \emph{27}(5), 659--666.
 
+\leavevmode\hypertarget{ref-Hsu2004-hs}{}%
+Hsu, A., Borst, A., \& Theunissen, F. E. (2004). Quantifying variability in neural responses and its application for the validation of model predictions. \emph{Network}, \emph{15}(2), 91--109.
+
 \leavevmode\hypertarget{ref-Huntenburg2014-ps}{}%
 Huntenburg, J. M. (2014). \emph{Evaluating nonlinear coregistration of BOLD EPI and t1w images} {[}PhD thesis{]}. Freie Universität Berlin; pure.mpg.de.
 
 \leavevmode\hypertarget{ref-Hunter2007-at}{}%
 Hunter. (2007). Matplotlib: A 2D graphics environment. \emph{IEEE Ann. Hist. Comput.}, \emph{9}, 90--95.
+
+\leavevmode\hypertarget{ref-Huth2012-yc}{}%
+Huth, A. G., Nishimoto, S., Vu, A. T., \& Gallant, J. L. (2012). A continuous semantic space describes the representation of thousands of object and action categories across the human brain. \emph{Neuron}, \emph{76}(6), 1210--1224.
 
 \leavevmode\hypertarget{ref-Ince2020-mr}{}%
 Ince, R. A. A., Kay, J. W., \& Schyns, P. G. (2020). Bayesian inference of population prevalence. In \emph{bioRxiv} (p. 2020.07.08.191106).
@@ -4665,6 +4825,9 @@ Kay, K. N. (2017). Principles for models of neural information processing. \emph
 \leavevmode\hypertarget{ref-kay2008identifying}{}%
 Kay, K. N., Naselaris, T., Prenger, R. J., \& Gallant, J. L. (2008). Identifying natural images from human brain activity. \emph{Nature}, \emph{452}(7185), 352--355.
 
+\leavevmode\hypertarget{ref-Kay2013-ch}{}%
+Kay, K. N., Winawer, J., Mezer, A., \& Wandell, B. A. (2013). Compressive spatial summation in human visual cortex. \emph{J. Neurophysiol.}, \emph{110}(2), 481--494.
+
 \leavevmode\hypertarget{ref-Kellen2019-af}{}%
 Kellen, D. (2019). A model hierarchy for psychological science. \emph{Computational Brain \& Behavior}, \emph{2}(3), 160--165.
 
@@ -4737,8 +4900,11 @@ Kunz, M., Meixner, D., \& Lautenbacher, S. (2019). Facial muscle movements encod
 \leavevmode\hypertarget{ref-kveraga2015if}{}%
 Kveraga, K., Boshyan, J., Adams Jr, R. B., Mote, J., Betz, N., Ward, N., Hadjikhani, N., Bar, M., \& Barrett, L. F. (2015). If it bleeds, it leads: Separating threat from mere negativity. \emph{Social Cognitive and Affective Neuroscience}, \emph{10}(1), 28--35.
 
+\leavevmode\hypertarget{ref-Lage-Castellanos2019-dm}{}%
+Lage-Castellanos, A., Valente, G., Formisano, E., \& De Martino, F. (2019a). Methods for computing the maximum performance of computational models of fMRI responses. \emph{PLoS Comput. Biol.}, \emph{15}(3), e1006397.
+
 \leavevmode\hypertarget{ref-lage2019methods}{}%
-Lage-Castellanos, A., Valente, G., Formisano, E., \& De Martino, F. (2019). Methods for computing the maximum performance of computational models of fMRI responses. \emph{PLoS Computational Biology}, \emph{15}(3), e1006397.
+Lage-Castellanos, A., Valente, G., Formisano, E., \& De Martino, F. (2019b). Methods for computing the maximum performance of computational models of fMRI responses. \emph{PLoS Computational Biology}, \emph{15}(3), e1006397.
 
 \leavevmode\hypertarget{ref-lakens2013calculating}{}%
 Lakens, D. (2013). Calculating and reporting effect sizes to facilitate cumulative science: A practical primer for t-tests and anovas. \emph{Frontiers in Psychology}, \emph{4}, 863.
@@ -4823,6 +4989,9 @@ Marchewka, A., Żurawski, Ł., Jednoróg, K., \& Grabowska, A. (2014). The nenck
 
 \leavevmode\hypertarget{ref-marvin2016curiosity}{}%
 Marvin, C. B., \& Shohamy, D. (2016). Curiosity and reward: Valence predicts choice and information prediction errors enhance learning. \emph{Journal of Experimental Psychology: General}, \emph{145}(3), 266.
+
+\leavevmode\hypertarget{ref-Matsumoto2008-qk}{}%
+Matsumoto, D., Keltner, D., Shiota, M. N., O'Sullivan, M., \& Frank, M. (2008). Facial expressions of emotion. \emph{Handbook of Emotions., 3rd Ed.}, \emph{3}, 211--234.
 
 \leavevmode\hypertarget{ref-McCarthy2019-yt}{}%
 McCarthy, P. (2019). \emph{FSLeyes}.
@@ -5297,6 +5466,9 @@ Wegrzyn, M., Vogt, M., Kireclioglu, B., Schneider, J., \& Kissler, J. (2017). Ma
 
 \leavevmode\hypertarget{ref-Weichwald2015-aj}{}%
 Weichwald, S., Meyer, T., Özdenizci, O., Schölkopf, B., Ball, T., \& Grosse-Wentrup, M. (2015). Causal interpretation rules for encoding and decoding models in neuroimaging. \emph{Neuroimage}, \emph{110}, 48--59.
+
+\leavevmode\hypertarget{ref-westfall2016fixing}{}%
+Westfall, J., Nichols, T. E., \& Yarkoni, T. (2016). Fixing the stimulus-as-fixed-effect fallacy in task fMRI. \emph{Wellcome Open Research}, \emph{1}.
 
 \leavevmode\hypertarget{ref-westfall2016statistically}{}%
 Westfall, J., \& Yarkoni, T. (2016). Statistically controlling for confounding constructs is harder than you think. \emph{PloS One}, \emph{11}(3), e0152719.

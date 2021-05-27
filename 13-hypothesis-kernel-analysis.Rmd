@@ -1,5 +1,0 @@
-`r if (knitr::is_html_output()) '
-# Supplement to Chapter 6 {#hypothesis-kernel-analysis-supplement}
-' else '
-# Supplement to Chapter \\@ref(hypothesis-kernel-analysis) {#hypothesis-kernel-analysis-supplement}
-'`
