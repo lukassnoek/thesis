@@ -1,0 +1,26 @@
+﻿Emotion,AU,$\Delta$ AUROC,Affected mappings
+Anger,AU10L,0.04,"Darwin, Matsumoto, Keltner, Cordaro (ref.), Cordaro (ICP)"
+,AU10R,0.039,"Darwin, Matsumoto, Keltner, Cordaro (ref.), Cordaro (ICP)"
+,AU09,0.033,"Darwin, Matsumoto, Keltner, Cordaro (ref.), Cordaro (ICP), EMFACS"
+,AU22,0.019,"Darwin, Keltner, Cordaro (ref.), Cordaro (ICP)"
+,AU25,0.017,"Darwin, Matsumoto, Keltner, Cordaro (ref.), Cordaro (ICP), Jack/Schyns"
+,AU16,0.012,"Darwin, Matsumoto, Keltner, Cordaro (ref.), Cordaro (ICP), EMFACS"
+,,,
+Disgust,AU09,0.043,Darwin
+,AU10L,0.039,"Keltner, Cordaro (ref.)"
+,AU10R,0.032,"Keltner, Cordaro (ref.)"
+,AU06R,0.018,"Darwin, Matsumoto, Keltner, Cordaro (ref.), EMFACS, Jack/Schyns"
+,,,
+Fear,AU20R,0.075,Cordaro (ICP)
+,AU20L,0.072,Cordaro (ICP)
+,AU04,0.026,"Darwin, Cordaro (ICP)"
+,,,
+Happy,AU14L,0.031,"Darwin, Matsumoto, Keltner, Cordaro (ref.), Cordaro (ICP), EMFACS"
+,AU14R,0.029,"Darwin, Matsumoto, Keltner, Cordaro (ref.), Cordaro (ICP), EMFACS"
+,AU13,0.01,"Darwin, Matsumoto, Keltner, Cordaro (ref.), Cordaro (ICP), EMFACS"
+,,,
+Sadness,AU43,0.045,"Darwin, Matsumoto, Keltner, Cordaro (ref.), EMFACS"
+,AU04,0.044,Darwin
+,AU17,0.018,"Darwin, Cordaro (ref.), Cordaro (ICP)"
+,,,
+Surprise,AU27,0.025,"Darwin, Matsumoto, Keltner, Cordaro (ref.)"

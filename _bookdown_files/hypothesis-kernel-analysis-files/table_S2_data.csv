@@ -1,0 +1,41 @@
+﻿Emotion,AU,$\Delta$ AUROC,Affected mappings
+Anger,AU09,-0.024,Jack/Schyns
+,AU10R ,-0.017,"EMFACS, Jack/Schyns"
+,AU10L ,-0.017,"EMFACS, Jack/Schyns"
+,AU22,-0.012,"Matsumoto, EMFACS, Jack/Schyns"
+,,,
+Disgust,AU09,-0.057,"Matsumoto, Keltner, Cordaro (ref.), Cordaro (ICP), EMFACS, Jack/Schyns"
+,AU10L,-0.035,"Darwin, Matsumoto, Cordaro (ICP), EMFACS, Jack/Schyns"
+,AU10R,-0.026,"Darwin, Matsumoto, Cordaro (ICP), EMFACS, Jack/Schyns"
+,AU25  ,0.02,"Darwin, Matsumoto, Keltner, Cordaro (ICP), EMFACS"
+,,,
+Fear,AU20R,-0.036,"Darwin, Matsumoto, Keltner, Cordaro (ref.), EMFACS, Jack/Schyns"
+,AU20L ,-0.034,"Darwin, Matsumoto, Keltner, Cordaro (ref.), EMFACS, Jack/Schyns"
+,AU04 ,-0.024,"Matsumoto, Keltner, Cordaro (ref.), EMFACS, Jack/Schyns"
+,AU05 ,-0.022,All
+,AU02L ,0.022,"Darwin, Matsumoto, Keltner, Cordaro (ref.), Cordaro (ICP), EMFACS"
+,AU02R ,0.013,"Darwin, Matsumoto, Keltner, Cordaro (ref.), Cordaro (ICP), EMFACS"
+,,,
+Happy,AU12L ,-0.046,All
+,AU12R ,-0.038,All
+,AU14L ,-0.012,Jack/Schyns
+,AU25 ,-0.012,"Keltner, Cordaro (ICP), Jack/Schyns"
+,AU14R ,-0.011,Jack/Schyns
+,AU13,-0.01,Jack/Schyns
+,AU06R,0.017,All
+,AU06L,0.017,All
+,,,
+Sadness,AU04 ,-0.048,"Matsumoto, Keltner, Cordaro (ref.), Cordaro (ICP), EMFACS, Jack/Schyns"
+,AU43 ,-0.04,"Cordaro (ICP), Jack/Schyns"
+,AU17 ,-0.024,"Matsumoto, Keltner, EMFACS, Jack/Schyns"
+,AU15 ,-0.01,"Darwin, Matsumoto, Keltner, EMFACS, Jack/Schyns"
+,AU05 ,0.03,Cordaro (ref.)
+,AU06R,0.021,"Keltner, EMFACS"
+,AU06L,0.017,"Keltner, EMFACS"
+,AU11L,0.01,EMFACS
+,,,
+Surprise,AU01 ,-0.041,All
+,AU05 ,-0.041,All
+,AU26 ,-0.036,All
+,AU27 ,-0.033,"Cordaro (ICP), EMFACS, Jack/Schyns"
+,AU02L,-0.021,All
