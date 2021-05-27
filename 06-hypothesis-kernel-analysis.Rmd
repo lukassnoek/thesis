@@ -15,6 +15,14 @@ library(kableExtra)
 Bla bla
 `\end{abstract} \newpage`{=latex}
 
+## Introduction {#hka-introduction}
+
+```{r fig-hka-1, fig.cap='(ref:caption-fig-hka-1)', results='show'}
+knitr::include_graphics("_bookdown_files/hypothesis-kernel-analysis-files/figures/figure_1.png", auto_pdf = TRUE)
+```
+
+(ref:caption-fig-hka-1) Bla bla
+
 ## Methods {#hka-methods}
 
 ### Hypothesis kernel analysis
@@ -49,7 +57,7 @@ Finally, we constructed “optimized” models by, for each mapping separately, 
 
 ### Noise ceiling estimation {#hka-noise-ceiling}
 
-Instead of interpreting model performance relative to the theoretical optimum performance, we propose to interpret model performance relative to the *noise ceiling*, an estimate of the in principle explainable portion of the target variable. The noise ceiling is a concept often used in systems neuroscience to correct model performance for noise in the measured brain data [@Hsu2004-hs; @Huth2012-yc; @Kay2013-ch]. Traditionally, noise ceilings in neuroscience are applied in the context of within-subject regression models [@Lage-Castellanos2019-dm]. Here, we develop a method to derive noise ceilings for classification models, i.e., models with a categorical target variable (such as categorical emotion ratings) that are applicable to both within-subject and between-subject models [see also @Hebart2020-wp]. In this section, we explain our derivation of noise ceilings for classification models conceptually; the [Supplementary Methods](#hypothesis-kernel-analysis-supplement) outline a more detailed and formal description.
+Instead of interpreting model performance relative to the theoretical optimum performance, we propose to interpret model performance relative to the *noise ceiling*, an estimate of the in principle explainable portion of the target variable. The noise ceiling is a concept often used in systems neuroscience to correct model performance for noise in the measured brain data [@Hsu2004-hs; @Huth2012-yc; @Kay2013-ch]. Traditionally, noise ceilings in neuroscience are applied in the context of within-subject regression models [@lage2019methods]. Here, we develop a method to derive noise ceilings for classification models, i.e., models with a categorical target variable (such as categorical emotion ratings) that are applicable to both within-subject and between-subject models [see also @Hebart2020-wp]. In this section, we explain our derivation of noise ceilings for classification models conceptually; the [Supplementary Methods](#hypothesis-kernel-analysis-supplement) outline a more detailed and formal description.
 
 Noise ceiling estimation is a method that adjusts the theoretical maximum performance of a predictive model for the presence of irreducible noise in the data. As such, like the theoretical maximum, the noise ceiling imposes an upper bound on model performance. Another way to think about noise ceilings is that they split the variance of the data into three portions: the explained variance, the unexplained variance, and the "irreducible" noise (see Figure \@ref(fig:fig-hka-3)). "Irreducible" is put in quotes because this proportion of noise can, in fact, be explained in principle as will be discussed in the [Discussion](#kha-discussion) (see also the [Supplementary Methods](#hypothesis-kernel-analysis-supplement). Importantly, the noise ceiling thus indicates how much improvement in terms of model performance can be gained for a given dataset (i.e., unexplained variance) and how much cannot be explained by the model (i.e., the "irreducible" noise).
 
@@ -103,5 +111,11 @@ The emotion ratings were collected in a 7 alternative forced-choice facial expre
 All code used for this study’s analysis and visualization of results is publicly available from Github: <https://github.com/lukassnoek/hypothesis-kernel-analysis>. The analyses were implemented in the Python programming language (version 3.7) and use several third-party packages, including *numpy* [@Harris2020-en], *pandas* [@McKinney2011-kl], *scikit-learn* [@pedregosa2011scikit], and *seaborn* [@waskom2021seaborn]. A Python package to compute noise ceilings as described in the current study can be found on Github: <https://github.com/lukassnoek/noiseceiling>.
 
 ## Results {#hka-results}
+
+```{r fig-hka-4, fig.cap='(ref:caption-fig-hka-4)', results='show'}
+knitr::include_graphics("_bookdown_files/hypothesis-kernel-analysis-files/figures/figure_4.png", auto_pdf = TRUE)
+```
+
+(ref:caption-fig-hka-4) AUROC scores for each mapping (different bars), shown separately for each emotion (x-axis). Dots indicate subjects. The dashed line shows the noise ceiling (gray area represents ± 1 *SD* based on bootstrapping the repeated observations). The slightly different noise ceiling for Jack & Schyns is the result of using only half of the participants for evaluation of the model.
 
 ## Discussion {#hka-discussion}

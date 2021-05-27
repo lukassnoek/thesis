@@ -50,6 +50,8 @@
 
 
 <script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
+<script src="libs/kePrint-0.0.1/kePrint.js"></script>
+<link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
 
 
 
@@ -230,6 +232,7 @@
 <li class="chapter" data-level="E" data-path="hypothesis-kernel-analysis-supplement.html"><a href="hypothesis-kernel-analysis-supplement.html"><i class="fa fa-check"></i><b>E</b> Supplement to Chapter 6</a><ul>
 <li class="chapter" data-level="E.1" data-path="hypothesis-kernel-analysis-supplement.html"><a href="hypothesis-kernel-analysis-supplement.html#hka-supplementary-methods"><i class="fa fa-check"></i><b>E.1</b> Supplementary methods</a><ul>
 <li class="chapter" data-level="E.1.1" data-path="hypothesis-kernel-analysis-supplement.html"><a href="hypothesis-kernel-analysis-supplement.html#hypothesis-kernel-analysis-in-detail"><i class="fa fa-check"></i><b>E.1.1</b> Hypothesis kernel analysis (in detail)</a></li>
+<li class="chapter" data-level="E.1.2" data-path="hypothesis-kernel-analysis-supplement.html"><a href="hypothesis-kernel-analysis-supplement.html#hka-noise-ceiling-detail"><i class="fa fa-check"></i><b>E.1.2</b> Noise ceiling estimation (in detail)</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="F" data-path="static-vs-dynamic-supplement.html"><a href="static-vs-dynamic-supplement.html"><i class="fa fa-check"></i><b>F</b> Supplement to Chapter 6</a></li>
@@ -324,10 +327,102 @@
 <h4><span class="header-section-number">E.1.1.4</span> Step 4: computing predictions</h4>
 <p>Although the similarity to a particular mapping vector can, generally speaking, be interpreted as being proportional to the evidence for that particular class, it is not strictly speaking a prediction. To generate a quantitative prediction for stimulus <span class="math inline">\(\mathbf{S}_{i}\)</span> (i.e., <span class="math inline">\(\hat{e}_{i}\)</span>), one needs to formulate a decision function that maps the data to a prediction. One possibility is to determine the prediction to be the emotion (across <span class="math inline">\(C\)</span> classes) that maximizes its similarity, for some kernel function (<span class="math inline">\(\kappa\)</span>), to the stimulus:</p>
 <p><span class="math display">\[\begin{equation}
-\hat{e}_{i} = \underset{j}{\operatorname{\argmax}} \kappa(\mathbf{S}_{i}, \mathbf{M}_{j})
+\hat{e}_{i} = \underset{j}{\operatorname{\mathrm{argmax}}}\ \kappa(\mathbf{S}_{i}, \mathbf{M}_{j})
 \end{equation}\]</span></p>
-
+<p>In a slightly more sophisticated version of this decision function, we can generate probabilistic predictions instead of discrete predictions. To do so, we normalize the similarity vector using the <em>softmax</em> function, which returns a vector that sums to 1 such that their elements can be interpreted as probabilities (i.e., the probability of an emotion given a stimulus and mapping matrix):</p>
+<p><span class="math display">\[\begin{equation}
+P(E_{j} | \mathbf{M}, \mathbf{S}_{i}) = \frac{\exp(\beta\phi_{ij})}{\sum_{j=1}^{C}\exp(\beta\phi_{ij})}
+\end{equation}\]</span></p>
+<p>where <span class="math inline">\(\beta\)</span> is the “inverse temperature” parameter — a scaling parameter — which distributes relatively more mass onto the largest values within the sequence of similarities. In our framework, we can treat this parameter as a model hyperparameter (i.e., a parameter that is not fit, but could be manually tuned using cross-validation). In our analyses, we use an inverse temperature parameter of 1 (see Supplementary Figure <a href="#fig:fig-hka-S2"><strong>??</strong></a> for a comparison of the effect of different parameter values on model performance).</p>
 </div>
+<div id="step-5-quantifying-model-performance" class="section level4">
+<h4><span class="header-section-number">E.1.1.5</span> Step 5: quantifying model performance</h4>
+<p>To evaluate the performance of each mapping, we can compare their (discrete or probabilistic) emotion predictions for a set of stimuli with emotion labels from participants who rated the same stimuli. In other words, we can quantitatively assess how well the theoretical predictions match with actual behavior. Model performance, or “score”, can be quantified using any function (<span class="math inline">\(q\)</span>), or “metric”, that takes as inputs a set of predicted labels (<span class="math inline">\(\hat{e}\)</span>) and a set of “true” labels (<span class="math inline">\(e\)</span>) and returns a single number that summarizes the model performance, or “score”:</p>
+<p><span class="math display">\[\begin{equation}
+\mathrm{score} = q(e, \hat{e})
+\end{equation}\]</span></p>
+<p>Instead of returning a single, class-average model performance estimate, some metrics are also able to return class-specific model performance scores. In our analyses, we used the “area under the curve of the receiver operating characteristic” (AUROC) which summarizes the quality of probabilistic predictions in a range from 0 to 1, where 0.5 is chance level performance and 1 is a perfect prediction. Note that our proposed method does not require a specific performance metric. We prefer to use AUROC as it can be used for both discrete and probabilistic predictions, is insensitive to class imbalance (i.e., unequal frequencies of target classes), and allows for class-specific performance estimates.</p>
+</div>
+</div>
+<div id="hka-noise-ceiling-detail" class="section level3">
+<h3><span class="header-section-number">E.1.2</span> Noise ceiling estimation (in detail)</h3>
+<p>Suppose that, for a given dataset, we find that a particular mapping yields a (class-average) AUROC score of 0.8 — what can and should be concluded from this score? It is certainly above chance level (a score of 0.5) but also substantially below perfect performance (i.e., a score of 1). Here, we argue that one should not interpret performance relative to a theoretical maximum score, but relative to a noise ceiling &amp; a concept borrowed from systems neuroscience <span class="citation">(Lage-Castellanos et al., <a href="bibliography.html#ref-lage2019methods" role="doc-biblioref">2019</a>)</span> — which represents an upper bound that incorporates the within- and between-subject “variance” in ratings. In other words, a noise ceiling is a way to estimate an upper bound for predictive models that is adjusted for the “consistency” of the target variable.</p>
+<p>One important reason to quantify a model’s noise ceiling is that is partitions the unexplained variance (i.e., part of the data that was not predicted correctly) into unexplained but in principle explainable variance (i.e., the noise ceiling minus the model performance) and “irreducible” noise (i.e., the theoretical maximum performance minus the noise ceiling; see Figure <a href="#fig:fig-hka-3"><strong>??</strong></a>). The amount of explainable variance in turn quantifies how much there is to gain in terms of model improvement: if this component is large, one might consider different or more complex models; if this component is small (i.e., the model performance is at or near the noise ceiling), one can conclude that the model cannot be improved any further (which does not mean that it is the <em>correct</em> model, however). When applied in the context of AU-emotion mappings, the noise ceiling illustrates what portion of the variance in emotion inferences can be, in principle, explained by AUs.</p>
+<p>While noise ceilings are routinely used in systems and cognitive neuroscience <span class="citation">(Hsu et al., <a href="bibliography.html#ref-Hsu2004-hs" role="doc-biblioref">2004</a>; Huth et al., <a href="bibliography.html#ref-Huth2012-yc" role="doc-biblioref">2012</a>; Kay et al., <a href="bibliography.html#ref-Kay2013-ch" role="doc-biblioref">2013</a>; Nili et al., <a href="bibliography.html#ref-Nili2014-ar" role="doc-biblioref">2014</a>)</span>, existing methods for estimating noise ceilings are limited to regression models (assuming a continuous target variable, usually some type of brain measurement). In the current study, however, we are dealing with classification models, as we are trying to predict a categorical target variable (i.e., categorical emotion ratings). Here, we propose a novel approach to estimate a noise ceiling for predictive performance of classification models.</p>
+<p>A crucial and necessary element for most noise ceiling estimation methods, including the one proposed here, is the availability of repeated trials. Using repeated trials, the variance (or, inversely, the “consistency”) in the target variable can be estimated and used to estimate an upper bound on predictive performance. In other words, a noise ceiling formalizes the idea that a model can only perform as well as the consistency of subjects. Importantly, trials are considered to be “repeats” if their representation in the model is the same. Thus, if a model only considers AUs, then stimuli with the same AU configuration are considered repeats, even if they differ in other features (such as face identity). Moreover, repeated trials may occur “within subjects” (e.g., a trial with a particular AU configuration presented multiple times) or “between subjects” (e.g., a trial with a particular AU configuration presented to different subjects). Within-subject repeats can be used to estimate a within-subject noise ceiling when working with subject-specific models <span class="citation">(which is common in cognitive neuroscience; Lage-Castellanos et al., <a href="bibliography.html#ref-lage2019methods" role="doc-biblioref">2019</a>)</span> between-subject repeats can similarly be used to estimate a between-subject noise ceiling when working with a single, between-subject model. While both within- and between-subject variance are expected to affect the noise ceiling, in this study we only consider between-subject variance (as our dataset only contains between-subject repeats).</p>
+<p>To illustrate the computation of the noise ceiling (for a between-subject model), let us consider the following minimal example. Suppose three subjects rated the same two facial expression stimuli (<span class="math inline">\(\mathbf{S}_{1}\)</span> and <span class="math inline">\(\mathbf{S}_{2}\)</span>). As summarized in Table <a href="hypothesis-kernel-analysis-supplement.html#tab:tab-hka-S1">E.1</a>, the ratings are inconsistent across subjects, i.e., not each stimulus is consistently rated as displaying the same emotion.</p>
+<table class="table" style="font-size: 8px; margin-left: auto; margin-right: auto;">
+<caption style="font-size: initial !important;">
+<span id="tab:tab-hka-S1">Table E.1: </span>Hypothetical emotion ratings from three subjects in response to two stimuli
+</caption>
+<thead>
+<tr>
+<th style="text-align:left;">
+Stimulus
+</th>
+<th style="text-align:left;">
+Ratings subject 1
+</th>
+<th style="text-align:left;">
+Ratings subject 2
+</th>
+<th style="text-align:left;">
+Ratings subject 3
+</th>
+<th style="text-align:left;">
+Optimal pred.
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;width: 3em; ">
+<span class="math inline">\(\mathbf{S}_{1}\)</span>
+</td>
+<td style="text-align:left;">
+Anger
+</td>
+<td style="text-align:left;">
+Disgust
+</td>
+<td style="text-align:left;">
+Anger
+</td>
+<td style="text-align:left;">
+Anger
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 3em; ">
+<span class="math inline">\(\mathbf{S}_{2}\)</span>
+</td>
+<td style="text-align:left;">
+Disgust
+</td>
+<td style="text-align:left;">
+Disgust
+</td>
+<td style="text-align:left;">
+Anger
+</td>
+<td style="text-align:left;">
+Disgust
+</td>
+</tr>
+</tbody>
+</table>
+<p>As mentioned, the noise ceiling represents an upper bound of predictive performance for a given set of observations. In other words, the noise ceiling (<span class="math inline">\(\mathrm{nc}\)</span>) represents the performance that an <em>optimal model</em> would obtain:</p>
+<p><span class="math display">\[\begin{equation}
+\mathrm{nc} = q(e, e_{\mathrm{optimal}})
+\end{equation}\]</span></p>
+<p>Here, the optimal model can be any conceivable type of model, but is constrained in one crucial aspect: it should make the same predictions for repeated observations. The reason for this constraint is that, to a model, repeated observations represent identical input (i.e., stimuli parameterized by their stimulus vector) and should logically receive the same prediction.</p>
+<p>When working with discrete predictions (i.e., a single predicted label per trial), the optimal model predicts the mode across repeated observations. In our example scenario, the optimal model would thus predict <span class="math inline">\(\mathbf{S}_{1}\)</span> as “Anger” and <span class="math inline">\(\mathbf{S}_{2}\)</span> as “Disgust”. The noise ceiling is subsequently computed as the performance, for a particular performance metric (such as AUROC or simple accuracy), of this optimal model given the true labels. In our example above, the optimal model predicts two out of three ratings per stimulus correctly, resulting in a class-average AUROC noise ceiling of 0.6667.</p>
+<p>The disadvantage of using discrete predictions when computing the noise ceiling is that it may result in multiple modes (e.g., a given stimulus might be rated “anger” in 50% of subjects and “disgust” in the other 50% of subjects). One could pick a random mode as the optimal prediction, but this may arbitrarily impact the class-specific noise ceiling for the classes represented by the tied modes. As an alternative, we suggest using probabilistic instead of discrete predictions. When working with probabilistic predictions, the optimal model does not predict the mode, but a probability distribution across labels equal to the proportion of each label. Formally, for a given stimulus, <span class="math inline">\(\mathbf{S}_{i}\)</span>, with <span class="math inline">\(R\)</span> repeats, the probability of each class, <span class="math inline">\(P(E_{j})\)</span>, is computed as the proportion of labels, <span class="math inline">\(e_{i}\)</span>, equal to that class:</p>
+<p><span class="math display">\[\begin{align}
+P(E_{j} | \mathbf{S}_{i}) = \frac{1}{R}\sum_{k=1}^{R} \boldsymbol{1}(e_{ik} = E_{j})
+\end{align}\]</span></p>
+<p>where <span class="math inline">\(\boldsymbol{1}\)</span> represents an indicator function returning 1 when the emotion label <span class="math inline">\(e_{ik}\)</span> is equal to emotion label <span class="math inline">\(E_{j}\)</span> and 0 otherwise. Therefore, in our example data, the optimal prediction for each repetition of <span class="math inline">\(\mathbf{S}_{1}\)</span> is [0.667, 0.333] and the optimal prediction for each repetition of <span class="math inline">\(\mathbf{S}_{2}\)</span> is <span class="math inline">\([0.667, 0.333]\)</span>, where the numbers represent the probability of “Anger” and “Disgust” respectively. Similar to the noise ceiling based on discrete predictions, we can compute the noise ceiling as the performance, for a particular metric, of the optimal model given the true labels. In the above example, the class-average AUROC noise ceiling would coincidentally, just like in the scenario with discrete predictions, be 0.6667.</p>
+
 </div>
 </div>
 </div>

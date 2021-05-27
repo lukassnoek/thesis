@@ -338,8 +338,3 @@ Although we believe the current study yields important insights into the role of
 ## Conclusion {#svsd-conclusion}
 
 In this study, we show that both dynamic information (i.e., facial movements) and static information is integrated during affective face perception, and that these sources of information are largely independent. This finding demonstrates that people extract more from the face than is intentionally or unintentionally communicated. Importantly, these results in general raise concerns about using static images (rather than videos) in facial expression research or automated facial expression recognition systems, because (apparent) dynamic and static information are fundamentally confounded in images. We hope that our data-driven, predictive approach paves the way for future research that embraces the face as a communicator and elicitor of affective states in all its complexity.
-
-## Acknowledgements
-
-We thank Maite van der Miesen and Sjoerd Evelo for their help with data acquisition and
-Steven Miletić for helpful discussions regarding the Bayesian multivariate reverse correlation analyses.

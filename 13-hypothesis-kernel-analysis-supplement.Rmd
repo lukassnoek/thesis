@@ -90,5 +90,118 @@ Without such normalization, similarity values monotonically increase with increa
 Although the similarity to a particular mapping vector can, generally speaking, be interpreted as being proportional to the evidence for that particular class, it is not strictly speaking a prediction. To generate a quantitative prediction for stimulus $\mathbf{S}_{i}$ (i.e., $\hat{e}_{i}$), one needs to formulate a decision function that maps the data to a prediction. One possibility is to determine the prediction to be the emotion (across $C$ classes) that maximizes its similarity, for some kernel function ($\kappa$), to the stimulus:
 
 \begin{equation}
-\hat{e}_{i} = \underset{j}{\operatorname{\argmax}} \kappa(\mathbf{S}_{i}, \mathbf{M}_{j})
+\hat{e}_{i} = \underset{j}{\operatorname{\mathrm{argmax}}}\ \kappa(\mathbf{S}_{i}, \mathbf{M}_{j})
 \end{equation}
+
+In a slightly more sophisticated version of this decision function, we can generate probabilistic predictions instead of discrete predictions. To do so, we normalize the similarity vector using the *softmax* function, which returns a vector that sums to 1 such that their elements can be interpreted as probabilities (i.e., the probability of an emotion given a stimulus and mapping matrix):
+
+\begin{equation}
+P(E_{j} | \mathbf{M}, \mathbf{S}_{i}) = \frac{\exp(\beta\phi_{ij})}{\sum_{j=1}^{C}\exp(\beta\phi_{ij})}
+\end{equation}
+
+where $\beta$ is the “inverse temperature” parameter &mdash; a scaling parameter &mdash; which distributes relatively more mass onto the largest values within the sequence of similarities. In our framework, we can treat this parameter as a model hyperparameter (i.e., a parameter that is not fit, but could be manually tuned using cross-validation). In our analyses, we use an inverse temperature parameter of 1 (see Supplementary Figure \@ref(fig:fig-hka-S2) for a comparison of the effect of different parameter values on model performance).
+
+#### Step 5: quantifying model performance
+
+To evaluate the performance of each mapping, we can compare their (discrete or probabilistic) emotion predictions for a set of stimuli with emotion labels from participants who rated the same stimuli. In other words, we can quantitatively assess how well the theoretical predictions match with actual behavior. Model performance, or “score”, can be quantified using any function ($q$), or “metric”, that takes as inputs a set of predicted labels ($\hat{e}$) and a set of “true” labels ($e$) and returns a single number that summarizes the model performance, or “score”:
+
+\begin{equation}
+\mathrm{score} = q(e, \hat{e})
+\end{equation}
+
+Instead of returning a single, class-average model performance estimate, some metrics are also able to return class-specific model performance scores. In our analyses, we used the “area under the curve of the receiver operating characteristic” (AUROC) which summarizes the quality of probabilistic predictions in a range from 0 to 1, where 0.5 is chance level performance and 1 is a perfect prediction. Note that our proposed method does not require a specific performance metric. We prefer to use AUROC as it can be used for both discrete and probabilistic predictions, is insensitive to class imbalance (i.e., unequal frequencies of target classes), and allows for class-specific performance estimates.
+
+### Noise ceiling estimation (in detail) {#hka-noise-ceiling-detail}
+
+Suppose that, for a given dataset, we find that a particular mapping yields a (class-average) AUROC score of 0.8 &mdash; what can and should be concluded from this score? It is certainly above chance level (a score of 0.5) but also substantially below perfect performance (i.e., a score of 1). Here, we argue that one should not interpret performance relative to a theoretical maximum score, but relative to a noise ceiling & a concept borrowed from systems neuroscience [@lage2019methods] &mdash; which represents an upper bound that incorporates the within- and between-subject “variance” in ratings. In other words, a noise ceiling is a way to estimate an upper bound for predictive models that is adjusted for the “consistency” of the target variable.
+
+One important reason to quantify a model’s noise ceiling is that is partitions the unexplained variance (i.e., part of the data that was not predicted correctly) into unexplained but in principle explainable variance (i.e., the noise ceiling minus the model performance) and "irreducible" noise (i.e., the theoretical maximum performance minus the noise ceiling; see Figure \@ref(fig:fig-hka-3)). The amount of explainable variance in turn quantifies how much there is to gain in terms of model improvement: if this component is large, one might consider different or more complex models; if this component is small (i.e., the model performance is at or near the noise ceiling), one can conclude that the model cannot be improved any further (which does not mean that it is the *correct* model, however). When applied in the context of AU-emotion mappings, the noise ceiling illustrates what portion of the variance in emotion inferences can be, in principle, explained by AUs.
+
+While noise ceilings are routinely used in systems and cognitive neuroscience [@Hsu2004-hs; @Huth2012-yc; @Kay2013-ch; @Nili2014-ar], existing methods for estimating noise ceilings are limited to regression models (assuming a continuous target variable, usually some type of brain measurement). In the current study, however, we are dealing with classification models, as we are trying to predict a categorical target variable (i.e., categorical emotion ratings). Here, we propose a novel approach to estimate a noise ceiling for predictive performance of classification models.
+
+A crucial and necessary element for most noise ceiling estimation methods, including the one proposed here, is the availability of repeated trials. Using repeated trials, the variance (or, inversely, the “consistency”) in the target variable can be estimated and used to estimate an upper bound on predictive performance. In other words, a noise ceiling formalizes the idea that a model can only perform as well as the consistency of subjects. Importantly, trials are considered to be “repeats” if their representation in the model is the same. Thus, if a model only considers AUs, then stimuli with the same AU configuration are considered repeats, even if they differ in other features (such as face identity). Moreover, repeated trials may occur “within subjects” (e.g., a trial with a particular AU configuration presented multiple times) or “between subjects” (e.g., a trial with a particular AU configuration presented to different subjects). Within-subject repeats can be used to estimate a within-subject noise ceiling when working with subject-specific models [which is common in cognitive neuroscience; @lage2019methods] between-subject repeats can similarly be used to estimate a between-subject noise ceiling when working with a single, between-subject model. While both within- and between-subject variance are expected to affect the noise ceiling, in this study we only consider between-subject variance (as our dataset only contains between-subject repeats).
+
+To illustrate the computation of the noise ceiling (for a between-subject model), let us consider the following minimal example. Suppose three subjects rated the same two facial expression stimuli ($\mathbf{S}_{1}$ and $\mathbf{S}_{2}$). As summarized in Table \@ref(tab:tab-hka-S1), the ratings are inconsistent across subjects, i.e., not each stimulus is consistently rated as displaying the same emotion.
+
+```{r tab-hka-S1, results='asis'}
+data = read_csv('_bookdown_files/hypothesis-kernel-analysis-files/table_S1_data.csv')
+kbl(data, booktabs = T, longtable = T, escape = F, caption = 'Hypothetical emotion ratings from three subjects in response to two stimuli') %>%
+    kable_styling(full_width = T, font_size = 8) %>%
+    column_spec(column = 1, width = "3em")
+```
+
+As mentioned, the noise ceiling represents an upper bound of predictive performance for a given set of observations. In other words, the noise ceiling ($\mathrm{nc}$) represents the performance that an *optimal model* would obtain:
+
+\begin{equation}
+\mathrm{nc} = q(e, e_{\mathrm{optimal}})
+\end{equation}
+
+Here, the optimal model can be any conceivable type of model, but is constrained in one crucial aspect: it should make the same predictions for repeated observations. The reason for this constraint is that, to a model, repeated observations represent identical input (i.e., stimuli parameterized by their stimulus vector) and should logically receive the same prediction. 
+
+When working with discrete predictions (i.e., a single predicted label per trial), the optimal model predicts the mode across repeated observations. In our example scenario, the optimal model would thus predict $\mathbf{S}_{1}$ as “Anger” and $\mathbf{S}_{2}$ as “Disgust”. The noise ceiling is subsequently computed as the performance, for a particular performance metric (such as AUROC or simple accuracy), of this optimal model given the true labels. In our example above, the optimal model predicts two out of three ratings per stimulus correctly, resulting in a class-average AUROC noise ceiling of 0.6667.
+
+The disadvantage of using discrete predictions when computing the noise ceiling is that it may result in multiple modes (e.g., a given stimulus might be rated “anger” in 50% of subjects and “disgust” in the other 50% of subjects). One could pick a random mode as the optimal prediction, but this may arbitrarily impact the class-specific noise ceiling for the classes represented by the tied modes. As an alternative, we suggest using probabilistic instead of discrete predictions. When working with probabilistic predictions, the optimal model does not predict the mode, but a probability distribution across labels equal to the proportion of each label. Formally, for a given stimulus, $\mathbf{S}_{i}$, with $R$ repeats, the probability of each class, $P(E_{j})$, is computed as the proportion of labels, $e_{i}$, equal to that class:
+
+\begin{align}
+P(E_{j} | \mathbf{S}_{i}) = \frac{1}{R}\sum_{k=1}^{R} \boldsymbol{1}(e_{ik} = E_{j})
+\end{align}
+
+where $\boldsymbol{1}$ represents an indicator function returning 1 when the emotion label $e_{ik}$ is equal to emotion label $E_{j}$ and 0 otherwise. Therefore, in our example data, the optimal prediction for each repetition of $\mathbf{S}_{1}$ is [0.667, 0.333] and the optimal prediction for each repetition of $\mathbf{S}_{2}$ is $[0.667, 0.333]$, where the numbers represent the probability of “Anger” and “Disgust” respectively. Similar to the noise ceiling based on discrete predictions, we can compute the noise ceiling as the performance, for a particular metric, of the optimal model given the true labels. In the above example, the class-average AUROC noise ceiling would coincidentally, just like in the scenario with discrete predictions, be 0.6667.
+
+## Supplementary figures {#hka-supp-fig}
+
+```{r fig-hka-S1, fig.cap='(ref:caption-fig-hka-S1)', results='show'}
+knitr::include_graphics("_bookdown_files/hypothesis-kernel-analysis-files/figures/figure_S1.png", auto_pdf = TRUE)
+```
+
+(ref:caption-fig-hka-S1) Difference in class-average model performance (AUROC) between discrete and probabilistic predictions.
+
+```{r fig-hka-S2, fig.cap='(ref:caption-fig-hka-S2)', results='show'}
+knitr::include_graphics("_bookdown_files/hypothesis-kernel-analysis-files/figures/figure_S2.png", auto_pdf = TRUE)
+```
+
+(ref:caption-fig-hka-S2) Performance of different models for different values of the “inverse temperature” ($\beta$) parameter. A cosine kernel was used.
+
+```{r fig-hka-S3, fig.cap='(ref:caption-fig-hka-S3)', results='show'}
+knitr::include_graphics("_bookdown_files/hypothesis-kernel-analysis-files/figures/figure_S3.png", auto_pdf = TRUE)
+```
+
+(ref:caption-fig-hka-S3) Performance of different models for different kernel functions. The cosine, sigmoid, and linear kernels are measures of similarity, but the Euclidean, L1, and L2 kernels measure distance. For these distance functions, the distances were converted to similarities by inverting them. A fixed “inverse temperature” ($\beta$) parameter of 1 was used.
+
+```{r fig-hka-S4, fig.cap='(ref:caption-fig-hka-S4)', results='show'}
+knitr::include_graphics("_bookdown_files/hypothesis-kernel-analysis-files/figures/figure_S4.png", auto_pdf = TRUE)
+```
+
+(ref:caption-fig-hka-S4) Results from the simulation analysis with random mapping matrices in which the number of AUs per configuration (A) and the number of configurations per output class (B) were systematically varied. Bars represents the average AUROC score across 1000 simulations (error bars represent ±1 *SD*).
+
+\newpage
+\pagestyle{empty}
+\blandscape
+
+```{r fig-hka-S5, fig.cap='(ref:caption-fig-hka-S5)', results='show'}
+knitr::include_graphics("_bookdown_files/hypothesis-kernel-analysis-files/figures/figure_S5.png", auto_pdf = TRUE)
+```
+
+(ref:caption-fig-hka-S5) Changes in model performance (AUROC) for each emotion and mapping after ablating an AU. Error bars indicate a 95% confidence interval obtained with 1000 bootstraps of the data.
+
+\elandscape
+\newpage
+\pagestyle{empty}
+
+```{r tab-hka-S2, results='asis'}
+data = read_csv('_bookdown_files/hypothesis-kernel-analysis-files/table_S2_data.csv')
+kbl(data, booktabs = T, longtable = T, escape = F, caption = 'AUs with the largest ablation affects per emotion across mappings') %>%
+    kable_styling(full_width = T, font_size = 8) %>%
+    column_spec(column = c(1, 2, 3), width = "3em") %>%
+    footnote(footnote_as_chunk = T, title_format = "italic", threeparttable = T, escape = F, 
+             general = 'Only AUs with an absolute change in AUROC larger than 0.01 are included. The affected mappings column indicates which mappings contained this AU.')
+```
+
+```{r tab-hka-S3, results='asis'}
+data = read_csv('_bookdown_files/hypothesis-kernel-analysis-files/table_S3_data.csv')
+kbl(data, booktabs = T, longtable = T, escape = F, caption = 'AUs with the largest improvement per emotion across mappings') %>%
+    kable_styling(full_width = T, font_size = 8) %>%
+    column_spec(column = c(1, 2, 3), width = "3em") %>%
+    footnote(footnote_as_chunk = T, title_format = "italic", threeparttable = T, escape = F, 
+             general = 'Only AUs with an improvement in AUROC larger than 0.01 are included. The affected mappings column indicates which mappings did not already contain this AU and thus is the complement of the affected mappings column in Supplementary Table 2.')
+```

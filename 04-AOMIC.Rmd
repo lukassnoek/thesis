@@ -293,7 +293,7 @@ Physiology files were converted to BIDS-compatible compressed TSV files using th
 
 The physiology data was subsequently used to estimate fMRI-appropriate nuisance regressors using the *TAPAS PhysIO* package [@Kasper2017-lp; see Code availability]. Using this package, we specifically estimated 18 “RETROICOR” regressors [@Glover2000-or] based on a Fourier expansion of cardiac (order: 2) and respiratory (order: 3) phase and their first-order multiplicative terms [as defined in @Harvey2008-nt]. In addition, we estimated a heart-rate variability (HRV) regressor by convolving the cardiac trace with a cardiac response function [@Chang2009-vu] and a respiratory volume by time (RVT) regressor by convolving the respiratory trace with a respiration response function [@Birn2008-ti].
 
-## Data Records
+## Data records
 
 ### Data formats and types
 
@@ -465,7 +465,7 @@ kbl(data, booktabs = T, longtable = T,
 
 The STAI-T scale measures trait anxiety. Because this instrument only consists of one scale we evaluate its reliability on the degree in which it shows correlations with other questionnaire scales that also have a pretension of measuring negative emotionality. Because we observe positive correlations with both Neuroticisms, $r(927) = 0.77$, $p < 0.001$) and BIS, $r(927) = 0.514$, $p < 0.001$) we conclude that the reported scales are reliable and consistent. 
 
-## Code availability {#aomic-code-availability}
+### Code availability {#aomic-code-availability}
 
 All code used for curating, annotating, and (pre)processing AOMIC are version-controlled using git and can be found in project-specific Github repositories within the NILAB-UvA Github organization: https://github.com/orgs/NILAB-UvA. Many pre and postprocessing steps were identical across datasets, so the code for these procedures is stored in a single repository: https://github.com/NILAB-UvA/AOMIC-common-scripts. Possible parameters are all hard-coded within the scripts, except for a single positional parameter pointing to the directory to be processed. For custom Python-based scripts, we used Python version 3.7. All code was developed on a Linux system with 56 CPUs (Intel Xeon E5-2680 v4, 2.40GHz) and 126GB RAM running Ubuntu 16.04. All curation, preprocessing, and analyses were run on said Linux system, apart from the *Fmriprep*, *Mriqc*, and *Freesurfer* analyses, which were run in a Docker container provided by those software packages. Custom code was parallelized to run on multiple CPUs concurrently using the Python package *joblib* (https://joblib.readthedocs.io).
 
