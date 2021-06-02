@@ -40,9 +40,9 @@ Oosterwijk, S., Snoek, L., Tekoppele, J., Engelbert, L. H., & Scholte, H. S. (20
 
 S.O., L.S., J.T., L.E. and H.S. developed the concept of the study, including the study design. S.O., L.S., J.T. and L.E. contributed to stimulus selection and programming. J.T. and L.E. collected the data. All authors contributed to the preparation of the preregistered analysis protocol and the data-analysis. S.O., L.S. and J.T. wrote the manuscript.
 
-**Chapter 6**, submitted as:
+**Chapter 6**, to be submitted as:
 
-Snoek, L., Jack, R., Schyns, P., Garrod, O., Mittenbühler, M., Scholte, H.S., & Oosterwijk, S. (submitted). Evaluating the universality of action unit based theories of categorical emotions. Submitted to *Nature Human Behavior*.
+Snoek, L., Jack, R., Schyns, P., Garrod, O., Mittenbühler, M., Scholte, H.S., & Oosterwijk, S. (submitted). Explainable models of facial movements predict emotion perception behavior. To be submitted to *Nature Human Behavior*.
 
 L.S., R.J., P.S., M.M., H.S.S., and S.O. were responsible for the conceptualization of the study. L.S., O.G., and M.M. developed the methods and implemented the formal analyses. All authors wrote the article.
 
@@ -52,6 +52,6 @@ Snoek., L, Mittenbühler, M., Jack, R., Schyns, P., Fischer, A., Scholte, H.S., 
 
 L.S., S.O., A.F., and H.S.S. were responsible for the conceptualization of the study. L.S. and M.M. developed the methods and implemented the formal analyses. All authors wrote the manuscript.
 
-We thank Maite van der Miesen and Sjoerd Evelo for their help with data acquisition and Steven Miletić for helpful discussions regarding the Bayesian multivariate reverse correlation analyses.
+We thank Maite van der Miesen and Sjoerd Evelo for their help with data acquisition and Steven Miletić and Danny Hetharia for helpful discussions regarding the Bayesian multivariate reverse correlation analyses.
 
 \* Shared first authorship

@@ -1,0 +1,13 @@
+# Nederlandse samenvatting (Summary in Dutch) {-}
+\chaptermark{Summary in Dutch}
+
+::: {lang=nl}
+
+_Het belang van voorspellen: onderzoek naar de psyche en het brein in het tijdperk van machine learning_
+
+\bigskip
+<br>
+
+The summary goes here.
+
+:::

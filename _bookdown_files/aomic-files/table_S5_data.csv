@@ -1,20 +1,20 @@
 ﻿Variable name,Description,Levels / range,Units,Included in
 age,Subject age at day of measurement,-,Quantiles,All
 sex,(Biological) sex,"male, female",-,All
-gender_identity_F,To what degree the subject felt female,7-Jan,A.U.,ID1000
-gender_identity_M,To what degree the subject felt male,7-Jan,A.U.,ID1000
-sexual_attraction_M,To what degree the subject was attracted to males,7-Jan,A.U.,ID1000
-sexual_attraction_F,To what degree the subject was attracted to females,7-Jan,A.U.,ID1000
+gender_identity_F,To what degree the subject felt female,1-7,A.U.,ID1000
+gender_identity_M,To what degree the subject felt male,1-7,A.U.,ID1000
+sexual_attraction_M,To what degree the subject was attracted to males,1-7,A.U.,ID1000
+sexual_attraction_F,To what degree the subject was attracted to females,1-7,A.U.,ID1000
 BMI,Body-mass-index,-,kg/m2,All
 handedness,Dominant hand,"left, right",,ID1000
 handedness,Dominant hand,"left, right, ambidextrous",-,PIOP1&2
-background_SES,Social economical status of family in which the subject was raised.,6-Feb,A.U.,ID1000
+background_SES,Social economical status of family in which the subject was raised.,2-6,A.U.,ID1000
 educational_level,Highest achieved (or current) educational level,"low, medium, high",-,ID1000
 educational_category,Highest achieved (or current) education type,"applied, academic",-,PIOP1&2
 religious,Whether the subject is religious or not,"no, yes",-,PIOP1
 religious_upbringing,Whether the subject was raised religiously or not,"no, yes",-,ID1000
 religious_now,Whether the subject is religious now,"no, yes",-,ID1000
-religious_importance,To what degree religion plays a role in the subject’s daily life,5-Jan,A.U.,ID1000
+religious_importance,To what degree religion plays a role in the subject’s daily life,1-5,A.U.,ID1000
 IST_fluid,IST fluid intelligence subscale,-,A.U.,ID1000
 IST_memory,IST memory subscale,-,A.U.,ID1000
 IST_crystallised,IST crystallised intelligence subscale,-,A.U.,ID1000

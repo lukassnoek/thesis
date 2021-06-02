@@ -4,9 +4,9 @@ title: "Towards prediction"
 subtitle: Studying the mind and brain in the age of machine learning
 
 author: "Lukas Snoek"
-date: "maandag 21 oktober 2021"
+date: "{dag} {datum} 2021"
 aula: false 
-time: "14.00"
+time: "{time}"
 birthplace: "Hoevelaken"
 
 ### Colophon 
