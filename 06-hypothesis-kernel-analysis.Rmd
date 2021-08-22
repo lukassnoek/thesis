@@ -158,7 +158,7 @@ knitr::include_graphics("_bookdown_files/hypothesis-kernel-analysis-files/figure
 
 ## Discussion {#hka-discussion}
 
-Since Darwin’s seminal work on the evolutionary origins of emotional expressions, a debate has centered on the question of the specific combinations of facial movements that consistently expressed different emotions. The influential taxonomy of facial movements as AUs proposed by Ekman and Friesen [@Ekman1976-hm] enabled different hypotheses to be formulated about the specific combinations of action units that underlie the expression and recognition of emotion categories.
+Since Darwin’s seminal work on the evolutionary origins of emotional expressions, a debate has centered on the question of the specific combinations of facial movements that consistently expressed different emotions. The influential taxonomy of facial movements as AUs proposed by @Ekman1976-hm enabled different hypotheses to be formulated about the specific combinations of action units that underlie the expression and recognition of emotion categories.
 
 In this study, we developed this approach further, by formalizing these proposals for combinations of AUs as predictive models of human categorization behavior. We used these formal models to quantitatively evaluate how well each model *predicts* the categorization of emotions. We then *explained* the differences in predictive accuracy with systematic manipulations of the AUs comprising each model. In turn, this generated insights that enabled *exploration* of alternative and improved models. Moreover, we showed that models were inherently limited in their prediction of human behavior, due to individual differences in how people perceive facial expressions. 
 
