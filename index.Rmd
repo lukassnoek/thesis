@@ -83,6 +83,8 @@ output:
       all: ['facebook', 'twitter', 'linkedin']
 
     config:
+      toolbar:
+        download: 'docs/thesis.pdf'
       toc: 
         #this text will print on top ("before") or at the bottom ("after") of the table of contents
         before: | 
