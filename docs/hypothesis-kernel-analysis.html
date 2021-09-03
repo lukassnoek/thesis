@@ -1,0 +1,1089 @@
+<!DOCTYPE html>
+<html lang="en-US" xml:lang="en-US">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>6 Explainable models of facial movements predict emotion perception behavior | Towards prediction</title>
+  <meta name="description" content="6 Explainable models of facial movements predict emotion perception behavior | Towards prediction" />
+  <meta name="generator" content="bookdown 0.20 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="6 Explainable models of facial movements predict emotion perception behavior | Towards prediction" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="6 Explainable models of facial movements predict emotion perception behavior | Towards prediction" />
+  
+  
+  
+
+<meta name="author" content="Lukas Snoek" />
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="morbid-curiosity.html"/>
+<link rel="next" href="static-vs-dynamic.html"/>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
+<script src="libs/kePrint-0.0.1/kePrint.js"></script>
+<link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
+
+
+
+<link rel="stylesheet" href="css/style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">PhD thesis of Lukas Snoek</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Preface</a></li>
+<li class="chapter" data-level="1" data-path="general-introduction.html"><a href="general-introduction.html"><i class="fa fa-check"></i><b>1</b> Introduction</a><ul>
+<li class="chapter" data-level="1.1" data-path="general-introduction.html"><a href="general-introduction.html#inference-done-differently"><i class="fa fa-check"></i><b>1.1</b> Inference done differently</a></li>
+<li class="chapter" data-level="1.2" data-path="general-introduction.html"><a href="general-introduction.html#towards-prediction"><i class="fa fa-check"></i><b>1.2</b> Towards prediction</a></li>
+<li class="chapter" data-level="1.3" data-path="general-introduction.html"><a href="general-introduction.html#outline-of-this-thesis"><i class="fa fa-check"></i><b>1.3</b> Outline of this thesis</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="shared-states.html"><a href="shared-states.html"><i class="fa fa-check"></i><b>2</b> Shared states: using MVPA to test neural overlap between self-focused emotion imagery and other-focused emotion understanding</a><ul>
+<li class="chapter" data-level="2.1" data-path="shared-states.html"><a href="shared-states.html#shared-states-introduction"><i class="fa fa-check"></i><b>2.1</b> Introduction</a></li>
+<li class="chapter" data-level="2.2" data-path="shared-states.html"><a href="shared-states.html#shared-states-methods"><i class="fa fa-check"></i><b>2.2</b> Methods</a><ul>
+<li class="chapter" data-level="2.2.1" data-path="shared-states.html"><a href="shared-states.html#shared-states-methods-subjects"><i class="fa fa-check"></i><b>2.2.1</b> Subjects</a></li>
+<li class="chapter" data-level="2.2.2" data-path="shared-states.html"><a href="shared-states.html#shared-states-methods-experimental-design"><i class="fa fa-check"></i><b>2.2.2</b> Experimental design</a></li>
+<li class="chapter" data-level="2.2.3" data-path="shared-states.html"><a href="shared-states.html#shared-states-methods-procedure"><i class="fa fa-check"></i><b>2.2.3</b> Procedure</a></li>
+<li class="chapter" data-level="2.2.4" data-path="shared-states.html"><a href="shared-states.html#shared-states-methods-image-acquisition"><i class="fa fa-check"></i><b>2.2.4</b> Image acquisition</a></li>
+<li class="chapter" data-level="2.2.5" data-path="shared-states.html"><a href="shared-states.html#shared-states-methods-model-optimization-procedure"><i class="fa fa-check"></i><b>2.2.5</b> Model optimization procedure</a></li>
+<li class="chapter" data-level="2.2.6" data-path="shared-states.html"><a href="shared-states.html#shared-states-methods-preprocessing"><i class="fa fa-check"></i><b>2.2.6</b> Preprocessing and single-trial modeling</a></li>
+<li class="chapter" data-level="2.2.7" data-path="shared-states.html"><a href="shared-states.html#shared-states-methods-mvpa"><i class="fa fa-check"></i><b>2.2.7</b> Multi-voxel pattern analysis</a></li>
+<li class="chapter" data-level="2.2.8" data-path="shared-states.html"><a href="shared-states.html#shared-states-methods-additional-analyses"><i class="fa fa-check"></i><b>2.2.8</b> Additional analyses</a></li>
+<li class="chapter" data-level="2.2.9" data-path="shared-states.html"><a href="shared-states.html#shared-states-methods-univariate-analysis"><i class="fa fa-check"></i><b>2.2.9</b> Univariate analysis</a></li>
+<li class="chapter" data-level="2.2.10" data-path="shared-states.html"><a href="shared-states.html#shared-states-methods-code-availability"><i class="fa fa-check"></i><b>2.2.10</b> Code availability</a></li>
+</ul></li>
+<li class="chapter" data-level="2.3" data-path="shared-states.html"><a href="shared-states.html#shared-states-results"><i class="fa fa-check"></i><b>2.3</b> Results</a><ul>
+<li class="chapter" data-level="2.3.1" data-path="shared-states.html"><a href="shared-states.html#shared-states-results-mvpa"><i class="fa fa-check"></i><b>2.3.1</b> Multi-voxel pattern analysis</a></li>
+<li class="chapter" data-level="2.3.2" data-path="shared-states.html"><a href="shared-states.html#shared-states-results-univariate"><i class="fa fa-check"></i><b>2.3.2</b> Univariate analyses</a></li>
+</ul></li>
+<li class="chapter" data-level="2.4" data-path="shared-states.html"><a href="shared-states.html#shared-states-discussion"><i class="fa fa-check"></i><b>2.4</b> Discussion</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="confounds-decoding.html"><a href="confounds-decoding.html"><i class="fa fa-check"></i><b>3</b> How to control for confounds in decoding analyses of neuroimaging data</a><ul>
+<li class="chapter" data-level="3.1" data-path="confounds-decoding.html"><a href="confounds-decoding.html#confounds-decoding-introduction"><i class="fa fa-check"></i><b>3.1</b> Introduction</a><ul>
+<li class="chapter" data-level="3.1.1" data-path="confounds-decoding.html"><a href="confounds-decoding.html#confounds-decoding-introduction-true-vs-confounded"><i class="fa fa-check"></i><b>3.1.1</b> Partitioning effects into <em>true</em> signal and <em>confounded</em> signal</a></li>
+<li class="chapter" data-level="3.1.2" data-path="confounds-decoding.html"><a href="confounds-decoding.html#confounds-decoding-introduction-methods"><i class="fa fa-check"></i><b>3.1.2</b> Methods for confound control</a></li>
+<li class="chapter" data-level="3.1.3" data-path="confounds-decoding.html"><a href="confounds-decoding.html#confounds-decoding-introduction-current-study"><i class="fa fa-check"></i><b>3.1.3</b> Current study</a></li>
+</ul></li>
+<li class="chapter" data-level="3.2" data-path="confounds-decoding.html"><a href="confounds-decoding.html#confounds-decoding-methods"><i class="fa fa-check"></i><b>3.2</b> Methods</a><ul>
+<li class="chapter" data-level="3.2.1" data-path="confounds-decoding.html"><a href="confounds-decoding.html#confounds-decoding-methods-data"><i class="fa fa-check"></i><b>3.2.1</b> Data</a></li>
+<li class="chapter" data-level="3.2.2" data-path="confounds-decoding.html"><a href="confounds-decoding.html#confounds-decoding-methods-pipeline"><i class="fa fa-check"></i><b>3.2.2</b> Decoding pipeline</a></li>
+<li class="chapter" data-level="3.2.3" data-path="confounds-decoding.html"><a href="confounds-decoding.html#confounds-decoding-methods-evaluated-methods"><i class="fa fa-check"></i><b>3.2.3</b> Evaluated methods for confound control</a></li>
+<li class="chapter" data-level="3.2.4" data-path="confounds-decoding.html"><a href="confounds-decoding.html#analyses-of-simulated-data"><i class="fa fa-check"></i><b>3.2.4</b> Analyses of simulated data</a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="confounds-decoding.html"><a href="confounds-decoding.html#results"><i class="fa fa-check"></i><b>3.3</b> Results</a><ul>
+<li class="chapter" data-level="3.3.1" data-path="confounds-decoding.html"><a href="confounds-decoding.html#influence-of-brain-size"><i class="fa fa-check"></i><b>3.3.1</b> Influence of brain size</a></li>
+<li class="chapter" data-level="3.3.2" data-path="confounds-decoding.html"><a href="confounds-decoding.html#baseline-model-no-confound-control"><i class="fa fa-check"></i><b>3.3.2</b> Baseline model: no confound control</a></li>
+<li class="chapter" data-level="3.3.3" data-path="confounds-decoding.html"><a href="confounds-decoding.html#post-hoc-counterbalancing"><i class="fa fa-check"></i><b>3.3.3</b> Post hoc counterbalancing</a></li>
+<li class="chapter" data-level="3.3.4" data-path="confounds-decoding.html"><a href="confounds-decoding.html#whole-dataset-confound-regression-wdcr"><i class="fa fa-check"></i><b>3.3.4</b> Whole-dataset confound regression (WDCR)</a></li>
+<li class="chapter" data-level="3.3.5" data-path="confounds-decoding.html"><a href="confounds-decoding.html#cross-validated-confound-regression-cvcr"><i class="fa fa-check"></i><b>3.3.5</b> Cross-validated confound regression (CVCR)</a></li>
+<li class="chapter" data-level="3.3.6" data-path="confounds-decoding.html"><a href="confounds-decoding.html#summary-methods-for-confound-control"><i class="fa fa-check"></i><b>3.3.6</b> Summary methods for confound control</a></li>
+</ul></li>
+<li class="chapter" data-level="3.4" data-path="confounds-decoding.html"><a href="confounds-decoding.html#confounds-decoding-discussion"><i class="fa fa-check"></i><b>3.4</b> Discussion</a><ul>
+<li class="chapter" data-level="3.4.1" data-path="confounds-decoding.html"><a href="confounds-decoding.html#relevance-and-consequences-for-previous-and-future-research"><i class="fa fa-check"></i><b>3.4.1</b> Relevance and consequences for previous and future research</a></li>
+<li class="chapter" data-level="3.4.2" data-path="confounds-decoding.html"><a href="confounds-decoding.html#choosing-a-confound-model-linear-vs.-nonlinear-models"><i class="fa fa-check"></i><b>3.4.2</b> Choosing a confound model: linear vs. nonlinear models</a></li>
+<li class="chapter" data-level="3.4.3" data-path="confounds-decoding.html"><a href="confounds-decoding.html#practical-recommendations"><i class="fa fa-check"></i><b>3.4.3</b> Practical recommendations</a></li>
+</ul></li>
+<li class="chapter" data-level="3.5" data-path="confounds-decoding.html"><a href="confounds-decoding.html#conclusion"><i class="fa fa-check"></i><b>3.5</b> Conclusion</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="aomic.html"><a href="aomic.html"><i class="fa fa-check"></i><b>4</b> The Amsterdam Open MRI Collection, a set of multimodal MRI datasets for individual difference analyses</a><ul>
+<li class="chapter" data-level="4.1" data-path="aomic.html"><a href="aomic.html#background-summary"><i class="fa fa-check"></i><b>4.1</b> Background &amp; summary</a></li>
+<li class="chapter" data-level="4.2" data-path="aomic.html"><a href="aomic.html#methods"><i class="fa fa-check"></i><b>4.2</b> Methods</a><ul>
+<li class="chapter" data-level="4.2.1" data-path="aomic.html"><a href="aomic.html#scanner-details-and-general-scanning-protocol-all-datasets"><i class="fa fa-check"></i><b>4.2.1</b> Scanner details and general scanning protocol (all datasets)</a></li>
+<li class="chapter" data-level="4.2.2" data-path="aomic.html"><a href="aomic.html#id1000-specifics"><i class="fa fa-check"></i><b>4.2.2</b> ID1000 specifics</a></li>
+<li class="chapter" data-level="4.2.3" data-path="aomic.html"><a href="aomic.html#piop1-and-piop2-specifics"><i class="fa fa-check"></i><b>4.2.3</b> PIOP1 and PIOP2 specifics</a></li>
+<li class="chapter" data-level="4.2.4" data-path="aomic.html"><a href="aomic.html#subject-variables-all-datasets"><i class="fa fa-check"></i><b>4.2.4</b> Subject variables (all datasets)</a></li>
+<li class="chapter" data-level="4.2.5" data-path="aomic.html"><a href="aomic.html#psychometric-variables-all-datasets"><i class="fa fa-check"></i><b>4.2.5</b> Psychometric variables (all datasets)</a></li>
+<li class="chapter" data-level="4.2.6" data-path="aomic.html"><a href="aomic.html#aomic-derivatives"><i class="fa fa-check"></i><b>4.2.6</b> Data standardization, preprocessing, and derivatives</a></li>
+</ul></li>
+<li class="chapter" data-level="4.3" data-path="aomic.html"><a href="aomic.html#data-records"><i class="fa fa-check"></i><b>4.3</b> Data records</a><ul>
+<li class="chapter" data-level="4.3.1" data-path="aomic.html"><a href="aomic.html#data-formats-and-types"><i class="fa fa-check"></i><b>4.3.1</b> Data formats and types</a></li>
+<li class="chapter" data-level="4.3.2" data-path="aomic.html"><a href="aomic.html#data-repositories-used"><i class="fa fa-check"></i><b>4.3.2</b> Data repositories used</a></li>
+</ul></li>
+<li class="chapter" data-level="4.4" data-path="aomic.html"><a href="aomic.html#technical-validation"><i class="fa fa-check"></i><b>4.4</b> Technical validation</a><ul>
+<li class="chapter" data-level="4.4.1" data-path="aomic.html"><a href="aomic.html#t1-weighted-scans"><i class="fa fa-check"></i><b>4.4.1</b> T1-weighted scans</a></li>
+<li class="chapter" data-level="4.4.2" data-path="aomic.html"><a href="aomic.html#functional-bold-scans"><i class="fa fa-check"></i><b>4.4.2</b> Functional (BOLD) scans</a></li>
+<li class="chapter" data-level="4.4.3" data-path="aomic.html"><a href="aomic.html#diffusion-weighted-scans"><i class="fa fa-check"></i><b>4.4.3</b> Diffusion-weighted scans</a></li>
+<li class="chapter" data-level="4.4.4" data-path="aomic.html"><a href="aomic.html#physiological-data"><i class="fa fa-check"></i><b>4.4.4</b> Physiological data</a></li>
+<li class="chapter" data-level="4.4.5" data-path="aomic.html"><a href="aomic.html#psychometric-data"><i class="fa fa-check"></i><b>4.4.5</b> Psychometric data</a></li>
+<li class="chapter" data-level="4.4.6" data-path="aomic.html"><a href="aomic.html#aomic-code-availability"><i class="fa fa-check"></i><b>4.4.6</b> Code availability</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="morbid-curiosity.html"><a href="morbid-curiosity.html"><i class="fa fa-check"></i><b>5</b> Choosing to view morbid information involves reward circuitry</a><ul>
+<li class="chapter" data-level="5.1" data-path="morbid-curiosity.html"><a href="morbid-curiosity.html#morbid-curiosity-introduction"><i class="fa fa-check"></i><b>5.1</b> Introduction</a></li>
+<li class="chapter" data-level="5.2" data-path="morbid-curiosity.html"><a href="morbid-curiosity.html#morbid-curiosity-methods"><i class="fa fa-check"></i><b>5.2</b> Methods</a><ul>
+<li class="chapter" data-level="5.2.1" data-path="morbid-curiosity.html"><a href="morbid-curiosity.html#morbid-curiosity-methods-participants"><i class="fa fa-check"></i><b>5.2.1</b> Participants</a></li>
+<li class="chapter" data-level="5.2.2" data-path="morbid-curiosity.html"><a href="morbid-curiosity.html#morbid-curiosity-methods-design"><i class="fa fa-check"></i><b>5.2.2</b> Design</a></li>
+<li class="chapter" data-level="5.2.3" data-path="morbid-curiosity.html"><a href="morbid-curiosity.html#morbid-curiosity-methods-materials"><i class="fa fa-check"></i><b>5.2.3</b> Materials</a></li>
+<li class="chapter" data-level="5.2.4" data-path="morbid-curiosity.html"><a href="morbid-curiosity.html#morbid-curiosity-methods-procedure"><i class="fa fa-check"></i><b>5.2.4</b> Procedure</a></li>
+<li class="chapter" data-level="5.2.5" data-path="morbid-curiosity.html"><a href="morbid-curiosity.html#morbid-curiosity-methods-behavioral-analysis"><i class="fa fa-check"></i><b>5.2.5</b> Behavioral analysis</a></li>
+<li class="chapter" data-level="5.2.6" data-path="morbid-curiosity.html"><a href="morbid-curiosity.html#morbid-curiosity-methods-imaging-details"><i class="fa fa-check"></i><b>5.2.6</b> Imaging details</a></li>
+<li class="chapter" data-level="5.2.7" data-path="morbid-curiosity.html"><a href="morbid-curiosity.html#morbid-curiosity-data-availability"><i class="fa fa-check"></i><b>5.2.7</b> Data availability</a></li>
+</ul></li>
+<li class="chapter" data-level="5.3" data-path="morbid-curiosity.html"><a href="morbid-curiosity.html#morbid-curiosity-results"><i class="fa fa-check"></i><b>5.3</b> Results</a><ul>
+<li class="chapter" data-level="5.3.1" data-path="morbid-curiosity.html"><a href="morbid-curiosity.html#morbid-curiosity-results-participants"><i class="fa fa-check"></i><b>5.3.1</b> Participants</a></li>
+<li class="chapter" data-level="5.3.2" data-path="morbid-curiosity.html"><a href="morbid-curiosity.html#behavior-and-subjective-report"><i class="fa fa-check"></i><b>5.3.2</b> Behavior and subjective report</a></li>
+<li class="chapter" data-level="5.3.3" data-path="morbid-curiosity.html"><a href="morbid-curiosity.html#roi-analyses"><i class="fa fa-check"></i><b>5.3.3</b> ROI analyses</a></li>
+<li class="chapter" data-level="5.3.4" data-path="morbid-curiosity.html"><a href="morbid-curiosity.html#whole-brain-analyses"><i class="fa fa-check"></i><b>5.3.4</b> Whole-brain analyses</a></li>
+</ul></li>
+<li class="chapter" data-level="5.4" data-path="morbid-curiosity.html"><a href="morbid-curiosity.html#morbid-curiosity-discussion"><i class="fa fa-check"></i><b>5.4</b> Discussion</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="hypothesis-kernel-analysis.html"><a href="hypothesis-kernel-analysis.html"><i class="fa fa-check"></i><b>6</b> Explainable models of facial movements predict emotion perception behavior</a><ul>
+<li class="chapter" data-level="6.1" data-path="hypothesis-kernel-analysis.html"><a href="hypothesis-kernel-analysis.html#hka-introduction"><i class="fa fa-check"></i><b>6.1</b> Introduction</a><ul>
+<li class="chapter" data-level="6.1.1" data-path="hypothesis-kernel-analysis.html"><a href="hypothesis-kernel-analysis.html#the-prediction-explanation-exploration-framework"><i class="fa fa-check"></i><b>6.1.1</b> The prediction-explanation-exploration framework</a></li>
+</ul></li>
+<li class="chapter" data-level="6.2" data-path="hypothesis-kernel-analysis.html"><a href="hypothesis-kernel-analysis.html#hka-methods"><i class="fa fa-check"></i><b>6.2</b> Methods</a><ul>
+<li class="chapter" data-level="6.2.1" data-path="hypothesis-kernel-analysis.html"><a href="hypothesis-kernel-analysis.html#hypothesis-kernel-analysis-1"><i class="fa fa-check"></i><b>6.2.1</b> Hypothesis kernel analysis</a></li>
+<li class="chapter" data-level="6.2.2" data-path="hypothesis-kernel-analysis.html"><a href="hypothesis-kernel-analysis.html#ablation-and-follow-up-exploration-analyses"><i class="fa fa-check"></i><b>6.2.2</b> Ablation and follow-up exploration analyses</a></li>
+<li class="chapter" data-level="6.2.3" data-path="hypothesis-kernel-analysis.html"><a href="hypothesis-kernel-analysis.html#hka-noise-ceiling"><i class="fa fa-check"></i><b>6.2.3</b> Noise ceiling estimation</a></li>
+<li class="chapter" data-level="6.2.4" data-path="hypothesis-kernel-analysis.html"><a href="hypothesis-kernel-analysis.html#evaluated-mappings"><i class="fa fa-check"></i><b>6.2.4</b> Evaluated mappings</a></li>
+<li class="chapter" data-level="6.2.5" data-path="hypothesis-kernel-analysis.html"><a href="hypothesis-kernel-analysis.html#hka-dataset"><i class="fa fa-check"></i><b>6.2.5</b> Dataset used to evaluate mappings</a></li>
+<li class="chapter" data-level="6.2.6" data-path="hypothesis-kernel-analysis.html"><a href="hypothesis-kernel-analysis.html#hka-code"><i class="fa fa-check"></i><b>6.2.6</b> Code availability</a></li>
+</ul></li>
+<li class="chapter" data-level="6.3" data-path="hypothesis-kernel-analysis.html"><a href="hypothesis-kernel-analysis.html#hka-results"><i class="fa fa-check"></i><b>6.3</b> Results</a><ul>
+<li class="chapter" data-level="6.3.1" data-path="hypothesis-kernel-analysis.html"><a href="hypothesis-kernel-analysis.html#prediction"><i class="fa fa-check"></i><b>6.3.1</b> Prediction</a></li>
+<li class="chapter" data-level="6.3.2" data-path="hypothesis-kernel-analysis.html"><a href="hypothesis-kernel-analysis.html#explanation"><i class="fa fa-check"></i><b>6.3.2</b> Explanation</a></li>
+<li class="chapter" data-level="6.3.3" data-path="hypothesis-kernel-analysis.html"><a href="hypothesis-kernel-analysis.html#exploration"><i class="fa fa-check"></i><b>6.3.3</b> Exploration</a></li>
+</ul></li>
+<li class="chapter" data-level="6.4" data-path="hypothesis-kernel-analysis.html"><a href="hypothesis-kernel-analysis.html#hka-discussion"><i class="fa fa-check"></i><b>6.4</b> Discussion</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="static-vs-dynamic.html"><a href="static-vs-dynamic.html"><i class="fa fa-check"></i><b>7</b> Affective face perception integrates both static and dynamic information</a><ul>
+<li class="chapter" data-level="7.1" data-path="static-vs-dynamic.html"><a href="static-vs-dynamic.html#svsd-introduction"><i class="fa fa-check"></i><b>7.1</b> Introduction</a></li>
+<li class="chapter" data-level="7.2" data-path="static-vs-dynamic.html"><a href="static-vs-dynamic.html#svsd-methods"><i class="fa fa-check"></i><b>7.2</b> Methods</a><ul>
+<li class="chapter" data-level="7.2.1" data-path="static-vs-dynamic.html"><a href="static-vs-dynamic.html#svsd-participants"><i class="fa fa-check"></i><b>7.2.1</b> Participants</a></li>
+<li class="chapter" data-level="7.2.2" data-path="static-vs-dynamic.html"><a href="static-vs-dynamic.html#svsd-experimental-design"><i class="fa fa-check"></i><b>7.2.2</b> Experimental design</a></li>
+<li class="chapter" data-level="7.2.3" data-path="static-vs-dynamic.html"><a href="static-vs-dynamic.html#svsd-procedure"><i class="fa fa-check"></i><b>7.2.3</b> Procedure</a></li>
+<li class="chapter" data-level="7.2.4" data-path="static-vs-dynamic.html"><a href="static-vs-dynamic.html#svsd-data-preproc"><i class="fa fa-check"></i><b>7.2.4</b> Data preprocessing</a></li>
+<li class="chapter" data-level="7.2.5" data-path="static-vs-dynamic.html"><a href="static-vs-dynamic.html#svsd-pred-analysis"><i class="fa fa-check"></i><b>7.2.5</b> Predictive analysis</a></li>
+<li class="chapter" data-level="7.2.6" data-path="static-vs-dynamic.html"><a href="static-vs-dynamic.html#noise-ceiling-estimation"><i class="fa fa-check"></i><b>7.2.6</b> Noise ceiling estimation</a></li>
+<li class="chapter" data-level="7.2.7" data-path="static-vs-dynamic.html"><a href="static-vs-dynamic.html#svsd-bayes"><i class="fa fa-check"></i><b>7.2.7</b> Bayesian reconstructions</a></li>
+<li class="chapter" data-level="7.2.8" data-path="static-vs-dynamic.html"><a href="static-vs-dynamic.html#svsd-code"><i class="fa fa-check"></i><b>7.2.8</b> Code availability</a></li>
+</ul></li>
+<li class="chapter" data-level="7.3" data-path="static-vs-dynamic.html"><a href="static-vs-dynamic.html#svsd-results"><i class="fa fa-check"></i><b>7.3</b> Results</a><ul>
+<li class="chapter" data-level="7.3.1" data-path="static-vs-dynamic.html"><a href="static-vs-dynamic.html#encoding-model-performance"><i class="fa fa-check"></i><b>7.3.1</b> Encoding model performance</a></li>
+<li class="chapter" data-level="7.3.2" data-path="static-vs-dynamic.html"><a href="static-vs-dynamic.html#reconstruction-model-visualizations"><i class="fa fa-check"></i><b>7.3.2</b> Reconstruction model visualizations</a></li>
+</ul></li>
+<li class="chapter" data-level="7.4" data-path="static-vs-dynamic.html"><a href="static-vs-dynamic.html#svsd-discussion"><i class="fa fa-check"></i><b>7.4</b> Discussion</a><ul>
+<li class="chapter" data-level="7.4.1" data-path="static-vs-dynamic.html"><a href="static-vs-dynamic.html#facial-morphology-independently-contributes-to-affective-face-perception"><i class="fa fa-check"></i><b>7.4.1</b> Facial morphology independently contributes to affective face perception</a></li>
+<li class="chapter" data-level="7.4.2" data-path="static-vs-dynamic.html"><a href="static-vs-dynamic.html#the-influence-of-facial-morphology-does-not-result-from-visual-similarity-to-facial-movements"><i class="fa fa-check"></i><b>7.4.2</b> The influence of facial morphology does not result from visual similarity to facial movements</a></li>
+<li class="chapter" data-level="7.4.3" data-path="static-vs-dynamic.html"><a href="static-vs-dynamic.html#categorical-representations-of-experienced-valence-and-arousal-correlate-with-representations-of-perceived-emotions"><i class="fa fa-check"></i><b>7.4.3</b> Categorical representations of experienced valence and arousal correlate with representations of perceived emotions</a></li>
+<li class="chapter" data-level="7.4.4" data-path="static-vs-dynamic.html"><a href="static-vs-dynamic.html#predictive-models-quantify-what-is-not-yet-known"><i class="fa fa-check"></i><b>7.4.4</b> Predictive models quantify what is (not yet) known</a></li>
+</ul></li>
+<li class="chapter" data-level="7.5" data-path="static-vs-dynamic.html"><a href="static-vs-dynamic.html#svsd-conclusion"><i class="fa fa-check"></i><b>7.5</b> Conclusion</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="general-discussion.html"><a href="general-discussion.html"><i class="fa fa-check"></i><b>8</b> Discussion</a></li>
+<li class="appendix"><span><b>Appendix</b></span></li>
+<li class="chapter" data-level="A" data-path="shared-states-supplement.html"><a href="shared-states-supplement.html"><i class="fa fa-check"></i><b>A</b> Supplement to Chapter 2</a></li>
+<li class="chapter" data-level="B" data-path="confounds-decoding-supplement.html"><a href="confounds-decoding-supplement.html"><i class="fa fa-check"></i><b>B</b> Supplement to Chapter 3</a><ul>
+<li class="chapter" data-level="B.1" data-path="confounds-decoding-supplement.html"><a href="confounds-decoding-supplement.html#supplementary-methods"><i class="fa fa-check"></i><b>B.1</b> Supplementary methods</a><ul>
+<li class="chapter" data-level="B.1.1" data-path="confounds-decoding-supplement.html"><a href="confounds-decoding-supplement.html#functional-mri-simulation"><i class="fa fa-check"></i><b>B.1.1</b> Functional MRI simulation</a></li>
+<li class="chapter" data-level="B.1.2" data-path="confounds-decoding-supplement.html"><a href="confounds-decoding-supplement.html#testing-confound-regression-on-simulated-fmri-data"><i class="fa fa-check"></i><b>B.1.2</b> Testing confound regression on simulated fMRI data</a></li>
+<li class="chapter" data-level="B.1.3" data-path="confounds-decoding-supplement.html"><a href="confounds-decoding-supplement.html#controlling-for-confounds-during-pattern-estimation"><i class="fa fa-check"></i><b>B.1.3</b> Controlling for confounds during pattern estimation</a></li>
+<li class="chapter" data-level="B.1.4" data-path="confounds-decoding-supplement.html"><a href="confounds-decoding-supplement.html#linear-vs-nonlinear-confound-models-predicting-vbm-and-tbss-data-based-on-brain-size"><i class="fa fa-check"></i><b>B.1.4</b> Linear vs nonlinear confound models: predicting VBM and TBSS data based on brain size</a></li>
+</ul></li>
+<li class="chapter" data-level="B.2" data-path="confounds-decoding-supplement.html"><a href="confounds-decoding-supplement.html#supplementary-results"><i class="fa fa-check"></i><b>B.2</b> Supplementary results</a><ul>
+<li class="chapter" data-level="B.2.1" data-path="confounds-decoding-supplement.html"><a href="confounds-decoding-supplement.html#testing-confound-regression-on-simulated-fmri-data-1"><i class="fa fa-check"></i><b>B.2.1</b> Testing confound regression on simulated fMRI data</a></li>
+<li class="chapter" data-level="B.2.2" data-path="confounds-decoding-supplement.html"><a href="confounds-decoding-supplement.html#controlling-for-confounds-during-pattern-estimation-1"><i class="fa fa-check"></i><b>B.2.2</b> Controlling for confounds during pattern estimation</a></li>
+<li class="chapter" data-level="B.2.3" data-path="confounds-decoding-supplement.html"><a href="confounds-decoding-supplement.html#linear-vs.-nonlinear-confound-models-predicting-vbm-and-tbss-intensity-using-brain-size"><i class="fa fa-check"></i><b>B.2.3</b> Linear vs. nonlinear confound models: predicting VBM and TBSS intensity using brain size</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="C" data-path="aomic-supplement.html"><a href="aomic-supplement.html"><i class="fa fa-check"></i><b>C</b> Supplement to Chapter 4</a></li>
+<li class="chapter" data-level="D" data-path="morbid-curiosity-supplement.html"><a href="morbid-curiosity-supplement.html"><i class="fa fa-check"></i><b>D</b> Supplement to Chapter 5</a></li>
+<li class="chapter" data-level="E" data-path="hypothesis-kernel-analysis-supplement.html"><a href="hypothesis-kernel-analysis-supplement.html"><i class="fa fa-check"></i><b>E</b> Supplement to Chapter 6</a><ul>
+<li class="chapter" data-level="E.1" data-path="hypothesis-kernel-analysis-supplement.html"><a href="hypothesis-kernel-analysis-supplement.html#hka-supplementary-methods"><i class="fa fa-check"></i><b>E.1</b> Supplementary methods</a><ul>
+<li class="chapter" data-level="E.1.1" data-path="hypothesis-kernel-analysis-supplement.html"><a href="hypothesis-kernel-analysis-supplement.html#hypothesis-kernel-analysis-in-detail"><i class="fa fa-check"></i><b>E.1.1</b> Hypothesis kernel analysis (in detail)</a></li>
+<li class="chapter" data-level="E.1.2" data-path="hypothesis-kernel-analysis-supplement.html"><a href="hypothesis-kernel-analysis-supplement.html#hka-noise-ceiling-detail"><i class="fa fa-check"></i><b>E.1.2</b> Noise ceiling estimation (in detail)</a></li>
+</ul></li>
+<li class="chapter" data-level="E.2" data-path="hypothesis-kernel-analysis-supplement.html"><a href="hypothesis-kernel-analysis-supplement.html#hka-supp-fig"><i class="fa fa-check"></i><b>E.2</b> Supplementary figures</a></li>
+</ul></li>
+<li class="chapter" data-level="F" data-path="static-vs-dynamic-supplement.html"><a href="static-vs-dynamic-supplement.html"><i class="fa fa-check"></i><b>F</b> Supplement to Chapter 6</a></li>
+<li class="chapter" data-level="G" data-path="resources-supplement.html"><a href="resources-supplement.html"><i class="fa fa-check"></i><b>G</b> Data, code, and educational materials</a></li>
+<li class="chapter" data-level="" data-path="bibliography.html"><a href="bibliography.html"><i class="fa fa-check"></i>Bibliography</a></li>
+<li class="chapter" data-level="" data-path="contributions-to-the-chapters.html"><a href="contributions-to-the-chapters.html"><i class="fa fa-check"></i>Contributions to the chapters</a></li>
+<li class="chapter" data-level="" data-path="list-of-other-publications.html"><a href="list-of-other-publications.html"><i class="fa fa-check"></i>List of other publications</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Towards prediction</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="hypothesis-kernel-analysis" class="section level1">
+<h1><span class="header-section-number">6</span> Explainable models of facial movements predict emotion perception behavior</h1>
+
+
+<p><p><strong>Abstract</strong></p>
+
+Since Darwin, many studies have proposed how action units (AUs) relate to categorical emotions, giving rise to a multitude of hypothesized AU-emotion mappings. The qualitative nature of these mappings prevent us from quantifying to what extent these AU-based mappings explain categorical emotions. Here, we formalize these qualitative mappings as quantitative, predictive models that are able to precisely quantify the importance and limitations of AUs for emotion perception. We use a state-of-the-art modelling approach to compare these models in their capacity to <em>predict</em> human emotion classification behavior, <em>explain</em> the role of each AU, and <em>explore</em> how models can be improved. Additionally, by estimating the noise ceiling of predictive models, we estimate the limitations of these AU-based models due to individual differences. Together, our approach enables rigorous testing of different models, which quantifies the importance and limitations of AU-based models and proposes how to proceed in building better models of emotion perception.
+</p>
+<div id="hka-introduction" class="section level2">
+<h2><span class="header-section-number">6.1</span> Introduction</h2>
+<p>Facial expressions are a powerful and efficient medium to express and transmit a wide variety of emotions <span class="citation">(Jack &amp; Schyns, <a href="bibliography.html#ref-Jack2015-sh" role="doc-biblioref">2015</a>)</span>. Since the pioneering work of Ekman and Friesen <span class="citation">(Ekman &amp; Friesen, <a href="bibliography.html#ref-Ekman1976-hm" role="doc-biblioref">1976</a>; Friesen &amp; Ekman, <a href="bibliography.html#ref-Friesen1978-tp" role="doc-biblioref">1978</a>)</span>, studies have attempted to describe and quantify the relationship between facial expressions and emotions. Central to this endeavor are “action units” (AUs) — the smallest visually discriminable movements of the face <span class="citation">(J. F. Cohn et al., <a href="bibliography.html#ref-Cohn2007-az" role="doc-biblioref">2007</a>)</span>. Many studies have proposed that specific combinations of AUs represent different categorical emotions <span class="citation">(Barrett et al., <a href="bibliography.html#ref-Barrett2019-bc" role="doc-biblioref">2019</a>; Matsumoto et al., <a href="bibliography.html#ref-Matsumoto2008-qk" role="doc-biblioref">2008</a>)</span>. For example, <span class="citation">Friesen &amp; Ekman (<a href="bibliography.html#ref-Friesen1978-tp" role="doc-biblioref">1978</a>)</span> proposed that the facial expression of anger comprises Brow Lowerer (AU4), Upper Lid Raiser (AU5), Lid Tightener (AU7), and Lip Tightener (AU23). Such mappings between combinations of AUs and emotions are supposedly largely invariant to individual differences <span class="citation">(Ekman &amp; Keltner, <a href="bibliography.html#ref-Ekman1997-bk" role="doc-biblioref">1997</a>; Izard, <a href="bibliography.html#ref-Izard1994-ca" role="doc-biblioref">1994</a>; Matsumoto et al., <a href="bibliography.html#ref-Matsumoto2008-qk" role="doc-biblioref">2008</a>)</span>, implying that facial expressions conforming to the hypothesized AU combination will be consistently interpreted as the associated emotion. However, the importance of AUs in emotion perception and the invariance of the AU-emotion mappings is still debated <span class="citation">(Barrett et al., <a href="bibliography.html#ref-Barrett2019-bc" role="doc-biblioref">2019</a>; Jack et al., <a href="bibliography.html#ref-Jack2012-eq" role="doc-biblioref">2012</a>, <a href="bibliography.html#ref-Jack2009-yy" role="doc-biblioref">2009</a>)</span>.</p>
+<div id="the-prediction-explanation-exploration-framework" class="section level3">
+<h3><span class="header-section-number">6.1.1</span> The prediction-explanation-exploration framework</h3>
+<p>To compare different combinations of AUs in relation to categorical perception of emotions, one would need to directly and quantitatively compare the mappings hypothesized in different theories. In mature scientific endeavors, evaluating and comparing hypotheses is done using formal models, which can be quantitatively assessed by how accurately they are able to <em>predict</em> phenomena. In addition, models are used to <em>explain</em> the underlying causes of phenomena, and, with the enhanced understanding these explanations can provide, allow us to <em>explore</em> new predictions about the phenomenon (see Figure <a href="hypothesis-kernel-analysis.html#fig:fig-hka-1">6.1</a>). Most AU-emotion mappings, however, are not based or estimated from an explicit model, but are based on statistical tests between single AUs and discrete emotions <span class="citation">(Cordaro et al., <a href="bibliography.html#ref-Cordaro2018-xm" role="doc-biblioref">2018</a>; Ekman et al., <a href="bibliography.html#ref-Ekman1980-of" role="doc-biblioref">1980</a>; Jack et al., <a href="bibliography.html#ref-Jack2012-eq" role="doc-biblioref">2012</a>; Wiggers, <a href="bibliography.html#ref-Wiggers1982-na" role="doc-biblioref">1982</a>)</span>. The result describes a hypothesized relationship between a combination of AUs and a categorical emotion, which requires further developments to become formally predictive. We address this development with a novel methodology that formalizes descriptive hypotheses, such as AU-emotion mappings, as predictive models of classification (see <a href="hypothesis-kernel-analysis.html#hka-methods">Methods</a>). To evaluate these formal models, we quantify how well they <em>predict</em> the representation of emotions (via their behavioral classification performance), <em>explain</em> how different AUs contribute to these causal representations, and <em>explore</em> how we can improve existing models using insights from the derived explanations.</p>
+<p>This <em>prediction-explanation-exploration</em> framework (see Figure <a href="hypothesis-kernel-analysis.html#fig:fig-hka-1">6.1</a>) is a rigorous methodology to estimate the proportion of variance in categorization behavior that <em>can</em> be attributed to the AU models of the emotions vs. <em>cannot</em> be attributed the models themselves. We estimated the latter with the component of behavioral variance that arises from individual differences in the interpretation of the AU combinations — i.e., the noise ceiling <span class="citation">(Lage-Castellanos et al., <a href="bibliography.html#ref-lage2019methods" role="doc-biblioref">2019</a>; Nili et al., <a href="bibliography.html#ref-Nili2014-ar" role="doc-biblioref">2014</a>)</span>. The noise ceiling proposes that a fixed model cannot, by definition, explain any variations between individuals who categorize facial expressions with this model. Here, we use noise ceilings to demonstrate the limitations of fixed, AU-based models of categorical emotions.</p>
+<div class="figure"><span id="fig:fig-hka-1"></span>
+<img src="_bookdown_files/hypothesis-kernel-analysis-files/figures/figure_1.png" alt="The modelling framework used in the current study, which uses models for prediction, explanation, and exploration."  />
+<p class="caption">
+Figure 6.1: The modelling framework used in the current study, which uses models for prediction, explanation, and exploration.
+</p>
+</div>
+
+<p>We tested the ability of seven influential models of facial expressions of the six classic categorical emotions (see <a href="hypothesis-kernel-analysis.html#hka-methods">Methods</a> and Table <a href="hypothesis-kernel-analysis.html#tab:tab-hka-1">6.1</a>) to predict categorical emotion labels. To do so, we used a psychophysics task containing a large set of dynamic facial expressions with random AU combinations. In this task, participants categorized each facial expression animation as one of the six classic emotions, or “don’t know.” We used the models to <em>predict</em>, for the same trials rated by the participants, the most likely emotion category, which were compared to the actual emotion ratings. Next, to <em>explain</em> how specific AUs contributed to emotion classification performance, we systematically removed individual AUs from each model and recomputed its performance in predicting human behavior. Finally, we used these performance critical AUs to <em>explore</em> whether they improved the predictions of models that do not represent them. We show that models of the AU-emotion relationship substantially improve their prediction performance when they comprise performance-critical AUs. However, because this performance remains below the noise ceiling, there is still model variance to explain, suggesting that the evaluated hypotheses AU-emotion relations tested are not optimal yet. Importantly, these noise ceilings indicate that individual differences contribute a large proportion of the variations in emotion categorizations, suggesting better models that include between-participant factors, such as culture and other perceiver-related characteristics.</p>
+</div>
+</div>
+<div id="hka-methods" class="section level2">
+<h2><span class="header-section-number">6.2</span> Methods</h2>
+<div id="hypothesis-kernel-analysis-1" class="section level3">
+<h3><span class="header-section-number">6.2.1</span> Hypothesis kernel analysis</h3>
+<p>To formalize AU-emotion mappings as predictive models, we propose a novel method which we call “hypothesis kernel analysis”. In the context of the current study, we use this method to reframe AU-emotion mappings as classification models that predict the probability of an emotion given a set of AUs <span class="citation">(analogous to how people attempt to infer the emotion from others’ facial emotion expressions; Jack &amp; Schyns, <a href="bibliography.html#ref-Jack2015-sh" role="doc-biblioref">2015</a>)</span>. In what follows, we conceptually explain how the method works. For a detailed and more mathematical description of the method, we refer the reader to the <a href="hypothesis-kernel-analysis-supplement.html#hypothesis-kernel-analysis-supplement">Supplementary Methods</a>.</p>
+<p>The underlying idea of the hypothesis kernel analysis is to predict a categorical dependent variable (e.g., the perceived emotion) based on the similarity between an <em>observation</em> with a particular set of features (e.g., a face with a particular set of AUs; the independent variables) and statements of a <em>hypothesis</em> (e.g., “happiness is expressed by AUs 6 and 12”). This prediction can then be compared to real observations to evaluate the accuracy of the hypothesis. The three methodological challenges of this approach are how to measure the similarity between an observation and a hypothesis statement, how to derive a prediction based on this similarity, and how to compare the predictions to real data. Figure <a href="hypothesis-kernel-analysis.html#fig:fig-hka-2">6.2</a> outlines how we have solved these challenges in five steps, which we will describe in turn.</p>
+<div class="figure"><span id="fig:fig-hka-2"></span>
+<img src="_bookdown_files/hypothesis-kernel-analysis-files/figures/figure_2.png" alt="Schematic visualization of the proposed method using a set of hypothetical AU-emotion mappings (\(\mathbf{M}\)) and stimuli (\(\mathbf{S}\)) based on a small set of AUs (five in total). The variable \(P\) represents the number of variables (here: AUs), \(Q\) represents the number of classes (here: emotions), and \(N\) represents the number of trials (here: facial expression stimuli). Note that the AU space technically may contain any number of (\(P\)) dimensions, but is shown here in two dimensions for convenience."  />
+<p class="caption">
+Figure 6.2: Schematic visualization of the proposed method using a set of hypothetical AU-emotion mappings (<span class="math inline">\(\mathbf{M}\)</span>) and stimuli (<span class="math inline">\(\mathbf{S}\)</span>) based on a small set of AUs (five in total). The variable <span class="math inline">\(P\)</span> represents the number of variables (here: AUs), <span class="math inline">\(Q\)</span> represents the number of classes (here: emotions), and <span class="math inline">\(N\)</span> represents the number of trials (here: facial expression stimuli). Note that the AU space technically may contain any number of (<span class="math inline">\(P\)</span>) dimensions, but is shown here in two dimensions for convenience.
+</p>
+</div>
+
+<p>To quantify the similarity between an observation and a hypothesis statement, we embed both in a multidimensional space that is spanned by a particular set of variables (e.g., different AUs). In this space, we start by representing each class of the dependent variable (corresponding to the statements of the hypothesis) as a separate point. In the current study, this amounts to embedding the different hypothesized AU configurations (e.g., “happiness = AU12 + 6”; <span class="math inline">\(\mathbf{M}\)</span> in Figure <a href="hypothesis-kernel-analysis.html#fig:fig-hka-2">6.2</a>) as points in “AU space”, separately for each categorical emotion (see step 1 in Figure <a href="hypothesis-kernel-analysis.html#fig:fig-hka-2">6.2</a>). The coordinates of each point are determined by the hypothesized “importance” of each independent variable for that given class of the target variable. For example, the coordinates of each point in AU space represents the hypothesized relative intensity of each AU for a given emotion. As the AU-emotion mappings evaluated in the current study only specify whether an AU is included or excluded within a particular emotional configuration, we specify the coordinates of their embedding to be binary (0: excluded, 1: included). A different interpretation of the class embeddings described here is that they represent the location of a typical facial expression for this emotion in “AU space” according to a particular hypothesis.</p>
+<p>As a second step, we embed each data point in the same space as the hypotheses. This means, the data used for this purpose should contain the same variables as were used to embed the hypotheses. For example, in this study, we use emotion ratings (i.e., the target variable) in response to dynamic facial expression stimuli with random configurations of AUs (i.e., the independent variables; <span class="math inline">\(\mathbf{S}\)</span> in Figure <a href="hypothesis-kernel-analysis.html#fig:fig-hka-2">6.2</a>) to test the hypothesized AU-emotion mappings (see <a href="hypothesis-kernel-analysis.html#hka-dataset">Dataset used to evaluate mappings</a>).</p>
+<p>With the hypotheses and the data in the same space, the next step in our method is to compute, for each observation separately, the “similarity” between the data and each class of the target. For this purpose, we use <em>kernel functions</em> (step 3 in Figure <a href="hypothesis-kernel-analysis.html#fig:fig-hka-2">6.2</a>), a technique that quantifies the similarity of two vectors. Any kernel function that computes a measure of similarity can be used, but in our analyses we use the cosine similarity as it normalizes the similarity by the magnitude (specifically, the L2 norm) of the data and hypothesis embeddings (but see Supplementary Figure <a href="hypothesis-kernel-analysis-supplement.html#fig:fig-hka-S3">E.3</a> for a comparison of model performance across different similarity and distance metrics).</p>
+<p>As a fourth step, we interpret the similarity between the data and a given class embedding as being proportional to the evidence for a given class. In other words, the more similar a data point is to the statement of a hypothesis the stronger the prediction for the associated class. To produce a probabilistic prediction of the classes given a particular observation and hypothesis, we normalize the similarity values to the 0-1 range using the <em>softmax</em> function (step 4 in Figure <a href="hypothesis-kernel-analysis.html#fig:fig-hka-2">6.2</a>).<a href="#fn17" class="footnote-ref" id="fnref17"><sup>17</sup></a></p>
+<p>Finally, the accuracy of the model can be summarized by comparing its predictions to the actual values of the target variable in the dataset (see step 5 in Figure <a href="hypothesis-kernel-analysis.html#fig:fig-hka-2">6.2</a>). In this study, this means that the predictions are compared to the actual emotion ratings from participants. Although any model performance metric can be used, we use the “Area under the Receiver operating curve” (AUROC) as our model performance metric, because it is insensitive to class imbalance, allows for class-specific scores, and can handle probabilistic predictions <span class="citation">(Dinga et al., <a href="bibliography.html#ref-Dinga2020-si" role="doc-biblioref">2020</a>)</span>. We report class-specific scores, which means that each class of the categorical dependent variable (i.e., different emotions) gets a separate score with a chance level of 0.5 and a theoretical maximum score of 1.</p>
+</div>
+<div id="ablation-and-follow-up-exploration-analyses" class="section level3">
+<h3><span class="header-section-number">6.2.2</span> Ablation and follow-up exploration analyses</h3>
+<p>To gain a better understanding of why some mappings perform better than others, we performed an “ablation analysis”, which entails removing (or “ablating”) AUs one by one from each configuration for each evaluated mapping and subsequently rerunning the kernel analysis to observe how this impacts model performance. If ablating a particular AU <em>decreases</em> model performance for a given emotion, it means that this AU is important for perceiving this emotion. If on the other hand ablating an AU <em>increases</em> performance for a given emotion, it could mean that the inclusion of this AU in a given mapping is incorrect.</p>
+<p>Using the results from the ablation analyses, we explored strategies to enhance existing mappings. Specifically, we computed for each emotion which AUs, on average across mappings, led to a decrease in model performance after being ablated. We then constructed “optimized” models by, for each mapping separately, adding all AUs that led to a <em>decrease</em> in model performance after ablation and removing all AUs that led to an <em>increase</em> in model performance after ablation. Then, the predictive analysis was rerun and the “optimized” model performance was compared to the original model performance.</p>
+</div>
+<div id="hka-noise-ceiling" class="section level3">
+<h3><span class="header-section-number">6.2.3</span> Noise ceiling estimation</h3>
+<p>Instead of interpreting model performance relative to the theoretical optimum performance, we propose to interpret model performance relative to the <em>noise ceiling</em>, an estimate of the in principle explainable portion of the target variable. The noise ceiling is a concept often used in systems neuroscience to correct model performance for noise in the measured brain data <span class="citation">(Hsu et al., <a href="bibliography.html#ref-Hsu2004-hs" role="doc-biblioref">2004</a>; Huth et al., <a href="bibliography.html#ref-Huth2012-yc" role="doc-biblioref">2012</a>; Kay et al., <a href="bibliography.html#ref-Kay2013-ch" role="doc-biblioref">2013</a>)</span>. Traditionally, noise ceilings in neuroscience are applied in the context of within-subject regression models <span class="citation">(Lage-Castellanos et al., <a href="bibliography.html#ref-lage2019methods" role="doc-biblioref">2019</a>)</span>. Here, we develop a method to derive noise ceilings for classification models, i.e., models with a categorical target variable (such as categorical emotion ratings) that are applicable to both within-subject and between-subject models <span class="citation">(see also Hebart et al., <a href="bibliography.html#ref-Hebart2020-wp" role="doc-biblioref">2020</a>)</span>. In this section, we explain our derivation of noise ceilings for classification models conceptually; the <a href="hypothesis-kernel-analysis-supplement.html#hypothesis-kernel-analysis-supplement">Supplementary Methods</a> outline a more detailed and formal description.</p>
+<p>Noise ceiling estimation is a method that adjusts the theoretical maximum performance of a predictive model for the presence of irreducible noise in the data. As such, like the theoretical maximum, the noise ceiling imposes an upper bound on model performance. Another way to think about noise ceilings is that they split the variance of the data into three portions: the explained variance, the unexplained variance, and the “irreducible” noise (see Figure <a href="hypothesis-kernel-analysis.html#fig:fig-hka-3">6.3</a>). “Irreducible” is put in quotes because this proportion of noise can, in fact, be explained in principle as will be discussed in the <a href="#kha-discussion">Discussion</a> (see also the <a href="hypothesis-kernel-analysis-supplement.html#hypothesis-kernel-analysis-supplement">Supplementary Methods</a>. Importantly, the noise ceiling thus indicates how much improvement in terms of model performance can be gained for a given dataset (i.e., unexplained variance) and how much cannot be explained by the model (i.e., the “irreducible” noise).</p>
+<div class="figure"><span id="fig:fig-hka-3"></span>
+<img src="_bookdown_files/hypothesis-kernel-analysis-files/figures/figure_3.png" alt="The noise ceiling partitions the variance into explained variance, unexplained variance, and “irreducible” noise for any given model (\(\mathbf{M}\)). Here, AUROC is used as the metric of model performance, but the noise ceiling can be estimated using any metric."  />
+<p class="caption">
+Figure 6.3: The noise ceiling partitions the variance into <em>explained variance</em>, <em>unexplained variance</em>, and <em>“irreducible” noise</em> for any given model (<span class="math inline">\(\mathbf{M}\)</span>). Here, AUROC is used as the metric of model performance, but the noise ceiling can be estimated using any metric.
+</p>
+</div>
+
+<p>In the context of the current study, we use the variance (or “inconsistency”) in emotion ratings across participants in response to the same set of facial expression stimuli to estimate a noise ceiling for the different AU-based models. The noise ceiling gives us insight into whether the evaluated set of AU-based models are sufficiently accurate to explain variance that can in principle be explained by AUs or whether we may need differently parameterized AU-based models. This way, the importance and limitations of AUs can be estimated empirically.</p>
+</div>
+<div id="evaluated-mappings" class="section level3">
+<h3><span class="header-section-number">6.2.4</span> Evaluated mappings</h3>
+<p>Many different AU-emotion mappings have been put forward, but in this study we assess those summarized in <span class="citation">Barrett et al. (<a href="bibliography.html#ref-Barrett2019-bc" role="doc-biblioref">2019</a>)</span> (Table 1). Additionally, we included the AU-emotion mappings from the “emotional FACS” (EMFACS) manual <span class="citation">(Friesen &amp; Ekman, <a href="bibliography.html#ref-Friesen1983-ft" role="doc-biblioref">1983</a>)</span>. So, in total, we evaluated six hypothesized AU-emotion mappings, which are summarized in Table <a href="hypothesis-kernel-analysis.html#tab:tab-hka-1">6.1</a> (and an additional data-driven AU-emotion mapping, see below).</p>
+
+<table class="table" style="font-size: 7px; margin-left: auto; margin-right: auto;border-bottom: 0;">
+<caption style="font-size: initial !important;">
+<span id="tab:tab-hka-1">Table 6.1: </span>Evaluated AU-emotion mappings in our study
+</caption>
+<thead>
+<tr>
+<th style="text-align:left;">
+Emotion category
+</th>
+<th style="text-align:left;">
+Darwin (1872)
+</th>
+<th style="text-align:left;">
+EMFACS
+</th>
+<th style="text-align:left;">
+Matsumoto et al. (2008)
+</th>
+<th style="text-align:left;">
+Cordaro et al. (2018) - ref.
+</th>
+<th style="text-align:left;">
+Cordaro et al. (2018) - ICP
+</th>
+<th style="text-align:left;">
+Keltner et al. (2019)
+</th>
+<th style="text-align:left;">
+Jack/Schyns
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;width: 4em; ">
+Anger
+</td>
+<td style="text-align:left;">
+4 + 5 + 24 + 38
+</td>
+<td style="text-align:left;width: 10em; ">
+<span class="math inline">\(\boldsymbol{\cdot}\)</span> 4 + 5 + 7 + 10 + 22 + 23 + (25 <span class="math inline">\(\lor\)</span> 26)
+</td>
+<td style="text-align:left;">
+4 + (5 <span class="math inline">\(\lor\)</span> 7) + 22 + 23 + 24
+</td>
+<td style="text-align:left;">
+4 + 5 + 7 + 23
+</td>
+<td style="text-align:left;">
+4 + 7
+</td>
+<td style="text-align:left;">
+4 + 7
+</td>
+<td style="text-align:left;">
+4 + 5 + 17 + 23 +24
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 4em; ">
+</td>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;width: 10em; ">
+<span class="math inline">\(\boldsymbol{\cdot}\)</span> 4 + 5 + 7 + 10 + 23 + (25 <span class="math inline">\(\lor\)</span> 26)
+</td>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 4em; ">
+</td>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;width: 10em; ">
+<span class="math inline">\(\boldsymbol{\cdot}\)</span> 4 + 5 + 7 + 17 + (23 <span class="math inline">\(\lor\)</span> 24)
+</td>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 4em; ">
+</td>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;width: 10em; ">
+<span class="math inline">\(\boldsymbol{\cdot}\)</span> 4 + 5 + 7 + (23 <span class="math inline">\(\lor\)</span> 24)
+</td>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 4em; ">
+</td>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;width: 10em; ">
+<span class="math inline">\(\boldsymbol{\cdot}\)</span> 4 + (5 <span class="math inline">\(\lor\)</span> 7)
+</td>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 4em; ">
+</td>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;width: 10em; ">
+<span class="math inline">\(\boldsymbol{\cdot}\)</span> 17 + 24
+</td>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 4em; ">
+Disgust
+</td>
+<td style="text-align:left;">
+10 + 16 + 22 + 25 + 26
+</td>
+<td style="text-align:left;width: 10em; ">
+<span class="math inline">\(\boldsymbol{\cdot}\)</span> (9 <span class="math inline">\(\lor\)</span> 10) + 17
+</td>
+<td style="text-align:left;">
+(9 <span class="math inline">\(\lor\)</span> 10), (25 <span class="math inline">\(\lor\)</span> 26)
+</td>
+<td style="text-align:left;">
+9 + 15 + 16
+</td>
+<td style="text-align:left;">
+4 + 6 + 7 + 9 + 10 + 25 + (26 <span class="math inline">\(\lor\)</span> 27)
+</td>
+<td style="text-align:left;">
+7 + 9 + 19 + 25 + 26
+</td>
+<td style="text-align:left;">
+9 + 10 + 11 + 43
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 4em; ">
+</td>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;width: 10em; ">
+<span class="math inline">\(\boldsymbol{\cdot}\)</span> (9 <span class="math inline">\(\lor\)</span> 10) + 16 + (25 <span class="math inline">\(\lor\)</span> 26)
+</td>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 4em; ">
+</td>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;width: 10em; ">
+<span class="math inline">\(\boldsymbol{\cdot}\)</span> (9 <span class="math inline">\(\lor\)</span> 10)
+</td>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 4em; ">
+Fear
+</td>
+<td style="text-align:left;">
+1 + 2 + 5 + 20
+</td>
+<td style="text-align:left;width: 10em; ">
+<span class="math inline">\(\boldsymbol{\cdot}\)</span> 1 + 2 + 4
+</td>
+<td style="text-align:left;">
+1 + 2 + 4 + 5 + 20, (25 <span class="math inline">\(\lor\)</span> 26)
+</td>
+<td style="text-align:left;">
+1 + 2 + 4 + 5 + 20 + 25 + 26
+</td>
+<td style="text-align:left;">
+1 + 2 + 5 + 7 + 25 + (26 <span class="math inline">\(\lor\)</span> 27)
+</td>
+<td style="text-align:left;">
+1 + 2 + 4 + 5 + 7 + 20 + 25
+</td>
+<td style="text-align:left;">
+4 + 5 + 20
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 4em; ">
+</td>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;width: 10em; ">
+<span class="math inline">\(\boldsymbol{\cdot}\)</span> 1 + 2 + 4 + 5 + 20 + (25 <span class="math inline">\(\lor\)</span> 26 <span class="math inline">\(\lor\)</span> 27)
+</td>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 4em; ">
+</td>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;width: 10em; ">
+<span class="math inline">\(\boldsymbol{\cdot}\)</span> 1 + 2 + 4 + 5
+</td>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 4em; ">
+</td>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;width: 10em; ">
+<span class="math inline">\(\boldsymbol{\cdot}\)</span> 1 + 2 + =5 + (25 <span class="math inline">\(\lor\)</span> 26 <span class="math inline">\(\lor\)</span> 27)
+</td>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 4em; ">
+</td>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;width: 10em; ">
+<span class="math inline">\(\boldsymbol{\cdot}\)</span> 5 + 20 + (25 <span class="math inline">\(\lor\)</span> 26 <span class="math inline">\(\lor\)</span> 27)
+</td>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 4em; ">
+</td>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;width: 10em; ">
+<span class="math inline">\(\boldsymbol{\cdot}\)</span> 5 + 20
+</td>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 4em; ">
+</td>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;width: 10em; ">
+<span class="math inline">\(\boldsymbol{\cdot}\)</span> 20
+</td>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 4em; ">
+Happiness
+</td>
+<td style="text-align:left;">
+6 + 12
+</td>
+<td style="text-align:left;width: 10em; ">
+<span class="math inline">\(\boldsymbol{\cdot}\)</span> 12
+</td>
+<td style="text-align:left;">
+6 + 12
+</td>
+<td style="text-align:left;">
+6 + 12
+</td>
+<td style="text-align:left;">
+6 + 7 + 12 + 16 + 25 + (26 <span class="math inline">\(\lor\)</span> 27)
+</td>
+<td style="text-align:left;">
+6 + 7 + 12 + 25 + 26
+</td>
+<td style="text-align:left;">
+6 + 12 + 13 + 14 +25
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 4em; ">
+</td>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;width: 10em; ">
+<span class="math inline">\(\boldsymbol{\cdot}\)</span> 6 + 12
+</td>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 4em; ">
+Sadness
+</td>
+<td style="text-align:left;">
+1 + 15
+</td>
+<td style="text-align:left;width: 10em; ">
+<span class="math inline">\(\boldsymbol{\cdot}\)</span> 1 + 4
+</td>
+<td style="text-align:left;">
+1 + 15, 4, 17
+</td>
+<td style="text-align:left;">
+1 + 4 + 5
+</td>
+<td style="text-align:left;">
+4 + 43
+</td>
+<td style="text-align:left;">
+1 + 4 + 6 + 15 + 17
+</td>
+<td style="text-align:left;">
+4 + 15 + 17 + 24 + 43
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 4em; ">
+</td>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;width: 10em; ">
+<span class="math inline">\(\boldsymbol{\cdot}\)</span> 1 + 4 + (11 <span class="math inline">\(\lor\)</span> 15)
+</td>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 4em; ">
+</td>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;width: 10em; ">
+<span class="math inline">\(\boldsymbol{\cdot}\)</span> 1 + 4 + 15 + 17
+</td>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 4em; ">
+</td>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;width: 10em; ">
+<span class="math inline">\(\boldsymbol{\cdot}\)</span> 6 + 15
+</td>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 4em; ">
+</td>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;width: 10em; ">
+<span class="math inline">\(\boldsymbol{\cdot}\)</span> 11 + 17
+</td>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 4em; ">
+</td>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;width: 10em; ">
+<span class="math inline">\(\boldsymbol{\cdot}\)</span> 1
+</td>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 4em; ">
+Surprise
+</td>
+<td style="text-align:left;">
+1 + 2 + 5 + 25 + 26
+</td>
+<td style="text-align:left;width: 10em; ">
+<span class="math inline">\(\boldsymbol{\cdot}\)</span> 1 + 2 + 5 + (26 <span class="math inline">\(\lor\)</span> 27)
+</td>
+<td style="text-align:left;">
+1 + 2 + 5 + (25 <span class="math inline">\(\lor\)</span> 26)
+</td>
+<td style="text-align:left;">
+1 + 2 + 5 + 26
+</td>
+<td style="text-align:left;">
+1 + 2 + 5 + 25 + (26 <span class="math inline">\(\lor\)</span> 27)
+</td>
+<td style="text-align:left;">
+1 + 2 + 5 + 25 + 26
+</td>
+<td style="text-align:left;">
+1 + 2 + 5 + 26 + 27
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 4em; ">
+</td>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;width: 10em; ">
+<span class="math inline">\(\boldsymbol{\cdot}\)</span> 1 + 2 + 5
+</td>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 4em; ">
+</td>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;width: 10em; ">
+<span class="math inline">\(\boldsymbol{\cdot}\)</span> 1 + 2 + (26 <span class="math inline">\(\lor\)</span> 27)
+</td>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;width: 4em; ">
+</td>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;width: 10em; ">
+<span class="math inline">\(\boldsymbol{\cdot}\)</span> 5 + (26 <span class="math inline">\(\lor\)</span> 27)
+</td>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+</td>
+</tr>
+</tbody>
+<tfoot>
+<tr>
+<td style="padding: 0; " colspan="100%">
+<span style="font-style: italic;">Note: </span> <sup></sup> Mappings evaluated in the current study. The mappings from Darwin (1872) were taken from Matsumoto et al. (2018). Both the “reference configuration” (ref.) and the “international core pattern” (ICP) from Cordaro et al. (2018) are included. The + symbol means that AUs occur together. AUs following a comma represent optional AUs. The inverted ^ symbol represents “or”. When multiple configurations are explicitly proposed for a given emotion (i.e., a “many-to-one” mapping), they are represented as separate bullet points.
+</td>
+</tr>
+</tfoot>
+</table>
+
+<p>All of these mappings propose that a number of AUs must occur together to communicate a particular emotion. However, the comparison between them is complicated by the fact that not all of them posit a single, consistent set of AUs per emotion. First, some contain multiple sets, such as the EMFACS manual <span class="citation">(Friesen &amp; Ekman, <a href="bibliography.html#ref-Friesen1983-ft" role="doc-biblioref">1983</a>)</span> proposing that “sadness” can be expressed with AUs 1 + 4 or AUs 6 + 15. Second, some offer optional AUs for a set, such as <span class="citation">Matsumoto et al. (<a href="bibliography.html#ref-Matsumoto2008-qk" role="doc-biblioref">2008</a>)</span> proposing that “sadness” is associated with AUs 1 + 15 and optionally with AUs 4 and/or 17. Thirdly, some describe <em>mutually exclusive</em> options of AUs for a set, such as <span class="citation">Matsumoto et al. (<a href="bibliography.html#ref-Matsumoto2008-qk" role="doc-biblioref">2008</a>)</span> proposing that “surprise” can be communicated with AUs 1 + 2 + 5 in combination with <em>either</em> AU25 <em>or</em> AU26.</p>
+<p>We address this issue by explicitly formulating all possible AU configurations that communicate a particular emotion for each mapping. For example, Matsumoto et al. (2008) propose that “disgust” is associated with AU 9 or 10 and, optionally, AU 25 or 26, which yields six different possible configurations (9; 10; 9 + 25; 9 + 26; 10 + 25; 10 + 26). The specific configurations for each emotion derived from each evaluated mapping can be viewed in the study’s code repository (in <code>mappings.py</code>; see <a href="hypothesis-kernel-analysis.html#hka-code">Code Availability</a> section). In our analysis framework, we deal with multiple configurations per emotion (within a particular mapping), for each prediction separately, by using the configuration with the largest similarity to the stimulus under consideration (which occurs in between steps 3 and 4 in Figure <a href="hypothesis-kernel-analysis.html#fig:fig-hka-2">6.2</a>). We demonstrate that this procedure does not give an unfair advantage to mappings with more configurations using a simulation analysis (see Supplementary Figure <a href="hypothesis-kernel-analysis-supplement.html#fig:fig-hka-S4">E.4</a>).</p>
+<p>In addition to evaluating existing mappings from the literature, we also constructed a mapping based on a data-driven analysis of the relationship between the AUs and emotion ratings from the dataset we use to evaluate the mappings. Importantly, to avoid circularity in our data-driven analysis <span class="citation">(“double dipping”; Kriegeskorte et al., <a href="bibliography.html#ref-kriegeskorte2009circular" role="doc-biblioref">2009</a>)</span>, we performed the mapping estimation and evaluation on different partitions of the data (i.e., cross-validation). Specifically, we estimated the mapping on approximately 50% of the trials from 50% of the participants (the “train set”) and evaluated the mapping on the other 50% of trials from the other 50% of the participants (the “test set”). Importantly, the train and test set contained unique facial expressions and unique face identities, thus effectively treating both subject and stimulus as a random effect <span class="citation">(Westfall et al., <a href="bibliography.html#ref-westfall2016fixing" role="doc-biblioref">2016</a>)</span>.</p>
+<p>To estimate the data-driven mapping, we followed the procedure specified in <span class="citation">Yu et al. (<a href="bibliography.html#ref-Yu2012-ag" role="doc-biblioref">2012</a>)</span>. For each AU and emotion, we computed the Pearson correlation between the binary activation values (1 if active, 0 otherwise) and the binary emotion rating (1 if this emotion was rated, 0 otherwise) for each participant in the train set. The raw correlations were averaged across the participants and binarized based on whether the correlation was statistically significant at <span class="math inline">\(\alpha = 0.05\)</span> (1 if significant, 0 otherwise; uncorrected for multiple comparisons), which resulted in a binary 6 (emotion) × 33 (AU) mapping matrix.</p>
+</div>
+<div id="hka-dataset" class="section level3">
+<h3><span class="header-section-number">6.2.5</span> Dataset used to evaluate mappings</h3>
+<p>We use data from an existing dataset <span class="citation">(Yu et al., <a href="bibliography.html#ref-Yu2012-ag" role="doc-biblioref">2012</a>)</span> which contains emotion ratings in response to 2400 dynamic facial expressions (with a duration of 1.25 seconds) with random AU configurations from 60 subjects. Each stimulus was composed of one of eight “base faces” and a random number of activated AUs drawn from a set of 42 AUs. Per stimulus, the number of AUs was drawn from a binomial distribution with parameters <span class="math inline">\(n = 6\)</span> and <span class="math inline">\(p = 0.5\)</span>. The selected AUs varied in amplitude from 0 (not activated) to 1 (fully activated) in steps of 0.25 and a set of temporal parameters which determined the exact time course of each AU (see for details Yu et al., 2012). The original set of 42 AUs contained both compound AUs (such as AU25-12 and AU1-2) and AUs that could be activated both unilaterally (left or right) and bilaterally (such as AU12). In order to encode these AUs into independent variables, we recoded the compound AUs (e.g., activation of AU1-2 was recoded as activation of both AU1 and AU2) and bilateral AUs (e.g., activation of AU12 was recoded as activation of both AU12L and AU12R), yielding a total of 33 AUs: 1, 2L, 2R, 4, 5, 6L, 6R, 7L, 7R, 9, 10L, 10R, 11L, 11R, 12L, 12R, 13, 14L, 14R, 15, 16, 17, 20L, 20R, 22, 23, 24, 25, 26, 27, 38, 39, 43 (where L = left, R = right).</p>
+<p>The emotion ratings were collected in a 7 alternative forced-choice facial expression categorization task in which participants were instructed to label the stimuli using one of the six universal basic emotions (“anger”, “disgust”, “fear”, “happiness”, “sadness”, and “surprise) or, when the stimulus matched none of the emotion categories, “other”. In addition, participants rated the “intensity” of the perceived emotion, which ranged from 1 (not intense at all) to 5 (very intense). Trials in which the stimulus was rated as “other” were removed from the dataset (because the evaluated mappings do not contain hypotheses about this category) leaving a grand total of 121,902 trials (average per subject: 2031.7 trials, <em>SD</em>: 311.5) for our analysis. This grand total contains 4660 repeated observations with an average of 26.16 (<em>SD</em>: 14.92) repetitions.</p>
+</div>
+<div id="hka-code" class="section level3">
+<h3><span class="header-section-number">6.2.6</span> Code availability</h3>
+<p>All code used for this study’s analysis and visualization of results is publicly available from Github: <a href="https://github.com/lukassnoek/hypothesis-kernel-analysis" class="uri">https://github.com/lukassnoek/hypothesis-kernel-analysis</a>. The analyses were implemented in the Python programming language (version 3.7) and use several third-party packages, including <em>numpy</em> <span class="citation">(Harris et al., <a href="bibliography.html#ref-Harris2020-en" role="doc-biblioref">2020</a>)</span>, <em>pandas</em> <span class="citation">(McKinney &amp; Others, <a href="bibliography.html#ref-McKinney2011-kl" role="doc-biblioref">2011</a>)</span>, <em>scikit-learn</em> <span class="citation">(Pedregosa et al., <a href="bibliography.html#ref-pedregosa2011scikit" role="doc-biblioref">2011</a>)</span>, and <em>seaborn</em> <span class="citation">(Waskom, <a href="bibliography.html#ref-waskom2021seaborn" role="doc-biblioref">2021</a>)</span>. A Python package to compute noise ceilings as described in the current study can be found on Github: <a href="https://github.com/lukassnoek/noiseceiling" class="uri">https://github.com/lukassnoek/noiseceiling</a>.</p>
+</div>
+</div>
+<div id="hka-results" class="section level2">
+<h2><span class="header-section-number">6.3</span> Results</h2>
+<div id="prediction" class="section level3">
+<h3><span class="header-section-number">6.3.1</span> Prediction</h3>
+<p>In the first step of the modelling cycle, we evaluated how well each hypothesized AU-emotion mapping could <em>predict</em> categorical emotion rating behavior in human participant. To do so, we developed a method to convert hypotheses about mappings between AUs and emotions into predictive models (see <a href="hypothesis-kernel-analysis.html#hka-methods">Methods</a>). We then evaluated these models on their ability to predict categorical emotion labels from a psychophysics task containing a large set of dynamic facial expressions with random AU configurations. For each of the sixty observers, we summarized how well each model predicted the categorical emotion ratings using the Area Under the Receiver Operating Curve (AUROC), a metric with a chance level of 0.5 (which represents a model that randomly guesses the labels) and a theoretical maximum score of 1 (which represents a model that predicts each label perfectly). We additionally estimated a noise ceiling for each emotion, which represents an estimate of the maximum achievable model performance given the individual differences in ratings across participants (see <a href="aomic.html#methods">Methods</a>). The logic behind a noise ceiling is that a single fixed model cannot capture any difference in emotion ratings across participants. The theoretical maximum performance (i.e. an AUROC of 1) implies that different participants categorize the same combinations of AUs with the same emotion labels. However, if different individuals use different emotion labels for the same combinations of AUs, then this experimental noise will be irreducible, in turn reducing the noise ceiling and the proportion of variance that the models can possibly explain.</p>
+<p>The results of the predictive analysis are summarized in Figure <a href="hypothesis-kernel-analysis.html#fig:fig-hka-4">6.4</a>, which shows the average and participant-specific AUROC scores separately for each mapping and emotion. The dashed line indicates each model’s noise ceiling. The results indicate that almost all mappings predict each emotion well above chance level (i.e., an AUROC of 0.5), although substantial differences exist between different models and emotions. However, average model performance (i.e. across mappings and emotions, with AUROC = 0.68) is still far from the average noise ceiling (i.e., an AUROC of 0.87). This indicates that the models tested do not perform optimally. Finally, considering that optimal performance is an AUROC of 1.0, substantially lower noise ceilings in this experiment indicates that a large proportion of the variability of emotion categorizations across participants cannot, in principle, be explained by any of the evaluated models.</p>
+<div class="figure"><span id="fig:fig-hka-4"></span>
+<img src="_bookdown_files/hypothesis-kernel-analysis-files/figures/figure_4.png" alt="Prediction. AUROC scores for each mapping (different bars), shown separately for each emotion (x-axis). Dots indicate individual participants. Dashed line and value directly above represent the noise ceiling (gray area represents ± 1 SD based on bootstrapping the repeated observations). The slightly different noise ceiling for Jack &amp; Schyns results from using half of the participants for evaluation."  />
+<p class="caption">
+Figure 6.4: <em>Prediction</em>. AUROC scores for each mapping (different bars), shown separately for each emotion (x-axis). Dots indicate individual participants. Dashed line and value directly above represent the noise ceiling (gray area represents ± 1 SD based on bootstrapping the repeated observations). The slightly different noise ceiling for Jack &amp; Schyns results from using half of the participants for evaluation.
+</p>
+</div>
+
+</div>
+<div id="explanation" class="section level3">
+<h3><span class="header-section-number">6.3.2</span> Explanation</h3>
+<p>In the second step of the modelling cycle, we <em>explained</em> the predictions and relative accuracy of the different mappings by quantifying the effect of each AU on model performance using an “ablation analysis”. We systematically manipulated each model by selectively removing (or “ablating”) each AU from each emotion combination and then reran the predictive analysis (see Figure <a href="hypothesis-kernel-analysis.html#fig:fig-hka-5">6.5</a>). The difference in model performance between the original (non-ablated) and ablated models indicates how important the ablated AU is for each categorizing each emotion. Specifically, if ablating an AU decreases performance for a particular emotion, it implies that participants tend to associate this AU with this particular emotion (and vice versa).</p>
+<div class="figure"><span id="fig:fig-hka-5"></span>
+<img src="_bookdown_files/hypothesis-kernel-analysis-files/figures/figure_5.png" alt="Explanation. Schematic visualization of the explanation process through ablation of single AUs. The heatmap shows the average decrease (red) or increase (blue) across mappings after ablation of a single AU (x-axis) from a particular emotion configuration (y-axis)."  />
+<p class="caption">
+Figure 6.5: <em>Explanation</em>. Schematic visualization of the explanation process through ablation of single AUs. The heatmap shows the average decrease (red) or increase (blue) across mappings after ablation of a single AU (x-axis) from a particular emotion configuration (y-axis).
+</p>
+</div>
+
+<p>The heatmap in Figure <a href="hypothesis-kernel-analysis.html#fig:fig-hka-5">6.5</a> shows how ablation of each AU impacts the model performance for each emotion, averaged across each combination that contains that particular AU (for the results per mapping, see Supplementary Table <a href="hypothesis-kernel-analysis-supplement.html#tab:tab-hka-S1">E.1</a> and Supplementary Figure <a href="hypothesis-kernel-analysis-supplement.html#fig:fig-hka-S5">E.5</a>). These results reveal both AUs that decrease performance when ablated (e.g., AU9 for disgust and AU5 for surprise) and AUs that increase performance when ablated (e.g., AU5 for sadness). Importantly, these results suggest that models can potentially be improved by selectively adding or removing these informative AUs (e.g., adding AU9 to Darwin’s disgust mapping and removing AU5 from Cordaro et al. - ref).</p>
+</div>
+<div id="exploration" class="section level3">
+<h3><span class="header-section-number">6.3.3</span> Exploration</h3>
+<p>In the third step of the modelling cycle, we used the results from the ablation analysis to <em>explore</em> alternative, optimized mappings between AUs and emotions. We created optimized models by enhancing mappings with <em>all</em> AUs that led to a decrease in model performance after ablation (i.e., all “red” cells in the heatmap from Figure <a href="hypothesis-kernel-analysis.html#fig:fig-hka-5">6.5</a>) and removing AUs from mappings that led to an increase in model performance after ablation (i.e., all “blue” cells in the heatmap from Figure <a href="hypothesis-kernel-analysis.html#fig:fig-hka-5">6.5</a>). Figure 4 (top) shows the difference in model performance between the original and the optimized model. Model performance improved substantially for almost all mappings and emotions, with anger improving the most (median improvement in AUROC: 0.13) and surprise the least (median improvement in AUROC: 0.03). However, all emotions were predicted well below the noise ceiling: the difference between the noise ceiling and optimal model performance ranged from 0.08 for happiness and 0.13 for sadness categorizations (for details, see Supplementary Figure <a href="hypothesis-kernel-analysis-supplement.html#fig:fig-hka-S6">E.6</a>).</p>
+<p>In addition, we investigated how the optimized models led to behaviors different from the original models, by computing their corresponding confusion matrix, which shows how a model misclassifies trials. An ideal model will have a confusion matrix with off-diagonal values of zero indicating no confusion. Figure <a href="hypothesis-kernel-analysis.html#fig:fig-hka-6">6.6</a> shows that the original models frequently confused anger with disgust and disgust with happiness. The optimized models substantially reduced these confusions. To quantify this reduction, we computed percentage difference of misclassified trials (i.e., the off-diagonal values of the confusion matrix) between the optimized and original model, which ranged between 2.2% (Jack &amp; Schyns) and 12.2% (Darwin, 1886).</p>
+<div class="figure"><span id="fig:fig-hka-6"></span>
+<img src="_bookdown_files/hypothesis-kernel-analysis-files/figures/figure_6.png" alt="Exploration. Schematic visualization of the exploration process through enriching existing models with additional AUs. Bar graph shows the change in model performance ($Delta$ AUROC) of the optimal model relative to the original model (cf. Figure 6.4). The dashed line represents the original noise ceiling. Bottom: confusion matrices (normalized by the sum across rows, indicating sensitivity) of the original and optimized model and reduction in confusion rate."  />
+<p class="caption">
+Figure 6.6: <em>Exploration</em>. Schematic visualization of the exploration process through enriching existing models with additional AUs. Bar graph shows the change in model performance ($Delta$ AUROC) of the optimal model relative to the original model (cf. Figure <a href="hypothesis-kernel-analysis.html#fig:fig-hka-4">6.4</a>). The dashed line represents the original noise ceiling. Bottom: confusion matrices (normalized by the sum across rows, indicating sensitivity) of the original and optimized model and reduction in confusion rate.
+</p>
+</div>
+
+</div>
+</div>
+<div id="hka-discussion" class="section level2">
+<h2><span class="header-section-number">6.4</span> Discussion</h2>
+<p>Since Darwin’s seminal work on the evolutionary origins of emotional expressions, a debate has centered on the question of the specific combinations of facial movements that consistently expressed different emotions. The influential taxonomy of facial movements as AUs proposed by <span class="citation">Ekman &amp; Friesen (<a href="bibliography.html#ref-Ekman1976-hm" role="doc-biblioref">1976</a>)</span> enabled different hypotheses to be formulated about the specific combinations of action units that underlie the expression and recognition of emotion categories.</p>
+<p>In this study, we developed this approach further, by formalizing these proposals for combinations of AUs as predictive models of human categorization behavior. We used these formal models to quantitatively evaluate how well each model <em>predicts</em> the categorization of emotions. We then <em>explained</em> the differences in predictive accuracy with systematic manipulations of the AUs comprising each model. In turn, this generated insights that enabled <em>exploration</em> of alternative and improved models. Moreover, we showed that models were inherently limited in their prediction of human behavior, due to individual differences in how people perceive facial expressions.</p>
+<p>With our model-based approach, we could precisely quantify specifically how much different AU-emotion mappings predicted emotion categorizations. We found that all models could predict a substantial proportion of the variance, but with pronounced differences between models. The ablation analysis indicated that these differences could be explained by AUs beneficial for prediction that were lacking in some models, and also that other models comprised AUs that in fact hindered their predictions. We used these insights to explore alternative, “optimized” models that, in turn, substantially improved predictive accuracy. This prediction-explanation-exploration cycle demonstrates that a model-based approach offers a detailed summary of the strengths and limitations of the evaluated models and therefore enables their improvements.</p>
+<p>An important advantage of formal models is we can use their predictive accuracy to quantify within a common metric how much of a cognitive capacity is accounted for, and how much is not. To better understand the limits of the evaluated models, we computed their noise ceiling. This partitions the gap between the actual and maximal model performance into the <em>unexplained variance</em> and that due to <em>individual differences</em> (see Figure <a href="hypothesis-kernel-analysis.html#fig:fig-hka-3">6.3</a>). The noise ceiling uses the individual variations in individuals that categorize a given model to estimate an upper bound of the model performance. Variance below the noise ceiling is consistent across individuals and can thus, in principle, be explained by a single, fixed model. In contrast, variance above the noise ceiling represents individual differences (e.g., participant 1 rates stimulus <span class="math inline">\(X\)</span> as “anger” while participant 2 rates it as “disgust”) which is impossible to explain by a single, fixed model.</p>
+<p>Our results indicate that the evaluated models, including in their optimized forms, do not reach the noise ceiling, implying that they likely lack important information. Future research could improve these models so they may reach the noise ceiling. One possibility is to “weigh” the AUs in each model (to weight their importance, or probability), instead of having “binary” AUs (i.e. either “on” or “off”) as is often the norm. Also, facial expressions are inherently dynamic, so incorporating their temporal information could also improve their categorization <span class="citation">(Delis et al., <a href="bibliography.html#ref-Delis2016-zl" role="doc-biblioref">2016</a>; Jack et al., <a href="bibliography.html#ref-Jack2014-ku" role="doc-biblioref">2014</a>)</span>.</p>
+<p>The observation that the evaluated models are strongly limited by the observed individual differences in emotion ratings begs the question what underlies these individual differences. In the context of the current study, individual differences could include any factor that differs between individuals, including age, sex, personality and culture of the perceiver &amp;mdash all of which have been shown to influence the association between AUs and emotions <span class="citation">(Jack et al., <a href="bibliography.html#ref-Jack2012-eq" role="doc-biblioref">2012</a>; Parmley &amp; Cunningham, <a href="bibliography.html#ref-Parmley2014-nj" role="doc-biblioref">2014</a>)</span>. Incorporating these factors in the models or constructing separate models for different groups (e.g., for different cultures) could account for the individual differences that would otherwise contribute to noise.</p>
+<p>In sum, our model-based approach allowed us to systematically test previously hypothesized mappings between AUs and emotion categories, which we found explain a substantial proportion of variance in emotion categorizations, but remain limited by individual differences. These question the possibility of a universal model of emotional facial expressions. We propose that future studies investigate the specific factors that cause individual differences to enable the development of more complete and accurate models of facial expressions of emotion.</p>
+
+</div>
+</div>
+<div class="footnotes">
+<hr />
+<ol start="17">
+<li id="fn17"><p>Readers familiar with machine learning algorithms may recognize this as a specific implementation of a K-nearest neighbor classification model with <em>K</em> = 1, which is fit on the embedded hypotheses (<span class="math inline">\(\mathbf{M}\)</span>) and cross-validated on the data (<span class="math inline">\(\mathbf{S}\)</span>).<a href="hypothesis-kernel-analysis.html#fnref17" class="footnote-back">↩︎</a></p></li>
+</ol>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="morbid-curiosity.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="static-vs-dynamic.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

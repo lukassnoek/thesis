@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en-US" xml:lang="en-US">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>F Supplement to Chapter 6 | Towards prediction</title>
+  <meta name="description" content="F Supplement to Chapter 6 | Towards prediction" />
+  <meta name="generator" content="bookdown 0.20 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="F Supplement to Chapter 6 | Towards prediction" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="F Supplement to Chapter 6 | Towards prediction" />
+  
+  
+  
+
+<meta name="author" content="Lukas Snoek" />
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="hypothesis-kernel-analysis-supplement.html"/>
+<link rel="next" href="resources-supplement.html"/>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
+<script src="libs/kePrint-0.0.1/kePrint.js"></script>
+<link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
+
+
+
+<link rel="stylesheet" href="css/style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">PhD thesis of Lukas Snoek</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Preface</a></li>
+<li class="chapter" data-level="1" data-path="general-introduction.html"><a href="general-introduction.html"><i class="fa fa-check"></i><b>1</b> Introduction</a><ul>
+<li class="chapter" data-level="1.1" data-path="general-introduction.html"><a href="general-introduction.html#inference-done-differently"><i class="fa fa-check"></i><b>1.1</b> Inference done differently</a></li>
+<li class="chapter" data-level="1.2" data-path="general-introduction.html"><a href="general-introduction.html#towards-prediction"><i class="fa fa-check"></i><b>1.2</b> Towards prediction</a></li>
+<li class="chapter" data-level="1.3" data-path="general-introduction.html"><a href="general-introduction.html#outline-of-this-thesis"><i class="fa fa-check"></i><b>1.3</b> Outline of this thesis</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="shared-states.html"><a href="shared-states.html"><i class="fa fa-check"></i><b>2</b> Shared states: using MVPA to test neural overlap between self-focused emotion imagery and other-focused emotion understanding</a><ul>
+<li class="chapter" data-level="2.1" data-path="shared-states.html"><a href="shared-states.html#shared-states-introduction"><i class="fa fa-check"></i><b>2.1</b> Introduction</a></li>
+<li class="chapter" data-level="2.2" data-path="shared-states.html"><a href="shared-states.html#shared-states-methods"><i class="fa fa-check"></i><b>2.2</b> Methods</a><ul>
+<li class="chapter" data-level="2.2.1" data-path="shared-states.html"><a href="shared-states.html#shared-states-methods-subjects"><i class="fa fa-check"></i><b>2.2.1</b> Subjects</a></li>
+<li class="chapter" data-level="2.2.2" data-path="shared-states.html"><a href="shared-states.html#shared-states-methods-experimental-design"><i class="fa fa-check"></i><b>2.2.2</b> Experimental design</a></li>
+<li class="chapter" data-level="2.2.3" data-path="shared-states.html"><a href="shared-states.html#shared-states-methods-procedure"><i class="fa fa-check"></i><b>2.2.3</b> Procedure</a></li>
+<li class="chapter" data-level="2.2.4" data-path="shared-states.html"><a href="shared-states.html#shared-states-methods-image-acquisition"><i class="fa fa-check"></i><b>2.2.4</b> Image acquisition</a></li>
+<li class="chapter" data-level="2.2.5" data-path="shared-states.html"><a href="shared-states.html#shared-states-methods-model-optimization-procedure"><i class="fa fa-check"></i><b>2.2.5</b> Model optimization procedure</a></li>
+<li class="chapter" data-level="2.2.6" data-path="shared-states.html"><a href="shared-states.html#shared-states-methods-preprocessing"><i class="fa fa-check"></i><b>2.2.6</b> Preprocessing and single-trial modeling</a></li>
+<li class="chapter" data-level="2.2.7" data-path="shared-states.html"><a href="shared-states.html#shared-states-methods-mvpa"><i class="fa fa-check"></i><b>2.2.7</b> Multi-voxel pattern analysis</a></li>
+<li class="chapter" data-level="2.2.8" data-path="shared-states.html"><a href="shared-states.html#shared-states-methods-additional-analyses"><i class="fa fa-check"></i><b>2.2.8</b> Additional analyses</a></li>
+<li class="chapter" data-level="2.2.9" data-path="shared-states.html"><a href="shared-states.html#shared-states-methods-univariate-analysis"><i class="fa fa-check"></i><b>2.2.9</b> Univariate analysis</a></li>
+<li class="chapter" data-level="2.2.10" data-path="shared-states.html"><a href="shared-states.html#shared-states-methods-code-availability"><i class="fa fa-check"></i><b>2.2.10</b> Code availability</a></li>
+</ul></li>
+<li class="chapter" data-level="2.3" data-path="shared-states.html"><a href="shared-states.html#shared-states-results"><i class="fa fa-check"></i><b>2.3</b> Results</a><ul>
+<li class="chapter" data-level="2.3.1" data-path="shared-states.html"><a href="shared-states.html#shared-states-results-mvpa"><i class="fa fa-check"></i><b>2.3.1</b> Multi-voxel pattern analysis</a></li>
+<li class="chapter" data-level="2.3.2" data-path="shared-states.html"><a href="shared-states.html#shared-states-results-univariate"><i class="fa fa-check"></i><b>2.3.2</b> Univariate analyses</a></li>
+</ul></li>
+<li class="chapter" data-level="2.4" data-path="shared-states.html"><a href="shared-states.html#shared-states-discussion"><i class="fa fa-check"></i><b>2.4</b> Discussion</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="confounds-decoding.html"><a href="confounds-decoding.html"><i class="fa fa-check"></i><b>3</b> How to control for confounds in decoding analyses of neuroimaging data</a><ul>
+<li class="chapter" data-level="3.1" data-path="confounds-decoding.html"><a href="confounds-decoding.html#confounds-decoding-introduction"><i class="fa fa-check"></i><b>3.1</b> Introduction</a><ul>
+<li class="chapter" data-level="3.1.1" data-path="confounds-decoding.html"><a href="confounds-decoding.html#confounds-decoding-introduction-true-vs-confounded"><i class="fa fa-check"></i><b>3.1.1</b> Partitioning effects into <em>true</em> signal and <em>confounded</em> signal</a></li>
+<li class="chapter" data-level="3.1.2" data-path="confounds-decoding.html"><a href="confounds-decoding.html#confounds-decoding-introduction-methods"><i class="fa fa-check"></i><b>3.1.2</b> Methods for confound control</a></li>
+<li class="chapter" data-level="3.1.3" data-path="confounds-decoding.html"><a href="confounds-decoding.html#confounds-decoding-introduction-current-study"><i class="fa fa-check"></i><b>3.1.3</b> Current study</a></li>
+</ul></li>
+<li class="chapter" data-level="3.2" data-path="confounds-decoding.html"><a href="confounds-decoding.html#confounds-decoding-methods"><i class="fa fa-check"></i><b>3.2</b> Methods</a><ul>
+<li class="chapter" data-level="3.2.1" data-path="confounds-decoding.html"><a href="confounds-decoding.html#confounds-decoding-methods-data"><i class="fa fa-check"></i><b>3.2.1</b> Data</a></li>
+<li class="chapter" data-level="3.2.2" data-path="confounds-decoding.html"><a href="confounds-decoding.html#confounds-decoding-methods-pipeline"><i class="fa fa-check"></i><b>3.2.2</b> Decoding pipeline</a></li>
+<li class="chapter" data-level="3.2.3" data-path="confounds-decoding.html"><a href="confounds-decoding.html#confounds-decoding-methods-evaluated-methods"><i class="fa fa-check"></i><b>3.2.3</b> Evaluated methods for confound control</a></li>
+<li class="chapter" data-level="3.2.4" data-path="confounds-decoding.html"><a href="confounds-decoding.html#analyses-of-simulated-data"><i class="fa fa-check"></i><b>3.2.4</b> Analyses of simulated data</a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="confounds-decoding.html"><a href="confounds-decoding.html#results"><i class="fa fa-check"></i><b>3.3</b> Results</a><ul>
+<li class="chapter" data-level="3.3.1" data-path="confounds-decoding.html"><a href="confounds-decoding.html#influence-of-brain-size"><i class="fa fa-check"></i><b>3.3.1</b> Influence of brain size</a></li>
+<li class="chapter" data-level="3.3.2" data-path="confounds-decoding.html"><a href="confounds-decoding.html#baseline-model-no-confound-control"><i class="fa fa-check"></i><b>3.3.2</b> Baseline model: no confound control</a></li>
+<li class="chapter" data-level="3.3.3" data-path="confounds-decoding.html"><a href="confounds-decoding.html#post-hoc-counterbalancing"><i class="fa fa-check"></i><b>3.3.3</b> Post hoc counterbalancing</a></li>
+<li class="chapter" data-level="3.3.4" data-path="confounds-decoding.html"><a href="confounds-decoding.html#whole-dataset-confound-regression-wdcr"><i class="fa fa-check"></i><b>3.3.4</b> Whole-dataset confound regression (WDCR)</a></li>
+<li class="chapter" data-level="3.3.5" data-path="confounds-decoding.html"><a href="confounds-decoding.html#cross-validated-confound-regression-cvcr"><i class="fa fa-check"></i><b>3.3.5</b> Cross-validated confound regression (CVCR)</a></li>
+<li class="chapter" data-level="3.3.6" data-path="confounds-decoding.html"><a href="confounds-decoding.html#summary-methods-for-confound-control"><i class="fa fa-check"></i><b>3.3.6</b> Summary methods for confound control</a></li>
+</ul></li>
+<li class="chapter" data-level="3.4" data-path="confounds-decoding.html"><a href="confounds-decoding.html#confounds-decoding-discussion"><i class="fa fa-check"></i><b>3.4</b> Discussion</a><ul>
+<li class="chapter" data-level="3.4.1" data-path="confounds-decoding.html"><a href="confounds-decoding.html#relevance-and-consequences-for-previous-and-future-research"><i class="fa fa-check"></i><b>3.4.1</b> Relevance and consequences for previous and future research</a></li>
+<li class="chapter" data-level="3.4.2" data-path="confounds-decoding.html"><a href="confounds-decoding.html#choosing-a-confound-model-linear-vs.-nonlinear-models"><i class="fa fa-check"></i><b>3.4.2</b> Choosing a confound model: linear vs. nonlinear models</a></li>
+<li class="chapter" data-level="3.4.3" data-path="confounds-decoding.html"><a href="confounds-decoding.html#practical-recommendations"><i class="fa fa-check"></i><b>3.4.3</b> Practical recommendations</a></li>
+</ul></li>
+<li class="chapter" data-level="3.5" data-path="confounds-decoding.html"><a href="confounds-decoding.html#conclusion"><i class="fa fa-check"></i><b>3.5</b> Conclusion</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="aomic.html"><a href="aomic.html"><i class="fa fa-check"></i><b>4</b> The Amsterdam Open MRI Collection, a set of multimodal MRI datasets for individual difference analyses</a><ul>
+<li class="chapter" data-level="4.1" data-path="aomic.html"><a href="aomic.html#background-summary"><i class="fa fa-check"></i><b>4.1</b> Background &amp; summary</a></li>
+<li class="chapter" data-level="4.2" data-path="aomic.html"><a href="aomic.html#methods"><i class="fa fa-check"></i><b>4.2</b> Methods</a><ul>
+<li class="chapter" data-level="4.2.1" data-path="aomic.html"><a href="aomic.html#scanner-details-and-general-scanning-protocol-all-datasets"><i class="fa fa-check"></i><b>4.2.1</b> Scanner details and general scanning protocol (all datasets)</a></li>
+<li class="chapter" data-level="4.2.2" data-path="aomic.html"><a href="aomic.html#id1000-specifics"><i class="fa fa-check"></i><b>4.2.2</b> ID1000 specifics</a></li>
+<li class="chapter" data-level="4.2.3" data-path="aomic.html"><a href="aomic.html#piop1-and-piop2-specifics"><i class="fa fa-check"></i><b>4.2.3</b> PIOP1 and PIOP2 specifics</a></li>
+<li class="chapter" data-level="4.2.4" data-path="aomic.html"><a href="aomic.html#subject-variables-all-datasets"><i class="fa fa-check"></i><b>4.2.4</b> Subject variables (all datasets)</a></li>
+<li class="chapter" data-level="4.2.5" data-path="aomic.html"><a href="aomic.html#psychometric-variables-all-datasets"><i class="fa fa-check"></i><b>4.2.5</b> Psychometric variables (all datasets)</a></li>
+<li class="chapter" data-level="4.2.6" data-path="aomic.html"><a href="aomic.html#aomic-derivatives"><i class="fa fa-check"></i><b>4.2.6</b> Data standardization, preprocessing, and derivatives</a></li>
+</ul></li>
+<li class="chapter" data-level="4.3" data-path="aomic.html"><a href="aomic.html#data-records"><i class="fa fa-check"></i><b>4.3</b> Data records</a><ul>
+<li class="chapter" data-level="4.3.1" data-path="aomic.html"><a href="aomic.html#data-formats-and-types"><i class="fa fa-check"></i><b>4.3.1</b> Data formats and types</a></li>
+<li class="chapter" data-level="4.3.2" data-path="aomic.html"><a href="aomic.html#data-repositories-used"><i class="fa fa-check"></i><b>4.3.2</b> Data repositories used</a></li>
+</ul></li>
+<li class="chapter" data-level="4.4" data-path="aomic.html"><a href="aomic.html#technical-validation"><i class="fa fa-check"></i><b>4.4</b> Technical validation</a><ul>
+<li class="chapter" data-level="4.4.1" data-path="aomic.html"><a href="aomic.html#t1-weighted-scans"><i class="fa fa-check"></i><b>4.4.1</b> T1-weighted scans</a></li>
+<li class="chapter" data-level="4.4.2" data-path="aomic.html"><a href="aomic.html#functional-bold-scans"><i class="fa fa-check"></i><b>4.4.2</b> Functional (BOLD) scans</a></li>
+<li class="chapter" data-level="4.4.3" data-path="aomic.html"><a href="aomic.html#diffusion-weighted-scans"><i class="fa fa-check"></i><b>4.4.3</b> Diffusion-weighted scans</a></li>
+<li class="chapter" data-level="4.4.4" data-path="aomic.html"><a href="aomic.html#physiological-data"><i class="fa fa-check"></i><b>4.4.4</b> Physiological data</a></li>
+<li class="chapter" data-level="4.4.5" data-path="aomic.html"><a href="aomic.html#psychometric-data"><i class="fa fa-check"></i><b>4.4.5</b> Psychometric data</a></li>
+<li class="chapter" data-level="4.4.6" data-path="aomic.html"><a href="aomic.html#aomic-code-availability"><i class="fa fa-check"></i><b>4.4.6</b> Code availability</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="morbid-curiosity.html"><a href="morbid-curiosity.html"><i class="fa fa-check"></i><b>5</b> Choosing to view morbid information involves reward circuitry</a><ul>
+<li class="chapter" data-level="5.1" data-path="morbid-curiosity.html"><a href="morbid-curiosity.html#morbid-curiosity-introduction"><i class="fa fa-check"></i><b>5.1</b> Introduction</a></li>
+<li class="chapter" data-level="5.2" data-path="morbid-curiosity.html"><a href="morbid-curiosity.html#morbid-curiosity-methods"><i class="fa fa-check"></i><b>5.2</b> Methods</a><ul>
+<li class="chapter" data-level="5.2.1" data-path="morbid-curiosity.html"><a href="morbid-curiosity.html#morbid-curiosity-methods-participants"><i class="fa fa-check"></i><b>5.2.1</b> Participants</a></li>
+<li class="chapter" data-level="5.2.2" data-path="morbid-curiosity.html"><a href="morbid-curiosity.html#morbid-curiosity-methods-design"><i class="fa fa-check"></i><b>5.2.2</b> Design</a></li>
+<li class="chapter" data-level="5.2.3" data-path="morbid-curiosity.html"><a href="morbid-curiosity.html#morbid-curiosity-methods-materials"><i class="fa fa-check"></i><b>5.2.3</b> Materials</a></li>
+<li class="chapter" data-level="5.2.4" data-path="morbid-curiosity.html"><a href="morbid-curiosity.html#morbid-curiosity-methods-procedure"><i class="fa fa-check"></i><b>5.2.4</b> Procedure</a></li>
+<li class="chapter" data-level="5.2.5" data-path="morbid-curiosity.html"><a href="morbid-curiosity.html#morbid-curiosity-methods-behavioral-analysis"><i class="fa fa-check"></i><b>5.2.5</b> Behavioral analysis</a></li>
+<li class="chapter" data-level="5.2.6" data-path="morbid-curiosity.html"><a href="morbid-curiosity.html#morbid-curiosity-methods-imaging-details"><i class="fa fa-check"></i><b>5.2.6</b> Imaging details</a></li>
+<li class="chapter" data-level="5.2.7" data-path="morbid-curiosity.html"><a href="morbid-curiosity.html#morbid-curiosity-data-availability"><i class="fa fa-check"></i><b>5.2.7</b> Data availability</a></li>
+</ul></li>
+<li class="chapter" data-level="5.3" data-path="morbid-curiosity.html"><a href="morbid-curiosity.html#morbid-curiosity-results"><i class="fa fa-check"></i><b>5.3</b> Results</a><ul>
+<li class="chapter" data-level="5.3.1" data-path="morbid-curiosity.html"><a href="morbid-curiosity.html#morbid-curiosity-results-participants"><i class="fa fa-check"></i><b>5.3.1</b> Participants</a></li>
+<li class="chapter" data-level="5.3.2" data-path="morbid-curiosity.html"><a href="morbid-curiosity.html#behavior-and-subjective-report"><i class="fa fa-check"></i><b>5.3.2</b> Behavior and subjective report</a></li>
+<li class="chapter" data-level="5.3.3" data-path="morbid-curiosity.html"><a href="morbid-curiosity.html#roi-analyses"><i class="fa fa-check"></i><b>5.3.3</b> ROI analyses</a></li>
+<li class="chapter" data-level="5.3.4" data-path="morbid-curiosity.html"><a href="morbid-curiosity.html#whole-brain-analyses"><i class="fa fa-check"></i><b>5.3.4</b> Whole-brain analyses</a></li>
+</ul></li>
+<li class="chapter" data-level="5.4" data-path="morbid-curiosity.html"><a href="morbid-curiosity.html#morbid-curiosity-discussion"><i class="fa fa-check"></i><b>5.4</b> Discussion</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="hypothesis-kernel-analysis.html"><a href="hypothesis-kernel-analysis.html"><i class="fa fa-check"></i><b>6</b> Explainable models of facial movements predict emotion perception behavior</a><ul>
+<li class="chapter" data-level="6.1" data-path="hypothesis-kernel-analysis.html"><a href="hypothesis-kernel-analysis.html#hka-introduction"><i class="fa fa-check"></i><b>6.1</b> Introduction</a><ul>
+<li class="chapter" data-level="6.1.1" data-path="hypothesis-kernel-analysis.html"><a href="hypothesis-kernel-analysis.html#the-prediction-explanation-exploration-framework"><i class="fa fa-check"></i><b>6.1.1</b> The prediction-explanation-exploration framework</a></li>
+</ul></li>
+<li class="chapter" data-level="6.2" data-path="hypothesis-kernel-analysis.html"><a href="hypothesis-kernel-analysis.html#hka-methods"><i class="fa fa-check"></i><b>6.2</b> Methods</a><ul>
+<li class="chapter" data-level="6.2.1" data-path="hypothesis-kernel-analysis.html"><a href="hypothesis-kernel-analysis.html#hypothesis-kernel-analysis-1"><i class="fa fa-check"></i><b>6.2.1</b> Hypothesis kernel analysis</a></li>
+<li class="chapter" data-level="6.2.2" data-path="hypothesis-kernel-analysis.html"><a href="hypothesis-kernel-analysis.html#ablation-and-follow-up-exploration-analyses"><i class="fa fa-check"></i><b>6.2.2</b> Ablation and follow-up exploration analyses</a></li>
+<li class="chapter" data-level="6.2.3" data-path="hypothesis-kernel-analysis.html"><a href="hypothesis-kernel-analysis.html#hka-noise-ceiling"><i class="fa fa-check"></i><b>6.2.3</b> Noise ceiling estimation</a></li>
+<li class="chapter" data-level="6.2.4" data-path="hypothesis-kernel-analysis.html"><a href="hypothesis-kernel-analysis.html#evaluated-mappings"><i class="fa fa-check"></i><b>6.2.4</b> Evaluated mappings</a></li>
+<li class="chapter" data-level="6.2.5" data-path="hypothesis-kernel-analysis.html"><a href="hypothesis-kernel-analysis.html#hka-dataset"><i class="fa fa-check"></i><b>6.2.5</b> Dataset used to evaluate mappings</a></li>
+<li class="chapter" data-level="6.2.6" data-path="hypothesis-kernel-analysis.html"><a href="hypothesis-kernel-analysis.html#hka-code"><i class="fa fa-check"></i><b>6.2.6</b> Code availability</a></li>
+</ul></li>
+<li class="chapter" data-level="6.3" data-path="hypothesis-kernel-analysis.html"><a href="hypothesis-kernel-analysis.html#hka-results"><i class="fa fa-check"></i><b>6.3</b> Results</a><ul>
+<li class="chapter" data-level="6.3.1" data-path="hypothesis-kernel-analysis.html"><a href="hypothesis-kernel-analysis.html#prediction"><i class="fa fa-check"></i><b>6.3.1</b> Prediction</a></li>
+<li class="chapter" data-level="6.3.2" data-path="hypothesis-kernel-analysis.html"><a href="hypothesis-kernel-analysis.html#explanation"><i class="fa fa-check"></i><b>6.3.2</b> Explanation</a></li>
+<li class="chapter" data-level="6.3.3" data-path="hypothesis-kernel-analysis.html"><a href="hypothesis-kernel-analysis.html#exploration"><i class="fa fa-check"></i><b>6.3.3</b> Exploration</a></li>
+</ul></li>
+<li class="chapter" data-level="6.4" data-path="hypothesis-kernel-analysis.html"><a href="hypothesis-kernel-analysis.html#hka-discussion"><i class="fa fa-check"></i><b>6.4</b> Discussion</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="static-vs-dynamic.html"><a href="static-vs-dynamic.html"><i class="fa fa-check"></i><b>7</b> Affective face perception integrates both static and dynamic information</a><ul>
+<li class="chapter" data-level="7.1" data-path="static-vs-dynamic.html"><a href="static-vs-dynamic.html#svsd-introduction"><i class="fa fa-check"></i><b>7.1</b> Introduction</a></li>
+<li class="chapter" data-level="7.2" data-path="static-vs-dynamic.html"><a href="static-vs-dynamic.html#svsd-methods"><i class="fa fa-check"></i><b>7.2</b> Methods</a><ul>
+<li class="chapter" data-level="7.2.1" data-path="static-vs-dynamic.html"><a href="static-vs-dynamic.html#svsd-participants"><i class="fa fa-check"></i><b>7.2.1</b> Participants</a></li>
+<li class="chapter" data-level="7.2.2" data-path="static-vs-dynamic.html"><a href="static-vs-dynamic.html#svsd-experimental-design"><i class="fa fa-check"></i><b>7.2.2</b> Experimental design</a></li>
+<li class="chapter" data-level="7.2.3" data-path="static-vs-dynamic.html"><a href="static-vs-dynamic.html#svsd-procedure"><i class="fa fa-check"></i><b>7.2.3</b> Procedure</a></li>
+<li class="chapter" data-level="7.2.4" data-path="static-vs-dynamic.html"><a href="static-vs-dynamic.html#svsd-data-preproc"><i class="fa fa-check"></i><b>7.2.4</b> Data preprocessing</a></li>
+<li class="chapter" data-level="7.2.5" data-path="static-vs-dynamic.html"><a href="static-vs-dynamic.html#svsd-pred-analysis"><i class="fa fa-check"></i><b>7.2.5</b> Predictive analysis</a></li>
+<li class="chapter" data-level="7.2.6" data-path="static-vs-dynamic.html"><a href="static-vs-dynamic.html#noise-ceiling-estimation"><i class="fa fa-check"></i><b>7.2.6</b> Noise ceiling estimation</a></li>
+<li class="chapter" data-level="7.2.7" data-path="static-vs-dynamic.html"><a href="static-vs-dynamic.html#svsd-bayes"><i class="fa fa-check"></i><b>7.2.7</b> Bayesian reconstructions</a></li>
+<li class="chapter" data-level="7.2.8" data-path="static-vs-dynamic.html"><a href="static-vs-dynamic.html#svsd-code"><i class="fa fa-check"></i><b>7.2.8</b> Code availability</a></li>
+</ul></li>
+<li class="chapter" data-level="7.3" data-path="static-vs-dynamic.html"><a href="static-vs-dynamic.html#svsd-results"><i class="fa fa-check"></i><b>7.3</b> Results</a><ul>
+<li class="chapter" data-level="7.3.1" data-path="static-vs-dynamic.html"><a href="static-vs-dynamic.html#encoding-model-performance"><i class="fa fa-check"></i><b>7.3.1</b> Encoding model performance</a></li>
+<li class="chapter" data-level="7.3.2" data-path="static-vs-dynamic.html"><a href="static-vs-dynamic.html#reconstruction-model-visualizations"><i class="fa fa-check"></i><b>7.3.2</b> Reconstruction model visualizations</a></li>
+</ul></li>
+<li class="chapter" data-level="7.4" data-path="static-vs-dynamic.html"><a href="static-vs-dynamic.html#svsd-discussion"><i class="fa fa-check"></i><b>7.4</b> Discussion</a><ul>
+<li class="chapter" data-level="7.4.1" data-path="static-vs-dynamic.html"><a href="static-vs-dynamic.html#facial-morphology-independently-contributes-to-affective-face-perception"><i class="fa fa-check"></i><b>7.4.1</b> Facial morphology independently contributes to affective face perception</a></li>
+<li class="chapter" data-level="7.4.2" data-path="static-vs-dynamic.html"><a href="static-vs-dynamic.html#the-influence-of-facial-morphology-does-not-result-from-visual-similarity-to-facial-movements"><i class="fa fa-check"></i><b>7.4.2</b> The influence of facial morphology does not result from visual similarity to facial movements</a></li>
+<li class="chapter" data-level="7.4.3" data-path="static-vs-dynamic.html"><a href="static-vs-dynamic.html#categorical-representations-of-experienced-valence-and-arousal-correlate-with-representations-of-perceived-emotions"><i class="fa fa-check"></i><b>7.4.3</b> Categorical representations of experienced valence and arousal correlate with representations of perceived emotions</a></li>
+<li class="chapter" data-level="7.4.4" data-path="static-vs-dynamic.html"><a href="static-vs-dynamic.html#predictive-models-quantify-what-is-not-yet-known"><i class="fa fa-check"></i><b>7.4.4</b> Predictive models quantify what is (not yet) known</a></li>
+</ul></li>
+<li class="chapter" data-level="7.5" data-path="static-vs-dynamic.html"><a href="static-vs-dynamic.html#svsd-conclusion"><i class="fa fa-check"></i><b>7.5</b> Conclusion</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="general-discussion.html"><a href="general-discussion.html"><i class="fa fa-check"></i><b>8</b> Discussion</a></li>
+<li class="appendix"><span><b>Appendix</b></span></li>
+<li class="chapter" data-level="A" data-path="shared-states-supplement.html"><a href="shared-states-supplement.html"><i class="fa fa-check"></i><b>A</b> Supplement to Chapter 2</a></li>
+<li class="chapter" data-level="B" data-path="confounds-decoding-supplement.html"><a href="confounds-decoding-supplement.html"><i class="fa fa-check"></i><b>B</b> Supplement to Chapter 3</a><ul>
+<li class="chapter" data-level="B.1" data-path="confounds-decoding-supplement.html"><a href="confounds-decoding-supplement.html#supplementary-methods"><i class="fa fa-check"></i><b>B.1</b> Supplementary methods</a><ul>
+<li class="chapter" data-level="B.1.1" data-path="confounds-decoding-supplement.html"><a href="confounds-decoding-supplement.html#functional-mri-simulation"><i class="fa fa-check"></i><b>B.1.1</b> Functional MRI simulation</a></li>
+<li class="chapter" data-level="B.1.2" data-path="confounds-decoding-supplement.html"><a href="confounds-decoding-supplement.html#testing-confound-regression-on-simulated-fmri-data"><i class="fa fa-check"></i><b>B.1.2</b> Testing confound regression on simulated fMRI data</a></li>
+<li class="chapter" data-level="B.1.3" data-path="confounds-decoding-supplement.html"><a href="confounds-decoding-supplement.html#controlling-for-confounds-during-pattern-estimation"><i class="fa fa-check"></i><b>B.1.3</b> Controlling for confounds during pattern estimation</a></li>
+<li class="chapter" data-level="B.1.4" data-path="confounds-decoding-supplement.html"><a href="confounds-decoding-supplement.html#linear-vs-nonlinear-confound-models-predicting-vbm-and-tbss-data-based-on-brain-size"><i class="fa fa-check"></i><b>B.1.4</b> Linear vs nonlinear confound models: predicting VBM and TBSS data based on brain size</a></li>
+</ul></li>
+<li class="chapter" data-level="B.2" data-path="confounds-decoding-supplement.html"><a href="confounds-decoding-supplement.html#supplementary-results"><i class="fa fa-check"></i><b>B.2</b> Supplementary results</a><ul>
+<li class="chapter" data-level="B.2.1" data-path="confounds-decoding-supplement.html"><a href="confounds-decoding-supplement.html#testing-confound-regression-on-simulated-fmri-data-1"><i class="fa fa-check"></i><b>B.2.1</b> Testing confound regression on simulated fMRI data</a></li>
+<li class="chapter" data-level="B.2.2" data-path="confounds-decoding-supplement.html"><a href="confounds-decoding-supplement.html#controlling-for-confounds-during-pattern-estimation-1"><i class="fa fa-check"></i><b>B.2.2</b> Controlling for confounds during pattern estimation</a></li>
+<li class="chapter" data-level="B.2.3" data-path="confounds-decoding-supplement.html"><a href="confounds-decoding-supplement.html#linear-vs.-nonlinear-confound-models-predicting-vbm-and-tbss-intensity-using-brain-size"><i class="fa fa-check"></i><b>B.2.3</b> Linear vs. nonlinear confound models: predicting VBM and TBSS intensity using brain size</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="C" data-path="aomic-supplement.html"><a href="aomic-supplement.html"><i class="fa fa-check"></i><b>C</b> Supplement to Chapter 4</a></li>
+<li class="chapter" data-level="D" data-path="morbid-curiosity-supplement.html"><a href="morbid-curiosity-supplement.html"><i class="fa fa-check"></i><b>D</b> Supplement to Chapter 5</a></li>
+<li class="chapter" data-level="E" data-path="hypothesis-kernel-analysis-supplement.html"><a href="hypothesis-kernel-analysis-supplement.html"><i class="fa fa-check"></i><b>E</b> Supplement to Chapter 6</a><ul>
+<li class="chapter" data-level="E.1" data-path="hypothesis-kernel-analysis-supplement.html"><a href="hypothesis-kernel-analysis-supplement.html#hka-supplementary-methods"><i class="fa fa-check"></i><b>E.1</b> Supplementary methods</a><ul>
+<li class="chapter" data-level="E.1.1" data-path="hypothesis-kernel-analysis-supplement.html"><a href="hypothesis-kernel-analysis-supplement.html#hypothesis-kernel-analysis-in-detail"><i class="fa fa-check"></i><b>E.1.1</b> Hypothesis kernel analysis (in detail)</a></li>
+<li class="chapter" data-level="E.1.2" data-path="hypothesis-kernel-analysis-supplement.html"><a href="hypothesis-kernel-analysis-supplement.html#hka-noise-ceiling-detail"><i class="fa fa-check"></i><b>E.1.2</b> Noise ceiling estimation (in detail)</a></li>
+</ul></li>
+<li class="chapter" data-level="E.2" data-path="hypothesis-kernel-analysis-supplement.html"><a href="hypothesis-kernel-analysis-supplement.html#hka-supp-fig"><i class="fa fa-check"></i><b>E.2</b> Supplementary figures</a></li>
+</ul></li>
+<li class="chapter" data-level="F" data-path="static-vs-dynamic-supplement.html"><a href="static-vs-dynamic-supplement.html"><i class="fa fa-check"></i><b>F</b> Supplement to Chapter 6</a></li>
+<li class="chapter" data-level="G" data-path="resources-supplement.html"><a href="resources-supplement.html"><i class="fa fa-check"></i><b>G</b> Data, code, and educational materials</a></li>
+<li class="chapter" data-level="" data-path="bibliography.html"><a href="bibliography.html"><i class="fa fa-check"></i>Bibliography</a></li>
+<li class="chapter" data-level="" data-path="contributions-to-the-chapters.html"><a href="contributions-to-the-chapters.html"><i class="fa fa-check"></i>Contributions to the chapters</a></li>
+<li class="chapter" data-level="" data-path="list-of-other-publications.html"><a href="list-of-other-publications.html"><i class="fa fa-check"></i>List of other publications</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Towards prediction</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="static-vs-dynamic-supplement" class="section level1">
+<h1><span class="header-section-number">F</span> Supplement to Chapter 6</h1>
+<div class="figure"><span id="fig:fig-svsd-S1"></span>
+<img src="_bookdown_files/static-vs-dynamic-files/figures/figure_S1.png" alt="The explained variance ratio of each PCA component (bars; left y-axis) and the cumulative explained variance ratio (dashed line; right y-axis) for the PCA done on the dynamic features (top) and static features (bottom)."  />
+<p class="caption">
+Figure F.1: The explained variance ratio of each PCA component (bars; left y-axis) and the cumulative explained variance ratio (dashed line; right y-axis) for the PCA done on the dynamic features (top) and static features (bottom).
+</p>
+</div>
+
+<div class="figure"><span id="fig:fig-svsd-S2"></span>
+<img src="_bookdown_files/static-vs-dynamic-files/figures/figure_S2.png" alt="Distribution of the categorical emotion labels (bars height represents the average proportion; dots represent individual participants; top) and the distribution of the valence ratings (middle) and arousal rating (bottom), shown separately for the optimization set (left) and test set (right). In the valence and arousal subplots, the filled area represents the distribution of the ratings pooled over participants and the lines represents the distribution of the ratings of individual participants. The valence and arousal distributions were created using kernel density estimation as implemented in the Python package seaborn (which uses the scipy function gaussian_kde with Scott’s rule for bandwidth selection)."  />
+<p class="caption">
+Figure F.2: Distribution of the categorical emotion labels (bars height represents the average proportion; dots represent individual participants; top) and the distribution of the valence ratings (middle) and arousal rating (bottom), shown separately for the optimization set (left) and test set (right). In the valence and arousal subplots, the filled area represents the distribution of the ratings pooled over participants and the lines represents the distribution of the ratings of individual participants. The valence and arousal distributions were created using kernel density estimation as implemented in the Python package <em>seaborn</em> (which uses the <em>scipy</em> function <code>gaussian_kde</code> with Scott’s rule for bandwidth selection).
+</p>
+</div>
+
+<div class="figure"><span id="fig:fig-svsd-S3"></span>
+<img src="_bookdown_files/static-vs-dynamic-files/figures/figure_S3.png" alt="Cross-validated model performance on optimization set, obtained by repeated 10-fold cross-validation. Because the optimization set does not contain repeated observations, the noise ceiling from the test set is visualized."  />
+<p class="caption">
+Figure F.3: Cross-validated model performance on optimization set, obtained by repeated 10-fold cross-validation. Because the optimization set does not contain repeated observations, the noise ceiling from the test set is visualized.
+</p>
+</div>
+
+<div class="figure"><span id="fig:fig-svsd-S4"></span>
+<img src="_bookdown_files/static-vs-dynamic-files/figures/figure_S4.png" alt="Visualization of the comparison between the sum of static and dynamic model performance (orange) and the combined model performance (blue) for the categorical emotion model (left) and valence/arousal model (right)."  />
+<p class="caption">
+Figure F.4: Visualization of the comparison between the sum of static and dynamic model performance (orange) and the combined model performance (blue) for the categorical emotion model (left) and valence/arousal model (right).
+</p>
+</div>
+
+<div class="figure"><span id="fig:fig-svsd-S5"></span>
+<img src="_bookdown_files/static-vs-dynamic-files/figures/figure_S5.png" alt="Confusion matrices for the categorical emotions models (left) and regression plots for the valence model (middle) and arousal model (right), separately for the models based on dynamic information (top) and static information (bottom). The confusion matrices are normalized by the sum across rows, thus representing the recall (or sensitivity) on the diagonal. The categorical emotion classifier based on dynamic information relatively frequently misclassifies “anger” and “disgust” (and vice versa) as well as “surprise” and “fear” (and vice versa), replicating earlier findings from human ratings (Jack et al., 2014, 2009). In contrast, the confusion rates for the static emotion classifier are relatively uniform across categorical emotion pairs. Different colors in the regression plot represent ratings from different participants. The regression plots for the valence and arousal models (middle and right) show that both the models based on dynamic and static features tend to underestimate the magnitude of the predictions (i.e., few predictions are made above 0.5 or below -0.5). These attenuated predictions is a direct consequence of the strong regularization applied to the regression models (i.e., \(\lambda = 500\)), which causes the parameters (i.e., \(\hat{\beta}\)) to be shrunk towards zero, thus shrinking predictions (\(X\hat{\beta}\)) towards the mean as well."  />
+<p class="caption">
+Figure F.5: Confusion matrices for the categorical emotions models (left) and regression plots for the valence model (middle) and arousal model (right), separately for the models based on dynamic information (top) and static information (bottom). The confusion matrices are normalized by the sum across rows, thus representing the recall (or sensitivity) on the diagonal. The categorical emotion classifier based on dynamic information relatively frequently misclassifies “anger” and “disgust” (and vice versa) as well as “surprise” and “fear” (and vice versa), replicating earlier findings from human ratings <span class="citation">(Jack et al., <a href="bibliography.html#ref-Jack2014-ku" role="doc-biblioref">2014</a>, <a href="bibliography.html#ref-Jack2009-yy" role="doc-biblioref">2009</a>)</span>. In contrast, the confusion rates for the static emotion classifier are relatively uniform across categorical emotion pairs. Different colors in the regression plot represent ratings from different participants. The regression plots for the valence and arousal models (middle and right) show that both the models based on dynamic and static features tend to underestimate the magnitude of the predictions (i.e., few predictions are made above 0.5 or below -0.5). These attenuated predictions is a direct consequence of the strong regularization applied to the regression models (i.e., <span class="math inline">\(\lambda = 500\)</span>), which causes the parameters (i.e., <span class="math inline">\(\hat{\beta}\)</span>) to be shrunk towards zero, thus shrinking predictions (<span class="math inline">\(X\hat{\beta}\)</span>) towards the mean as well.
+</p>
+</div>
+
+<div class="figure"><span id="fig:fig-svsd-S6"></span>
+<img src="_bookdown_files/static-vs-dynamic-files/figures/figure_S6.png" alt="Posterior distributions for the first ten dynamic features (\(X_{1}-X_{10}\); in rows) for the inverted categorical emotion model (left; different emotions as separate lines), the inverted valence model (middle; different levels as separate lines), and the inverted arousal model (right; different levels as separate lines). The dashed vertical lines represent the value chosen for the reconstructions (i.e., the midpoint of the 5% HDI interval). The drop at the edges of the posterior is an artifact induced by the kernel density estimation."  />
+<p class="caption">
+Figure F.6: Posterior distributions for the first ten <em>dynamic</em> features (<span class="math inline">\(X_{1}-X_{10}\)</span>; in rows) for the inverted categorical emotion model (left; different emotions as separate lines), the inverted valence model (middle; different levels as separate lines), and the inverted arousal model (right; different levels as separate lines). The dashed vertical lines represent the value chosen for the reconstructions (i.e., the midpoint of the 5% HDI interval). The drop at the edges of the posterior is an artifact induced by the kernel density estimation.
+</p>
+</div>
+
+<div class="figure"><span id="fig:fig-svsd-S7"></span>
+<img src="_bookdown_files/static-vs-dynamic-files/figures/figure_S7.png" alt="Posterior distributions for the first ten static features (\(X_{1}-X_{10}\); in rows) for the inverted categorical emotion model (left; different emotions as separate lines), the inverted valence model (middle; different levels as separate lines), and the inverted arousal model (right; different levels as separate lines). The dashed vertical lines represent the value chosen for the reconstructions (i.e., the midpoint of the 5% HDI interval). The drop at the edges of the posterior is an artifact induced by the kernel density estimation."  />
+<p class="caption">
+Figure F.7: Posterior distributions for the first ten <em>static</em> features (<span class="math inline">\(X_{1}-X_{10}\)</span>; in rows) for the inverted categorical emotion model (left; different emotions as separate lines), the inverted valence model (middle; different levels as separate lines), and the inverted arousal model (right; different levels as separate lines). The dashed vertical lines represent the value chosen for the reconstructions (i.e., the midpoint of the 5% HDI interval). The drop at the edges of the posterior is an artifact induced by the kernel density estimation.
+</p>
+</div>
+
+<div class="figure"><span id="fig:fig-svsd-S8"></span>
+<img src="_bookdown_files/static-vs-dynamic-files/figures/figure_S8.png" alt="Correlations between dynamic categorical emotion, valence, and arousal reconstructions. The different affective properties are delineated by the magenta borders. The green boxes highlight noteworthy correlations between high and low arousal and negative emotions (anger, disgust, and fear) and happiness/sadness, respectively. The yellow borders highlight the noteworthy correlations between positive and negative valence and happiness and negative emotions (anger, disgust, and fear), respectively."  />
+<p class="caption">
+Figure F.8: Correlations between dynamic categorical emotion, valence, and arousal reconstructions. The different affective properties are delineated by the magenta borders. The green boxes highlight noteworthy correlations between high and low arousal and negative emotions (anger, disgust, and fear) and happiness/sadness, respectively. The yellow borders highlight the noteworthy correlations between positive and negative valence and happiness and negative emotions (anger, disgust, and fear), respectively.
+</p>
+</div>
+
+<div class="figure"><span id="fig:fig-svsd-S9"></span>
+<img src="_bookdown_files/static-vs-dynamic-files/figures/figure_S9.png" alt="Correlations between static categorical emotion, valence, and arousal reconstructions. The different affective properties are delineated by the magenta borders. The green boxes highlight noteworthy correlations between high and low arousal and negative emotions (anger, disgust, and fear) and happiness/sadness, respectively. The yellow borders highlight the noteworthy correlations between positive and negative valence and happiness and negative emotions (anger, disgust, and fear), respectively."  />
+<p class="caption">
+Figure F.9: Correlations between static categorical emotion, valence, and arousal reconstructions. The different affective properties are delineated by the magenta borders. The green boxes highlight noteworthy correlations between high and low arousal and negative emotions (anger, disgust, and fear) and happiness/sadness, respectively. The yellow borders highlight the noteworthy correlations between positive and negative valence and happiness and negative emotions (anger, disgust, and fear), respectively.
+</p>
+</div>
+
+
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="hypothesis-kernel-analysis-supplement.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="resources-supplement.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>
