@@ -253,8 +253,13 @@ The investigations in this thesis were supported by $if(grant)$a $grant$ from $e
 $if(funder)$$funder$.$endif$
 $endif$
 
-This thesis was typeset using (R) Markdown, \LaTeX\ and the \verb+bookdown+ R-package
-$if(ISBN)$\\ ISBN: $ISBN$$endif$$if(printing)$\\ Printing: $printing$$endif$$if(cover)$\\ Cover: $cover$$endif$
+This thesis was typeset using (R) Markdown, \LaTeX\, \verb+bookdown+ R-package, and the \verb+bookdown+ template developed by Leon Reteig (*amsterdown*)
+
+\begin{itemize}[label={}, itemsep=0pt, partopsep=0pt, topsep=-\parskip, parsep=0pt, leftmargin=1em]
+  $if(ISBN)$\item ISBN: $ISBN$ $endif$
+  $if(printing)$\item Printing: $printing$ $endif$
+  $if(cover)$\item Cover art: $cover$ $endif$
+\end{itemize}
 
 $if(thesis_url)$
 An online version of this thesis is available at $thesis_url$$if(license)$, licensed under a $license$.$endif$

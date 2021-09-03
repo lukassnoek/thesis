@@ -202,12 +202,3 @@ kbl(data, booktabs = T, longtable = T, escape = F, caption = 'AUs with the large
     footnote(footnote_as_chunk = T, title_format = "italic", threeparttable = T, escape = F, 
              general = 'Only AUs with an absolute change in AUROC larger than 0.01 are included. The affected mappings column indicates which mappings contained this AU.')
 ```
-
-#```{r tab-hka-S3, results='asis'}
-data = read_csv('_bookdown_files/hypothesis-kernel-analysis-files/table_S3_data.csv')
-kbl(data, booktabs = T, longtable = T, escape = F, caption = 'AUs with the largest improvement per emotion across mappings') %>%
-    kable_styling(full_width = T, font_size = 8) %>%
-    column_spec(column = c(1, 2, 3), width = "3em") %>%
-    footnote(footnote_as_chunk = T, title_format = "italic", threeparttable = T, escape = F, 
-             general = 'Only AUs with an improvement in AUROC larger than 0.01 are included. The affected mappings column indicates which mappings did not already contain this AU and thus is the complement of the affected mappings column in Supplementary Table 2.')
-#```

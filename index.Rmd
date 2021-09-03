@@ -14,7 +14,7 @@ birthplace: "Hoevelaken"
 # and is optionally followed by:
 ISBN: "xxx-xx-xxxx-xxx-x"
 printing: "Acme Press, Inc."
-#cover: "Designed by Phil Henry Doctor" # optional, otherwise this bit is omitted
+cover: "Designed by author using a *neural style transfer* [@ghiasi2017exploring] implementation by Reiichiro Nakano."
 thesis_url: "https://lukas-snoek.com/thesis"
 license: "CC BY" # optional, otherwise this bit is omitted
 

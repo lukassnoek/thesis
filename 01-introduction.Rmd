@@ -33,7 +33,7 @@ Both hypothesis testing and predictive modelling are scientific methods used in 
 y = f(X) + \epsilon
 \end{equation}
 
-Put differently, models represent explanations of how variability in a particular aspect of the target system ($y$) arises as the result of a set of (causally related) features [@Cummins2000-pk; @Kay2017-vr]. For example, chapter \@ref(hypothesis-kernel-analysis) and \@ref(static-vs-dynamic) describe models that attempt to explain the emotion people see in others’ facial expressions ($y$) as a function of a combination of facial movements ($X$):
+Put differently, models represent explanations of how variability in a particular aspect of the target system ($y$) arises as the result of a set of (causally related) features [@Cummins2000-pk; @Kay2017-vr]. For example, chapter \@ref(hypothesis-kernel-analysis) and \@ref(static-vs-dynamic) describe models that attempt to explain the emotion people see in others’ facial expressions ($y$) as a function of a combination of facial movements ($X_{\mathrm{mov}}$):
 
 \begin{align}
 \mathrm{emotion} = f(X_{\mathrm{mov}}) + \epsilon

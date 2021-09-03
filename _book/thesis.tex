@@ -315,8 +315,13 @@
 \setlength{\parskip}{\baselineskip} % add space between paragraphs
 \setlength\parindent{0pt} % no indents
 
-This thesis was typeset using (R) Markdown, \LaTeX\ and the \verb+bookdown+ R-package
-\\ ISBN: xxx-xx-xxxx-xxx-x\\ Printing: Acme Press, Inc.
+This thesis was typeset using (R) Markdown, \LaTeX\, \verb+bookdown+ R-package, and the \verb+bookdown+ template developed by Leon Reteig (*amsterdown*)
+
+\begin{itemize}[label={}, itemsep=0pt, partopsep=0pt, topsep=-\parskip, parsep=0pt, leftmargin=1em]
+  \item ISBN: xxx-xx-xxxx-xxx-x 
+  \item Printing: Acme Press, Inc. 
+  \item Cover art: Designed by author using a \emph{neural style transfer} (Ghiasi et al., \protect\hyperlink{ref-ghiasi2017exploring}{2017}) implementation by Reiichiro Nakano. 
+\end{itemize}
 
 An online version of this thesis is available at \url{https://lukas-snoek.com/thesis}, licensed under a CC BY.
 \endgroup
@@ -424,7 +429,7 @@ Both hypothesis testing and predictive modelling are scientific methods used in 
 y = f(X) + \epsilon
 \end{equation}
 
-Put differently, models represent explanations of how variability in a particular aspect of the target system (\(y\)) arises as the result of a set of (causally related) features (Cummins, \protect\hyperlink{ref-Cummins2000-pk}{2000}; Kay, \protect\hyperlink{ref-Kay2017-vr}{2017}). For example, chapter \ref{hypothesis-kernel-analysis} and \ref{static-vs-dynamic} describe models that attempt to explain the emotion people see in others' facial expressions (\(y\)) as a function of a combination of facial movements (\(X\)):
+Put differently, models represent explanations of how variability in a particular aspect of the target system (\(y\)) arises as the result of a set of (causally related) features (Cummins, \protect\hyperlink{ref-Cummins2000-pk}{2000}; Kay, \protect\hyperlink{ref-Kay2017-vr}{2017}). For example, chapter \ref{hypothesis-kernel-analysis} and \ref{static-vs-dynamic} describe models that attempt to explain the emotion people see in others' facial expressions (\(y\)) as a function of a combination of facial movements (\(X_{\mathrm{mov}}\)):
 
 \begin{align}
 \mathrm{emotion} = f(X_{\mathrm{mov}}) + \epsilon
@@ -2468,7 +2473,7 @@ In addition, we investigated how the optimized models led to behaviors different
 \hypertarget{hka-discussion}{%
 \section{Discussion}\label{hka-discussion}}
 
-Since Darwin's seminal work on the evolutionary origins of emotional expressions, a debate has centered on the question of the specific combinations of facial movements that consistently expressed different emotions. The influential taxonomy of facial movements as AUs proposed by Ekman and Friesen (Ekman \& Friesen, \protect\hyperlink{ref-Ekman1976-hm}{1976}) enabled different hypotheses to be formulated about the specific combinations of action units that underlie the expression and recognition of emotion categories.
+Since Darwin's seminal work on the evolutionary origins of emotional expressions, a debate has centered on the question of the specific combinations of facial movements that consistently expressed different emotions. The influential taxonomy of facial movements as AUs proposed by Ekman \& Friesen (\protect\hyperlink{ref-Ekman1976-hm}{1976}) enabled different hypotheses to be formulated about the specific combinations of action units that underlie the expression and recognition of emotion categories.
 
 In this study, we developed this approach further, by formalizing these proposals for combinations of AUs as predictive models of human categorization behavior. We used these formal models to quantitatively evaluate how well each model \emph{predicts} the categorization of emotions. We then \emph{explained} the differences in predictive accuracy with systematic manipulations of the AUs comprising each model. In turn, this generated insights that enabled \emph{exploration} of alternative and improved models. Moreover, we showed that models were inherently limited in their prediction of human behavior, due to individual differences in how people perceive facial expressions.
 
@@ -4354,8 +4359,6 @@ Surprise & AU01 & -0.041 & All\\
 \end{ThreePartTable}
 \endgroup{}
 
-\#\texttt{\{r\ tab-hka-S3,\ results=\textquotesingle{}asis\textquotesingle{}\}\ data\ =\ read\_csv(\textquotesingle{}\_bookdown\_files/hypothesis-kernel-analysis-files/table\_S3\_data.csv\textquotesingle{})\ kbl(data,\ booktabs\ =\ T,\ longtable\ =\ T,\ escape\ =\ F,\ caption\ =\ \textquotesingle{}AUs\ with\ the\ largest\ improvement\ per\ emotion\ across\ mappings\textquotesingle{})\ \%\textgreater{}\%\ \ \ \ \ kable\_styling(full\_width\ =\ T,\ font\_size\ =\ 8)\ \%\textgreater{}\%\ \ \ \ \ column\_spec(column\ =\ c(1,\ 2,\ 3),\ width\ =\ "3em")\ \%\textgreater{}\%\ \ \ \ \ footnote(footnote\_as\_chunk\ =\ T,\ title\_format\ =\ "italic",\ threeparttable\ =\ T,\ escape\ =\ F,\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ general\ =\ \textquotesingle{}Only\ AUs\ with\ an\ improvement\ in\ AUROC\ larger\ than\ 0.01\ are\ included.\ The\ affected\ mappings\ column\ indicates\ which\ mappings\ did\ not\ already\ contain\ this\ AU\ and\ thus\ is\ the\ complement\ of\ the\ affected\ mappings\ column\ in\ Supplementary\ Table\ 2.\textquotesingle{})\ \#}
-
 \hypertarget{static-vs-dynamic-supplement}{%
 \chapter{Supplement to Chapter \ref{static-vs-dynamic}}\label{static-vs-dynamic-supplement}}
 
@@ -4394,7 +4397,7 @@ Surprise & AU01 & -0.041 & All\\
 \begin{figure}
 \centering
 \includegraphics{_bookdown_files/static-vs-dynamic-files/figures/figure_S5.pdf}
-\caption{\label{fig:fig-svsd-S5}Confusion matrices for the categorical emotions models (left) and regression plots for the valence model (middle) and arousal model (right), separately for the models based on dynamic information (top) and static information (bottom). The confusion matrices are normalized by the sum across rows, thus representing the recall (or sensitivity) on the diagonal. The categorical emotion classifier based on dynamic information relatively frequently misclassifies ``anger'' and ``disgust'' (and vice versa) as well as ``surprise'' and ``fear'' (and vice versa), replicating earlier findings from human ratings (Jack et al., \protect\hyperlink{ref-Jack2014-ku}{2014}, \protect\hyperlink{ref-Jack2009-yy}{2009}). In contrast, the confusion rates for the static emotion classifier are relatively uniform across categorical emotion pairs. Different colors in the regression plot represent ratings from different participants. The regression plots for the valence and arousal models (middle and right) show that both the models based on dynamic and static features tend to underestimate the magnitude of the predictions (i.e., few predictions are made above 0.5 or below -0.5). These attenuated predictions is a direct consequence of the strong regularization applied to the regression models (i.e., \(\lambda = 500\)), which causes the parameters (i.e., \(\hat{\beta}\)) to be shrunk towards zero, thus shrinking predictions (\(X\hat{beta}\)) towards the mean as well.}
+\caption{\label{fig:fig-svsd-S5}Confusion matrices for the categorical emotions models (left) and regression plots for the valence model (middle) and arousal model (right), separately for the models based on dynamic information (top) and static information (bottom). The confusion matrices are normalized by the sum across rows, thus representing the recall (or sensitivity) on the diagonal. The categorical emotion classifier based on dynamic information relatively frequently misclassifies ``anger'' and ``disgust'' (and vice versa) as well as ``surprise'' and ``fear'' (and vice versa), replicating earlier findings from human ratings (Jack et al., \protect\hyperlink{ref-Jack2014-ku}{2014}, \protect\hyperlink{ref-Jack2009-yy}{2009}). In contrast, the confusion rates for the static emotion classifier are relatively uniform across categorical emotion pairs. Different colors in the regression plot represent ratings from different participants. The regression plots for the valence and arousal models (middle and right) show that both the models based on dynamic and static features tend to underestimate the magnitude of the predictions (i.e., few predictions are made above 0.5 or below -0.5). These attenuated predictions is a direct consequence of the strong regularization applied to the regression models (i.e., \(\lambda = 500\)), which causes the parameters (i.e., \(\hat{\beta}\)) to be shrunk towards zero, thus shrinking predictions (\(X\hat{\beta}\)) towards the mean as well.}
 \end{figure}
 
 
@@ -4921,6 +4924,9 @@ Gescheider, G. A. (2013). \emph{Psychophysics: The fundamentals}. Psychology Pre
 
 \leavevmode\hypertarget{ref-Gewin2016-ff}{}%
 Gewin, V. (2016). Data sharing: An open mind on open data. \emph{Nature}, \emph{529}(7584), 117--119.
+
+\leavevmode\hypertarget{ref-ghiasi2017exploring}{}%
+Ghiasi, G., Lee, H., Kudlur, M., Dumoulin, V., \& Shlens, J. (2017). Exploring the structure of a real-time, arbitrary neural artistic stylization network. \emph{arXiv Preprint arXiv:1705.06830}.
 
 \leavevmode\hypertarget{ref-gilbert2012evaluative}{}%
 Gilbert, S. J., Swencionis, J. K., \& Amodio, D. M. (2012). Evaluative vs. Trait representation in intergroup social judgments: Distinct roles of anterior temporal lobe and prefrontal cortex. \emph{Neuropsychologia}, \emph{50}(14), 3600--3611.
@@ -5958,13 +5964,13 @@ We thank Maite van der Miesen and Sjoerd Evelo for their help with data acquisit
 
 \chaptermark{List of other publications}
 
-van der Maas, H.L.J., \textbf{Snoek, L.}, \& Stevenson, C. (2021). How much intelligence is there in artificial intelligence? A 2020 update. \emph{Intelligence, 87}, 101548.\newline
+van der Maas, H.L.J., \textbf{Snoek, L.}, \& Stevenson, C. (2021). How much intelligence is there in artificial intelligence? A 2020 update. \emph{Intelligence, 87}, 101548.
 
-Hoogeveen, S., \textbf{Snoek, L.}, \& Van Elk, M. (2020). Religious belief and cognitive conflict sensitivity: A preregistered fMRI study. \emph{Cortex, 129}, 247--265.\newline
+Hoogeveen, S., \textbf{Snoek, L.}, \& Van Elk, M. (2020). Religious belief and cognitive conflict sensitivity: A preregistered fMRI study. \emph{Cortex, 129}, 247--265.
 
-van Elk, M., \& \textbf{Snoek, L.} (2020). The relationship between individual differences in gray matter volume and religiosity and mystical experiences: A preregistered voxel‐based morphometry study. \emph{European Journal of Neuroscience, 51}(3), 850--865.\newline
+van Elk, M., \& \textbf{Snoek, L.} (2020). The relationship between individual differences in gray matter volume and religiosity and mystical experiences: A preregistered voxel‐based morphometry study. \emph{European Journal of Neuroscience, 51}(3), 850--865.
 
-Van Mourik, T., \textbf{Snoek, L.}, Knapen, T., \& Norris, D. G. (2018). Porcupine: a visual pipeline tool for neuroimaging analysis. \emph{PLoS computational biology, 14}(5), e1006064.\newline
+Van Mourik, T., \textbf{Snoek, L.}, Knapen, T., \& Norris, D. G. (2018). Porcupine: a visual pipeline tool for neuroimaging analysis. \emph{PLoS computational biology, 14}(5), e1006064.
 
 \normalsize
 \setlength{\parindent}{1.5em}
