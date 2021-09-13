@@ -4,7 +4,7 @@ title: "Towards prediction"
 subtitle: Studying the mind and brain in the age of machine learning
 
 author: "Lukas Snoek"
-date: "{dag} {datum} 2021"
+date: "Maandag 14 februari 2021"
 aula: false 
 time: "{time}"
 birthplace: "Hoevelaken"
