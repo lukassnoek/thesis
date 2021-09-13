@@ -4,9 +4,9 @@ title: "Towards prediction"
 subtitle: Studying the mind and brain in the age of machine learning
 
 author: "Lukas Snoek"
-date: "Maandag 14 februari 2021"
+date: "maandag 14 februari 2022"
 aula: false 
-time: "{time}"
+time: "14.00"
 birthplace: "Hoevelaken"
 
 ### Colophon 
@@ -35,14 +35,6 @@ one_copromotor: true
 
 members:
 - title: prof. dr.
-  initials: P.G.
-  surname: Schyns
-  affiliation: University of Glasgow
-- title: prof. dr.
-  initials: R.W.
-  surname: Goebel
-  affiliation: Maastricht University
-- title: prof. dr.
   initials: B.U.
   surname: Forstmann
   affiliation: Universiteit van Amsterdam
@@ -51,12 +43,20 @@ members:
   surname: Fischer
   affiliation: Universiteit van Amsterdam
 - title: prof. dr.
-  initials: D.
-  surname: Borsboom
-  affiliation: Universiteit van Amsterdam
-- title: prof. dr.
   initials: C.
   surname: Keysers
+  affiliation: Universiteit van Amsterdam
+- title: prof. dr.
+  initials: P.G.
+  surname: Schyns
+  affiliation: The University of Glasgow
+- title: prof. dr.
+  initials: R.W.
+  surname: Goebel
+  affiliation: Universiteit Maastricht
+- title: prof. dr.
+  initials: D.
+  surname: Borsboom
   affiliation: Universiteit van Amsterdam
 
 faculty: Faculteit der Maatschappij- en Gedragswetenschappen
