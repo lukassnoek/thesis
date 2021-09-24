@@ -3,9 +3,9 @@
 %
 % New additions to the template are marked with "LCR"
 
-%\documentclass[11pt,american,]{memoir} %LCR
- % if the book is being rendered for print, force twoside option
-\documentclass[11pt,american,]{memoir} %LCR
+%\documentclass[12pt,american,]{memoir} %LCR
+ % if not, force the oneside and a4paper options, which seem to be the only reasonable defaults
+\documentclass[12pt,american,a4paper,oneside,]{memoir} %LCR
 
 \usepackage{lmodern}
 \usepackage{amssymb,amsmath}
@@ -29,8 +29,6 @@
 \usepackage{microtype}
 \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
 }{}
- % LCR
-\usepackage[paperwidth=170mm,paperheight=240mm]{geometry} % LCR %set to standard thesis size
 
  %LCR
 \usepackage{hyperref}
