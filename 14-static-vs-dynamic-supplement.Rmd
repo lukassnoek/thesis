@@ -5,7 +5,7 @@ library(kableExtra)
 ```
 
 `r if (knitr::is_html_output()) '
-# Supplement to Chapter 6 {#static-vs-dynamic-supplement}
+# Supplement to Chapter 7 {#static-vs-dynamic-supplement}
 ' else '
 # Supplement to Chapter \\@ref(static-vs-dynamic) {#static-vs-dynamic-supplement}
 '`

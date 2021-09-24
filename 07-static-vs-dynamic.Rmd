@@ -130,7 +130,7 @@ p(y) \sim \mathrm{Categorical}(g(X\beta + \alpha))
 where $\beta$ represents a set of parameters that are linearly combined with the feature values ($X$) and an intercept term ($\alpha$), which is passed through the softmax function, $g$:
 
 \begin{equation}
-g(X_{i}\beta + \alpha) = \frac{X_{ij}\beta + \alpha}{\sum_{j=1}^{P}e^{X_{ij}\beta + \alpha}}
+g(X_{i}\beta + \alpha) = \frac{e^{X_{ij}\beta + \alpha}}{\sum_{j=1}^{P}e^{X_{ij}\beta + \alpha}}
 \end{equation}
 
 where $p(y_{i} | X_{i})$ is a vector with a length equal to the number of classes. Although it is possible to derive discrete predictions by subsequently taking the argmax across the vector with class probabilities, we only use the probabilistic predictions because we use a probabilistic model performance metric (Tjur’s pseudo $R^{2}$; see [Performance metrics](#svsd-perf) section). In the context of our categorical emotion analysis, the fitted multinomial logistic regression model outputs predictions in the format of the probability of each of the six categorical emotions given the set of static or dynamic (or their combination) features of a given facial expression stimulus. The logistic regression model was used with balanced class weights to avoid effects due to imbalance across class frequencies, a regularization parameter (C) of 10, and a liblinear solver.

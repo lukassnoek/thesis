@@ -234,7 +234,7 @@
 </ul></li>
 <li class="chapter" data-level="E.2" data-path="hypothesis-kernel-analysis-supplement.html"><a href="hypothesis-kernel-analysis-supplement.html#hka-supp-fig"><i class="fa fa-check"></i><b>E.2</b> Supplementary figures</a></li>
 </ul></li>
-<li class="chapter" data-level="F" data-path="static-vs-dynamic-supplement.html"><a href="static-vs-dynamic-supplement.html"><i class="fa fa-check"></i><b>F</b> Supplement to Chapter 6</a></li>
+<li class="chapter" data-level="F" data-path="static-vs-dynamic-supplement.html"><a href="static-vs-dynamic-supplement.html"><i class="fa fa-check"></i><b>F</b> Supplement to Chapter 7</a></li>
 <li class="chapter" data-level="G" data-path="resources-supplement.html"><a href="resources-supplement.html"><i class="fa fa-check"></i><b>G</b> Data, code, and educational materials</a></li>
 <li class="chapter" data-level="" data-path="bibliography.html"><a href="bibliography.html"><i class="fa fa-check"></i>Bibliography</a></li>
 <li class="chapter" data-level="" data-path="contributions-to-the-chapters.html"><a href="contributions-to-the-chapters.html"><i class="fa fa-check"></i>Contributions to the chapters</a></li>
@@ -365,7 +365,7 @@ p(y) \sim \mathrm{Categorical}(g(X\beta + \alpha))
 \end{equation}\]</span></p>
 <p>where <span class="math inline">\(\beta\)</span> represents a set of parameters that are linearly combined with the feature values (<span class="math inline">\(X\)</span>) and an intercept term (<span class="math inline">\(\alpha\)</span>), which is passed through the softmax function, <span class="math inline">\(g\)</span>:</p>
 <p><span class="math display">\[\begin{equation}
-g(X_{i}\beta + \alpha) = \frac{X_{ij}\beta + \alpha}{\sum_{j=1}^{P}e^{X_{ij}\beta + \alpha}}
+g(X_{i}\beta + \alpha) = \frac{e^{X_{ij}\beta + \alpha}}{\sum_{j=1}^{P}e^{X_{ij}\beta + \alpha}}
 \end{equation}\]</span></p>
 <p>where <span class="math inline">\(p(y_{i} | X_{i})\)</span> is a vector with a length equal to the number of classes. Although it is possible to derive discrete predictions by subsequently taking the argmax across the vector with class probabilities, we only use the probabilistic predictions because we use a probabilistic model performance metric (Tjur’s pseudo <span class="math inline">\(R^{2}\)</span>; see <a href="static-vs-dynamic.html#svsd-perf">Performance metrics</a> section). In the context of our categorical emotion analysis, the fitted multinomial logistic regression model outputs predictions in the format of the probability of each of the six categorical emotions given the set of static or dynamic (or their combination) features of a given facial expression stimulus. The logistic regression model was used with balanced class weights to avoid effects due to imbalance across class frequencies, a regularization parameter (C) of 10, and a liblinear solver.</p>
 </div>
