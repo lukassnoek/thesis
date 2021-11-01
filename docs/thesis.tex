@@ -302,7 +302,7 @@ This thesis was typeset using (R) Markdown, \LaTeX\, \verb+bookdown+ R-package, 
 
 \begin{itemize}[label={}, itemsep=0pt, partopsep=3pt, topsep=-\parskip, parsep=0pt, leftmargin=1em]
   \item ISBN: xxx-xx-xxxx-xxx-x 
-  \item Printing: Acme Press, Inc. 
+  \item Printing: Ridderprint BV. 
   \item Cover art: Designed by author using a \emph{neural style transfer} (Ghiasi et al., \protect\hyperlink{ref-ghiasi2017exploring}{2017}) implementation by Reiichiro Nakano. 
 \end{itemize}
 
@@ -326,7 +326,7 @@ op gezag van de Rector Magnificus\\
 prof. dr. ir. K.I.J. Maex\\ % make sure this is the current rector magnificus
 \mbox{ten overstaan van een door het College voor Promoties ingestelde commissie,}\\
 in het openbaar te verdedigen in de Agnietenkapel\\
-op maandag 14 februari 2022, te 14.00 uur \\ }\par %
+op maandag 9 februari 2022, te 14.00 uur \\ }\par %
 \vspace{\baselineskip}
 {\large door}\par
 \vspace{\baselineskip}
@@ -375,12 +375,13 @@ Overige leden:
 
 
 \clearpage
-\thispagestyle{empty}
+\pagestyle{empty}
 {
 \hypersetup{linkcolor=black}
 \setcounter{tocdepth}{1}
 \tableofcontents
 }
+\pagestyle{\defstyle}
 \mainmatter
 \hypertarget{general-introduction}{%
 \chapter{Introduction}\label{general-introduction}}
@@ -438,7 +439,7 @@ Thus far, the specification of a (linear) model and the estimation of its parame
 
 This difference in their focus of inference is associated with different cultures of research which use statistical models to explain a target system in different ways (Breiman, \protect\hyperlink{ref-Breiman2001-lf}{2001}). In the traditional hypothesis testing approach, the inferences about model parameters are not meant to \emph{directly} explain (parts of) a target system. Instead, the target system is verbally described and explained by a \emph{theory} (Kellen, \protect\hyperlink{ref-Kellen2019-af}{2019}). Explanation of the system occurs via testing hypotheses about very specific aspects of the system that are implied by a theory, often in strictly confirmatory experiments (Wagenmakers et al., \protect\hyperlink{ref-Wagenmakers2012-vd}{2012}). Because such hypothesis-driven studies often use strictly controlled experiments in which the factor(s) of interest are explicitly manipulated, these studies afford \emph{causal} interpretation of the observed statistical effects (Groot, \protect\hyperlink{ref-degroot}{1961}). For example, if a particular theory about emotion (e.g., basic emotion theory) implies that certain categorical emotions should be universally recognized (Keltner et al., \protect\hyperlink{ref-Keltner2019-tm}{2019}), then statistical tests that show that people across the globe are able to distinguish these emotions above chance level (e.g., Ekman et al., \protect\hyperlink{ref-Ekman1969-pu}{1969}) corroborate this theory. The logic behind this approach is that we get an increasingly better understanding of the target system if we keep testing hypotheses implied by the corresponding theory. Or in Newell's terminology, if we just keep asking nature questions, we will at some point understand it.
 
-Theories play a less significant role in the predictive modelling culture. Although theories may inspire particular classes of models and constrain the space of possible models (Rooij \& Baggio, \protect\hyperlink{ref-Van_Rooij2021-bk}{2021}), they do not necessarily represent (a description of) the target system itself. Instead of theories, the predictive approach uses models themselves to both describe and explain a target system (Guest \& Martin\protect\hyperlink{ref-Guest2020-ef}{}). These models can be thought of as algorithmic or mechanistic hypotheses of how a particular cognitive capacity or behavior may emerge (Schyns et al., \protect\hyperlink{ref-schyns2009information}{2009}). For example, the categorical emotion model in chapter \ref{static-vs-dynamic} represents the mechanistic hypothesis that the capacity of people to infer and recognize emotions from others' faces occurs through an integration of weighted linear combinations of both facial movements and facial morphological features. Another example is illustrated in Chapter \ref{shared-states}, which describes a study in which we hypothesized that the same brain networks associated with emotion experience underlie the capacity for emotion understanding (Oosterwijk et al., \protect\hyperlink{ref-Oosterwijk2017-sc}{2017}). Using a predictive model trained on neural patterns associated with components of emotion experience, we could accurately predict emotion components associated with emotion understanding in others, which suggests that these two processes share a common neural implementation (Peelen \& Downing, \protect\hyperlink{ref-Peelen2007-ew}{2007}). Importantly, in the predictive approach, progress in terms of explanation and understanding is not achieved by binary tests of these theory-driven hypotheses, but by the exploration and development of increasingly accurate models of the target system itself (Naselaris et al., \protect\hyperlink{ref-Naselaris2011-oh}{2011}).
+Theories play a less significant role in the predictive modelling culture. Although theories may inspire particular classes of models and constrain the space of possible models (Rooij \& Baggio, \protect\hyperlink{ref-Van_Rooij2021-bk}{2021}), they do not necessarily represent (a description of) the target system itself. Instead of theories, the predictive approach uses models themselves to both describe and explain a target system (Guest \& Martin, \protect\hyperlink{ref-Guest2020-ef}{2021}). These models can be thought of as algorithmic or mechanistic hypotheses of how a particular cognitive capacity or behavior may emerge (Schyns et al., \protect\hyperlink{ref-schyns2009information}{2009}). For example, the categorical emotion model in chapter \ref{static-vs-dynamic} represents the mechanistic hypothesis that the capacity of people to infer and recognize emotions from others' faces occurs through an integration of weighted linear combinations of both facial movements and facial morphological features. Another example is illustrated in Chapter \ref{shared-states}, which describes a study in which we hypothesized that the same brain networks associated with emotion experience underlie the capacity for emotion understanding (Oosterwijk et al., \protect\hyperlink{ref-Oosterwijk2017-sc}{2017}). Using a predictive model trained on neural patterns associated with components of emotion experience, we could accurately predict emotion components associated with emotion understanding in others, which suggests that these two processes share a common neural implementation (Peelen \& Downing, \protect\hyperlink{ref-Peelen2007-ew}{2007}). Importantly, in the predictive approach, progress in terms of explanation and understanding is not achieved by binary tests of these theory-driven hypotheses, but by the exploration and development of increasingly accurate models of the target system itself (Naselaris et al., \protect\hyperlink{ref-Naselaris2011-oh}{2011}).
 
 To be clear, although the research in this thesis often uses techniques and models from machine learning, the predictive approach should not be equated with machine learning. The origins of this approach, at least in the domain of psychology, can be traced back to the psychophysics studies in the late nineteenth century. Psychophysics studies aim to develop lawlike models of how stimulus attributes give rise to sensory experiences and rarely feature explicit hypothesis tests of model parameters (Gescheider, \protect\hyperlink{ref-Gescheider2013-zm}{2013}). Predictive, computational models also play a central role in the field of cognitive science, in which they are used as formal representations and implementations of cognitive processes (Núñez et al., \protect\hyperlink{ref-Nunez2019-lh}{2019}). While hypothesis testing has dominated much of psychology and cognitive neuroscience apart from psychophysics and cognitive science, the predictive approach has become more prominent in both psychology (Yarkoni \& Westfall, \protect\hyperlink{ref-Yarkoni2017-om}{2017}) and cognitive neuroscience (Varoquaux \& Thirion, \protect\hyperlink{ref-Varoquaux2014-su}{2014}) in recent years. Machine learning has been particularly influential in cognitive neuroscience, where it was introduced as ``pattern analysis'' (Norman et al., \protect\hyperlink{ref-norman2006beyond}{2006}), but there are many other examples of predictive approaches in psychology and cognitive neuroscience. These approaches include network analysis (Borsboom \& Cramer, \protect\hyperlink{ref-Borsboom2013-wb}{2013}) and structural equation modelling (Streiner, \protect\hyperlink{ref-Streiner2006-ze}{2006}) in psychology and system identification (Wu et al., \protect\hyperlink{ref-Wu2006-qs}{2006}), model-based cognitive neuroscience (Forstmann \& Wagenmakers, \protect\hyperlink{ref-Forstmann2015-rz}{2015}; Turner et al., \protect\hyperlink{ref-Turner2017-fi}{2017}), and encoding models in cognitive neuroscience (Holdgraf et al., \protect\hyperlink{ref-Holdgraf2017-eu}{2017}; Naselaris et al., \protect\hyperlink{ref-Naselaris2011-oh}{2011}). Although these approaches differ in the way they construct and apply models, they all emphasize predictive accuracy rather than hypothesis testing.
 
@@ -1344,6 +1345,7 @@ Physiology & 790 & 198 & 194 & 194 & 189 & 194 & 188 & 216 & 216 & 211 & 217\\
 
 \elandscape
 \newpage
+\pagestyle{\defstyle}
 
 \hypertarget{methods}{%
 \section{Methods}\label{methods}}
@@ -2383,7 +2385,7 @@ Surprise & 1 + 2 + 5 + 25 + 26 & $\boldsymbol{\cdot}$ 1 + 2 + 5 + (26 $\lor$ 27)
 
 \elandscape
 \newpage
-\pagestyle{empty}
+\pagestyle{\defstyle}
 
 All of these mappings propose that a number of AUs must occur together to communicate a particular emotion. However, the comparison between them is complicated by the fact that not all of them posit a single, consistent set of AUs per emotion. First, some contain multiple sets, such as the EMFACS manual (Friesen \& Ekman, \protect\hyperlink{ref-Friesen1983-ft}{1983}) proposing that ``sadness'' can be expressed with AUs 1 + 4 or AUs 6 + 15. Second, some offer optional AUs for a set, such as Matsumoto et al. (\protect\hyperlink{ref-Matsumoto2008-qk}{2008}) proposing that ``sadness'' is associated with AUs 1 + 15 and optionally with AUs 4 and/or 17. Thirdly, some describe \emph{mutually exclusive} options of AUs for a set, such as Matsumoto et al. (\protect\hyperlink{ref-Matsumoto2008-qk}{2008}) proposing that ``surprise'' can be communicated with AUs 1 + 2 + 5 in combination with \emph{either} AU25 \emph{or} AU26.
 
@@ -3047,7 +3049,7 @@ Do you have any questions?"
 
 \elandscape
 \newpage
-\pagestyle{empty}
+\pagestyle{\defstyle}
 
 \begingroup\fontsize{10}{12}\selectfont
 
@@ -3091,8 +3093,10 @@ ICA denoising & ICA vs. no ICA & No ICA\\
 \begin{figure}
 \centering
 \includegraphics{_bookdown_files/shared-states-files/figures/figure_S5.pdf}
-\caption{\label{fig:fig-shared-states-S5}A comparison between precision and recall confusion matrices of the self- and cross-analysis of the validation dataset. Precision refers to the amount of true positive predictions of a given class relative to all predictions for that class. Recall refers to the amount of true positive predictions of a given class relative to the total number of samples in that class. In the self-analysis, all classes were decoded significantly above chance for both precision and recall (all \emph{p} \textless{} 0.001). In the cross-analysis, all classes were decoded significantly above chance for precision (all \emph{p} \textless{} 0.001); for recall both action and situation were decoded significantly above chance (\emph{p} = 0.0013 and \emph{p} \textless{} 0.001, respectively), while interoception was decoded below chance. All \emph{p}-values were calculated using a permutation test with 1300 permutations (as described in the Methods section in the main text). When comparing precision and recall scores for both analyses, precision and recall showed very little differences in the self-analysis, while the cross-analysis shows a clear difference between metrics, especially for interoception and situation. For the interoception class, the relatively high precision score (44\%) compared to its recall score (14\%) suggests that trials are very infrequently classified as interoception, but when they are, it is (relatively) often correct. For the situation class, the relatively high recall score (72 \%) compared to its precision score (44\%) suggests that situation is strongly over-classified, which is especially clear in the lower-right confusion matrix, which indicates that 59\% of the interoception-trials are misclassified as situation-trials.}
+\caption{\label{fig:fig-shared-states-S5}A comparison between precision and recall confusion matrices of the self- and cross-analysis of the validation dataset.
+Precision refers to the amount of true positive predictions of a given class relative to all predictions for that class. Recall refers to the amount of true positive predictions of a given class relative to the total number of samples in that class. In the self-analysis, all classes were decoded significantly above chance for both precision and recall (all \emph{p} \textless{} 0.001). In the cross-analysis, all classes were decoded significantly above chance for precision (all \emph{p} \textless{} 0.001); for recall both action and situation were decoded significantly above chance (\emph{p} = 0.0013 and \emph{p} \textless{} 0.001, respectively), while interoception was decoded below chance. All \emph{p}-values were calculated using a permutation test with 1300 permutations (as described in the Methods section in the main text). When comparing precision and recall scores for both analyses, precision and recall showed very little differences in the self-analysis, while the cross-analysis shows a clear difference between metrics, especially for interoception and situation. For the interoception class, the relatively high precision score (44\%) compared to its recall score (14\%) suggests that trials are very infrequently classified as interoception, but when they are, it is (relatively) often correct. For the situation class, the relatively high recall score (72 \%) compared to its precision score (44\%) suggests that situation is strongly over-classified, which is especially clear in the lower-right confusion matrix, which indicates that 59\% of the interoception-trials are misclassified as situation-trials.}
 \end{figure}
+
 
 
 
@@ -3115,10 +3119,12 @@ ICA denoising & ICA vs. no ICA & No ICA\\
 \begin{figure}
 \centering
 \includegraphics{_bookdown_files/shared-states-files/figures/figure_S8.pdf}
-\caption{\label{fig:fig-shared-states-S8}Results of MVPA analyses using condition-average voxel patterns across subjects instead of single-trial patterns within subjects. Here, patterns are estimated in a GLM in which each condition, as opposed to each trial, is modeled with a single regressor, from which whole-brain t-value patterns were extracted. In this condition-average multi-voxel pattern analysis, condition-average patterns across subjects were used as samples. The condition-average patterns were extracted from the univariate first-level contrasts. In total, this yielded 120 samples for the self-data (3 conditions x 2 runs x 20 participants) and 60 samples for the other-data (3 conditions * 20 participants). For these analyses, the same hyperparameters were used as the original analyses reported in the main text, except with regard to the cross-validation and bagging procedure. Here, we used (stratified) 10-fold cross-validation without bagging. The upper panels show precision scores (per class) for the self- and (self-to-other) cross-analysis; the lower panels show results from the same analyses but expressed in recall-estimates (error bars indicate 95\% confidence intervals). Apart from interoception in the cross-analysis (both precision and recall), all scores were significant (p \textless{} 0.001) in a permutation test with 1000 permutations. These results largely replicate our findings as reported in the main text. This suggests that the neural patterns involved in self-focused emotional imagery and other-focused emotion understanding are relatively consistent in terms of spatial distribution across subjects. We explain this consistency by assuming that our tasks engage domain-general psychological processes that are present in all individuals.}
+\caption{\label{fig:fig-shared-states-S8}Results of MVPA analyses using condition-average voxel patterns across subjects instead of single-trial patterns within subjects.}
 \end{figure}
 
 
+
+Here, patterns are estimated in a GLM in which each condition, as opposed to each trial, is modeled with a single regressor, from which whole-brain t-value patterns were extracted. In this condition-average multi-voxel pattern analysis, condition-average patterns across subjects were used as samples. The condition-average patterns were extracted from the univariate first-level contrasts. In total, this yielded 120 samples for the self-data (3 conditions x 2 runs x 20 participants) and 60 samples for the other-data (3 conditions * 20 participants). For these analyses, the same hyperparameters were used as the original analyses reported in the main text, except with regard to the cross-validation and bagging procedure. Here, we used (stratified) 10-fold cross-validation without bagging. The upper panels show precision scores (per class) for the self- and (self-to-other) cross-analysis; the lower panels show results from the same analyses but expressed in recall-estimates (error bars indicate 95\% confidence intervals). Apart from interoception in the cross-analysis (both precision and recall), all scores were significant (p \textless{} 0.001) in a permutation test with 1000 permutations. These results largely replicate our findings as reported in the main text. This suggests that the neural patterns involved in self-focused emotional imagery and other-focused emotion understanding are relatively consistent in terms of spatial distribution across subjects. We explain this consistency by assuming that our tasks engage domain-general psychological processes that are present in all individuals.
 
 \begingroup\fontsize{10}{12}\selectfont
 
@@ -4267,7 +4273,7 @@ where \(\boldsymbol{1}\) represents an indicator function returning 1 when the e
 
 \elandscape
 \newpage
-\pagestyle{empty}
+\pagestyle{\defstyle}
 
 \begin{figure}
 \centering
@@ -4990,7 +4996,7 @@ Gruber, M. J., \& Ranganath, C. (2019). How curiosity enhances hippocampus-depen
 Guan, J., Ryali, C. K., \& Angela, J. Y. (2018). Computational modeling of social face perception in humans: Leveraging the active appearance model. \emph{bioRxiv}.
 
 \leavevmode\hypertarget{ref-Guest2020-ef}{}%
-Guest, O., \& Martin, A. E. (). How computational modeling can force theory building in psychological science. \emph{Perspectives on Psychological Science}, \emph{0}(0), 1745691620970585. \url{https://doi.org/10.1177/1745691620970585}
+Guest, O., \& Martin, A. E. (2021). How computational modeling can force theory building in psychological science. \emph{Perspectives on Psychological Science}, \emph{16}(4), 789--802.
 
 \leavevmode\hypertarget{ref-Guggenmos2018-rr}{}%
 Guggenmos, M., Sterzer, P., \& Cichy, R. M. (2018). Multivariate pattern analysis for MEG: A comparison of dissimilarity measures. \emph{Neuroimage}, \emph{173}, 434--447.
@@ -6034,6 +6040,7 @@ Paps, wat had ik je graag mijn proefschrift willen laten zien. Ik weet zeker dat
 
 Lieve Pi, in bijna acht jaar dat we samen zijn, is er veel gebeurd, maar met jou naast me heb ik het gevoel dat ik alles aan kan. En sinds jij er bent, lieve Wies, is de wereld nóg een stukje mooier.
 
+\pagestyle{\defstyle}
 \backmatter
 
 

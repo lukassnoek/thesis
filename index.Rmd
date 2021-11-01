@@ -4,16 +4,16 @@ title: "Towards prediction"
 subtitle: Studying the mind and brain in the age of machine learning
 
 author: "Lukas Snoek"
-date: "maandag 14 februari 2022"
+date: "maandag 9 februari 2022"
 aula: false 
-time: "14.00"
+time: "13.00"
 birthplace: "Hoevelaken"
 
 ### Colophon 
 # This paragraph begins with "This thesis was typeset using (R) Markdown, \LaTeX\ and the \verb+bookdown+ R-package"
 # and is optionally followed by:
 ISBN: "xxx-xx-xxxx-xxx-x"
-printing: "Acme Press, Inc."
+printing: "Ridderprint BV."
 cover: "Designed by author using a *neural style transfer* [@ghiasi2017exploring] implementation by Reiichiro Nakano."
 thesis_url: "https://lukas-snoek.com/thesis"
 license: "CC BY" # optional, otherwise this bit is omitted

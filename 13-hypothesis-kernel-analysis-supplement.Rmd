@@ -186,7 +186,7 @@ knitr::include_graphics("_bookdown_files/hypothesis-kernel-analysis-files/figure
 
 \elandscape
 \newpage
-\pagestyle{empty}
+\pagestyle{\defstyle}
 
 ```{r fig-hka-S6, fig.cap='(ref:caption-fig-hka-S6)', results='show'}
 knitr::include_graphics("_bookdown_files/hypothesis-kernel-analysis-files/figures/figure_S6.png", auto_pdf = TRUE)

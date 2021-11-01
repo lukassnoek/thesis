@@ -55,6 +55,7 @@ kbl(data, booktabs = T, longtable = T, caption = 'Overview of the number of subj
 
 \elandscape
 \newpage
+\pagestyle{\defstyle}
 
 ## Methods
 

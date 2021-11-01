@@ -98,7 +98,7 @@ kbl(data, booktabs = T, longtable = T, escape = F, linesep="", caption = 'Evalua
 
 \elandscape
 \newpage
-\pagestyle{empty}
+\pagestyle{\defstyle}
 
 All of these mappings propose that a number of AUs must occur together to communicate a particular emotion. However, the comparison between them is complicated by the fact that not all of them posit a single, consistent set of AUs per emotion. First, some contain multiple sets, such as the EMFACS manual [@Friesen1983-ft] proposing that “sadness” can be expressed with AUs 1 + 4 or AUs 6 + 15. Second, some offer optional AUs for a set, such as @Matsumoto2008-qk proposing that “sadness” is associated with AUs 1 + 15 and optionally with AUs 4 and/or 17. Thirdly, some describe *mutually exclusive* options of AUs for a set, such as @Matsumoto2008-qk proposing that “surprise” can be communicated with AUs 1 + 2 + 5 in combination with *either* AU25 *or* AU26.
 

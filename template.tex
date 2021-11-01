@@ -347,7 +347,7 @@ $include-before$
 $endfor$
 $if(toc)$
 \clearpage
-\thispagestyle{empty}
+\pagestyle{empty}
 {
 $if(colorlinks)$
 \hypersetup{linkcolor=$if(toccolor)$$toccolor$$else$black$endif$}
@@ -362,9 +362,11 @@ $endif$
 $if(lof)$
 \listoffigures
 $endif$
+\pagestyle{\defstyle}
 \mainmatter
 $body$
 
+\pagestyle{\defstyle}
 \backmatter
 $if(natbib)$
 $if(bibliography)$
