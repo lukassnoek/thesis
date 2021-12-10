@@ -4,8 +4,8 @@
 % New additions to the template are marked with "LCR"
 
 %\documentclass[12pt,american,]{memoir} %LCR
- % if the book is being rendered for print, force twoside option
-\documentclass[12pt,american,]{memoir} %LCR
+ % if not, force the oneside and a4paper options, which seem to be the only reasonable defaults
+\documentclass[12pt,american,a4paper,oneside,]{memoir} %LCR
 
 \usepackage{lmodern}
 \usepackage{amssymb,amsmath}
@@ -29,15 +29,17 @@
 \usepackage{microtype}
 \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
 }{}
- % LCR
-\usepackage[paperwidth=170mm,paperheight=240mm]{geometry} % LCR %set to standard thesis size
 
  %LCR
 \usepackage{hyperref}
+\PassOptionsToPackage{usenames,dvipsnames}{color} % color is loaded by hyperref
 \hypersetup{unicode=true,
             pdftitle={Towards prediction},
             pdfauthor={Lukas Snoek},
-            pdfborder={0 0 0},
+            colorlinks=true,
+            linkcolor=Maroon,
+            citecolor=Blue,
+            urlcolor=Blue,
             breaklinks=true}
 \urlstyle{same}  % don't use monospace font for urls
 \ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
@@ -375,6 +377,7 @@ Overige leden:
 \clearpage
 \pagestyle{empty}
 {
+\hypersetup{linkcolor=black}
 \setcounter{tocdepth}{1}
 \tableofcontents
 }
