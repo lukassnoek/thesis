@@ -409,7 +409,7 @@ p = \frac{\sum_{p=1}^{Q} I(sc_{i}^{\mathrm{perm}} \geq sc^{\mathrm{obs}}) + 1}{Q
 <p><span class="math display">\[\begin{equation}
 R^{2} = 1 - \frac{RSS}{TSS} = 1 - \frac{\sum_{i = 1}^{n}(y_{i} - \hat{y}_{i})^{2}}{\sum_{i = 1}^{n}(y_{i} - \bar{y}_{i})^{2}}
 \end{equation}\]</span></p>
-<p>where the RSS term is the sum of the squared deviations of the predicted values (<span class="math inline">\(\hat{y}_{i}\)</span>) from the true values (<span class="math inline">\(y_{i}\)</span>) of the target variable. The <span class="math inline">\(R^{2}\)</span> noise ceiling can be computed using the previous formula when setting the prediction of each <em>unique</em> observation to the mean across its repetitions, which represents the optimal prediction any regression model can make given the variance across repetitions. Formally, for observation <span class="math inline">\(i\)</span> repeated <span class="math inline">\(R\)</span> times, the optimal prediction ($y_{i}^{*}) is computed as follows:</p>
+<p>where the RSS term is the sum of the squared deviations of the predicted values (<span class="math inline">\(\hat{y}_{i}\)</span>) from the true values (<span class="math inline">\(y_{i}\)</span>) of the target variable. The <span class="math inline">\(R^{2}\)</span> noise ceiling can be computed using the previous formula when setting the prediction of each <em>unique</em> observation to the mean across its repetitions, which represents the optimal prediction any regression model can make given the variance across repetitions. Formally, for observation <span class="math inline">\(i\)</span> repeated <span class="math inline">\(R\)</span> times, the optimal prediction (<span class="math inline">\(y_{i}^{*}\)</span>) is computed as follows:</p>
 <p><span class="math display">\[\begin{equation}
 y_{i}^{*} = \frac{1}{R}\sum_{r=1}^{R}y_{ir}
 \end{equation}\]</span></p>
@@ -603,7 +603,7 @@ gitbook.start({
 "link": null,
 "text": null
 },
-"download": null,
+"download": ["thesis.pdf"],
 "toc": {
 "collapse": "subsection"
 },

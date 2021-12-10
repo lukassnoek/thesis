@@ -187,7 +187,7 @@ For the valence and arousal models, we developed a method to estimate a noise ce
 R^{2} = 1 - \frac{RSS}{TSS} = 1 - \frac{\sum_{i = 1}^{n}(y_{i} - \hat{y}_{i})^{2}}{\sum_{i = 1}^{n}(y_{i} - \bar{y}_{i})^{2}}
 \end{equation}
 
-where the RSS term is the sum of the squared deviations of the predicted values ($\hat{y}_{i}$) from the true values ($y_{i}$) of the target variable. The $R^{2}$ noise ceiling can be computed using the previous formula when setting the prediction of each *unique* observation to the mean across its repetitions, which represents the optimal prediction any regression model can make given the variance across repetitions. Formally, for observation $i$ repeated $R$ times, the optimal prediction ($y_{i}^{*}) is computed as follows:
+where the RSS term is the sum of the squared deviations of the predicted values ($\hat{y}_{i}$) from the true values ($y_{i}$) of the target variable. The $R^{2}$ noise ceiling can be computed using the previous formula when setting the prediction of each *unique* observation to the mean across its repetitions, which represents the optimal prediction any regression model can make given the variance across repetitions. Formally, for observation $i$ repeated $R$ times, the optimal prediction ($y_{i}^{*}$) is computed as follows:
 
 \begin{equation}
 y_{i}^{*} = \frac{1}{R}\sum_{r=1}^{R}y_{ir}

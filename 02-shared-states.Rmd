@@ -15,7 +15,7 @@ library(kableExtra)
 \noindent
 _This chapter has been published as_: Oosterwijk, S.\*, Snoek, L.\*, Rotteveel, M., Barrett, L. F., & Scholte, H. S. (2017). Shared states: using MVPA to test neural overlap between self-focused emotion imagery and other-focused emotion understanding. *Social cognitive and affective neuroscience, 12*(7), 1025-1035.
 
-\* Shared first authorship
+\vspace{3mm}\noindent \* Shared first authorship
 \newpage
 \normalsize
 

@@ -20,8 +20,7 @@ library(kableExtra)
 \noindent
 _This chapter has been published as_: Snoek, L.\*, Miletić, S.\*, & Scholte, H.S. (2019). How to control for confounds in decoding analyses of neuroimaging data. _NeuroImage_, 184, 741-760.
 
-\* Shared first authorship
-
+\vspace{3mm}\noindent \* Shared first authorship
 \newpage
 \normalsize
 
@@ -322,7 +321,7 @@ knitr::include_graphics("_bookdown_files/confounds-decoding-files/figures/figure
 
 (ref:caption-fig-confounds-decoding-6) Model performance after counterbalancing (green) versus the baseline performance (blue) for both the VBM (left) and TBSS (right) data (upper row) and the difference in performance between the methods (lower row). Performance reflects the average (difference) $F_{1}$ score across 10 folds; error bars reflect 95% confidence intervals. The dashed black line reflect theoretical chance-level performance (0.5) and the dashed orange line reflects the average model performance when only brain size is used as a predictor. Asterisks indicates significant performance above chance: *** = $p < 0.001$, ** = $p < 0.01$, * = $p < 0.05$.
 
-One could argue that the lack of expected decrease in model performance after counterbalancing can be explained by the possibility that the subsampling and counterbalancing procedure just leads to the selection of different features during univariate feature selection compared to the baseline model. In other words, the increase in model performance may be caused by the feature selection function, which selects "better" voxels (i.e., containing more "robust" signal), resulting in similar model performance in spite of the reduction in sample size. However, this does not explain the similar scores for counterbalancing and the baseline model when using all voxels (the data points at $K \mathrm{voxels} = \dots \mathrm{(all)}$ in Figure \@ref(fig:fig-confounds-decoding-6)). Another possibility for the relative increase in model performance based on the counterbalanced data versus the baseline model is that counterbalancing increased the amount of signal in the data. Indeed, counterbalancing appeared to increase the (absolute) correlations between the data and the target ($r_{yX}$), which is visualized in Figure \@ref(fig:fig-confounds-decoding-7), suggesting an increase in signal.
+One could argue that the lack of expected decrease in model performance after counterbalancing can be explained by the possibility that the subsampling and counterbalancing procedure just leads to the selection of different features during univariate feature selection compared to the baseline model. In other words, the increase in model performance may be caused by the feature selection function, which selects "better" voxels (i.e., containing more "robust" signal), resulting in similar model performance in spite of the reduction in sample size. However, this does not explain the similar scores for counterbalancing and the baseline model when using all voxels (the data points at '$K\ \mathrm{voxels} = \dots \mathrm{(all)}$' in Figure \@ref(fig:fig-confounds-decoding-6)). Another possibility for the relative increase in model performance based on the counterbalanced data versus the baseline model is that counterbalancing increased the amount of signal in the data. Indeed, counterbalancing appeared to increase the (absolute) correlations between the data and the target ($r_{yX}$), which is visualized in Figure \@ref(fig:fig-confounds-decoding-7), suggesting an increase in signal.
 
 ```{r fig-confounds-decoding-7, fig.cap='(ref:caption-fig-confounds-decoding-7)', results='show'}
 knitr::include_graphics("_bookdown_files/confounds-decoding-files/figures/figure_7.png", auto_pdf = TRUE)

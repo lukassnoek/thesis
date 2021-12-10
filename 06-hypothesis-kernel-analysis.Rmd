@@ -154,7 +154,7 @@ In addition, we investigated how the optimized models led to behaviors different
 knitr::include_graphics("_bookdown_files/hypothesis-kernel-analysis-files/figures/figure_6.png", auto_pdf = TRUE)
 ```
 
-(ref:caption-fig-hka-6) *Exploration*. Schematic visualization of the exploration process through enriching existing models with additional AUs.  Bar graph shows the change in model performance (\$Delta$ AUROC) of the optimal model relative to the original model (cf. Figure \@ref(fig:fig-hka-4)). The dashed line represents the original noise ceiling. Bottom: confusion matrices (normalized by the sum across rows, indicating sensitivity) of the original and optimized model and reduction in confusion rate.
+(ref:caption-fig-hka-6) *Exploration*. Schematic visualization of the exploration process through enriching existing models with additional AUs.  Bar graph shows the change in model performance of the optimal model relative to the original model (cf. Figure \@ref(fig:fig-hka-4)). The dashed line represents the original noise ceiling. Bottom: confusion matrices (normalized by the sum across rows, indicating sensitivity) of the original and optimized model and reduction in confusion rate.
 
 ## Discussion {#hka-discussion}
 

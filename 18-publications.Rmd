@@ -2,10 +2,13 @@
 \chaptermark{List of other publications}
 
 Van der Maas, H.L.J., **Snoek, L.**, & Stevenson, C. (2021). How much intelligence is there in artificial intelligence? A 2020 update. _Intelligence, 87_, 101548.
+\vspace{2mm}
 
 Hoogeveen, S., **Snoek, L.**, & Van Elk, M. (2020). Religious belief and cognitive conflict sensitivity: A preregistered fMRI study. _Cortex, 129_, 247--265.
+\vspace{2mm}
 
 van Elk, M., & **Snoek, L.** (2020). The relationship between individual differences in gray matter volume and religiosity and mystical experiences: A preregistered voxel‐based morphometry study. _European Journal of Neuroscience, 51_(3), 850--865.
+\vspace{2mm}
 
 Van Mourik, T., **Snoek, L.**, Knapen, T., & Norris, D. G. (2018). Porcupine: a visual pipeline tool for neuroimaging analysis. _PLoS computational biology, 14_(5), e1006064.
 
