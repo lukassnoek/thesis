@@ -49,11 +49,11 @@ members:
 - title: prof. dr.
   initials: P.G.
   surname: Schyns
-  affiliation: The University of Glasgow
+  affiliation: University of Glasgow
 - title: prof. dr.
   initials: R.W.
   surname: Goebel
-  affiliation: Universiteit Maastricht
+  affiliation: Maastricht University
 - title: prof. dr.
   initials: D.
   surname: Borsboom
