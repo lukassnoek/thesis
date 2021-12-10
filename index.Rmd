@@ -12,9 +12,9 @@ birthplace: "Hoevelaken"
 ### Colophon 
 # This paragraph begins with "This thesis was typeset using (R) Markdown, \LaTeX\ and the \verb+bookdown+ R-package"
 # and is optionally followed by:
-ISBN: "xxx-xx-xxxx-xxx-x"
+ISBN: "978-94-6458-013-6"
 printing: "Ridderprint BV."
-cover: "Designed by author using a *neural style transfer* [@ghiasi2017exploring] implementation by Reiichiro Nakano."
+cover: "Designed by author using a *neural style transfer* implementation by Reiichiro Nakano."
 thesis_url: "https://lukas-snoek.com/thesis"
 license: "CC BY" # optional, otherwise this bit is omitted
 
