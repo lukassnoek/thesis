@@ -4,8 +4,8 @@
 % New additions to the template are marked with "LCR"
 
 %\documentclass[12pt,american,]{memoir} %LCR
- % if not, force the oneside and a4paper options, which seem to be the only reasonable defaults
-\documentclass[12pt,american,a4paper,oneside,]{memoir} %LCR
+ % if the book is being rendered for print, force twoside option
+\documentclass[12pt,american,]{memoir} %LCR
 
 \usepackage{lmodern}
 \usepackage{amssymb,amsmath}
@@ -29,17 +29,15 @@
 \usepackage{microtype}
 \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
 }{}
+ % LCR
+\usepackage[paperwidth=170mm,paperheight=240mm]{geometry} % LCR %set to standard thesis size
 
  %LCR
 \usepackage{hyperref}
-\PassOptionsToPackage{usenames,dvipsnames}{color} % color is loaded by hyperref
 \hypersetup{unicode=true,
             pdftitle={Towards prediction},
             pdfauthor={Lukas Snoek},
-            colorlinks=true,
-            linkcolor=Maroon,
-            citecolor=gray,
-            urlcolor=Blue,
+            pdfborder={0 0 0},
             breaklinks=true}
 \urlstyle{same}  % don't use monospace font for urls
 \ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
@@ -301,9 +299,9 @@
 This thesis was typeset using (R) Markdown, \LaTeX\, \verb+bookdown+ R-package, and the \verb+bookdown+ template developed by Leon Reteig (\textit{amsterdown}).
 
 \begin{itemize}[label={}, itemsep=0pt, partopsep=3pt, topsep=-\parskip, parsep=0pt, leftmargin=1em]
-  \item ISBN: xxx-xx-xxxx-xxx-x 
+  \item ISBN: 978-94-6458-013-6 
   \item Printing: Ridderprint BV. 
-  \item Cover art: Designed by author using a \emph{neural style transfer} (Ghiasi et al., \protect\hyperlink{ref-ghiasi2017exploring}{2017}) implementation by Reiichiro Nakano. 
+  \item Cover art: Designed by author using a \emph{neural style transfer} implementation by Reiichiro Nakano. 
 \end{itemize}
 
 \noindent An online version of this thesis is available at \url{https://lukas-snoek.com/thesis}, licensed under a CC BY.
@@ -377,7 +375,6 @@ Overige leden:
 \clearpage
 \pagestyle{empty}
 {
-\hypersetup{linkcolor=black}
 \setcounter{tocdepth}{1}
 \tableofcontents
 }
@@ -4913,9 +4910,6 @@ Gescheider, G. A. (2013). \emph{Psychophysics: The fundamentals}. Psychology Pre
 
 \leavevmode\hypertarget{ref-Gewin2016-ff}{}%
 Gewin, V. (2016). Data sharing: An open mind on open data. \emph{Nature}, \emph{529}(7584), 117--119.
-
-\leavevmode\hypertarget{ref-ghiasi2017exploring}{}%
-Ghiasi, G., Lee, H., Kudlur, M., Dumoulin, V., \& Shlens, J. (2017). Exploring the structure of a real-time, arbitrary neural artistic stylization network. \emph{arXiv Preprint arXiv:1705.06830}.
 
 \leavevmode\hypertarget{ref-gilbert2012evaluative}{}%
 Gilbert, S. J., Swencionis, J. K., \& Amodio, D. M. (2012). Evaluative vs. Trait representation in intergroup social judgments: Distinct roles of anterior temporal lobe and prefrontal cortex. \emph{Neuropsychologia}, \emph{50}(14), 3600--3611.
