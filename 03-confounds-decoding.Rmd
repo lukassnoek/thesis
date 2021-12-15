@@ -1,7 +1,8 @@
 ---
-nocite: | 
+nocite: |
   @Diedrichsen2017-ab
   @@Cook2002-hb
+output: pdf_document
 ---
 ```{r setup-confounds-decoding, include=FALSE}
 knitr::opts_chunk$set(results = 'hide', echo = FALSE, message = FALSE, warning = FALSE)

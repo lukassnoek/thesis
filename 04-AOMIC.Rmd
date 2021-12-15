@@ -218,7 +218,7 @@ kbl(data, booktabs = T, longtable = T, caption = 'Distribution of educational le
 ```{r tab-aomic-4, results='asis'}
 data = read_csv('_bookdown_files/aomic-files/table_4_data.csv')
 kbl(data, booktabs = T, caption = 'Distribution of background SES.') %>%
-    kable_styling(full_width = F, font_size = 10) 
+    kable_styling(full_width = T, font_size = 10) 
 ```
 
 #### Religion (PIOP1 and ID1000 only)

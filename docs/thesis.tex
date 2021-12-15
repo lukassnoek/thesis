@@ -103,6 +103,12 @@
 \usepackage{colortbl}
 \usepackage{pdflscape}
 \usepackage{tabu}
+\makeatletter
+\def\tabuendlongtrial{% 
+    \LT@echunk  \global\setbox\LT@gbox \hbox{\unhbox\LT@gbox}\kern\wd\LT@gbox
+                \LT@get@widths
+}% 
+\makeatother
 \usepackage{threeparttable}
 \usepackage{threeparttablex}
 \usepackage[normalem]{ulem}
@@ -326,7 +332,7 @@ op gezag van de Rector Magnificus\\
 prof. dr. ir. K.I.J. Maex\\ % make sure this is the current rector magnificus
 \mbox{ten overstaan van een door het College voor Promoties ingestelde commissie,}\\
 in het openbaar te verdedigen in de Agnietenkapel\\
-op maandag 9 februari 2022, te 14.00 uur \\ }\par %
+op woensdag 9 februari 2022, te 14.00 uur \\ }\par %
 \vspace{\baselineskip}
 {\large door}\par
 \vspace{\baselineskip}
@@ -1554,7 +1560,7 @@ High & 26\% & 47\% & 37\% & 44\%\\
 \caption{\label{tab:tab-aomic-4}Distribution of background SES.}
 \centering
 \fontsize{10}{12}\selectfont
-\begin{tabular}[t]{ll}
+\begin{tabu} to \linewidth {>{\raggedright}X>{\raggedright}X}
 \toprule
 Background SES & \% of subjects\\
 \midrule
@@ -1564,7 +1570,7 @@ Background SES & \% of subjects\\
 6-May & 19\%\\
 >6 & 11\%\\
 \bottomrule
-\end{tabular}
+\end{tabu}
 \end{table}
 
 \hypertarget{religion-piop1-and-id1000-only}{%

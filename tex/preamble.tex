@@ -16,6 +16,12 @@
 \usepackage{colortbl}
 \usepackage{pdflscape}
 \usepackage{tabu}
+\makeatletter
+\def\tabuendlongtrial{% 
+    \LT@echunk  \global\setbox\LT@gbox \hbox{\unhbox\LT@gbox}\kern\wd\LT@gbox
+                \LT@get@widths
+}% 
+\makeatother
 \usepackage{threeparttable}
 \usepackage{threeparttablex}
 \usepackage[normalem]{ulem}
