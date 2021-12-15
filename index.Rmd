@@ -71,6 +71,7 @@ book_size: false # "true" if you want to render a pdf for printing as a book; "f
 fontsize: 12pt # 12pt is recommened when book_size is false; 10 or 11pt is recommended when book_size is true
 lang: en-US # default language for the thesis. Change to en-GB or en-US if you want a specific flavor of English (or to nl for Dutch)
 site: bookdown::bookdown_site # to get a "Build" button in RStudio to render the book
+
 output:
   # HTML
   bookdown::gitbook:
