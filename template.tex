@@ -225,10 +225,15 @@ $endfor$
 % for some reason this cannot be in the preamble
 \setlength{\abstitleskip}{-\absparindent}
 
+$if(book_size)$
+% No cover
+\pagestyle{empty}
+$else$
 % Include the cover page
 \pagestyle{empty}
 \renewcommand{\thepage}{\CoverName} % make sure this page is "numbered" with a name, not as page 1 or I
 \includepdf{./cover/thesis_cover.pdf}
+$endif$
 
 %% Page I: the half-title / "Franse pagina" %LCR
 \frontmatter
@@ -253,7 +258,7 @@ The investigations in this thesis were supported by $if(grant)$a $grant$ from $e
 $if(funder)$$funder$.$endif$
 $endif$
 
-This thesis was typeset using (R) Markdown, \LaTeX\, \verb+bookdown+ R-package, and the \verb+bookdown+ template developed by Leon Reteig (\textit{amsterdown}).
+This thesis was typeset using (R) Markdown, the \LaTeX\, \verb+bookdown+ R-package, and the \verb+bookdown+ template developed by Leon Reteig (\textit{amsterdown}).
 
 \begin{itemize}[label={}, itemsep=0pt, partopsep=3pt, topsep=-\parskip, parsep=0pt, leftmargin=1em]
   $if(ISBN)$\item ISBN: $ISBN$ $endif$
