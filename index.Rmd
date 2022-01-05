@@ -85,7 +85,7 @@ output:
 
     config:
       toolbar:
-        download: 'docs/thesis.pdf'
+        download: 'thesis.pdf'
       toc: 
         #this text will print on top ("before") or at the bottom ("after") of the table of contents
         before: | 
